@@ -16,9 +16,9 @@ function Import(props) {
   return (
     <form className={styles.Import} onSubmit={e => submitBuild(e)}>
       <label>
-        Import Build from <b>Import / Export > Long Forum Post</b>. Select "HTML
-        Export" from the right menu then click "Export Now". Paste the results
-        in the box below.
+        In your builder, go to <b>Import / Export > Long Forum Post</b>. Select
+        "HTML Export" from the right menu then click "Export Now". Paste the
+        results in the box below.
       </label>
       <textarea
         value={userBuild}
