@@ -3,7 +3,6 @@ import React from 'react';
 import styles from './styles.module.scss';
 
 function FilterOptions({ filters, toggleTag }) {
-  console.log('FILTESR: ', filters);
   return (
     <div className={styles.FilterButtons}>
       {filters.options.map(o => {
