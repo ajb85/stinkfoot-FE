@@ -1,27 +1,50 @@
+@import 'styles/variables.scss';
+
 .BuildList {
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+  margin-top: $lh;
 
-  div.set {
-    border-radius: 10px;
-    border: 1px solid black;
+  div.list {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-    width: fit-content;
+    div.set {
+      border: 1px solid $secondary;
+
+      height: fit-content;
+
+      width: 350px;
+
+      h2 {
+        text-align: center;
+        font-weight: 800;
+        border-bottom: 1px solid $secondary;
+        padding: 10px;
+
+        background-color: $accent2;
+      }
+
+      p {
+        margin: 12.5px 0;
+        padding: 0 10px;
+      }
+    }
+  }
+}
+
+.FilterButtons {
+  display: flex;
+  justify-content: space-between;
+  width: 30%;
+  padding-left: 10px;
+
+  button {
     height: fit-content;
-
-    margin: 15px;
-
-    h2 {
-      text-align: center;
-      font-weight: 800;
-      border-bottom: 1px solid black;
-      padding: 10px;
-    }
-
-    p {
-      margin: 12.5px 0;
-      padding: 0 10px;
-    }
+    color: $secondary;
+    padding: 7px;
+    font-weight: 800;
   }
 }
