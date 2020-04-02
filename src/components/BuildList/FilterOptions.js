@@ -2,7 +2,7 @@ import React from 'react';
 
 import styles from './styles.module.scss';
 
-function FilterOptions({ filters, toggleTag }) {
+function FilterOptions({ filters, toggleTag, setSearch }) {
   return (
     <div className={styles.FilterButtons}>
       <label>Filter by Enhancement Stat</label>
@@ -21,6 +21,10 @@ function FilterOptions({ filters, toggleTag }) {
             </button>
           );
         })}
+      </div>
+      <div className={styles.searchBar}>
+        <label>Filter by Keyword</label>
+        <input value={filters.search} onChange={e => setSearch(e)} />
       </div>
     </div>
   );
