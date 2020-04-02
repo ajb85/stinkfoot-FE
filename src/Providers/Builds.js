@@ -39,7 +39,10 @@ function BuildProvider(props) {
   };
 
   React.useEffect(() => {
-    if (process.env.REACT_APP_ENV.toLowerCase() === 'dev') {
+    if (
+      process.env.REACT_APP_ENV &&
+      process.env.REACT_APP_ENV.toLowerCase() === 'dev'
+    ) {
       saveBuild(dummyBuild);
     }
   }, []);
