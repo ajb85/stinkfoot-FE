@@ -39,7 +39,9 @@ function BuildProvider(props) {
   };
 
   React.useEffect(() => {
-    saveBuild(dummyBuild);
+    if (process.env.REACT_APP_ENV.toLowerCase() === 'dev') {
+      saveBuild(dummyBuild);
+    }
   }, []);
   const { Provider } = BuildContext;
   return <Provider value={{ build, saveBuild }}>{props.children}</Provider>;
@@ -200,6 +202,4 @@ const dummyBuild = `<font color="#489AFF"><b>Hero Plan by Hero Hero Designer 2.2
 </ul><b><font color="#4FA7FF">Level 50:</font>&nbsp;&nbsp;<font color="#B3CAF7">Agility Core Paragon</font></b>&nbsp;&nbsp;<br />
 <font color="#489AFF">------------</font><br />
 <br />
-
-
 `;
