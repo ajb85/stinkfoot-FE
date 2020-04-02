@@ -38,20 +38,29 @@
 }
 
 .FilterButtons {
-  display: flex;
-  justify-content: space-between;
-  width: 30%;
-  padding-left: 10px;
-
   position: fixed;
   top: $lh;
   left: 0;
+  width: 30%;
 
-  button {
-    height: fit-content;
-    color: $secondary;
-    padding: 7px;
-    font-weight: 800;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  div.statButtons {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 10px;
+    margin: $lh / 2;
+
+    button {
+      height: fit-content;
+      color: $secondary;
+      padding: 7px;
+      font-weight: 800;
+      margin: $lh / 4 5px;
+      min-width: 75px;
+    }
   }
 }
 
