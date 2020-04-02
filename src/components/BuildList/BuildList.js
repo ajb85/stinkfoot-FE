@@ -89,7 +89,7 @@ function ListBuild(props) {
                 <div className={styles.enhancements}>
                   {allEnhancements.map(({ name, count }) => (
                     <p key={name}>
-                      {name}: {count}
+                      {count}: {name}
                     </p>
                   ))}
                 </div>
