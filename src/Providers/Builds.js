@@ -6,6 +6,10 @@ function BuildProvider(props) {
   const [build, setBuild] = useState({});
 
   const saveBuild = str => {
+    if (!str) {
+      setBuild({});
+      return;
+    }
     const content = [];
 
     for (let i = 0; i < str.length; i++) {
