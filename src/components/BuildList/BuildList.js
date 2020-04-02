@@ -4,6 +4,7 @@ import { BuildContext } from 'Providers/Builds.js';
 import FilterOptions from './FilterOptions.js';
 
 import categoryName from 'js/categories.js';
+import doesSetMatchKeyword from 'js/doesSetMatchKeyword.js';
 
 import styles from './styles.module.scss';
 
@@ -11,8 +12,11 @@ function ListBuild(props) {
   const [filters, setFilters] = useState({
     order: 'asc',
     tags: { length: 0 },
-    options: []
+    options: [],
+    search: ''
   });
+
+  const { build, saveBuild } = useContext(BuildContext);
 
   const toggleTag = tag => {
     if (filters.tags[tag]) {
@@ -28,7 +32,51 @@ function ListBuild(props) {
     }
   };
 
-  const { build, saveBuild } = useContext(BuildContext);
+  const setSearch = e => {
+    setFilters({ ...filters, search: e.target.value });
+  };
+
+  const enhancementList = Object.entries(build)
+    .filter(([setName, enhancements]) => {
+      if (!filters.tags.length) {
+        return doesSetMatchKeyword(filters.search, setName, enhancements);
+      }
+      for (let e in enhancements) {
+        const stats = e.split('/');
+        for (let i = 0; i < stats.length; i++) {
+          const s = stats[i];
+          const category = categoryName[s.toLowerCase()];
+          if (category && filters.tags[category.name]) {
+            return doesSetMatchKeyword(filters.search, setName, enhancements);
+          }
+        }
+      }
+      return false;
+    })
+    .sort((a, b) => {
+      const countA = Object.keys(a[1]).length;
+      const countB = Object.keys(b[1]).length;
+      return countA === countB ? 0 : countA > countB ? -1 : 1;
+    })
+    .map(([setName, enhancements]) => {
+      const allEnhancements = [];
+      for (let e in enhancements) {
+        const count = enhancements[e];
+        allEnhancements.push({ name: e, count });
+      }
+      return (
+        <div key={setName} className={styles.set}>
+          <h2>{setName}</h2>
+          <div className={styles.enhancements}>
+            {allEnhancements.map(({ name, count }) => (
+              <p key={name}>
+                {count}: {name}
+              </p>
+            ))}
+          </div>
+        </div>
+      );
+    });
 
   useEffect(() => {
     const categoryList = new Set();
@@ -50,52 +98,23 @@ function ListBuild(props) {
     setFilters({ ...filters, options });
     // eslint-disable-next-line
   }, [build]);
+
   return (
     <div className={styles.BuildList}>
-      <FilterOptions filters={filters} toggleTag={toggleTag} />
+      <FilterOptions
+        filters={filters}
+        toggleTag={toggleTag}
+        setSearch={setSearch}
+      />
       <div className={styles.block} />
       <div className={styles.list}>
-        {Object.entries(build)
-          .filter(([_, enhancements]) => {
-            if (!filters.tags.length) {
-              return true;
-            }
-            for (let e in enhancements) {
-              const stats = e.split('/');
-              for (let i = 0; i < stats.length; i++) {
-                const s = stats[i];
-                const category = categoryName[s.toLowerCase()];
-                if (category && filters.tags[category.name]) {
-                  return true;
-                }
-              }
-            }
-            return false;
-          })
-          .sort((a, b) => {
-            const countA = Object.keys(a[1]).length;
-            const countB = Object.keys(b[1]).length;
-            return countA === countB ? 0 : countA > countB ? -1 : 1;
-          })
-          .map(([setName, enhancements]) => {
-            const allEnhancements = [];
-            for (let e in enhancements) {
-              const count = enhancements[e];
-              allEnhancements.push({ name: e, count });
-            }
-            return (
-              <div key={setName} className={styles.set}>
-                <h2>{setName}</h2>
-                <div className={styles.enhancements}>
-                  {allEnhancements.map(({ name, count }) => (
-                    <p key={name}>
-                      {count}: {name}
-                    </p>
-                  ))}
-                </div>
-              </div>
-            );
-          })}
+        {enhancementList.length ? (
+          enhancementList
+        ) : (
+          <p>
+            Whoops, you don't have any enhancements that match that criteria!
+          </p>
+        )}
       </div>
       <div className={styles.newBuild}>
         <button type="button" onClick={saveBuild}>
