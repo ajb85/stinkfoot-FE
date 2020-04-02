@@ -28,7 +28,7 @@ function ListBuild(props) {
     }
   };
 
-  const { build } = useContext(BuildContext);
+  const { build, saveBuild } = useContext(BuildContext);
 
   useEffect(() => {
     const categoryList = new Set();
@@ -43,7 +43,11 @@ function ListBuild(props) {
       }
     }
 
-    setFilters({ ...filters, options: [...categoryList].sort() });
+    const options = [...categoryList].sort((a, b) =>
+      a.name === b.name ? 0 : a.name > b.name ? 1 : -1
+    );
+
+    setFilters({ ...filters, options });
     // eslint-disable-next-line
   }, [build]);
   return (
@@ -92,6 +96,11 @@ function ListBuild(props) {
               </div>
             );
           })}
+      </div>
+      <div className={styles.newBuild}>
+        <button type="button" onClick={saveBuild}>
+          New Build
+        </button>
       </div>
     </div>
   );
