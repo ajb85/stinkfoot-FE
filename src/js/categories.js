@@ -38,5 +38,7 @@ export default {
   hold: control,
   sleep: control,
   stun: control,
-  disorient: control
+  confused: control,
+  immobilize: control,
+  terrorized: control
 };
