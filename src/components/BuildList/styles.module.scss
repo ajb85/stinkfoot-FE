@@ -43,7 +43,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: fit-content;
+  height: $lh * 5;
   display: flex;
   background-color: rgba(0, 0, 0, 0.5);
   background-color: $dark;
@@ -52,13 +52,13 @@
 
   label {
     line-height: $lh;
-    margin-bottom: $lh/2;
+    min-height: $lh;
   }
 
   div.statsContainer {
     display: flex;
     flex-direction: column;
-
+    height: $lh;
     width: 50%;
 
     label {
@@ -70,9 +70,11 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin: $lh / 2 0;
+    min-height: 1.5 * $lh;
 
     button {
-      height: fit-content;
+      height: 1.5 * $lh;
       color: $secondary;
       font-weight: 800;
       height: 1.5 * $lh;
@@ -87,12 +89,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
     width: 25%;
 
     input {
       width: 100%;
-      height: 1.5 * $lh;
+      min-height: 1.5 * $lh;
+      margin: $lh / 2 0;
     }
   }
 }
