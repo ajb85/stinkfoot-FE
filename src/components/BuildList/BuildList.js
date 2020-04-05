@@ -71,7 +71,9 @@ function ListBuild(props) {
             <div>
               {allEnhancements.map(({ name, count }) => (
                 <div className={styles.enhancement} key={name}>
-                  <p>{count}</p>
+                  <p style={{ visibility: count === 1 ? 'hidden' : 'visible' }}>
+                    {count}
+                  </p>
                   <p>{name}</p>
                 </div>
               ))}
