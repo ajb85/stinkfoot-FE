@@ -113,7 +113,7 @@ function ListBuild(props) {
         {enhancementList.length ? (
           enhancementList
         ) : (
-          <p>
+          <p style={{ marginTop: '18px' }}>
             Whoops, you don't have any enhancements that match that criteria!
           </p>
         )}
