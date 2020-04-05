@@ -106,7 +106,7 @@ function ListBuild(props) {
         toggleTag={toggleTag}
         setSearch={setSearch}
       />
-      <div className={styles.block} />
+      {/* <div className={styles.block} /> */}
       <div className={styles.list}>
         {enhancementList.length ? (
           enhancementList
@@ -116,11 +116,11 @@ function ListBuild(props) {
           </p>
         )}
       </div>
-      <div className={styles.newBuild}>
+      {/* <div className={styles.newBuild}>
         <button type="button" onClick={saveBuild}>
           New Build
         </button>
-      </div>
+      </div> */}
     </div>
   );
 }
