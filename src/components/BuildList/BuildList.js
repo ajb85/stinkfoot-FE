@@ -66,13 +66,16 @@ function ListBuild(props) {
       }
       return (
         <div key={setName} className={styles.set}>
-          <h2>{setName}</h2>
-          <div className={styles.enhancements}>
-            {allEnhancements.map(({ name, count }) => (
-              <p key={name}>
-                {count}: {name}
-              </p>
-            ))}
+          <div className={styles.setContainer}>
+            <h2>{setName}</h2>
+            <div>
+              {allEnhancements.map(({ name, count }) => (
+                <div className={styles.enhancement} key={name}>
+                  <p>{count}</p>
+                  <p>{name}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       );
@@ -106,7 +109,6 @@ function ListBuild(props) {
         toggleTag={toggleTag}
         setSearch={setSearch}
       />
-      {/* <div className={styles.block} /> */}
       <div className={styles.list}>
         {enhancementList.length ? (
           enhancementList

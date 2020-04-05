@@ -2,37 +2,67 @@
 
 .BuildList {
   display: flex;
-  margin-top: $lh;
 
   div.list {
-    width: 70%;
+    width: 100%;
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    margin-top: 150px;
+    flex-wrap: wrap;
+    margin-top: $lh * 5;
 
     div.set {
-      border: 1px solid $secondary;
+      margin: $lh;
 
-      height: fit-content;
+      div.setContainer {
+        overflow: hidden;
+        box-shadow: 3px 3px 20px 0 rgba(0, 0, 0, 0.7);
+        border-radius: 20px;
 
-      width: 350px;
+        & > div:first-of-type {
+          padding: $lh / 2 $lh;
+          background-color: $secondary;
+        }
+      }
 
       h2 {
+        min-height: $lh * 3;
+        padding: $lh;
+
         text-align: center;
+        font-size: 18px;
         font-weight: 800;
-        border-bottom: 1px solid $secondary;
-        padding: 10px;
 
         background-color: $accent2;
-        word-wrap: break-word;
       }
 
       p {
         margin: 12.5px 0;
         padding: 0 10px;
         word-wrap: break-word;
+      }
+
+      .enhancement {
+        display: flex;
+
+        p {
+          line-height: $lh;
+          min-height: $lh;
+          margin: $lh/2 0;
+        }
+
+        p:first-of-type {
+          // Enhancement count
+          background-color: $dark;
+          color: $secondary;
+          border-radius: 50%;
+          padding: 0;
+          width: 18px;
+          text-align: center;
+        }
+
+        p:last-of-type {
+          color: $dark;
+        }
       }
     }
   }
@@ -44,11 +74,16 @@
   left: 0;
   width: 100%;
   height: $lh * 5;
-  display: flex;
   background-color: rgba(0, 0, 0, 0.5);
   background-color: $dark;
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
-  padding: $lh 0;
+
+  .filterContainer {
+    padding: $lh 0;
+    display: flex;
+    max-width: 1500px;
+    margin: 0 auto;
+  }
 
   label {
     line-height: $lh;
