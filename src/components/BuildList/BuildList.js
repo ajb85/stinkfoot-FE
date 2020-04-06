@@ -16,7 +16,7 @@ function ListBuild(props) {
     search: ''
   });
 
-  const { build } = useContext(BuildContext);
+  const { build, toggleEnhancement, toggleSet } = useContext(BuildContext);
 
   const toggleTag = tag => {
     if (filters.tags[tag]) {
@@ -56,25 +56,54 @@ function ListBuild(props) {
     .sort((a, b) => {
       const countA = Object.keys(a[1]).length;
       const countB = Object.keys(b[1]).length;
-      return countA === countB ? 0 : countA > countB ? -1 : 1;
+      const isACompleted = a[1].completed;
+      const isBCompleted = b[1].completed;
+      return isACompleted && !isBCompleted
+        ? 1
+        : !isACompleted && isBCompleted
+        ? -1
+        : countA === countB
+        ? 0
+        : countA > countB
+        ? -1
+        : 1;
     })
     .map(([setName, enhancements]) => {
       const allEnhancements = [];
       for (let e in enhancements) {
-        const count = enhancements[e];
-        allEnhancements.push({ name: e, count });
+        if (e !== 'completed') {
+          const { count, completed } = enhancements[e];
+          allEnhancements.push({ name: e, count, completed });
+        }
       }
       return (
         <div key={setName} className={styles.set}>
           <div className={styles.setContainer}>
-            <h2>{setName}</h2>
+            <h2 onClick={() => toggleSet(setName)}>{setName}</h2>
             <div>
-              {allEnhancements.map(({ name, count }) => (
-                <div className={styles.enhancement} key={name}>
-                  <p style={{ visibility: count === 1 ? 'hidden' : 'visible' }}>
+              {allEnhancements.map(({ name, count, completed }) => (
+                <div
+                  className={styles.enhancement}
+                  key={name}
+                  onClick={() => toggleEnhancement(setName, name)}
+                  style={{ cursor: 'pointer' }}
+                >
+                  <p
+                    style={{
+                      visibility: count === 1 ? 'hidden' : 'visible',
+                      textDecoration:
+                        count > 1 && completed ? 'line-through' : null
+                    }}
+                  >
                     {count}
                   </p>
-                  <p>{name}</p>
+                  <p
+                    style={{
+                      textDecoration: completed ? 'line-through' : null
+                    }}
+                  >
+                    {name}
+                  </p>
                 </div>
               ))}
             </div>
