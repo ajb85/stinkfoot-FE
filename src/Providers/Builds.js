@@ -35,7 +35,52 @@ function BuildProvider(props) {
       }
     }
     const groomedContent = formatData(content);
+    localStorage.setItem('currentBuild', JSON.stringify(groomedContent));
     setBuild(groomedContent);
+  };
+
+  const toggleEnhancement = (setName, enhName) => {
+    let isComplete = true;
+
+    const updatedSet = {
+      ...build[setName],
+      [enhName]: {
+        ...build[setName][enhName],
+        completed: !build[setName][enhName].completed
+      }
+    };
+
+    for (let eName in updatedSet) {
+      const enh = updatedSet[eName];
+      if (eName !== 'completed' && !enh.completed) {
+        isComplete = false;
+      }
+    }
+
+    updatedSet.completed = isComplete;
+
+    const newBuild = {
+      ...build,
+      [setName]: updatedSet
+    };
+
+    localStorage.setItem('currentBuild', JSON.stringify(newBuild));
+    setBuild(newBuild);
+  };
+
+  const toggleSet = setName => {
+    const setCopy = { ...build[setName] };
+    setCopy.completed = !setCopy.completed;
+    const isComplete = setCopy.completed;
+    for (let enhName in setCopy) {
+      if (enhName !== 'completed') {
+        const enh = setCopy[enhName];
+        enh.completed = isComplete;
+      }
+    }
+    const newBuild = { ...build, [setName]: setCopy };
+    localStorage.setItem('currentBuild', JSON.stringify(newBuild));
+    setBuild(newBuild);
   };
 
   React.useEffect(() => {
@@ -44,10 +89,16 @@ function BuildProvider(props) {
       process.env.REACT_APP_ENV.toLowerCase() === 'dev'
     ) {
       saveBuild(dummyBuild);
+    } else if (localStorage.getItem('currentBuild')) {
+      saveBuild(JSON.parse(localStorage.getItem('currentBuild')));
     }
   }, []);
   const { Provider } = BuildContext;
-  return <Provider value={{ build, saveBuild }}>{props.children}</Provider>;
+  return (
+    <Provider value={{ build, saveBuild, toggleEnhancement, toggleSet }}>
+      {props.children}
+    </Provider>
+  );
 }
 
 export default BuildProvider;
@@ -71,11 +122,16 @@ function formatData(arr) {
       const setName = content.substring(0, content.indexOf(' - '));
       if (updated[setName]) {
         const setEnhancements = updated[setName];
-        setEnhancements[arr[i + 1]] = setEnhancements[arr[i + 1]]
-          ? setEnhancements[arr[i + 1]] + 1
-          : 1;
+        if (setEnhancements[arr[i + 1]]) {
+          setEnhancements[arr[i + 1]].count++;
+        } else {
+          setEnhancements[arr[i + 1]] = { count: 1, completed: false };
+        }
       } else {
-        updated[setName] = { [arr[i + 1]]: 1 };
+        updated[setName] = {
+          [arr[i + 1]]: { count: 1, completed: false },
+          completed: false
+        };
       }
       i += 1;
     }
