@@ -16,7 +16,7 @@ function ListBuild(props) {
     search: ''
   });
 
-  const { build, saveBuild } = useContext(BuildContext);
+  const { build } = useContext(BuildContext);
 
   const toggleTag = tag => {
     if (filters.tags[tag]) {
@@ -120,11 +120,6 @@ function ListBuild(props) {
           </p>
         )}
       </div>
-      {/* <div className={styles.newBuild}>
-        <button type="button" onClick={saveBuild}>
-          New Build
-        </button>
-      </div> */}
     </div>
   );
 }
