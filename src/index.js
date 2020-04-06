@@ -11,6 +11,7 @@ import history from 'history.js';
 
 // Styles
 import './styles/index.scss';
+import 'faLibrary.js';
 
 ReactDOM.render(
   <React.StrictMode>
