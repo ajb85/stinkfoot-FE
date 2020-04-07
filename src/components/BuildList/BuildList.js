@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { BuildContext } from 'Providers/Builds.js';
 import FilterOptions from './FilterOptions.js';
@@ -90,12 +91,16 @@ function ListBuild(props) {
                 >
                   <p
                     style={{
-                      visibility: count === 1 ? 'hidden' : 'visible',
-                      textDecoration:
-                        count > 1 && completed ? 'line-through' : null
+                      visibility:
+                        !completed && count === 1 ? 'hidden' : 'visible',
+                      backgroundColor: completed ? '#279f8f' : null
                     }}
                   >
-                    {count}
+                    {completed ? (
+                      <FontAwesomeIcon icon={['fal', 'check']} />
+                    ) : (
+                      count
+                    )}
                   </p>
                   <p
                     style={{
