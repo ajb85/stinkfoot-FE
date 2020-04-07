@@ -3,7 +3,10 @@ import React, { useState, createContext } from 'react';
 export const BuildContext = createContext();
 
 function BuildProvider(props) {
-  const [build, setBuild] = useState({});
+  const currentBuild = localStorage.getItem('currentBuild');
+  const [build, setBuild] = useState(
+    currentBuild ? JSON.parse(currentBuild) : {}
+  );
 
   const saveBuild = str => {
     if (!str) {
@@ -86,11 +89,9 @@ function BuildProvider(props) {
   React.useEffect(() => {
     if (
       process.env.REACT_APP_ENV &&
-      process.env.REACT_APP_ENV.toLowerCase() === 'dev'
+      process.env.REACT_APP_ENV.toLowerCase() === 'dev!'
     ) {
       saveBuild(dummyBuild);
-    } else if (localStorage.getItem('currentBuild')) {
-      saveBuild(JSON.parse(localStorage.getItem('currentBuild')));
     }
   }, []);
   const { Provider } = BuildContext;
