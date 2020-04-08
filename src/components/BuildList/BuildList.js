@@ -17,7 +17,9 @@ function ListBuild(props) {
     search: ''
   });
 
-  const { build, toggleEnhancement, toggleSet } = useContext(BuildContext);
+  const { build, toggleEnhancement, toggleSet, decrementCount } = useContext(
+    BuildContext
+  );
 
   const toggleTag = tag => {
     if (filters.tags[tag]) {
@@ -69,48 +71,53 @@ function ListBuild(props) {
         ? -1
         : 1;
     })
-    .map(([setName, enhancements]) => {
+    .map(([setName, meta]) => {
       const allEnhancements = [];
+      const { enhancements } = meta;
       for (let e in enhancements) {
-        if (e !== 'completed') {
-          const { count, completed } = enhancements[e];
-          allEnhancements.push({ name: e, count, completed });
-        }
+        const { need, have } = enhancements[e];
+        allEnhancements.push({ name: e, need, have });
       }
       return (
         <div key={setName} className={styles.set}>
           <div className={styles.setContainer}>
             <h2 onClick={() => toggleSet(setName)}>{setName}</h2>
             <div>
-              {allEnhancements.map(({ name, count, completed }) => (
-                <div
-                  className={styles.enhancement}
-                  key={name}
-                  onClick={() => toggleEnhancement(setName, name)}
-                  style={{ cursor: 'pointer' }}
-                >
-                  <p
-                    style={{
-                      visibility:
-                        !completed && count === 1 ? 'hidden' : 'visible',
-                      backgroundColor: completed ? '#279f8f' : null
-                    }}
+              {allEnhancements.map(({ name, have, need }) => {
+                const count = need - have;
+                const completed = count === 0;
+
+                return (
+                  <div
+                    className={styles.enhancement}
+                    key={name}
+                    style={{ cursor: 'pointer' }}
                   >
-                    {completed ? (
-                      <FontAwesomeIcon icon={['fal', 'check']} />
-                    ) : (
-                      count
-                    )}
-                  </p>
-                  <p
-                    style={{
-                      textDecoration: completed ? 'line-through' : null
-                    }}
-                  >
-                    {name}
-                  </p>
-                </div>
-              ))}
+                    <p
+                      style={{
+                        visibility:
+                          !completed && need === 1 ? 'hidden' : 'visible',
+                        backgroundColor: completed ? '#279f8f' : '#0a1b3b'
+                      }}
+                      onClick={() => decrementCount(setName, name)}
+                    >
+                      {completed ? (
+                        <FontAwesomeIcon icon={['fal', 'check']} />
+                      ) : (
+                        count
+                      )}
+                    </p>
+                    <p
+                      style={{
+                        textDecoration: completed ? 'line-through' : null
+                      }}
+                      onClick={() => toggleEnhancement(setName, name)}
+                    >
+                      {name}
+                    </p>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </div>
