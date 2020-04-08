@@ -57,8 +57,8 @@ function ListBuild(props) {
       return false;
     })
     .sort((a, b) => {
-      const countA = Object.keys(a[1]).length;
-      const countB = Object.keys(b[1]).length;
+      const countA = Object.keys(a[1].enhancements).length;
+      const countB = Object.keys(b[1].enhancements).length;
       const isACompleted = a[1].completed;
       const isBCompleted = b[1].completed;
       return isACompleted && !isBCompleted
@@ -127,7 +127,7 @@ function ListBuild(props) {
   useEffect(() => {
     const categoryList = new Set();
     for (let setName in build) {
-      for (let eName in build[setName]) {
+      for (let eName in build[setName].enhancements) {
         eName.split('/').forEach(n => {
           const category = categoryName[n.toLowerCase()];
           if (category) {
