@@ -41,6 +41,9 @@ function ListBuild(props) {
 
   const enhancementList = Object.entries(build)
     .filter(([setName, enhancements]) => {
+      if (setName === 'completed') {
+        return false;
+      }
       if (!filters.tags.length) {
         return doesSetMatchKeyword(filters.search, setName, enhancements);
       }
@@ -57,6 +60,9 @@ function ListBuild(props) {
       return false;
     })
     .sort((a, b) => {
+      if (a[1] === false) {
+        console.log('A: ', a);
+      }
       const countA = Object.keys(a[1].enhancements).length;
       const countB = Object.keys(b[1].enhancements).length;
       const isACompleted = a[1].completed;

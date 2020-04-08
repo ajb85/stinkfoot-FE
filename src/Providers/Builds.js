@@ -81,7 +81,7 @@ function BuildProvider(props) {
   React.useEffect(() => {
     if (
       process.env.REACT_APP_ENV &&
-      process.env.REACT_APP_ENV.toLowerCase() === 'dev'
+      process.env.REACT_APP_ENV.toLowerCase() === 'dev!'
     ) {
       saveBuild(dummyBuild);
     }
@@ -172,6 +172,10 @@ function updateOldDataStructures(build) {
     build = JSON.parse(build);
   }
 
+  if (build.hasOwnProperty('completed')) {
+    delete build.completed;
+  }
+
   for (let setName in build) {
     const set = build[setName];
     if (!set.enhancements) {
@@ -194,6 +198,7 @@ function _modernizeStructure(build) {
     const updatedSet = { enhancements, completed };
 
     for (let eName in enhancements) {
+      console.log('NAME: ', eName);
       const enh = enhancements[eName];
       const { completed, count: need } = enh;
 
