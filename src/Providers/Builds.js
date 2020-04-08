@@ -3,10 +3,11 @@ import React, { useState, createContext } from 'react';
 export const BuildContext = createContext();
 
 function BuildProvider(props) {
-  const currentBuild = localStorage.getItem('currentBuild');
-  const [build, setBuild] = useState(
-    currentBuild ? JSON.parse(currentBuild) : {}
+  const currentBuild = updateOldDataStructures(
+    localStorage.getItem('currentBuild')
   );
+
+  const [build, setBuild] = useState(currentBuild ? currentBuild : {});
 
   const saveBuild = str => {
     if (!str) {
@@ -160,6 +161,48 @@ function formatData(arr) {
     }
   }
   return updated;
+}
+
+function updateOldDataStructures(build) {
+  if (!build) {
+    return null;
+  }
+
+  if (typeof build === 'string') {
+    build = JSON.parse(build);
+  }
+
+  for (let setName in build) {
+    const set = build[setName];
+    if (!set.enhancements) {
+      return _modernizeStructure(build);
+    }
+  }
+
+  return build;
+}
+
+function _modernizeStructure(build) {
+  // Assumes build exists & is an object
+
+  const buildCopy = { ...build };
+  const updatedBuild = {};
+
+  for (let setName in buildCopy) {
+    const _set = buildCopy[setName];
+    const { completed, ...enhancements } = _set;
+    const updatedSet = { enhancements, completed };
+
+    for (let eName in enhancements) {
+      const enh = enhancements[eName];
+      const { completed, count: need } = enh;
+
+      updatedSet.enhancements[eName] = { need, have: completed ? need : 0 };
+    }
+    updatedBuild[setName] = updatedSet;
+  }
+
+  return updatedBuild;
 }
 
 const dummyBuild = `<font color="#489AFF"><b>Hero Plan by Hero Hero Designer 2.23</b></font><br />
