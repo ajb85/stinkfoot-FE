@@ -195,12 +195,20 @@ function setEnhancement(text, build) {
 
   if (setInBuild) {
     if (setInBuild[enhInfo.name]) {
-      setInBuild[enhInfo.name].push(lastPower.name);
+      setInBuild.enhancements[enhInfo.name].need.push(lastPower.name);
     } else {
-      setInBuild[enhInfo.name] = [lastPower.name];
+      setInBuild.enhancements[enhInfo.name] = {
+        need: [lastPower.name],
+        have: 0,
+      };
     }
   } else {
-    build.enhancements[enhInfo.setName] = { [enhInfo.name]: [lastPower.name] };
+    build.enhancements[enhInfo.setName] = {
+      enhancements: {
+        [enhInfo.name]: { need: [lastPower.name], have: 0 },
+      },
+      completed: false,
+    };
   }
 }
 
