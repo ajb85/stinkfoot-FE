@@ -10,7 +10,7 @@ function BuildProvider(props) {
   const [build, setBuild] = useState(builds ? builds : {});
 
   const _saveBuildToActive = (build) => {
-    const builds = localStorage.getItem('builds') || {};
+    const builds = JSON.parse(localStorage.getItem('builds')) || {};
 
     builds.active = build;
     localStorage.setItem('builds', JSON.stringify(builds));
@@ -37,17 +37,23 @@ function BuildProvider(props) {
 
     const newBuild = {
       ...build,
-      [setName]: { ...build[setName], enhancements: newEnh },
-      completed: isComplete,
+      enhancements: {
+        ...build.enhancements,
+        [setName]: {
+          ...build.enhancements[setName],
+          enhancements: newEnh,
+          completed: isComplete,
+        },
+      },
     };
 
     _saveBuildToActive(newBuild);
   };
 
   const toggleEnhancement = (setName, enhName) => {
-    const enh = build[setName].enhancements[enhName];
+    const enh = build.enhancements[setName].enhancements[enhName];
     const updatedSet = {
-      ...build[setName].enhancements,
+      ...build.enhancements[setName].enhancements,
       [enhName]: {
         ...enh,
         have: enh.have < enh.need ? enh.need : 0,
@@ -58,7 +64,7 @@ function BuildProvider(props) {
   };
 
   const decrementCount = (setName, enhName) => {
-    const set = { ...build[setName].enhancements };
+    const set = { ...build.enhancements[setName].enhancements };
     set[enhName].have =
       set[enhName].have < set[enhName].need
         ? set[enhName].have + 1
@@ -68,7 +74,7 @@ function BuildProvider(props) {
   };
 
   const toggleSet = (setName) => {
-    const setCopy = { ...build[setName] };
+    const setCopy = { ...build.enhancements[setName] };
     setCopy.completed = !setCopy.completed;
     const isComplete = setCopy.completed;
 
@@ -78,7 +84,13 @@ function BuildProvider(props) {
       enh.have = isComplete ? enh.need : 0;
     }
 
-    const newBuild = { ...build, [setName]: { ...setCopy, enhancements } };
+    const newBuild = {
+      ...build,
+      enhancements: {
+        ...build.enhancements,
+        [setName]: { ...setCopy, enhancements },
+      },
+    };
     _saveBuildToActive(newBuild);
   };
 
