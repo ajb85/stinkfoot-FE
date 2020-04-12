@@ -25,6 +25,16 @@ function BuildProvider(props) {
     _saveBuildToActive(parseStringToBuild(str));
   };
 
+  const isValidBuild = (build) => {
+    if (typeof build === 'string') {
+      build = parseStringToBuild(build);
+    }
+
+    return (
+      build && build.enhancements && !!Object.keys(build.enhancements).length
+    );
+  };
+
   const _saveUpdatedBuild = (newEnh, setName) => {
     let isComplete = true;
 
@@ -97,7 +107,14 @@ function BuildProvider(props) {
   const { Provider } = BuildContext;
   return (
     <Provider
-      value={{ build, saveBuild, toggleEnhancement, toggleSet, decrementCount }}
+      value={{
+        build,
+        saveBuild,
+        toggleEnhancement,
+        toggleSet,
+        decrementCount,
+        isValidBuild,
+      }}
     >
       {props.children}
     </Provider>
