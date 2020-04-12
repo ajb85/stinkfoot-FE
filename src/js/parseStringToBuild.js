@@ -22,7 +22,7 @@ class Stack {
   }
 }
 
-export function parseStringToBuild(str) {
+export default function parseStringToBuild(str) {
   const s = new Stack();
   const dom = parse(str);
 
