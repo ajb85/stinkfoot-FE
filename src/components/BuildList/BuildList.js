@@ -115,9 +115,13 @@ function ListBuild(props) {
                     </div>
                     <div className={styles.powerList}>
                       <div>
-                        {powers.map((p) => (
-                          <span>{p}</span>
-                        ))}
+                        {Object.entries(powers).map(
+                          ([powerName, { count }]) => (
+                            <span>
+                              {powerName} {count > 1 ? `x${count}` : null}
+                            </span>
+                          )
+                        )}
                       </div>
                     </div>
                   </div>
