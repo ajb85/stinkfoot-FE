@@ -54,7 +54,7 @@ export default function parseStringToBuild(str) {
     }
   }
 
-  return updateSetsToArrays(build);
+  return build;
 }
 
 function getActionFromNode({ rawText: text, tagName }) {
@@ -192,22 +192,28 @@ function setEnhancement(text, build) {
   if (setInBuild) {
     if (setInBuild.enhancements[enhInfo.name]) {
       setInBuild.enhancements[enhInfo.name].need++;
-      setInBuild.enhancements[enhInfo.name].powers.add(lastPower.name);
+      if (setInBuild.enhancements[enhInfo.name].powers[lastPower.name]) {
+        setInBuild.enhancements[enhInfo.name].powers[lastPower.name].count++;
+      } else {
+        setInBuild.enhancements[enhInfo.name].powers[lastPower.name] = {
+          count: 1,
+        };
+      }
     } else {
-      const powers = new Set();
-      powers.add(lastPower.name);
       setInBuild.enhancements[enhInfo.name] = {
         need: 1,
         have: 0,
-        powers,
+        powers: { [lastPower.name]: { count: 1 } },
       };
     }
   } else {
-    const powers = new Set();
-    powers.add(lastPower.name);
     build.enhancements[enhInfo.setName] = {
       enhancements: {
-        [enhInfo.name]: { need: 1, have: 0, powers },
+        [enhInfo.name]: {
+          need: 1,
+          have: 0,
+          powers: { [lastPower.name]: { count: 1 } },
+        },
       },
       completed: false,
     };
@@ -223,18 +229,4 @@ function getActions() {
     alignment: setAlignment,
     enhancement: setEnhancement,
   };
-}
-
-function updateSetsToArrays(build) {
-  for (let setName in build.enhancements) {
-    const { enhancements } = build.enhancements[setName];
-    for (let e in enhancements) {
-      if (setName === 'IOs') {
-        console.log(enhancements[e]);
-      }
-      enhancements[e].powers = [...enhancements[e].powers];
-    }
-  }
-
-  return build;
 }
