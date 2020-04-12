@@ -14,14 +14,14 @@ function ListBuild(props) {
     order: 'asc',
     tags: { length: 0 },
     options: [],
-    search: ''
+    search: '',
   });
 
   const { build, toggleEnhancement, toggleSet, decrementCount } = useContext(
     BuildContext
   );
 
-  const toggleTag = tag => {
+  const toggleTag = (tag) => {
     if (filters.tags[tag]) {
       const newTags = { ...filters.tags };
       delete newTags[tag];
@@ -30,20 +30,17 @@ function ListBuild(props) {
     } else {
       setFilters({
         ...filters,
-        tags: { ...filters.tags, length: filters.tags.length + 1, [tag]: true }
+        tags: { ...filters.tags, length: filters.tags.length + 1, [tag]: true },
       });
     }
   };
 
-  const setSearch = e => {
+  const setSearch = (e) => {
     setFilters({ ...filters, search: e.target.value });
   };
 
-  const enhancementList = Object.entries(build)
+  const enhancementList = Object.entries(build.enhancements)
     .filter(([setName, enhancements]) => {
-      if (setName === 'completed') {
-        return false;
-      }
       if (!filters.tags.length) {
         return doesSetMatchKeyword(filters.search, setName, enhancements);
       }
@@ -60,9 +57,6 @@ function ListBuild(props) {
       return false;
     })
     .sort((a, b) => {
-      if (a[1] === false) {
-        console.log('A: ', a);
-      }
       const countA = Object.keys(a[1].enhancements).length;
       const countB = Object.keys(b[1].enhancements).length;
       const isACompleted = a[1].completed;
@@ -90,7 +84,7 @@ function ListBuild(props) {
             <h2 onClick={() => toggleSet(setName)}>{setName}</h2>
             <div>
               {allEnhancements.map(({ name, have, need }) => {
-                const count = need - have;
+                const count = need.length - have;
                 const completed = count === 0;
 
                 return (
@@ -102,8 +96,10 @@ function ListBuild(props) {
                     <p
                       style={{
                         visibility:
-                          !completed && need === 1 ? 'hidden' : 'visible',
-                        backgroundColor: completed ? '#279f8f' : '#0a1b3b'
+                          !completed && need.length === 1
+                            ? 'hidden'
+                            : 'visible',
+                        backgroundColor: completed ? '#279f8f' : '#0a1b3b',
                       }}
                       onClick={() => decrementCount(setName, name)}
                     >
@@ -115,7 +111,7 @@ function ListBuild(props) {
                     </p>
                     <p
                       style={{
-                        textDecoration: completed ? 'line-through' : null
+                        textDecoration: completed ? 'line-through' : null,
                       }}
                       onClick={() => toggleEnhancement(setName, name)}
                     >
@@ -134,7 +130,7 @@ function ListBuild(props) {
     const categoryList = new Set();
     for (let setName in build) {
       for (let eName in build[setName].enhancements) {
-        eName.split('/').forEach(n => {
+        eName.split('/').forEach((n) => {
           const category = categoryName[n.toLowerCase()];
           if (category) {
             categoryList.add(category);
