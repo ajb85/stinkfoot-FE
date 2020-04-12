@@ -7,7 +7,7 @@ import styles from './styles.module.scss';
 function Import(props) {
   const inputREF = useRef(null);
   const [wasSubmitted, setWasSubmitted] = useState(false);
-  const { saveBuild } = useContext(BuildContext);
+  const { saveBuild, isValidBuild } = useContext(BuildContext);
 
   useEffect(() => {
     if (inputREF.current) {
@@ -15,10 +15,13 @@ function Import(props) {
     }
   }, [inputREF]);
 
-  const submitBuild = e => {
+  const submitBuild = (e) => {
     e.preventDefault();
-    saveBuild(e.target.value);
     setWasSubmitted(true);
+
+    if (isValidBuild(e.target.value)) {
+      saveBuild(e.target.value);
+    }
   };
   return (
     <form className={styles.Import}>
@@ -29,7 +32,7 @@ function Import(props) {
       </label>
       <input
         ref={inputREF}
-        onChange={e => submitBuild(e)}
+        onChange={(e) => submitBuild(e)}
         // style={{ display: 'none' }}
       />
       {wasSubmitted && (
