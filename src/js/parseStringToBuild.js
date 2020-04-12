@@ -64,7 +64,7 @@ export default function parseStringToBuild(str) {
 function getActionFromNode({ rawText: text, tagName }) {
   const words = text.split(' ').filter((x) => x);
 
-  if (words[0].toLowerCase() === 'level') {
+  if (words[0] === 'Level') {
     return text.indexOf(':') > -1
       ? words[1].indexOf('&nbsp;&nbsp;') > -1
         ? 'power'
