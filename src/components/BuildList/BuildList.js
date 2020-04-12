@@ -75,46 +75,51 @@ function ListBuild(props) {
       const allEnhancements = [];
       const { enhancements } = meta;
       for (let e in enhancements) {
-        const { need, have } = enhancements[e];
-        allEnhancements.push({ name: e, need, have });
+        const { need, have, powers } = enhancements[e];
+        allEnhancements.push({ name: e, need, have, powers });
       }
       return (
         <div key={setName} className={styles.set}>
           <div className={styles.setContainer}>
             <h2 onClick={() => toggleSet(setName)}>{setName}</h2>
             <div>
-              {allEnhancements.map(({ name, have, need }) => {
+              {allEnhancements.map(({ name, have, need, powers }) => {
                 const count = need - have;
                 const completed = count === 0;
 
                 return (
-                  <div
-                    className={styles.enhancement}
-                    key={name}
-                    style={{ cursor: 'pointer' }}
-                  >
-                    <p
-                      style={{
-                        visibility:
-                          !completed && need === 1 ? 'hidden' : 'visible',
-                        backgroundColor: completed ? '#279f8f' : '#0a1b3b',
-                      }}
-                      onClick={() => decrementCount(setName, name)}
-                    >
-                      {completed ? (
-                        <FontAwesomeIcon icon={['fal', 'check']} />
-                      ) : (
-                        count
-                      )}
-                    </p>
-                    <p
-                      style={{
-                        textDecoration: completed ? 'line-through' : null,
-                      }}
-                      onClick={() => toggleEnhancement(setName, name)}
-                    >
-                      {name}
-                    </p>
+                  <div key={name} className={styles.enhContainer}>
+                    <div className={styles.enhancement}>
+                      <p
+                        style={{
+                          visibility:
+                            !completed && need === 1 ? 'hidden' : 'visible',
+                          backgroundColor: completed ? '#279f8f' : '#0a1b3b',
+                        }}
+                        onClick={() => decrementCount(setName, name)}
+                      >
+                        {completed ? (
+                          <FontAwesomeIcon icon={['fal', 'check']} />
+                        ) : (
+                          count
+                        )}
+                      </p>
+                      <p
+                        style={{
+                          textDecoration: completed ? 'line-through' : null,
+                        }}
+                        onClick={() => toggleEnhancement(setName, name)}
+                      >
+                        {name}
+                      </p>
+                    </div>
+                    <div className={styles.powerList}>
+                      <div>
+                        {powers.map((p) => (
+                          <span>{p}</span>
+                        ))}
+                      </div>
+                    </div>
                   </div>
                 );
               })}

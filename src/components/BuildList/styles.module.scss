@@ -1,5 +1,7 @@
 @import 'styles/variables.scss';
 
+$br: 20px;
+
 .BuildList {
   display: flex;
 
@@ -14,13 +16,14 @@
       margin: $lh;
 
       div.setContainer {
-        overflow: hidden;
         box-shadow: 3px 3px 20px 0 rgba(0, 0, 0, 0.7);
         border-radius: 20px;
 
         & > div:first-of-type {
+          // Enhancement container
           padding: $lh / 2 $lh 0;
           background-color: $secondary;
+          border-radius: 0 0 $br $br;
         }
       }
 
@@ -34,6 +37,8 @@
 
         background-color: $accent2;
         cursor: pointer;
+
+        border-radius: $br $br 0 0;
       }
 
       p {
@@ -42,27 +47,65 @@
         word-wrap: break-word;
       }
 
-      .enhancement {
-        display: flex;
+      .enhContainer {
+        .enhancement {
+          display: flex;
+          cursor: pointer;
 
-        p {
-          line-height: $lh;
-          min-height: $lh;
-          font-size: 14px;
+          p {
+            line-height: $lh;
+            min-height: $lh;
+            font-size: 14px;
+          }
+
+          p:first-of-type {
+            // Enhancement count
+            color: $secondary;
+            border-radius: 50%;
+            padding: 0;
+            width: 18px;
+            text-align: center;
+            font-size: 14px;
+          }
+
+          p:last-of-type {
+            color: $dark;
+          }
         }
 
-        p:first-of-type {
-          // Enhancement count
-          color: $secondary;
-          border-radius: 50%;
-          padding: 0;
-          width: 18px;
-          text-align: center;
-          font-size: 14px;
+        .powerList {
+          position: relative;
+          cursor: default;
+          visibility: hidden;
+
+          div {
+            background-color: $dark;
+            position: absolute;
+            right: 0px;
+            top: -2 * $lh;
+            width: fit-content;
+            padding: $lh/2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 15px;
+
+            span {
+              margin: $lh/4 0;
+              font-size: 12px;
+              line-height: $lh/2;
+              min-height: $lh/2;
+              width: fit-content;
+            }
+          }
         }
 
-        p:last-of-type {
-          color: $dark;
+        &:hover {
+          .powerList {
+            visibility: visible;
+          }
         }
       }
     }
