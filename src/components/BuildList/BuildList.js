@@ -84,7 +84,7 @@ function ListBuild(props) {
             <h2 onClick={() => toggleSet(setName)}>{setName}</h2>
             <div>
               {allEnhancements.map(({ name, have, need }) => {
-                const count = need.length - have;
+                const count = need - have;
                 const completed = count === 0;
 
                 return (
@@ -96,9 +96,7 @@ function ListBuild(props) {
                     <p
                       style={{
                         visibility:
-                          !completed && need.length === 1
-                            ? 'hidden'
-                            : 'visible',
+                          !completed && need === 1 ? 'hidden' : 'visible',
                         backgroundColor: completed ? '#279f8f' : '#0a1b3b',
                       }}
                       onClick={() => decrementCount(setName, name)}

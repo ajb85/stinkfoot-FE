@@ -28,7 +28,6 @@ export default function parseStringToBuild(str) {
 
   s.addNodes(dom.childNodes);
 
-  const alreadyParsed = {};
   const build = {
     poolPowers: [],
     powerSets: {},
@@ -43,22 +42,19 @@ export default function parseStringToBuild(str) {
 
     const { rawText: text } = node;
 
-    if (!alreadyParsed[text] || text === ' (A) Empty') {
-      alreadyParsed[text] = true;
-      if (text && text !== '\n' && text !== '&nbsp;&nbsp;') {
-        const action = getActionFromNode(node);
+    if (text && text !== '\n' && text !== '&nbsp;&nbsp;') {
+      const action = getActionFromNode(node);
 
-        if (action) {
-          const actions = getActions();
-          if (actions[action]) {
-            actions[action](text, build);
-          }
+      if (action) {
+        const actions = getActions();
+        if (actions[action]) {
+          actions[action](text, build);
         }
       }
     }
   }
 
-  return build;
+  return updateSetsToArrays(build);
 }
 
 function getActionFromNode({ rawText: text, tagName }) {
@@ -194,18 +190,24 @@ function setEnhancement(text, build) {
   lastPower.slots.push(enhInfo);
 
   if (setInBuild) {
-    if (setInBuild[enhInfo.name]) {
-      setInBuild.enhancements[enhInfo.name].need.push(lastPower.name);
+    if (setInBuild.enhancements[enhInfo.name]) {
+      setInBuild.enhancements[enhInfo.name].need++;
+      setInBuild.enhancements[enhInfo.name].powers.add(lastPower.name);
     } else {
+      const powers = new Set();
+      powers.add(lastPower.name);
       setInBuild.enhancements[enhInfo.name] = {
-        need: [lastPower.name],
+        need: 1,
         have: 0,
+        powers,
       };
     }
   } else {
+    const powers = new Set();
+    powers.add(lastPower.name);
     build.enhancements[enhInfo.setName] = {
       enhancements: {
-        [enhInfo.name]: { need: [lastPower.name], have: 0 },
+        [enhInfo.name]: { need: 1, have: 0, powers },
       },
       completed: false,
     };
@@ -221,4 +223,18 @@ function getActions() {
     alignment: setAlignment,
     enhancement: setEnhancement,
   };
+}
+
+function updateSetsToArrays(build) {
+  for (let setName in build.enhancements) {
+    const { enhancements } = build.enhancements[setName];
+    for (let e in enhancements) {
+      if (setName === 'IOs') {
+        console.log(enhancements[e]);
+      }
+      enhancements[e].powers = [...enhancements[e].powers];
+    }
+  }
+
+  return build;
 }
