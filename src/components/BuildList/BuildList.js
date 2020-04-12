@@ -40,7 +40,7 @@ function ListBuild(props) {
   };
 
   const enhancementList = Object.entries(build.enhancements)
-    .filter(([setName, enhancements]) => {
+    .filter(([setName, { enhancements }]) => {
       if (!filters.tags.length) {
         return doesSetMatchKeyword(filters.search, setName, enhancements);
       }
@@ -126,8 +126,8 @@ function ListBuild(props) {
 
   useEffect(() => {
     const categoryList = new Set();
-    for (let setName in build) {
-      for (let eName in build[setName].enhancements) {
+    for (let setName in build.enhancements) {
+      for (let eName in build.enhancements[setName].enhancements) {
         eName.split('/').forEach((n) => {
           const category = categoryName[n.toLowerCase()];
           if (category) {
