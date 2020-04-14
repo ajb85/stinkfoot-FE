@@ -5,16 +5,16 @@ import { BuildContext } from 'Providers/Builds.js';
 
 import styles from './styles.module.scss';
 
-function FilterOptions({ filters, toggleTag, setSearch }) {
+function FilterOptions({ filters, toggleTag, setSearch, zIndex = 10000 }) {
   const { saveBuild } = useContext(BuildContext);
   return (
-    <div className={styles.FilterButtons}>
+    <div style={{ zIndex }} className={styles.FilterButtons}>
       <div className={styles.filterContainer}>
         {/* Stats Buttons */}
         <div className={styles.statsContainer}>
           <label>Filter by Enhancement Stat</label>
           <div className={styles.statButtons}>
-            {filters.options.map(o => {
+            {filters.options.map((o) => {
               const isActive = !!filters.tags[o.name];
               const background = isActive ? o.activeColor : o.color;
               return (
@@ -33,7 +33,7 @@ function FilterOptions({ filters, toggleTag, setSearch }) {
         {/* Search Bar */}
         <div className={styles.searchBar}>
           <label>Filter by Keyword</label>
-          <input value={filters.search} onChange={e => setSearch(e)} />
+          <input value={filters.search} onChange={(e) => setSearch(e)} />
         </div>
         {/* New Build Button */}
         <div className={styles.buildOptions}>
