@@ -71,18 +71,24 @@ function ListBuild(props) {
         ? -1
         : 1;
     })
-    .map(([setName, meta]) => {
+    .map(([setName, meta], i) => {
       const allEnhancements = [];
       const { enhancements } = meta;
       for (let e in enhancements) {
         const { need, have, powers } = enhancements[e];
         allEnhancements.push({ name: e, need, have, powers });
       }
+
+      const zIndex = -2 * i;
       return (
-        <div key={setName} className={styles.set}>
+        <div
+          style={{ position: 'relative', zIndex }}
+          key={setName}
+          className={styles.set}
+        >
           <div className={styles.setContainer}>
             <h2 onClick={() => toggleSet(setName)}>{setName}</h2>
-            <div>
+            <div style={{ position: 'relative' }}>
               {allEnhancements.map(({ name, have, need, powers }) => {
                 const count = need - have;
                 const completed = count === 0;
@@ -113,16 +119,22 @@ function ListBuild(props) {
                         {name}
                       </p>
                     </div>
-                    <div className={styles.powerList}>
-                      <div>
-                        {Object.entries(powers).map(
-                          ([powerName, { count }]) => (
-                            <span>
-                              {powerName} {count > 1 ? `x${count}` : null}
-                            </span>
+                    <div
+                      style={{ zIndex: zIndex - 2 }}
+                      className={styles.powerListBG}
+                    />
+                    <div
+                      style={{ zIndex: zIndex - 1 }}
+                      className={styles.powerList}
+                    >
+                      <span>
+                        {Object.entries(powers)
+                          .map(
+                            ([powerName, { count }]) =>
+                              `${powerName}${count > 1 ? ` (${count})` : ''}`
                           )
-                        )}
-                      </div>
+                          .join(', ')}
+                      </span>
                     </div>
                   </div>
                 );
@@ -155,13 +167,19 @@ function ListBuild(props) {
   }, [build]);
 
   return (
-    <div className={styles.BuildList}>
+    <div
+      className={styles.BuildList}
+      style={{ position: 'relative', zIndex: enhancementList.length * -2 }}
+    >
       <FilterOptions
         filters={filters}
         toggleTag={toggleTag}
         setSearch={setSearch}
       />
-      <div className={styles.list}>
+      <div
+        className={styles.list}
+        style={{ position: 'relative', zIndex: enhancementList.length * -2 }}
+      >
         {enhancementList.length ? (
           enhancementList
         ) : (

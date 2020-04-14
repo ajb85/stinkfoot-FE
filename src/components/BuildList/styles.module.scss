@@ -75,37 +75,48 @@ $br: 20px;
         }
 
         .powerList {
-          position: relative;
           cursor: default;
-          visibility: hidden;
+          display: flex;
+          justify-content: center;
 
-          div {
-            background-color: $dark;
-            position: absolute;
-            right: -10px;
-            top: -2 * $lh;
-            width: fit-content;
-            padding: $lh/2;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
+          background-color: $dark;
+          position: absolute;
+          right: 0;
+          left: 0;
+          bottom: 0px;
+          width: 100%;
+          padding: $lh / 4 $lh / 2;
 
-            border-radius: 15px;
+          border-radius: 0 0 15px 15px;
 
-            span {
-              margin: $lh/4 0;
-              font-size: 12px;
-              line-height: $lh/2;
-              min-height: $lh/2;
-              width: fit-content;
-            }
+          transition: transform 0.5s;
+
+          span {
+            margin: $lh/4 0;
+            font-size: 12px;
+            line-height: $lh;
+            min-height: $lh/2;
           }
         }
 
+        .powerListBG {
+          cursor: default;
+
+          background-color: $dark;
+          position: absolute;
+          right: 0;
+          left: 0;
+          bottom: $lh;
+          width: 100%;
+          padding: $lh;
+
+          transition: transform 0.5s;
+        }
+
         &:hover {
-          .powerList {
-            visibility: visible;
+          .powerList,
+          .powerListBG {
+            transform: translateY(100%);
           }
         }
       }
