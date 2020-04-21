@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import SelectAT from './SelectAT/';
+import CharacterInfo from './CharacterInfo/';
 import Powersets from './Powersets/';
 import Powers from './Powers/';
 
@@ -8,6 +8,8 @@ import powersets from 'data/powersets.js';
 import origins from 'data/origins.js';
 import powersTemplate from 'data/powersTemplate.js';
 import enhancementSlots from 'data/enhancementSlots.js';
+
+import styles from './styles.module.scss';
 
 function Planner(props) {
   const [build, setBuild] = useState({
@@ -225,19 +227,27 @@ function Planner(props) {
   const setActiveLevel = (activeLevel) => setBuild({ ...build, activeLevel });
 
   return (
-    <div>
-      <SelectAT build={build} updateBuild={updateBuild} setBuild={setBuild} />
-      <Powersets
-        build={build}
-        updateBuild={updateBuild}
-        togglePower={togglePower}
-      />
-      <Powers
-        build={build}
-        setActiveLevel={setActiveLevel}
-        addSlot={addSlot}
-        removeSlot={removeSlot}
-      />
+    <div className={styles.Planner}>
+      <header>
+        <CharacterInfo
+          build={build}
+          updateBuild={updateBuild}
+          setBuild={setBuild}
+        />
+      </header>
+      <main>
+        <Powersets
+          build={build}
+          updateBuild={updateBuild}
+          togglePower={togglePower}
+        />
+        <Powers
+          build={build}
+          setActiveLevel={setActiveLevel}
+          addSlot={addSlot}
+          removeSlot={removeSlot}
+        />
+      </main>
     </div>
   );
 }
