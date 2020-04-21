@@ -11,14 +11,24 @@ function Powersets({ build, updateBuild, togglePower }) {
       <div style={{ display: 'flex', flexDirection: 'column' }}>
         {set.powers
           .filter(({ isEpic }) => !isEpic)
-          .map((p) => (
-            <p
-              key={p.displayName}
-              onClick={togglePower.bind(this, p, isPrimary)}
-            >
-              {p.displayName}
-            </p>
-          ))}
+          .map((p) => {
+            const isUsedPower = build.powerLookup.hasOwnProperty(p.displayName);
+            return (
+              <p
+                key={p.displayName}
+                style={{
+                  color: isUsedPower
+                    ? 'lightgreen'
+                    : build.activeLevel >= p.level
+                    ? 'yellow'
+                    : 'grey',
+                }}
+                onClick={togglePower.bind(this, p, isPrimary)}
+              >
+                {p.displayName}
+              </p>
+            );
+          })}
       </div>
     );
   };
