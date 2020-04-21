@@ -3,21 +3,14 @@ import React from 'react';
 import powersets from 'data/powersets.js';
 import origins from 'data/origins.js';
 
-function SelectAT({ build, updateBuild, setBuild }) {
+import styles from './styles.module.scss';
+
+function CharacterInfo({ build, updateBuild, setBuild }) {
   const setAlignment = (alignment) => {
     setBuild({ ...build, alignment });
   };
   return (
-    <form>
-      <div>
-        <label>Name</label>
-        <input
-          type="text"
-          value={build.name}
-          name="name"
-          onChange={(e) => updateBuild(e)}
-        />
-      </div>
+    <section className={styles.CharacterInfo}>
       <div>
         <label>Archetype</label>
         <select
@@ -45,6 +38,15 @@ function SelectAT({ build, updateBuild, setBuild }) {
             </option>
           ))}
         </select>
+      </div>{' '}
+      <div>
+        <label>Name</label>
+        <input
+          type="text"
+          value={build.name}
+          name="name"
+          onChange={(e) => updateBuild(e)}
+        />
       </div>
       <div>
         <button
@@ -64,8 +66,8 @@ function SelectAT({ build, updateBuild, setBuild }) {
           Villain
         </button>
       </div>
-    </form>
+    </section>
   );
 }
 
-export default SelectAT;
+export default CharacterInfo;
