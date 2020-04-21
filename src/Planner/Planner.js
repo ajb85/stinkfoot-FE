@@ -45,19 +45,6 @@ function Planner(props) {
     }
   };
 
-  const _findNextActive = (assignedLevel = build.activeLevel) => {
-    const nextLevel = build.powers.find(
-      ({ level, name }) => level > assignedLevel && !name
-    );
-    if (nextLevel) {
-      return nextLevel.level;
-    }
-
-    const firstEmpty = build.powers.find(({ name }) => !name);
-
-    return firstEmpty ? firstEmpty.level : null;
-  };
-
   const _assignLevel = (powersLevel) => {
     if (powersLevel <= build.activeLevel) {
       return build.activeLevel;
@@ -76,38 +63,45 @@ function Planner(props) {
       const index = powerLookup[p.displayName];
       delete powerLookup[p.displayName];
 
-      let activeLevel;
+      let slotLevel;
       const powers = build.powers.map((powerSlot, i) => {
         if (i !== index || powerSlot.type === 'default') {
           return powerSlot;
         }
-        activeLevel = powerSlot.level;
         const { level, type } = powerSlot;
+        slotLevel = level;
         return { level, type };
       });
       setBuild({
         ...build,
         powerLookup,
         powers,
-        activeLevel,
+        activeLevel:
+          slotLevel < build.activeLevel
+            ? findLowestUnusedSlot(powers)
+            : build.activeLevel,
       });
     } else {
-      if (p.level === 1 && !build.powers[1].name) {
-        const newPowers = [...build.powers];
+      if (
+        p.level === 1 &&
+        ((isPrimary && !build.powers[0].name) ||
+          (!isPrimary && !build.powers[1].name))
+      ) {
+        const powers = [...build.powers];
         const powerLookup = { ...build.powerLookup };
         if (isPrimary) {
-          newPowers[0] = {
-            ...newPowers[0],
+          powers[0] = {
+            ...powers[0],
             name: p.displayName,
             slots: emptyDefaultSlot(),
           };
           powerLookup[p.displayName] = 0;
         }
-        if (!newPowers[1].name) {
+        if (!powers[1].name) {
           const powerName = build.secondary.powers.find(({ isEpic }) => !isEpic)
             .displayName;
-          newPowers[1] = {
-            ...newPowers[1],
+          powers[1] = {
+            ...powers[1],
             name: powerName,
             slots: emptyDefaultSlot(),
           };
@@ -115,9 +109,9 @@ function Planner(props) {
         }
         setBuild({
           ...build,
-          powers: newPowers,
+          powers,
           powerLookup,
-          activeLevel: _findNextActive(),
+          activeLevel: findLowestUnusedSlot(powers),
         });
       } else {
         let newIndex;
@@ -147,11 +141,16 @@ function Planner(props) {
             ...build.powerLookup,
             [p.displayName]: newIndex,
           },
-          activeLevel: _findNextActive(assignedLevel),
+          activeLevel:
+            assignedLevel === build.activeLevel
+              ? findLowestUnusedSlot(powers)
+              : build.activeLevel,
         });
       }
     }
   };
+
+  const setActiveLevel = (activeLevel) => setBuild({ ...build, activeLevel });
 
   return (
     <div>
@@ -161,7 +160,7 @@ function Planner(props) {
         updateBuild={updateBuild}
         togglePower={togglePower}
       />
-      <Powers build={build} />
+      <Powers build={build} setActiveLevel={setActiveLevel} />
     </div>
   );
 }
@@ -172,6 +171,11 @@ function emptyDefaultSlot() {
       slotLevel: null,
     },
   ];
+}
+
+function findLowestUnusedSlot(powers) {
+  const nextLevel = powers.find(({ name }) => !name);
+  return nextLevel ? nextLevel.level : null;
 }
 
 export default Planner;
