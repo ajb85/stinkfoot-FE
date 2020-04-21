@@ -2,10 +2,26 @@ import React from 'react';
 
 import powersets from 'data/powersets.js';
 
-function Powersets({ build, updateBuild }) {
+function Powersets({ build, updateBuild, togglePower }) {
   const { primary, secondary, archetype } = build;
   const { primaries, secondaries } = powersets[archetype];
 
+  const renderPowerset = (set, isPrimary) => {
+    return (
+      <div style={{ display: 'flex', flexDirection: 'column' }}>
+        {set.powers
+          .filter(({ isEpic }) => !isEpic)
+          .map((p) => (
+            <p
+              key={p.displayName}
+              onClick={togglePower.bind(this, p, isPrimary)}
+            >
+              {p.displayName}
+            </p>
+          ))}
+      </div>
+    );
+  };
   return (
     <>
       <div>
@@ -35,20 +51,17 @@ function Powersets({ build, updateBuild }) {
         </select>
       </div>
       <div style={{ display: 'flex' }}>
-        <div style={{ display: 'flex', flexDirection: 'column' }}>
-          {primaries
-            .find(({ displayName }) => displayName === primary.displayName)
-            .powers.map(({ displayName }) => (
-              <p>{displayName}</p>
-            ))}
-        </div>
-        <div style={{ display: 'flex', flexDirection: 'column' }}>
-          {secondaries
-            .find(({ displayName }) => displayName === secondary.displayName)
-            .powers.map(({ displayName }) => (
-              <p>{displayName}</p>
-            ))}
-        </div>
+        {renderPowerset(
+          primaries.find(
+            ({ displayName }) => displayName === primary.displayName
+          ),
+          true
+        )}
+        {renderPowerset(
+          secondaries.find(
+            ({ displayName }) => displayName === secondary.displayName
+          )
+        )}
       </div>
     </>
   );
