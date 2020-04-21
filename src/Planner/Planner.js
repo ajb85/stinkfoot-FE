@@ -7,7 +7,7 @@ import Powers from './Powers/';
 import powersets from 'data/powersets.js';
 import origins from 'data/origins.js';
 import powersTemplate from 'data/powersTemplate.js';
-import slots from 'data/slots.js';
+import enhancementSlots from 'data/enhancementSlots.js';
 
 function Planner(props) {
   const [build, setBuild] = useState({
@@ -17,8 +17,8 @@ function Planner(props) {
     alignment: 'Hero',
     primary: powersets.Blaster.primaries[0],
     secondary: powersets.Blaster.secondaries[0],
-    powers: powersTemplate,
-    slots,
+    powerSlots: powersTemplate,
+    enhancementSlots,
     activeLevel: 1,
     powerLookup: {},
   });
@@ -50,10 +50,27 @@ function Planner(props) {
       return build.activeLevel;
     }
 
-    const nextAbovePowersLevel = build.powers.find(
+    const nextAbovePowersLevel = build.powerSlots.find(
       ({ level, name }) => level >= powersLevel && !name
     );
     return nextAbovePowersLevel ? nextAbovePowersLevel.level : null;
+  };
+
+  const _removeSlots = (...slotLevels) => {
+    console.log('REMOVE SLOTS: ', slotLevels);
+    const updatedEnhSlots = [...build.enhancementSlots];
+    slotLevels.forEach((lvl) => {
+      const enhSlotIndex = updatedEnhSlots.findIndex(
+        ({ value, inUse }) => value === lvl && inUse
+      );
+      if (enhSlotIndex > -1) {
+        updatedEnhSlots[enhSlotIndex].inUse = false;
+      } else {
+        console.log('DID NOT FIND IN USE FOR ', lvl);
+      }
+    });
+
+    return updatedEnhSlots;
   };
 
   const togglePower = (p, isPrimary) => {
@@ -63,55 +80,58 @@ function Planner(props) {
       const index = powerLookup[p.displayName];
       delete powerLookup[p.displayName];
 
-      let slotLevel;
-      const powers = build.powers.map((powerSlot, i) => {
+      let powerSlotLevel;
+      let slotsToRemove;
+      const powerSlots = build.powerSlots.map((powerSlot, i) => {
         if (i !== index || powerSlot.type === 'default') {
           return powerSlot;
         }
-        const { level, type } = powerSlot;
-        slotLevel = level;
+        const { level, type, enhSlots } = powerSlot;
+        slotsToRemove = enhSlots.slice(1).map(({ slotLevel }) => slotLevel);
+        powerSlotLevel = level;
         return { level, type };
       });
       setBuild({
         ...build,
         powerLookup,
-        powers,
+        powerSlots,
         activeLevel:
-          slotLevel < build.activeLevel
-            ? findLowestUnusedSlot(powers)
+          powerSlotLevel < build.activeLevel
+            ? findLowestUnusedSlot(powerSlots)
             : build.activeLevel,
+        enhancementSlots: _removeSlots(...slotsToRemove),
       });
     } else {
       if (
         p.level === 1 &&
-        ((isPrimary && !build.powers[0].name) ||
-          (!isPrimary && !build.powers[1].name))
+        ((isPrimary && !build.powerSlots[0].name) ||
+          (!isPrimary && !build.powerSlots[1].name))
       ) {
-        const powers = [...build.powers];
+        const powerSlots = [...build.powerSlots];
         const powerLookup = { ...build.powerLookup };
         if (isPrimary) {
-          powers[0] = {
-            ...powers[0],
+          powerSlots[0] = {
+            ...powerSlots[0],
             name: p.displayName,
-            slots: emptyDefaultSlot(),
+            enhSlots: emptyDefaultSlot(),
           };
           powerLookup[p.displayName] = 0;
         }
-        if (!powers[1].name) {
+        if (!powerSlots[1].name) {
           const powerName = build.secondary.powers.find(({ isEpic }) => !isEpic)
             .displayName;
-          powers[1] = {
-            ...powers[1],
+          powerSlots[1] = {
+            ...powerSlots[1],
             name: powerName,
-            slots: emptyDefaultSlot(),
+            enhSlots: emptyDefaultSlot(),
           };
           powerLookup[powerName] = 1;
         }
         setBuild({
           ...build,
-          powers,
+          powerSlots,
           powerLookup,
-          activeLevel: findLowestUnusedSlot(powers),
+          activeLevel: findLowestUnusedSlot(powerSlots),
         });
       } else {
         let newIndex;
@@ -120,7 +140,7 @@ function Planner(props) {
           return;
         }
 
-        const powers = build.powers.map((powerSlot, i) => {
+        const powerSlots = build.powerSlots.map((powerSlot, i) => {
           if (
             powerSlot.level !== assignedLevel ||
             powerSlot.type === 'default'
@@ -131,23 +151,75 @@ function Planner(props) {
           return {
             ...powerSlot,
             name: p.displayName,
-            slots: emptyDefaultSlot(),
+            enhSlots: emptyDefaultSlot(),
           };
         });
         setBuild({
           ...build,
-          powers,
+          powerSlots,
           powerLookup: {
             ...build.powerLookup,
             [p.displayName]: newIndex,
           },
           activeLevel:
             assignedLevel === build.activeLevel
-              ? findLowestUnusedSlot(powers)
+              ? findLowestUnusedSlot(powerSlots)
               : build.activeLevel,
         });
       }
     }
+  };
+
+  const addSlot = (powerIndex) => {
+    const power = build.powerSlots[powerIndex];
+    if (power.enhSlots.length < 6) {
+      const slotIndex = build.enhancementSlots.findIndex(
+        ({ value, inUse }) => value >= power.level && !inUse
+      );
+      const slot = build.enhancementSlots[slotIndex];
+      if (slot) {
+        setBuild({
+          ...build,
+          powerSlots: build.powerSlots.map((p, i) => {
+            if (i !== powerIndex) {
+              return p;
+            }
+
+            return {
+              ...p,
+              enhSlots: [...p.enhSlots, { slotLevel: slot.value }].sort(
+                (a, b) => a.slotLevel - b.slotLevel
+              ),
+            };
+          }),
+          enhancementSlots: build.enhancementSlots.map((s, i) => {
+            if (i !== slotIndex) {
+              return s;
+            }
+
+            return { ...s, inUse: true };
+          }),
+        });
+      }
+    }
+  };
+
+  const removeSlot = (powerSlotIndex, slotIndex) => {
+    let slotToRemove;
+    setBuild({
+      ...build,
+      powerSlots: build.powerSlots.map((powerSlot, i) => {
+        if (i !== powerSlotIndex) {
+          return powerSlot;
+        }
+        slotToRemove = powerSlot.enhSlots[slotIndex].slotLevel;
+        return {
+          ...powerSlot,
+          enhSlots: powerSlot.enhSlots.filter((_, i) => i !== slotIndex),
+        };
+      }),
+      enhancementSlots: _removeSlots(slotToRemove),
+    });
   };
 
   const setActiveLevel = (activeLevel) => setBuild({ ...build, activeLevel });
@@ -160,7 +232,12 @@ function Planner(props) {
         updateBuild={updateBuild}
         togglePower={togglePower}
       />
-      <Powers build={build} setActiveLevel={setActiveLevel} />
+      <Powers
+        build={build}
+        setActiveLevel={setActiveLevel}
+        addSlot={addSlot}
+        removeSlot={removeSlot}
+      />
     </div>
   );
 }
