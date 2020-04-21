@@ -98,7 +98,7 @@ export default [
   {
     level: 1,
     name: 'Brawl',
-    slots: [
+    enhSlots: [
       {
         slotLevel: null,
       },
@@ -108,13 +108,13 @@ export default [
   // {
   //   level: 1,
   //   name: 'Scourge',
-  //   slots: [],
+  //   enhSlots: [],
   //   type: 'default',
   // },
   {
     level: 1,
     name: 'Sprint',
-    slots: [
+    enhSlots: [
       {
         slotLevel: null,
       },
@@ -124,7 +124,7 @@ export default [
   {
     level: 2,
     name: 'Rest',
-    slots: [
+    enhSlots: [
       {
         slotLevel: null,
       },
@@ -134,13 +134,13 @@ export default [
   {
     level: 4,
     name: 'Ninja Run',
-    slots: [],
+    enhSlots: [],
     type: 'default',
   },
   {
     level: 2,
     name: 'Swift',
-    slots: [
+    enhSlots: [
       {
         slotLevel: null,
       },
@@ -150,7 +150,7 @@ export default [
   {
     level: 2,
     name: 'Health',
-    slots: [
+    enhSlots: [
       {
         slotLevel: null,
       },
@@ -160,7 +160,7 @@ export default [
   {
     level: 2,
     name: 'Hurdle',
-    slots: [
+    enhSlots: [
       {
         slotLevel: null,
       },
@@ -170,7 +170,7 @@ export default [
   {
     level: 2,
     name: 'Stamina',
-    slots: [
+    enhSlots: [
       {
         slotLevel: null,
       },
