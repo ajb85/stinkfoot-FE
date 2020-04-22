@@ -1,7 +1,9 @@
 @import 'styles/variables.scss';
 
 section.Powersets {
-  min-width: 150px;
+  min-width: 150px + $lh;
+  max-width: 300px + 2 * $lh;
+  width: 30%;
 
   & > div:first-of-type {
     // Powerset selection
@@ -41,6 +43,7 @@ section.Powersets {
   .powersList {
     p {
       line-height: $lh;
+      min-height: $lh;
       cursor: pointer;
       font-size: 12px;
     }
