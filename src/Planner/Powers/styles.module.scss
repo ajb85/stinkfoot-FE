@@ -1,0 +1,61 @@
+@import 'styles/variables.scss';
+
+div.Powers {
+  width: 70%;
+  display: flex;
+  flex-wrap: wrap;
+
+  .power {
+    width: 190px;
+
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 20px;
+    height: 1.75 * $lh;
+
+    & > p {
+      font-size: 12px;
+      margin: 3px $lh/2;
+      cursor: pointer;
+    }
+
+    .enhancementsContainer {
+      display: flex;
+    }
+
+    .enhancementBubble {
+      width: 1.5 * $lh;
+      height: 1.5 * $lh;
+      border: 1px solid white;
+      border-radius: 50%;
+      background-color: $dark;
+
+      position: relative;
+      left: 5px;
+
+      p {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        width: fit-content;
+
+        font-size: 8px;
+        color: $secondary;
+      }
+    }
+
+    .enhancementBubble + .enhancementBubble {
+      margin-left: 2px;
+    }
+  }
+
+  .power:first-of-type {
+    margin: $lh/2 $lh $lh;
+  }
+
+  .power + .power {
+    margin: $lh;
+  }
+}
