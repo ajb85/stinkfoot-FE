@@ -36,6 +36,10 @@ function Planner(props) {
         [name]: value,
         primary: primaries[0],
         secondary: secondaries[0],
+        powerSlots: powersTemplate,
+        enhancementSlots,
+        activeLevel: 1,
+        powerLookUp: {},
       });
     } else if (name === 'primary' || name === 'secondary') {
       const newPowerset = powersets[build.archetype][
@@ -207,6 +211,9 @@ function Planner(props) {
   };
 
   const removeSlot = (powerSlotIndex, slotIndex) => {
+    if (slotIndex === 0) {
+      return;
+    }
     let slotToRemove;
     setBuild({
       ...build,
