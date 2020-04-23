@@ -14,33 +14,37 @@ section.Powersets {
     h2 {
       text-align: center;
       line-height: $lh;
+      margin-bottom: $lh/2;
     }
 
     div.powersetContainer {
       display: flex;
       flex-wrap: wrap;
+    }
+  }
 
-      div.powerset {
-        margin: $lh/2 $lh/2;
-        width: fit-content;
+  .powerset {
+    margin: $lh/2 $lh/2;
+    width: fit-content;
 
-        h3 {
-          text-align: center;
-          line-height: $lh;
-          width: 100%;
-        }
+    h3 {
+      text-align: center;
+      line-height: $lh;
+      min-height: $lh;
+      min-width: 150px;
+      width: 100%;
+      margin-bottom: $lh/2;
+    }
 
-        select {
-          margin: $lh/2 0;
-          height: $lh;
-          font-size: 11px;
-          width: 150px;
-        }
-      }
+    select {
+      height: $lh;
+      font-size: 11px;
+      width: 150px;
     }
   }
 
   .powersList {
+    margin-top: $lh/2;
     p {
       line-height: $lh;
       min-height: $lh;
