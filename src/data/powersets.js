@@ -23,7 +23,7 @@ import Blaster_Energy_Blast from './powersets/Blaster_Energy_Blast.json';
 import Blaster_Energy_Manipulation from './powersets/Blaster_Energy_Manipulation.json';
 import Blaster_Fire_Blast from './powersets/Blaster_Fire_Blast.json';
 import Blaster_Fire_Manipulation from './powersets/Blaster_Fire_Manipulation.json';
-import Blaster_Gadgets from './powersets/Blaster_Gadgets.json';
+import Blaster_Devices from './powersets/Blaster_Devices.json';
 import Blaster_Ice_Blast from './powersets/Blaster_Ice_Blast.json';
 import Blaster_Ice_Manipulation from './powersets/Blaster_Ice_Manipulation.json';
 import Blaster_Martial_Manipulation from './powersets/Blaster_Martial_Manipulation.json';
@@ -367,7 +367,7 @@ export default {
       Blaster_Radiation_Blast,
     ],
     secondaries: [
-      Blaster_Gadgets,
+      Blaster_Devices,
       Blaster_Tactical_Arrow,
       Blaster_Ice_Manipulation,
       Blaster_Martial_Manipulation,
