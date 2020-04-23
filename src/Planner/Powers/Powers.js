@@ -4,16 +4,17 @@ import styles from './styles.module.scss';
 
 function Powers({ build, setActiveLevel, addSlot, removeSlot }) {
   let index = 0;
-  const { selected, defaults } = build.powerSlots.reduce(
-    (acc, cur) => {
+  const { selected /*, defaults*/ } = build.powerSlots.reduce(
+    (acc, cur, originalIndex) => {
+      const withIndex = { ...cur, originalIndex };
       if (cur.type === 'default') {
-        acc.defaults.push(cur);
+        acc.defaults.push(withIndex);
       } else {
         if (!acc.selected[index]) {
           acc.selected.push([]);
         }
 
-        acc.selected[index].push(cur);
+        acc.selected[index].push(withIndex);
 
         if (acc.selected[index].length >= 8) {
           index++;
@@ -25,15 +26,15 @@ function Powers({ build, setActiveLevel, addSlot, removeSlot }) {
   );
   return (
     <div className={styles.Powers}>
-      {selected.map((column) => (
-        <div className={styles.column}>
-          {column.map((powerSlot, i) => {
-            const { level, name, enhSlots } = powerSlot;
-            const isActive = build.activeLevel === level;
+      {selected.map((column, columnNumber) => (
+        <div key={columnNumber} className={styles.column}>
+          {column.map((powerSlot) => {
+            const { level, name, enhSlots, originalIndex } = powerSlot;
+            // const isActive = build.activeLevel === level;
             const isEmpty = !powerSlot.name;
 
             return (
-              <Fragment key={i}>
+              <Fragment key={originalIndex}>
                 {isEmpty ? (
                   <EmptyPowerSlot
                     setActiveLevel={setActiveLevel}
@@ -47,7 +48,7 @@ function Powers({ build, setActiveLevel, addSlot, removeSlot }) {
                       backgroundColor: '#1b4ea8',
                     }}
                   >
-                    <p onClick={addSlot.bind(this, i)}>
+                    <p onClick={addSlot.bind(this, originalIndex)}>
                       ({level}) {name}
                     </p>
                     <div className={styles.enhancementsContainer}>
@@ -56,10 +57,11 @@ function Powers({ build, setActiveLevel, addSlot, removeSlot }) {
                           slotLevel === null ? level : slotLevel;
                         return (
                           <div
-                            onClick={removeSlot.bind(this, i, j)}
+                            key={`${originalIndex} ${j}`}
+                            onClick={removeSlot.bind(this, originalIndex, j)}
                             className={styles.enhancementBubble}
                           >
-                            <p key={j}>{displayLevel}</p>
+                            <p>{displayLevel}</p>
                           </div>
                         );
                       })}
