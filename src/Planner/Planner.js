@@ -218,7 +218,6 @@ function Planner(props) {
 
   const addSlot = (powerIndex) => {
     const power = build.powerSlots[powerIndex];
-    console.log('POWER: ', power);
     if (power.enhSlots.length < 6) {
       const slotIndex = build.enhancementSlots.findIndex(
         ({ value, inUse }) => value >= power.level && !inUse
@@ -352,7 +351,7 @@ function emptyDefaultSlot() {
 }
 
 function findLowestUnusedSlot(powers) {
-  const nextLevel = powers.find(({ name }) => !name);
+  const nextLevel = powers.find(({ fullName }) => !fullName);
   return nextLevel ? nextLevel.level : null;
 }
 
