@@ -1,1 +1,199 @@
-{"description":"You have an impressive presence that manifests in a variety of ways. Whether through charm, persuasion or outright intimidation, you can manipulate your foes' desire to fight you. Though this is a challenging set to master, and can get you into trouble if used injudiciously, the potential benefits are great.","imageName":"Presence.png","displayName":"Presence","powers":[{"castTimeReal":1.67,"toggleCost":6.5,"displayName":"Pacify","accuracy":1.2,"accuracyMult":1.2,"attackTypes":2,"target":2048,"targetLoS":true,"range":60,"endCost":6.5,"rechargeTime":60,"baseRechargeTime":60,"effectArea":1,"maxBoosts":"6","numAllowed":1,"boostsAllowed":["Accuracy_Boost","EnduranceDiscount_Boost","Range_Boost","Recharge_Boost"],"enhancements":[1,8,17,18],"descShort":"Ranged, Placate (Foe)","descLong":"Through persuasion or subtle intimidation, you attempt to placate a single target for a short time. If successful, the affected target will no longer attack you. This persists until the effect expires or you attack the target. Unlike other placation effects, this power will not hide you or give any concealment bonuses.","setTypes":[],"level":4,"ignoreEnh":[],"ignore_Buff":[],"castTime":1.848,"slottable":true,"aoeModifier":1},{"castTimeReal":1.67,"displayName":"Provoke","accuracy":1,"accuracyMult":1,"attackTypes":4,"target":2048,"targetLoS":true,"range":60,"rechargeTime":10,"baseRechargeTime":10,"effectArea":2,"radius":15,"maxTargets":5,"maxBoosts":"6","numAllowed":1,"boostsAllowed":["Accuracy_Boost","Range_Boost","Recharge_Boost","Taunt_Boost"],"enhancements":[1,17,18,24],"descShort":"Targeted AoE, Taunt (Foe)","descLong":"When you have established that a fight is absolutely necessary, you step up to take the lead, provoking the attention of several targets at a targeted location. Use this to pull the attention of your foes off of an ally in trouble. This provocation effect is not as powerful as similar powers used by Tankers, and also has a chance to miss.","setTypes":[24],"level":4,"ignoreEnh":[],"ignore_Buff":[],"castTime":1.848,"slottable":true,"aoeModifier":3.25},{"castTimeReal":1.67,"toggleCost":10,"isEpic":true,"displayName":"Intimidate","accuracy":1,"accuracyMult":1,"attackTypes":514,"target":2048,"targetLoS":true,"range":60,"endCost":10,"rechargeTime":30,"baseRechargeTime":30,"effectArea":1,"maxBoosts":"6","numAllowed":1,"boostsAllowed":["Accuracy_Boost","EnduranceDiscount_Boost","Fear_Boost","Range_Boost","Recharge_Boost"],"enhancements":[1,8,9,17,18],"descShort":"Ranged, Fear (Foe)","descLong":"When fully engaged in battle, you are a frightening presence and can use this to your advantage. You threaten a single foe and cause that foe to tremble helplessly in fear for a short time. In order to acquire this ability, you must be level 14 and possess either Pacify or Provoke.","setTypes":[15],"level":14,"ignoreEnh":[],"ignore_Buff":[],"castTime":1.848,"slottable":true,"aoeModifier":1},{"castTimeReal":1.97,"toggleCost":18,"isEpic":true,"displayName":"Invoke Panic","accuracy":0.9,"accuracyMult":0.9,"attackTypes":513,"target":1,"targetLoS":true,"endCost":18,"rechargeTime":60,"baseRechargeTime":60,"effectArea":2,"radius":20,"maxTargets":10,"maxBoosts":"6","numAllowed":1,"boostsAllowed":["Accuracy_Boost","EnduranceDiscount_Boost","Fear_Boost","Recharge_Boost"],"enhancements":[1,8,9,18],"descShort":"PBAoE, Fear (Foe)","descLong":"When fully engaged in battle, you are a frightening presence and can use this to your advantage. This power causes sheer terror in all foes around you, causing them to tremble uncontrollably in fear. In order to acquire this ability, you must be level 14 and possess any two other powers from the Presence pool.","setTypes":[15],"level":14,"ignoreEnh":[],"ignore_Buff":[],"castTime":2.112,"slottable":true,"aoeModifier":4},{"castTimeReal":1.97,"isEpic":true,"displayName":"Unrelenting","accuracy":2,"accuracyMult":2,"target":1,"targetLoS":true,"rechargeTime":600,"baseRechargeTime":600,"effectArea":1,"maxBoosts":"6","castFlags":4,"numAllowed":1,"boostsAllowed":["Heal_Boost","Recharge_Boost","Recovery_Boost"],"enhancements":[11,18,7],"descShort":"Self, Heal over Time, +DMG(All), +Rech, +Rec, Self Resurrect (Special)","descLong":"You channel your inner confidence to become a relentless opponent, gaining significant boosts to your damage, recovery and attack speed for a short while. Additionally, you will be able to fight though the pain caused by opponents, healing continuously over time.  You can also use this power to fight your way back to the living after defeat - if you are defeated when you use this power, you will be revived with 50% health.  You must be level 14 and have trained any two other Presence pool powers before you can train Unrelenting.","setTypes":[9,22],"level":14,"ignoreEnh":[],"ignore_Buff":[],"castTime":2.112,"slottable":true,"aoeModifier":1}]}
+{
+  "description": "You have an impressive presence that manifests in a variety of ways. Whether through charm, persuasion or outright intimidation, you can manipulate your foes' desire to fight you. Though this is a challenging set to master, and can get you into trouble if used injudiciously, the potential benefits are great.",
+  "fullName": "Pool.Manipulation",
+  "imageName": "Presence.png",
+  "displayName": "Presence",
+  "powers": [
+    {
+      "castTimeReal": 1.67,
+      "toggleCost": 6.5,
+      "displayName": "Pacify",
+      "requires": [],
+      "accuracy": 1.2,
+      "accuracyMult": 1.2,
+      "attackTypes": 2,
+      "target": 2048,
+      "targetLoS": true,
+      "range": 60,
+      "endCost": 6.5,
+      "rechargeTime": 60,
+      "baseRechargeTime": 60,
+      "effectArea": 1,
+      "maxBoosts": "6",
+      "numAllowed": 1,
+      "boostsAllowed": [
+        "Accuracy_Boost",
+        "EnduranceDiscount_Boost",
+        "Range_Boost",
+        "Recharge_Boost"
+      ],
+      "enhancements": [1, 8, 17, 18],
+      "description": {
+        "short": "Ranged, Placate (Foe)",
+        "long": "Through persuasion or subtle intimidation, you attempt to placate a single target for a short time. If successful, the affected target will no longer attack you. This persists until the effect expires or you attack the target. Unlike other placation effects, this power will not hide you or give any concealment bonuses."
+      },
+      "setTypes": [],
+      "level": 4,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 1.848,
+      "slottable": true,
+      "aoeModifier": 1
+    },
+    {
+      "castTimeReal": 1.67,
+      "displayName": "Provoke",
+      "requires": [],
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "attackTypes": 4,
+      "target": 2048,
+      "targetLoS": true,
+      "range": 60,
+      "rechargeTime": 10,
+      "baseRechargeTime": 10,
+      "effectArea": 2,
+      "radius": 15,
+      "maxTargets": 5,
+      "maxBoosts": "6",
+      "numAllowed": 1,
+      "boostsAllowed": [
+        "Accuracy_Boost",
+        "Range_Boost",
+        "Recharge_Boost",
+        "Taunt_Boost"
+      ],
+      "enhancements": [1, 17, 18, 24],
+      "description": {
+        "short": "Targeted AoE, Taunt (Foe)",
+        "long": "When you have established that a fight is absolutely necessary, you step up to take the lead, provoking the attention of several targets at a targeted location. Use this to pull the attention of your foes off of an ally in trouble. This provocation effect is not as powerful as similar powers used by Tankers, and also has a chance to miss."
+      },
+      "setTypes": [24],
+      "level": 4,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 1.848,
+      "slottable": true,
+      "aoeModifier": 3.25
+    },
+    {
+      "castTimeReal": 1.67,
+      "toggleCost": 10,
+      "isEpic": true,
+      "displayName": "Intimidate",
+      "requires": [
+        ["Pool.Manipulation.Challenge", ""],
+        ["Pool.Manipulation.Provoke", ""]
+      ],
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "attackTypes": 514,
+      "target": 2048,
+      "targetLoS": true,
+      "range": 60,
+      "endCost": 10,
+      "rechargeTime": 30,
+      "baseRechargeTime": 30,
+      "effectArea": 1,
+      "maxBoosts": "6",
+      "numAllowed": 1,
+      "boostsAllowed": [
+        "Accuracy_Boost",
+        "EnduranceDiscount_Boost",
+        "Fear_Boost",
+        "Range_Boost",
+        "Recharge_Boost"
+      ],
+      "enhancements": [1, 8, 9, 17, 18],
+      "description": {
+        "short": "Ranged, Fear (Foe)",
+        "long": "When fully engaged in battle, you are a frightening presence and can use this to your advantage. You threaten a single foe and cause that foe to tremble helplessly in fear for a short time. In order to acquire this ability, you must be level 14 and possess either Pacify or Provoke."
+      },
+      "setTypes": [15],
+      "level": 14,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 1.848,
+      "slottable": true,
+      "aoeModifier": 1
+    },
+    {
+      "castTimeReal": 1.97,
+      "toggleCost": 18,
+      "isEpic": true,
+      "displayName": "Invoke Panic",
+      "requires": [
+        ["Pool.Manipulation.Challenge", "Pool.Manipulation.Provoke"],
+        ["Pool.Manipulation.Challenge", "Pool.Manipulation.Intimidate"],
+        ["Pool.Manipulation.Provoke", "Pool.Manipulation.Intimidate"]
+      ],
+      "accuracy": 0.9,
+      "accuracyMult": 0.9,
+      "attackTypes": 513,
+      "target": 1,
+      "targetLoS": true,
+      "endCost": 18,
+      "rechargeTime": 60,
+      "baseRechargeTime": 60,
+      "effectArea": 2,
+      "radius": 20,
+      "maxTargets": 10,
+      "maxBoosts": "6",
+      "numAllowed": 1,
+      "boostsAllowed": [
+        "Accuracy_Boost",
+        "EnduranceDiscount_Boost",
+        "Fear_Boost",
+        "Recharge_Boost"
+      ],
+      "enhancements": [1, 8, 9, 18],
+      "description": {
+        "short": "PBAoE, Fear (Foe)",
+        "long": "When fully engaged in battle, you are a frightening presence and can use this to your advantage. This power causes sheer terror in all foes around you, causing them to tremble uncontrollably in fear. In order to acquire this ability, you must be level 14 and possess any two other powers from the Presence pool."
+      },
+      "setTypes": [15],
+      "level": 14,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 2.112,
+      "slottable": true,
+      "aoeModifier": 4
+    },
+    {
+      "castTimeReal": 1.97,
+      "isEpic": true,
+      "displayName": "Unrelenting",
+      "requires": [
+        ["Pool.Manipulation.Challenge", "Pool.Manipulation.Provoke"],
+        ["Pool.Manipulation.Challenge", "Pool.Manipulation.Intimidate"],
+        ["Pool.Manipulation.Challenge", "Pool.Manipulation.Invoke_Panic"],
+        ["Pool.Manipulation.Provoke", "Pool.Manipulation.Intimidate"],
+        ["Pool.Manipulation.Provoke", "Pool.Manipulation.Invoke_Panic"],
+        ["Pool.Manipulation.Intimidate", "Pool.Manipulation.Invoke_Panic"]
+      ],
+      "accuracy": 2,
+      "accuracyMult": 2,
+      "target": 1,
+      "targetLoS": true,
+      "rechargeTime": 600,
+      "baseRechargeTime": 600,
+      "effectArea": 1,
+      "maxBoosts": "6",
+      "castFlags": 4,
+      "numAllowed": 1,
+      "boostsAllowed": ["Heal_Boost", "Recharge_Boost", "Recovery_Boost"],
+      "enhancements": [11, 18, 7],
+      "description": {
+        "short": "Self, Heal over Time, +DMG(All), +Rech, +Rec, Self Resurrect (Special)",
+        "long": "You channel your inner confidence to become a relentless opponent, gaining significant boosts to your damage, recovery and attack speed for a short while. Additionally, you will be able to fight though the pain caused by opponents, healing continuously over time.  You can also use this power to fight your way back to the living after defeat - if you are defeated when you use this power, you will be revived with 50% health.  You must be level 14 and have trained any two other Presence pool powers before you can train Unrelenting."
+      },
+      "setTypes": [9, 22],
+      "level": 14,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 2.112,
+      "slottable": true,
+      "aoeModifier": 1
+    }
+  ]
+}
