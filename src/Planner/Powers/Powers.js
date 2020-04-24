@@ -30,15 +30,17 @@ function Powers({ build, setActiveLevel, addSlot, removeSlot }) {
         <div key={columnNumber} className={styles.column}>
           {column.map((powerSlot) => {
             const { level, displayName, enhSlots, originalIndex } = powerSlot;
-            // const isActive = build.activeLevel === level;
+            const isActive = build.activeLevel === level;
             const isEmpty = !powerSlot.displayName;
+
+            console.log('ACTIVE: ', build.activeLevel, isActive);
             return (
               <Fragment key={originalIndex}>
                 {isEmpty ? (
                   <EmptyPowerSlot
                     setActiveLevel={setActiveLevel}
                     level={powerSlot.level}
-                    isActive={build.activeLevel === powerSlot.level}
+                    isActive={isActive}
                   />
                 ) : (
                   <div
