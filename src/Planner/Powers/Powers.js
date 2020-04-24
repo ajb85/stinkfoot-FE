@@ -29,10 +29,9 @@ function Powers({ build, setActiveLevel, addSlot, removeSlot }) {
       {selected.map((column, columnNumber) => (
         <div key={columnNumber} className={styles.column}>
           {column.map((powerSlot) => {
-            const { level, name, enhSlots, originalIndex } = powerSlot;
+            const { level, displayName, enhSlots, originalIndex } = powerSlot;
             // const isActive = build.activeLevel === level;
-            const isEmpty = !powerSlot.name;
-
+            const isEmpty = !powerSlot.displayName;
             return (
               <Fragment key={originalIndex}>
                 {isEmpty ? (
@@ -49,23 +48,25 @@ function Powers({ build, setActiveLevel, addSlot, removeSlot }) {
                     }}
                   >
                     <p onClick={addSlot.bind(this, originalIndex)}>
-                      ({level}) {name}
+                      ({level}) {displayName}
                     </p>
-                    <div className={styles.enhancementsContainer}>
-                      {enhSlots.map(({ slotLevel, setName, name }, j) => {
-                        const displayLevel =
-                          slotLevel === null ? level : slotLevel;
-                        return (
-                          <div
-                            key={`${originalIndex} ${j}`}
-                            onClick={removeSlot.bind(this, originalIndex, j)}
-                            className={styles.enhancementBubble}
-                          >
-                            <p>{displayLevel}</p>
-                          </div>
-                        );
-                      })}
-                    </div>
+                    {
+                      <div className={styles.enhancementsContainer}>
+                        {enhSlots.map(({ slotLevel, setName, name }, j) => {
+                          const displayLevel =
+                            slotLevel === null ? level : slotLevel;
+                          return (
+                            <div
+                              key={`${originalIndex} ${j}`}
+                              onClick={removeSlot.bind(this, originalIndex, j)}
+                              className={styles.enhancementBubble}
+                            >
+                              <p>{displayLevel}</p>
+                            </div>
+                          );
+                        })}
+                      </div>
+                    }
                   </div>
                 )}
               </Fragment>

@@ -1,1 +1,180 @@
-{"description":"Grants you various travel and flying combat abilities.","imageName":"Flight.png","displayName":"Flight","powers":[{"castTimeReal":1.5,"toggleCost":6.5,"displayName":"Air Superiority","accuracy":1,"accuracyMult":1,"attackTypes":9,"target":2048,"targetLoS":true,"range":7,"endCost":6.5,"rechargeTime":4,"baseRechargeTime":4,"effectArea":1,"maxBoosts":"","numAllowed":1,"boostsAllowed":["Accuracy_Boost","Damage_Boost","EnduranceDiscount_Boost","Recharge_Boost"],"enhancements":[1,4,8,18],"descShort":"Melee, Moderate DMG(Smash), Foe -Fly","descLong":"This two-handed overhead melee attack can knock a flying target to the ground.","setTypes":[1,44],"level":4,"ignoreEnh":[],"ignore_Buff":[],"neverAutoUpdate":true,"castTime":1.716,"slottable":true,"aoeModifier":1},{"castTimeReal":1.716,"toggleCost":1,"displayName":"Fly","accuracy":1,"accuracyMult":1,"target":1,"targetLoS":true,"endCost":0.5,"activatePeriod":0.5,"effectArea":1,"maxBoosts":"","numAllowed":1,"boostsAllowed":["EnduranceDiscount_Boost","SpeedFlying_Boost"],"enhancements":[8,10],"descShort":"Toggle: Self Fly","descLong":"Fly allows you to travel large distances quickly. If you attack a target while this power is on, your flight speed will be temporarily reduced to Hover speed.  Your top Flight speed increases with your Level.","setTypes":[17,28],"level":4,"ignoreEnh":[],"ignore_Buff":[],"neverAutoUpdate":true,"neverAutoUpdateRequirements":true,"castTime":1.848,"slottable":true,"aoeModifier":1},{"toggleCost":0.195,"displayName":"Hover","accuracy":1,"accuracyMult":1,"target":1,"targetLoS":true,"endCost":0.0975,"activatePeriod":0.5,"effectArea":1,"maxBoosts":"","numAllowed":1,"boostsAllowed":["Buff_Defense_Boost","EnduranceDiscount_Boost","SpeedFlying_Boost"],"enhancements":[5,8,10],"descShort":"Toggle: Self Fly, +DEF(All)","descLong":"For hovering and aerial combat. This power is much slower than Fly, but provides some Defense to all attacks, offers good air control, costs little Endurance, and has none of the penalties associated with Fly. Switch to this mode when fighting other flying foes.","setTypes":[7,17,28],"level":4,"ignoreEnh":[],"ignore_Buff":[],"castTime":0.132,"slottable":true,"aoeModifier":1},{"toggleCost":0.65,"isEpic":true,"displayName":"Afterburner","accuracy":1,"accuracyMult":1,"target":1,"targetLoS":true,"endCost":0.325,"rechargeTime":30,"baseRechargeTime":30,"activatePeriod":0.5,"effectArea":1,"maxBoosts":"","numAllowed":1,"boostsAllowed":["Buff_Defense_Boost","EnduranceDiscount_Boost","SpeedFlying_Boost"],"enhancements":[5,8,10],"descShort":"Toggle: Self +FlySpeed, Res(-Fly), +Def(All), +Flight Control","descLong":"Afterburner greatly increases your maximum fly speed, provides a high amount of defense, flight protection and additional flight control, however while active you can only use powers that target yourself.    You must be at least level 14 and have two other Flight Powers before selecting Afterburner.  This power only grants flight protection while Hover, Flight or Group Fly is active.  Recharge: Long","setTypes":[7,17,28],"level":14,"ignoreEnh":[],"ignore_Buff":[],"castTime":0.132,"slottable":true,"aoeModifier":1},{"castTimeReal":2.03,"toggleCost":0.65,"isEpic":true,"displayName":"Group Fly","accuracy":1,"accuracyMult":1,"target":1,"targetLoS":true,"endCost":1.3,"activatePeriod":2,"effectArea":2,"radius":60,"maxTargets":255,"maxBoosts":"","aIReport":1,"numAllowed":1,"boostsAllowed":["EnduranceDiscount_Boost","SpeedFlying_Boost"],"enhancements":[8,10],"descShort":"Toggle: Team Fly, -ACC","descLong":"You can endow your nearby teammates with Flight. Be mindful! Your friends will fall if you run out of Endurance or if they travel too far away from you. Group Fly travel speed is slower than Fly. Flying allies suffer from a reduced chance to hit. You must be at least level 14 and have two other Flight Powers before selecting Group Fly.","setTypes":[17,28],"level":14,"ignoreEnh":[],"ignore_Buff":[],"castTime":2.244,"slottable":true,"aoeModifier":10}]}
+{
+  "description": "Grants you various travel and flying combat abilities.",
+  "fullName": "Pool.Flight",
+  "imageName": "Flight.png",
+  "displayName": "Flight",
+  "powers": [
+    {
+      "castTimeReal": 1.5,
+      "toggleCost": 6.5,
+      "displayName": "Air Superiority",
+      "requires": [],
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "attackTypes": 9,
+      "target": 2048,
+      "targetLoS": true,
+      "range": 7,
+      "endCost": 6.5,
+      "rechargeTime": 4,
+      "baseRechargeTime": 4,
+      "effectArea": 1,
+      "maxBoosts": "",
+      "numAllowed": 1,
+      "boostsAllowed": [
+        "Accuracy_Boost",
+        "Damage_Boost",
+        "EnduranceDiscount_Boost",
+        "Recharge_Boost"
+      ],
+      "enhancements": [1, 4, 8, 18],
+      "description": {
+        "short": "Melee, Moderate DMG(Smash), Foe -Fly",
+        "long": "This two-handed overhead melee attack can knock a flying target to the ground."
+      },
+      "setTypes": [1, 44],
+      "level": 4,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "neverAutoUpdate": true,
+      "castTime": 1.716,
+      "slottable": true,
+      "aoeModifier": 1
+    },
+    {
+      "castTimeReal": 1.716,
+      "toggleCost": 1,
+      "displayName": "Fly",
+      "requires": [],
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "target": 1,
+      "targetLoS": true,
+      "endCost": 0.5,
+      "activatePeriod": 0.5,
+      "effectArea": 1,
+      "maxBoosts": "",
+      "numAllowed": 1,
+      "boostsAllowed": ["EnduranceDiscount_Boost", "SpeedFlying_Boost"],
+      "enhancements": [8, 10],
+      "description": {
+        "short": "Toggle: Self Fly",
+        "long": "Fly allows you to travel large distances quickly. If you attack a target while this power is on, your flight speed will be temporarily reduced to Hover speed.  Your top Flight speed increases with your Level."
+      },
+      "setTypes": [17, 28],
+      "level": 4,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "neverAutoUpdate": true,
+      "neverAutoUpdateRequirements": true,
+      "castTime": 1.848,
+      "slottable": true,
+      "aoeModifier": 1
+    },
+    {
+      "toggleCost": 0.195,
+      "displayName": "Hover",
+      "requires": [],
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "target": 1,
+      "targetLoS": true,
+      "endCost": 0.0975,
+      "activatePeriod": 0.5,
+      "effectArea": 1,
+      "maxBoosts": "",
+      "numAllowed": 1,
+      "boostsAllowed": [
+        "Buff_Defense_Boost",
+        "EnduranceDiscount_Boost",
+        "SpeedFlying_Boost"
+      ],
+      "enhancements": [5, 8, 10],
+      "description": {
+        "short": "Toggle: Self Fly, +DEF(All)",
+        "long": "For hovering and aerial combat. This power is much slower than Fly, but provides some Defense to all attacks, offers good air control, costs little Endurance, and has none of the penalties associated with Fly. Switch to this mode when fighting other flying foes."
+      },
+      "setTypes": [7, 17, 28],
+      "level": 4,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 0.132,
+      "slottable": true,
+      "aoeModifier": 1
+    },
+    {
+      "toggleCost": 0.65,
+      "isEpic": true,
+      "displayName": "Afterburner",
+      "requires": [
+        ["Pool.Flight.Combat_Flight", "Pool.Flight.Air_Superiority"],
+        ["Pool.Flight.Combat_Flight", "Pool.Flight.Fly"],
+        ["Pool.Flight.Air_Superiority", "Pool.Flight.Fly"]
+      ],
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "target": 1,
+      "targetLoS": true,
+      "endCost": 0.325,
+      "rechargeTime": 30,
+      "baseRechargeTime": 30,
+      "activatePeriod": 0.5,
+      "effectArea": 1,
+      "maxBoosts": "",
+      "numAllowed": 1,
+      "boostsAllowed": [
+        "Buff_Defense_Boost",
+        "EnduranceDiscount_Boost",
+        "SpeedFlying_Boost"
+      ],
+      "enhancements": [5, 8, 10],
+      "description": {
+        "short": "Toggle: Self +FlySpeed, Res(-Fly), +Def(All), +Flight Control",
+        "long": "Afterburner greatly increases your maximum fly speed, provides a high amount of defense, flight protection and additional flight control, however while active you can only use powers that target yourself.    You must be at least level 14 and have two other Flight Powers before selecting Afterburner.  This power only grants flight protection while Hover, Flight or Group Fly is active.  Recharge: Long"
+      },
+      "setTypes": [7, 17, 28],
+      "level": 14,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 0.132,
+      "slottable": true,
+      "aoeModifier": 1
+    },
+    {
+      "castTimeReal": 2.03,
+      "toggleCost": 0.65,
+      "isEpic": true,
+      "displayName": "Group Fly",
+      "requires": [
+        ["Pool.Flight.Combat_Flight", "Pool.Flight.Air_Superiority"],
+        ["Pool.Flight.Combat_Flight", "Pool.Flight.Fly"],
+        ["Pool.Flight.Air_Superiority", "Pool.Flight.Fly"]
+      ],
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "target": 1,
+      "targetLoS": true,
+      "endCost": 1.3,
+      "activatePeriod": 2,
+      "effectArea": 2,
+      "radius": 60,
+      "maxTargets": 255,
+      "maxBoosts": "",
+      "aIReport": 1,
+      "numAllowed": 1,
+      "boostsAllowed": ["EnduranceDiscount_Boost", "SpeedFlying_Boost"],
+      "enhancements": [8, 10],
+      "description": {
+        "short": "Toggle: Team Fly, -ACC",
+        "long": "You can endow your nearby teammates with Flight. Be mindful! Your friends will fall if you run out of Endurance or if they travel too far away from you. Group Fly travel speed is slower than Fly. Flying allies suffer from a reduced chance to hit. You must be at least level 14 and have two other Flight Powers before selecting Group Fly."
+      },
+      "setTypes": [17, 28],
+      "level": 14,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 2.244,
+      "slottable": true,
+      "aoeModifier": 10
+    }
+  ]
+}

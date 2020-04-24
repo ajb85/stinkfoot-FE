@@ -48,7 +48,7 @@ function Planner(props) {
     } else if (name === 'primary' || name === 'secondary') {
       const newPowerset = powersets[build.archetype][
         name === 'primary' ? 'primaries' : 'secondaries'
-      ].find(({ displayName }) => displayName === value);
+      ].find(({ fullName }) => fullName === value);
       const slotsToRemove = [];
       const powerSlots = build.powerSlots.map((powerSlot) => {
         if (powerSlot.powerType !== name) {
@@ -67,14 +67,9 @@ function Planner(props) {
         enhancementSlots: _removeSlots(...slotsToRemove),
       });
     } else if (name === 'poolPower') {
-      console.log(
-        'UPDATE POOL TO: ',
-        value,
-        poolPowers.find(({ displayName }) => displayName === value)
-      );
       setBuild({
         ...build,
-        [name]: poolPowers.find(({ displayName }) => displayName === value),
+        [name]: poolPowers.find(({ fullName }) => fullName === value),
       });
     } else {
       setBuild({ ...build, [name]: value });
@@ -111,11 +106,11 @@ function Planner(props) {
 
   const _togglePower = (p, powerType) => {
     const isPrimary = powerType === 'primary';
-    if (build.powerLookup.hasOwnProperty(p.displayName)) {
+    if (build.powerLookup.hasOwnProperty(p.fullName)) {
       // Remove power that's been added
       const powerLookup = { ...build.powerLookup };
-      const index = powerLookup[p.displayName];
-      delete powerLookup[p.displayName];
+      const index = powerLookup[p.fullName];
+      delete powerLookup[p.fullName];
 
       let powerSlotLevel;
       let slotsToRemove;
@@ -150,22 +145,23 @@ function Planner(props) {
         if (isPrimary) {
           powerSlots[0] = {
             ...powerSlots[0],
-            name: p.displayName,
+            displayName: p.displayName,
+            fullName: p.fullName,
             enhSlots: emptyDefaultSlot(),
             powerType,
           };
-          powerLookup[p.displayName] = 0;
+          powerLookup[p.fullName] = 0;
         }
         if (!powerSlots[1].name) {
-          const powerName = build.secondary.powers.find(({ isEpic }) => !isEpic)
-            .displayName;
+          const power = build.secondary.powers.find(({ isEpic }) => !isEpic);
           powerSlots[1] = {
             ...powerSlots[1],
-            name: powerName,
+            displayName: power.displayName,
+            fullName: power.fullName,
             enhSlots: emptyDefaultSlot(),
             powerType: 'secondary',
           };
-          powerLookup[powerName] = 1;
+          powerLookup[power.fullName] = 1;
         }
         return {
           ...build,
@@ -190,7 +186,8 @@ function Planner(props) {
           newIndex = i;
           return {
             ...powerSlot,
-            name: p.displayName,
+            displayName: p.displayName,
+            fullName: p.fullName,
             enhSlots: emptyDefaultSlot(),
             powerType,
           };
@@ -201,7 +198,7 @@ function Planner(props) {
           powerSlots,
           powerLookup: {
             ...build.powerLookup,
-            [p.displayName]: newIndex,
+            [p.fullName]: newIndex,
           },
           activeLevel:
             assignedLevel === build.activeLevel
@@ -278,7 +275,7 @@ function Planner(props) {
   const setActiveLevel = (activeLevel) => setBuild({ ...build, activeLevel });
 
   const addPowerFromNewPool = (p) => {
-    const poolName = build.poolPower.displayName;
+    const poolName = build.poolPower.fullName;
     const activePoolPowers = [...build.poolPowers];
     const excludedPowersets = { ...build.excludedPowersets };
     const poolCanBeAdded =
@@ -289,25 +286,23 @@ function Planner(props) {
     if (poolCanBeAdded) {
       activePoolPowers.push(poolName);
 
-      const pool = poolPowers.find(
-        ({ displayName }) => displayName === poolName
-      );
+      const pool = poolPowers.find(({ fullName }) => fullName === poolName);
       if (pool && pool.prevents) {
         pool.prevents.forEach((p) => {
           if (excludedPowersets.hasOwnProperty(p)) {
-            excludedPowersets[p].push(pool.displayName);
+            excludedPowersets[p].push(pool.fullName);
           } else {
-            excludedPowersets[p] = [pool.displayName];
+            excludedPowersets[p] = [pool.fullName];
           }
         });
       }
       const newPowerState = _togglePower(p, 'poolPower');
 
-      const poolPower = poolPowers.find(({ displayName }) => {
+      const poolPower = poolPowers.find(({ fullName }) => {
         return (
-          !build.excludedPowersets.hasOwnProperty(displayName) &&
-          !build.poolPowers.find((activePool) => activePool === displayName) &&
-          displayName !== build.poolPower.displayName
+          !build.excludedPowersets.hasOwnProperty(fullName) &&
+          !build.poolPowers.find((activePool) => activePool === fullName) &&
+          fullName !== build.poolPower.fullName
         );
       });
 

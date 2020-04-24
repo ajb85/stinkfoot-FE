@@ -19,7 +19,7 @@ function Powerset(props) {
   const activePool =
     order === 'poolPower'
       ? header
-        ? poolPowers.find(({ displayName }) => displayName === header)
+        ? poolPowers.find(({ fullName }) => fullName === header)
         : poolPower
       : null;
 
@@ -45,10 +45,10 @@ function Powerset(props) {
         {set.powers
           .filter(({ isEpic }) => !isEpic)
           .map((p) => {
-            const isUsedPower = build.powerLookup.hasOwnProperty(p.displayName);
+            const isUsedPower = build.powerLookup.hasOwnProperty(p.fullName);
             return (
               <p
-                key={p.displayName}
+                key={p.fullName}
                 style={{
                   color: isUsedPower
                     ? 'lightgreen'
@@ -81,12 +81,12 @@ function Powerset(props) {
         >
           {powerSection.powersets
             .filter(
-              ({ displayName }) =>
-                !build.excludedPowersets[displayName] &&
-                !build.poolPowers.find((name) => displayName === name)
+              ({ fullName }) =>
+                !build.excludedPowersets[fullName] &&
+                !build.poolPowers.find((name) => fullName === name)
             )
             .map((p) => (
-              <option key={p.displayName} value={p.displayName}>
+              <option key={p.fullName} value={p.displayName}>
                 {p.displayName}
               </option>
             ))}
