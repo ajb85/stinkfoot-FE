@@ -3,6 +3,8 @@ import React from 'react';
 import powersets from 'data/powersets.js';
 import poolPowers from 'data/poolPowers.js';
 
+import arePowerRequirementsMet from 'js/arePowerRequirementsMet.js';
+
 import styles from './styles.module.scss';
 
 function Powerset(props) {
@@ -40,10 +42,11 @@ function Powerset(props) {
   const powerSection = powerSections[order];
 
   const renderPowerset = (set, powerType) => {
+    const isPoolPower = powerType === 'poolPower';
     return (
       <div className={styles.powersList}>
         {set.powers
-          .filter(({ isEpic }) => !isEpic)
+          .filter(({ isEpic }) => isPoolPower || !isEpic)
           .map((p) => {
             const isUsedPower = build.powerLookup.hasOwnProperty(p.fullName);
             return (
@@ -53,7 +56,11 @@ function Powerset(props) {
                   color: isUsedPower
                     ? 'lightgreen'
                     : build.activeLevel >= p.level
-                    ? 'yellow'
+                    ? isPoolPower
+                      ? arePowerRequirementsMet(build, p)
+                        ? 'yellow'
+                        : 'grey'
+                      : 'yellow'
                     : 'grey',
                 }}
                 onClick={togglePower.bind(this, p, powerType)}
