@@ -79,7 +79,9 @@ function Powerset(props) {
   }
   return (
     <div className={styles.powerset}>
-      {header && <h3>{header}</h3>}
+      {header && (
+        <h3>{order === 'poolPower' ? header.split('.')[1] : header}</h3>
+      )}
       {renderSelect && (
         <select
           value={powerSection.active.displayName}
