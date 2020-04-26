@@ -9,6 +9,7 @@ import poolPowers from 'data/poolPowers.js';
 import origins from 'data/origins.js';
 import powersTemplate from 'data/powersTemplate.js';
 import enhancementSlots from 'data/enhancementSlots.js';
+import arePowerRequirementsMet from 'js/arePowerRequirementsMet.js';
 
 import styles from './styles.module.scss';
 
@@ -170,6 +171,9 @@ function Planner(props) {
           activeLevel: findLowestUnusedSlot(powerSlots),
         };
       } else {
+        if (!arePowerRequirementsMet(build, p)) {
+          return;
+        }
         let newIndex;
         const assignedLevel = _assignLevel(p.level);
         if (assignedLevel === null) {
@@ -297,21 +301,23 @@ function Planner(props) {
       }
       const newPowerState = _togglePower(p, 'poolPower');
 
-      const poolPower = poolPowers.find(({ fullName }) => {
-        return (
-          !build.excludedPowersets.hasOwnProperty(fullName) &&
-          !build.poolPowers.find((activePool) => activePool === fullName) &&
-          fullName !== build.poolPower.fullName
-        );
-      });
+      if (newPowerState) {
+        const poolPower = poolPowers.find(({ fullName }) => {
+          return (
+            !build.excludedPowersets.hasOwnProperty(fullName) &&
+            !build.poolPowers.find((activePool) => activePool === fullName) &&
+            fullName !== build.poolPower.fullName
+          );
+        });
 
-      setBuild({
-        ...build,
-        ...newPowerState,
-        poolPowers: activePoolPowers,
-        poolPower,
-        excludedPowersets,
-      });
+        setBuild({
+          ...build,
+          ...newPowerState,
+          poolPowers: activePoolPowers,
+          poolPower,
+          excludedPowersets,
+        });
+      }
     }
   };
 
