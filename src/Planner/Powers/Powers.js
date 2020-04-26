@@ -32,8 +32,6 @@ function Powers({ build, setActiveLevel, addSlot, removeSlot }) {
             const { level, displayName, enhSlots, originalIndex } = powerSlot;
             const isActive = build.activeLevel === level;
             const isEmpty = !powerSlot.displayName;
-
-            console.log('ACTIVE: ', build.activeLevel, isActive);
             return (
               <Fragment key={originalIndex}>
                 {isEmpty ? (
