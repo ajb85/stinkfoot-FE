@@ -48,11 +48,13 @@ function extractDisplayNames(list) {
 }
 
 function filterPowers(build, powers) {
-  return powers.filter(
-    ({ fullName }) =>
-      !build.excludedPowersets[fullName] &&
-      !build.poolPowers.find((name) => fullName === name)
-  );
+  return powers
+    .map((p, i) => ({ ...p, originalIndex: i }))
+    .filter(
+      ({ fullName }) =>
+        !build.excludedPowersets[fullName] &&
+        !build.poolPowers.find((name) => fullName === name)
+    );
 }
 
 export default Powersets;
