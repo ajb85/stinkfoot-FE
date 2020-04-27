@@ -349,7 +349,7 @@ import Brute_Willpower from './powersets/Brute_Willpower.json';
 // import Warshade_Umbral_Blast from './powersets/Warshade_Umbral_Blast.json';
 // import Warshade_Umbral_Aura from './powersets/Warshade_Umbral_Aura.json';
 
-export default {
+const powersets = {
   Blaster: {
     primaries: [
       Blaster_Archery,
@@ -437,3 +437,28 @@ export default {
   'Arachnos Widow': { primaries: [], secondaries: [] },
   'Arachnos Soldier': { primaries: [], secondaries: [] },
 };
+
+// !!! This should be done in the UpdatedData folder to prevent
+// having to repeat code
+
+for (let set in powersets) {
+  const { primaries, secondaries } = powersets[set];
+
+  const length =
+    primaries.length > secondaries.length
+      ? primaries.length
+      : secondaries.length;
+  for (let i = 0; i < length; i++) {
+    if (primaries[i]) {
+      primaries[i].archetypeOrder = 'primary';
+      primaries[i].powers.forEach((p) => (p.archetypeOrder = 'primary'));
+    }
+
+    if (secondaries[i]) {
+      secondaries[i].archetypeOrder = 'secondary';
+      secondaries[i].powers.forEach((p) => (p.archetypeOrder = 'primary'));
+    }
+  }
+}
+
+export default powersets;
