@@ -3,7 +3,7 @@ import React, { Fragment } from 'react';
 import styles from './styles.module.scss';
 
 function Powers({ stateManager }) {
-  const { build, setActiveLevel, addSlot, removeSlot } = stateManager;
+  const { build, setActiveLevel, addSlot, removeSlot, getPower } = stateManager;
   let index = 0;
   const { selected /*, defaults*/ } = build.powerSlots.reduce(
     (acc, cur, originalIndex) => {
@@ -30,9 +30,10 @@ function Powers({ stateManager }) {
       {selected.map((column, columnNumber) => (
         <div key={columnNumber} className={styles.column}>
           {column.map((powerSlot) => {
-            const { level, displayName, enhSlots, originalIndex } = powerSlot;
+            const { level, power, enhSlots, originalIndex } = powerSlot;
             const isActive = build.activeLevel === level;
-            const isEmpty = !powerSlot.displayName;
+            const isEmpty = !powerSlot.power;
+            const p = power ? getPower(power) : {};
             return (
               <Fragment key={originalIndex}>
                 {isEmpty ? (
@@ -49,7 +50,7 @@ function Powers({ stateManager }) {
                     }}
                   >
                     <p onClick={addSlot.bind(this, originalIndex)}>
-                      ({level}) {displayName}
+                      ({level}) {p.displayName}
                     </p>
                     {
                       <div className={styles.enhancementsContainer}>
