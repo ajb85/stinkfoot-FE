@@ -1,264 +1,264 @@
 export default [
-  { value: 3, inUse: false },
+  { level: 3, inUse: false },
   {
-    value: 3,
+    level: 3,
     inUse: false,
   },
   {
-    value: 5,
+    level: 5,
     inUse: false,
   },
   {
-    value: 5,
+    level: 5,
     inUse: false,
   },
   {
-    value: 7,
+    level: 7,
     inUse: false,
   },
   {
-    value: 7,
+    level: 7,
     inUse: false,
   },
   {
-    value: 9,
+    level: 9,
     inUse: false,
   },
   {
-    value: 9,
+    level: 9,
     inUse: false,
   },
   {
-    value: 11,
+    level: 11,
     inUse: false,
   },
   {
-    value: 11,
+    level: 11,
     inUse: false,
   },
   {
-    value: 13,
+    level: 13,
     inUse: false,
   },
   {
-    value: 13,
+    level: 13,
     inUse: false,
   },
   {
-    value: 15,
+    level: 15,
     inUse: false,
   },
   {
-    value: 15,
+    level: 15,
     inUse: false,
   },
   {
-    value: 17,
+    level: 17,
     inUse: false,
   },
   {
-    value: 17,
+    level: 17,
     inUse: false,
   },
   {
-    value: 19,
+    level: 19,
     inUse: false,
   },
   {
-    value: 19,
+    level: 19,
     inUse: false,
   },
   {
-    value: 21,
+    level: 21,
     inUse: false,
   },
   {
-    value: 21,
+    level: 21,
     inUse: false,
   },
   {
-    value: 23,
+    level: 23,
     inUse: false,
   },
   {
-    value: 23,
+    level: 23,
     inUse: false,
   },
   {
-    value: 25,
+    level: 25,
     inUse: false,
   },
   {
-    value: 25,
+    level: 25,
     inUse: false,
   },
   {
-    value: 27,
+    level: 27,
     inUse: false,
   },
   {
-    value: 27,
+    level: 27,
     inUse: false,
   },
   {
-    value: 29,
+    level: 29,
     inUse: false,
   },
   {
-    value: 29,
+    level: 29,
     inUse: false,
   },
   {
-    value: 31,
+    level: 31,
     inUse: false,
   },
   {
-    value: 31,
+    level: 31,
     inUse: false,
   },
   {
-    value: 31,
+    level: 31,
     inUse: false,
   },
   {
-    value: 33,
+    level: 33,
     inUse: false,
   },
   {
-    value: 33,
+    level: 33,
     inUse: false,
   },
   {
-    value: 33,
+    level: 33,
     inUse: false,
   },
   {
-    value: 34,
+    level: 34,
     inUse: false,
   },
   {
-    value: 34,
+    level: 34,
     inUse: false,
   },
   {
-    value: 34,
+    level: 34,
     inUse: false,
   },
   {
-    value: 36,
+    level: 36,
     inUse: false,
   },
   {
-    value: 36,
+    level: 36,
     inUse: false,
   },
   {
-    value: 36,
+    level: 36,
     inUse: false,
   },
   {
-    value: 37,
+    level: 37,
     inUse: false,
   },
   {
-    value: 37,
+    level: 37,
     inUse: false,
   },
   {
-    value: 37,
+    level: 37,
     inUse: false,
   },
   {
-    value: 39,
+    level: 39,
     inUse: false,
   },
   {
-    value: 39,
+    level: 39,
     inUse: false,
   },
   {
-    value: 39,
+    level: 39,
     inUse: false,
   },
   {
-    value: 40,
+    level: 40,
     inUse: false,
   },
   {
-    value: 40,
+    level: 40,
     inUse: false,
   },
   {
-    value: 40,
+    level: 40,
     inUse: false,
   },
   {
-    value: 42,
+    level: 42,
     inUse: false,
   },
   {
-    value: 42,
+    level: 42,
     inUse: false,
   },
   {
-    value: 42,
+    level: 42,
     inUse: false,
   },
   {
-    value: 43,
+    level: 43,
     inUse: false,
   },
   {
-    value: 43,
+    level: 43,
     inUse: false,
   },
   {
-    value: 43,
+    level: 43,
     inUse: false,
   },
   {
-    value: 45,
+    level: 45,
     inUse: false,
   },
   {
-    value: 45,
+    level: 45,
     inUse: false,
   },
   {
-    value: 45,
+    level: 45,
     inUse: false,
   },
   {
-    value: 46,
+    level: 46,
     inUse: false,
   },
   {
-    value: 46,
+    level: 46,
     inUse: false,
   },
   {
-    value: 46,
+    level: 46,
     inUse: false,
   },
   {
-    value: 48,
+    level: 48,
     inUse: false,
   },
   {
-    value: 48,
+    level: 48,
     inUse: false,
   },
   {
-    value: 48,
+    level: 48,
     inUse: false,
   },
   {
-    value: 50,
+    level: 50,
     inUse: false,
   },
   {
-    value: 50,
+    level: 50,
     inUse: false,
   },
-  { value: 50, inUse: false },
+  { level: 50, inUse: false },
 ];
