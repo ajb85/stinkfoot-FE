@@ -50,9 +50,12 @@ export default class BuildManager {
     return poolPowers[this.build.poolPower];
   }
 
-  getPower(order, index) {
-    return powersets[this.build.archetypeOrder][order].powers[index];
-  }
+  getPower = ({ archetypeOrder, index }) => {
+    const pluralOrder = this._pluralizeOrder(archetypeOrder);
+    return powersets[this.build.archetype][pluralOrder][
+      this.build[`${archetypeOrder}Index`]
+    ].powers[index];
+  };
 
   updateBuild = (e) => {
     const specialCases = {
@@ -92,7 +95,7 @@ export default class BuildManager {
 
           return {
             ...ps,
-            enhSlots: [...ps.enhSlots, { slotLevel: slot.value }].sort(
+            enhSlots: [...ps.enhSlots, { slotLevel: slot.level }].sort(
               (a, b) => a.slotLevel - b.slotLevel
             ),
           };
@@ -253,8 +256,9 @@ export default class BuildManager {
     return updatedEnhSlots;
   };
 
-  _togglePower = (p, powerIndex) => {
+  _togglePower = (p) => {
     const isPrimary = p.archetypeOrder === 'primary';
+    const powerIndex = p.originalIndex;
     const powerLookup = { ...this.build.powerLookup };
     if (this.build.powerLookup.hasOwnProperty(p.fullName)) {
       // Remove power that's been added
@@ -319,7 +323,7 @@ export default class BuildManager {
           activeLevel: findLowestUnusedSlot(powerSlots),
         };
       } else {
-        return addPowerToPowerSlot();
+        return addPowerToPowerSlot.call(this);
       }
     }
 
@@ -367,7 +371,7 @@ export default class BuildManager {
     }
   };
 
-  _handleSpecialCases(name, value) {
+  _handleSpecialCases = (name, value) => {
     switch (name) {
       case 'archetype':
         const { primaries, secondaries } = powersets[value];
@@ -410,7 +414,17 @@ export default class BuildManager {
       default:
         return this.build;
     }
-  }
+  };
+
+  _pluralizeOrder = (order) => {
+    const toPlural = {
+      primary: 'primaries',
+      secondary: 'secondaries',
+      poolPower: 'poolPowers',
+    };
+
+    return toPlural[order] || order;
+  };
 }
 
 function emptyDefaultSlot() {
