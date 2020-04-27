@@ -13,7 +13,7 @@ function Powerset(props) {
     <div className={styles.powerset}>
       {header && <h3>{header}</h3>}
       {list && (
-        <select value={value} name={name} onChange={updateBuild.bind(this)}>
+        <select value={value} name={name} onChange={(e) => updateBuild(e)}>
           {list.map((p) => (
             <option key={p} value={p}>
               {p}
