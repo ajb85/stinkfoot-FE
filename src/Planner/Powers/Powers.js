@@ -2,7 +2,8 @@ import React, { Fragment } from 'react';
 
 import styles from './styles.module.scss';
 
-function Powers({ build, setActiveLevel, addSlot, removeSlot }) {
+function Powers({ stateManager }) {
+  const { build, setActiveLevel, addSlot, removeSlot } = stateManager;
   let index = 0;
   const { selected /*, defaults*/ } = build.powerSlots.reduce(
     (acc, cur, originalIndex) => {

@@ -5,10 +5,8 @@ import origins from 'data/origins.js';
 
 import styles from './styles.module.scss';
 
-function CharacterInfo({ build, updateBuild, setBuild }) {
-  const setAlignment = (alignment) => {
-    setBuild({ ...build, alignment });
-  };
+function CharacterInfo({ stateManager }) {
+  const { build, updateBuild, toggleAlignment } = stateManager;
   return (
     <section className={styles.CharacterInfo}>
       <div>
@@ -53,17 +51,9 @@ function CharacterInfo({ build, updateBuild, setBuild }) {
           type="text"
           disabled={build.alignment === 'Hero'}
           style={{ opacity: build.alignment === 'Hero' ? 0.5 : 1 }}
-          onClick={setAlignment.bind(this, 'Hero')}
+          onClick={toggleAlignment}
         >
-          Hero
-        </button>
-        <button
-          type="text"
-          disabled={build.alignment === 'Villain'}
-          style={{ opacity: build.alignment === 'Villain' ? 0.5 : 1 }}
-          onClick={setAlignment.bind(this, 'Villain')}
-        >
-          Villain
+          {build.alignment}
         </button>
       </div>
     </section>
