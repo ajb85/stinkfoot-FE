@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import CharacterInfo from './CharacterInfo/';
 import Powersets from './Powersets/';
-import Powers from './Powers/';
+import PowerSlots from './PowerSlots/';
 
 import buildManager from 'js/buildManager.js';
 
@@ -22,7 +22,7 @@ function Planner(props) {
       </header>
       <main>
         <Powersets stateManager={stateManager} />
-        <Powers stateManager={stateManager} />
+        <PowerSlots stateManager={stateManager} />
       </main>
     </div>
   );
