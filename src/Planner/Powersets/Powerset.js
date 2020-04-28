@@ -7,22 +7,27 @@ import styles from './styles.module.scss';
 function Powerset(props) {
   const { header, dropdown, powerList, stateManager } = props;
   const { updateBuild, togglePower, build } = stateManager;
-  const { list, name, value } = dropdown;
+
+  const renderDropdown = () => {
+    const { list, name } = dropdown;
+    const index = build[name];
+    return (
+      <select value={index} name={name} onChange={(e) => updateBuild(e)}>
+        {list.map((p, i) => (
+          <option key={p.fullName} value={i}>
+            {p.displayName}
+          </option>
+        ))}
+      </select>
+    );
+  };
 
   return (
     <div className={styles.powerset}>
       {header && <h3>{header}</h3>}
-      {list && (
-        <select value={value} name={name} onChange={(e) => updateBuild(e)}>
-          {list.map((p) => (
-            <option key={p} value={p}>
-              {p}
-            </option>
-          ))}
-        </select>
-      )}
+      {dropdown && renderDropdown()}
       <div className={styles.powersList}>
-        {powerList.map((p) => {
+        {filterPowerList(build, powerList).map((p) => {
           return (
             <p
               key={p.fullName}
@@ -53,6 +58,15 @@ function getPowerColor(build, p) {
         : 'grey'
       : 'yellow'
     : 'grey';
+}
+
+function filterPowerList(build, powers) {
+  return powers
+    .map((p, i) => ({ ...p, originalIndex: i }))
+    .filter(
+      ({ fullName, archetypeOrder }) =>
+        !build.poolPowers.find((name) => fullName === name)
+    );
 }
 
 export default Powerset;
