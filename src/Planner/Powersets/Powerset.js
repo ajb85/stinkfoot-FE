@@ -31,7 +31,7 @@ function Powerset(props) {
           return (
             <p
               key={p.fullName}
-              style={{ color: getPowerColor(build, p) }}
+              style={{ color: getPowerColor(stateManager, p) }}
               onClick={togglePower.bind(this, p)}
             >
               {p.displayName}
@@ -43,17 +43,19 @@ function Powerset(props) {
   );
 }
 
-function getPowerColor(build, p) {
-  const isPoolPower = p.archetypeOrder === 'poolPower';
+function getPowerColor(stateManager, p) {
+  const { build } = stateManager;
+  const isPoolPower = p.archetypeOrder === 'poolPower' || !p.archetypeOrder;
   const isUsedPower = build.powerLookup.hasOwnProperty(p.fullName);
-  const areReqsMet = arePowerRequirementsMet(build, p);
+  const areReqsMet = arePowerRequirementsMet(stateManager, p);
+  console.log('Active Level Index: ', stateManager.build.activeLevelIndex);
   return isUsedPower
     ? areReqsMet
       ? 'lightgreen'
       : 'red'
-    : build.activeLevel >= p.level
+    : stateManager.activeLevel >= p.level
     ? isPoolPower
-      ? arePowerRequirementsMet(build, p)
+      ? areReqsMet
         ? 'yellow'
         : 'grey'
       : 'yellow'
