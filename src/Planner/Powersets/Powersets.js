@@ -6,7 +6,6 @@ import PoolPowers from './PoolPowers.js';
 import styles from './styles.module.scss';
 
 function Powersets({ stateManager }) {
-  const { build } = stateManager;
   return (
     <section className={styles.Powersets}>
       <div>
@@ -14,47 +13,26 @@ function Powersets({ stateManager }) {
           <Powerset
             header="Primary"
             dropdown={{
-              value: stateManager.activePrimary.displayName,
-              name: 'primary',
-              list: extractDisplayNames(stateManager.primaries),
+              name: 'primaryIndex',
+              list: stateManager.primaries,
             }}
-            powerList={filterPowers(build, stateManager.activePrimary.powers)}
+            powerList={stateManager.activePrimary.powers}
             stateManager={stateManager}
           />
           <Powerset
             header="Secondary"
             dropdown={{
-              value: stateManager.activeSecondary.displayName,
-              name: 'secondary',
-              list: extractDisplayNames(stateManager.secondaries),
+              name: 'secondaryIndex',
+              list: stateManager.secondaries,
             }}
-            powerList={filterPowers(build, stateManager.activeSecondary.powers)}
+            powerList={stateManager.activeSecondary.powers}
             stateManager={stateManager}
           />
-          {/* <PoolPowers
-            build={build}
-            updateBuild={updateBuild}
-            togglePower={togglePower}
-            addPowerFromNewPool={addPowerFromNewPool}
-          /> */}
+          <PoolPowers stateManager={stateManager} />
         </div>
       </div>
     </section>
   );
-}
-
-function extractDisplayNames(list) {
-  return list.map(({ displayName }) => displayName);
-}
-
-function filterPowers(build, powers) {
-  return powers
-    .map((p, i) => ({ ...p, originalIndex: i }))
-    .filter(
-      ({ fullName }) =>
-        !build.excludedPowersets[fullName] &&
-        !build.poolPowers.find((name) => fullName === name)
-    );
 }
 
 export default Powersets;
