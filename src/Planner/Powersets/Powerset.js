@@ -48,7 +48,9 @@ function getPowerColor(stateManager, p) {
   const isPoolPower = p.archetypeOrder === 'poolPower' || !p.archetypeOrder;
   const isUsedPower = build.powerLookup.hasOwnProperty(p.fullName);
   const areReqsMet = arePowerRequirementsMet(stateManager, p);
-  console.log('Active Level Index: ', stateManager.build.activeLevelIndex);
+  if (p.displayName === 'Misdirection') {
+    console.log('MISDIRECTION: ', isPoolPower, isUsedPower, areReqsMet);
+  }
   return isUsedPower
     ? areReqsMet
       ? 'lightgreen'
