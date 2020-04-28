@@ -40,6 +40,10 @@ export default class BuildManager {
     return powersets[this.build.archetype].secondaries;
   }
 
+  get pools() {
+    return poolPowers;
+  }
+
   get activeSecondary() {
     return powersets[this.build.archetype].secondaries[
       this.build.secondaryIndex
@@ -47,7 +51,7 @@ export default class BuildManager {
   }
 
   get activePool() {
-    return poolPowers[this.build.poolPower];
+    return poolPowers[this.build.poolPowerIndex];
   }
 
   getPower = ({ archetypeOrder, index }) => {
@@ -171,18 +175,19 @@ export default class BuildManager {
       throw new Error('No active pool found');
     }
     const poolName = pool.fullName;
+    const { poolPowerIndex } = this.build;
     const activePoolPowers = [...this.build.poolPowers];
     const excludedPowersets = { ...this.build.excludedPowersets };
     const poolCanBeAdded =
       activePoolPowers.length < 4 &&
-      activePoolPowers.indexOf(poolName) === -1 &&
+      activePoolPowers.indexOf(poolPowerIndex) === -1 &&
       !excludedPowersets.hasOwnProperty(poolName);
 
     if (!poolCanBeAdded) {
       return;
     }
 
-    activePoolPowers.push(poolName);
+    activePoolPowers.push(poolPowerIndex);
 
     if (pool.prevents) {
       pool.prevents.forEach((p) => {
@@ -197,13 +202,11 @@ export default class BuildManager {
     const newPowerState = this._togglePower(p, 'poolPower');
     if (newPowerState) {
       const nextDefaultPoolPowersetIndex = poolPowers.findIndex(
-        ({ fullName }) => {
+        ({ fullName }, i) => {
           return (
             !this.build.excludedPowersets.hasOwnProperty(fullName) &&
-            !this.build.poolPowers.find(
-              (activePool) => activePool === fullName
-            ) &&
-            fullName !== this.build.poolPower.fullName
+            !this.build.poolPowers.find((poolIndex) => poolIndex === i) &&
+            i !== this.build.poolPowerIndex
           );
         }
       );
@@ -381,17 +384,15 @@ export default class BuildManager {
           primary: primaries[0],
           secondary: secondaries[0],
         };
-      case 'primary':
-      case 'secondary':
-        const psOrder = name === 'primary' ? 'primaries' : 'secondaries';
-        const newPowerset = powersets[this.build.archetype][psOrder].find(
-          ({ displayName }) => displayName === value
-        );
+      case 'primaryIndex':
+      case 'secondaryIndex':
         const slotsToRemove = [];
+        const archetypeOrder =
+          name === 'primaryIndex' ? 'primary' : 'secondary';
         const powerSlots = this.build.powerSlots.map((powerSlot) => {
           // Remove all powers and enh slots belonging to primary/secondary
           // being changed
-          if (powerSlot.power.archetypeOrder !== name) {
+          if (powerSlot.power.archetypeOrder !== archetypeOrder) {
             return powerSlot;
           }
           const { level, type } = powerSlot;
@@ -402,15 +403,15 @@ export default class BuildManager {
         });
         return {
           ...this.build,
-          [name]: newPowerset,
+          [name]: parseInt(value, 10),
           powerSlots,
           enhancementSlots: this._removeSlots(...slotsToRemove),
         };
-      case 'poolPower':
-        return {
-          ...this.build,
-          [name]: poolPowers.find(({ displayName }) => displayName === value),
-        };
+      // case 'poolPowerIndex':
+      //   return {
+      //     ...this.build,
+      //     [name]: poolPowers.find(({ displayName }) => displayName === value),
+      //   };
       default:
         return this.build;
     }
