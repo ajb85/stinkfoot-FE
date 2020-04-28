@@ -8,21 +8,17 @@ export default function (build, power) {
     return true;
   }
 
-  const requiredLookUp = powers.reduce((acc, cur) => {
-    acc[cur] = true;
-    return acc;
-  }, {});
-
   let countedPowers = 0;
   let currentLevel = 0;
 
   for (let i = 0; currentLevel < activeLevel; i++) {
     const powerSlot = powerSlots[i];
-    if (requiredLookUp[powerSlot.fullName]) {
-      if (countedPowers + 1 >= count) {
+    if (powers[powerSlot.fullName]) {
+      countedPowers++;
+
+      if (countedPowers >= count) {
         return true;
       }
-      countedPowers++;
     }
     currentLevel = powerSlot.level;
   }
