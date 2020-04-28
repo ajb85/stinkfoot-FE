@@ -4,7 +4,8 @@ import Powerset from './Powerset.js';
 
 // import styles from './styles.module.scss';
 
-function PoolPowers({ build, togglePower, updateBuild, addPowerFromNewPool }) {
+function PoolPowers({ stateManager }) {
+  const { build } = stateManager;
   return (
     <div>
       <h2>Power Pools</h2>
@@ -13,9 +14,8 @@ function PoolPowers({ build, togglePower, updateBuild, addPowerFromNewPool }) {
           <React.Fragment key={pool}>
             <Powerset
               header={pool}
-              order="poolPower"
-              build={build}
-              togglePower={togglePower}
+              powerList={stateManager.activePrimary.powers}
+              stateManager={stateManager}
             />
           </React.Fragment>
         );
@@ -23,11 +23,13 @@ function PoolPowers({ build, togglePower, updateBuild, addPowerFromNewPool }) {
 
       {build.poolPowers.length < 4 && (
         <Powerset
-          order="poolPower"
+          dropdown={{
+            name: 'poolPowerIndex',
+            list: stateManager.pools,
+          }}
+          powerList={stateManager.activePool.powers}
           build={build}
-          updateBuild={updateBuild}
-          togglePower={addPowerFromNewPool}
-          renderSelect={true}
+          stateManager={stateManager}
         />
       )}
     </div>
