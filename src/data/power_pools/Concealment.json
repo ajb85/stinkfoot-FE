@@ -1,10 +1,15 @@
 {
+  "archetypeOrder": "poolPower",
   "description": "These powers grant you Invisibility and Stealth.",
   "fullName": "Pool.Invisibility",
   "imageName": "Invisibility.png",
   "displayName": "Concealment",
   "powers": [
     {
+      "allowedEnhancements": ["Buff_Defense", "EnduranceDiscount", "Recharge"],
+      "enhancementCount": null,
+      "archetypeOrder": "poolPower",
+      "powerIndex": 0,
       "castTimeReal": 0.73,
       "toggleCost": 0.325,
       "fullName": "Pool.Invisibility.Stealth",
@@ -19,13 +24,7 @@
       "baseRechargeTime": 2,
       "activatePeriod": 0.5,
       "effectArea": 1,
-      "maxBoosts": "",
       "numAllowed": 1,
-      "boostsAllowed": [
-        "Buff_Defense_Boost",
-        "EnduranceDiscount_Boost",
-        "Recharge_Boost"
-      ],
       "enhancements": [5, 8, 18],
       "description": {
         "short": "Toggle: Self Stealth, +DEF(All)",
@@ -40,6 +39,15 @@
       "aoeModifier": 1
     },
     {
+      "allowedEnhancements": [
+        "Buff_Defense",
+        "EnduranceDiscount",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "archetypeOrder": "poolPower",
+      "powerIndex": 1,
       "castTimeReal": 1.17,
       "toggleCost": 15.6,
       "fullName": "Pool.Invisibility.Grant_Invisibility",
@@ -55,14 +63,7 @@
       "baseRechargeTime": 3,
       "activatePeriod": 0.5,
       "effectArea": 1,
-      "maxBoosts": "6",
       "numAllowed": 1,
-      "boostsAllowed": [
-        "Buff_Defense_Boost",
-        "EnduranceDiscount_Boost",
-        "Range_Boost",
-        "Recharge_Boost"
-      ],
       "enhancements": [5, 8, 17, 18],
       "description": {
         "short": "Ranged, Teammate Stealth, +DEF(All)",
@@ -77,61 +78,22 @@
       "aoeModifier": 1
     },
     {
-      "castTimeReal": 0.73,
-      "toggleCost": 0.455,
-      "isEpic": true,
-      "fullName": "Pool.Invisibility.Invisibility",
-      "displayName": "Invisibility",
-      "requires": {
-        "powers": [
-          "Pool.Invisibility.Stealth",
-          "Pool.Invisibility.Grant_Invisibility"
-        ],
-        "count": 1
-      },
-      "accuracy": 1,
-      "accuracyMult": 1,
-      "target": 1,
-      "targetLoS": true,
-      "endCost": 0.2275,
-      "rechargeTime": 20,
-      "baseRechargeTime": 20,
-      "activatePeriod": 0.5,
-      "effectArea": 1,
-      "maxBoosts": "",
-      "numAllowed": 1,
-      "boostsAllowed": [
-        "Buff_Defense_Boost",
-        "EnduranceDiscount_Boost",
-        "Recharge_Boost"
-      ],
-      "enhancements": [5, 8, 18],
-      "description": {
-        "short": "Toggle: Self Stealth, +DEF(All except Psionic)",
-        "long": "You can bend light around yourself to become Invisible. While this power is active, you are almost impossible to detect. While Invisible, you cannot attack and can only use powers that affect yourself, however, you do have a Defense to all  except Psionic attacks.  This power will not work with other self affecting Concealment related powers such as Stealth or Shadow Fall.  Purchasing Invisibility requires the user to be level 14 and possess Stealth or Grant Invisibility."
-      },
-      "setTypes": [7],
-      "level": 14,
-      "ignoreEnh": [],
-      "ignore_Buff": [],
-      "castTime": 0.924,
-      "slottable": true,
-      "aoeModifier": 1
-    },
-    {
+      "allowedEnhancements": ["Accuracy", "EnduranceDiscount", "Recharge"],
+      "enhancementCount": 6,
+      "archetypeOrder": "poolPower",
+      "powerIndex": 2,
       "castTimeReal": 1.5,
       "toggleCost": 9.75,
-      "isEpic": true,
       "fullName": "Pool.Invisibility.Misdirection",
       "displayName": "Misdirection",
       "requires": {
-        "powers": [
-          "Pool.Invisibility.Stealth",
-          "Pool.Invisibility.Grant_Invisibility",
-          "Pool.Invisibility.Invisibility",
-          "Pool.Invisibility.Phase_Shift"
-        ],
-        "count": 2
+        "powers": {
+          "pool.Invisibility.Stealth": true,
+          "pool.Invisibility.Grant_Invisibility": true,
+          "pool.Invisibility.Invisibility": true,
+          "pool.Invisibility.Phase_Shift": true
+        },
+        "count": 1
       },
       "accuracy": 1,
       "accuracyMult": 1,
@@ -143,14 +105,8 @@
       "effectArea": 2,
       "radius": 20,
       "maxTargets": 10,
-      "maxBoosts": "6",
       "aIReport": 1,
       "numAllowed": 1,
-      "boostsAllowed": [
-        "Accuracy_Boost",
-        "EnduranceDiscount_Boost",
-        "Recharge_Boost"
-      ],
       "enhancements": [1, 8, 18],
       "description": {
         "short": "PBAoE, Foe Placate, -Res(All)",
@@ -165,17 +121,20 @@
       "aoeModifier": 4
     },
     {
+      "allowedEnhancements": ["EnduranceDiscount", "Recharge"],
+      "enhancementCount": null,
+      "archetypeOrder": "poolPower",
+      "powerIndex": 3,
       "castTimeReal": 0.5,
       "toggleCost": 0.65,
-      "isEpic": true,
       "fullName": "Pool.Invisibility.Phase_Shift",
       "displayName": "Phase Shift",
       "requires": {
-        "powers": [
-          "Pool.Invisibility.Stealth",
-          "Pool.Invisibility.Grant_Invisibility",
-          "Pool.Invisibility.Invisibility"
-        ],
+        "powers": {
+          "pool.Invisibility.Stealth": true,
+          "pool.Invisibility.Grant_Invisibility": true,
+          "pool.Invisibility.Invisibility": true
+        },
         "count": 2
       },
       "accuracy": 1,
@@ -187,9 +146,7 @@
       "baseRechargeTime": 180,
       "activatePeriod": 0.5,
       "effectArea": 1,
-      "maxBoosts": "",
       "numAllowed": 1,
-      "boostsAllowed": ["EnduranceDiscount_Boost", "Recharge_Boost"],
       "enhancements": [8, 18],
       "description": {
         "short": "Toggle: Self Intangible",
