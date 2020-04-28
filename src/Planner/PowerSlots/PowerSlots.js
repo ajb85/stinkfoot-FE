@@ -2,9 +2,16 @@ import React, { Fragment } from 'react';
 
 import styles from './styles.module.scss';
 
-function Powers({ stateManager }) {
-  const { build, setActiveLevel, addSlot, removeSlot, getPower } = stateManager;
+function PowerSlots({ stateManager }) {
+  const {
+    build,
+    setActiveLevelIndex,
+    addSlot,
+    removeSlot,
+    getPower,
+  } = stateManager;
   let index = 0;
+
   const { selected /*, defaults*/ } = build.powerSlots.reduce(
     (acc, cur, originalIndex) => {
       const withIndex = { ...cur, originalIndex };
@@ -31,16 +38,17 @@ function Powers({ stateManager }) {
         <div key={columnNumber} className={styles.column}>
           {column.map((powerSlot) => {
             const { level, power, enhSlots, originalIndex } = powerSlot;
-            const isActive = build.activeLevel === level;
+            const isActive = stateManager.activeLevel === level;
             const isEmpty = !powerSlot.power;
             const p = power ? getPower(power) : {};
             return (
               <Fragment key={originalIndex}>
                 {isEmpty ? (
                   <EmptyPowerSlot
-                    setActiveLevel={setActiveLevel}
-                    level={powerSlot.level}
+                    setActiveLevelIndex={setActiveLevelIndex}
+                    index={originalIndex}
                     isActive={isActive}
+                    level={powerSlot.level}
                   />
                 ) : (
                   <div
@@ -80,11 +88,11 @@ function Powers({ stateManager }) {
   );
 }
 
-function EmptyPowerSlot({ level, isActive, setActiveLevel }) {
+function EmptyPowerSlot({ index, level, isActive, setActiveLevelIndex }) {
   return (
     <div
       className={styles.power}
-      onClick={setActiveLevel.bind(this, level)}
+      onClick={setActiveLevelIndex.bind(this, index)}
       style={{ backgroundColor: isActive ? 'green' : 'grey' }}
     >
       <p>({level})</p>
@@ -92,4 +100,4 @@ function EmptyPowerSlot({ level, isActive, setActiveLevel }) {
   );
 }
 
-export default Powers;
+export default PowerSlots;
