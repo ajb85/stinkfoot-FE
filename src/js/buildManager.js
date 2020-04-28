@@ -22,7 +22,7 @@ export default class BuildManager {
       powerSlots: powerSlotsTemplate,
       poolPowers: [],
       enhancementSlots,
-      activeLevel: 1,
+      activeLevelIndex: 0,
       powerLookup: {},
       excludedPowersets: {},
     };
@@ -54,11 +54,23 @@ export default class BuildManager {
     return poolPowers[this.build.poolPowerIndex];
   }
 
+  get activeLevel() {
+    return this.build.powerSlots[this.build.activeLevelIndex].level;
+  }
+
   getPower = ({ archetypeOrder, index }) => {
     const pluralOrder = this._pluralizeOrder(archetypeOrder);
-    return powersets[this.build.archetype][pluralOrder][
-      this.build[`${archetypeOrder}Index`]
-    ].powers[index];
+    const powersetIndex = this.build[`${archetypeOrder}Index`];
+
+    const setOfPowers = {
+      primaries:
+        powersets[this.build.archetype].primaries[powersetIndex].powers,
+      secondaries:
+        powersets[this.build.archetype].secondaries[powersetIndex].powers,
+      poolPowers: poolPowers[powersetIndex].powers,
+    };
+
+    return setOfPowers[pluralOrder][index];
   };
 
   updateBuild = (e) => {
@@ -77,8 +89,8 @@ export default class BuildManager {
     );
   };
 
-  togglePower = (p, powerType) => {
-    const newState = this._togglePower(p, powerType);
+  togglePower = (p) => {
+    const newState = this._togglePower(p);
     if (newState) {
       this.setBuild(newState);
     }
@@ -166,8 +178,8 @@ export default class BuildManager {
     });
   };
 
-  setActiveLevel = (activeLevel) =>
-    this.setBuild({ ...this.build, activeLevel });
+  setActiveLevelIndex = (activeLevelIndex) =>
+    this.setBuild({ ...this.build, activeLevelIndex });
 
   addPowerFromNewPool = (p) => {
     const pool = this.activePool;
@@ -228,11 +240,11 @@ export default class BuildManager {
     });
   };
 
-  _assignLevel = (powersLevel) => {
-    if (powersLevel <= this.build.activeLevel) {
+  _assignPowerSlotIndex = (powersLevel) => {
+    if (powersLevel <= this.activeLevel) {
       // If the user selects a skill that fits into the active slot,
       // use the active slot
-      return this.build.activeLevel;
+      return this.build.activeLevelIndex;
     }
 
     // Otherwise, find a slot that is open & >= the skill's level
@@ -247,7 +259,7 @@ export default class BuildManager {
     const updatedEnhSlots = [...this.build.enhancementSlots];
     slotLevels.forEach((lvl) => {
       const enhSlotIndex = updatedEnhSlots.findIndex(
-        ({ value, inUse }) => value === lvl && inUse
+        ({ level, inUse }) => level === lvl && inUse
       );
       if (enhSlotIndex > -1) {
         updatedEnhSlots[enhSlotIndex].inUse = false;
@@ -268,7 +280,7 @@ export default class BuildManager {
       const index = powerLookup[p.fullName];
       delete powerLookup[p.fullName];
 
-      let powerSlotLevel;
+      let powerSlotIndex;
       let slotsToRemove;
       const powerSlots = this.build.powerSlots.map((powerSlot, i) => {
         if (i !== index || powerSlot.type === 'default') {
@@ -276,17 +288,17 @@ export default class BuildManager {
         }
         const { level, type, enhSlots } = powerSlot;
         slotsToRemove = enhSlots.slice(1).map(({ slotLevel }) => slotLevel);
-        powerSlotLevel = level;
+        powerSlotIndex = i;
         return { level, type };
       });
       return {
         ...this.build,
         powerLookup,
         powerSlots,
-        activeLevel:
-          powerSlotLevel < this.build.activeLevel
+        activeLevelIndex:
+          powerSlotIndex < this.build.activeLevelIndex
             ? findLowestUnusedSlot(powerSlots)
-            : this.build.activeLevel,
+            : this.build.activeLevelIndex,
         enhancementSlots: this._removeSlots(...slotsToRemove),
       };
     } else {
@@ -309,9 +321,7 @@ export default class BuildManager {
         if (!powerSlots[1].power) {
           // Regardless if a secondary power was picked or not,
           // set the only power available at level 1 by default
-          const power = this.activeSecondary.powers.find(
-            ({ isEpic }) => !isEpic
-          );
+          const power = this.activeSecondary.powers[0];
           powerSlots[1] = {
             ...powerSlots[1],
             power: { archetypeOrder: 'secondary', index: 0 },
@@ -323,7 +333,7 @@ export default class BuildManager {
           ...this.build,
           powerSlots,
           powerLookup,
-          activeLevel: findLowestUnusedSlot(powerSlots),
+          activeLevelIndex: findLowestUnusedSlot(powerSlots),
         };
       } else {
         return addPowerToPowerSlot.call(this);
@@ -337,7 +347,7 @@ export default class BuildManager {
     ) {
       if (!powerSlotIndex) {
         // If data isn't given, pull from the power's info
-        powerSlotIndex = this._assignLevel(p.level);
+        powerSlotIndex = this._assignPowerSlotIndex(p.level);
       }
 
       if (powerSlotIndex === null) {
@@ -366,7 +376,7 @@ export default class BuildManager {
           ...this.build.powerLookup,
           [p.fullName]: powerSlotIndex,
         },
-        activeLevel: findLowestUnusedSlot(powerSlots),
+        activeLevelIndex: findLowestUnusedSlot(powerSlots),
         // this.build.powerSlots[powerSlotIndex].level === this.build.activeLevel
         // ? findLowestUnusedSlot(powerSlots)
         // : this.build.activeLevel,
@@ -436,7 +446,7 @@ function emptyDefaultSlot() {
   ];
 }
 
-function findLowestUnusedSlot(powers) {
-  const nextLevel = powers.find(({ fullName }) => !fullName);
-  return nextLevel ? nextLevel.level : null;
+function findLowestUnusedSlot(powerSlots) {
+  const nextEmptySlotIndex = powerSlots.findIndex(({ power }) => !power);
+  return !isNaN(parseInt(nextEmptySlotIndex)) ? nextEmptySlotIndex : null;
 }
