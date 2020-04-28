@@ -58,7 +58,14 @@ export default class BuildManager {
     return this.build.powerSlots[this.build.activeLevelIndex].level;
   }
 
-  getPower = ({ archetypeOrder, index }) => {
+  getPower = (power) => {
+    if (!power) {
+      return null;
+    }
+    const { archetypeOrder, index } = power;
+    if (!archetypeOrder || (!index && index !== 0)) {
+      return null;
+    }
     const pluralOrder = this._pluralizeOrder(archetypeOrder);
     const powersetIndex = this.build[`${archetypeOrder}Index`];
 
@@ -177,6 +184,10 @@ export default class BuildManager {
       enhancementSlots: this._removeSlots(...slotsToRemove),
     });
   };
+
+  doesBuildHavePower(power) {
+    return this.build.powerLookup.hasOwnProperty(power.fullName);
+  }
 
   setActiveLevelIndex = (activeLevelIndex) =>
     this.setBuild({ ...this.build, activeLevelIndex });
