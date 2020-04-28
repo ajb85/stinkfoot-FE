@@ -186,6 +186,9 @@ export default class BuildManager {
   };
 
   doesBuildHavePower(power) {
+    if (!power) {
+      return null;
+    }
     return this.build.powerLookup.hasOwnProperty(power.fullName);
   }
 
