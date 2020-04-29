@@ -9,13 +9,14 @@ function PoolPowers({ stateManager }) {
   return (
     <div>
       <h2>Power Pools</h2>
-      {build.poolPowers.map((pool) => {
+      {build.poolPowers.map((poolIndex) => {
         return (
-          <React.Fragment key={pool}>
+          <React.Fragment key={poolIndex}>
             <Powerset
-              header={pool}
-              powerList={stateManager.activePrimary.powers}
+              header={stateManager.pools[poolIndex].displayName}
+              powerList={stateManager.pools[poolIndex].powers}
               stateManager={stateManager}
+              poolIndex={poolIndex}
             />
           </React.Fragment>
         );
@@ -30,6 +31,7 @@ function PoolPowers({ stateManager }) {
           powerList={stateManager.activePool.powers}
           build={build}
           stateManager={stateManager}
+          togglePower={stateManager.addPowerFromNewPool}
         />
       )}
     </div>
