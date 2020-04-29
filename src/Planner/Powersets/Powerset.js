@@ -5,7 +5,7 @@ import arePowerRequirementsMet from 'js/arePowerRequirementsMet.js';
 import styles from './styles.module.scss';
 
 function Powerset(props) {
-  const { header, dropdown, powerList, stateManager } = props;
+  const { header, dropdown, powerList, stateManager, poolIndex } = props;
   const { updateBuild, build } = stateManager;
 
   // This allows components to supply their own method to run
@@ -17,8 +17,8 @@ function Powerset(props) {
     const index = build[name];
     return (
       <select value={index} name={name} onChange={(e) => updateBuild(e)}>
-        {filterDropdownList(stateManager, list).map((p, i) => (
-          <option key={p.fullName} value={i}>
+        {filterDropdownList(stateManager, list).map((p) => (
+          <option key={p.fullName} value={p.originalIndex}>
             {p.displayName}
           </option>
         ))}
@@ -28,7 +28,13 @@ function Powerset(props) {
 
   return (
     <div className={styles.powerset}>
-      {header && <h3>{header}</h3>}
+      {header && !isNaN(parseInt(poolIndex, 10)) ? (
+        <h3 onClick={stateManager.removePool.bind(this, poolIndex)}>
+          {header}
+        </h3>
+      ) : (
+        <h3>{header}</h3>
+      )}
       {dropdown && renderDropdown()}
       <div className={styles.powersList}>
         {powerList.map((p) => {
@@ -36,7 +42,7 @@ function Powerset(props) {
             <p
               key={p.fullName}
               style={{ color: getPowerColor(stateManager, p) }}
-              onClick={togglePower.bind(this, p)}
+              onClick={togglePower.bind(this, p, poolIndex)}
             >
               {p.displayName}
             </p>
@@ -72,10 +78,15 @@ function filterDropdownList(stateManager, list) {
     selectedPoolLookup,
   } = stateManager;
 
-  return list.filter(
-    ({ fullName }) =>
-      !excludedPowersets[fullName] && !selectedPoolLookup[fullName]
-  );
+  return list
+    .map((l, i) => {
+      l.originalIndex = i;
+      return l;
+    })
+    .filter(
+      ({ fullName }) =>
+        !excludedPowersets[fullName] && !selectedPoolLookup[fullName]
+    );
 }
 
 export default Powerset;
