@@ -54,6 +54,13 @@ export default class BuildManager {
     return poolPowers[this.build.poolPowerIndex];
   }
 
+  get selectedPoolLookup() {
+    return this.build.poolPowers.reduce((acc, index) => {
+      acc[poolPowers[index].fullName] = true;
+      return acc;
+    }, {});
+  }
+
   get activeLevel() {
     return this.build.powerSlots[this.build.activeLevelIndex].level;
   }
@@ -62,8 +69,9 @@ export default class BuildManager {
     if (!power) {
       return null;
     }
-    const { archetypeOrder, index } = power;
-    if (!archetypeOrder || (!index && index !== 0)) {
+    const { archetypeOrder, powerIndex, poolIndex } = power;
+    if (!archetypeOrder || (!powerIndex && powerIndex !== 0)) {
+      console.log('MISSING DATA: ', archetypeOrder, powerIndex);
       return null;
     }
     const pluralOrder = this._pluralizeOrder(archetypeOrder);
@@ -74,17 +82,17 @@ export default class BuildManager {
         powersets[this.build.archetype].primaries[powersetIndex].powers,
       secondaries:
         powersets[this.build.archetype].secondaries[powersetIndex].powers,
-      poolPowers: poolPowers[powersetIndex].powers,
+      poolPowers: poolPowers[poolIndex || 0].powers,
     };
 
-    return setOfPowers[pluralOrder][index];
+    return setOfPowers[pluralOrder][powerIndex];
   };
 
   updateBuild = (e) => {
     const specialCases = {
       archetype: true,
-      primary: true,
-      secondary: true,
+      primaryIndex: true,
+      secondaryIndex: true,
       poolPower: true,
     };
 
@@ -96,8 +104,8 @@ export default class BuildManager {
     );
   };
 
-  togglePower = (p) => {
-    const newState = this._togglePower(p);
+  togglePower = (p, poolIndex) => {
+    const newState = this._togglePower(p, poolIndex);
     if (newState) {
       this.setBuild(newState);
     }
@@ -218,20 +226,20 @@ export default class BuildManager {
     if (pool.prevents) {
       pool.prevents.forEach((p) => {
         if (excludedPowersets.hasOwnProperty(p)) {
-          excludedPowersets[p].push(pool.fullName);
+          excludedPowersets[p].push(pool.displayName);
         } else {
-          excludedPowersets[p] = [pool.fullName];
+          excludedPowersets[p] = [pool.displayName];
         }
       });
     }
 
-    const newPowerState = this._togglePower(p, 'poolPower');
+    const newPowerState = this._togglePower(p, poolPowerIndex);
     if (newPowerState) {
       const nextDefaultPoolPowersetIndex = poolPowers.findIndex(
         ({ fullName }, i) => {
           return (
             !this.build.excludedPowersets.hasOwnProperty(fullName) &&
-            !this.build.poolPowers.find((poolIndex) => poolIndex === i) &&
+            this.build.poolPowers.indexOf(i) === -1 &&
             i !== this.build.poolPowerIndex
           );
         }
@@ -254,6 +262,45 @@ export default class BuildManager {
     });
   };
 
+  removePool = (poolIndexToRemove) => {
+    const activePowers = this.build.powerSlots.reduce((acc, powerSlot) => {
+      if (powerSlot.power) {
+        const {
+          power: { archetypeOrder, poolIndex, powerIndex },
+        } = powerSlot;
+        if (archetypeOrder === 'poolPower' && poolIndex === poolIndexToRemove) {
+          acc.push(poolPowers[poolIndex].powers[powerIndex]);
+        }
+      }
+      return acc;
+    }, []);
+
+    const pool = poolPowers[poolIndexToRemove];
+
+    const excludedPowersets = { ...this.build.excludedPowersets };
+    if (pool.prevents) {
+      pool.prevents.forEach((ps) => {
+        if (excludedPowersets[ps] && excludedPowersets[ps].length === 1) {
+          delete excludedPowersets[ps];
+        } else if (excludedPowersets[ps]) {
+          excludedPowersets[ps] = excludedPowersets[ps].filter(
+            (psName) => psName !== ps
+          );
+        } else {
+          console.log("Whoops, didn't find ", ps, ' in the exclusion list.');
+        }
+      });
+    }
+
+    this.setBuild({
+      ...this._removePowers(...activePowers),
+      excludedPowersets,
+      poolPowers: this.build.poolPowers.filter(
+        (index) => index !== poolIndexToRemove
+      ),
+    });
+  };
+
   _assignPowerSlotIndex = (powersLevel) => {
     if (powersLevel <= this.activeLevel) {
       // If the user selects a skill that fits into the active slot,
@@ -271,50 +318,30 @@ export default class BuildManager {
 
   _removeSlots = (...slotLevels) => {
     const updatedEnhSlots = [...this.build.enhancementSlots];
-    slotLevels.forEach((lvl) => {
-      const enhSlotIndex = updatedEnhSlots.findIndex(
-        ({ level, inUse }) => level === lvl && inUse
-      );
-      if (enhSlotIndex > -1) {
-        updatedEnhSlots[enhSlotIndex].inUse = false;
-      } else {
-        console.log('DID NOT FIND IN USE FOR ', lvl);
-      }
-    });
+    if (slotLevels.length) {
+      slotLevels
+        .filter((lvl) => !isNaN(parseInt(lvl, 10)))
+        .forEach((lvl) => {
+          const enhSlotIndex = updatedEnhSlots.findIndex(
+            ({ level, inUse }) => level === lvl && inUse
+          );
+          if (enhSlotIndex > -1) {
+            updatedEnhSlots[enhSlotIndex].inUse = false;
+          } else {
+            console.log('DID NOT FIND IN USE FOR ', lvl);
+          }
+        });
+    }
 
     return updatedEnhSlots;
   };
 
-  _togglePower = (p) => {
+  _togglePower = (p, poolIndex) => {
     const isPrimary = p.archetypeOrder === 'primary';
-    const powerIndex = p.originalIndex;
+    const { powerIndex } = p;
     const powerLookup = { ...this.build.powerLookup };
     if (this.build.powerLookup.hasOwnProperty(p.fullName)) {
-      // Remove power that's been added
-      const index = powerLookup[p.fullName];
-      delete powerLookup[p.fullName];
-
-      let powerSlotIndex;
-      let slotsToRemove;
-      const powerSlots = this.build.powerSlots.map((powerSlot, i) => {
-        if (i !== index || powerSlot.type === 'default') {
-          return powerSlot;
-        }
-        const { level, type, enhSlots } = powerSlot;
-        slotsToRemove = enhSlots.slice(1).map(({ slotLevel }) => slotLevel);
-        powerSlotIndex = i;
-        return { level, type };
-      });
-      return {
-        ...this.build,
-        powerLookup,
-        powerSlots,
-        activeLevelIndex:
-          powerSlotIndex < this.build.activeLevelIndex
-            ? findLowestUnusedSlot(powerSlots)
-            : this.build.activeLevelIndex,
-        enhancementSlots: this._removeSlots(...slotsToRemove),
-      };
+      return this._removePowers(p);
     } else {
       const isPickingLevel1Power =
         p.level === 1 &&
@@ -327,7 +354,7 @@ export default class BuildManager {
           // If the user selected one of the two primary level 1 powers, save it
           powerSlots[0] = {
             ...powerSlots[0],
-            power: { archetypeOrder: p.archetypeOrder, index: powerIndex },
+            power: { archetypeOrder: p.archetypeOrder, powerIndex: powerIndex },
             enhSlots: emptyDefaultSlot(),
           };
           powerLookup[p.fullName] = 0;
@@ -338,7 +365,7 @@ export default class BuildManager {
           const power = this.activeSecondary.powers[0];
           powerSlots[1] = {
             ...powerSlots[1],
-            power: { archetypeOrder: 'secondary', index: 0 },
+            power: { archetypeOrder: 'secondary', powerIndex: 0 },
             enhSlots: emptyDefaultSlot(),
           };
           powerLookup[power.fullName] = 1;
@@ -355,31 +382,19 @@ export default class BuildManager {
     }
 
     function addPowerToPowerSlot(
-      powerSlotIndex,
-      newPowersIndex,
-      archetypeOrder
+      powerSlotIndex = this._assignPowerSlotIndex(p.level),
+      newPowersIndex = powerIndex,
+      archetypeOrder = p.archetypeOrder
     ) {
-      if (!powerSlotIndex) {
-        // If data isn't given, pull from the power's info
-        powerSlotIndex = this._assignPowerSlotIndex(p.level);
-      }
-
       if (powerSlotIndex === null) {
         // There are no power slots left that can support the ability
         return;
       }
 
-      if (!archetypeOrder) {
-        // If data isn't given, pull from the power's info
-        archetypeOrder = p.archetypeOrder;
-      }
-
-      const index = newPowersIndex ? newPowersIndex : powerIndex;
-
       const powerSlots = [...this.build.powerSlots];
       powerSlots[powerSlotIndex] = {
         ...powerSlots[powerSlotIndex],
-        power: { archetypeOrder, index },
+        power: { archetypeOrder, powerIndex: newPowersIndex, poolIndex },
         enhSlots: emptyDefaultSlot(),
       };
 
@@ -398,6 +413,50 @@ export default class BuildManager {
     }
   };
 
+  _removePowers = (...powers) => {
+    if (!powers.length) {
+      return { ...this.build };
+    }
+    // Remove power that's been added
+    const powerLookup = { ...this.build.powerLookup };
+    const powerSlotIndicesRemoved = powers.reduce((acc, p) => {
+      if (powerLookup.hasOwnProperty(p.fullName)) {
+        acc[powerLookup[p.fullName]] = true;
+        delete powerLookup[p.fullName];
+      }
+
+      return acc;
+    }, {});
+    let powerSlotIndex;
+    let slotsToRemove = [];
+    const powerSlots = this.build.powerSlots.map((powerSlot, i) => {
+      if (
+        !powerSlotIndicesRemoved.hasOwnProperty(i) ||
+        powerSlot.type === 'default'
+      ) {
+        return powerSlot;
+      }
+      const { level, type, enhSlots } = powerSlot;
+      slotsToRemove.push(
+        ...enhSlots.slice(1).map(({ slotLevel }) => slotLevel)
+      );
+      powerSlotIndex = i;
+      return { level, type };
+    });
+
+    const enhancementSlots = this._removeSlots(...slotsToRemove);
+    return {
+      ...this.build,
+      powerLookup,
+      powerSlots,
+      activeLevelIndex:
+        powerSlotIndex < this.build.activeLevelIndex
+          ? findLowestUnusedSlot(powerSlots)
+          : this.build.activeLevelIndex,
+      enhancementSlots,
+    };
+  };
+
   _handleSpecialCases = (name, value) => {
     switch (name) {
       case 'archetype':
@@ -410,26 +469,27 @@ export default class BuildManager {
         };
       case 'primaryIndex':
       case 'secondaryIndex':
-        const slotsToRemove = [];
         const archetypeOrder =
           name === 'primaryIndex' ? 'primary' : 'secondary';
-        const powerSlots = this.build.powerSlots.map((powerSlot) => {
-          // Remove all powers and enh slots belonging to primary/secondary
-          // being changed
-          if (powerSlot.power.archetypeOrder !== archetypeOrder) {
-            return powerSlot;
-          }
-          const { level, type } = powerSlot;
-          slotsToRemove.push(
-            ...powerSlot.enhSlots.map(({ slotLevel }) => slotLevel)
-          );
-          return { level, type };
-        });
+        const archetypeSection = this._pluralizeOrder(archetypeOrder);
+        const powersToRemove = this.build.powerSlots.reduce(
+          (acc, powerSlot) => {
+            if (powerSlot.power) {
+              if (powerSlot.power.archetypeOrder === archetypeOrder) {
+                acc.push(
+                  powersets[this.build.archetype][archetypeSection][
+                    this.build[`${[archetypeOrder]}Index`]
+                  ].powers[powerSlot.power.powerIndex]
+                );
+              }
+            }
+            return acc;
+          },
+          []
+        );
         return {
-          ...this.build,
+          ...this._removePowers(...powersToRemove),
           [name]: parseInt(value, 10),
-          powerSlots,
-          enhancementSlots: this._removeSlots(...slotsToRemove),
         };
       // case 'poolPowerIndex':
       //   return {
