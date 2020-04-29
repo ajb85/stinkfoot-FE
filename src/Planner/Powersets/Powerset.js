@@ -6,14 +6,18 @@ import styles from './styles.module.scss';
 
 function Powerset(props) {
   const { header, dropdown, powerList, stateManager } = props;
-  const { updateBuild, togglePower, build } = stateManager;
+  const { updateBuild, build } = stateManager;
+
+  // This allows components to supply their own method to run
+  // when a power is clicked
+  const togglePower = props.togglePower || stateManager.togglePower;
 
   const renderDropdown = () => {
     const { list, name } = dropdown;
     const index = build[name];
     return (
       <select value={index} name={name} onChange={(e) => updateBuild(e)}>
-        {list.map((p, i) => (
+        {filterDropdownList(stateManager, list).map((p, i) => (
           <option key={p.fullName} value={i}>
             {p.displayName}
           </option>
@@ -27,7 +31,7 @@ function Powerset(props) {
       {header && <h3>{header}</h3>}
       {dropdown && renderDropdown()}
       <div className={styles.powersList}>
-        {filterPowerList(build, powerList).map((p) => {
+        {powerList.map((p) => {
           return (
             <p
               key={p.fullName}
@@ -45,12 +49,10 @@ function Powerset(props) {
 
 function getPowerColor(stateManager, p) {
   const { build } = stateManager;
-  const isPoolPower = p.archetypeOrder === 'poolPower' || !p.archetypeOrder;
+  const isPoolPower = p.archetypeOrder === 'poolPower';
   const isUsedPower = build.powerLookup.hasOwnProperty(p.fullName);
   const areReqsMet = arePowerRequirementsMet(stateManager, p);
-  if (p.displayName === 'Misdirection') {
-    console.log('MISDIRECTION: ', isPoolPower, isUsedPower, areReqsMet);
-  }
+
   return isUsedPower
     ? areReqsMet
       ? 'lightgreen'
@@ -64,13 +66,16 @@ function getPowerColor(stateManager, p) {
     : 'grey';
 }
 
-function filterPowerList(build, powers) {
-  return powers
-    .map((p, i) => ({ ...p, originalIndex: i }))
-    .filter(
-      ({ fullName, archetypeOrder }) =>
-        !build.poolPowers.find((name) => fullName === name)
-    );
+function filterDropdownList(stateManager, list) {
+  const {
+    build: { excludedPowersets },
+    selectedPoolLookup,
+  } = stateManager;
+
+  return list.filter(
+    ({ fullName }) =>
+      !excludedPowersets[fullName] && !selectedPoolLookup[fullName]
+  );
 }
 
 export default Powerset;
