@@ -47,12 +47,7 @@ function CharacterInfo({ stateManager }) {
         />
       </div>
       <div>
-        <button
-          type="text"
-          disabled={build.alignment === 'Hero'}
-          style={{ opacity: build.alignment === 'Hero' ? 0.5 : 1 }}
-          onClick={toggleAlignment}
-        >
+        <button type="text" onClick={toggleAlignment}>
           {build.alignment}
         </button>
       </div>
