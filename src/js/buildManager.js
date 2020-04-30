@@ -76,6 +76,10 @@ export default class BuildManager {
     return this.build.powerSlots[this.build.activeLevelIndex].level;
   }
 
+  get archetypes() {
+    return Object.keys(powersets);
+  }
+
   getPower = (power) => {
     if (!power) {
       return null;
@@ -101,6 +105,7 @@ export default class BuildManager {
   };
 
   updateBuild = (e) => {
+    console.log('Running update for: ', e.target.name, e.target.value);
     const specialCases = {
       archetype: true,
       primaryIndex: true,
