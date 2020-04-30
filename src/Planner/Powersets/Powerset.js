@@ -28,13 +28,15 @@ function Powerset(props) {
 
   return (
     <div className={styles.powerset}>
-      {header && !isNaN(parseInt(poolIndex, 10)) ? (
-        <h3 onClick={stateManager.removePool.bind(this, poolIndex)}>
-          {header}
-        </h3>
-      ) : (
-        <h3>{header}</h3>
-      )}
+      {header ? (
+        !isNaN(parseInt(poolIndex, 10)) ? (
+          <h3 onClick={stateManager.removePool.bind(this, poolIndex)}>
+            {header}
+          </h3>
+        ) : (
+          <h3>{header}</h3>
+        )
+      ) : null}
       {dropdown && renderDropdown()}
       <div className={styles.powersList}>
         {powerList.map((p) => {
@@ -55,7 +57,8 @@ function Powerset(props) {
 
 function getPowerColor(stateManager, p) {
   const { build } = stateManager;
-  const isPoolPower = p.archetypeOrder === 'poolPower';
+  const isPoolPower =
+    p.archetypeOrder === 'poolPower' || p.archetypeOrder === 'epicPool';
   const isUsedPower = build.powerLookup.hasOwnProperty(p.fullName);
   const areReqsMet = arePowerRequirementsMet(stateManager, p);
 
