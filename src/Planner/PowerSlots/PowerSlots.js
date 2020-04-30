@@ -6,11 +6,18 @@ function PowerSlots({ stateManager }) {
   const {
     build,
     setActiveLevelIndex,
-    addSlot,
+    togglePowerSlot,
     removeSlot,
     getPower,
   } = stateManager;
   let index = 0;
+
+  const handlePillClick = (e, psIndex) => {
+    const { className } = e.target;
+    if (className === 'pillText' || build.powerSlotIndex !== psIndex) {
+      togglePowerSlot(psIndex);
+    }
+  };
 
   const { selected /*, defaults*/ } = build.powerSlots.reduce(
     (acc, cur, originalIndex) => {
@@ -52,31 +59,44 @@ function PowerSlots({ stateManager }) {
                   />
                 ) : (
                   <div
-                    className={styles.power}
-                    style={{
-                      backgroundColor: '#1b4ea8',
-                    }}
+                    className={styles.powerContainer}
+                    onClick={(e) => handlePillClick(e, originalIndex)}
+                    name="Pill"
                   >
-                    <p onClick={addSlot.bind(this, originalIndex)}>
-                      ({level}) {p.displayName}
-                    </p>
-                    {
-                      <div className={styles.enhancementsContainer}>
-                        {enhSlots.map(({ slotLevel, setName, name }, j) => {
-                          const displayLevel =
-                            slotLevel === null ? level : slotLevel;
-                          return (
-                            <div
-                              key={`${originalIndex} ${j}`}
-                              onClick={removeSlot.bind(this, originalIndex, j)}
-                              className={styles.enhancementBubble}
-                            >
-                              <p>{displayLevel}</p>
-                            </div>
-                          );
-                        })}
-                      </div>
-                    }
+                    <div
+                      className={`${styles.power} ${
+                        build.powerSlotIndex === originalIndex && styles.active
+                      }`}
+                      style={{
+                        backgroundColor: '#1b4ea8',
+                        zIndex: build.powerSlots.length - originalIndex,
+                      }}
+                    >
+                      <p className="pillText">
+                        ({level}) {p.displayName}
+                      </p>
+                      {
+                        <div className={styles.enhancementsContainer}>
+                          {enhSlots.map(({ slotLevel, setName, name }, j) => {
+                            const displayLevel =
+                              slotLevel === null ? level : slotLevel;
+                            return (
+                              <div
+                                key={`${originalIndex} ${j}`}
+                                onClick={removeSlot.bind(
+                                  this,
+                                  originalIndex,
+                                  j
+                                )}
+                                className={styles.enhancementBubble}
+                              >
+                                <p>{displayLevel}</p>
+                              </div>
+                            );
+                          })}
+                        </div>
+                      }
+                    </div>
                   </div>
                 )}
               </Fragment>
@@ -90,12 +110,14 @@ function PowerSlots({ stateManager }) {
 
 function EmptyPowerSlot({ index, level, isActive, setActiveLevelIndex }) {
   return (
-    <div
-      className={styles.power}
-      onClick={setActiveLevelIndex.bind(this, index)}
-      style={{ backgroundColor: isActive ? 'green' : 'grey' }}
-    >
-      <p>({level})</p>
+    <div className={styles.powerContainer}>
+      <div
+        className={styles.power}
+        onClick={setActiveLevelIndex.bind(this, index)}
+        style={{ backgroundColor: isActive ? 'green' : 'grey' }}
+      >
+        <p>({level})</p>
+      </div>
     </div>
   );
 }
