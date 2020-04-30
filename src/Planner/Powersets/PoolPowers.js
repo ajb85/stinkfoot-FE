@@ -2,12 +2,12 @@ import React from 'react';
 
 import Powerset from './Powerset.js';
 
-// import styles from './styles.module.scss';
+import styles from './styles.module.scss';
 
 function PoolPowers({ stateManager }) {
   const { build } = stateManager;
   return (
-    <div>
+    <div className={styles.PoolPowers}>
       <h2>Power Pools</h2>
       {build.poolPowers.map((poolIndex) => {
         return (
