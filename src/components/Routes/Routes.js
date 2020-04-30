@@ -4,6 +4,7 @@ import Import from 'components/Import/';
 import BuildList from 'components/BuildList/';
 import Planner from 'Planner/';
 
+import DDProvider from 'Providers/DropdownTracking.js';
 import { BuildContext } from 'Providers/Builds.js';
 
 function Routes(props) {
@@ -11,7 +12,9 @@ function Routes(props) {
   return (
     <Switch>
       <Route path="/planner">
-        <Planner />
+        <DDProvider>
+          <Planner />
+        </DDProvider>
       </Route>
       <Route path="/shopper">
         {Object.keys(build).length ? <BuildList /> : <Import />}
