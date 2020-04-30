@@ -7,6 +7,7 @@ function PowerSlots({ stateManager }) {
     build,
     setActiveLevelIndex,
     togglePowerSlot,
+    addSlot,
     removeSlot,
     getPower,
   } = stateManager;
@@ -39,6 +40,7 @@ function PowerSlots({ stateManager }) {
     },
     { selected: [], defaults: [] }
   );
+
   return (
     <div className={styles.Powers}>
       {selected.map((column, columnNumber) => (
@@ -47,6 +49,8 @@ function PowerSlots({ stateManager }) {
             const { level, power, enhSlots, originalIndex } = powerSlot;
             const isActive = stateManager.activeLevel === level;
             const isEmpty = !powerSlot.power;
+            const isToggled = build.powerSlotIndex === originalIndex;
+
             const p = power ? getPower(power) : {};
             return (
               <Fragment key={originalIndex}>
@@ -65,7 +69,7 @@ function PowerSlots({ stateManager }) {
                   >
                     <div
                       className={`${styles.power} ${
-                        build.powerSlotIndex === originalIndex && styles.active
+                        isToggled && styles.toggled
                       }`}
                       style={{
                         backgroundColor: '#1b4ea8',
@@ -73,7 +77,7 @@ function PowerSlots({ stateManager }) {
                       }}
                     >
                       <p className="pillText">
-                        ({level}) {p.displayName}
+                        ({level}) {p.displayName}{' '}
                       </p>
                       {
                         <div className={styles.enhancementsContainer}>
@@ -96,6 +100,9 @@ function PowerSlots({ stateManager }) {
                           })}
                         </div>
                       }
+                      {isToggled && (
+                        <p onClick={addSlot.bind(this, originalIndex)}>+</p>
+                      )}
                     </div>
                   </div>
                 )}
