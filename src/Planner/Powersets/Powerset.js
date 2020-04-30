@@ -8,6 +8,7 @@ function Powerset(props) {
   const { header, dropdown, powerList, stateManager, poolIndex } = props;
   const { updateBuild, build } = stateManager;
 
+  const isPoolPower = !isNaN(parseInt(poolIndex, 10));
   // This allows components to supply their own method to run
   // when a power is clicked
   const togglePower = props.togglePower || stateManager.togglePower;
@@ -29,7 +30,7 @@ function Powerset(props) {
   return (
     <div className={styles.powerset}>
       {header ? (
-        !isNaN(parseInt(poolIndex, 10)) ? (
+        isPoolPower ? (
           <h3 onClick={stateManager.removePool.bind(this, poolIndex)}>
             {header}
           </h3>
