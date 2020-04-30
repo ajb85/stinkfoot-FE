@@ -6,7 +6,7 @@ import origins from 'data/origins.js';
 import styles from './styles.module.scss';
 
 function CharacterInfo({ stateManager }) {
-  const { build, updateBuild, toggleAlignment } = stateManager;
+  const { build, updateBuild } = stateManager;
   return (
     <section className={styles.CharacterInfo}>
       <div>
