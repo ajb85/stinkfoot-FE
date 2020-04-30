@@ -105,7 +105,6 @@ export default class BuildManager {
   };
 
   updateBuild = (e) => {
-    console.log('Running update for: ', e.target.name, e.target.value);
     const specialCases = {
       archetype: true,
       primaryIndex: true,
