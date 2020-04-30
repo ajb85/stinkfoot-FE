@@ -22,6 +22,7 @@ export default class BuildManager {
       poolPowerIndex: 0,
       epicPoolIndex: 0,
       powerSlots: powerSlotsTemplate,
+      powerSlotIndex: 2,
       poolPowers: [],
       enhancementSlots,
       activeLevelIndex: 0,
@@ -30,20 +31,16 @@ export default class BuildManager {
     };
   }
 
-  get activePrimary() {
-    return powersets[this.build.archetype].primaries[this.build.primaryIndex];
-  }
-
   get primaries() {
     return powersets[this.build.archetype].primaries;
   }
 
-  get secondaries() {
-    return powersets[this.build.archetype].secondaries;
+  get activePrimary() {
+    return powersets[this.build.archetype].primaries[this.build.primaryIndex];
   }
 
-  get pools() {
-    return poolPowers;
+  get secondaries() {
+    return powersets[this.build.archetype].secondaries;
   }
 
   get activeSecondary() {
@@ -52,8 +49,20 @@ export default class BuildManager {
     ];
   }
 
+  get pools() {
+    return poolPowers;
+  }
+
   get activePool() {
     return poolPowers[this.build.poolPowerIndex];
+  }
+
+  get epicPools() {
+    return epicPools[this.build.archetype];
+  }
+
+  get activeEpicPool() {
+    return epicPools[this.build.archetype][this.build.epicPoolIndex];
   }
 
   get selectedPoolLookup() {
@@ -65,14 +74,6 @@ export default class BuildManager {
 
   get activeLevel() {
     return this.build.powerSlots[this.build.activeLevelIndex].level;
-  }
-
-  get epicPools() {
-    return epicPools[this.build.archetype];
-  }
-
-  get activeEpicPool() {
-    return epicPools[this.build.archetype][this.build.epicPoolIndex];
   }
 
   getPower = (power) => {
@@ -313,6 +314,12 @@ export default class BuildManager {
     });
   };
 
+  togglePowerSlot = (psIndex) =>
+    this.setBuild({
+      ...this.build,
+      powerSlotIndex: this.build.powerSlotIndex === psIndex ? null : psIndex,
+    });
+
   _assignPowerSlotIndex = (powersLevel) => {
     if (powersLevel <= this.activeLevel) {
       // If the user selects a skill that fits into the active slot,
@@ -483,9 +490,9 @@ export default class BuildManager {
       case 'secondaryIndex':
       case 'epicPoolIndex':
         const archetypeOrder = name.substring(0, name.length - 5);
-        const activeSet = this[
-          `active${archetypeOrder[0].toUpperCase + archetypeOrder.substring(1)}`
-        ];
+        const aoCapital =
+          archetypeOrder[0].toUpperCase() + archetypeOrder.substring(1);
+        const activeSet = this[`active${aoCapital}`];
         const powersToRemove = this.build.powerSlots.reduce(
           (acc, powerSlot) => {
             if (powerSlot.power) {
