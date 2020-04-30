@@ -1,5 +1,6 @@
 import powersets from 'data/powersets.js';
 import poolPowers from 'data/poolPowers.js';
+import epicPools from 'data/epicPools.js';
 import origins from 'data/origins.js';
 import powerSlotsTemplate from 'data/powerSlotsTemplate.js';
 import enhancementSlots from 'data/enhancementSlots.js';
@@ -19,6 +20,7 @@ export default class BuildManager {
       primaryIndex: 0,
       secondaryIndex: 0,
       poolPowerIndex: 0,
+      epicPoolIndex: 0,
       powerSlots: powerSlotsTemplate,
       poolPowers: [],
       enhancementSlots,
@@ -65,6 +67,14 @@ export default class BuildManager {
     return this.build.powerSlots[this.build.activeLevelIndex].level;
   }
 
+  get epicPools() {
+    return epicPools[this.build.archetype];
+  }
+
+  get activeEpicPool() {
+    return epicPools[this.build.archetype][this.build.epicPoolIndex];
+  }
+
   getPower = (power) => {
     if (!power) {
       return null;
@@ -74,18 +84,19 @@ export default class BuildManager {
       console.log('MISSING DATA: ', archetypeOrder, powerIndex);
       return null;
     }
-    const pluralOrder = this._pluralizeOrder(archetypeOrder);
-    const powersetIndex = this.build[`${archetypeOrder}Index`];
-
     const setOfPowers = {
-      primaries:
-        powersets[this.build.archetype].primaries[powersetIndex].powers,
-      secondaries:
-        powersets[this.build.archetype].secondaries[powersetIndex].powers,
-      poolPowers: poolPowers[poolIndex || 0].powers,
+      primary:
+        powersets[this.build.archetype].primaries[this.build.primaryIndex]
+          .powers,
+      secondary:
+        powersets[this.build.archetype].secondaries[this.build.secondaryIndex]
+          .powers,
+      poolPower: poolPowers[poolIndex || 0].powers,
+      epicPool:
+        epicPools[this.build.archetype][this.build.epicPoolIndex].powers,
     };
 
-    return setOfPowers[pluralOrder][powerIndex];
+    return setOfPowers[archetypeOrder][powerIndex];
   };
 
   updateBuild = (e) => {
@@ -94,6 +105,7 @@ export default class BuildManager {
       primaryIndex: true,
       secondaryIndex: true,
       poolPower: true,
+      epicPoolIndex: true,
     };
 
     const { name, value } = e.target;
@@ -469,18 +481,16 @@ export default class BuildManager {
         };
       case 'primaryIndex':
       case 'secondaryIndex':
-        const archetypeOrder =
-          name === 'primaryIndex' ? 'primary' : 'secondary';
-        const archetypeSection = this._pluralizeOrder(archetypeOrder);
+      case 'epicPoolIndex':
+        const archetypeOrder = name.substring(0, name.length - 5);
+        const activeSet = this[
+          `active${archetypeOrder[0].toUpperCase + archetypeOrder.substring(1)}`
+        ];
         const powersToRemove = this.build.powerSlots.reduce(
           (acc, powerSlot) => {
             if (powerSlot.power) {
               if (powerSlot.power.archetypeOrder === archetypeOrder) {
-                acc.push(
-                  powersets[this.build.archetype][archetypeSection][
-                    this.build[`${[archetypeOrder]}Index`]
-                  ].powers[powerSlot.power.powerIndex]
-                );
+                acc.push(activeSet.powers[powerSlot.power.powerIndex]);
               }
             }
             return acc;
@@ -506,6 +516,7 @@ export default class BuildManager {
       primary: 'primaries',
       secondary: 'secondaries',
       poolPower: 'poolPowers',
+      epicPower: 'epicPowers',
     };
 
     return toPlural[order] || order;
