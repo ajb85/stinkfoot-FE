@@ -46,11 +46,11 @@ function CharacterInfo({ stateManager }) {
           onChange={(e) => updateBuild(e)}
         />
       </div>
-      <div>
+      {/* <div>
         <button type="text" onClick={toggleAlignment}>
           {build.alignment}
         </button>
-      </div>
+      </div> */}
     </section>
   );
 }
