@@ -1,41 +1,43 @@
 import React from 'react';
 
-import powersets from 'data/powersets.js';
+import Dropdown from 'Planner/UI/Dropdown/';
+
 import origins from 'data/origins.js';
 
 import styles from './styles.module.scss';
 
 function CharacterInfo({ stateManager }) {
-  const { build, updateBuild } = stateManager;
+  const { build, updateBuild, archetypes } = stateManager;
+  const atImages = require.context('Planner/images/archetypes', true);
+  const oImages = require.context('Planner/images/origins', true);
+  const atOptions = archetypes.map((a) => ({
+    value: a,
+    display: a,
+    image: atImages('./' + a.split(' ').join('_') + '.png'),
+  }));
   return (
     <section className={styles.CharacterInfo}>
       <div>
         <label>Archetype</label>
-        <select
-          value={build.archetype}
+        <Dropdown
+          selected={build.archetype}
           name="archetype"
           onChange={(e) => updateBuild(e)}
-        >
-          {Object.keys(powersets).map((a) => (
-            <option key={a} value={a}>
-              {a}
-            </option>
-          ))}
-        </select>
+          options={atOptions}
+        />
       </div>
       <div>
         <label>Origin</label>
-        <select
-          value={build.origin}
+        <Dropdown
+          selected={build.origin}
           name="origin"
           onChange={(e) => updateBuild(e)}
-        >
-          {origins.map((o) => (
-            <option key={o.name} value={o.name}>
-              {o.name}
-            </option>
-          ))}
-        </select>
+          options={origins.map(({ name }) => ({
+            value: name,
+            display: name,
+            image: oImages(`./${name}.png`),
+          }))}
+        />
       </div>{' '}
       <div>
         <label>Name</label>
