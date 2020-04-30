@@ -4,12 +4,14 @@ div.Powers {
   width: 70%;
   display: flex;
   flex-wrap: wrap;
+  padding-top: $lh/2;
 
   .powerContainer {
     width: 190px;
-    height: 1.75 * $lh;
+    height: 1.5 * $lh;
     position: relative;
     // overflow: hidden;
+    margin: 0 $lh 1.5 * $lh;
   }
 
   .power {
@@ -20,10 +22,11 @@ div.Powers {
     border-radius: 20px;
     position: absolute;
     cursor: pointer;
+    // overflow: hidden;
 
-    transition: height 0.25s, border-radius 0.5s;
+    transition: height 0.25s, border-radius 0.25s;
 
-    &.active {
+    &.toggled {
       cursor: default;
       height: 12 * $lh;
       border-radius: 0;
@@ -68,11 +71,11 @@ div.Powers {
     }
   }
 
-  .powerContainer:first-of-type {
-    margin: $lh/2 $lh $lh;
-  }
+  // .powerContainer:first-of-type {
+  //   margin: $lh/2 $lh $lh;
+  // }
 
-  .powerContainer + .powerContainer {
-    margin: $lh;
-  }
+  // .powerContainer + .powerContainer {
+  //   margin: $lh;
+  // }
 }
