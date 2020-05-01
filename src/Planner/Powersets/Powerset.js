@@ -1,6 +1,7 @@
 import React from 'react';
 
 import arePowerRequirementsMet from 'js/arePowerRequirementsMet.js';
+import Dropdown from 'Planner/UI/Dropdown/';
 
 import styles from './styles.module.scss';
 
@@ -13,22 +14,28 @@ function Powerset(props) {
   // when a power is clicked
   const togglePower = props.togglePower || stateManager.togglePower;
 
+  const images = require.context('Planner/images/powersets', true);
+
   const renderDropdown = () => {
     const { list, name } = dropdown;
     const index = build[name];
     return (
-      <select value={index} name={name} onChange={(e) => updateBuild(e)}>
-        {filterDropdownList(stateManager, list).map((p) => (
-          <option key={p.fullName} value={p.originalIndex}>
-            {p.displayName}
-          </option>
-        ))}
-      </select>
+      <Dropdown
+        selected={index}
+        name={name}
+        width={150 + 20}
+        options={filterDropdownList(stateManager, list).map((p) => ({
+          value: p.originalIndex,
+          display: p.displayName,
+          image: images(`./${p.imageName}`),
+        }))}
+        onChange={(e) => updateBuild(e)}
+      />
     );
   };
 
   return (
-    <div className={styles.powerset}>
+    <div className={styles.Powerset}>
       {header ? (
         isPoolPower ? (
           <h3 onClick={stateManager.removePool.bind(this, poolIndex)}>
