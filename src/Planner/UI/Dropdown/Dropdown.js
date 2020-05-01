@@ -21,7 +21,7 @@ function Dropdown(props) {
     return (
       <>
         {item.image && <img src={item.image} alt={item.alt || item.value} />}
-        <p>{item.value}</p>
+        <p>{item.display || item.value}</p>
       </>
     );
   };
@@ -35,9 +35,9 @@ function Dropdown(props) {
         <div style={{ position: 'relative', zIndex: 1000 }}>
           <div className={styles.options}>
             {props.options
-              .filter(
-                ({ value }) => props.showSelected || value !== selected.value
-              )
+              //   .filter(
+              //     ({ value }) => props.showSelected || value !== selected.value
+              //   )
               .map((item) => (
                 <div
                   onClick={(e) => {
@@ -45,7 +45,7 @@ function Dropdown(props) {
                     e.target.value = item.value;
                     props.onChange(e);
                   }}
-                  key={item.value}
+                  key={item.key || item.value}
                   className={styles.option}
                   style={{ width: props.width || 150 }}
                 >
