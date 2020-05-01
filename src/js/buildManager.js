@@ -22,7 +22,7 @@ export default class BuildManager {
       poolPowerIndex: 0,
       epicPoolIndex: 0,
       powerSlots: powerSlotsTemplate,
-      powerSlotIndex: 2,
+      powerSlotIndex: null,
       poolPowers: [],
       enhancementSlots,
       activeLevelIndex: 0,
