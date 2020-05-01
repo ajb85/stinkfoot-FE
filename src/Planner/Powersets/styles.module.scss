@@ -1,9 +1,9 @@
 @import 'styles/variables.scss';
 
 section.Powersets {
-  min-width: 150px + $lh;
-  max-width: 300px + 2 * $lh;
-  width: 30%;
+  min-width: 170px + $lh;
+  max-width: 3 * (170 + $lh);
+  width: 56%;
 
   & > div:first-of-type {
     // Powerset selection
@@ -23,7 +23,7 @@ section.Powersets {
     }
   }
 
-  .powerset {
+  .Powerset {
     margin: $lh/2 $lh/2;
     width: fit-content;
 
@@ -45,6 +45,7 @@ section.Powersets {
 
   .powersList {
     margin-top: $lh/2;
+    min-width: 170px; //+ $lh;
     p {
       line-height: $lh;
       min-height: $lh;
@@ -55,6 +56,7 @@ section.Powersets {
 }
 
 .PoolPowers {
+  min-height: 31 * $lh;
   & > h2 {
     margin-top: $lh/2;
   }
