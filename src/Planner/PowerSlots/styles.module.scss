@@ -69,13 +69,27 @@ div.Powers {
     .enhancementBubble + .enhancementBubble {
       margin-left: 2px;
     }
+
+    .addEnhancements {
+      display: flex;
+      flex-direction: column;
+
+      .enhancementList {
+        display: flex;
+        flex-wrap: wrap;
+
+        .enhancementImage {
+          position: relative;
+          height: 1.5 * $lh;
+          width: 1.5 * $lh;
+          margin: $lh/2 3px;
+          cursor: pointer;
+
+          img {
+            position: absolute;
+          }
+        }
+      }
+    }
   }
-
-  // .powerContainer:first-of-type {
-  //   margin: $lh/2 $lh $lh;
-  // }
-
-  // .powerContainer + .powerContainer {
-  //   margin: $lh;
-  // }
 }

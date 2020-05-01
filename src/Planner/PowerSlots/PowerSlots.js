@@ -50,8 +50,14 @@ function PowerSlots({ stateManager }) {
             const isActive = stateManager.activeLevel === level;
             const isEmpty = !powerSlot.power;
             const isToggled = build.powerSlotIndex === originalIndex;
-
             const p = power ? getPower(power) : {};
+
+            const enhImages = require.context(
+              'Planner/images/enhancements',
+              true
+            );
+
+            const enhOverlay = require.context('Planner/images/overlays', true);
             return (
               <Fragment key={originalIndex}>
                 {isEmpty ? (
@@ -77,31 +83,48 @@ function PowerSlots({ stateManager }) {
                       }}
                     >
                       <p className="pillText">
-                        ({level}) {p.displayName}{' '}
+                        ({level}) {p.displayName}
                       </p>
-                      {
-                        <div className={styles.enhancementsContainer}>
-                          {enhSlots.map(({ slotLevel, setName, name }, j) => {
-                            const displayLevel =
-                              slotLevel === null ? level : slotLevel;
-                            return (
-                              <div
-                                key={`${originalIndex} ${j}`}
-                                onClick={removeSlot.bind(
-                                  this,
-                                  originalIndex,
-                                  j
-                                )}
-                                className={styles.enhancementBubble}
-                              >
-                                <p>{displayLevel}</p>
-                              </div>
-                            );
-                          })}
-                        </div>
-                      }
+
+                      <div className={styles.enhancementsContainer}>
+                        {enhSlots.map(({ slotLevel, setName, name }, j) => {
+                          const displayLevel =
+                            slotLevel === null ? level : slotLevel;
+                          return (
+                            <div
+                              key={`${originalIndex} ${j}`}
+                              onClick={removeSlot.bind(this, originalIndex, j)}
+                              className={styles.enhancementBubble}
+                            >
+                              <p>{displayLevel}</p>
+                            </div>
+                          );
+                        })}
+                      </div>
+
                       {isToggled && (
-                        <p onClick={addSlot.bind(this, originalIndex)}>+</p>
+                        <div className={styles.addEnhancements}>
+                          <p onClick={addSlot.bind(this, originalIndex)}>+</p>
+                          <div className={styles.enhancementList}>
+                            {p &&
+                              p.allowedEnhancements &&
+                              p.allowedEnhancements.map((enhName) => (
+                                <div
+                                  key={enhName}
+                                  className={styles.enhancementImage}
+                                >
+                                  <img
+                                    src={enhOverlay(`./IO.png`)}
+                                    alt={enhName}
+                                  />
+                                  <img
+                                    src={enhImages(`./${enhName}.png`)}
+                                    alt={enhName}
+                                  />
+                                </div>
+                              ))}
+                          </div>
+                        </div>
                       )}
                     </div>
                   </div>
