@@ -28,16 +28,18 @@ function Powersets({ stateManager }) {
             powerList={stateManager.activeSecondary.powers}
             stateManager={stateManager}
           />
-          <PoolPowers stateManager={stateManager} />
-          <Powerset
-            header="Epic Pool"
-            dropdown={{
-              name: 'epicPoolIndex',
-              list: stateManager.epicPools,
-            }}
-            powerList={stateManager.activeEpicPool.powers}
-            stateManager={stateManager}
-          />
+          <div style={{ display: 'flex', flexDirection: 'column' }}>
+            <Powerset
+              header="Epic Pool"
+              dropdown={{
+                name: 'epicPoolIndex',
+                list: stateManager.epicPools,
+              }}
+              powerList={stateManager.activeEpicPool.powers}
+              stateManager={stateManager}
+            />
+            <PoolPowers stateManager={stateManager} />
+          </div>
         </div>
       </div>
     </section>
