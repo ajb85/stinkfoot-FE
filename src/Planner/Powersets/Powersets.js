@@ -3,9 +3,12 @@ import React from 'react';
 import Powerset from './Powerset.js';
 import PoolPowers from './PoolPowers.js';
 
+import { PlannerContext } from 'Providers/PlannerStateManagement.js';
+
 import styles from './styles.module.scss';
 
-function Powersets({ stateManager }) {
+function Powersets(props) {
+  const stateManager = React.useContext(PlannerContext);
   return (
     <section className={styles.Powersets}>
       <div>
@@ -17,7 +20,7 @@ function Powersets({ stateManager }) {
               list: stateManager.primaries,
             }}
             powerList={stateManager.activePrimary.powers}
-            stateManager={stateManager}
+            updateBuild={stateManager.updateTracking}
           />
           <Powerset
             header="Secondary"
@@ -26,7 +29,7 @@ function Powersets({ stateManager }) {
               list: stateManager.secondaries,
             }}
             powerList={stateManager.activeSecondary.powers}
-            stateManager={stateManager}
+            updateBuild={stateManager.updateTracking}
           />
           <div style={{ display: 'flex', flexDirection: 'column' }}>
             <Powerset
@@ -36,9 +39,9 @@ function Powersets({ stateManager }) {
                 list: stateManager.epicPools,
               }}
               powerList={stateManager.activeEpicPool.powers}
-              stateManager={stateManager}
+              updateBuild={stateManager.updateTracking}
             />
-            <PoolPowers stateManager={stateManager} />
+            <PoolPowers />
           </div>
         </div>
       </div>

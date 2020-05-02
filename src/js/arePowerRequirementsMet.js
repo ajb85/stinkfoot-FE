@@ -1,5 +1,5 @@
 export default function (stateManager, power) {
-  const { powerSlots, powerLookup, activeLevelIndex } = stateManager.build;
+  const { powerSlots } = stateManager.build;
   const {
     requires: { powers, count },
   } = power;
@@ -10,9 +10,9 @@ export default function (stateManager, power) {
 
   let countedPowers = 0;
 
-  const length = stateManager.doesBuildHavePower(power)
-    ? powerLookup[power.fullName]
-    : activeLevelIndex;
+  const length = stateManager.buildHasPower(power)
+    ? stateManager.getPowerSlotIndexByPowerName(power.fullName)
+    : stateManager.getFromState('activeLevelIndex');
 
   for (let i = 0; i <= length; i++) {
     const powerSlot = powerSlots[i];

@@ -2,7 +2,7 @@ import React, { useState, useEffect, createContext } from 'react';
 
 export const DBContext = createContext();
 
-function Database(props) {
+function DatabaseProvider(props) {
   const [db, setDB] = useState(null);
 
   useEffect(() => {
@@ -37,4 +37,4 @@ function Database(props) {
   return <Provider value={db}>{props.children}</Provider>;
 }
 
-export default Database;
+export default DatabaseProvider;

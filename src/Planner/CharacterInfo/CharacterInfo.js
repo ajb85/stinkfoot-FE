@@ -2,25 +2,24 @@ import React from 'react';
 
 import Dropdown from 'Planner/UI/Dropdown/';
 
-import origins from 'data/origins.js';
-
+import { PlannerContext } from 'Providers/PlannerStateManagement.js';
 import styles from './styles.module.scss';
 
-function CharacterInfo({ stateManager }) {
-  const { build, updateBuild, archetypes } = stateManager;
-  const atImages = require.context('Planner/images/archetypes', true);
-  const oImages = require.context('Planner/images/origins', true);
+function CharacterInfo(props) {
+  const stateManager = React.useContext(PlannerContext);
+
+  const { updateBuild, archetypes } = stateManager;
   const atOptions = archetypes.map((a) => ({
     value: a,
     display: a,
-    image: atImages('./' + a.split(' ').join('_') + '.png'),
+    image: stateManager.getArchetypeImage(a),
   }));
   return (
     <section className={styles.CharacterInfo}>
       <div>
         <label>Archetype</label>
         <Dropdown
-          selected={build.archetype}
+          selected={stateManager.archetype}
           name="archetype"
           onChange={(e) => updateBuild(e)}
           options={atOptions}
@@ -29,13 +28,13 @@ function CharacterInfo({ stateManager }) {
       <div>
         <label>Origin</label>
         <Dropdown
-          selected={build.origin}
+          selected={stateManager.origin}
           name="origin"
           onChange={(e) => updateBuild(e)}
-          options={origins.map(({ name }) => ({
+          options={stateManager.origins.map(({ name }) => ({
             value: name,
             display: name,
-            image: oImages(`./${name}.png`),
+            image: stateManager.getOriginImage(name),
           }))}
         />
       </div>{' '}
@@ -43,7 +42,7 @@ function CharacterInfo({ stateManager }) {
         <label>Name</label>
         <input
           type="text"
-          value={build.name}
+          value={stateManager.buildName}
           name="name"
           onChange={(e) => updateBuild(e)}
         />

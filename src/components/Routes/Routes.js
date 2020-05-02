@@ -5,6 +5,8 @@ import BuildList from 'components/BuildList/';
 import Planner from 'Planner/';
 
 import DDProvider from 'Providers/DropdownTracking.js';
+import StateMgmtProvider from 'Providers/PlannerStateManagement.js';
+
 import { BuildContext } from 'Providers/Builds.js';
 
 function Routes(props) {
@@ -13,7 +15,9 @@ function Routes(props) {
     <Switch>
       <Route path="/planner">
         <DDProvider>
-          <Planner />
+          <StateMgmtProvider>
+            <Planner />
+          </StateMgmtProvider>
         </DDProvider>
       </Route>
       <Route path="/shopper">

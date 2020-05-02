@@ -2,23 +2,27 @@ import React from 'react';
 
 import arePowerRequirementsMet from 'js/arePowerRequirementsMet.js';
 import Dropdown from 'Planner/UI/Dropdown/';
+import { PlannerContext } from 'Providers/PlannerStateManagement.js';
 
 import styles from './styles.module.scss';
 
 function Powerset(props) {
-  const { header, dropdown, powerList, stateManager, poolIndex } = props;
-  const { updateBuild, build } = stateManager;
+  const stateManager = React.useContext(PlannerContext);
+
+  const { header, dropdown, powerList, poolIndex } = props;
 
   const isPoolPower = !isNaN(parseInt(poolIndex, 10));
-  // This allows components to supply their own method to run
-  // when a power is clicked
+
+  // This allows components to supply their own methods to run when
+  // clicking a power or changing dropdown selection.
   const togglePower = props.togglePower || stateManager.togglePower;
+  const updateBuild = props.updateBuild || stateManager.updateBuild;
 
   const images = require.context('Planner/images/powersets', true);
 
   const renderDropdown = () => {
     const { list, name } = dropdown;
-    const index = build[name];
+    const index = stateManager.getFromState(name);
     return (
       <Dropdown
         selected={index}
@@ -64,13 +68,17 @@ function Powerset(props) {
 }
 
 function getPowerColor(stateManager, p) {
-  const { build } = stateManager;
+  const { buildHasPower } = stateManager;
   const isPoolPower =
     p.archetypeOrder === 'poolPower' || p.archetypeOrder === 'epicPool';
-  const isUsedPower = build.powerLookup.hasOwnProperty(p.fullName);
+  const isPowerInUse = buildHasPower(p.fullName);
   const areReqsMet = arePowerRequirementsMet(stateManager, p);
 
-  return isUsedPower
+  if (p.displayName === 'Tough') {
+    console.log('MET: ', p, isPowerInUse, areReqsMet);
+  }
+
+  return isPowerInUse
     ? areReqsMet
       ? 'lightgreen'
       : 'red'
@@ -84,20 +92,14 @@ function getPowerColor(stateManager, p) {
 }
 
 function filterDropdownList(stateManager, list) {
-  const {
-    build: { excludedPowersets },
-    selectedPoolLookup,
-  } = stateManager;
+  const { poolCanBeAdded } = stateManager;
 
   return list
     .map((l, i) => {
       l.originalIndex = i;
       return l;
     })
-    .filter(
-      ({ fullName }) =>
-        !excludedPowersets[fullName] && !selectedPoolLookup[fullName]
-    );
+    .filter(({ fullName }) => poolCanBeAdded(fullName));
 }
 
 export default Powerset;
