@@ -22,7 +22,7 @@ div.Powers {
     border-radius: 20px;
     position: absolute;
     cursor: pointer;
-    // overflow: hidden;
+    overflow: hidden;
 
     transition: height 0.25s, border-radius 0.25s;
 
@@ -34,14 +34,34 @@ div.Powers {
 
     & > p {
       font-size: 12px;
-      margin: 3px $lh/2;
+      margin: 3px $lh/2 2 * $lh;
       cursor: pointer;
     }
 
-    .enhancementsContainer {
+    .selectEnhancements {
       display: flex;
-    }
+      flex-direction: column;
 
+      .enhPreviewList {
+        display: flex;
+        flex-wrap: wrap;
+
+        .enhPreview {
+          margin: $lh/2 1px;
+        }
+      }
+    }
+  }
+
+  .enhancementsContainer {
+    display: flex;
+
+    position: relative;
+    top: 1.25 * $lh;
+  }
+
+  .enhancementSlot {
+    margin: 0 1px;
     .enhancementBubble {
       width: 1.5 * $lh;
       height: 1.5 * $lh;
@@ -51,45 +71,40 @@ div.Powers {
 
       position: relative;
       z-index: 1;
-      left: 5px;
-
-      p {
-        position: absolute;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        margin: auto;
-        width: fit-content;
-
-        font-size: 8px;
-        color: $secondary;
-      }
+      left: 8px;
     }
 
     .enhancementBubble + .enhancementBubble {
       margin-left: 2px;
     }
 
-    .addEnhancements {
-      display: flex;
-      flex-direction: column;
+    p {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      width: fit-content;
 
-      .enhancementList {
-        display: flex;
-        flex-wrap: wrap;
-
-        .enhancementImage {
-          position: relative;
-          height: 1.5 * $lh;
-          width: 1.5 * $lh;
-          margin: $lh/2 3px;
-          cursor: pointer;
-
-          img {
-            position: absolute;
-          }
-        }
-      }
+      font-size: 8px;
+      color: $secondary;
     }
+  }
+}
+
+.enhancementImage {
+  position: relative;
+  cursor: pointer;
+  height: 1.5 * $lh;
+  width: 1.5 * $lh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    height: 1.5 * $lh;
+    width: 1.5 * $lh;
+    position: absolute;
   }
 }
