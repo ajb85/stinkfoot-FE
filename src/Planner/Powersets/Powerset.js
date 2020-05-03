@@ -18,8 +18,6 @@ function Powerset(props) {
   const togglePower = props.togglePower || stateManager.togglePower;
   const updateBuild = props.updateBuild || stateManager.updateBuild;
 
-  const images = require.context('Planner/images/powersets', true);
-
   const renderDropdown = () => {
     const { list, name } = dropdown;
     const index = stateManager.getFromState(name);
@@ -31,7 +29,7 @@ function Powerset(props) {
         options={filterDropdownList(stateManager, list).map((p) => ({
           value: p.originalIndex,
           display: p.displayName,
-          image: images(`./${p.imageName}`),
+          image: stateManager.getPowersetImage(p.imageName),
         }))}
         onChange={(e) => updateBuild(e)}
       />
