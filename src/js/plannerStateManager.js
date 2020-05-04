@@ -429,7 +429,7 @@ export default class BuildManager {
         },
         lookup: {
           ...newState.lookup,
-          excludedPowerSets: this._excludePowersetsReturnExcluded(
+          excludedPowersets: this._excludePowersetsReturnExcluded(
             pool.prevents,
             pool.displayName
           ),
@@ -463,7 +463,7 @@ export default class BuildManager {
     newState.build.poolPowers = this.state.build.poolPowers.filter(
       (index) => index !== poolIndexToRemove
     );
-    newState.lookup = this._removePoolPreventsFromExclusionReturnLookupState(
+    newState.lookup.excludedPowersets = this._removePoolPreventsFromExclusionReturnExcludedState(
       pool.prevents
     );
     this.setState(newState);
@@ -677,7 +677,7 @@ export default class BuildManager {
     return excludedPowersets;
   };
 
-  _removePoolPreventsFromExclusionReturnLookupState(prevents) {
+  _removePoolPreventsFromExclusionReturnExcludedState(prevents) {
     if (!prevents || !prevents.length) {
       return this.state.lookup;
     }
@@ -704,7 +704,7 @@ export default class BuildManager {
       });
     }
 
-    return { ...this.state.lookup, excludedPowersets };
+    return excludedPowersets;
   }
 
   _addPowerSlotReturnSlotAndEnhState = (powerSlotIndex) => {
