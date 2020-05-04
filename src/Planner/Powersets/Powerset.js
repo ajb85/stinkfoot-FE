@@ -38,6 +38,7 @@ function Powerset(props) {
       </div>
     );
   };
+
   return (
     <div className={styles.Powerset}>
       {header ? (

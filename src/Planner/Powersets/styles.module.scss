@@ -5,15 +5,25 @@ section.Powersets {
   max-width: 3 * (170 + $lh);
   width: 56%;
 
+  @media #{$desktop} {
+    width: 100%;
+  }
+
   div.powersetContainer {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     margin-bottom: $lh;
 
     h2 {
       text-align: center;
       line-height: $lh;
-      margin-bottom: $lh/2;
+      width: 100%;
+      // margin-bottom: $lh/2;
+    }
+
+    & > div {
+      display: flex;
+      flex-wrap: wrap;
     }
   }
 
