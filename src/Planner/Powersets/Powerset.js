@@ -80,10 +80,6 @@ function getPowerColor(stateManager, p) {
   const isPowerInUse = buildHasPower(p.fullName);
   const areReqsMet = arePowerRequirementsMet(stateManager, p);
 
-  if (p.displayName === 'Tough') {
-    console.log('MET: ', p, isPowerInUse, areReqsMet);
-  }
-
   return isPowerInUse
     ? areReqsMet
       ? 'lightgreen'
