@@ -31,6 +31,7 @@ function PoolPowers(props) {
           }}
           powerList={stateManager.activePool.powers}
           togglePower={stateManager.addPowerFromNewPool}
+          updateBuild={stateManager.updateTracking}
         />
       )}
     </div>
