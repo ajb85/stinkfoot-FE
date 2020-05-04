@@ -38,27 +38,28 @@ function PowerSlots(props) {
 
   return (
     <div className={styles.Powers}>
-      {selected.map((column, columnNumber) => (
-        <div key={columnNumber} className={styles.column}>
-          {column.map((powerSlot) => {
-            const { originalIndex } = powerSlot;
-            const isEmpty = !powerSlot.power;
-
-            return (
-              <Fragment key={originalIndex}>
-                {isEmpty ? (
-                  <EmptyPowerSlot render={powerSlot} />
-                ) : (
-                  <PowerSlot
-                    render={powerSlot}
-                    selectionState={enhNavigation}
-                  />
-                )}
-              </Fragment>
-            );
-          })}
-        </div>
-      ))}
+      {selected.map((column, columnNumber) => {
+        return (
+          <div key={`Column ${columnNumber}`} className={styles.column}>
+            {column.map((powerSlot) => {
+              const { originalIndex } = powerSlot;
+              const isEmpty = !powerSlot.power;
+              return (
+                <Fragment key={`Fragment ${originalIndex}`}>
+                  {isEmpty ? (
+                    <EmptyPowerSlot render={powerSlot} />
+                  ) : (
+                    <PowerSlot
+                      render={powerSlot}
+                      selectionState={enhNavigation}
+                    />
+                  )}
+                </Fragment>
+              );
+            })}
+          </div>
+        );
+      })}
     </div>
   );
 }
@@ -67,9 +68,9 @@ function EmptyPowerSlot({ render }) {
   const stateManager = React.useContext(PlannerContext);
   const { level, originalIndex } = render;
   const isActive = stateManager.activeLevel === level;
-
+  const key = `empty ${originalIndex}`;
   return (
-    <div className={styles.powerContainer}>
+    <div key={key} className={styles.powerContainer}>
       <div
         className={styles.power}
         onClick={(e) => {
@@ -112,6 +113,7 @@ function PowerSlot({ render, selectionState }) {
     <div
       className={styles.powerContainer}
       onClick={(e) => handlePillClick(e, originalIndex)}
+      key={p.displayName}
     >
       <div
         className={`${styles.power} ${isToggled && styles.toggled}`}
@@ -172,10 +174,12 @@ function PowerSlot({ render, selectionState }) {
           <div className={styles.enhPreviewList}>
             {stateManager
               .getEnhancementSectionForPower(p, enhNavigation.section)
-              .map((enh) => (
-                <div className={styles.enhPreview}>
+              .map((enh, i) => (
+                <div
+                  className={styles.enhPreview}
+                  key={`${enh.fullName} @ ${i}`}
+                >
                   <div
-                    key={enh.fullName}
                     className={styles.enhancementImage}
                     onClick={stateManager.addEnhancement.bind(
                       this,
@@ -203,12 +207,12 @@ function PowerSlot({ render, selectionState }) {
           const images = enhancement
             ? stateManager.getEnhancementAndOverlayImages(enhancement)
             : null;
+
           return (
-            <>
+            <React.Fragment key={`${slotLevel} @ ${j}`}>
               {images ? (
                 <div
                   className={styles.enhancementSlot}
-                  key={enhancement.displayName}
                   onClick={stateManager.removeSlot.bind(this, originalIndex, j)}
                 >
                   <div
@@ -234,7 +238,7 @@ function PowerSlot({ render, selectionState }) {
                   </div>
                 </div>
               )}
-            </>
+            </React.Fragment>
           );
         })}
       </div>
