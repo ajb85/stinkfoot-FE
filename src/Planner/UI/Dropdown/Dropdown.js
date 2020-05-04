@@ -28,9 +28,7 @@ function Dropdown(props) {
 
   return (
     <div className={styles.Dropdown} data-name={props.name}>
-      <div className={styles.select} style={{ width: props.width || 150 }}>
-        {renderItem()}
-      </div>
+      <div className={styles.select}>{renderItem()}</div>
       {isToggled && (
         <div style={{ position: 'relative', zIndex: 1000 }}>
           <div className={styles.options}>
@@ -47,7 +45,6 @@ function Dropdown(props) {
                   }}
                   key={item.key || item.value}
                   className={styles.option}
-                  style={{ width: props.width || 150 }}
                 >
                   {renderItem(item)}
                 </div>

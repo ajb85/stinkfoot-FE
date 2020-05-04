@@ -9,7 +9,7 @@ import styles from './styles.module.scss';
 function Powerset(props) {
   const stateManager = React.useContext(PlannerContext);
 
-  const { header, dropdown, powerList, poolIndex } = props;
+  const { header, dropdown, powerList, poolIndex, compact } = props;
 
   const isPoolPower = !isNaN(parseInt(poolIndex, 10));
 
@@ -17,38 +17,46 @@ function Powerset(props) {
   // clicking a power or changing dropdown selection.
   const togglePower = props.togglePower || stateManager.togglePower;
   const updateBuild = props.updateBuild || stateManager.updateBuild;
+  const width = compact ? 123 : 170;
 
   const renderDropdown = () => {
     const { list, name } = dropdown;
     const index = stateManager.getFromState(name);
     return (
-      <Dropdown
-        selected={index}
-        name={name}
-        width={150 + 20}
-        options={filterDropdownList(stateManager, list).map((p) => ({
-          value: p.originalIndex,
-          display: p.displayName,
-          image: stateManager.getPowersetImage(p.imageName),
-        }))}
-        onChange={(e) => updateBuild(e)}
-      />
+      <div style={{ width }}>
+        <Dropdown
+          selected={index}
+          name={name}
+          width={150 + 20}
+          options={filterDropdownList(stateManager, list).map((p) => ({
+            value: p.originalIndex,
+            display: p.displayName,
+            image: stateManager.getPowersetImage(p.imageName),
+          }))}
+          onChange={(e) => updateBuild(e)}
+        />
+      </div>
     );
   };
-
   return (
     <div className={styles.Powerset}>
       {header ? (
         isPoolPower ? (
-          <h3 onClick={stateManager.removePool.bind(this, poolIndex)}>
+          <h3
+            style={{ width }}
+            onClick={stateManager.removePool.bind(this, poolIndex)}
+          >
             {header}
           </h3>
         ) : (
-          <h3>{header}</h3>
+          <h3 style={{ width }}>{header}</h3>
         )
       ) : null}
       {dropdown && renderDropdown()}
-      <div className={styles.powersList}>
+      <div
+        style={{ width, textAlign: compact ? 'center' : 'left' }}
+        className={styles.powersList}
+      >
         {powerList.map((p) => {
           return (
             <p

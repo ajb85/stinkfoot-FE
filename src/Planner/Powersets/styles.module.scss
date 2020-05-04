@@ -5,47 +5,30 @@ section.Powersets {
   max-width: 3 * (170 + $lh);
   width: 56%;
 
-  & > div:first-of-type {
-    // Powerset selection
+  div.powersetContainer {
     display: flex;
-    flex-direction: column;
-    width: fit-content;
+    flex-wrap: wrap;
 
     h2 {
       text-align: center;
       line-height: $lh;
       margin-bottom: $lh/2;
     }
-
-    div.powersetContainer {
-      display: flex;
-      flex-wrap: wrap;
-    }
   }
 
   .Powerset {
     margin: $lh/2 $lh/2;
-    width: fit-content;
 
     h3 {
       text-align: center;
       line-height: $lh;
       min-height: $lh;
-      min-width: 150px;
-      width: 100%;
       margin-bottom: $lh/2;
-    }
-
-    select {
-      height: $lh;
-      font-size: 11px;
-      width: 150px;
     }
   }
 
   .powersList {
     margin-top: $lh/2;
-    min-width: 170px; //+ $lh;
     p {
       line-height: $lh;
       min-height: $lh;
@@ -56,8 +39,21 @@ section.Powersets {
 }
 
 .PoolPowers {
-  min-height: 31 * $lh;
+  // min-height: 31 * $lh;
+  width: 100%;
+
   & > h2 {
     margin-top: $lh/2;
+  }
+
+  & > div {
+    display: flex;
+  }
+
+  .emptyBox {
+    min-width: 123px;
+    margin: $lh / 2;
+    border: 1px solid white;
+    border-radius: 20px;
   }
 }
