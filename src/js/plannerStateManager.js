@@ -816,6 +816,7 @@ export default class BuildManager {
         tracking: {
           ...this.state.tracking,
           activeLevelIndex: findLowestUnusedSlot(powerSlots),
+          powerSlotIndex: null,
         },
         // this.state.build.powerSlots[powerSlotIndex].level === this.state.build.activeLevel
         // ? findLowestUnusedSlot(powerSlots)
