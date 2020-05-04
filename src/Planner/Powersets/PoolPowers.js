@@ -16,7 +16,9 @@ function PoolPowers(props) {
       // the extra box to select a new pool to consider.  That means, when
       // there are three pools selected, no empty boxes should render
 
-      emptyBoxes.push(<div className={styles.emptyBox} />);
+      emptyBoxes.push(
+        <div key={`empty box ${i}`} className={styles.emptyBox} />
+      );
     }
 
     return emptyBoxes;
