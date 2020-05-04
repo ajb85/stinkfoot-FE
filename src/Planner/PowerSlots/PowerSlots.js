@@ -37,30 +37,33 @@ function PowerSlots(props) {
     );
 
   return (
-    <div className={styles.Powers}>
-      {selected.map((column, columnNumber) => {
-        return (
-          <div key={`Column ${columnNumber}`} className={styles.column}>
-            {column.map((powerSlot) => {
-              const { originalIndex } = powerSlot;
-              const isEmpty = !powerSlot.power;
-              return (
-                <Fragment key={`Fragment ${originalIndex}`}>
-                  {isEmpty ? (
-                    <EmptyPowerSlot render={powerSlot} />
-                  ) : (
-                    <PowerSlot
-                      render={powerSlot}
-                      selectionState={enhNavigation}
-                    />
-                  )}
-                </Fragment>
-              );
-            })}
-          </div>
-        );
-      })}
-    </div>
+    <section className={styles.PowerSlots}>
+      <h2>Power Slots</h2>
+      <div className={styles.slotsContainer}>
+        {selected.map((column, columnNumber) => {
+          return (
+            <div key={`Column ${columnNumber}`} className={styles.column}>
+              {column.map((powerSlot) => {
+                const { originalIndex } = powerSlot;
+                const isEmpty = !powerSlot.power;
+                return (
+                  <Fragment key={`Fragment ${originalIndex}`}>
+                    {isEmpty ? (
+                      <EmptyPowerSlot render={powerSlot} />
+                    ) : (
+                      <PowerSlot
+                        render={powerSlot}
+                        selectionState={enhNavigation}
+                      />
+                    )}
+                  </Fragment>
+                );
+              })}
+            </div>
+          );
+        })}
+      </div>
+    </section>
   );
 }
 

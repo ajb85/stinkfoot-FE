@@ -1,20 +1,33 @@
 @import 'styles/variables.scss';
 
-div.Powers {
+section.PowerSlots {
   width: 70%;
   max-width: 700px;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding-top: $lh/2;
+  flex-direction: column;
+  padding: 0 $lh/2;
+
+  @media #{$desktop} {
+    width: 100%;
+  }
+
+  h2 {
+    width: 100%;
+    text-align: center;
+  }
+
+  .slotsContainer {
+    margin-top: $lh/2;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 
   .powerContainer {
     width: 190px;
     height: 1.5 * $lh;
     position: relative;
-    // overflow: hidden;
     margin: 0 5px 1.5 * $lh;
-    // margin-bottom: 1.5 * $lh;
   }
 
   .power {

@@ -18,7 +18,7 @@ function CharacterInfo(props) {
     <section className={styles.CharacterInfo}>
       <div>
         <label>Archetype</label>
-        <div style={{ width: 170 }}>
+        <div style={{ width: 140 }}>
           <Dropdown
             selected={stateManager.archetype}
             name="archetype"
@@ -29,7 +29,7 @@ function CharacterInfo(props) {
       </div>
       <div>
         <label>Origin</label>
-        <div style={{ width: 170 }}>
+        <div style={{ width: 140 }}>
           <Dropdown
             selected={stateManager.origin}
             name="origin"
