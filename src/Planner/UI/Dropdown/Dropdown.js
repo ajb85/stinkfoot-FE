@@ -16,7 +16,6 @@ function Dropdown(props) {
   }, []);
 
   const isToggled = dropdowns[props.name];
-
   const renderItem = (item = selected) => {
     return (
       <>
@@ -32,23 +31,19 @@ function Dropdown(props) {
       {isToggled && (
         <div style={{ position: 'relative', zIndex: 1000 }}>
           <div className={styles.options}>
-            {props.options
-              //   .filter(
-              //     ({ value }) => props.showSelected || value !== selected.value
-              //   )
-              .map((item) => (
-                <div
-                  onClick={(e) => {
-                    e.target.name = props.name;
-                    e.target.value = item.value;
-                    props.onChange(e);
-                  }}
-                  key={item.key || item.value}
-                  className={styles.option}
-                >
-                  {renderItem(item)}
-                </div>
-              ))}
+            {props.options.map((item) => (
+              <div
+                onClick={(e) => {
+                  e.target.name = props.name;
+                  e.target.value = item.value;
+                  props.onChange(e);
+                }}
+                key={item.key || item.value}
+                className={styles.option}
+              >
+                {renderItem(item)}
+              </div>
+            ))}
           </div>
         </div>
       )}
