@@ -170,10 +170,12 @@ export default class BuildManager {
         const { imageName, ...enh } = { ...enhancements.standard[enhName] };
         if (!imageName) {
           console.log('MISSING DATA: ', enhName);
+          return acc;
+        } else {
+          enh.image = enhImages(`./${imageName}`);
+          acc.push(enh);
+          return acc;
         }
-        enh.image = enhImages(`./${imageName}`);
-        acc.push(enh);
-        return acc;
       }, []);
     }
   };
