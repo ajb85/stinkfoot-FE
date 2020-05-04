@@ -7,6 +7,7 @@ export const DDTrackingContext = createContext();
 const dropdownsMutate = {};
 function BuildProvider(props) {
   const [dropdowns, setDropdowns] = useState({});
+
   useEffect(() => {
     const toggleDropdown = (e) => {
       const name = searchNodeForDropdownDiv(e.target);
