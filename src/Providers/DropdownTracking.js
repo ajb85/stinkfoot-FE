@@ -4,17 +4,21 @@ import styles from 'Planner/UI/Dropdown/styles.module.scss';
 
 export const DDTrackingContext = createContext();
 
+const dropdownsMutate = {};
 function BuildProvider(props) {
   const [dropdowns, setDropdowns] = useState({});
-  const dropdownsMutate = {};
-
   useEffect(() => {
     const toggleDropdown = (e) => {
       const name = searchNodeForDropdownDiv(e.target);
 
       for (let n in dropdownsMutate) {
-        dropdownsMutate[n] = n === name ? !dropdownsMutate[name] : false;
+        if (n === name) {
+          updateMutate('toggle', n);
+        } else {
+          updateMutate('clear', n);
+        }
       }
+
       setDropdowns({ ...dropdownsMutate });
     };
 
@@ -24,18 +28,31 @@ function BuildProvider(props) {
     // eslint-disable-next-line
   }, []);
 
+  function addDropdown(name) {
+    const dds = { ...dropdowns };
+    if (!dds[name]) {
+      updateMutate('add', name);
+      setDropdowns({ ...dds, [name]: false });
+    } else {
+      console.log('ATTEMPTED TO ADD SECOND DROPDOWN UNDER NAME: ', name);
+    }
+  }
+
+  function removeDropdown(name) {
+    const dds = { ...dropdowns };
+    updateMutate('remove', name);
+    delete dds[name];
+    setDropdowns({ ...dds });
+  }
+
   const { Provider } = DDTrackingContext;
   return (
     <Provider
       value={{
         dropdowns,
         setDropdowns,
-        addDropdown: addDropdown.bind(this, dropdownsMutate, setDropdowns),
-        removeDropdown: removeDropdown.bind(
-          this,
-          dropdownsMutate,
-          setDropdowns
-        ),
+        addDropdown,
+        removeDropdown,
       }}
     >
       {props.children}
@@ -75,18 +92,22 @@ function searchNodeForDropdownDiv(node) {
   return targetChildren[node.tagName] ? targetChildren[node.tagName]() : null;
 }
 
-function addDropdown(dropdowns, setDropdowns, name) {
-  if (!dropdowns[name]) {
-    setDropdowns({ ...dropdowns, [name]: false });
-    dropdowns[name] = false;
-  } else {
-    console.log('ATTEMPTED TO ADD SECOND DROPDOWN UNDER NAME: ', name);
+function updateMutate(operation, name) {
+  switch (operation) {
+    case 'remove':
+      return delete dropdownsMutate[name];
+    case 'add':
+      dropdownsMutate[name] = false;
+      return true;
+    case 'toggle':
+      dropdownsMutate[name] = !dropdownsMutate[name];
+      return true;
+    case 'clear':
+      dropdownsMutate[name] = false;
+      return true;
+    default:
+      return false;
   }
-}
-
-function removeDropdown(dropdowns, setDropdowns, name) {
-  delete dropdowns[name];
-  setDropdowns({ ...dropdowns });
 }
 
 export default BuildProvider;
