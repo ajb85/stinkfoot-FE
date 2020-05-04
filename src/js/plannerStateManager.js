@@ -162,9 +162,7 @@ export default class BuildManager {
     const enhImages = require.context('Planner/images/enhancements', true);
 
     if (!power.slottable) {
-      return {
-        standard: [],
-      };
+      return [];
     }
 
     if (section === 'standard') {
