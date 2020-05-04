@@ -159,8 +159,7 @@ export default class BuildManager {
   };
 
   getEnhancementSectionForPower = (power, section) => {
-    const enhImages = require.context('../Planner/images/enhancements/', true);
-
+    const enhImages = require.context('./images/enhancements/', true);
     if (!power.slottable) {
       return [];
     }
@@ -182,7 +181,7 @@ export default class BuildManager {
 
   getEnhancementAndOverlayImages = (powerSlotEnhData) => {
     const { displayName, tier } = powerSlotEnhData;
-    const enhImages = require.context('../Planner/images/enhancements/', true);
+    const enhImages = require.context('./images/enhancements/', true);
 
     return {
       enhancement: enhImages(`./${displayName.split(' ').join('_')}.png`),
@@ -191,7 +190,7 @@ export default class BuildManager {
   };
 
   getEnhancementOverlay = (tier) => {
-    const images = require.context('../Planner/images/overlays/', true);
+    const images = require.context('./images/overlays/', true);
     const oData = this.origins.find((o) => o.name === this.origin);
 
     switch (tier) {
@@ -208,12 +207,12 @@ export default class BuildManager {
   };
 
   getOriginImage = (originName) => {
-    const oImages = require.context('../Planner/images/origins/', true);
+    const oImages = require.context('./images/origins/', true);
     return oImages(`./${originName}.png`);
   };
 
   getArchetypeImage = (atName) => {
-    const atImages = require.context('../Planner/images/archetypes/', true);
+    const atImages = require.context('./images/archetypes/', true);
     return atImages('./' + atName.split(' ').join('_') + '.png');
   };
 
@@ -224,7 +223,7 @@ export default class BuildManager {
 
     imageName = imageName.imageName ? imageName.imageName : imageName;
 
-    const images = require.context('../Planner/images/powersets/', true);
+    const images = require.context('./images/powersets/', true);
     return images(`./${imageName}`);
   };
 
