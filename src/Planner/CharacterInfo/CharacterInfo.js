@@ -18,25 +18,29 @@ function CharacterInfo(props) {
     <section className={styles.CharacterInfo}>
       <div>
         <label>Archetype</label>
-        <Dropdown
-          selected={stateManager.archetype}
-          name="archetype"
-          onChange={(e) => updateBuild(e)}
-          options={atOptions}
-        />
+        <div style={{ width: 170 }}>
+          <Dropdown
+            selected={stateManager.archetype}
+            name="archetype"
+            onChange={(e) => updateBuild(e)}
+            options={atOptions}
+          />
+        </div>
       </div>
       <div>
         <label>Origin</label>
-        <Dropdown
-          selected={stateManager.origin}
-          name="origin"
-          onChange={(e) => updateBuild(e)}
-          options={stateManager.origins.map(({ name }) => ({
-            value: name,
-            display: name,
-            image: stateManager.getOriginImage(name),
-          }))}
-        />
+        <div style={{ width: 170 }}>
+          <Dropdown
+            selected={stateManager.origin}
+            name="origin"
+            onChange={(e) => updateBuild(e)}
+            options={stateManager.origins.map(({ name }) => ({
+              value: name,
+              display: name,
+              image: stateManager.getOriginImage(name),
+            }))}
+          />
+        </div>
       </div>{' '}
       <div>
         <label>Name</label>
