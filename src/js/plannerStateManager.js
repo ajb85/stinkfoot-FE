@@ -317,8 +317,9 @@ export default class BuildManager {
     const enhancements = { ...this.state.lookup.enhancements };
     for (let k in enhancements) {
       // Deep copy
-      enhancements[k] = [...enhancements[k].map(({ s }) => ({ ...s }))];
+      enhancements[k] = [...enhancements[k].map((s) => ({ ...s }))];
     }
+    console.log('DEEP COPY: ', enhancements);
 
     const slotsToRemove = [];
     const powerSlots = this.state.build.powerSlots.map((powerSlot, i) => {
@@ -328,41 +329,42 @@ export default class BuildManager {
 
       const enhSlots = [...powerSlot.enhSlots];
 
-      enhSlots.forEach((enh, i) => {
+      enhSlots.forEach((enh, j) => {
         const { slotLevel, enhancement } = enh;
-        if (i > 0 && slotIndexLookup[i]) {
+        if (j > 0 && slotIndexLookup[j]) {
           slotsToRemove.push(slotLevel);
-        } else if (i === 0 && slotIndexLookup[i]) {
+        } else if (j === 0 && slotIndexLookup[j]) {
           // Don't want to delete zero index, since it's automatically given for a power
           // However, if the user is removing that slot, just delete any enhancements in it
           enhSlots[0] = { slotLevel: null };
         }
 
-        if (enhancement) {
+        if (slotIndexLookup[j] && enhancement) {
           const powerName = this.getPower(powerSlot.power).displayName;
-          if (!enhancements[enhancement.fullName]) {
-          } else if (
+          if (
             enhancements[enhancement.fullName].length === 1 &&
             enhancements[enhancement.fullName][0].count === 1
           ) {
+            console.log('DELETING: ', enhancement.fullName);
             delete enhancements[enhancement.fullName];
           } else {
             const enhRecords = enhancements[enhancement.fullName];
             const indexToRemove = enhRecords.findIndex(
               (power) => power.powerName === powerName
             );
-
             enhancements[enhancement.fullName] = enhRecords.reduce(
-              (acc, p, i) => {
-                if (i !== indexToRemove) {
+              (acc, p, k) => {
+                if (k !== indexToRemove) {
                   acc.push(p);
-                  return acc;
-                }
-                const { count } = p;
+                } else {
+                  const { count } = p;
 
-                if (count > 1) {
-                  acc.push({ ...p, count: count - 1 });
+                  if (count > 1) {
+                    acc.push({ ...p, count: count - 1 });
+                  }
                 }
+
+                return acc;
               },
               []
             );
@@ -389,10 +391,8 @@ export default class BuildManager {
 
   addPowerFromNewPool = (p) => {
     const pool = this.activePool;
-    if (!pool) {
-      throw new Error('No active pool found');
-    }
     const poolName = pool.fullName;
+
     const { poolPowerIndex } = this.state.tracking;
     const activePoolPowers = [...this.state.build.poolPowers];
     const poolCanBeAdded =
@@ -413,7 +413,7 @@ export default class BuildManager {
           return (
             !this.isPowersetExcluded(fullName) &&
             this.state.build.poolPowers.indexOf(i) === -1 &&
-            i !== this.state.tracking.poolPowerIndex
+            i !== poolPowerIndex
           );
         }
       );
