@@ -4,7 +4,7 @@ import Range from './enhancements/standard/Range.json';
 import Confuse from './enhancements/standard/Confuse.json';
 import Damage from './enhancements/standard/Damage.json';
 import Defense_Buff from './enhancements/standard/Defense_Buff.json';
-import Defense_DeBuff from './enhancements/standard/Defense_DeBuff.json';
+import Defense_Debuff from './enhancements/standard/Defense_Debuff.json';
 import Endurance_Modification from './enhancements/standard/Endurance_Modification.json';
 import Endurance_Discount from './enhancements/standard/Endurance_Discount.json';
 import Fear from './enhancements/standard/Fear.json';
@@ -24,7 +24,7 @@ import Slow from './enhancements/standard/Slow.json';
 import Stun from './enhancements/standard/Stun.json';
 import Taunt from './enhancements/standard/Taunt.json';
 import ToHit_Buff from './enhancements/standard/ToHit_Buff.json';
-import ToHit_DeBuff from './enhancements/standard/ToHit_DeBuff.json';
+import ToHit_Debuff from './enhancements/standard/ToHit_Debuff.json';
 
 export default {
   standard: {
@@ -33,7 +33,7 @@ export default {
     Confuse,
     Damage,
     Defense_Buff,
-    Defense_DeBuff,
+    Defense_Debuff,
     Endurance_Modification,
     Endurance_Discount,
     Fear,
@@ -53,6 +53,6 @@ export default {
     Stun,
     Taunt,
     ToHit_Buff,
-    ToHit_DeBuff,
+    ToHit_Debuff,
   },
 };
