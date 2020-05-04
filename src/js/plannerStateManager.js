@@ -528,6 +528,9 @@ export default class BuildManager {
 
     if (emptySlotIndex === null) {
       const newState = this._addPowerSlotReturnSlotAndEnhState(powerSlotIndex);
+      if (!newState) {
+        return null;
+      }
       powerSlots = newState.powerSlots;
       enhancementSlots = newState.enhancementSlots;
       emptySlotIndex = this._getEmptySlotIndex(powerSlotIndex, powerSlots);
