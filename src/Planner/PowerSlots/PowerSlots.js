@@ -8,6 +8,8 @@ function PowerSlots(props) {
   const enhNavigation = React.useState({
     section: 'standard',
     tier: 'IO',
+    ioSetIndex: null,
+    showSuperior: true,
   });
 
   const stateManager = React.useContext(PlannerContext);
@@ -100,8 +102,6 @@ function PowerSlot({ render, selectionState }) {
     stateManager.getFromState('powerSlots').length * 2 - originalIndex * 2;
   const { togglePowerSlot, removeSlot } = stateManager;
 
-  const overlayImg = stateManager.getEnhancementOverlay(enhNavigation.tier);
-
   const handlePillClick = (e, psIndex) => {
     const { className } = e.target;
     if (
@@ -130,74 +130,45 @@ function PowerSlot({ render, selectionState }) {
         </p>
 
         <div className={styles.selectEnhancements}>
-          <div
-            style={{
-              display: 'flex',
-              justifyContent: 'space-between',
-              padding: '0 9px',
-            }}
-          >
+          <div className={styles.EnhSectionSelect}>
             <p
-              onClick={() => setEnhNavigation({ ...enhNavigation, tier: 'IO' })}
+              onClick={setEnhNavigation.bind(this, {
+                ...enhNavigation,
+                section: 'standard',
+                tier: 'IO',
+                ioSetIndex: null,
+              })}
               style={{
-                color: enhNavigation.tier === 'IO' ? 'red' : null,
-                cursor: 'pointer',
+                color: enhNavigation.section === 'standard' ? 'red' : null,
               }}
             >
-              IO
+              Standard
             </p>
             <p
-              onClick={() => setEnhNavigation({ ...enhNavigation, tier: 'SO' })}
-              style={{
-                color: enhNavigation.tier === 'SO' ? 'red' : null,
-                cursor: 'pointer',
-              }}
+              onClick={setEnhNavigation.bind(this, {
+                ...enhNavigation,
+                section: 'sets',
+                tier: p.setTypes[0],
+                ioSetIndex: null,
+              })}
+              style={{ color: enhNavigation.section === 'sets' ? 'red' : null }}
             >
-              SO
-            </p>
-            <p
-              onClick={() => setEnhNavigation({ ...enhNavigation, tier: 'DO' })}
-              style={{
-                color: enhNavigation.tier === 'DO' ? 'red' : null,
-                cursor: 'pointer',
-              }}
-            >
-              DO
-            </p>
-            <p
-              onClick={() => setEnhNavigation({ ...enhNavigation, tier: 'TO' })}
-              style={{
-                color: enhNavigation.tier === 'TO' ? 'red' : null,
-                cursor: 'pointer',
-              }}
-            >
-              TO
+              Sets
             </p>
           </div>
-          <div className={styles.enhPreviewList}>
-            {stateManager
-              .getEnhancementSectionForPower(p, enhNavigation.section)
-              .map((enh, i) => (
-                <div
-                  className={styles.enhPreview}
-                  key={`${enh.fullName} @ ${i}`}
-                >
-                  <div
-                    className={styles.enhancementImage}
-                    onClick={stateManager.addEnhancement.bind(
-                      this,
-                      originalIndex,
-                      enh,
-                      enhNavigation.tier,
-                      50
-                    )}
-                  >
-                    <img src={overlayImg} alt={enh.fullName} />
-                    <img src={enh.image} alt={enh.fullName} />
-                  </div>
-                </div>
-              ))}
-          </div>
+          {enhNavigation.section === 'standard' ? (
+            <StandardEnhancements
+              selectionState={selectionState}
+              originalIndex={originalIndex}
+              power={p}
+            />
+          ) : enhNavigation.section === 'sets' ? (
+            <IOSetEnhancements
+              selectionState={selectionState}
+              originalIndex={originalIndex}
+              power={p}
+            />
+          ) : null}
         </div>
       </div>
       <div
@@ -244,6 +215,132 @@ function PowerSlot({ render, selectionState }) {
             </React.Fragment>
           );
         })}
+      </div>
+    </div>
+  );
+}
+
+function StandardEnhancements(props) {
+  const sections = ['IO', 'SO', 'DO', 'TO'];
+  const { selectionState, originalIndex, power: p } = props;
+  const [enhNavigation, setEnhNavigation] = selectionState;
+  const stateManager = React.useContext(PlannerContext);
+
+  const overlayImg = stateManager.getEnhancementOverlay(enhNavigation.tier);
+
+  return (
+    <div className={styles.enhPreviewContainer}>
+      <div className={styles.enhPreviewList}>
+        {stateManager
+          .getEnhancementSectionForPower(p, enhNavigation)
+          .map((enh, i) => (
+            <div className={styles.enhPreview} key={`${enh.fullName} @ ${i}`}>
+              <div
+                className={styles.enhancementImage}
+                onClick={stateManager.addEnhancement.bind(
+                  this,
+                  originalIndex,
+                  enh,
+                  enhNavigation,
+                  50
+                )}
+              >
+                <img src={overlayImg} alt={enh.fullName} />
+                <img src={enh.image} alt={enh.fullName} />
+              </div>
+            </div>
+          ))}
+      </div>
+      <div className={styles.EnhPreviewSubSectionPreview}>
+        {sections.map((tier) => (
+          <p
+            key={tier}
+            onClick={setEnhNavigation.bind(this, {
+              ...enhNavigation,
+              tier,
+              ioSet: null,
+            })}
+            style={{
+              color: enhNavigation.tier === tier ? 'red' : null,
+              cursor: 'pointer',
+            }}
+          >
+            {tier}
+          </p>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function IOSetEnhancements(props) {
+  const { selectionState, originalIndex, power: p } = props;
+  const [enhNavigation, setEnhNavigation] = selectionState;
+  const stateManager = React.useContext(PlannerContext);
+
+  const overlayImg = stateManager.getEnhancementOverlay('IO');
+  const updateNavigation = (i) => {
+    setEnhNavigation({
+      ...enhNavigation,
+      ioSetIndex: i,
+    });
+  };
+
+  const addEnhancement = (enh) => {
+    stateManager.addEnhancement(originalIndex, enh, enhNavigation, 50);
+  };
+
+  const enhancementsData = stateManager.getEnhancementSectionForPower(
+    p,
+    enhNavigation
+  );
+
+  const mapOver = Array.isArray(enhancementsData)
+    ? enhancementsData
+    : enhancementsData.enhancements;
+
+  return (
+    <div className={styles.enhPreviewContainer}>
+      <div className={styles.enhPreviewList}>
+        {mapOver.map((enh, i) => (
+          <div className={styles.enhPreview} key={`${enh.fullName} @ ${i}`}>
+            <div
+              className={styles.enhancementImage}
+              onClick={
+                enhNavigation.ioSetIndex === null
+                  ? updateNavigation.bind(this, i)
+                  : addEnhancement.bind(this, enh)
+              }
+            >
+              {!enh.isAttuned && <img src={overlayImg} alt={enh.fullName} />}
+              <img src={enh.image} alt={enh.fullName} />
+            </div>
+          </div>
+        ))}
+      </div>
+      <div className={styles.EnhPreviewSubSectionPreview}>
+        {stateManager
+          .getSubSectionsForIOSets(p.setTypes)
+          .map(({ tier, name }) => (
+            <p
+              key={tier}
+              onClick={setEnhNavigation.bind(this, {
+                ...enhNavigation,
+                tier,
+                ioSetIndex: null,
+              })}
+              style={{
+                color: enhNavigation.tier === tier ? 'red' : null,
+                cursor: 'pointer',
+              }}
+            >
+              {name
+                .split(' ')
+                .map((n) => n[0])
+                .slice(0, 2)
+                .join('')}
+            </p>
+          ))}
       </div>
     </div>
   );
