@@ -58,12 +58,44 @@ section.PowerSlots {
       display: flex;
       flex-direction: column;
 
-      .enhPreviewList {
+      .EnhSectionSelect {
         display: flex;
-        flex-wrap: wrap;
+        justify-content: center;
 
-        .enhPreview {
-          margin: $lh/2 1px;
+        width: 100%;
+
+        p {
+          margin: 0 $lh/2;
+          cursor: pointer;
+        }
+      }
+
+      .enhPreviewContainer {
+        display: flex;
+
+        .enhPreviewList {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: flex-start;
+          align-content: flex-start;
+
+          padding: 0 $lh/2;
+          max-width: 147px;
+          width: 100%;
+
+          .enhPreview {
+            margin: $lh/2 2px 0;
+            height: 1.5 * $lh;
+          }
+        }
+
+        .EnhPreviewSubSectionPreview {
+          display: flex;
+          flex-direction: column;
+
+          p {
+            padding: $lh / 2;
+          }
         }
       }
     }
