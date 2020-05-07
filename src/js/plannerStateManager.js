@@ -2,9 +2,11 @@ import powersets from 'data/powersets.js';
 import poolPowers from 'data/poolPowers.js';
 import epicPools from 'data/epicPools.js';
 import origins from 'data/origins.js';
+import archetypes from 'data/archetypes.js';
 import powerSlotsTemplate from 'data/powerSlotsTemplate.js';
 import enhancementSlots from 'data/enhancementSlots.js';
 import enhancements from 'data/enhancements.js';
+import ioSets, { setTypeConversion } from 'data/ioSets.js';
 
 export default class BuildManager {
   constructor(state, setState) {
@@ -16,7 +18,7 @@ export default class BuildManager {
     return {
       build: {
         name: '',
-        archetype: 'Blaster',
+        archetype: archetypes[0],
         origin: origins[0].name,
         alignment: 'Hero',
         powerSlots: powerSlotsTemplate,
@@ -158,7 +160,8 @@ export default class BuildManager {
     return setOfPowers[archetypeOrder][powerIndex];
   };
 
-  getEnhancementSectionForPower = (power, section) => {
+  getEnhancementSectionForPower = (power, enhNavigation) => {
+    const { section, tier, ioSetIndex, showSuperior } = enhNavigation;
     const enhImages = require.context('./images/enhancements/', true);
     if (!power.slottable) {
       return [];
@@ -176,7 +179,34 @@ export default class BuildManager {
           return acc;
         }
       }, []);
-    }
+    } else if (section === 'sets') {
+      const mapOver =
+        ioSetIndex === null
+          ? ioSets[tier]
+          : ioSets[tier][ioSetIndex].enhancements;
+
+      const ioSetImage =
+        ioSetIndex !== null ? ioSets[tier][ioSetIndex].imageName : null;
+      const { isAttuned } = ioSetIndex !== null ? ioSets[tier][ioSetIndex] : {};
+
+      const mapped = mapOver.map(({ imageName, ...enh }) => {
+        if (!imageName && ioSetImage) {
+          imageName = ioSetImage;
+          enh.isAttuned = isAttuned;
+        } else if (!imageName) {
+          throw new Error('No image found for: ', enh.displayName);
+        }
+        // Superior enhancements have an "S" in front of them.  The regular attuned
+        // version drops the first letter
+        const correctedImgName =
+          !enh.isAttuned || showSuperior ? imageName : imageName.substring(1);
+        enh.image = enhImages(`./${correctedImgName}`);
+        return enh;
+      });
+      return ioSetIndex === null
+        ? mapped
+        : { ...ioSets[tier][ioSets], enhancements: mapped };
+    } else return [];
   };
 
   getEnhancementAndOverlayImages = (powerSlotEnhData) => {
@@ -225,6 +255,18 @@ export default class BuildManager {
 
     const images = require.context('./images/powersets/', true);
     return images(`./${imageName}`);
+  };
+
+  getSubSectionsForIOSets = (types) => {
+    if (!Array.isArray(types)) {
+      types = [types];
+    }
+    return types.map((setNum) => {
+      return {
+        tier: setNum,
+        name: setTypeConversion[setNum],
+      };
+    });
   };
 
   getFromState = (key) => {
@@ -479,7 +521,7 @@ export default class BuildManager {
       },
     });
 
-  addEnhancement = (powerSlotIndex, enhancement, tier, level = 50) => {
+  addEnhancement = (powerSlotIndex, enhancement, { tier }, level = 50) => {
     const addedEnh = this._addEnhancementReturnPowerSlotStateAndEnhLookupState(
       powerSlotIndex,
       enhancement,
@@ -581,11 +623,9 @@ export default class BuildManager {
   };
 
   getEnhancementMag(enhInSlot) {
-    const { type, displayName, level, tier } = enhInSlot;
-
-    const tierValue = enhancements[type][displayName].effects.magnitudes[tier];
-
-    return tier === 'IO' ? tierValue[level] : tierValue;
+    // const { type, displayName, level, tier } = enhInSlot;
+    // const tierValue = enhancements[type][displayName].effects.magnitudes[tier];
+    // return tier === 'IO' ? tierValue[level] : tierValue;
   }
 
   _getEmptySlotIndex = (psIndex, powerSlots = this.powerSlots) => {
