@@ -156,6 +156,22 @@ function PowerSlot({ render, selectionState }) {
               Sets
             </p>
           </div>
+          {enhNavigation.ioSetIndex !== null && (
+            <p
+              style={{
+                cursor: 'pointer',
+                textAlign: 'center',
+                marginTop: '9px',
+              }}
+              onClick={stateManager.addFullEnhancementSet.bind(
+                this,
+                originalIndex,
+                enhNavigation
+              )}
+            >
+              Add Full Set
+            </p>
+          )}
           {enhNavigation.section === 'standard' ? (
             <StandardEnhancements
               selectionState={selectionState}
@@ -193,7 +209,9 @@ function PowerSlot({ render, selectionState }) {
                     className={styles.enhancementImage}
                     style={{ left: 8, top: 0 }}
                   >
-                    <img src={images.overlay} alt={enhancement.displayName} />
+                    {!!images.overlay && (
+                      <img src={images.overlay} alt={enhancement.displayName} />
+                    )}
                     <img
                       src={images.enhancement}
                       alt={enhancement.displayName}
@@ -279,6 +297,7 @@ function IOSetEnhancements(props) {
   const stateManager = React.useContext(PlannerContext);
 
   const overlayImg = stateManager.getEnhancementOverlay('IO');
+
   const updateNavigation = (i) => {
     setEnhNavigation({
       ...enhNavigation,
