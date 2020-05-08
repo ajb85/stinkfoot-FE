@@ -38,8 +38,15 @@ function PlannerProvider(props) {
 export default PlannerProvider;
 
 function findPowerContainerNode(node) {
-  while (node.parentNode && node.className !== styles.powerContainer) {
+  const classNamesWhiteList = {
+    [styles.powerContainer]: true,
+    [styles.enhPreviewList]: true,
+    [styles.enhPreview]: true,
+  };
+
+  while (node && !classNamesWhiteList[node.className] && node.parentNode) {
     node = node.parentNode;
   }
-  return node && node.className === styles.powerContainer ? node : null;
+
+  return node && classNamesWhiteList[node.className] ? node : null;
 }
