@@ -342,6 +342,9 @@ export default [
   Winters_Gift,
 ].reduce((acc, set) => {
   const { setType } = set;
+
+  const index = acc[setType] ? acc[setType].length : 0;
+  set.enhancements = set.enhancements.map((e) => ({ ...e, setIndex: index }));
   acc[setType] = acc[setType] ? [...acc[setType], set] : [set];
   return acc;
 }, {});
