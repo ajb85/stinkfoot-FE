@@ -354,7 +354,28 @@ export default class BuildManager {
     });
   };
 
-  removeSlot = (powerSlotIndex, slotIndices) => {
+  removeSlots = (powerSlotIndex, slotIndices) => {
+    const {
+      powerSlots,
+      enhancementSlots,
+      enhancements,
+    } = this._removeSlotsReturnPowerSlotsAndEnhAndEnhSlots(
+      powerSlotIndex,
+      slotIndices
+    );
+
+    this.setState({
+      ...this.state,
+      build: { ...this.state.build, powerSlots },
+      lookup: { ...this.state.lookup, enhancements },
+      reference: {
+        ...this.state.reference,
+        enhancementSlots,
+      },
+    });
+  };
+
+  _removeSlotsReturnPowerSlotsAndEnhAndEnhSlots(powerSlotIndex, slotIndices) {
     slotIndices = Array.isArray(slotIndices) ? slotIndices : [slotIndices];
     const slotIndexLookup = slotIndices.reduce(
       (acc, sIndex) => {
@@ -371,12 +392,7 @@ export default class BuildManager {
     if (!slotIndexLookup.length) {
       return;
     }
-
-    const enhancements = { ...this.state.lookup.enhancements };
-    for (let k in enhancements) {
-      // Deep copy
-      enhancements[k] = [...enhancements[k].map((s) => ({ ...s }))];
-    }
+    const enhancements = this._cloneStateByKey('enhancements');
 
     const slotsToRemove = [];
     const powerSlots = this.state.build.powerSlots.map((powerSlot, i) => {
@@ -385,7 +401,6 @@ export default class BuildManager {
       }
 
       const enhSlots = [...powerSlot.enhSlots];
-
       enhSlots.forEach((enh, j) => {
         const { slotLevel, enhancement } = enh;
         if (j > 0 && slotIndexLookup[j]) {
@@ -434,16 +449,10 @@ export default class BuildManager {
       };
     });
 
-    this.setState({
-      ...this.state,
-      build: { ...this.state.build, powerSlots },
-      lookup: { ...this.state.lookup, enhancements },
-      reference: {
-        ...this.state.reference,
-        enhancementSlots: this._removeSlotsReturnSlotState(...slotsToRemove),
-      },
-    });
-  };
+    const enhancementSlots = this._removeSlotsReturnSlotState(...slotsToRemove);
+
+    return { powerSlots, enhancementSlots, enhancements };
+  }
 
   addPowerFromNewPool = (p) => {
     const pool = this.activePool;
@@ -594,7 +603,7 @@ export default class BuildManager {
   //   }
   // };
 
-  _deepCloneState = (data = { ...this.state }) => {
+  _deepCloneState = (data = this.state) => {
     if (this._isObject(data)) {
       const clone = { ...data };
 
@@ -616,7 +625,6 @@ export default class BuildManager {
     if (!this._isObject(data)) {
       return null;
     }
-
     for (let k in data) {
       if (k === key) {
         // Found key we're looking for, clone current data and return
@@ -653,7 +661,6 @@ export default class BuildManager {
       enhancements = [enhancements];
     }
 
-    console.log('CLONING: ', this.state);
     const newState = enhancements.reduce((acc, enhancement) => {
       const {
         type,
@@ -767,6 +774,8 @@ export default class BuildManager {
     };
   };
 
+  _clearEnhancementsFromPowerSlot;
+
   _updateState = (e, stateSection) => {
     const specialCases = {
       archetype: true,
@@ -828,7 +837,7 @@ export default class BuildManager {
     excludedByDisplayName
   ) => {
     if (!powersetFullNames) {
-      return this.state.lookup;
+      return this.state.lookup.excludedPowersets;
     }
 
     powersetFullNames = Array.isArray(powersetFullNames)
@@ -842,7 +851,6 @@ export default class BuildManager {
         excludedPowersets[name] = [excludedByDisplayName];
       }
     });
-
     return excludedPowersets;
   };
 
