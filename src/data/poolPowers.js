@@ -22,4 +22,8 @@ export default [
   Sorcery,
   Speed,
   Teleportation,
-];
+].map((pool, i) => {
+  const powers = pool.powers.map((p) => ({ ...p, poolIndex: i }));
+
+  return { ...pool, powers };
+});
