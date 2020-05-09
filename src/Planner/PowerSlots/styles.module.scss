@@ -46,6 +46,7 @@ section.PowerSlots {
       cursor: default;
       height: 12 * $lh;
       border-radius: 0;
+      overflow: visible;
     }
 
     & > p {
@@ -154,5 +155,24 @@ section.PowerSlots {
     height: 1.5 * $lh;
     width: 1.5 * $lh;
     position: absolute;
+  }
+
+  &:hover {
+    .EnhHoverMenu {
+      display: initial;
+    }
+  }
+}
+
+.EnhHoverMenu {
+  display: none;
+  z-index: 100;
+  position: relative;
+
+  .menu {
+    position: absolute;
+    width: 250px;
+
+    border: 1px solid white;
   }
 }
