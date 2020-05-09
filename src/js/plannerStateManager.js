@@ -36,6 +36,7 @@ export default class BuildManager {
         powers: {},
         excludedPowersets: {},
         enhancements: {},
+        uniqueEnhancements: {},
       },
       reference: { enhancementSlots },
     };
@@ -115,6 +116,10 @@ export default class BuildManager {
 
   get build() {
     return this.state.build;
+  }
+
+  get tracking() {
+    return this.state.tracking;
   }
 
   get origins() {
@@ -575,6 +580,69 @@ export default class BuildManager {
     });
   };
 
+  getEnhancementMag = (enhInSlot) => {
+    // const { type, displayName, level, tier } = enhInSlot;
+    // const tierValue = enhancements[type][displayName].effects.magnitudes[tier];
+    // return tier === 'IO' ? tierValue[level] : tierValue;
+  };
+
+  // getEnhancement = (enh) => {
+  //   const { tier, displayName, type } = enh;
+
+  //   if (type === 'set') {
+  //     // ioSets;
+  //   }
+  // };
+
+  _deepCloneState = (data = { ...this.state }) => {
+    if (this._isObject(data)) {
+      const clone = { ...data };
+
+      for (let key in clone) {
+        if (clone[key] !== undefined) {
+          clone[key] = this._deepCloneState(clone[key]);
+        } //else return clone[key];
+      }
+
+      return clone;
+    } else if (Array.isArray(data)) {
+      return [...data].map((d) => this._deepCloneState(d));
+    }
+
+    return data;
+  };
+
+  _cloneStateByKey = (key, data = this.state) => {
+    if (!this._isObject(data)) {
+      return null;
+    }
+
+    for (let k in data) {
+      if (k === key) {
+        // Found key we're looking for, clone current data and return
+        return this._deepCloneState(data[k]);
+      } else {
+        // Key not found, check any children.  If not found, will return null
+        const cloned = this._cloneStateByKey(key, data[k]);
+        if (cloned !== null) {
+          return cloned;
+        }
+      }
+    }
+    // Key wasn't found at this level, return null
+    return null;
+  };
+
+  _getEmptySlotIndex = (psIndex, powerSlots = this.powerSlots) => {
+    const ps = powerSlots[psIndex];
+
+    const emptySlotIndex = ps.enhSlots.findIndex(
+      ({ enhancement }) => !enhancement
+    );
+
+    return emptySlotIndex > -1 ? emptySlotIndex : null;
+  };
+
   _addEnhancementReturnPowerSlotStateAndEnhLookupState = (
     powerSlotIndex,
     enhancements,
@@ -585,6 +653,7 @@ export default class BuildManager {
       enhancements = [enhancements];
     }
 
+    console.log('CLONING: ', this.state);
     const newState = enhancements.reduce((acc, enhancement) => {
       const {
         type,
@@ -593,7 +662,13 @@ export default class BuildManager {
         imageName,
         isUnique,
         isUniqueInPower,
+        setType,
+        setIndex,
       } = enhancement;
+
+      if (isUnique) {
+        console.log('ADDING UNIQUE');
+      }
 
       let emptySlotIndex = this._getEmptySlotIndex(powerSlotIndex);
 
@@ -665,6 +740,8 @@ export default class BuildManager {
         fullName,
         level,
         tier,
+        setType,
+        setIndex,
       };
 
       if (isAlreadyInPower) {
@@ -688,38 +765,6 @@ export default class BuildManager {
       enhancements: newState.lookup.enhancements,
       enhancementSlots: newState.reference.enhancementSlots,
     };
-  };
-
-  getEnhancementMag(enhInSlot) {
-    // const { type, displayName, level, tier } = enhInSlot;
-    // const tierValue = enhancements[type][displayName].effects.magnitudes[tier];
-    // return tier === 'IO' ? tierValue[level] : tierValue;
-  }
-
-  _deepCloneState(data = { ...this.state }) {
-    if (this._isObject(data)) {
-      const clone = { ...data };
-
-      for (let key in clone) {
-        clone[key] = this._deepCloneState(clone[key]);
-      }
-
-      return clone;
-    } else if (Array.isArray(data)) {
-      return [...data].map((d) => this._deepCloneState(d));
-    }
-
-    return data;
-  }
-
-  _getEmptySlotIndex = (psIndex, powerSlots = this.powerSlots) => {
-    const ps = powerSlots[psIndex];
-
-    const emptySlotIndex = ps.enhSlots.findIndex(
-      ({ enhancement }) => !enhancement
-    );
-
-    return emptySlotIndex > -1 ? emptySlotIndex : null;
   };
 
   _updateState = (e, stateSection) => {
@@ -878,7 +923,7 @@ export default class BuildManager {
           (!isPrimary && !this.state.build.powerSlots[1].power));
 
       if (isPickingLevel1Power) {
-        const powerSlots = [...this.state.build.powerSlots];
+        const powerSlots = this._cloneStateByKey('powerSlots');
         if (isPrimary) {
           // If the user selected one of the two primary level 1 powers, save it
           powerSlots[0] = {
@@ -950,6 +995,25 @@ export default class BuildManager {
         // : this.state.build.activeLevel,
       };
     }
+  };
+
+  _addPowerToSlotReturnSlotAndPowerLookupState = (p, psIndex) => {
+    const powerSlots = this._cloneStateByKey('powerSlots');
+    const powersLookup = this._cloneStateByKey('powers');
+    if (
+      !powerSlots[psIndex].hasOwnProperty('power') &&
+      p.level <= powerSlots[psIndex].level &&
+      !powersLookup.hasOwnProperty(p.fullName)
+    ) {
+      // Only adjust slot if there isn't currently a power there
+      // And its level is less than or equal to the current slot level
+      const { archetypeOrder, powerIndex, poolIndex } = p;
+      powerSlots[psIndex].power = { archetypeOrder, powerIndex, poolIndex };
+      powerSlots[psIndex].enhSlots = emptyDefaultSlot();
+      powersLookup[p.fullName] = psIndex;
+    }
+
+    return { powerSlots, powers: powersLookup };
   };
 
   _removePowersReturnState = (...powers) => {
@@ -1056,7 +1120,7 @@ export default class BuildManager {
   };
 
   _isObject = (obj) =>
-    typeof obj === obj && obj !== null && !Array.isArray(obj);
+    typeof obj === 'object' && obj !== null && !Array.isArray(obj);
 }
 
 function emptyDefaultSlot() {
