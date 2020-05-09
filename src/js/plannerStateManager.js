@@ -669,7 +669,7 @@ export default class BuildManager {
     if (!Array.isArray(enhancements)) {
       enhancements = [enhancements];
     }
-    const newState = enhancements.reduce((acc, enhancement) => {
+    const updatedState = enhancements.reduce((acc, enhancement) => {
       const {
         type,
         displayName,
@@ -780,9 +780,9 @@ export default class BuildManager {
     }, state);
 
     return {
-      powerSlots: newState.build.powerSlots,
-      enhancements: newState.lookup.enhancements,
-      enhancementSlots: newState.reference.enhancementSlots,
+      powerSlots: updatedState.build.powerSlots,
+      enhancements: updatedState.lookup.enhancements,
+      enhancementSlots: updatedState.reference.enhancementSlots,
     };
   };
 
