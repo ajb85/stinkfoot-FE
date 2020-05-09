@@ -15,6 +15,19 @@ function PowerSlots(props) {
   const stateManager = React.useContext(PlannerContext);
   let index = 0;
 
+  React.useEffect(() => {
+    // Resets navigation whenever a power is opened or closed.  A more long term solution
+    // would probably be to store the state for every power slot so there can be a memory of where
+    // the user was last time they selected a slot
+    enhNavigation[1]({
+      ...enhNavigation[0],
+      section: 'standard',
+      tier: 'IO',
+      ioSetIndex: null,
+    });
+    // eslint-disable-next-line
+  }, [stateManager.tracking.powerSlotIndex]);
+
   const { selected /*, defaults*/ } = stateManager
     .getFromState('powerSlots')
     .reduce(
@@ -194,6 +207,8 @@ function PowerSlot({ render, selectionState }) {
         {enhSlots.map(({ slotLevel, enhancement }, j) => {
           const displayLevel = slotLevel === null ? level : slotLevel;
 
+          // console.log('SLOT: ', enhancement);
+
           const images = enhancement
             ? stateManager.getEnhancementAndOverlayImages(enhancement)
             : null;
@@ -263,8 +278,10 @@ function StandardEnhancements(props) {
                   50
                 )}
               >
+                {/* {console.log('STANDARD: ', enh)} */}
                 <img src={overlayImg} alt={enh.fullName} />
                 <img src={enh.image} alt={enh.fullName} />
+                <EnhancementHoverMenu enhancement={enh} />
               </div>
             </div>
           ))}
@@ -331,8 +348,10 @@ function IOSetEnhancements(props) {
                   : addEnhancement.bind(this, enh)
               }
             >
+              {/* {console.log('IO: ', enh)} */}
               {!enh.isAttuned && <img src={overlayImg} alt={enh.fullName} />}
               <img src={enh.image} alt={enh.fullName} />
+              <EnhancementHoverMenu enhancement={enh} />
             </div>
           </div>
         ))}
@@ -361,6 +380,16 @@ function IOSetEnhancements(props) {
             </p>
           ))}
       </div>
+    </div>
+  );
+}
+
+function EnhancementHoverMenu({ enhancement }) {
+  const { displayName } = enhancement;
+
+  return (
+    <div className={styles.EnhHoverMenu}>
+      <div className={styles.menu}>{displayName}</div>
     </div>
   );
 }
