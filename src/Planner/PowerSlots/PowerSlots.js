@@ -113,7 +113,7 @@ function PowerSlot({ render, selectionState }) {
   const p = power ? getPower(power) : {};
   const zIndex =
     stateManager.getFromState('powerSlots').length * 2 - originalIndex * 2;
-  const { togglePowerSlot, removeSlot } = stateManager;
+  const { togglePowerSlot, removeSlots } = stateManager;
 
   const handlePillClick = (e, psIndex) => {
     const { className } = e.target;
@@ -138,10 +138,12 @@ function PowerSlot({ render, selectionState }) {
           zIndex,
         }}
       >
+        {/* Pill Title */}
         <p className="pillText">
           ({level}) {p.displayName}
         </p>
 
+        {/* Select Enhancement Menu */}
         <div className={styles.selectEnhancements}>
           <div className={styles.EnhSectionSelect}>
             <p
@@ -200,14 +202,14 @@ function PowerSlot({ render, selectionState }) {
           ) : null}
         </div>
       </div>
+
+      {/* Selected Enhancements Render */}
       <div
         style={{ zIndex: zIndex + 1 }}
         className={styles.enhancementsContainer}
       >
         {enhSlots.map(({ slotLevel, enhancement }, j) => {
           const displayLevel = slotLevel === null ? level : slotLevel;
-
-          // console.log('SLOT: ', enhancement);
 
           const images = enhancement
             ? stateManager.getEnhancementAndOverlayImages(enhancement)
@@ -218,7 +220,7 @@ function PowerSlot({ render, selectionState }) {
               {images ? (
                 <div
                   className={styles.enhancementSlot}
-                  onClick={stateManager.removeSlot.bind(this, originalIndex, j)}
+                  onClick={removeSlots.bind(this, originalIndex, j)}
                 >
                   <div
                     className={styles.enhancementImage}
@@ -238,7 +240,7 @@ function PowerSlot({ render, selectionState }) {
                 <div className={styles.enhancementSlot}>
                   <div
                     key={`${originalIndex} ${j}`}
-                    onClick={removeSlot.bind(this, originalIndex, j)}
+                    onClick={removeSlots.bind(this, originalIndex, j)}
                     className={styles.enhancementBubble}
                   >
                     <p>{displayLevel}</p>

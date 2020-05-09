@@ -568,11 +568,28 @@ export default class BuildManager {
   };
 
   addFullEnhancementSet = (powerSlotIndex, { tier, ioSetIndex }, level) => {
+    const ps = this.powerSlots[powerSlotIndex];
+
+    const newState = this._deepCloneState();
+    if (ps && ps.enhSlots) {
+      const {
+        powerSlots,
+        enhancements,
+        enhancementSlots,
+      } = this._removeSlotsReturnPowerSlotsAndEnhAndEnhSlots(
+        powerSlotIndex,
+        ps.enhSlots.map((_, i) => i)
+      );
+      newState.build.powerSlots = powerSlots;
+      newState.lookup.enhancements = enhancements;
+      newState.reference.enhancementSlots = enhancementSlots;
+    }
     const addedEnh = this._addEnhancementReturnPowerSlotStateAndEnhLookupState(
       powerSlotIndex,
       ioSets[tier][ioSetIndex].enhancements,
       level ? level : ioSets[tier][ioSetIndex].levels.max,
-      tier
+      tier,
+      newState
     );
 
     if (addedEnh === null) {
@@ -594,14 +611,6 @@ export default class BuildManager {
     // const tierValue = enhancements[type][displayName].effects.magnitudes[tier];
     // return tier === 'IO' ? tierValue[level] : tierValue;
   };
-
-  // getEnhancement = (enh) => {
-  //   const { tier, displayName, type } = enh;
-
-  //   if (type === 'set') {
-  //     // ioSets;
-  //   }
-  // };
 
   _deepCloneState = (data = this.state) => {
     if (this._isObject(data)) {
@@ -643,7 +652,6 @@ export default class BuildManager {
 
   _getEmptySlotIndex = (psIndex, powerSlots = this.powerSlots) => {
     const ps = powerSlots[psIndex];
-
     const emptySlotIndex = ps.enhSlots.findIndex(
       ({ enhancement }) => !enhancement
     );
@@ -655,12 +663,12 @@ export default class BuildManager {
     powerSlotIndex,
     enhancements,
     level,
-    tier
+    tier,
+    state = this._deepCloneState()
   ) => {
     if (!Array.isArray(enhancements)) {
       enhancements = [enhancements];
     }
-
     const newState = enhancements.reduce((acc, enhancement) => {
       const {
         type,
@@ -668,56 +676,10 @@ export default class BuildManager {
         fullName,
         imageName,
         isUnique,
-        isUniqueInPower,
-        setType,
         setIndex,
       } = enhancement;
 
-      if (isUnique) {
-        console.log('ADDING UNIQUE');
-      }
-
-      let emptySlotIndex = this._getEmptySlotIndex(powerSlotIndex);
-
-      if (
-        emptySlotIndex === null &&
-        this.powerSlots[powerSlotIndex].enhSlots.length >= 6
-      ) {
-        // There is no open slot & there isn't room for any more
-        return acc ? acc : null;
-      }
-
-      if (emptySlotIndex === null) {
-        // There is not an empty slot but there is room for one
-        const newState = this._addEnhSlotReturnSlotAndEnhState(
-          powerSlotIndex,
-          acc
-        );
-
-        if (!newState) {
-          return null;
-        }
-
-        emptySlotIndex = this._getEmptySlotIndex(
-          powerSlotIndex,
-          newState.powerSlots
-        );
-
-        if (emptySlotIndex === null) {
-          // Something went wrong and a slot wasn't added
-          // This shouldn't fire
-          return acc ? acc : null;
-        }
-
-        acc.build.powerSlots = newState.powerSlots;
-        acc.reference.enhancementSlots = newState.enhancementSlots;
-      } else {
-        // There is an empty slot
-        acc.build.powerSlots = [...this.powerSlots];
-        acc.reference.enhancementSlots = [
-          ...this.state.reference.enhancementSlots,
-        ];
-      }
+      const isUniqueInPower = type === 'set';
 
       const enhancementLookup = acc.lookup.enhancements;
       const powerInSlot = this.getPower(
@@ -735,8 +697,59 @@ export default class BuildManager {
         (isUnique && isAlreadyUsed) ||
         (isUniqueInPower && isAlreadyInPower)
       ) {
-        return null;
+        console.log('UNIQUE ISSUE');
+        return acc;
       }
+
+      let emptySlotIndex = this._getEmptySlotIndex(
+        powerSlotIndex,
+        acc.build.powerSlots
+      );
+
+      if (
+        emptySlotIndex === null &&
+        acc.build.powerSlots[powerSlotIndex].enhSlots.length >= 6
+      ) {
+        // There is no open slot & there isn't room for any more
+        console.log('NO MORE SLOTS');
+        return acc;
+      }
+
+      if (emptySlotIndex === null) {
+        console.log('NO EMPTY, SLOTS LEFT');
+        // There is not an empty slot but there is room for one
+        const newState = this._addEnhSlotReturnSlotAndEnhState(
+          powerSlotIndex,
+          acc
+        );
+        console.log('NEW STATE: ', newState);
+        if (!newState) {
+          console.log('NO NEW STATE');
+          return acc ? acc : null;
+        }
+
+        emptySlotIndex = this._getEmptySlotIndex(
+          powerSlotIndex,
+          newState.powerSlots
+        );
+
+        if (emptySlotIndex === null) {
+          // Something went wrong and a slot wasn't added
+          // This shouldn't fire
+          console.log('BAD RETURN');
+          return acc ? acc : null;
+        }
+
+        acc.build.powerSlots = newState.powerSlots;
+        acc.reference.enhancementSlots = newState.enhancementSlots;
+      } else {
+        console.log('EMPTY SLOT!');
+      }
+      // else {
+      //   // There is an empty slot
+      //   acc.build.powerSlots = [...state.build.powerSlots];
+      //   acc.reference.enhancementSlots = [...state.reference.enhancementSlots];
+      // }
 
       acc.build.powerSlots[powerSlotIndex].enhSlots[
         emptySlotIndex
@@ -747,7 +760,6 @@ export default class BuildManager {
         fullName,
         level,
         tier,
-        setType,
         setIndex,
       };
 
@@ -765,7 +777,7 @@ export default class BuildManager {
       }
 
       return acc;
-    }, this._deepCloneState());
+    }, state);
 
     return {
       powerSlots: newState.build.powerSlots,
