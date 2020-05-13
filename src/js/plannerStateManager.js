@@ -12,6 +12,9 @@ export default class BuildManager {
   constructor(state, setState) {
     this.state = state;
     this.setState = setState;
+
+    // State to be mutated and eventually set as new state
+    this.nextState = this._deepCloneState();
   }
 
   static initialState() {
@@ -47,9 +50,12 @@ export default class BuildManager {
   }
 
   get activePrimary() {
-    return powersets[this.state.build.archetype].primaries[
-      this.state.tracking.primaryIndex
-    ];
+    const {
+      build: { archetype },
+      tracking: { primaryIndex },
+    } = this.state;
+
+    return powersets[archetype].primaries[primaryIndex];
   }
 
   get secondaries() {
@@ -302,6 +308,34 @@ export default class BuildManager {
     return index > -1 ? index : null;
   };
 
+  getEnhancement = (data) => {
+    const enhancementTypes = {
+      standard: ({ fullName, tier, level }) => {
+        const enhStat = fullName.split('_').slice(1).join('_');
+        const enh = { ...enhancements.standard[enhStat] };
+        const stats =
+          tier === 'IO' ? enh.effects[tier][level] : enh.effects[tier];
+        enh.effects = stats;
+        return enh;
+      },
+      ioSet: ({ tier, setIndex, fullName }) => {
+        const { enhancements, ...setInfo } = { ...ioSets[tier][setIndex] };
+        const enhancement = enhancements.find((e) => e.fullName === fullName);
+        enhancement.set = setInfo;
+        return enhancement;
+      },
+    };
+
+    if (data.type) {
+      // Is enhancement
+      const enhType =
+        data.type === 'set' || data.type === 'attuned' ? 'ioSet' : data.type;
+      return enhancementTypes[enhType](data);
+    } else {
+      return null;
+    }
+  };
+
   isPowersetExcluded = (powersetFullName) => {
     return this.state.lookup.excludedPowersets.hasOwnProperty(powersetFullName);
   };
@@ -335,281 +369,112 @@ export default class BuildManager {
     this._updateState(e, 'tracking');
   };
 
-  togglePower = (p, poolIndex) => {
-    const newState = this._togglePowerReturnState(p, poolIndex);
-    if (newState) {
-      this.setState(newState);
-    }
+  togglePower = (p) => {
+    this._togglePower(p);
+    this._setState();
   };
 
   addSlot = (powerSlotIndex) => {
-    const {
-      powerSlots,
-      enhancementSlots,
-    } = this._addEnhSlotReturnSlotAndEnhState(powerSlotIndex);
-    this.setState({
-      ...this.state,
-      build: { ...this.state.build, powerSlots },
-      reference: { ...this.state.reference, enhancementSlots },
-    });
+    this._addEnhSlot(powerSlotIndex);
+    this._setState();
   };
 
   removeSlots = (powerSlotIndex, slotIndices) => {
-    const {
-      powerSlots,
-      enhancementSlots,
-      enhancements,
-    } = this._removeSlotsReturnPowerSlotsAndEnhAndEnhSlots(
-      powerSlotIndex,
-      slotIndices
-    );
-
-    this.setState({
-      ...this.state,
-      build: { ...this.state.build, powerSlots },
-      lookup: { ...this.state.lookup, enhancements },
-      reference: {
-        ...this.state.reference,
-        enhancementSlots,
-      },
-    });
+    this._removeSlotsFromPower(powerSlotIndex, slotIndices);
+    this._setState();
   };
-
-  _removeSlotsReturnPowerSlotsAndEnhAndEnhSlots(powerSlotIndex, slotIndices) {
-    slotIndices = Array.isArray(slotIndices) ? slotIndices : [slotIndices];
-    const slotIndexLookup = slotIndices.reduce(
-      (acc, sIndex) => {
-        if (!acc[sIndex]) {
-          acc[sIndex] = true;
-          acc.length++;
-        }
-
-        return acc;
-      },
-      { length: 0 }
-    );
-
-    if (!slotIndexLookup.length) {
-      return;
-    }
-    const enhancements = this._cloneStateByKey('enhancements');
-
-    const slotsToRemove = [];
-    const powerSlots = this.state.build.powerSlots.map((powerSlot, i) => {
-      if (i !== powerSlotIndex) {
-        return powerSlot;
-      }
-
-      const enhSlots = [...powerSlot.enhSlots];
-      enhSlots.forEach((enh, j) => {
-        const { slotLevel, enhancement } = enh;
-        if (j > 0 && slotIndexLookup[j]) {
-          slotsToRemove.push(slotLevel);
-        } else if (j === 0 && slotIndexLookup[j]) {
-          // Don't want to delete zero index, since it's automatically given for a power
-          // However, if the user is removing that slot, just delete any enhancements in it
-          enhSlots[0] = { slotLevel: null };
-        }
-
-        if (slotIndexLookup[j] && enhancement) {
-          const powerName = this.getPower(powerSlot.power).displayName;
-          if (
-            enhancements[enhancement.fullName].length === 1 &&
-            enhancements[enhancement.fullName][0].count === 1
-          ) {
-            delete enhancements[enhancement.fullName];
-          } else {
-            const enhRecords = enhancements[enhancement.fullName];
-            const indexToRemove = enhRecords.findIndex(
-              (power) => power.powerName === powerName
-            );
-            enhancements[enhancement.fullName] = enhRecords.reduce(
-              (acc, p, k) => {
-                if (k !== indexToRemove) {
-                  acc.push(p);
-                } else {
-                  const { count } = p;
-
-                  if (count > 1) {
-                    acc.push({ ...p, count: count - 1 });
-                  }
-                }
-
-                return acc;
-              },
-              []
-            );
-          }
-        }
-      });
-
-      return {
-        ...powerSlot,
-        enhSlots: enhSlots.filter((_, i) => i === 0 || !slotIndexLookup[i]),
-      };
-    });
-
-    const enhancementSlots = this._removeSlotsReturnSlotState(...slotsToRemove);
-
-    return { powerSlots, enhancementSlots, enhancements };
-  }
 
   addPowerFromNewPool = (p) => {
     const pool = this.activePool;
-    const poolName = pool.fullName;
-
-    const { poolPowerIndex } = this.state.tracking;
-    const activePoolPowers = [...this.state.build.poolPowers];
+    const { poolIndex } = p;
+    const { poolPowers: pps } = this.nextState.build;
     const poolCanBeAdded =
-      activePoolPowers.length < 4 &&
-      activePoolPowers.indexOf(poolPowerIndex) === -1 &&
-      !this.isPowersetExcluded(poolName);
+      pps.length < 4 &&
+      pps.indexOf(poolIndex) === -1 &&
+      !this.isPowersetExcluded(pool.fullName);
 
     if (!poolCanBeAdded) {
       return;
     }
 
-    activePoolPowers.push(poolPowerIndex);
+    pps.push(poolIndex);
+    this._togglePower(p);
 
-    const newState = this._togglePowerReturnState(p, poolPowerIndex);
-    if (newState) {
-      const nextDefaultPoolPowersetIndex = poolPowers.findIndex(
-        ({ fullName }, i) => {
-          return (
-            !this.isPowersetExcluded(fullName) &&
-            this.state.build.poolPowers.indexOf(i) === -1 &&
-            i !== poolPowerIndex
-          );
-        }
-      );
+    // Find a pool that hasn't been excluded & isn't active
+    this.nextState.tracking.poolPowerIndex = poolPowers.findIndex(
+      ({ fullName }, i) =>
+        !this.isPowersetExcluded(fullName) && pps.indexOf(i) === -1
+    );
 
-      this.setState({
-        ...newState,
-        build: {
-          ...newState.build,
-          poolPowers: activePoolPowers,
-        },
-        tracking: {
-          ...newState.tracking,
-          poolPowerIndex: nextDefaultPoolPowersetIndex,
-        },
-        lookup: {
-          ...newState.lookup,
-          excludedPowersets: this._excludePowersetsReturnExcluded(
-            pool.prevents,
-            pool.displayName
-          ),
-        },
-      });
-    }
+    // Update exclusion list with any sets this one prevents & itself (no double adding)
+    this._excludePowersets(pool.prevents, pool.displayName);
+    this._setState();
   };
 
   removePool = (poolIndexToRemove) => {
-    const activePowers = this.state.build.powerSlots.reduce(
-      (acc, powerSlot) => {
-        if (powerSlot.power) {
-          const {
-            power: { archetypeOrder, poolIndex, powerIndex },
-          } = powerSlot;
-          if (
-            archetypeOrder === 'poolPower' &&
-            poolIndex === poolIndexToRemove
-          ) {
-            acc.push(poolPowers[poolIndex].powers[powerIndex]);
-          }
+    this.nextState.build.powerSlots.forEach((powerSlot) => {
+      if (powerSlot.power) {
+        const { power } = powerSlot;
+        if (
+          power.archetypeOrder === 'poolPower' &&
+          power.poolIndex === poolIndexToRemove
+        ) {
+          this._removePowers(this.getPower(power));
         }
-        return acc;
-      },
-      []
-    );
+      }
+    });
 
-    const pool = poolPowers[poolIndexToRemove];
-
-    const newState = this._removePowersReturnState(...activePowers);
-    newState.build.poolPowers = this.state.build.poolPowers.filter(
+    this.nextState.build.poolPowers = this.nextState.build.poolPowers.filter(
       (index) => index !== poolIndexToRemove
     );
-    newState.lookup.excludedPowersets = this._removePoolPreventsFromExclusionReturnExcludedState(
-      pool.prevents
+
+    this.__removePoolPreventsFromExclusion(
+      poolPowers[poolIndexToRemove].prevents
     );
-    this.setState(newState);
+    this._setState();
   };
 
-  togglePowerSlot = (psIndex) =>
-    this.setState({
-      ...this.state,
-      tracking: {
-        ...this.state.tracking,
-        powerSlotIndex:
-          this.state.tracking.powerSlotIndex === psIndex ? null : psIndex,
-      },
-    });
+  togglePowerSlot = (psIndex) => {
+    const nextIndex =
+      this.state.tracking.powerSlotIndex === psIndex ? null : psIndex;
+    this.nextState.tracking.powerSlotIndex = nextIndex;
+    this._setState();
+  };
 
   addEnhancement = (powerSlotIndex, enhancement, { tier }, level = 50) => {
-    const addedEnh = this._addEnhancementReturnPowerSlotStateAndEnhLookupState(
-      powerSlotIndex,
-      enhancement,
-      level,
-      tier
-    );
-
-    if (addedEnh === null) {
-      return null;
-    }
-
-    const { powerSlots, enhancements, enhancementSlots } = addedEnh;
-
-    this.setState({
-      ...this.state,
-      build: { ...this.state.build, powerSlots },
-      lookup: { ...this.state.lookup, enhancements },
-      reference: { ...this.state.reference, enhancementSlots },
-    });
+    this._addEnhancements(powerSlotIndex, enhancement, level, tier);
+    this._setState();
   };
 
   addFullEnhancementSet = (powerSlotIndex, { tier, ioSetIndex }, level) => {
-    const ps = this.powerSlots[powerSlotIndex];
+    const ps = this.nextState.build.powerSlots[powerSlotIndex];
 
-    const newState = this._deepCloneState();
     if (ps && ps.enhSlots) {
-      const {
-        powerSlots,
-        enhancements,
-        enhancementSlots,
-      } = this._removeSlotsReturnPowerSlotsAndEnhAndEnhSlots(
+      this._removeSlotsFromPower(
         powerSlotIndex,
         ps.enhSlots.map((_, i) => i)
       );
-      newState.build.powerSlots = powerSlots;
-      newState.lookup.enhancements = enhancements;
-      newState.reference.enhancementSlots = enhancementSlots;
     }
-    const addedEnh = this._addEnhancementReturnPowerSlotStateAndEnhLookupState(
+    this._addEnhancements(
       powerSlotIndex,
       ioSets[tier][ioSetIndex].enhancements,
       level ? level : ioSets[tier][ioSetIndex].levels.max,
-      tier,
-      newState
+      tier
     );
 
-    if (addedEnh === null) {
-      return null;
-    }
-
-    const { powerSlots, enhancements, enhancementSlots } = addedEnh;
-
-    this.setState({
-      ...this.state,
-      build: { ...this.state.build, powerSlots },
-      lookup: { ...this.state.lookup, enhancements },
-      reference: { ...this.state.reference, enhancementSlots },
-    });
+    this._setState();
   };
 
   getEnhancementMag = (enhInSlot) => {
     // const { type, displayName, level, tier } = enhInSlot;
     // const tierValue = enhancements[type][displayName].effects.magnitudes[tier];
     // return tier === 'IO' ? tierValue[level] : tierValue;
+  };
+
+  _setState = () => {
+    // Individual methods mutate the state copy
+    // This method updates the state once they are done
+    this.setState(this.nextState);
   };
 
   _deepCloneState = (data = this.state) => {
@@ -630,27 +495,8 @@ export default class BuildManager {
     return data;
   };
 
-  _cloneStateByKey = (key, data = this.state) => {
-    if (!this._isObject(data)) {
-      return null;
-    }
-    for (let k in data) {
-      if (k === key) {
-        // Found key we're looking for, clone current data and return
-        return this._deepCloneState(data[k]);
-      } else {
-        // Key not found, check any children.  If not found, will return null
-        const cloned = this._cloneStateByKey(key, data[k]);
-        if (cloned !== null) {
-          return cloned;
-        }
-      }
-    }
-    // Key wasn't found at this level, return null
-    return null;
-  };
-
-  _getEmptySlotIndex = (psIndex, powerSlots = this.powerSlots) => {
+  _getEmptySlotIndex = (psIndex) => {
+    const { powerSlots } = this.nextState.build;
     const ps = powerSlots[psIndex];
     const emptySlotIndex = ps.enhSlots.findIndex(
       ({ enhancement }) => !enhancement
@@ -659,17 +505,12 @@ export default class BuildManager {
     return emptySlotIndex > -1 ? emptySlotIndex : null;
   };
 
-  _addEnhancementReturnPowerSlotStateAndEnhLookupState = (
-    powerSlotIndex,
-    enhancements,
-    level,
-    tier,
-    state = this._deepCloneState()
-  ) => {
+  _addEnhancements = (powerSlotIndex, enhancements, level, tier) => {
     if (!Array.isArray(enhancements)) {
       enhancements = [enhancements];
     }
-    const updatedState = enhancements.reduce((acc, enhancement) => {
+
+    enhancements.forEach((enhancement) => {
       const {
         type,
         displayName,
@@ -679,12 +520,12 @@ export default class BuildManager {
         setIndex,
       } = enhancement;
 
-      const isUniqueInPower = type === 'set';
+      const isUniqueInPower = type === 'set' || type === 'attuned';
 
-      const enhancementLookup = acc.lookup.enhancements;
-      const powerInSlot = this.getPower(
-        acc.build.powerSlots[powerSlotIndex].power
-      );
+      const enhancementLookup = this.nextState.lookup.enhancements;
+
+      const { power } = this.nextState.build.powerSlots[powerSlotIndex];
+      const powerInSlot = this.getPower(power);
 
       const isAlreadyUsed = enhancementLookup.hasOwnProperty(fullName);
       const isAlreadyInPower =
@@ -698,60 +539,26 @@ export default class BuildManager {
         (isUniqueInPower && isAlreadyInPower)
       ) {
         console.log('UNIQUE ISSUE');
-        return acc;
+        return;
       }
 
-      let emptySlotIndex = this._getEmptySlotIndex(
-        powerSlotIndex,
-        acc.build.powerSlots
-      );
+      let emptySlotIndex = this._getEmptySlotIndex(powerSlotIndex);
 
       if (
         emptySlotIndex === null &&
-        acc.build.powerSlots[powerSlotIndex].enhSlots.length >= 6
+        this.nextState.build.powerSlots[powerSlotIndex].enhSlots.length >= 6
       ) {
-        // There is no open slot & there isn't room for any more
-        console.log('NO MORE SLOTS');
-        return acc;
+        // No open slot & no room for another
+        return;
       }
 
       if (emptySlotIndex === null) {
-        console.log('NO EMPTY, SLOTS LEFT');
-        // There is not an empty slot but there is room for one
-        const newState = this._addEnhSlotReturnSlotAndEnhState(
-          powerSlotIndex,
-          acc
-        );
-        console.log('NEW STATE: ', newState);
-        if (!newState) {
-          console.log('NO NEW STATE');
-          return acc ? acc : null;
-        }
-
-        emptySlotIndex = this._getEmptySlotIndex(
-          powerSlotIndex,
-          newState.powerSlots
-        );
-
-        if (emptySlotIndex === null) {
-          // Something went wrong and a slot wasn't added
-          // This shouldn't fire
-          console.log('BAD RETURN');
-          return acc ? acc : null;
-        }
-
-        acc.build.powerSlots = newState.powerSlots;
-        acc.reference.enhancementSlots = newState.enhancementSlots;
-      } else {
-        console.log('EMPTY SLOT!');
+        // No empty slot but there is room for one
+        emptySlotIndex = this._addEnhSlot(powerSlotIndex);
       }
-      // else {
-      //   // There is an empty slot
-      //   acc.build.powerSlots = [...state.build.powerSlots];
-      //   acc.reference.enhancementSlots = [...state.reference.enhancementSlots];
-      // }
 
-      acc.build.powerSlots[powerSlotIndex].enhSlots[
+      // There is an empty slot (whether it was just added or already existed)
+      this.nextState.build.powerSlots[powerSlotIndex].enhSlots[
         emptySlotIndex
       ].enhancement = {
         type,
@@ -764,6 +571,8 @@ export default class BuildManager {
       };
 
       if (isAlreadyInPower) {
+        // isAlreadyInPower is actually the enhancement inside of lookup,
+        // it's just truthy if it exists
         isAlreadyInPower.count++;
       } else if (isAlreadyUsed) {
         enhancementLookup[fullName].push({
@@ -775,18 +584,93 @@ export default class BuildManager {
           { powerName: powerInSlot.displayName, count: 1 },
         ];
       }
-
-      return acc;
-    }, state);
-
-    return {
-      powerSlots: updatedState.build.powerSlots,
-      enhancements: updatedState.lookup.enhancements,
-      enhancementSlots: updatedState.reference.enhancementSlots,
-    };
+    });
   };
 
-  _clearEnhancementsFromPowerSlot;
+  _removeSlotsFromPower(powerSlotIndex, slotIndices) {
+    slotIndices = Array.isArray(slotIndices) ? slotIndices : [slotIndices];
+    const slotIndexLookup = slotIndices.reduce(
+      (acc, sIndex) => {
+        if (!acc[sIndex]) {
+          acc[sIndex] = true;
+          acc.length++;
+        }
+
+        return acc;
+      },
+      { length: 0 }
+    );
+
+    if (!slotIndexLookup.length) {
+      return;
+    }
+
+    const enhancementsLookup = this.nextState.lookup.enhancements;
+    const { powerSlots } = this.nextState.build;
+    const { enhSlots } = powerSlots[powerSlotIndex];
+
+    let slideEnhancements = false;
+    const slid = {};
+    powerSlots[powerSlotIndex].enhSlots = enhSlots.reduce((acc, enh, i) => {
+      const { slotLevel, enhancement } = enh;
+      if (i > 0 && slotIndexLookup[i]) {
+        this._removeSlotsFromRef(slotLevel);
+      } else if (i === 0 && slotIndexLookup[i]) {
+        // Removing the default slot
+        const length = enhSlots.length;
+        if (length > 1 && slotIndices.length < length) {
+          // If there are more slots than default, shift enhancements down
+          // Skip if we are removing all slots
+          slideEnhancements = true;
+        } else {
+          // Or if it's alone, just set it back to an empty slot
+          enh = { slotLevel: null };
+        }
+      }
+
+      if (slotIndexLookup[i] && enhancement) {
+        const { displayName } = this.getPower(powerSlots[powerSlotIndex].power);
+
+        if (
+          enhancementsLookup[enhancement.fullName].length === 1 &&
+          enhancementsLookup[enhancement.fullName][0].count === 1
+        ) {
+          delete enhancementsLookup[enhancement.fullName];
+        } else {
+          const indexToRemove = enhancementsLookup[
+            enhancement.fullName
+          ].findIndex((power) => power.powerName === displayName);
+          enhancementsLookup[enhancement.fullName][indexToRemove].count--;
+        }
+      }
+
+      if (!slotIndexLookup[i] || i === 0) {
+        // Only push enhancement slot into acc if not removing it
+        if (slideEnhancements) {
+          // If slideEnhancements was set to true,
+          // look for the next enhancement that isn't going to be deleted
+          const nextEnhancementIndex = enhSlots.findIndex(
+            (_, j) => !slotIndexLookup[j] && !slid[j]
+          );
+
+          if (nextEnhancementIndex > -1) {
+            // If found, set its enhancement value to the current slot,
+            // otherwise, exclude this slot
+            slid[nextEnhancementIndex] = true;
+            acc.push({
+              ...enh,
+              enhancement: enhSlots[nextEnhancementIndex].enhancement,
+            });
+          }
+        } else {
+          // If not sliding enhancements, just push the current value
+          acc.push(enh);
+        }
+      }
+
+      return acc;
+    }, []);
+  }
 
   _updateState = (e, stateSection) => {
     const specialCases = {
@@ -799,33 +683,32 @@ export default class BuildManager {
 
     const { name, value } = e.target;
 
-    this.setState(
-      specialCases[name]
-        ? this._handleSpecialCases(name, value)
-        : {
-            ...this.state,
-            [stateSection]: { ...this.state[stateSection], [name]: value },
-          }
-    );
+    if (specialCases[name]) {
+      this._handleSpecialCases(name, value);
+    } else {
+      this.nextState[stateSection][name] = value;
+    }
+
+    this._setState();
   };
 
   _assignPowerSlotIndex = (powersLevel) => {
     if (powersLevel <= this.activeLevel) {
       // If the user selects a skill that fits into the active slot,
       // use the active slot
-      return this.state.tracking.activeLevelIndex;
+      return this.nextState.tracking.activeLevelIndex;
     }
 
     // Otherwise, find a slot that is open & >= the skill's level
-    const nextAbovePowerSlotIndex = this.state.build.powerSlots.findIndex(
+    const nextAbovePowerSlotIndex = this.nextState.build.powerSlots.findIndex(
       ({ level, power }) => level >= powersLevel && !power
     );
 
     return nextAbovePowerSlotIndex > -1 ? nextAbovePowerSlotIndex : null;
   };
 
-  _removeSlotsReturnSlotState = (...slotLevels) => {
-    const updatedEnhSlots = [...this.state.reference.enhancementSlots];
+  _removeSlotsFromRef = (...slotLevels) => {
+    const updatedEnhSlots = this.nextState.reference.enhancementSlots;
     if (slotLevels.length) {
       slotLevels
         .filter((lvl) => !isNaN(parseInt(lvl, 10)))
@@ -840,38 +723,34 @@ export default class BuildManager {
           }
         });
     }
-
-    return updatedEnhSlots;
   };
 
-  _excludePowersetsReturnExcluded = (
-    powersetFullNames,
-    excludedByDisplayName
-  ) => {
-    if (!powersetFullNames) {
-      return this.state.lookup.excludedPowersets;
+  _excludePowersets = (powersetFullNames, excludedBy) => {
+    if (!powersetFullNames || !excludedBy) {
+      return;
     }
 
     powersetFullNames = Array.isArray(powersetFullNames)
       ? powersetFullNames
       : [powersetFullNames];
-    const excludedPowersets = { ...this.state.lookup.excludedPowersets };
+
+    const { excludedPowersets } = this.nextState.lookup;
+
     powersetFullNames.forEach((name) => {
       if (excludedPowersets.hasOwnProperty(name)) {
-        excludedPowersets[name].push(excludedByDisplayName);
+        excludedPowersets[name].push(excludedBy);
       } else {
-        excludedPowersets[name] = [excludedByDisplayName];
+        excludedPowersets[name] = [excludedBy];
       }
     });
-    return excludedPowersets;
   };
 
-  _removePoolPreventsFromExclusionReturnExcludedState(prevents) {
+  __removePoolPreventsFromExclusion(prevents) {
     if (!prevents || !prevents.length) {
-      return this.state.lookup;
+      return;
     }
 
-    const excludedPowersets = { ...this.state.lookup.excludedPowersets };
+    const { excludedPowersets } = this.nextState.lookup;
     if (prevents) {
       prevents.forEach((powersetFullName) => {
         if (
@@ -892,58 +771,48 @@ export default class BuildManager {
         }
       });
     }
-
-    return excludedPowersets;
   }
 
-  _addEnhSlotReturnSlotAndEnhState = (powerSlotIndex, state = this.state) => {
-    const powerSlot = state.build.powerSlots[powerSlotIndex];
+  _addEnhSlot = (powerSlotIndex) => {
+    const powerSlot = this.nextState.build.powerSlots[powerSlotIndex];
     if (powerSlot.enhSlots.length < 6) {
-      const slotIndex = state.reference.enhancementSlots.findIndex(
+      const slotIndex = this.nextState.reference.enhancementSlots.findIndex(
         ({ level, inUse }) => level >= powerSlot.level && !inUse
       );
       if (slotIndex > -1) {
-        const slot = state.reference.enhancementSlots[slotIndex];
-        const powerSlots = [...state.build.powerSlots].map((ps, i) => {
-          if (i !== powerSlotIndex) {
-            return ps;
-          }
+        const { level: slotLevel } = this.nextState.reference.enhancementSlots[
+          slotIndex
+        ];
+        // Add new slot
+        powerSlot.enhSlots.push({ slotLevel });
+        // Sort slots by level
+        powerSlot.enhSlots.sort((a, b) => a.slotLevel - b.slotLevel);
 
-          return {
-            ...ps,
-            enhSlots: [...ps.enhSlots, { slotLevel: slot.level }].sort(
-              (a, b) => a.slotLevel - b.slotLevel
-            ),
-          };
-        });
-        const enhancementSlots = [...state.reference.enhancementSlots].map(
-          (s, i) => {
-            if (i !== slotIndex) {
-              return s;
-            }
+        this.nextState.reference.enhancementSlots[slotIndex].inUse = true;
 
-            return { ...s, inUse: true };
-          }
-        );
-        return { powerSlots, enhancementSlots };
+        return powerSlot.enhSlots.length - 1;
       }
     }
+    return null;
   };
 
-  _togglePowerReturnState = (p, poolIndex) => {
+  _togglePower = (p) => {
     const isPrimary = p.archetypeOrder === 'primary';
     const { powerIndex } = p;
-    const powerLookup = { ...this.state.lookup.powers };
+    const powerLookup = this.nextState.lookup.powers;
     if (this.buildHasPower(p.fullName)) {
-      return this._removePowersReturnState(p);
+      // If removing the power, simply do that and return;
+      this._removePowers(p);
     } else {
       const isPickingLevel1Power =
         p.level === 1 &&
         ((isPrimary && !this.state.build.powerSlots[0].power) ||
           (!isPrimary && !this.state.build.powerSlots[1].power));
 
+      const powerSlots = this.nextState.build.powerSlots;
       if (isPickingLevel1Power) {
-        const powerSlots = this._cloneStateByKey('powerSlots');
+        // Level 1 behavior is different from any other power slots (since there are 2 of them).
+        // User can pick from one of two primary abilities and is locked in to the first secondary.
         if (isPrimary) {
           // If the user selected one of the two primary level 1 powers, save it
           powerSlots[0] = {
@@ -964,62 +833,36 @@ export default class BuildManager {
           };
           powerLookup[power.fullName] = 1;
         }
-        return {
-          ...this.state,
-          build: { ...this.state.build, powerSlots },
-          lookup: { ...this.state.lookup, powers: powerLookup },
-          tracking: {
-            ...this.state.tracking,
-            activeLevelIndex: findLowestUnusedSlot(powerSlots),
-          },
-        };
+
+        this.nextState.tracking.activeLevelIndex = findLowestUnusedSlot(
+          powerSlots
+        );
       } else {
-        return addPowerToPowerSlot.call(this);
-      }
-    }
-
-    function addPowerToPowerSlot(
-      powerSlotIndex = this._assignPowerSlotIndex(p.level),
-      newPowerIndex = powerIndex,
-      archetypeOrder = p.archetypeOrder
-    ) {
-      if (powerSlotIndex === null) {
-        // There are no power slots left that can support the ability
-        return;
-      }
-
-      const powerSlots = [...this.state.build.powerSlots];
-      powerSlots[powerSlotIndex] = {
-        ...powerSlots[powerSlotIndex],
-        power: { archetypeOrder, powerIndex: newPowerIndex, poolIndex },
-        enhSlots: emptyDefaultSlot(),
-      };
-
-      return {
-        ...this.state,
-        build: { ...this.state.build, powerSlots },
-        lookup: {
-          ...this.state.lookup,
-          powers: {
-            ...this.state.lookup.powers,
-            [p.fullName]: powerSlotIndex,
+        // Adding to a slot above level 1
+        const powerSlotIndex = this._assignPowerSlotIndex(p.level);
+        powerSlots[powerSlotIndex] = {
+          ...powerSlots[powerSlotIndex],
+          power: {
+            archetypeOrder: p.archetypeOrder,
+            powerIndex: powerIndex,
+            poolIndex: p.poolIndex,
           },
-        },
-        tracking: {
-          ...this.state.tracking,
+          enhSlots: emptyDefaultSlot(),
+        };
+
+        powerLookup[p.fullName] = powerSlotIndex;
+        this.nextState.tracking = {
+          ...this.nextState.tracking,
           activeLevelIndex: findLowestUnusedSlot(powerSlots),
           powerSlotIndex: null,
-        },
-        // this.state.build.powerSlots[powerSlotIndex].level === this.state.build.activeLevel
-        // ? findLowestUnusedSlot(powerSlots)
-        // : this.state.build.activeLevel,
-      };
+        };
+      }
     }
   };
 
-  _addPowerToSlotReturnSlotAndPowerLookupState = (p, psIndex) => {
-    const powerSlots = this._cloneStateByKey('powerSlots');
-    const powersLookup = this._cloneStateByKey('powers');
+  _addPowerToSlot = (p, psIndex) => {
+    const { powerSlots } = this.nextState.build;
+    const powersLookup = this.nextState.lookup.powers;
     if (
       !powerSlots[psIndex].hasOwnProperty('power') &&
       p.level <= powerSlots[psIndex].level &&
@@ -1032,16 +875,14 @@ export default class BuildManager {
       powerSlots[psIndex].enhSlots = emptyDefaultSlot();
       powersLookup[p.fullName] = psIndex;
     }
-
-    return { powerSlots, powers: powersLookup };
   };
 
-  _removePowersReturnState = (...powers) => {
-    if (!powers.length) {
-      return { ...this.state };
+  _removePowers = (...powers) => {
+    if (!powers || !powers.length) {
+      return;
     }
     // Remove power that's been added
-    const powerLookup = { ...this.state.lookup.powers };
+    const powerLookup = this.nextState.lookup.powers;
     const powerSlotIndicesRemoved = powers.reduce((acc, p) => {
       if (powerLookup.hasOwnProperty(p.fullName)) {
         acc[powerLookup[p.fullName]] = true;
@@ -1051,80 +892,70 @@ export default class BuildManager {
       return acc;
     }, {});
     let lowestPowerSlotIndex;
-    let slotsToRemove = [];
-    const powerSlots = this.state.build.powerSlots.map((powerSlot, i) => {
-      if (
-        !powerSlotIndicesRemoved.hasOwnProperty(i) ||
-        powerSlot.type === 'default'
-      ) {
-        return powerSlot;
+
+    this.nextState.build.powerSlots = this.nextState.build.powerSlots.map(
+      (powerSlot, i) => {
+        if (
+          !powerSlotIndicesRemoved.hasOwnProperty(i) ||
+          powerSlot.type === 'default'
+        ) {
+          // If this is not a power slot we're removing or if the power is default,
+          // do nothing
+          return powerSlot;
+        }
+
+        const { level, type, enhSlots } = powerSlot;
+
+        // Otherwise, remove all existing slots
+        // Index 0 is ignored since it's attached to the power slot
+        this._removeSlotsFromRef(
+          ...enhSlots.slice(1).map(({ slotLevel }) => slotLevel)
+        );
+
+        if (lowestPowerSlotIndex === undefined) {
+          // Record the first power removed to set it as the active Index next state
+          lowestPowerSlotIndex = i;
+        }
+        return { level, type };
       }
-      const { level, type, enhSlots } = powerSlot;
-      slotsToRemove.push(
-        ...enhSlots.slice(1).map(({ slotLevel }) => slotLevel)
-      );
-      if (lowestPowerSlotIndex === undefined) {
-        lowestPowerSlotIndex = i;
-      }
-      return { level, type };
-    });
+    );
 
-    const enhancementSlots = this._removeSlotsReturnSlotState(...slotsToRemove);
-
-    const activeLevelIndex =
-      lowestPowerSlotIndex < this.state.tracking.activeLevelIndex
-        ? findLowestUnusedSlot(powerSlots)
-        : this.state.tracking.activeLevelIndex;
-
-    return {
-      ...this.state,
-      build: { ...this.state.build, powerSlots },
-      lookup: { ...this.state.lookup, powers: powerLookup },
-      tracking: {
-        ...this.state.tracking,
-        activeLevelIndex,
-      },
-      reference: { ...this.state.reference, enhancementSlots },
-    };
+    this.nextState.tracking.activeLevelIndex =
+      lowestPowerSlotIndex < this.nextState.tracking.activeLevelIndex
+        ? findLowestUnusedSlot(this.nextState.build.powerSlots)
+        : this.nextState.tracking.activeLevelIndex;
   };
 
   _handleSpecialCases = (name, value) => {
     switch (name) {
       case 'archetype':
-        const initialState = this.constructor.initialState();
-        initialState.build.archetype = value;
-        initialState.build.origin = this.state.build.origin;
-        initialState.build.name = this.state.build.name;
-        return initialState;
+        this.nextState = this.constructor.initialState();
+        this.nextState.build.archetype = value;
+        this.nextState.build.origin = this.state.build.origin;
+        this.nextState.build.name = this.state.build.name;
+        break;
       case 'primaryIndex':
       case 'secondaryIndex':
       case 'epicPoolIndex':
         const archetypeOrder = name.substring(0, name.length - 5);
-        const aoCapital =
-          archetypeOrder[0].toUpperCase() + archetypeOrder.substring(1);
-        const activeSet = this[`active${aoCapital}`];
-        const powersToRemove = this.state.build.powerSlots.reduce(
-          (acc, powerSlot) => {
-            if (powerSlot.power) {
-              if (powerSlot.power.archetypeOrder === archetypeOrder) {
-                acc.push(activeSet.powers[powerSlot.power.powerIndex]);
-              }
+
+        this._removePowers(
+          ...this.state.build.powerSlots.reduce((acc, powerSlot) => {
+            // Remove all powers that belong to the archetypeOrder in question
+            if (
+              powerSlot.power &&
+              powerSlot.power.archetypeOrder === archetypeOrder
+            ) {
+              acc.push(this.getPower(powerSlot.power));
             }
             return acc;
-          },
-          []
+          }, [])
         );
-        return {
-          ...this._removePowersReturnState(...powersToRemove),
-          tracking: { ...this.state.tracking, [name]: parseInt(value, 10) },
-        };
-      // case 'poolPowerIndex':
-      //   return {
-      //     ...this.state.build,
-      //     [name]: poolPowers.find(({ displayName }) => displayName === value),
-      //   };
+
+        this.nextState.tracking[name] = parseInt(value, 10);
+        break;
       default:
-        return this.state.build;
+        return;
     }
   };
 
