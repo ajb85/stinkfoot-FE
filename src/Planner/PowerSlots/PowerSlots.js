@@ -280,10 +280,10 @@ function StandardEnhancements(props) {
                   50
                 )}
               >
-                {/* {console.log('STANDARD: ', enh)} */}
                 <img src={overlayImg} alt={enh.fullName} />
                 <img src={enh.image} alt={enh.fullName} />
-                <EnhancementHoverMenu enhancement={enh} />
+
+                <EnhancementPreviewMenu enhancement={enh} />
               </div>
             </div>
           ))}
@@ -316,6 +316,8 @@ function IOSetEnhancements(props) {
   const stateManager = React.useContext(PlannerContext);
 
   const overlayImg = stateManager.getEnhancementOverlay('IO');
+
+  const isViewingEnhancement = enhNavigation.ioSetIndex !== null;
 
   const updateNavigation = (i) => {
     setEnhNavigation({
@@ -353,7 +355,11 @@ function IOSetEnhancements(props) {
               {/* {console.log('IO: ', enh)} */}
               {!enh.isAttuned && <img src={overlayImg} alt={enh.fullName} />}
               <img src={enh.image} alt={enh.fullName} />
-              <EnhancementHoverMenu enhancement={enh} />
+              {isViewingEnhancement ? (
+                <EnhancementPreviewMenu enhancement={enh} />
+              ) : (
+                <SetPreviewMenu set={enh} />
+              )}
             </div>
           </div>
         ))}
@@ -386,14 +392,36 @@ function IOSetEnhancements(props) {
   );
 }
 
-function EnhancementHoverMenu({ enhancement }) {
-  const { displayName } = enhancement;
+function EnhancementPreviewMenu(props) {
+  // const stateManager = React.useContext(PlannerContext);
+  // console.log('ENHANCEMENT: ', props.enhancement);
+  const { displayName } = props.enhancement;
 
   return (
     <div className={styles.EnhHoverMenu}>
-      <div className={styles.menu}>{displayName}</div>
+      <div className={styles.menu}>
+        <h2>{displayName}</h2>
+      </div>
     </div>
   );
 }
+
+function SetPreviewMenu(props) {
+  // const stateManager = React.useContext(PlannerContext);
+  const { displayName } = props.set;
+  // console.log('SET: ', props.set);
+
+  return (
+    <div className={styles.EnhHoverMenu}>
+      <div className={styles.menu}>
+        <h2>{displayName}</h2>
+      </div>
+    </div>
+  );
+}
+
+// function SlottedEnhancementMenu(props) {
+//   return <div>Hello World</div>;
+// }
 
 export default PowerSlots;
