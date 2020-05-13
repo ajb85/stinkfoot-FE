@@ -8,6 +8,7 @@ function Dropdown(props) {
   );
 
   const selected = props.options.find(({ value }) => value === props.selected);
+
   useEffect(() => {
     addDropdown(props.name);
 
