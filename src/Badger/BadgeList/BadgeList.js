@@ -7,7 +7,7 @@ import styles from './styles.module.scss';
 function BadgeList({ section, search }) {
   const { badges, character } = useBadges();
 
-  if (!badges.characters || !badges.active) {
+  if (!Object.keys(badges.characters).length || !badges.active) {
     return <div />;
   }
 
