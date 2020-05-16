@@ -14,7 +14,7 @@ function Badger(props) {
     lastSection ? JSON.parse(lastSection) : null
   );
 
-  const searchState = useState('');
+  const filterState = useState({ search: '', showCompleted: false });
 
   React.useEffect(() => {
     if (!section) {
@@ -29,9 +29,9 @@ function Badger(props) {
       <Selection
         section={section}
         updateSection={saveActiveSection(setSection)}
-        searchState={searchState}
+        filterState={filterState}
       />
-      <BadgeList section={section} search={searchState[0]} />
+      <BadgeList section={section} filters={filterState[0]} />
     </div>
   );
 }

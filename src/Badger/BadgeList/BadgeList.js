@@ -4,7 +4,7 @@ import { useBadges } from 'Providers/Badges.js';
 
 import styles from './styles.module.scss';
 
-function BadgeList({ section, search }) {
+function BadgeList({ section, filters }) {
   const { badges, character } = useBadges();
 
   if (!Object.keys(badges.characters).length || !badges.active) {
@@ -12,10 +12,10 @@ function BadgeList({ section, search }) {
   }
 
   const badgeList = badges.characters[badges.active][section].filter(
-    filterSearch(search)
+    filterSearch(filters)
   );
 
-  const { bonusNotes, location, zone } = badgeList[0];
+  const { bonusNotes, location, zone } = badgeList[0] || {};
 
   return (
     <div className={styles.BadgeList}>
@@ -46,6 +46,11 @@ function BadgeList({ section, search }) {
             <h3>Notes</h3>
           </div>
         </div>
+        {!badgeList.length && (
+          <p style={{ textAlign: 'center', padding: 18 }}>
+            Oops! No badges match that criteria!
+          </p>
+        )}
         {badgeList.map(
           mapBadges(character.toggleBadge.bind(this, badges.active, section))
         )}
@@ -108,31 +113,32 @@ const mapBadges = (complete) => (b, i) => {
   );
 };
 
-const filterSearch = (search) => (b) => {
-  let hasProperty;
-  for (let k in b) {
-    if (b[k]) {
-      hasProperty = true;
-      break;
-    }
-  }
-  if (!search) {
-    return hasProperty;
+const filterSearch = (filters) => (b) => {
+  const { showCompleted } = filters;
+  const search = filters.search.toLowerCase();
+
+  if (!showCompleted && b.completed) {
+    return false;
   }
 
   for (let key in b) {
     if (Array.isArray(b[key])) {
+      // !!! CURRENTLY UNUSED AND THUS OUTDATED !!!
       for (let i = 0; i < b[key].length; i++) {
-        if (b[key][i].includes(search)) {
+        if (b[key][i].toLowerCase().includes(search)) {
           return true;
         }
       }
     } else if (
       typeof b[key] === 'number' &&
-      b[key].toString().includes(search)
+      b[key].toString().toLowerCase().includes(search)
     ) {
+      // !!! CURRENTLY UNUSED AND THUS OUTDATED !!!
       return true;
-    } else if (typeof b[key] === 'string' && b[key].includes(search)) {
+    } else if (
+      typeof b[key] === 'string' &&
+      b[key].toLowerCase().includes(search)
+    ) {
       return true;
     }
   }

@@ -3,9 +3,10 @@ import React from 'react';
 import { useBadges } from 'Providers/Badges.js';
 import { badgeTypes } from '../data/';
 
-function Selection({ section, updateSection, searchState }) {
+function Selection({ section, updateSection, filterState }) {
   const { badges } = useBadges();
-  // const [search, setSearch] = searchState;
+  const [filters] = filterState;
+
   return (
     <div>
       {badges.active && Object.keys(badges.characters).length > 0 && (
@@ -17,11 +18,23 @@ function Selection({ section, updateSection, searchState }) {
           ))}
         </select>
       )}
-      {/* <input type="text" value={search} onChange={saveSearch(setSearch)} /> */}
+      <input
+        type="text"
+        value={filters.search}
+        onChange={saveSearch(filterState)}
+        placeholder="Search for badge"
+      />
+      <button type="button" onClick={toggleShowComplete(filterState)}>
+        {filters.showCompleted ? 'Showing Completed' : 'Hiding Completed'}
+      </button>
     </div>
   );
 }
 
-// const saveSearch = (setSearch) => (e) => setSearch(e.target.value);
+const saveSearch = ([filters, setFilters]) => (e) =>
+  setFilters({ ...filters, search: e.target.value });
+
+const toggleShowComplete = ([filters, setFilters]) => () =>
+  setFilters({ ...filters, showCompleted: !filters.showCompleted });
 
 export default Selection;
