@@ -1,6 +1,7 @@
 @import 'styles/variables.scss';
 
 .BadgeList {
+  margin-top: $lh * 3;
   .row {
     display: flex;
     align-items: center;
@@ -21,7 +22,6 @@
 
       &:first-of-type {
         width: 100px;
-        line-height: $lh * 6;
       }
 
       &.name {
@@ -100,6 +100,10 @@
       display: table-cell;
       vertical-align: middle;
       padding: 0 $lh/2;
+
+      &:first-of-type {
+        line-height: $lh * 6;
+      }
     }
   }
 }
