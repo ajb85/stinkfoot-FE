@@ -20,12 +20,30 @@ function BadgeList({ section, search }) {
   return (
     <div className={styles.BadgeList}>
       <div className={styles.row}>
-        <h3>Availability</h3>
-        <h3 className={styles.name}>Name</h3>
-        {zone && <h3 className={styles.zone}>Zone</h3>}
-        {location && <h3 className={styles.location}>Location</h3>}
-        {bonusNotes && <h3 className={styles.bonusNotes}>Receive</h3>}
-        <h3>Notes</h3>
+        <div className={joinClass('cell', 'avail')}>
+          <h3>Availability</h3>
+        </div>
+        <div className={joinClass('cell', 'names')}>
+          <h3 className={styles.name}>Name</h3>
+        </div>
+        {zone && (
+          <div className={joinClass('cell', 'zone')}>
+            <h3 className={styles.zone}>Zone</h3>
+          </div>
+        )}
+        {location && (
+          <div className={joinClass('cell', 'location')}>
+            <h3 className={styles.location}>Location</h3>
+          </div>
+        )}
+        {bonusNotes && (
+          <div className={joinClass('cell', 'bonusNotes')}>
+            <h3 className={styles.bonusNotes}>Receive</h3>
+          </div>
+        )}
+        <div className={joinClass('cell', 'notes')}>
+          <h3>Notes</h3>
+        </div>
       </div>
       {badgeList.map(
         mapBadges(character.toggleBadge.bind(this, badges.active, section))
@@ -42,15 +60,20 @@ const mapBadges = (complete) => (b, i) => {
     <div
       key={i}
       className={styles.row}
-      style={{ textDecoration: completed ? 'line-through' : null }}
+      style={{
+        textDecoration: completed ? 'line-through' : null,
+        opacity: completed ? 0.5 : null,
+      }}
       onClick={complete.bind(this, i)}
     >
-      <p>
-        {hero && 'H'}
-        {villain && 'V'}
-        {praetorian && 'P'}
-      </p>
-      <div className={styles.namesContainer}>
+      <div className={joinClass('cell', 'avail')}>
+        <p>
+          {hero && 'H'}
+          {villain && 'V'}
+          {praetorian && 'P'}
+        </p>
+      </div>
+      <div className={joinClass('cell', 'names')}>
         {name.split(' / ').map((n) => (
           <p key={n} className={styles.name}>
             {n}
@@ -58,21 +81,21 @@ const mapBadges = (complete) => (b, i) => {
         ))}
       </div>
       {zone && (
-        <div className={styles.zone}>
+        <div className={joinClass('cell', 'zone')}>
           <p>{zone}</p>
         </div>
       )}
       {location && (
-        <div className={styles.location}>
+        <div className={joinClass('cell', 'location')}>
           <p>{`(${location.x}, ${location.y}, ${location.z})`}</p>
         </div>
       )}
       {bonusNotes && (
-        <div className={styles.bonusNotes}>
+        <div className={joinClass('cell', 'bonusNotes')}>
           <p>{bonusNotes}</p>
         </div>
       )}
-      <div className={styles.notes}>
+      <div className={joinClass('cell', 'notes')}>
         <p>{notes}</p>
       </div>
     </div>
@@ -80,8 +103,15 @@ const mapBadges = (complete) => (b, i) => {
 };
 
 const filterSearch = (search) => (b) => {
+  let hasProperty;
+  for (let k in b) {
+    if (b[k]) {
+      hasProperty = true;
+      break;
+    }
+  }
   if (!search) {
-    return true;
+    return hasProperty;
   }
 
   for (let key in b) {
@@ -103,5 +133,7 @@ const filterSearch = (search) => (b) => {
 
   return false;
 };
+
+const joinClass = (c1, c2) => styles[c1] + ' ' + styles[c2];
 
 export default BadgeList;

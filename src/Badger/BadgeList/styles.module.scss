@@ -4,105 +4,81 @@
   margin-top: $lh * 3;
   .row {
     display: flex;
-    align-items: center;
+    // align-items: center;
     cursor: pointer;
-    width: fit-content;
+  }
 
-    & + .row {
-      height: $lh * 6;
-    }
+  .cell {
+    border: 1px solid $secondary;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    & > h3,
-    & > p {
-      border: 1px solid $secondary;
+    h3 {
+      padding: $lh/2;
       line-height: $lh;
-      text-align: center;
-      padding-left: 5px;
-      padding-right: 5px;
-
-      &:first-of-type {
-        width: 100px;
-      }
-
-      &.name {
-        width: 200px;
-      }
-
-      &.bonusNotes {
-        width: 100px;
-      }
     }
 
-    .namesContainer {
-      max-width: 200px;
-      border: 1px solid $secondary;
-    }
-
-    & > div {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: $lh * 6;
-      border: 1px solid $secondary;
-
-      p {
-        font-size: 12px;
-        line-height: $lh;
-        text-align: center;
-        padding-left: 5px;
-        padding-right: 5px;
-
-        &.name {
-          width: 200px;
-        }
-      }
-    }
-
-    .notes {
-      display: flex;
-      align-items: center;
-      border: 1px solid $secondary;
-      p {
-        font-size: 12px;
-        display: table-cell;
-        vertical-align: middle;
-        padding: 0 $lh/2;
-        width: 300px;
-        text-align: left;
-      }
-    }
-
-    .location {
-      width: 120px;
-    }
-
-    .zone {
-      width: 100px;
-      word-wrap: break-word;
-    }
-
-    & > h3 {
-      font-weight: 800;
-      padding: $lh/2 0;
-
-      &:last-of-type {
-        width: 300px;
-        text-align: left;
-        padding-left: 5px;
-        padding-right: 5px;
-      }
-    }
-
-    & > p {
+    p {
       font-size: 12px;
-      height: $lh * 6;
-      display: table-cell;
-      vertical-align: middle;
-      padding: 0 $lh/2;
+      line-height: $lh;
+      padding: $lh/4 $lh/2;
+    }
 
-      &:first-of-type {
-        line-height: $lh * 6;
+    &.avail {
+      width: 100px;
+
+      h3,
+      p {
+        text-align: center;
+      }
+    }
+
+    &.names {
+      flex-direction: column;
+      width: 200px;
+      padding: $lh/2;
+
+      h3,
+      p {
+        text-align: center;
+        padding: 0;
+      }
+    }
+
+    &.zone {
+      width: 100px;
+
+      h3,
+      p {
+        text-align: center;
+      }
+    }
+
+    &.location {
+      width: 150px;
+
+      h3,
+      p {
+        text-align: center;
+      }
+    }
+
+    &.bonusNotes {
+      width: 200px;
+
+      h3,
+      p {
+        text-align: center;
+      }
+    }
+
+    &.notes {
+      width: 300px;
+
+      h3,
+      p {
+        text-align: left;
       }
     }
   }
