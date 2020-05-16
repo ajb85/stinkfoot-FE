@@ -2,6 +2,8 @@ import React from 'react';
 
 import { useBadges } from 'Providers/Badges.js';
 
+import styles from './styles.module.scss';
+
 export default function ManageCharacter(props) {
   const { badges, character } = useBadges();
   const [name, setName] = React.useState('');
@@ -9,7 +11,7 @@ export default function ManageCharacter(props) {
   const characterCount = Object.keys(badges.characters).length;
 
   return (
-    <div>
+    <div className={styles.ManageCharacter}>
       {/* If there are characters */}
       {characterCount > 0 && (
         <div>

@@ -6,6 +6,8 @@ import BadgeList from './BadgeList/';
 
 import { badgeTypes } from './data/';
 
+import styles from './styles.module.scss';
+
 function Badger(props) {
   const lastSection = localStorage.getItem('activeBadgeSection');
   const [section, setSection] = useState(
@@ -22,7 +24,7 @@ function Badger(props) {
   }, [section]);
 
   return (
-    <div>
+    <div className={styles.Badger}>
       <ManageCharacter />
       <Selection
         section={section}
