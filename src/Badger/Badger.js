@@ -37,7 +37,6 @@ function Badger(props) {
 }
 
 const saveActiveSection = (setSection) => (e) => {
-  console.log('EFK: ', e.target.value);
   saveLocal(e.target.value);
   setSection(e.target.value);
 };
