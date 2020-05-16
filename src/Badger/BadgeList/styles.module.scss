@@ -1,0 +1,88 @@
+@import 'styles/variables.scss';
+
+.BadgeList {
+  .row {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    & + .row {
+      height: $lh * 6;
+    }
+
+    & > h3,
+    & > p {
+      border: 1px solid $secondary;
+      line-height: $lh;
+      text-align: center;
+      padding-left: 5px;
+      padding-right: 5px;
+
+      &:first-of-type {
+        width: 100px;
+      }
+
+      &.name {
+        width: 200px;
+      }
+
+      &.location {
+        width: 100px;
+      }
+
+      &.zone {
+        width: 100px;
+      }
+
+      &.bonusNotes {
+        width: 100px;
+      }
+    }
+
+    .namesContainer {
+      max-width: 200px;
+      border: 1px solid $secondary;
+    }
+
+    & > div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: $lh * 6;
+
+      p {
+        width: 200px;
+        font-size: 12px;
+        line-height: $lh;
+        text-align: center;
+      }
+    }
+
+    & > h3 {
+      font-weight: 800;
+      padding: $lh/2 0;
+
+      &:last-of-type {
+        width: 300px;
+        text-align: left;
+        padding-left: 5px;
+        padding-right: 5px;
+      }
+    }
+
+    & > p {
+      font-size: 12px;
+      height: $lh * 6;
+      line-height: $lh * 6;
+      display: table-cell;
+      vertical-align: middle;
+      padding: 0 $lh/2;
+
+      &:last-of-type {
+        width: 300px;
+        text-align: left;
+      }
+    }
+  }
+}
