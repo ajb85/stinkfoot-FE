@@ -6,7 +6,10 @@ import styles from './styles.module.scss';
 
 function BadgeList({ section, search }) {
   const { badges, character } = useBadges();
-  console.log('B', badges);
+
+  if (!badges.characters || !badges.active) {
+    return <div />;
+  }
   const badgeList = badges.characters[badges.active][section].filter(
     filterSearch(search)
   );
