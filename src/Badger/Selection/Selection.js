@@ -22,6 +22,6 @@ function Selection({ section, updateSection, searchState }) {
   );
 }
 
-const saveSearch = (setSearch) => (e) => setSearch(e.target.value);
+// const saveSearch = (setSearch) => (e) => setSearch(e.target.value);
 
 export default Selection;
