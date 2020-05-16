@@ -1,1 +1,908 @@
-{"fullName":"IOSet.Impervium_Armor","enhancements":[{"type":"set","description":{"short":"+RES (all), Reduces End cost","long":"Enhances the damage resistance of a power by {Boost.Attrib.Resist.Scale}% and reduces endurance cost by {Boost.Attrib.Endurance.Scale}%"},"isUnique":false,"fullName":"Boosts.Attuned_Impervium_Armor_A.Attuned_Impervium_Armor_A","setName":"Impervium_Armor","displayName":"Resistance/Endurance","effects":[{"mag":0.159375,"effectId":"Resist","damageType":1},{"mag":0.159375,"effectId":"Boosts_20","damageType":2},{"mag":0.159375,"effectId":"Boosts_20","damageType":3},{"mag":0.159375,"effectId":"Boosts_20","damageType":4},{"mag":0.159375,"effectId":"Boosts_20","damageType":5},{"mag":0.159375,"effectId":"Boosts_20","damageType":6},{"mag":0.159375,"effectId":"Boosts_20","damageType":7},{"mag":0.159375,"effectId":"Boosts_20","damageType":8},{"mag":0.265,"effectId":"Endurance"}]},{"type":"set","description":{"short":"+RES (all), +Rech","long":"Enhances the damage resistance of a power by {Boost.Attrib.Resist.Scale}% and reduces recharge time by {Boost.Attrib.Recharge.Scale}%"},"isUnique":false,"fullName":"Boosts.Attuned_Impervium_Armor_B.Attuned_Impervium_Armor_B","setName":"Impervium_Armor","displayName":"Resistance/Recharge","effects":[{"mag":0.159375,"effectId":"Resist","damageType":1},{"mag":0.159375,"effectId":"Boosts_20","damageType":2},{"mag":0.159375,"effectId":"Boosts_20","damageType":3},{"mag":0.159375,"effectId":"Boosts_20","damageType":4},{"mag":0.159375,"effectId":"Boosts_20","damageType":5},{"mag":0.159375,"effectId":"Boosts_20","damageType":6},{"mag":0.159375,"effectId":"Boosts_20","damageType":7},{"mag":0.159375,"effectId":"Boosts_20","damageType":8},{"mag":0.265,"effectId":"Recharge"}]},{"type":"set","description":{"short":"Reduces Endurance Cost and Increases Attack Rate","long":"Reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}% and recharge time by {Boost.Attrib.Recharge.Scale}%"},"isUnique":false,"fullName":"Boosts.Attuned_Impervium_Armor_C.Attuned_Impervium_Armor_C","setName":"Impervium_Armor","displayName":"Endurance/Recharge","effects":[{"mag":0.265,"effectId":"Endurance"},{"mag":0.265,"effectId":"Recharge"}]},{"type":"set","description":{"short":"Enhances Resistance, Reduces Endurance Cost and Increases Attack Rate","long":"Enhances the damage resistance of a power by {Boost.Attrib.Resist.Scale}%, reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%and recharge time by {Boost.Attrib.Recharge.Scale}%"},"isUnique":false,"fullName":"Boosts.Attuned_Impervium_Armor_D.Attuned_Impervium_Armor_D","setName":"Impervium_Armor","displayName":"Resistance/Endurance/Recharge","effects":[{"mag":0.1275,"effectId":"Resist","damageType":1},{"mag":0.1275,"effectId":"Boosts_20","damageType":2},{"mag":0.1275,"effectId":"Boosts_20","damageType":3},{"mag":0.1275,"effectId":"Boosts_20","damageType":4},{"mag":0.1275,"effectId":"Boosts_20","damageType":5},{"mag":0.1275,"effectId":"Boosts_20","damageType":6},{"mag":0.1275,"effectId":"Boosts_20","damageType":7},{"mag":0.1275,"effectId":"Boosts_20","damageType":8},{"mag":0.212,"effectId":"Endurance"},{"mag":0.212,"effectId":"Recharge"}]},{"type":"set","description":{"short":"+RES (all)","long":"Enhances the damage resistance of a power by {Boost.Attrib.Resist.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Impervium_Armor_E.Attuned_Impervium_Armor_E","setName":"Impervium_Armor","displayName":"Resistance","effects":[{"mag":0.255,"effectId":"Resist","damageType":1},{"mag":0.255,"effectId":"Boosts_20","damageType":2},{"mag":0.255,"effectId":"Boosts_20","damageType":3},{"mag":0.255,"effectId":"Boosts_20","damageType":4},{"mag":0.255,"effectId":"Boosts_20","damageType":5},{"mag":0.255,"effectId":"Boosts_20","damageType":6},{"mag":0.255,"effectId":"Boosts_20","damageType":7},{"mag":0.255,"effectId":"Boosts_20","damageType":8}]},{"type":"set","description":{"short":"+RES (Psionic)","long":"Gives a bonus psionic resistance of {Boost.Attrib.Resist.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Impervium_Armor_F.Attuned_Impervium_Armor_F","setName":"Impervium_Armor","displayName":"Psionic Resistance","effects":[{"cancelOnMiss":true,"mag":0.06,"effectId":"Resist"}]}],"levels":{"min":15,"max":40},"bonuses":["Improved_Recovery_4","Increased_Psionic_Def_2","Increased_Endurance_4","Fire_Cold_Mez_Res_4","Toxic_Psi_Mez_Res_5"],"setType":8,"displayName":"Impervium Armor","imageName":"sImperviumArmor.png"}
+{
+  "fullName": "IOSet.Impervium_Armor",
+  "enhancements": [
+    {
+      "description": {
+        "short": "+RES (all), Reduces End cost",
+        "long": "Enhances the damage resistance of a power by {Boost.Attrib.Resist.Scale}% and reduces endurance cost by {Boost.Attrib.Endurance.Scale}%"
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Resist",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.159375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Impervium_Armor_A.Attuned_Impervium_Armor_A",
+              "damageType": "Smashing"
+            }
+          ]
+        },
+        {
+          "effectType": "Boosts_20",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.159375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Impervium_Armor_A.Attuned_Impervium_Armor_A",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.159375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Impervium_Armor_A.Attuned_Impervium_Armor_A",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.159375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Impervium_Armor_A.Attuned_Impervium_Armor_A",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 0.159375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Impervium_Armor_A.Attuned_Impervium_Armor_A",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.159375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Impervium_Armor_A.Attuned_Impervium_Armor_A",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.159375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Impervium_Armor_A.Attuned_Impervium_Armor_A",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pve": 0.159375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Impervium_Armor_A.Attuned_Impervium_Armor_A",
+              "damageType": "Psionic"
+            }
+          ]
+        },
+        {
+          "effectType": "Endurance",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 8,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Impervium_Armor_A.Attuned_Impervium_Armor_A"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Impervium_Armor_A.Attuned_Impervium_Armor_A",
+      "setName": "Impervium_Armor",
+      "displayName": "Resistance/Endurance"
+    },
+    {
+      "description": {
+        "short": "+RES (all), +Rech",
+        "long": "Enhances the damage resistance of a power by {Boost.Attrib.Resist.Scale}% and reduces recharge time by {Boost.Attrib.Recharge.Scale}%"
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Resist",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.159375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Impervium_Armor_B.Attuned_Impervium_Armor_B",
+              "damageType": "Smashing"
+            }
+          ]
+        },
+        {
+          "effectType": "Boosts_20",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.159375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Impervium_Armor_B.Attuned_Impervium_Armor_B",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.159375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Impervium_Armor_B.Attuned_Impervium_Armor_B",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.159375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Impervium_Armor_B.Attuned_Impervium_Armor_B",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 0.159375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Impervium_Armor_B.Attuned_Impervium_Armor_B",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.159375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Impervium_Armor_B.Attuned_Impervium_Armor_B",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.159375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Impervium_Armor_B.Attuned_Impervium_Armor_B",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pve": 0.159375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Impervium_Armor_B.Attuned_Impervium_Armor_B",
+              "damageType": "Psionic"
+            }
+          ]
+        },
+        {
+          "effectType": "Recharge",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 25,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Impervium_Armor_B.Attuned_Impervium_Armor_B"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Impervium_Armor_B.Attuned_Impervium_Armor_B",
+      "setName": "Impervium_Armor",
+      "displayName": "Resistance/Recharge"
+    },
+    {
+      "description": {
+        "short": "Reduces Endurance Cost and Increases Attack Rate",
+        "long": "Reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}% and recharge time by {Boost.Attrib.Recharge.Scale}%"
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Endurance",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 8,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Impervium_Armor_C.Attuned_Impervium_Armor_C"
+            }
+          ]
+        },
+        {
+          "effectType": "Recharge",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 25,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Impervium_Armor_C.Attuned_Impervium_Armor_C"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Impervium_Armor_C.Attuned_Impervium_Armor_C",
+      "setName": "Impervium_Armor",
+      "displayName": "Endurance/Recharge"
+    },
+    {
+      "description": {
+        "short": "Enhances Resistance, Reduces Endurance Cost and Increases Attack Rate",
+        "long": "Enhances the damage resistance of a power by {Boost.Attrib.Resist.Scale}%, reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%and recharge time by {Boost.Attrib.Recharge.Scale}%"
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Resist",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.1275
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Impervium_Armor_D.Attuned_Impervium_Armor_D",
+              "damageType": "Smashing"
+            }
+          ]
+        },
+        {
+          "effectType": "Boosts_20",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.1275
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Impervium_Armor_D.Attuned_Impervium_Armor_D",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.1275
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Impervium_Armor_D.Attuned_Impervium_Armor_D",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.1275
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Impervium_Armor_D.Attuned_Impervium_Armor_D",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 0.1275
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Impervium_Armor_D.Attuned_Impervium_Armor_D",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.1275
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Impervium_Armor_D.Attuned_Impervium_Armor_D",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.1275
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Impervium_Armor_D.Attuned_Impervium_Armor_D",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pve": 0.1275
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Impervium_Armor_D.Attuned_Impervium_Armor_D",
+              "damageType": "Psionic"
+            }
+          ]
+        },
+        {
+          "effectType": "Endurance",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 8,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Impervium_Armor_D.Attuned_Impervium_Armor_D"
+            }
+          ]
+        },
+        {
+          "effectType": "Recharge",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 25,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Impervium_Armor_D.Attuned_Impervium_Armor_D"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Impervium_Armor_D.Attuned_Impervium_Armor_D",
+      "setName": "Impervium_Armor",
+      "displayName": "Resistance/Endurance/Recharge"
+    },
+    {
+      "description": {
+        "short": "+RES (all)",
+        "long": "Enhances the damage resistance of a power by {Boost.Attrib.Resist.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Resist",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.255
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Impervium_Armor_E.Attuned_Impervium_Armor_E",
+              "damageType": "Smashing"
+            }
+          ]
+        },
+        {
+          "effectType": "Boosts_20",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.255
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Impervium_Armor_E.Attuned_Impervium_Armor_E",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.255
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Impervium_Armor_E.Attuned_Impervium_Armor_E",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.255
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Impervium_Armor_E.Attuned_Impervium_Armor_E",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 0.255
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Impervium_Armor_E.Attuned_Impervium_Armor_E",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.255
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Impervium_Armor_E.Attuned_Impervium_Armor_E",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.255
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Impervium_Armor_E.Attuned_Impervium_Armor_E",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pve": 0.255
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Impervium_Armor_E.Attuned_Impervium_Armor_E",
+              "damageType": "Psionic"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Impervium_Armor_E.Attuned_Impervium_Armor_E",
+      "setName": "Impervium_Armor",
+      "displayName": "Resistance"
+    },
+    {
+      "description": {
+        "short": "+RES (Psionic)",
+        "long": "Gives a bonus psionic resistance of {Boost.Attrib.Resist.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Resist",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.06
+              },
+              "cancelOnMiss": true,
+              "duration": 10.25,
+              "effectType": "ResEffect",
+              "eTModifies": 77,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Impervium_Armor_F.Attuned_Impervium_Armor_F"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Impervium_Armor_F.Attuned_Impervium_Armor_F",
+      "setName": "Impervium_Armor",
+      "displayName": "Psionic Resistance"
+    }
+  ],
+  "levels": {
+    "min": 15,
+    "max": 40
+  },
+  "bonuses": [
+    {
+      "description": {
+        "short": "+Recovery",
+        "long": "Improves your Recovery by 2.5%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 2,
+      "powerSetIndex": 147,
+      "fullName": "Set_Bonus.Set_Bonus.Improved_Recovery_4",
+      "setName": "Set_Bonus",
+      "displayName": "Large Improved Recovery Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.025
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Recovery",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Improved_Recovery_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+DEF",
+        "long": "Increases Psionic defense by 1.88%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 3,
+      "powerSetIndex": 362,
+      "fullName": "Set_Bonus.Set_Bonus.Increased_Psionic_Def_2",
+      "setName": "Set_Bonus",
+      "displayName": "Small Increased Psionic Def Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.01875
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Psionic_Def_2",
+              "damageType": "Psionic"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+Max End",
+        "long": "Increases maximum Endurance by 2.25%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 4,
+      "powerSetIndex": 224,
+      "fullName": "Set_Bonus.Set_Bonus.Increased_Endurance_4",
+      "setName": "Set_Bonus",
+      "displayName": "Large Increased Endurance Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 2.25
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Endurance",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Endurance_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+Res (Fire, Cold, Mez)",
+        "long": "Increases Fire and Cold resistance by 3.75% and Mez Resistance by 6.25%"
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 5,
+      "powerSetIndex": 83,
+      "fullName": "Set_Bonus.Set_Bonus.Fire_Cold_Mez_Res_4",
+      "setName": "Set_Bonus",
+      "displayName": "Large Fire, Cold and Mez Resistance",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Fire_Cold_Mez_Res_4",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Fire_Cold_Mez_Res_4",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 0.0625
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Fire_Cold_Mez_Res_4",
+              "mezType": "Immobilization"
+            },
+            {
+              "mag": {
+                "pve": 0.0625
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Fire_Cold_Mez_Res_4",
+              "mezType": "Hold"
+            },
+            {
+              "mag": {
+                "pve": 0.0625
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Fire_Cold_Mez_Res_4",
+              "mezType": "Stun"
+            },
+            {
+              "mag": {
+                "pve": 0.0625
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Fire_Cold_Mez_Res_4",
+              "mezType": "Sleep"
+            },
+            {
+              "mag": {
+                "pve": 0.0625
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Fire_Cold_Mez_Res_4",
+              "mezType": "Terrorize"
+            },
+            {
+              "mag": {
+                "pve": 0.0625
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Fire_Cold_Mez_Res_4",
+              "mezType": "Confuse"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+Res (Toxic, Psionic, Mez)",
+        "long": "Increases Toxic and Psionic resistance by 4.5% and Mez Resistance by 7.5%"
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 6,
+      "powerSetIndex": 525,
+      "fullName": "Set_Bonus.Set_Bonus.Toxic_Psi_Mez_Res_5",
+      "setName": "Set_Bonus",
+      "displayName": "Huge Toxic, Psionic and Mez Resistance",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.045
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Toxic_Psi_Mez_Res_5",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pve": 0.045
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Toxic_Psi_Mez_Res_5",
+              "damageType": "Psionic"
+            },
+            {
+              "mag": {
+                "pve": 0.075
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Toxic_Psi_Mez_Res_5",
+              "mezType": "Immobilization"
+            },
+            {
+              "mag": {
+                "pve": 0.075
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Toxic_Psi_Mez_Res_5",
+              "mezType": "Hold"
+            },
+            {
+              "mag": {
+                "pve": 0.075
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Toxic_Psi_Mez_Res_5",
+              "mezType": "Stun"
+            },
+            {
+              "mag": {
+                "pve": 0.075
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Toxic_Psi_Mez_Res_5",
+              "mezType": "Sleep"
+            },
+            {
+              "mag": {
+                "pve": 0.075
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Toxic_Psi_Mez_Res_5",
+              "mezType": "Terrorize"
+            },
+            {
+              "mag": {
+                "pve": 0.075
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Toxic_Psi_Mez_Res_5",
+              "mezType": "Confuse"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "setType": 8,
+  "displayName": "Impervium Armor",
+  "imageName": "sImperviumArmor.png"
+}

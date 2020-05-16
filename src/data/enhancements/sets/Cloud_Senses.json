@@ -1,1 +1,590 @@
-{"fullName":"IOSet.Cloud_Senses","enhancements":[{"type":"set","description":{"short":"+To Hit Debuff","long":"Enhances the to hit debuff potential of a power by {Boost.Attrib.ToHitDebuff.Scale}%.  NOTE: This enhancement can only be slotted into to hit debuff powers that require a to hit check."},"isUnique":false,"fullName":"Boosts.Attuned_Cloud_Senses_A.Attuned_Cloud_Senses_A","setName":"Cloud_Senses","displayName":"To Hit Debuff","effects":[{"mag":0.255,"effectId":"ToHitDebuff"}]},{"type":"set","description":{"short":"+ACC, +To Hit Debuff","long":"Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and to hit debuff potential of a power by {Boost.Attrib.ToHitDebuff.Scale}%.  NOTE: This enhancement can only be slotted into to hit debuff powers that require a to hit check."},"isUnique":false,"fullName":"Boosts.Attuned_Cloud_Senses_B.Attuned_Cloud_Senses_B","setName":"Cloud_Senses","displayName":"Accuracy/To Hit Debuff","effects":[{"mag":0.265,"effectId":"Accuracy"},{"mag":0.159375,"effectId":"ToHitDebuff"}]},{"type":"set","description":{"short":"+ACC, +Rech","long":"Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and and reduces recharge time by {Boost.Attrib.Recharge.Scale}%.  NOTE: This enhancement can only be slotted into to hit debuff powers that require a to hit check."},"isUnique":false,"fullName":"Boosts.Attuned_Cloud_Senses_C.Attuned_Cloud_Senses_C","setName":"Cloud_Senses","displayName":"Accuracy/Recharge","effects":[{"mag":0.265,"effectId":"Recharge"},{"mag":0.265,"effectId":"Accuracy"}]},{"type":"set","description":{"short":"+To Hit Debuff, -End Cost, +Rech","long":"Enhances the to hit debuff potential of a power by {Boost.Attrib.ToHitDebuff.Scale}%, reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}% and reduces recharge time by {Boost.Attrib.Recharge.Scale}%.  NOTE: This enhancement can only be slotted into to hit debuff powers that require a to hit check."},"isUnique":false,"fullName":"Boosts.Attuned_Cloud_Senses_D.Attuned_Cloud_Senses_D","setName":"Cloud_Senses","displayName":"To Hit Debuff/Endurance/Recharge","effects":[{"mag":0.212,"effectId":"Recharge"},{"mag":0.1275,"effectId":"ToHitDebuff"},{"mag":0.212,"effectId":"Endurance"}]},{"type":"set","description":{"short":"+ACC, -End Cost, +Rech","long":"Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}%, reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}% and reduces recharge time by {Boost.Attrib.Recharge.Scale}%.  NOTE: This enhancement can only be slotted into to hit debuff powers that require a to hit check."},"isUnique":false,"fullName":"Boosts.Attuned_Cloud_Senses_E.Attuned_Cloud_Senses_E","setName":"Cloud_Senses","displayName":"Accuracy/Endurance/Recharge","effects":[{"mag":0.212,"effectId":"Recharge"},{"mag":0.212,"effectId":"Accuracy"},{"mag":0.212,"effectId":"Endurance"}]},{"type":"set","description":{"short":"Chance for Minor DMG (Negative Energy)","long":"Provides a chance to cause minor negative energy damage to your targets.  This effect will trigger roughly 3.5 times per minute."},"isUnique":false,"fullName":"Boosts.Attuned_Cloud_Senses_F.Attuned_Cloud_Senses_F","setName":"Cloud_Senses","displayName":"Chance for Negative Energy Damage","effects":[{"procsPerMinute":3.5,"cancelOnMiss":true,"mag":71.7501,"effectId":"Damage","damageType":6,"stacking":1,"resistible":true,"pvMode":1},{"procsPerMinute":3.5,"cancelOnMiss":true,"mag":71.7501,"effectId":"TempDamage","damageType":6,"stacking":1,"pvMode":2}]}],"levels":{"min":10,"max":30},"bonuses":["Energy_Neg_Mez_Res_2","Increased_Endurance_4","Improved_Recharge_Time_4","Increased_Move_4","Increased_Ranged_Energy_Neg_Def_5"],"setType":31,"displayName":"Cloud Senses","imageName":"CloudSenses.png"}
+{
+  "fullName": "IOSet.Cloud_Senses",
+  "enhancements": [
+    {
+      "description": {
+        "short": "+To Hit Debuff",
+        "long": "Enhances the to hit debuff potential of a power by {Boost.Attrib.ToHitDebuff.Scale}%.  NOTE: This enhancement can only be slotted into to hit debuff powers that require a to hit check."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "ToHitDebuff",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.255
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 40,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Cloud_Senses_A.Attuned_Cloud_Senses_A"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Cloud_Senses_A.Attuned_Cloud_Senses_A",
+      "setName": "Cloud_Senses",
+      "displayName": "To Hit Debuff"
+    },
+    {
+      "description": {
+        "short": "+ACC, +To Hit Debuff",
+        "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and to hit debuff potential of a power by {Boost.Attrib.ToHitDebuff.Scale}%.  NOTE: This enhancement can only be slotted into to hit debuff powers that require a to hit check."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Accuracy",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 1,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Cloud_Senses_B.Attuned_Cloud_Senses_B"
+            }
+          ]
+        },
+        {
+          "effectType": "ToHitDebuff",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.159375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 40,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Cloud_Senses_B.Attuned_Cloud_Senses_B"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Cloud_Senses_B.Attuned_Cloud_Senses_B",
+      "setName": "Cloud_Senses",
+      "displayName": "Accuracy/To Hit Debuff"
+    },
+    {
+      "description": {
+        "short": "+ACC, +Rech",
+        "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and and reduces recharge time by {Boost.Attrib.Recharge.Scale}%.  NOTE: This enhancement can only be slotted into to hit debuff powers that require a to hit check."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Recharge",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 25,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Cloud_Senses_C.Attuned_Cloud_Senses_C"
+            }
+          ]
+        },
+        {
+          "effectType": "Accuracy",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 1,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Cloud_Senses_C.Attuned_Cloud_Senses_C"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Cloud_Senses_C.Attuned_Cloud_Senses_C",
+      "setName": "Cloud_Senses",
+      "displayName": "Accuracy/Recharge"
+    },
+    {
+      "description": {
+        "short": "+To Hit Debuff, -End Cost, +Rech",
+        "long": "Enhances the to hit debuff potential of a power by {Boost.Attrib.ToHitDebuff.Scale}%, reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}% and reduces recharge time by {Boost.Attrib.Recharge.Scale}%.  NOTE: This enhancement can only be slotted into to hit debuff powers that require a to hit check."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Recharge",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 25,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Cloud_Senses_D.Attuned_Cloud_Senses_D"
+            }
+          ]
+        },
+        {
+          "effectType": "ToHitDebuff",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.1275
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 40,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Cloud_Senses_D.Attuned_Cloud_Senses_D"
+            }
+          ]
+        },
+        {
+          "effectType": "Endurance",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 8,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Cloud_Senses_D.Attuned_Cloud_Senses_D"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Cloud_Senses_D.Attuned_Cloud_Senses_D",
+      "setName": "Cloud_Senses",
+      "displayName": "To Hit Debuff/Endurance/Recharge"
+    },
+    {
+      "description": {
+        "short": "+ACC, -End Cost, +Rech",
+        "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}%, reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}% and reduces recharge time by {Boost.Attrib.Recharge.Scale}%.  NOTE: This enhancement can only be slotted into to hit debuff powers that require a to hit check."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Recharge",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 25,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Cloud_Senses_E.Attuned_Cloud_Senses_E"
+            }
+          ]
+        },
+        {
+          "effectType": "Accuracy",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 1,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Cloud_Senses_E.Attuned_Cloud_Senses_E"
+            }
+          ]
+        },
+        {
+          "effectType": "Endurance",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 8,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Cloud_Senses_E.Attuned_Cloud_Senses_E"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Cloud_Senses_E.Attuned_Cloud_Senses_E",
+      "setName": "Cloud_Senses",
+      "displayName": "Accuracy/Endurance/Recharge"
+    },
+    {
+      "description": {
+        "short": "Chance for Minor DMG (Negative Energy)",
+        "long": "Provides a chance to cause minor negative energy damage to your targets.  This effect will trigger roughly 3.5 times per minute."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 71.7501
+              },
+              "procsPerMinute": 3.5,
+              "cancelOnMiss": true,
+              "effectType": "Damage",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "All",
+              "powerFullName": "Boosts.Attuned_Cloud_Senses_F.Attuned_Cloud_Senses_F",
+              "damageType": "Negative"
+            }
+          ]
+        },
+        {
+          "effectType": "TempDamage",
+          "values": [
+            {
+              "mag": {
+                "pvp": 71.7501
+              },
+              "procsPerMinute": 3.5,
+              "cancelOnMiss": true,
+              "effectType": "Damage",
+              "stacking": 1,
+              "toWho": "All",
+              "powerFullName": "Boosts.Attuned_Cloud_Senses_F.Attuned_Cloud_Senses_F",
+              "damageType": "Negative"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Cloud_Senses_F.Attuned_Cloud_Senses_F",
+      "setName": "Cloud_Senses",
+      "displayName": "Chance for Negative Energy Damage"
+    }
+  ],
+  "levels": {
+    "min": 10,
+    "max": 30
+  },
+  "bonuses": [
+    {
+      "description": {
+        "short": "+Res (Energy, Negative, Mez)",
+        "long": "Increases Energy and Negative Energy resistance by 2.25% and Mez Resistance by 3.75%"
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 2,
+      "powerSetIndex": 57,
+      "fullName": "Set_Bonus.Set_Bonus.Energy_Neg_Mez_Res_2",
+      "setName": "Set_Bonus",
+      "displayName": "Small Energy, Negative Energy and Mez Resistance",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.0225
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Energy_Neg_Mez_Res_2",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.0225
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Energy_Neg_Mez_Res_2",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Energy_Neg_Mez_Res_2",
+              "mezType": "Immobilization"
+            },
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Energy_Neg_Mez_Res_2",
+              "mezType": "Hold"
+            },
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Energy_Neg_Mez_Res_2",
+              "mezType": "Stun"
+            },
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Energy_Neg_Mez_Res_2",
+              "mezType": "Sleep"
+            },
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Energy_Neg_Mez_Res_2",
+              "mezType": "Terrorize"
+            },
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Energy_Neg_Mez_Res_2",
+              "mezType": "Confuse"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+Max End",
+        "long": "Increases maximum Endurance by 2.25%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 3,
+      "powerSetIndex": 224,
+      "fullName": "Set_Bonus.Set_Bonus.Increased_Endurance_4",
+      "setName": "Set_Bonus",
+      "displayName": "Large Increased Endurance Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 2.25
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Endurance",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Endurance_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+Recharge Time",
+        "long": "Improves the Recharge Time of all of your powers by 6.25%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 4,
+      "powerSetIndex": 140,
+      "fullName": "Set_Bonus.Set_Bonus.Improved_Recharge_Time_4",
+      "setName": "Set_Bonus",
+      "displayName": "Large Improved Recharge Time Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.0625
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 25,
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Improved_Recharge_Time_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+Move",
+        "long": "Improves all of your Movement speeds by 7.5%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 5,
+      "powerSetIndex": 329,
+      "fullName": "Set_Bonus.Set_Bonus.Increased_Move_4",
+      "setName": "Set_Bonus",
+      "displayName": "Large Improved Movement Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.075
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "SpeedJumping",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Move_4"
+            },
+            {
+              "mag": {
+                "pve": 0.075
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "JumpHeight",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Move_4"
+            },
+            {
+              "mag": {
+                "pve": 0.075
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "SpeedFlying",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Move_4"
+            },
+            {
+              "mag": {
+                "pve": 0.075
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "SpeedRunning",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Move_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+DEF",
+        "long": "Increases ranged defense by 3.75% and energy and negative energy defense by 1.875%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 6,
+      "powerSetIndex": 386,
+      "fullName": "Set_Bonus.Set_Bonus.Increased_Ranged_Energy_Neg_Def_5",
+      "setName": "Set_Bonus",
+      "displayName": "Huge Increased Ranged/Energy/Negative Energy Def Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Ranged_Energy_Neg_Def_5",
+              "damageType": "Ranged"
+            },
+            {
+              "mag": {
+                "pve": 0.01875
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Ranged_Energy_Neg_Def_5",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.01875
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Ranged_Energy_Neg_Def_5",
+              "damageType": "Negative"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "setType": 31,
+  "displayName": "Cloud Senses",
+  "imageName": "CloudSenses.png"
+}

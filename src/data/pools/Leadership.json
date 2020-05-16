@@ -1,1 +1,1024 @@
-{"fullName":"Pool_Leadership","archetypeOrder":"poolPower","description":"Good leaders are rare. These powers can grant bonuses to your and your teammates.","imageName":"Leadership.png","displayName":"Leadership","powers":[{"allowedEnhancements":["Defense_Buff","Endurance_Discount","Recharge"],"enhancementCount":6,"archetypeOrder":"poolPower","powerIndex":0,"castTimeReal":3.67,"toggleCost":0.39,"fullName":"Pool_Leadership_Maneuvers","displayName":"Maneuvers","requires":{"powers":{},"count":0},"accuracy":1,"accuracyMult":1,"target":1,"targetLoS":true,"endCost":0.78,"rechargeTime":15,"baseRechargeTime":15,"activatePeriod":2,"effectArea":2,"radius":60,"maxTargets":255,"aIReport":1,"numAllowed":1,"description":{"short":"Toggle: PBAoE, Team +DEF(All)","long":"A good leader knows how to protect his team. While active, this power increases the Defense of yourself and all nearby teammates to all attacks."},"setTypes":[7],"level":4,"ignoreEnh":[],"ignore_Buff":[],"castTime":3.828,"slottable":true,"aoeModifier":10},{"allowedEnhancements":["Endurance_Discount","Recharge"],"enhancementCount":6,"archetypeOrder":"poolPower","powerIndex":1,"castTimeReal":3.67,"toggleCost":0.39,"fullName":"Pool_Leadership_Assault","displayName":"Assault","requires":{"powers":{},"count":0},"accuracy":1,"accuracyMult":1,"target":1,"targetLoS":true,"endCost":0.78,"rechargeTime":15,"baseRechargeTime":15,"activatePeriod":2,"effectArea":2,"radius":60,"maxTargets":255,"aIReport":1,"numAllowed":1,"description":{"short":"Toggle: PBAoE, Team +DMG, Res(Taunt, Placate)","long":"While this power is active, you and your nearby teammates deal more damage and are resistant to Taunt and Placate."},"setTypes":[],"level":4,"ignoreEnh":[],"ignore_Buff":[],"castTime":3.828,"slottable":true,"aoeModifier":10},{"allowedEnhancements":["ToHit_Buff","Endurance_Discount","Recharge"],"enhancementCount":6,"archetypeOrder":"poolPower","powerIndex":2,"castTimeReal":3.67,"toggleCost":0.39,"fullName":"Pool_Leadership_Tactics","displayName":"Tactics","requires":{"powers":{"Pool_Leadership_Maneuvers":true,"Pool_Leadership_Assault":true},"count":1},"accuracy":1,"accuracyMult":1,"target":1,"targetLoS":true,"endCost":0.78,"rechargeTime":15,"baseRechargeTime":15,"activatePeriod":2,"effectArea":2,"radius":60,"maxTargets":255,"aIReport":1,"numAllowed":1,"description":{"short":"Toggle: PBAoE, Team +To Hit, Res(Confuse, Fear), +Perception","long":"While this power is active, your chance to hit and that of all your nearby teammates is increased. Your advanced Tactics also protect you and your team from Confuse and Fear effects, as well as your Perception so you can detect Stealthy foes.  Purchasing Tactics requires the user to be level 14 and possess Maneuvers or Assault."},"setTypes":[25],"level":14,"ignoreEnh":[],"ignore_Buff":[],"castTime":3.828,"slottable":true,"aoeModifier":10},{"allowedEnhancements":["Defense_Buff","ToHit_Buff","Heal","Range"],"enhancementCount":6,"archetypeOrder":"poolPower","powerIndex":3,"castTimeReal":1.17,"fullName":"Pool_Leadership_Vengeance","displayName":"Vengeance","requires":{"powers":{"Pool_Leadership_Maneuvers":true,"Pool_Leadership_Assault":true,"Pool_Leadership_Tactics":true},"count":2},"accuracy":1,"accuracyMult":1,"target":1048576,"targetLoS":true,"range":60,"rechargeTime":300,"baseRechargeTime":300,"effectArea":2,"radius":100,"maxTargets":255,"aIReport":1,"numAllowed":1,"description":{"short":"Ranged (Targeted AoE), Teammates +DMG, +To Hit, +DEF(All), Res(Effects)","long":"The loss of a comrade enrages the team. When a teammate is defeated in combat, activate this power to grant you and your teammates a bonus to chance to hit, Damage and Defense to all attacks. A Vengeful team has no fear, and Vengeance protects you and your Teammates from Fear effects. It also gives you and your team great resistance to Sleep, Hold, Disorient, Immobilize, Confuse, Taunt, Placate and Knockback. You must be at least level 14 and have two other Leadership Powers before selecting Vengeance.  This power does not stack with multiple castings. Recharge: Very Long"},"setTypes":[7,9,25],"clickBuff":true,"level":14,"ignoreEnh":[],"ignore_Buff":[],"castTime":1.31999993,"slottable":true,"aoeModifier":16},{"allowedEnhancements":["Endurance_Discount","Range","Endurance_Modification"],"enhancementCount":6,"archetypeOrder":"poolPower","powerIndex":4,"castTimeReal":1.17,"toggleCost":9.75,"fullName":"Pool_Leadership_Victory_Rush","displayName":"Victory Rush","requires":{"powers":{"Pool_Leadership_Maneuvers":true,"Pool_Leadership_Assault":true,"Pool_Leadership_Tactics":true,"Pool_Leadership_Vengeance":true},"count":2},"accuracy":1,"accuracyMult":1,"target":131072,"targetLoS":true,"range":80,"endCost":9.75,"rechargeTime":300,"baseRechargeTime":300,"effectArea":1,"radius":100,"aIReport":1,"numAllowed":1,"description":{"short":"Ranged (Targeted AoE), Team +Recovery, -End Cost","long":"The defeat of an opponent gives your team a rush of adrenaline. The excitement of your victory increases the recovery and reduces the endurance cost of your powers. This effect extends to your teammates as well. The total strength of this bonus is dependent upon the rank of the enemy on which this is cast, with Archvillains and Giant Monsters providing the greatest benefit. This power does not stack with multiple castings. You must be level 14 and have trained at least two other Leadership powers before you can train Victory Rush. This power's Recharge Time cannot be reduced.  Recharge: Very Long"},"setTypes":[22],"level":14,"ignoreEnh":[14],"ignore_Buff":[14],"castTime":1.31999993,"slottable":true,"aoeModifier":1}]}
+{
+  "fullName": "Pool_Leadership",
+  "archetypeOrder": "poolPower",
+  "description": "Good leaders are rare. These powers can grant bonuses to your and your teammates.",
+  "imageName": "Leadership.png",
+  "displayName": "Leadership",
+  "powers": [
+    {
+      "allowedEnhancements": [
+        "Defense_Buff",
+        "Endurance_Discount",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "archetypeOrder": "poolPower",
+      "effects": [
+        {
+          "effectType": "Buff_Def",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.02275
+              },
+              "probability": 1,
+              "duration": 2.25,
+              "effectType": "Defense",
+              "toWho": "All",
+              "powerFullName": "Pool.Leadership.Defense",
+              "damageType": "Melee"
+            },
+            {
+              "mag": {
+                "pve": 0.02275,
+                "pvp": 0.02275
+              },
+              "probability": 1,
+              "duration": 2.25,
+              "effectType": "Defense",
+              "toWho": "All",
+              "powerFullName": "Pool.Leadership.Defense",
+              "damageType": "Ranged"
+            },
+            {
+              "mag": {
+                "pve": 0.02275
+              },
+              "probability": 1,
+              "duration": 2.25,
+              "effectType": "Defense",
+              "toWho": "All",
+              "powerFullName": "Pool.Leadership.Defense",
+              "damageType": "AoE"
+            },
+            {
+              "mag": {
+                "pve": 0.02275,
+                "pvp": 0.02275
+              },
+              "probability": 1,
+              "duration": 2.25,
+              "effectType": "Defense",
+              "toWho": "All",
+              "powerFullName": "Pool.Leadership.Defense",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 0.02275
+              },
+              "probability": 1,
+              "duration": 2.25,
+              "effectType": "Defense",
+              "toWho": "All",
+              "powerFullName": "Pool.Leadership.Defense",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.02275,
+                "pvp": 0.02275
+              },
+              "probability": 1,
+              "duration": 2.25,
+              "effectType": "Defense",
+              "toWho": "All",
+              "powerFullName": "Pool.Leadership.Defense",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.02275
+              },
+              "probability": 1,
+              "duration": 2.25,
+              "effectType": "Defense",
+              "toWho": "All",
+              "powerFullName": "Pool.Leadership.Defense",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 0.02275,
+                "pvp": 0.02275
+              },
+              "probability": 1,
+              "duration": 2.25,
+              "effectType": "Defense",
+              "toWho": "All",
+              "powerFullName": "Pool.Leadership.Defense",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.02275,
+                "pvp": 0.02275
+              },
+              "probability": 1,
+              "duration": 2.25,
+              "effectType": "Defense",
+              "toWho": "All",
+              "powerFullName": "Pool.Leadership.Defense",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.02275,
+                "pvp": 0.02275
+              },
+              "probability": 1,
+              "duration": 2.25,
+              "effectType": "Defense",
+              "toWho": "All",
+              "powerFullName": "Pool.Leadership.Defense",
+              "damageType": "Psionic"
+            },
+            {
+              "mag": {
+                "pvp": 0.02275
+              },
+              "probability": 1,
+              "duration": 2.25,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Pool.Leadership.Defense",
+              "damageType": "Melee"
+            },
+            {
+              "mag": {
+                "pvp": 0.02275
+              },
+              "probability": 1,
+              "duration": 2.25,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Pool.Leadership.Defense",
+              "damageType": "AoE"
+            },
+            {
+              "mag": {
+                "pvp": 0.02275
+              },
+              "probability": 1,
+              "duration": 2.25,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Pool.Leadership.Defense",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pvp": 0.02275
+              },
+              "probability": 1,
+              "duration": 2.25,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Pool.Leadership.Defense",
+              "damageType": "Cold"
+            }
+          ]
+        }
+      ],
+      "powerIndex": 0,
+      "castTimeReal": 3.67,
+      "toggleCost": 0.39,
+      "fullName": "Pool_Leadership_Maneuvers",
+      "displayName": "Maneuvers",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "target": 1,
+      "targetLoS": true,
+      "endCost": 0.78,
+      "rechargeTime": 15,
+      "baseRechargeTime": 15,
+      "activatePeriod": 2,
+      "effectArea": 2,
+      "radius": 60,
+      "maxTargets": 255,
+      "aIReport": 1,
+      "numAllowed": 1,
+      "description": {
+        "short": "Toggle: PBAoE, Team +DEF(All)",
+        "long": "A good leader knows how to protect his team. While active, this power increases the Defense of yourself and all nearby teammates to all attacks."
+      },
+      "setTypes": [
+        7
+      ],
+      "level": 4,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 3.828,
+      "slottable": true,
+      "aoeModifier": 10,
+      "powerType": "Toggle"
+    },
+    {
+      "allowedEnhancements": [
+        "Endurance_Discount",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "archetypeOrder": "poolPower",
+      "effects": [
+        {
+          "effectType": "Buff_Dmg",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.105000004
+              },
+              "probability": 1,
+              "duration": 2.25,
+              "effectType": "DamageBuff",
+              "toWho": "All",
+              "powerFullName": "Pool.Leadership.Assault",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 0.105000004
+              },
+              "probability": 1,
+              "duration": 2.25,
+              "effectType": "DamageBuff",
+              "toWho": "All",
+              "powerFullName": "Pool.Leadership.Assault",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.105000004
+              },
+              "probability": 1,
+              "duration": 2.25,
+              "effectType": "DamageBuff",
+              "toWho": "All",
+              "powerFullName": "Pool.Leadership.Assault",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.105000004
+              },
+              "probability": 1,
+              "duration": 2.25,
+              "effectType": "DamageBuff",
+              "toWho": "All",
+              "powerFullName": "Pool.Leadership.Assault",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 0.105000004
+              },
+              "probability": 1,
+              "duration": 2.25,
+              "effectType": "DamageBuff",
+              "toWho": "All",
+              "powerFullName": "Pool.Leadership.Assault",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.105000004
+              },
+              "probability": 1,
+              "duration": 2.25,
+              "effectType": "DamageBuff",
+              "toWho": "All",
+              "powerFullName": "Pool.Leadership.Assault",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.105000004
+              },
+              "probability": 1,
+              "duration": 2.25,
+              "effectType": "DamageBuff",
+              "toWho": "All",
+              "powerFullName": "Pool.Leadership.Assault",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pve": 0.105000004
+              },
+              "probability": 1,
+              "duration": 2.25,
+              "effectType": "DamageBuff",
+              "toWho": "All",
+              "powerFullName": "Pool.Leadership.Assault",
+              "damageType": "Psionic"
+            }
+          ]
+        },
+        {
+          "effectType": "Res_Boolean",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.42385
+              },
+              "probability": 1,
+              "duration": 2.25,
+              "effectType": "MezResist",
+              "toWho": "All",
+              "powerFullName": "Pool.Leadership.Assault",
+              "mezType": "Taunt"
+            },
+            {
+              "mag": {
+                "pve": 0.42385
+              },
+              "probability": 1,
+              "duration": 2.25,
+              "effectType": "MezResist",
+              "toWho": "All",
+              "powerFullName": "Pool.Leadership.Assault",
+              "mezType": "Placate"
+            }
+          ]
+        }
+      ],
+      "powerIndex": 1,
+      "castTimeReal": 3.67,
+      "toggleCost": 0.39,
+      "fullName": "Pool_Leadership_Assault",
+      "displayName": "Assault",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "target": 1,
+      "targetLoS": true,
+      "endCost": 0.78,
+      "rechargeTime": 15,
+      "baseRechargeTime": 15,
+      "activatePeriod": 2,
+      "effectArea": 2,
+      "radius": 60,
+      "maxTargets": 255,
+      "aIReport": 1,
+      "numAllowed": 1,
+      "description": {
+        "short": "Toggle: PBAoE, Team +DMG, Res(Taunt, Placate)",
+        "long": "While this power is active, you and your nearby teammates deal more damage and are resistant to Taunt and Placate."
+      },
+      "setTypes": [],
+      "level": 4,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 3.828,
+      "slottable": true,
+      "aoeModifier": 10,
+      "powerType": "Toggle"
+    },
+    {
+      "allowedEnhancements": [
+        "ToHit_Buff",
+        "Endurance_Discount",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "archetypeOrder": "poolPower",
+      "effects": [
+        {
+          "effectType": "Buff_ToHit",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.1
+              },
+              "probability": 1,
+              "duration": 2.25,
+              "effectType": "ToHit",
+              "toWho": "All",
+              "powerFullName": "Pool.Leadership.Tactics"
+            }
+          ]
+        },
+        {
+          "effectType": "Res_Boolean",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.3633
+              },
+              "probability": 1,
+              "duration": 2.25,
+              "effectType": "ResEffect",
+              "eTModifies": 23,
+              "toWho": "All",
+              "powerFullName": "Pool.Leadership.Tactics"
+            },
+            {
+              "mag": {
+                "pve": 0.4844
+              },
+              "probability": 1,
+              "duration": 2.25,
+              "effectType": "PerceptionRadius",
+              "toWho": "All",
+              "powerFullName": "Pool.Leadership.Tactics"
+            },
+            {
+              "mag": {
+                "pve": 0.42385,
+                "pvp": 0.78715
+              },
+              "probability": 1,
+              "duration": 2.25,
+              "effectType": "MezResist",
+              "toWho": "All",
+              "powerFullName": "Pool.Leadership.Tactics",
+              "mezType": "Confuse"
+            },
+            {
+              "mag": {
+                "pve": -3.63300014
+              },
+              "probability": 1,
+              "duration": 2.25,
+              "effectType": "Mez",
+              "toWho": "All",
+              "powerFullName": "Pool.Leadership.Tactics",
+              "mezType": "Confuse"
+            },
+            {
+              "mag": {
+                "pve": 0.42385
+              },
+              "probability": 1,
+              "duration": 2.25,
+              "effectType": "MezResist",
+              "toWho": "All",
+              "powerFullName": "Pool.Leadership.Tactics",
+              "mezType": "Terrorize"
+            }
+          ]
+        }
+      ],
+      "powerIndex": 2,
+      "castTimeReal": 3.67,
+      "toggleCost": 0.39,
+      "fullName": "Pool_Leadership_Tactics",
+      "displayName": "Tactics",
+      "requires": {
+        "powers": {
+          "Pool_Leadership_Maneuvers": true,
+          "Pool_Leadership_Assault": true
+        },
+        "count": 1
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "target": 1,
+      "targetLoS": true,
+      "endCost": 0.78,
+      "rechargeTime": 15,
+      "baseRechargeTime": 15,
+      "activatePeriod": 2,
+      "effectArea": 2,
+      "radius": 60,
+      "maxTargets": 255,
+      "aIReport": 1,
+      "numAllowed": 1,
+      "description": {
+        "short": "Toggle: PBAoE, Team +To Hit, Res(Confuse, Fear), +Perception",
+        "long": "While this power is active, your chance to hit and that of all your nearby teammates is increased. Your advanced Tactics also protect you and your team from Confuse and Fear effects, as well as your Perception so you can detect Stealthy foes.  Purchasing Tactics requires the user to be level 14 and possess Maneuvers or Assault."
+      },
+      "setTypes": [
+        25
+      ],
+      "level": 14,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 3.828,
+      "slottable": true,
+      "aoeModifier": 10,
+      "powerType": "Toggle"
+    },
+    {
+      "allowedEnhancements": [
+        "Defense_Buff",
+        "ToHit_Buff",
+        "Heal",
+        "Range"
+      ],
+      "enhancementCount": 6,
+      "archetypeOrder": "poolPower",
+      "effects": [
+        {
+          "effectType": "Buff_Def",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.175
+              },
+              "probability": 1,
+              "duration": 120,
+              "effectType": "Defense",
+              "toWho": "All",
+              "powerFullName": "Pool.Leadership.Vengeance",
+              "damageType": "Melee"
+            },
+            {
+              "mag": {
+                "pve": 0.175
+              },
+              "probability": 1,
+              "duration": 120,
+              "effectType": "Defense",
+              "toWho": "All",
+              "powerFullName": "Pool.Leadership.Vengeance",
+              "damageType": "Ranged"
+            },
+            {
+              "mag": {
+                "pve": 0.175
+              },
+              "probability": 1,
+              "duration": 120,
+              "effectType": "Defense",
+              "toWho": "All",
+              "powerFullName": "Pool.Leadership.Vengeance",
+              "damageType": "AoE"
+            },
+            {
+              "mag": {
+                "pve": 0.175
+              },
+              "probability": 1,
+              "duration": 120,
+              "effectType": "Defense",
+              "toWho": "All",
+              "powerFullName": "Pool.Leadership.Vengeance",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 0.175
+              },
+              "probability": 1,
+              "duration": 120,
+              "effectType": "Defense",
+              "toWho": "All",
+              "powerFullName": "Pool.Leadership.Vengeance",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.175
+              },
+              "probability": 1,
+              "duration": 120,
+              "effectType": "Defense",
+              "toWho": "All",
+              "powerFullName": "Pool.Leadership.Vengeance",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.175
+              },
+              "probability": 1,
+              "duration": 120,
+              "effectType": "Defense",
+              "toWho": "All",
+              "powerFullName": "Pool.Leadership.Vengeance",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 0.175
+              },
+              "probability": 1,
+              "duration": 120,
+              "effectType": "Defense",
+              "toWho": "All",
+              "powerFullName": "Pool.Leadership.Vengeance",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.175
+              },
+              "probability": 1,
+              "duration": 120,
+              "effectType": "Defense",
+              "toWho": "All",
+              "powerFullName": "Pool.Leadership.Vengeance",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.175
+              },
+              "probability": 1,
+              "duration": 120,
+              "effectType": "Defense",
+              "toWho": "All",
+              "powerFullName": "Pool.Leadership.Vengeance",
+              "damageType": "Psionic"
+            }
+          ]
+        },
+        {
+          "effectType": "Heal",
+          "values": [
+            {
+              "mag": {
+                "pve": 96.3807
+              },
+              "probability": 1,
+              "effectType": "Heal",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "All",
+              "powerFullName": "Pool.Leadership.Vengeance"
+            }
+          ]
+        },
+        {
+          "effectType": "Buff_ToHit",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.35
+              },
+              "probability": 1,
+              "duration": 120,
+              "effectType": "ToHit",
+              "toWho": "All",
+              "powerFullName": "Pool.Leadership.Vengeance"
+            }
+          ]
+        },
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": -10
+              },
+              "probability": 1,
+              "duration": 120,
+              "effectType": "Mez",
+              "toWho": "All",
+              "powerFullName": "Pool.Leadership.Vengeance",
+              "mezType": "Terrorize"
+            },
+            {
+              "mag": {
+                "pve": -100
+              },
+              "probability": 1,
+              "duration": 120,
+              "effectType": "Mez",
+              "toWho": "All",
+              "powerFullName": "Pool.Leadership.Vengeance",
+              "mezType": "Knockup"
+            },
+            {
+              "mag": {
+                "pve": -100
+              },
+              "probability": 1,
+              "duration": 120,
+              "effectType": "Mez",
+              "toWho": "All",
+              "powerFullName": "Pool.Leadership.Vengeance",
+              "mezType": "Knockback"
+            },
+            {
+              "mag": {
+                "pve": -10
+              },
+              "probability": 1,
+              "duration": 120,
+              "effectType": "Mez",
+              "toWho": "All",
+              "powerFullName": "Pool.Leadership.Vengeance",
+              "mezType": "Repel"
+            },
+            {
+              "mag": {
+                "pve": 34
+              },
+              "probability": 1,
+              "duration": 120,
+              "effectType": "SetMode",
+              "ticks": 1,
+              "toWho": "All",
+              "powerFullName": "Pool.Leadership.Vengeance"
+            }
+          ]
+        },
+        {
+          "effectType": "Res_Boolean",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.5536
+              },
+              "probability": 1,
+              "duration": 120,
+              "effectType": "MezResist",
+              "toWho": "All",
+              "powerFullName": "Pool.Leadership.Vengeance",
+              "mezType": "Terrorize"
+            },
+            {
+              "mag": {
+                "pve": 0.5536
+              },
+              "probability": 1,
+              "duration": 120,
+              "effectType": "MezResist",
+              "toWho": "All",
+              "powerFullName": "Pool.Leadership.Vengeance",
+              "mezType": "Stun"
+            },
+            {
+              "mag": {
+                "pve": 0.5536
+              },
+              "probability": 1,
+              "duration": 120,
+              "effectType": "MezResist",
+              "toWho": "All",
+              "powerFullName": "Pool.Leadership.Vengeance",
+              "mezType": "Sleep"
+            },
+            {
+              "mag": {
+                "pve": 0.5536
+              },
+              "probability": 1,
+              "duration": 120,
+              "effectType": "MezResist",
+              "toWho": "All",
+              "powerFullName": "Pool.Leadership.Vengeance",
+              "mezType": "Immobilization"
+            },
+            {
+              "mag": {
+                "pve": 0.5536
+              },
+              "probability": 1,
+              "duration": 120,
+              "effectType": "MezResist",
+              "toWho": "All",
+              "powerFullName": "Pool.Leadership.Vengeance",
+              "mezType": "Hold"
+            },
+            {
+              "mag": {
+                "pve": 0.5536
+              },
+              "probability": 1,
+              "duration": 120,
+              "effectType": "MezResist",
+              "toWho": "All",
+              "powerFullName": "Pool.Leadership.Vengeance",
+              "mezType": "Confuse"
+            },
+            {
+              "mag": {
+                "pve": 0.5536
+              },
+              "probability": 1,
+              "duration": 120,
+              "effectType": "MezResist",
+              "toWho": "All",
+              "powerFullName": "Pool.Leadership.Vengeance",
+              "mezType": "Taunt"
+            },
+            {
+              "mag": {
+                "pve": 0.5536
+              },
+              "probability": 1,
+              "duration": 120,
+              "effectType": "MezResist",
+              "toWho": "All",
+              "powerFullName": "Pool.Leadership.Vengeance",
+              "mezType": "Placate"
+            }
+          ]
+        },
+        {
+          "effectType": "Buff_Dmg",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.4375
+              },
+              "probability": 1,
+              "duration": 120,
+              "effectType": "DamageBuff",
+              "toWho": "All",
+              "powerFullName": "Pool.Leadership.Vengeance",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 0.4375
+              },
+              "probability": 1,
+              "duration": 120,
+              "effectType": "DamageBuff",
+              "toWho": "All",
+              "powerFullName": "Pool.Leadership.Vengeance",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.4375
+              },
+              "probability": 1,
+              "duration": 120,
+              "effectType": "DamageBuff",
+              "toWho": "All",
+              "powerFullName": "Pool.Leadership.Vengeance",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.4375
+              },
+              "probability": 1,
+              "duration": 120,
+              "effectType": "DamageBuff",
+              "toWho": "All",
+              "powerFullName": "Pool.Leadership.Vengeance",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 0.4375
+              },
+              "probability": 1,
+              "duration": 120,
+              "effectType": "DamageBuff",
+              "toWho": "All",
+              "powerFullName": "Pool.Leadership.Vengeance",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.4375
+              },
+              "probability": 1,
+              "duration": 120,
+              "effectType": "DamageBuff",
+              "toWho": "All",
+              "powerFullName": "Pool.Leadership.Vengeance",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.4375
+              },
+              "probability": 1,
+              "duration": 120,
+              "effectType": "DamageBuff",
+              "toWho": "All",
+              "powerFullName": "Pool.Leadership.Vengeance",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pve": 0.4375
+              },
+              "probability": 1,
+              "duration": 120,
+              "effectType": "DamageBuff",
+              "toWho": "All",
+              "powerFullName": "Pool.Leadership.Vengeance",
+              "damageType": "Psionic"
+            }
+          ]
+        }
+      ],
+      "powerIndex": 3,
+      "castTimeReal": 1.17,
+      "fullName": "Pool_Leadership_Vengeance",
+      "displayName": "Vengeance",
+      "requires": {
+        "powers": {
+          "Pool_Leadership_Maneuvers": true,
+          "Pool_Leadership_Assault": true,
+          "Pool_Leadership_Tactics": true
+        },
+        "count": 2
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "target": 1048576,
+      "targetLoS": true,
+      "range": 60,
+      "rechargeTime": 300,
+      "baseRechargeTime": 300,
+      "effectArea": 2,
+      "radius": 100,
+      "maxTargets": 255,
+      "aIReport": 1,
+      "numAllowed": 1,
+      "description": {
+        "short": "Ranged (Targeted AoE), Teammates +DMG, +To Hit, +DEF(All), Res(Effects)",
+        "long": "The loss of a comrade enrages the team. When a teammate is defeated in combat, activate this power to grant you and your teammates a bonus to chance to hit, Damage and Defense to all attacks. A Vengeful team has no fear, and Vengeance protects you and your Teammates from Fear effects. It also gives you and your team great resistance to Sleep, Hold, Disorient, Immobilize, Confuse, Taunt, Placate and Knockback. You must be at least level 14 and have two other Leadership Powers before selecting Vengeance.  This power does not stack with multiple castings. Recharge: Very Long"
+      },
+      "setTypes": [
+        7,
+        9,
+        25
+      ],
+      "clickBuff": true,
+      "level": 14,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 1.31999993,
+      "slottable": true,
+      "aoeModifier": 16
+    },
+    {
+      "allowedEnhancements": [
+        "Endurance_Discount",
+        "Range",
+        "Endurance_Modification"
+      ],
+      "enhancementCount": 6,
+      "archetypeOrder": "poolPower",
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": -1,
+                "pvp": -1
+              },
+              "probability": 1,
+              "duration": 2,
+              "effectType": "EntCreate",
+              "toWho": "Target",
+              "powerFullName": "Pool.Leadership.Victory_Rush"
+            }
+          ]
+        }
+      ],
+      "powerIndex": 4,
+      "castTimeReal": 1.17,
+      "toggleCost": 9.75,
+      "fullName": "Pool_Leadership_Victory_Rush",
+      "displayName": "Victory Rush",
+      "requires": {
+        "powers": {
+          "Pool_Leadership_Maneuvers": true,
+          "Pool_Leadership_Assault": true,
+          "Pool_Leadership_Tactics": true,
+          "Pool_Leadership_Vengeance": true
+        },
+        "count": 2
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "target": 131072,
+      "targetLoS": true,
+      "range": 80,
+      "endCost": 9.75,
+      "rechargeTime": 300,
+      "baseRechargeTime": 300,
+      "effectArea": 1,
+      "radius": 100,
+      "aIReport": 1,
+      "numAllowed": 1,
+      "description": {
+        "short": "Ranged (Targeted AoE), Team +Recovery, -End Cost",
+        "long": "The defeat of an opponent gives your team a rush of adrenaline. The excitement of your victory increases the recovery and reduces the endurance cost of your powers. This effect extends to your teammates as well. The total strength of this bonus is dependent upon the rank of the enemy on which this is cast, with Archvillains and Giant Monsters providing the greatest benefit. This power does not stack with multiple castings. You must be level 14 and have trained at least two other Leadership powers before you can train Victory Rush. This power's Recharge Time cannot be reduced.  Recharge: Very Long"
+      },
+      "setTypes": [
+        22
+      ],
+      "level": 14,
+      "ignoreEnh": [
+        14
+      ],
+      "ignore_Buff": [
+        14
+      ],
+      "castTime": 1.31999993,
+      "slottable": true,
+      "aoeModifier": 1
+    }
+  ]
+}

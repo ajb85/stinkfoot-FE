@@ -1,1 +1,458 @@
-{"fullName":"Pool_Speed","archetypeOrder":"poolPower","description":"Grants you various feats of super speed.","imageName":"SuperSpeed.png","displayName":"Speed","powers":[{"allowedEnhancements":["Accuracy","Damage","Endurance_Discount","Recharge","Stun"],"enhancementCount":6,"archetypeOrder":"poolPower","powerIndex":0,"castTimeReal":3.07,"toggleCost":5.46,"fullName":"Pool_Speed_Flurry","displayName":"Flurry","requires":{"powers":{},"count":0},"accuracy":1,"accuracyMult":1,"attackTypes":9,"target":2048,"targetLoS":true,"range":7,"endCost":5.46,"rechargeTime":3,"baseRechargeTime":3,"effectArea":1,"numAllowed":1,"description":{"short":"Melee, Moderate DMG(Smash), Foe Disorient","long":"Unleashes a super fast Flurry of punches to pummel your foe. Flurry is so dizzying that it has a chance to Disorient the target."},"setTypes":[1,11,44],"level":4,"ignoreEnh":[13],"ignore_Buff":[],"castTime":3.3,"slottable":true,"aoeModifier":1},{"allowedEnhancements":["Recharge"],"enhancementCount":6,"archetypeOrder":"poolPower","powerIndex":1,"castTimeReal":0.73,"fullName":"Pool_Speed_Hasten","displayName":"Hasten","requires":{"powers":{},"count":0},"accuracy":1,"accuracyMult":1,"target":1,"targetLoS":true,"rechargeTime":450,"baseRechargeTime":450,"effectArea":1,"numAllowed":1,"description":{"short":"Self +Recharge","long":"You can reduce the recharge time of all powers for 2 minutes. Although Hasten does not cost any Endurance to activate, you can tire easily since your Endurance does not recover more rapidly. After Hasten wears off, you become tired and will lose some Endurance."},"setTypes":[],"clickBuff":true,"level":4,"ignoreEnh":[],"ignore_Buff":[],"neverAutoUpdate":true,"castTime":0.924,"slottable":true,"aoeModifier":1},{"allowedEnhancements":["Endurance_Discount","Run"],"enhancementCount":6,"archetypeOrder":"poolPower","powerIndex":2,"toggleCost":0.455,"fullName":"Pool_Speed_Super_Speed","displayName":"Super Speed","requires":{"powers":{},"count":0},"accuracy":1,"accuracyMult":1,"target":1,"targetLoS":true,"endCost":0.2275,"activatePeriod":0.5,"effectArea":1,"numAllowed":1,"description":{"short":"Toggle: Self +Speed","long":"You can run at super-human speeds! While running at such speeds, you are a blur, and many foes will not even notice you as you speed past them. If you attack a target while this power is on, you will temporarily be slowed to normal speed."},"setTypes":[19,28],"level":4,"ignoreEnh":[],"ignore_Buff":[],"castTime":0.132,"slottable":true,"aoeModifier":1},{"allowedEnhancements":["Recharge"],"enhancementCount":6,"archetypeOrder":"poolPower","powerIndex":3,"castTimeReal":1,"toggleCost":48.75,"fullName":"Pool_Speed_Burnout","displayName":"Burnout","requires":{"powers":{"Pool_Speed_Flurry":true,"Pool_Speed_Hasten":true,"Pool_Speed_Super_Speed":true},"count":2},"accuracy":1,"accuracyMult":1,"target":1,"targetLoS":true,"endCost":48.75,"rechargeTime":1800,"baseRechargeTime":1800,"effectArea":1,"numAllowed":1,"description":{"short":"Self +Recharge","long":"Burnout allows you to instantly recharge all of your Primary and Secondary powers.  Burnout is very expensive in terms of endurance, and reduces your maximum endurance slightly for 60 seconds after use.   You must be at least level 14 and have two other Speed Powers before selecting Burnout   Recharge: Extremely Long"},"setTypes":[],"clickBuff":true,"level":14,"ignoreEnh":[],"ignore_Buff":[],"castTime":1.188,"slottable":true,"aoeModifier":1},{"allowedEnhancements":["Endurance_Discount","Knockback","Recharge"],"enhancementCount":6,"archetypeOrder":"poolPower","powerIndex":4,"castTimeReal":1,"toggleCost":0.975,"fullName":"Pool_Speed_Whirlwind","displayName":"Whirlwind","requires":{"powers":{"Pool_Speed_Flurry":true,"Pool_Speed_Hasten":true,"Pool_Speed_Super_Speed":true},"count":2},"accuracy":1,"accuracyMult":1,"attackTypes":4,"target":1,"targetLoS":true,"endCost":0.4875,"rechargeTime":20,"baseRechargeTime":20,"activatePeriod":0.5,"effectArea":2,"radius":7,"maxTargets":16,"numAllowed":1,"description":{"short":"Toggle: PBAoE, Foe Knockback","long":"You spin around at an amazing speed to create a Whirlwind around yourself. Any foes that enter this Whirlwind will be tossed into the air. You must be at least level 14 and have two other Speed Powers before selecting Whirlwind."},"setTypes":[23],"level":14,"ignoreEnh":[],"ignore_Buff":[],"castTime":1.188,"slottable":true,"aoeModifier":2.05}]}
+{
+  "fullName": "Pool_Speed",
+  "archetypeOrder": "poolPower",
+  "description": "Grants you various feats of super speed.",
+  "imageName": "SuperSpeed.png",
+  "displayName": "Speed",
+  "powers": [
+    {
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Recharge",
+        "Stun"
+      ],
+      "enhancementCount": 6,
+      "archetypeOrder": "poolPower",
+      "effects": [
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 7.95225859,
+                "pvp": 200.74614
+              },
+              "probability": 1,
+              "duration": 1.8,
+              "effectType": "Damage",
+              "ticks": 8,
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Pool.Speed.Flurry",
+              "damageType": "Smashing"
+            }
+          ]
+        },
+        {
+          "effectType": "Stun",
+          "values": [
+            {
+              "mag": {
+                "pve": 2,
+                "pvp": 2
+              },
+              "probability": 0.2,
+              "duration": 4.768,
+              "effectType": "Mez",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "attribType": 1,
+              "powerFullName": "Pool.Speed.Flurry",
+              "mezType": "Stun"
+            }
+          ]
+        },
+        {
+          "effectType": "InherentTaunt",
+          "values": [
+            {
+              "mag": {
+                "pve": 4
+              },
+              "probability": 1,
+              "duration": 13.6,
+              "effectType": "Mez",
+              "stacking": 1,
+              "resistible": true,
+              "specialCase": 14,
+              "toWho": "Target",
+              "attribType": 1,
+              "powerFullName": "Pool.Speed.Flurry",
+              "requiresToHitCheck": true,
+              "mezType": "Taunt"
+            }
+          ]
+        }
+      ],
+      "powerIndex": 0,
+      "castTimeReal": 3.07,
+      "toggleCost": 5.46,
+      "fullName": "Pool_Speed_Flurry",
+      "displayName": "Flurry",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "attackTypes": 9,
+      "target": 2048,
+      "targetLoS": true,
+      "range": 7,
+      "endCost": 5.46,
+      "rechargeTime": 3,
+      "baseRechargeTime": 3,
+      "effectArea": 1,
+      "numAllowed": 1,
+      "description": {
+        "short": "Melee, Moderate DMG(Smash), Foe Disorient",
+        "long": "Unleashes a super fast Flurry of punches to pummel your foe. Flurry is so dizzying that it has a chance to Disorient the target."
+      },
+      "setTypes": [
+        1,
+        11,
+        44
+      ],
+      "level": 4,
+      "ignoreEnh": [
+        13
+      ],
+      "ignore_Buff": [],
+      "castTime": 3.3,
+      "slottable": true,
+      "aoeModifier": 1
+    },
+    {
+      "allowedEnhancements": [
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "archetypeOrder": "poolPower",
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.7
+              },
+              "probability": 1,
+              "duration": 120,
+              "effectType": "Enhancement",
+              "eTModifies": 25,
+              "toWho": "Self",
+              "powerFullName": "Pool.Speed.Hasten"
+            },
+            {
+              "mag": {
+                "pve": 1
+              },
+              "probability": 1,
+              "duration": 30,
+              "effectType": "GlobalChanceMod",
+              "toWho": "Self",
+              "powerFullName": "Pool.Speed.Hasten"
+            }
+          ]
+        },
+        {
+          "effectType": "GlobalCrash",
+          "values": [
+            {
+              "mag": {
+                "pve": -15
+              },
+              "probability": 1,
+              "variableModified": true,
+              "effectType": "Endurance",
+              "delayedTime": 120,
+              "stacking": 1,
+              "toWho": "Self",
+              "powerFullName": "Pool.Speed.Hasten"
+            }
+          ]
+        }
+      ],
+      "powerIndex": 1,
+      "castTimeReal": 0.73,
+      "fullName": "Pool_Speed_Hasten",
+      "displayName": "Hasten",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "target": 1,
+      "targetLoS": true,
+      "rechargeTime": 450,
+      "baseRechargeTime": 450,
+      "effectArea": 1,
+      "numAllowed": 1,
+      "description": {
+        "short": "Self +Recharge",
+        "long": "You can reduce the recharge time of all powers for 2 minutes. Although Hasten does not cost any Endurance to activate, you can tire easily since your Endurance does not recover more rapidly. After Hasten wears off, you become tired and will lose some Endurance."
+      },
+      "setTypes": [],
+      "clickBuff": true,
+      "level": 4,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "neverAutoUpdate": true,
+      "castTime": 0.924,
+      "slottable": true,
+      "aoeModifier": 1
+    },
+    {
+      "allowedEnhancements": [
+        "Endurance_Discount",
+        "Run"
+      ],
+      "enhancementCount": 6,
+      "archetypeOrder": "poolPower",
+      "effects": [
+        {
+          "effectType": "SpeedRunning",
+          "values": [
+            {
+              "mag": {
+                "pve": 3.5,
+                "pvp": 3.5
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "SpeedRunning",
+              "toWho": "Self",
+              "powerFullName": "Pool.Speed.Super_Speed"
+            }
+          ]
+        },
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 35
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "StealthRadius",
+              "toWho": "Self",
+              "powerFullName": "Pool.Speed.Super_Speed"
+            },
+            {
+              "mag": {
+                "pve": -1
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "ThreatLevel",
+              "toWho": "Self",
+              "powerFullName": "Pool.Speed.Super_Speed"
+            }
+          ]
+        }
+      ],
+      "powerIndex": 2,
+      "toggleCost": 0.455,
+      "fullName": "Pool_Speed_Super_Speed",
+      "displayName": "Super Speed",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "target": 1,
+      "targetLoS": true,
+      "endCost": 0.2275,
+      "activatePeriod": 0.5,
+      "effectArea": 1,
+      "numAllowed": 1,
+      "description": {
+        "short": "Toggle: Self +Speed",
+        "long": "You can run at super-human speeds! While running at such speeds, you are a blur, and many foes will not even notice you as you speed past them. If you attack a target while this power is on, you will temporarily be slowed to normal speed."
+      },
+      "setTypes": [
+        19,
+        28
+      ],
+      "level": 4,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 0.132,
+      "slottable": true,
+      "aoeModifier": 1,
+      "powerType": "Toggle"
+    },
+    {
+      "allowedEnhancements": [
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "archetypeOrder": "poolPower",
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 1
+              },
+              "probability": 1,
+              "variableModified": true,
+              "effectType": "RechargePower",
+              "stacking": 1,
+              "toWho": "Self",
+              "powerFullName": "Pool.Speed.Burnout"
+            },
+            {
+              "mag": {
+                "pve": -25
+              },
+              "probability": 1,
+              "duration": 60,
+              "variableModified": true,
+              "effectType": "Endurance",
+              "stacking": 1,
+              "toWho": "Self",
+              "powerFullName": "Pool.Speed.Burnout"
+            }
+          ]
+        }
+      ],
+      "powerIndex": 3,
+      "castTimeReal": 1,
+      "toggleCost": 48.75,
+      "fullName": "Pool_Speed_Burnout",
+      "displayName": "Burnout",
+      "requires": {
+        "powers": {
+          "Pool_Speed_Flurry": true,
+          "Pool_Speed_Hasten": true,
+          "Pool_Speed_Super_Speed": true
+        },
+        "count": 2
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "target": 1,
+      "targetLoS": true,
+      "endCost": 48.75,
+      "rechargeTime": 1800,
+      "baseRechargeTime": 1800,
+      "effectArea": 1,
+      "numAllowed": 1,
+      "description": {
+        "short": "Self +Recharge",
+        "long": "Burnout allows you to instantly recharge all of your Primary and Secondary powers.  Burnout is very expensive in terms of endurance, and reduces your maximum endurance slightly for 60 seconds after use.   You must be at least level 14 and have two other Speed Powers before selecting Burnout   Recharge: Extremely Long"
+      },
+      "setTypes": [],
+      "clickBuff": true,
+      "level": 14,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 1.188,
+      "slottable": true,
+      "aoeModifier": 1
+    },
+    {
+      "allowedEnhancements": [
+        "Endurance_Discount",
+        "Knockback",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "archetypeOrder": "poolPower",
+      "effects": [
+        {
+          "effectType": "Knockback",
+          "values": [
+            {
+              "mag": {
+                "pve": 2.0771,
+                "pvp": 4.1542
+              },
+              "probability": 1,
+              "effectType": "Mez",
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Pool.Speed.Whirlwind",
+              "mezType": "Knockback"
+            }
+          ]
+        },
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": -0.3
+              },
+              "probability": 1,
+              "duration": 3,
+              "effectType": "SpeedRunning",
+              "toWho": "Self",
+              "powerFullName": "Pool.Speed.Whirlwind"
+            },
+            {
+              "mag": {
+                "pve": -0.3
+              },
+              "probability": 1,
+              "duration": 3,
+              "effectType": "SpeedFlying",
+              "toWho": "Self",
+              "powerFullName": "Pool.Speed.Whirlwind"
+            },
+            {
+              "mag": {
+                "pve": -1.5
+              },
+              "probability": 1,
+              "variableModified": true,
+              "effectType": "Endurance",
+              "stacking": 1,
+              "toWho": "Self",
+              "powerFullName": "Pool.Speed.Whirlwind"
+            }
+          ]
+        }
+      ],
+      "powerIndex": 4,
+      "castTimeReal": 1,
+      "toggleCost": 0.975,
+      "fullName": "Pool_Speed_Whirlwind",
+      "displayName": "Whirlwind",
+      "requires": {
+        "powers": {
+          "Pool_Speed_Flurry": true,
+          "Pool_Speed_Hasten": true,
+          "Pool_Speed_Super_Speed": true
+        },
+        "count": 2
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "attackTypes": 4,
+      "target": 1,
+      "targetLoS": true,
+      "endCost": 0.4875,
+      "rechargeTime": 20,
+      "baseRechargeTime": 20,
+      "activatePeriod": 0.5,
+      "effectArea": 2,
+      "radius": 7,
+      "maxTargets": 16,
+      "numAllowed": 1,
+      "description": {
+        "short": "Toggle: PBAoE, Foe Knockback",
+        "long": "You spin around at an amazing speed to create a Whirlwind around yourself. Any foes that enter this Whirlwind will be tossed into the air. You must be at least level 14 and have two other Speed Powers before selecting Whirlwind."
+      },
+      "setTypes": [
+        23
+      ],
+      "level": 14,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 1.188,
+      "slottable": true,
+      "aoeModifier": 2.05,
+      "powerType": "Toggle"
+    }
+  ]
+}

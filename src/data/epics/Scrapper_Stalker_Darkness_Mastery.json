@@ -1,1 +1,715 @@
-{"fullName":"Epic_Darkness_Mastery","archetypeOrder":"epicPool","description":"You have Mastery over Darkness to control and blast your foes.","imageName":"DarknessMastery.png","displayName":"Darkness Mastery","powers":[{"allowedEnhancements":["Accuracy","Damage","ToHit_Debuff","Endurance_Discount","Knockback","Range","Recharge"],"enhancementCount":6,"archetypeOrder":"epicPool","powerIndex":0,"castTimeReal":1.03,"toggleCost":17.94,"fullName":"Epic_Darkness_Mastery_Torrent","displayName":"Torrent","requires":{"powers":{},"count":0},"accuracy":1,"accuracyMult":1,"attackTypes":268,"target":2048,"targetLoS":true,"range":60,"endCost":17.94,"rechargeTime":15,"baseRechargeTime":15,"effectArea":3,"radius":60,"arc":30,"maxTargets":10,"numAllowed":1,"description":{"short":"Ranged (Cone), Minor DMG(Smashing), Foe -To Hit, Knockback","long":"You summon a wave of mire that sweeps away foes within its arc. The attack deals minimal Negative Energy damage, but sends foes flying and reduces their chance to hit.  Damage: Minor, Recharge: Slow"},"setTypes":[3,23,26,31,44],"level":35,"ignoreEnh":[],"ignore_Buff":[],"castTime":1.188,"slottable":true,"aoeModifier":2.73993444},{"allowedEnhancements":["Accuracy","Endurance_Discount","Hold","Range","Recharge"],"enhancementCount":6,"archetypeOrder":"epicPool","powerIndex":1,"castTimeReal":1.67,"toggleCost":9.75,"fullName":"Epic_Darkness_Mastery_Petrifying_Gaze","displayName":"Petrifying Gaze","requires":{"powers":{},"count":0},"accuracy":1,"accuracyMult":1,"attackTypes":258,"target":2048,"targetLoS":true,"range":50,"endCost":9.75,"rechargeTime":32,"baseRechargeTime":32,"effectArea":1,"numAllowed":1,"description":{"short":"Ranged Hold","long":"Petrifies a single targeted foe with a terrifying gaze. The victim is Held and defenseless. Recharge: Slow"},"setTypes":[10],"level":35,"ignoreEnh":[],"ignore_Buff":[],"castTime":1.848,"slottable":true,"aoeModifier":1},{"allowedEnhancements":["Accuracy","Damage","ToHit_Debuff","Endurance_Discount","Range","Recharge"],"enhancementCount":6,"archetypeOrder":"epicPool","powerIndex":2,"castTimeReal":1,"toggleCost":6.5,"fullName":"Epic_Darkness_Mastery_Dark_Blast","displayName":"Dark Blast","requires":{"powers":{"Epic_Darkness_Mastery_Torrent":true,"Epic_Darkness_Mastery_Petrifying_Gaze":true},"count":1},"accuracy":1,"accuracyMult":1,"attackTypes":258,"target":2048,"targetLoS":true,"range":80,"endCost":6.5,"rechargeTime":6,"baseRechargeTime":6,"effectArea":1,"numAllowed":1,"description":{"short":"Ranged, Moderate DMG(Negative), Foe -ACC","long":"A long range blast of dark energy. Deals moderate Negative Energy damage and reduces the target's Accuracy. You must be level 41 and have Torrent or Petrifying Gaze before selecting this power. Damage: Moderate, Recharge: Fast"},"setTypes":[2,26,31,44],"level":41,"ignoreEnh":[],"ignore_Buff":[],"castTime":1.188,"slottable":true,"aoeModifier":1},{"allowedEnhancements":["Accuracy","Damage","ToHit_Debuff","Endurance_Discount","Range","Recharge"],"enhancementCount":6,"archetypeOrder":"epicPool","powerIndex":3,"castTimeReal":2,"toggleCost":16.38,"fullName":"Epic_Darkness_Mastery_Night_Fall","displayName":"Night Fall","requires":{"powers":{"Epic_Darkness_Mastery_Torrent":true,"Epic_Darkness_Mastery_Petrifying_Gaze":true},"count":1},"accuracy":1,"accuracyMult":1,"attackTypes":260,"target":2048,"targetLoS":true,"range":60,"endCost":16.38,"rechargeTime":20,"baseRechargeTime":20,"effectArea":3,"radius":60,"arc":20,"maxTargets":10,"numAllowed":1,"description":{"short":"Ranged (Cone), Moderate DMG(Negative), Foe -To Hit","long":"Unleashes a cone shaped burst of particles from the Netherworld. All targets within the modest range of this power take Negative Energy damage and have a reduced chance to hit. You must be level 41 and have Torrent or Petrifying Gaze before selecting this power.  Damage: Moderate(DoT), Recharge: Slow"},"setTypes":[3,26,31,44],"level":41,"ignoreEnh":[],"ignore_Buff":[],"castTime":2.244,"slottable":true,"aoeModifier":2.51993251},{"allowedEnhancements":["Accuracy","Damage","ToHit_Debuff","Endurance_Discount","Immobilize","Range","Recharge"],"enhancementCount":6,"archetypeOrder":"epicPool","powerIndex":4,"castTimeReal":1.67,"toggleCost":12.74,"fullName":"Epic_Darkness_Mastery_Tenebrous_Tentacles","displayName":"Tenebrous Tentacles","requires":{"powers":{"Epic_Darkness_Mastery_Torrent":true,"Epic_Darkness_Mastery_Petrifying_Gaze":true,"Epic_Darkness_Mastery_Dark_Blast":true,"Epic_Darkness_Mastery_Night_Fall":true},"count":2},"accuracy":1,"accuracyMult":1,"attackTypes":268,"target":2048,"targetLoS":true,"range":40,"endCost":12.74,"rechargeTime":20,"baseRechargeTime":20,"effectArea":3,"radius":40,"arc":30,"maxTargets":10,"numAllowed":1,"description":{"short":"Ranged (Cone), Moderate DMG(Negative/Smash), Foe Immobilize, -ACC","long":"You can create a cone shaped rift to the Netherworld that allows its native creatures to slip their oily Tentacles into our reality. These creatures will snare all foes within range, Immobilizing them while the Tentacles drain their life and reduce their Accuracy. You must be level 44 and have two other Darkness Mastery Powers before selecting this power. Damage: Moderate(DoT), Recharge: Slow"},"setTypes":[3,12,26,31,44],"level":44,"ignoreEnh":[],"ignore_Buff":[],"castTime":1.848,"slottable":true,"aoeModifier":2.15995646}]}
+{
+  "fullName": "Epic_Darkness_Mastery",
+  "archetypeOrder": "epicPool",
+  "description": "You have Mastery over Darkness to control and blast your foes.",
+  "imageName": "DarknessMastery.png",
+  "displayName": "Darkness Mastery",
+  "powers": [
+    {
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "ToHit_Debuff",
+        "Endurance_Discount",
+        "Knockback",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "archetypeOrder": "epicPool",
+      "effects": [
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 22.24408,
+                "pvp": 12.4260988
+              },
+              "probability": 1,
+              "effectType": "Damage",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Epic.Darkness_Mastery.Torrent",
+              "damageType": "Smashing"
+            }
+          ]
+        },
+        {
+          "effectType": "Knockback",
+          "values": [
+            {
+              "mag": {
+                "pve": 10.3855,
+                "pvp": 10.3855
+              },
+              "probability": 1,
+              "effectType": "Mez",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Epic.Darkness_Mastery.Torrent",
+              "mezType": "Knockback"
+            }
+          ]
+        },
+        {
+          "effectType": "DeBuff_ToHit",
+          "values": [
+            {
+              "mag": {
+                "pve": -0.0525000021
+              },
+              "probability": 1,
+              "duration": 10,
+              "effectType": "ToHit",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Epic.Darkness_Mastery.Torrent"
+            }
+          ]
+        },
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pvp": 0.05
+              },
+              "probability": 1,
+              "variableModified": true,
+              "effectType": "Rage",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Self",
+              "powerFullName": "Epic.Darkness_Mastery.Torrent"
+            }
+          ]
+        },
+        {
+          "effectType": "InherentTaunt",
+          "values": [
+            {
+              "mag": {
+                "pve": 4
+              },
+              "cancelOnMiss": true,
+              "probability": 1,
+              "duration": 13.6,
+              "effectType": "Mez",
+              "stacking": 1,
+              "resistible": true,
+              "specialCase": 14,
+              "toWho": "Target",
+              "attribType": 1,
+              "powerFullName": "Epic.Darkness_Mastery.Torrent",
+              "requiresToHitCheck": true,
+              "mezType": "Taunt"
+            }
+          ]
+        }
+      ],
+      "powerIndex": 0,
+      "castTimeReal": 1.03,
+      "toggleCost": 17.94,
+      "fullName": "Epic_Darkness_Mastery_Torrent",
+      "displayName": "Torrent",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "attackTypes": 268,
+      "target": 2048,
+      "targetLoS": true,
+      "range": 60,
+      "endCost": 17.94,
+      "rechargeTime": 15,
+      "baseRechargeTime": 15,
+      "effectArea": 3,
+      "radius": 60,
+      "arc": 30,
+      "maxTargets": 10,
+      "numAllowed": 1,
+      "description": {
+        "short": "Ranged (Cone), Minor DMG(Smashing), Foe -To Hit, Knockback",
+        "long": "You summon a wave of mire that sweeps away foes within its arc. The attack deals minimal Negative Energy damage, but sends foes flying and reduces their chance to hit.  Damage: Minor, Recharge: Slow"
+      },
+      "setTypes": [
+        3,
+        23,
+        26,
+        31,
+        44
+      ],
+      "level": 35,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 1.188,
+      "slottable": true,
+      "aoeModifier": 2.73993444
+    },
+    {
+      "allowedEnhancements": [
+        "Accuracy",
+        "Endurance_Discount",
+        "Hold",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "archetypeOrder": "epicPool",
+      "effects": [
+        {
+          "effectType": "Immobilize",
+          "values": [
+            {
+              "mag": {
+                "pve": 3
+              },
+              "probability": 1,
+              "duration": 9.536,
+              "effectType": "Mez",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "attribType": 1,
+              "powerFullName": "Epic.Darkness_Mastery.Petrifying_Gaze",
+              "mezType": "Hold"
+            }
+          ]
+        },
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pvp": 3
+              },
+              "probability": 1,
+              "duration": 2,
+              "effectType": "Mez",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "attribType": 1,
+              "powerFullName": "Epic.Darkness_Mastery.Petrifying_Gaze",
+              "mezType": "Hold"
+            },
+            {
+              "mag": {
+                "pvp": 0.05
+              },
+              "probability": 1,
+              "variableModified": true,
+              "effectType": "Rage",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Self",
+              "powerFullName": "Epic.Darkness_Mastery.Petrifying_Gaze"
+            }
+          ]
+        },
+        {
+          "effectType": "InherentTaunt",
+          "values": [
+            {
+              "mag": {
+                "pve": 4
+              },
+              "cancelOnMiss": true,
+              "probability": 1,
+              "duration": 13.33,
+              "effectType": "Mez",
+              "stacking": 1,
+              "resistible": true,
+              "specialCase": 14,
+              "toWho": "Target",
+              "attribType": 1,
+              "powerFullName": "Epic.Darkness_Mastery.Petrifying_Gaze",
+              "requiresToHitCheck": true,
+              "mezType": "Taunt"
+            }
+          ]
+        }
+      ],
+      "powerIndex": 1,
+      "castTimeReal": 1.67,
+      "toggleCost": 9.75,
+      "fullName": "Epic_Darkness_Mastery_Petrifying_Gaze",
+      "displayName": "Petrifying Gaze",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "attackTypes": 258,
+      "target": 2048,
+      "targetLoS": true,
+      "range": 50,
+      "endCost": 9.75,
+      "rechargeTime": 32,
+      "baseRechargeTime": 32,
+      "effectArea": 1,
+      "numAllowed": 1,
+      "description": {
+        "short": "Ranged Hold",
+        "long": "Petrifies a single targeted foe with a terrifying gaze. The victim is Held and defenseless. Recharge: Slow"
+      },
+      "setTypes": [
+        10
+      ],
+      "level": 35,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 1.848,
+      "slottable": true,
+      "aoeModifier": 1
+    },
+    {
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "ToHit_Debuff",
+        "Endurance_Discount",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "archetypeOrder": "epicPool",
+      "effects": [
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 55.6102,
+                "pvp": 68.40054
+              },
+              "probability": 1,
+              "effectType": "Damage",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Epic.Darkness_Mastery.Dark_Blast",
+              "damageType": "Negative"
+            }
+          ]
+        },
+        {
+          "effectType": "DeBuff_ToHit",
+          "values": [
+            {
+              "mag": {
+                "pve": -0.0525000021
+              },
+              "probability": 1,
+              "duration": 6,
+              "effectType": "ToHit",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Epic.Darkness_Mastery.Dark_Blast"
+            }
+          ]
+        },
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pvp": 0.05
+              },
+              "probability": 1,
+              "variableModified": true,
+              "effectType": "Rage",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Self",
+              "powerFullName": "Epic.Darkness_Mastery.Dark_Blast"
+            }
+          ]
+        },
+        {
+          "effectType": "InherentTaunt",
+          "values": [
+            {
+              "mag": {
+                "pve": 4
+              },
+              "cancelOnMiss": true,
+              "probability": 1,
+              "duration": 13.6,
+              "effectType": "Mez",
+              "stacking": 1,
+              "resistible": true,
+              "specialCase": 14,
+              "toWho": "Target",
+              "attribType": 1,
+              "powerFullName": "Epic.Darkness_Mastery.Dark_Blast",
+              "requiresToHitCheck": true,
+              "mezType": "Taunt"
+            }
+          ]
+        }
+      ],
+      "powerIndex": 2,
+      "castTimeReal": 1,
+      "toggleCost": 6.5,
+      "fullName": "Epic_Darkness_Mastery_Dark_Blast",
+      "displayName": "Dark Blast",
+      "requires": {
+        "powers": {
+          "Epic_Darkness_Mastery_Torrent": true,
+          "Epic_Darkness_Mastery_Petrifying_Gaze": true
+        },
+        "count": 1
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "attackTypes": 258,
+      "target": 2048,
+      "targetLoS": true,
+      "range": 80,
+      "endCost": 6.5,
+      "rechargeTime": 6,
+      "baseRechargeTime": 6,
+      "effectArea": 1,
+      "numAllowed": 1,
+      "description": {
+        "short": "Ranged, Moderate DMG(Negative), Foe -ACC",
+        "long": "A long range blast of dark energy. Deals moderate Negative Energy damage and reduces the target's Accuracy. You must be level 41 and have Torrent or Petrifying Gaze before selecting this power. Damage: Moderate, Recharge: Fast"
+      },
+      "setTypes": [
+        2,
+        26,
+        31,
+        44
+      ],
+      "level": 41,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 1.188,
+      "slottable": true,
+      "aoeModifier": 1
+    },
+    {
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "ToHit_Debuff",
+        "Endurance_Discount",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "archetypeOrder": "epicPool",
+      "effects": [
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 68.81765,
+                "pvp": 92.59102
+              },
+              "probability": 1,
+              "duration": 2.8,
+              "effectType": "Damage",
+              "ticks": 10,
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Epic.Darkness_Mastery.Night_Fall",
+              "damageType": "Negative"
+            }
+          ]
+        },
+        {
+          "effectType": "DeBuff_ToHit",
+          "values": [
+            {
+              "mag": {
+                "pve": -0.0525000021
+              },
+              "probability": 1,
+              "duration": 10,
+              "effectType": "ToHit",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Epic.Darkness_Mastery.Night_Fall"
+            }
+          ]
+        },
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pvp": 0.05
+              },
+              "probability": 1,
+              "variableModified": true,
+              "effectType": "Rage",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Self",
+              "powerFullName": "Epic.Darkness_Mastery.Night_Fall"
+            }
+          ]
+        },
+        {
+          "effectType": "InherentTaunt",
+          "values": [
+            {
+              "mag": {
+                "pve": 4
+              },
+              "cancelOnMiss": true,
+              "probability": 1,
+              "duration": 13.33,
+              "effectType": "Mez",
+              "stacking": 1,
+              "resistible": true,
+              "specialCase": 14,
+              "toWho": "Target",
+              "attribType": 1,
+              "powerFullName": "Epic.Darkness_Mastery.Night_Fall",
+              "requiresToHitCheck": true,
+              "mezType": "Taunt"
+            }
+          ]
+        }
+      ],
+      "powerIndex": 3,
+      "castTimeReal": 2,
+      "toggleCost": 16.38,
+      "fullName": "Epic_Darkness_Mastery_Night_Fall",
+      "displayName": "Night Fall",
+      "requires": {
+        "powers": {
+          "Epic_Darkness_Mastery_Torrent": true,
+          "Epic_Darkness_Mastery_Petrifying_Gaze": true
+        },
+        "count": 1
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "attackTypes": 260,
+      "target": 2048,
+      "targetLoS": true,
+      "range": 60,
+      "endCost": 16.38,
+      "rechargeTime": 20,
+      "baseRechargeTime": 20,
+      "effectArea": 3,
+      "radius": 60,
+      "arc": 20,
+      "maxTargets": 10,
+      "numAllowed": 1,
+      "description": {
+        "short": "Ranged (Cone), Moderate DMG(Negative), Foe -To Hit",
+        "long": "Unleashes a cone shaped burst of particles from the Netherworld. All targets within the modest range of this power take Negative Energy damage and have a reduced chance to hit. You must be level 41 and have Torrent or Petrifying Gaze before selecting this power.  Damage: Moderate(DoT), Recharge: Slow"
+      },
+      "setTypes": [
+        3,
+        26,
+        31,
+        44
+      ],
+      "level": 41,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 2.244,
+      "slottable": true,
+      "aoeModifier": 2.51993251
+    },
+    {
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "ToHit_Debuff",
+        "Endurance_Discount",
+        "Immobilize",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "archetypeOrder": "epicPool",
+      "effects": [
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 5.56102,
+                "pvp": 7.52406
+              },
+              "probability": 1,
+              "duration": 7.1,
+              "effectType": "Damage",
+              "ticks": 8,
+              "delayedTime": 1,
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Epic.Darkness_Mastery.Tenebrous_Tentacles",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 51.9955368,
+                "pvp": 69.99267
+              },
+              "probability": 1,
+              "effectType": "Damage",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Epic.Darkness_Mastery.Tenebrous_Tentacles",
+              "damageType": "Negative"
+            }
+          ]
+        },
+        {
+          "effectType": "DeBuff_ToHit",
+          "values": [
+            {
+              "mag": {
+                "pve": -0.0525000021
+              },
+              "probability": 1,
+              "duration": 8,
+              "effectType": "ToHit",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Epic.Darkness_Mastery.Tenebrous_Tentacles"
+            }
+          ]
+        },
+        {
+          "effectType": "Immobilize",
+          "values": [
+            {
+              "mag": {
+                "pve": 3
+              },
+              "probability": 1,
+              "duration": 17.8800011,
+              "effectType": "Mez",
+              "stacking": 1,
+              "toWho": "Target",
+              "attribType": 1,
+              "powerFullName": "Epic.Darkness_Mastery.Tenebrous_Tentacles",
+              "mezType": "Immobilization"
+            }
+          ]
+        },
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pvp": 3
+              },
+              "probability": 1,
+              "duration": 2,
+              "effectType": "Mez",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "attribType": 1,
+              "powerFullName": "Epic.Darkness_Mastery.Tenebrous_Tentacles",
+              "mezType": "Immobilization"
+            },
+            {
+              "mag": {
+                "pvp": 0.05
+              },
+              "probability": 1,
+              "variableModified": true,
+              "effectType": "Rage",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Self",
+              "powerFullName": "Epic.Darkness_Mastery.Tenebrous_Tentacles"
+            }
+          ]
+        },
+        {
+          "effectType": "InherentTaunt",
+          "values": [
+            {
+              "mag": {
+                "pve": 4
+              },
+              "cancelOnMiss": true,
+              "probability": 1,
+              "duration": 13.6,
+              "effectType": "Mez",
+              "stacking": 1,
+              "resistible": true,
+              "specialCase": 14,
+              "toWho": "Target",
+              "attribType": 1,
+              "powerFullName": "Epic.Darkness_Mastery.Tenebrous_Tentacles",
+              "requiresToHitCheck": true,
+              "mezType": "Taunt"
+            }
+          ]
+        }
+      ],
+      "powerIndex": 4,
+      "castTimeReal": 1.67,
+      "toggleCost": 12.74,
+      "fullName": "Epic_Darkness_Mastery_Tenebrous_Tentacles",
+      "displayName": "Tenebrous Tentacles",
+      "requires": {
+        "powers": {
+          "Epic_Darkness_Mastery_Torrent": true,
+          "Epic_Darkness_Mastery_Petrifying_Gaze": true,
+          "Epic_Darkness_Mastery_Dark_Blast": true,
+          "Epic_Darkness_Mastery_Night_Fall": true
+        },
+        "count": 2
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "attackTypes": 268,
+      "target": 2048,
+      "targetLoS": true,
+      "range": 40,
+      "endCost": 12.74,
+      "rechargeTime": 20,
+      "baseRechargeTime": 20,
+      "effectArea": 3,
+      "radius": 40,
+      "arc": 30,
+      "maxTargets": 10,
+      "numAllowed": 1,
+      "description": {
+        "short": "Ranged (Cone), Moderate DMG(Negative/Smash), Foe Immobilize, -ACC",
+        "long": "You can create a cone shaped rift to the Netherworld that allows its native creatures to slip their oily Tentacles into our reality. These creatures will snare all foes within range, Immobilizing them while the Tentacles drain their life and reduce their Accuracy. You must be level 44 and have two other Darkness Mastery Powers before selecting this power. Damage: Moderate(DoT), Recharge: Slow"
+      },
+      "setTypes": [
+        3,
+        12,
+        26,
+        31,
+        44
+      ],
+      "level": 44,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 1.848,
+      "slottable": true,
+      "aoeModifier": 2.15995646
+    }
+  ]
+}

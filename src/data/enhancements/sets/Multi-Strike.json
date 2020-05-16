@@ -1,1 +1,1161 @@
-{"fullName":"IOSet.Multi-Strike","enhancements":[{"type":"set","description":{"short":"Enhances Accuracy and Damage","long":"Enhances the damage of a power by {Boost.Attrib.Damage.Scale}% and accuracy by {Boost.Attrib.Accuracy.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Multi_Strike_A.Attuned_Multi_Strike_A","setName":"Multi-Strike","displayName":"Accuracy/Damage","effects":[{"mag":0.265,"effectId":"Damage","damageType":1},{"mag":0.265,"effectId":"Boosts_33","damageType":2},{"mag":0.265,"effectId":"Boosts_33","damageType":3},{"mag":0.265,"effectId":"Boosts_33","damageType":4},{"mag":0.265,"effectId":"Boosts_33","damageType":5},{"mag":0.265,"effectId":"Boosts_33","damageType":6},{"mag":0.265,"effectId":"Boosts_33","damageType":7},{"mag":0.265,"effectId":"Boosts_33","damageType":8},{"mag":0.265,"effectId":"Accuracy"}]},{"type":"set","description":{"short":"Enhances Damage and Reduces Endurance Cost","long":"Enhances the damage of a power by {Boost.Attrib.Damage.Scale}% and reduces endurance cost by {Boost.Attrib.Endurance.Scale}%"},"isUnique":false,"fullName":"Boosts.Attuned_Multi_Strike_B.Attuned_Multi_Strike_B","setName":"Multi-Strike","displayName":"Damage/Endurance","effects":[{"mag":0.265,"effectId":"Damage","damageType":1},{"mag":0.265,"effectId":"Boosts_33","damageType":2},{"mag":0.265,"effectId":"Boosts_33","damageType":3},{"mag":0.265,"effectId":"Boosts_33","damageType":4},{"mag":0.265,"effectId":"Boosts_33","damageType":5},{"mag":0.265,"effectId":"Boosts_33","damageType":6},{"mag":0.265,"effectId":"Boosts_33","damageType":7},{"mag":0.265,"effectId":"Boosts_33","damageType":8},{"mag":0.265,"effectId":"Endurance"}]},{"type":"set","description":{"short":"Enhances Damage and Recharge","long":"Enhances the damage of a power by {Boost.Attrib.Damage.Scale}% and reduces recharge time by {Boost.Attrib.Recharge.Scale}%"},"isUnique":false,"fullName":"Boosts.Attuned_Multi_Strike_C.Attuned_Multi_Strike_C","setName":"Multi-Strike","displayName":"Damage/Recharge","effects":[{"mag":0.265,"effectId":"Damage","damageType":1},{"mag":0.265,"effectId":"Boosts_33","damageType":2},{"mag":0.265,"effectId":"Boosts_33","damageType":3},{"mag":0.265,"effectId":"Boosts_33","damageType":4},{"mag":0.265,"effectId":"Boosts_33","damageType":5},{"mag":0.265,"effectId":"Boosts_33","damageType":6},{"mag":0.265,"effectId":"Boosts_33","damageType":7},{"mag":0.265,"effectId":"Boosts_33","damageType":8},{"mag":0.265,"effectId":"Recharge"}]},{"type":"set","description":{"short":"Enhances Accuracy and Reduces Endurance Cost","long":"Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and reduces endurance cost by {Boost.Attrib.Endurance.Scale}%"},"isUnique":false,"fullName":"Boosts.Attuned_Multi_Strike_D.Attuned_Multi_Strike_D","setName":"Multi-Strike","displayName":"Accuracy/Endurance","effects":[{"mag":0.265,"effectId":"Accuracy"},{"mag":0.265,"effectId":"Endurance"}]},{"type":"set","description":{"short":"Enhances Damage, Reduces Endurance Cost and Increases Accuracy","long":"Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and damage by {Boost.Attrib.Damage.Scale}% and reduces endurance cost by {Boost.Attrib.Endurance.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Multi_Strike_E.Attuned_Multi_Strike_E","setName":"Multi-Strike","displayName":" Accuracy/Damage/Endurance","effects":[{"mag":0.212,"effectId":"Damage","damageType":1},{"mag":0.212,"effectId":"Boosts_33","damageType":2},{"mag":0.212,"effectId":"Boosts_33","damageType":3},{"mag":0.212,"effectId":"Boosts_33","damageType":4},{"mag":0.212,"effectId":"Boosts_33","damageType":5},{"mag":0.212,"effectId":"Boosts_33","damageType":6},{"mag":0.212,"effectId":"Boosts_33","damageType":7},{"mag":0.212,"effectId":"Boosts_33","damageType":8},{"mag":0.212,"effectId":"Endurance"},{"mag":0.212,"effectId":"Accuracy"}]},{"type":"set","description":{"short":"Enhances Damage, Reduces Endurance Cost and Increases Attack Rate","long":"Enhances the damage by {Boost.Attrib.Damage.Scale}%, endurance costs by {Boost.Attrib.Endurance.Scale}% and reduces recharge time by {Boost.Attrib.Recharge.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Multi_Strike_F.Attuned_Multi_Strike_F","setName":"Multi-Strike","displayName":"Damage/Endurance/Recharge","effects":[{"mag":0.212,"effectId":"Damage","damageType":1},{"mag":0.212,"effectId":"Boosts_33","damageType":2},{"mag":0.212,"effectId":"Boosts_33","damageType":3},{"mag":0.212,"effectId":"Boosts_33","damageType":4},{"mag":0.212,"effectId":"Boosts_33","damageType":5},{"mag":0.212,"effectId":"Boosts_33","damageType":6},{"mag":0.212,"effectId":"Boosts_33","damageType":7},{"mag":0.212,"effectId":"Boosts_33","damageType":8},{"mag":0.212,"effectId":"Endurance"},{"mag":0.212,"effectId":"Recharge"}]}],"levels":{"min":20,"max":50},"bonuses":["Lethal_Smash_Mez_Res_1","Fire_Cold_Mez_Res_1","Energy_Neg_Mez_Res_2","Increased_AoE_Fire_Cold_Def_2","Increased_Melee_Lethal_Smash_Def_2"],"setType":4,"displayName":"Multi-Strike","imageName":"sMultiStrike.png"}
+{
+  "fullName": "IOSet.Multi-Strike",
+  "enhancements": [
+    {
+      "description": {
+        "short": "Enhances Accuracy and Damage",
+        "long": "Enhances the damage of a power by {Boost.Attrib.Damage.Scale}% and accuracy by {Boost.Attrib.Accuracy.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Multi_Strike_A.Attuned_Multi_Strike_A",
+              "damageType": "Smashing"
+            }
+          ]
+        },
+        {
+          "effectType": "Boosts_33",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Multi_Strike_A.Attuned_Multi_Strike_A",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Multi_Strike_A.Attuned_Multi_Strike_A",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Multi_Strike_A.Attuned_Multi_Strike_A",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Multi_Strike_A.Attuned_Multi_Strike_A",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Multi_Strike_A.Attuned_Multi_Strike_A",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Multi_Strike_A.Attuned_Multi_Strike_A",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Multi_Strike_A.Attuned_Multi_Strike_A",
+              "damageType": "Psionic"
+            }
+          ]
+        },
+        {
+          "effectType": "Accuracy",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 1,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Multi_Strike_A.Attuned_Multi_Strike_A"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Multi_Strike_A.Attuned_Multi_Strike_A",
+      "setName": "Multi-Strike",
+      "displayName": "Accuracy/Damage"
+    },
+    {
+      "description": {
+        "short": "Enhances Damage and Reduces Endurance Cost",
+        "long": "Enhances the damage of a power by {Boost.Attrib.Damage.Scale}% and reduces endurance cost by {Boost.Attrib.Endurance.Scale}%"
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Multi_Strike_B.Attuned_Multi_Strike_B",
+              "damageType": "Smashing"
+            }
+          ]
+        },
+        {
+          "effectType": "Boosts_33",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Multi_Strike_B.Attuned_Multi_Strike_B",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Multi_Strike_B.Attuned_Multi_Strike_B",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Multi_Strike_B.Attuned_Multi_Strike_B",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Multi_Strike_B.Attuned_Multi_Strike_B",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Multi_Strike_B.Attuned_Multi_Strike_B",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Multi_Strike_B.Attuned_Multi_Strike_B",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Multi_Strike_B.Attuned_Multi_Strike_B",
+              "damageType": "Psionic"
+            }
+          ]
+        },
+        {
+          "effectType": "Endurance",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 8,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Multi_Strike_B.Attuned_Multi_Strike_B"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Multi_Strike_B.Attuned_Multi_Strike_B",
+      "setName": "Multi-Strike",
+      "displayName": "Damage/Endurance"
+    },
+    {
+      "description": {
+        "short": "Enhances Damage and Recharge",
+        "long": "Enhances the damage of a power by {Boost.Attrib.Damage.Scale}% and reduces recharge time by {Boost.Attrib.Recharge.Scale}%"
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Multi_Strike_C.Attuned_Multi_Strike_C",
+              "damageType": "Smashing"
+            }
+          ]
+        },
+        {
+          "effectType": "Boosts_33",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Multi_Strike_C.Attuned_Multi_Strike_C",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Multi_Strike_C.Attuned_Multi_Strike_C",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Multi_Strike_C.Attuned_Multi_Strike_C",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Multi_Strike_C.Attuned_Multi_Strike_C",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Multi_Strike_C.Attuned_Multi_Strike_C",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Multi_Strike_C.Attuned_Multi_Strike_C",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Multi_Strike_C.Attuned_Multi_Strike_C",
+              "damageType": "Psionic"
+            }
+          ]
+        },
+        {
+          "effectType": "Recharge",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 25,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Multi_Strike_C.Attuned_Multi_Strike_C"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Multi_Strike_C.Attuned_Multi_Strike_C",
+      "setName": "Multi-Strike",
+      "displayName": "Damage/Recharge"
+    },
+    {
+      "description": {
+        "short": "Enhances Accuracy and Reduces Endurance Cost",
+        "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and reduces endurance cost by {Boost.Attrib.Endurance.Scale}%"
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Accuracy",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 1,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Multi_Strike_D.Attuned_Multi_Strike_D"
+            }
+          ]
+        },
+        {
+          "effectType": "Endurance",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 8,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Multi_Strike_D.Attuned_Multi_Strike_D"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Multi_Strike_D.Attuned_Multi_Strike_D",
+      "setName": "Multi-Strike",
+      "displayName": "Accuracy/Endurance"
+    },
+    {
+      "description": {
+        "short": "Enhances Damage, Reduces Endurance Cost and Increases Accuracy",
+        "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and damage by {Boost.Attrib.Damage.Scale}% and reduces endurance cost by {Boost.Attrib.Endurance.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Multi_Strike_E.Attuned_Multi_Strike_E",
+              "damageType": "Smashing"
+            }
+          ]
+        },
+        {
+          "effectType": "Boosts_33",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Multi_Strike_E.Attuned_Multi_Strike_E",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Multi_Strike_E.Attuned_Multi_Strike_E",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Multi_Strike_E.Attuned_Multi_Strike_E",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Multi_Strike_E.Attuned_Multi_Strike_E",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Multi_Strike_E.Attuned_Multi_Strike_E",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Multi_Strike_E.Attuned_Multi_Strike_E",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Multi_Strike_E.Attuned_Multi_Strike_E",
+              "damageType": "Psionic"
+            }
+          ]
+        },
+        {
+          "effectType": "Endurance",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 8,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Multi_Strike_E.Attuned_Multi_Strike_E"
+            }
+          ]
+        },
+        {
+          "effectType": "Accuracy",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 1,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Multi_Strike_E.Attuned_Multi_Strike_E"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Multi_Strike_E.Attuned_Multi_Strike_E",
+      "setName": "Multi-Strike",
+      "displayName": " Accuracy/Damage/Endurance"
+    },
+    {
+      "description": {
+        "short": "Enhances Damage, Reduces Endurance Cost and Increases Attack Rate",
+        "long": "Enhances the damage by {Boost.Attrib.Damage.Scale}%, endurance costs by {Boost.Attrib.Endurance.Scale}% and reduces recharge time by {Boost.Attrib.Recharge.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Multi_Strike_F.Attuned_Multi_Strike_F",
+              "damageType": "Smashing"
+            }
+          ]
+        },
+        {
+          "effectType": "Boosts_33",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Multi_Strike_F.Attuned_Multi_Strike_F",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Multi_Strike_F.Attuned_Multi_Strike_F",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Multi_Strike_F.Attuned_Multi_Strike_F",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Multi_Strike_F.Attuned_Multi_Strike_F",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Multi_Strike_F.Attuned_Multi_Strike_F",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Multi_Strike_F.Attuned_Multi_Strike_F",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Multi_Strike_F.Attuned_Multi_Strike_F",
+              "damageType": "Psionic"
+            }
+          ]
+        },
+        {
+          "effectType": "Endurance",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 8,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Multi_Strike_F.Attuned_Multi_Strike_F"
+            }
+          ]
+        },
+        {
+          "effectType": "Recharge",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 25,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Multi_Strike_F.Attuned_Multi_Strike_F"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Multi_Strike_F.Attuned_Multi_Strike_F",
+      "setName": "Multi-Strike",
+      "displayName": "Damage/Endurance/Recharge"
+    }
+  ],
+  "levels": {
+    "min": 20,
+    "max": 50
+  },
+  "bonuses": [
+    {
+      "description": {
+        "short": "+Res (Lethal, Smash, Mez)",
+        "long": "Increases Lethal and Smashing resistance by 1.5% and Mez Resistance by 2.5%"
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 2,
+      "powerSetIndex": 446,
+      "fullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_1",
+      "setName": "Set_Bonus",
+      "displayName": "Tiny Lethal, Smash and Mez Resistance",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.015
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_1",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.015
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_1",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 0.025
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_1",
+              "mezType": "Immobilization"
+            },
+            {
+              "mag": {
+                "pve": 0.025
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_1",
+              "mezType": "Hold"
+            },
+            {
+              "mag": {
+                "pve": 0.025
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_1",
+              "mezType": "Stun"
+            },
+            {
+              "mag": {
+                "pve": 0.025
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_1",
+              "mezType": "Sleep"
+            },
+            {
+              "mag": {
+                "pve": 0.025
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_1",
+              "mezType": "Terrorize"
+            },
+            {
+              "mag": {
+                "pve": 0.025
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_1",
+              "mezType": "Confuse"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+Res (Fire, Cold, Mez)",
+        "long": "Increases Fire and Cold resistance by 1.5% and Mez Resistance by 2.5%"
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 3,
+      "powerSetIndex": 80,
+      "fullName": "Set_Bonus.Set_Bonus.Fire_Cold_Mez_Res_1",
+      "setName": "Set_Bonus",
+      "displayName": "Tiny Fire, Cold and Mez Resistance",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.015
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Fire_Cold_Mez_Res_1",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.015
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Fire_Cold_Mez_Res_1",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 0.025
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Fire_Cold_Mez_Res_1",
+              "mezType": "Immobilization"
+            },
+            {
+              "mag": {
+                "pve": 0.025
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Fire_Cold_Mez_Res_1",
+              "mezType": "Hold"
+            },
+            {
+              "mag": {
+                "pve": 0.025
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Fire_Cold_Mez_Res_1",
+              "mezType": "Stun"
+            },
+            {
+              "mag": {
+                "pve": 0.025
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Fire_Cold_Mez_Res_1",
+              "mezType": "Sleep"
+            },
+            {
+              "mag": {
+                "pve": 0.025
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Fire_Cold_Mez_Res_1",
+              "mezType": "Terrorize"
+            },
+            {
+              "mag": {
+                "pve": 0.025
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Fire_Cold_Mez_Res_1",
+              "mezType": "Confuse"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+Res (Energy, Negative, Mez)",
+        "long": "Increases Energy and Negative Energy resistance by 2.25% and Mez Resistance by 3.75%"
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 4,
+      "powerSetIndex": 57,
+      "fullName": "Set_Bonus.Set_Bonus.Energy_Neg_Mez_Res_2",
+      "setName": "Set_Bonus",
+      "displayName": "Small Energy, Negative Energy and Mez Resistance",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.0225
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Energy_Neg_Mez_Res_2",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.0225
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Energy_Neg_Mez_Res_2",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Energy_Neg_Mez_Res_2",
+              "mezType": "Immobilization"
+            },
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Energy_Neg_Mez_Res_2",
+              "mezType": "Hold"
+            },
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Energy_Neg_Mez_Res_2",
+              "mezType": "Stun"
+            },
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Energy_Neg_Mez_Res_2",
+              "mezType": "Sleep"
+            },
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Energy_Neg_Mez_Res_2",
+              "mezType": "Terrorize"
+            },
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Energy_Neg_Mez_Res_2",
+              "mezType": "Confuse"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+DEF",
+        "long": "Increases area effect defense by 1.88% and fire and cold defense by 0.94%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 5,
+      "powerSetIndex": 194,
+      "fullName": "Set_Bonus.Set_Bonus.Increased_AoE_Fire_Cold_Def_2",
+      "setName": "Set_Bonus",
+      "displayName": "Small Increased AoE/Fire/Cold Def Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.01875
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_AoE_Fire_Cold_Def_2",
+              "damageType": "AoE"
+            },
+            {
+              "mag": {
+                "pve": 0.00938
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_AoE_Fire_Cold_Def_2",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.00938
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_AoE_Fire_Cold_Def_2",
+              "damageType": "Cold"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+DEF",
+        "long": "Increases melee defense by 1.88% and lethal and smashing defense by 0.94%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 6,
+      "powerSetIndex": 320,
+      "fullName": "Set_Bonus.Set_Bonus.Increased_Melee_Lethal_Smash_Def_2",
+      "setName": "Set_Bonus",
+      "displayName": "Small Increased Melee/Lethal/Smashing Def Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.01875
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Melee_Lethal_Smash_Def_2",
+              "damageType": "Melee"
+            },
+            {
+              "mag": {
+                "pve": 0.00938
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Melee_Lethal_Smash_Def_2",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.00938
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Melee_Lethal_Smash_Def_2",
+              "damageType": "Smashing"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "setType": 4,
+  "displayName": "Multi-Strike",
+  "imageName": "sMultiStrike.png"
+}

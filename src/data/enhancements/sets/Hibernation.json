@@ -1,1 +1,463 @@
-{"fullName":"IOSet.Hibernation","enhancements":[{"type":"set","description":{"short":"+ACC, +Rech","long":"Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Hibernation_A.Attuned_Hibernation_A","setName":"Hibernation","displayName":"Accuracy/Recharge","effects":[{"mag":0.265,"effectId":"Recharge"},{"mag":0.265,"effectId":"Accuracy"}]},{"type":"set","description":{"short":"-End Cost, +Sleep","long":"Enhances the sleep duration of a power by {Boost.Attrib.Sleep.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Hibernation_B.Attuned_Hibernation_B","setName":"Hibernation","displayName":"Endurance/Sleep","effects":[{"mag":0.265,"effectId":"Endurance"},{"mag":0.265,"effectId":"Sleep","mezType":9}]},{"type":"set","description":{"short":"+ACC, -End Cost","long":"Enhances the accuracy by {Boost.Attrib.Accuracy.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Hibernation_C.Attuned_Hibernation_C","setName":"Hibernation","displayName":"Accuracy/Endurance","effects":[{"mag":0.265,"effectId":"Accuracy"},{"mag":0.265,"effectId":"Endurance"}]},{"type":"set","description":{"short":"+Range, +Sleep","long":"Enhances the range of a power by {Boost.Attrib.Range.Scale}% and sleep duration by {Boost.Attrib.sleep.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Hibernation_D.Attuned_Hibernation_D","setName":"Hibernation","displayName":"Sleep/Range","effects":[{"mag":0.265,"effectId":"Sleep","mezType":9},{"mag":0.159375,"effectId":"Range"}]},{"type":"set","description":{"short":"+ACC, +Rech, +Sleep","long":"Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}%, sleep duration by {Boost.Attrib.Sleep.Scale}% and reduces the attack rate by {Boost.Attrib.Recharge.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Hibernation_E.Attuned_Hibernation_E","setName":"Hibernation","displayName":"Accuracy/Sleep/Recharge","effects":[{"mag":0.212,"effectId":"Sleep","mezType":9},{"mag":0.212,"effectId":"Accuracy"},{"mag":0.212,"effectId":"Recharge"}]}],"levels":{"min":10,"max":30},"bonuses":["Sleep_Dur_3","Increased_Health_1","Lethal_Smash_Mez_Res_2","Improved_Recharge_Time_1"],"setType":14,"displayName":"Hibernation","imageName":"sHibernation.png"}
+{
+  "fullName": "IOSet.Hibernation",
+  "enhancements": [
+    {
+      "description": {
+        "short": "+ACC, +Rech",
+        "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Recharge",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 25,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Hibernation_A.Attuned_Hibernation_A"
+            }
+          ]
+        },
+        {
+          "effectType": "Accuracy",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 1,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Hibernation_A.Attuned_Hibernation_A"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Hibernation_A.Attuned_Hibernation_A",
+      "setName": "Hibernation",
+      "displayName": "Accuracy/Recharge"
+    },
+    {
+      "description": {
+        "short": "-End Cost, +Sleep",
+        "long": "Enhances the sleep duration of a power by {Boost.Attrib.Sleep.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Endurance",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 8,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Hibernation_B.Attuned_Hibernation_B"
+            }
+          ]
+        },
+        {
+          "effectType": "Sleep",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 19,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Hibernation_B.Attuned_Hibernation_B",
+              "mezType": "Sleep"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Hibernation_B.Attuned_Hibernation_B",
+      "setName": "Hibernation",
+      "displayName": "Endurance/Sleep"
+    },
+    {
+      "description": {
+        "short": "+ACC, -End Cost",
+        "long": "Enhances the accuracy by {Boost.Attrib.Accuracy.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Accuracy",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 1,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Hibernation_C.Attuned_Hibernation_C"
+            }
+          ]
+        },
+        {
+          "effectType": "Endurance",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 8,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Hibernation_C.Attuned_Hibernation_C"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Hibernation_C.Attuned_Hibernation_C",
+      "setName": "Hibernation",
+      "displayName": "Accuracy/Endurance"
+    },
+    {
+      "description": {
+        "short": "+Range, +Sleep",
+        "long": "Enhances the range of a power by {Boost.Attrib.Range.Scale}% and sleep duration by {Boost.Attrib.sleep.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Sleep",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 19,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Hibernation_D.Attuned_Hibernation_D",
+              "mezType": "Sleep"
+            }
+          ]
+        },
+        {
+          "effectType": "Range",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.159375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 24,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Hibernation_D.Attuned_Hibernation_D"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Hibernation_D.Attuned_Hibernation_D",
+      "setName": "Hibernation",
+      "displayName": "Sleep/Range"
+    },
+    {
+      "description": {
+        "short": "+ACC, +Rech, +Sleep",
+        "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}%, sleep duration by {Boost.Attrib.Sleep.Scale}% and reduces the attack rate by {Boost.Attrib.Recharge.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Sleep",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 19,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Hibernation_E.Attuned_Hibernation_E",
+              "mezType": "Sleep"
+            }
+          ]
+        },
+        {
+          "effectType": "Accuracy",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 1,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Hibernation_E.Attuned_Hibernation_E"
+            }
+          ]
+        },
+        {
+          "effectType": "Recharge",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 25,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Hibernation_E.Attuned_Hibernation_E"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Hibernation_E.Attuned_Hibernation_E",
+      "setName": "Hibernation",
+      "displayName": "Accuracy/Sleep/Recharge"
+    }
+  ],
+  "levels": {
+    "min": 10,
+    "max": 30
+  },
+  "bonuses": [
+    {
+      "description": {
+        "short": "+Duration Sleep",
+        "long": "Improves the duration of your Sleep effects by 4%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 2,
+      "powerSetIndex": 470,
+      "fullName": "Set_Bonus.Set_Bonus.Sleep_Dur_3",
+      "setName": "Set_Bonus",
+      "displayName": "Moderate Sleep Duration Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.04
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 19,
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Sleep_Dur_3",
+              "mezType": "Sleep"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+Max HP",
+        "long": "Increases maximum health by 0.75%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 3,
+      "powerSetIndex": 284,
+      "fullName": "Set_Bonus.Set_Bonus.Increased_Health_1",
+      "setName": "Set_Bonus",
+      "displayName": "Tiny Increased Health Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "HealSelf",
+          "values": [
+            {
+              "mag": {
+                "pve": 9.035693
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "HitPoints",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Health_1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+Res (Lethal, Smash, Mez)",
+        "long": "Increases Lethal and Smashing resistance by 2.25% and Mez Resistance by 3.75%"
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 4,
+      "powerSetIndex": 447,
+      "fullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_2",
+      "setName": "Set_Bonus",
+      "displayName": "Small Lethal, Smash and Mez Resistance",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.0225
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_2",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.0225
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_2",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_2",
+              "mezType": "Immobilization"
+            },
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_2",
+              "mezType": "Hold"
+            },
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_2",
+              "mezType": "Stun"
+            },
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_2",
+              "mezType": "Sleep"
+            },
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_2",
+              "mezType": "Terrorize"
+            },
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_2",
+              "mezType": "Confuse"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+Recharge Time",
+        "long": "Improves the Recharge Time of all of your powers by 2.5%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 5,
+      "powerSetIndex": 137,
+      "fullName": "Set_Bonus.Set_Bonus.Improved_Recharge_Time_1",
+      "setName": "Set_Bonus",
+      "displayName": "Tiny Improved Recharge Time Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.025
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 25,
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Improved_Recharge_Time_1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "setType": 14,
+  "displayName": "Hibernation",
+  "imageName": "sHibernation.png"
+}

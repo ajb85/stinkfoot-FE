@@ -1,1 +1,939 @@
-{"fullName":"IOSet.Brilliant_Leadership","enhancements":[{"type":"set","description":{"short":"Enhances Accuracy and Damage","long":"Enhances the damage of a power by {Boost.Attrib.Damage.Scale}% and accuracy by {Boost.Attrib.Accuracy.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Brilliant_Leadership_A.Attuned_Brilliant_Leadership_A","setName":"Brilliant_Leadership","displayName":"Accuracy/Damage","effects":[{"mag":0.265,"effectId":"Damage","damageType":1},{"mag":0.265,"effectId":"Boosts_33","damageType":2},{"mag":0.265,"effectId":"Boosts_33","damageType":3},{"mag":0.265,"effectId":"Boosts_33","damageType":4},{"mag":0.265,"effectId":"Boosts_33","damageType":5},{"mag":0.265,"effectId":"Boosts_33","damageType":6},{"mag":0.265,"effectId":"Boosts_33","damageType":7},{"mag":0.265,"effectId":"Boosts_33","damageType":8},{"mag":0.265,"effectId":"Accuracy"}]},{"type":"set","description":{"short":"Enhances Damage and Reduces Endurance Cost","long":"Enhances the damage of a power by {Boost.Attrib.Damage.Scale}% and reduces endurance cost by {Boost.Attrib.Endurance.Scale}%"},"isUnique":false,"fullName":"Boosts.Attuned_Brilliant_Leadership_B.Attuned_Brilliant_Leadership_B","setName":"Brilliant_Leadership","displayName":"Damage/Endurance","effects":[{"mag":0.265,"effectId":"Damage","damageType":1},{"mag":0.265,"effectId":"Boosts_33","damageType":2},{"mag":0.265,"effectId":"Boosts_33","damageType":3},{"mag":0.265,"effectId":"Boosts_33","damageType":4},{"mag":0.265,"effectId":"Boosts_33","damageType":5},{"mag":0.265,"effectId":"Boosts_33","damageType":6},{"mag":0.265,"effectId":"Boosts_33","damageType":7},{"mag":0.265,"effectId":"Boosts_33","damageType":8},{"mag":0.265,"effectId":"Endurance"}]},{"type":"set","description":{"short":"Enhances Accuracy and Reduces Endurance Cost","long":"Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and reduces endurance cost by {Boost.Attrib.Endurance.Scale}%"},"isUnique":false,"fullName":"Boosts.Attuned_Brilliant_Leadership_C.Attuned_Brilliant_Leadership_C","setName":"Brilliant_Leadership","displayName":"Accuracy/Endurance","effects":[{"mag":0.265,"effectId":"Accuracy"},{"mag":0.265,"effectId":"Endurance"}]},{"type":"set","description":{"short":"Enhances Damage, Reduces Endurance Cost and Increases Accuracy","long":"Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and damage by {Boost.Attrib.Damage.Scale}% and reduces endurance cost by {Boost.Attrib.Endurance.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Brilliant_Leadership_D.Attuned_Brilliant_Leadership_D","setName":"Brilliant_Leadership","displayName":" Accuracy/Damage/Endurance","effects":[{"mag":0.212,"effectId":"Damage","damageType":1},{"mag":0.212,"effectId":"Boosts_33","damageType":2},{"mag":0.212,"effectId":"Boosts_33","damageType":3},{"mag":0.212,"effectId":"Boosts_33","damageType":4},{"mag":0.212,"effectId":"Boosts_33","damageType":5},{"mag":0.212,"effectId":"Boosts_33","damageType":6},{"mag":0.212,"effectId":"Boosts_33","damageType":7},{"mag":0.212,"effectId":"Boosts_33","damageType":8},{"mag":0.212,"effectId":"Endurance"},{"mag":0.212,"effectId":"Accuracy"}]},{"type":"set","description":{"short":"Enhances Accuracy","long":"Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Brilliant_Leadership_E.Attuned_Brilliant_Leadership_E","setName":"Brilliant_Leadership","displayName":"Accuracy","effects":[{"mag":0.424,"effectId":"Accuracy"}]},{"type":"set","description":{"short":"Enhances Damage","long":"Enhances the damage of a power by {Boost.Attrib.Damage.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Brilliant_Leadership_F.Attuned_Brilliant_Leadership_F","setName":"Brilliant_Leadership","displayName":" Damage","effects":[{"mag":0.424,"effectId":"Damage","damageType":1},{"mag":0.424,"effectId":"Boosts_33","damageType":2},{"mag":0.424,"effectId":"Boosts_33","damageType":3},{"mag":0.424,"effectId":"Boosts_33","damageType":4},{"mag":0.424,"effectId":"Boosts_33","damageType":5},{"mag":0.424,"effectId":"Boosts_33","damageType":6},{"mag":0.424,"effectId":"Boosts_33","damageType":7},{"mag":0.424,"effectId":"Boosts_33","damageType":8}]}],"levels":{"min":15,"max":40},"bonuses":["Improved_Regeneration_1","Confuse_Dur_1","Lethal_Smash_Mez_Res_2","Increased_Move_1","Toxic_Psi_Mez_Res_5"],"setType":6,"displayName":"Brilliant Leadership","imageName":"sBrilliantLeadership.png"}
+{
+  "fullName": "IOSet.Brilliant_Leadership",
+  "enhancements": [
+    {
+      "description": {
+        "short": "Enhances Accuracy and Damage",
+        "long": "Enhances the damage of a power by {Boost.Attrib.Damage.Scale}% and accuracy by {Boost.Attrib.Accuracy.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Brilliant_Leadership_A.Attuned_Brilliant_Leadership_A",
+              "damageType": "Smashing"
+            }
+          ]
+        },
+        {
+          "effectType": "Boosts_33",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Brilliant_Leadership_A.Attuned_Brilliant_Leadership_A",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Brilliant_Leadership_A.Attuned_Brilliant_Leadership_A",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Brilliant_Leadership_A.Attuned_Brilliant_Leadership_A",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Brilliant_Leadership_A.Attuned_Brilliant_Leadership_A",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Brilliant_Leadership_A.Attuned_Brilliant_Leadership_A",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Brilliant_Leadership_A.Attuned_Brilliant_Leadership_A",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Brilliant_Leadership_A.Attuned_Brilliant_Leadership_A",
+              "damageType": "Psionic"
+            }
+          ]
+        },
+        {
+          "effectType": "Accuracy",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 1,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Brilliant_Leadership_A.Attuned_Brilliant_Leadership_A"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Brilliant_Leadership_A.Attuned_Brilliant_Leadership_A",
+      "setName": "Brilliant_Leadership",
+      "displayName": "Accuracy/Damage"
+    },
+    {
+      "description": {
+        "short": "Enhances Damage and Reduces Endurance Cost",
+        "long": "Enhances the damage of a power by {Boost.Attrib.Damage.Scale}% and reduces endurance cost by {Boost.Attrib.Endurance.Scale}%"
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Brilliant_Leadership_B.Attuned_Brilliant_Leadership_B",
+              "damageType": "Smashing"
+            }
+          ]
+        },
+        {
+          "effectType": "Boosts_33",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Brilliant_Leadership_B.Attuned_Brilliant_Leadership_B",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Brilliant_Leadership_B.Attuned_Brilliant_Leadership_B",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Brilliant_Leadership_B.Attuned_Brilliant_Leadership_B",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Brilliant_Leadership_B.Attuned_Brilliant_Leadership_B",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Brilliant_Leadership_B.Attuned_Brilliant_Leadership_B",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Brilliant_Leadership_B.Attuned_Brilliant_Leadership_B",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Brilliant_Leadership_B.Attuned_Brilliant_Leadership_B",
+              "damageType": "Psionic"
+            }
+          ]
+        },
+        {
+          "effectType": "Endurance",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 8,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Brilliant_Leadership_B.Attuned_Brilliant_Leadership_B"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Brilliant_Leadership_B.Attuned_Brilliant_Leadership_B",
+      "setName": "Brilliant_Leadership",
+      "displayName": "Damage/Endurance"
+    },
+    {
+      "description": {
+        "short": "Enhances Accuracy and Reduces Endurance Cost",
+        "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and reduces endurance cost by {Boost.Attrib.Endurance.Scale}%"
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Accuracy",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 1,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Brilliant_Leadership_C.Attuned_Brilliant_Leadership_C"
+            }
+          ]
+        },
+        {
+          "effectType": "Endurance",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 8,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Brilliant_Leadership_C.Attuned_Brilliant_Leadership_C"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Brilliant_Leadership_C.Attuned_Brilliant_Leadership_C",
+      "setName": "Brilliant_Leadership",
+      "displayName": "Accuracy/Endurance"
+    },
+    {
+      "description": {
+        "short": "Enhances Damage, Reduces Endurance Cost and Increases Accuracy",
+        "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and damage by {Boost.Attrib.Damage.Scale}% and reduces endurance cost by {Boost.Attrib.Endurance.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Brilliant_Leadership_D.Attuned_Brilliant_Leadership_D",
+              "damageType": "Smashing"
+            }
+          ]
+        },
+        {
+          "effectType": "Boosts_33",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Brilliant_Leadership_D.Attuned_Brilliant_Leadership_D",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Brilliant_Leadership_D.Attuned_Brilliant_Leadership_D",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Brilliant_Leadership_D.Attuned_Brilliant_Leadership_D",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Brilliant_Leadership_D.Attuned_Brilliant_Leadership_D",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Brilliant_Leadership_D.Attuned_Brilliant_Leadership_D",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Brilliant_Leadership_D.Attuned_Brilliant_Leadership_D",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Brilliant_Leadership_D.Attuned_Brilliant_Leadership_D",
+              "damageType": "Psionic"
+            }
+          ]
+        },
+        {
+          "effectType": "Endurance",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 8,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Brilliant_Leadership_D.Attuned_Brilliant_Leadership_D"
+            }
+          ]
+        },
+        {
+          "effectType": "Accuracy",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 1,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Brilliant_Leadership_D.Attuned_Brilliant_Leadership_D"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Brilliant_Leadership_D.Attuned_Brilliant_Leadership_D",
+      "setName": "Brilliant_Leadership",
+      "displayName": " Accuracy/Damage/Endurance"
+    },
+    {
+      "description": {
+        "short": "Enhances Accuracy",
+        "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Accuracy",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.424
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 1,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Brilliant_Leadership_E.Attuned_Brilliant_Leadership_E"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Brilliant_Leadership_E.Attuned_Brilliant_Leadership_E",
+      "setName": "Brilliant_Leadership",
+      "displayName": "Accuracy"
+    },
+    {
+      "description": {
+        "short": "Enhances Damage",
+        "long": "Enhances the damage of a power by {Boost.Attrib.Damage.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.424
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Brilliant_Leadership_F.Attuned_Brilliant_Leadership_F",
+              "damageType": "Smashing"
+            }
+          ]
+        },
+        {
+          "effectType": "Boosts_33",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.424
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Brilliant_Leadership_F.Attuned_Brilliant_Leadership_F",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.424
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Brilliant_Leadership_F.Attuned_Brilliant_Leadership_F",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.424
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Brilliant_Leadership_F.Attuned_Brilliant_Leadership_F",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 0.424
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Brilliant_Leadership_F.Attuned_Brilliant_Leadership_F",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.424
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Brilliant_Leadership_F.Attuned_Brilliant_Leadership_F",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.424
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Brilliant_Leadership_F.Attuned_Brilliant_Leadership_F",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pve": 0.424
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Brilliant_Leadership_F.Attuned_Brilliant_Leadership_F",
+              "damageType": "Psionic"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Brilliant_Leadership_F.Attuned_Brilliant_Leadership_F",
+      "setName": "Brilliant_Leadership",
+      "displayName": " Damage"
+    }
+  ],
+  "levels": {
+    "min": 15,
+    "max": 40
+  },
+  "bonuses": [
+    {
+      "description": {
+        "short": "+Regeneration",
+        "long": "Improves your Regeneration by 4%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 2,
+      "powerSetIndex": 151,
+      "fullName": "Set_Bonus.Set_Bonus.Improved_Regeneration_1",
+      "setName": "Set_Bonus",
+      "displayName": "Tiny Improved Regeneration Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.04
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Regeneration",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Improved_Regeneration_1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+Duration Confuse",
+        "long": "Improves the duration of your Confuse effects by 1%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 3,
+      "powerSetIndex": 22,
+      "fullName": "Set_Bonus.Set_Bonus.Confuse_Dur_1",
+      "setName": "Set_Bonus",
+      "displayName": "Tiny Confuse Duration Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.01
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 19,
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Confuse_Dur_1",
+              "mezType": "Confuse"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+Res (Lethal, Smash, Mez)",
+        "long": "Increases Lethal and Smashing resistance by 2.25% and Mez Resistance by 3.75%"
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 4,
+      "powerSetIndex": 447,
+      "fullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_2",
+      "setName": "Set_Bonus",
+      "displayName": "Small Lethal, Smash and Mez Resistance",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.0225
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_2",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.0225
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_2",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_2",
+              "mezType": "Immobilization"
+            },
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_2",
+              "mezType": "Hold"
+            },
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_2",
+              "mezType": "Stun"
+            },
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_2",
+              "mezType": "Sleep"
+            },
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_2",
+              "mezType": "Terrorize"
+            },
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_2",
+              "mezType": "Confuse"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+Move",
+        "long": "Improves all of your Movement speeds by 3%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 5,
+      "powerSetIndex": 326,
+      "fullName": "Set_Bonus.Set_Bonus.Increased_Move_1",
+      "setName": "Set_Bonus",
+      "displayName": "Tiny Improved Movement Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.03
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "SpeedJumping",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Move_1"
+            },
+            {
+              "mag": {
+                "pve": 0.03
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "JumpHeight",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Move_1"
+            },
+            {
+              "mag": {
+                "pve": 0.03
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "SpeedFlying",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Move_1"
+            },
+            {
+              "mag": {
+                "pve": 0.03
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "SpeedRunning",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Move_1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+Res (Toxic, Psionic, Mez)",
+        "long": "Increases Toxic and Psionic resistance by 4.5% and Mez Resistance by 7.5%"
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 6,
+      "powerSetIndex": 525,
+      "fullName": "Set_Bonus.Set_Bonus.Toxic_Psi_Mez_Res_5",
+      "setName": "Set_Bonus",
+      "displayName": "Huge Toxic, Psionic and Mez Resistance",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.045
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Toxic_Psi_Mez_Res_5",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pve": 0.045
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Toxic_Psi_Mez_Res_5",
+              "damageType": "Psionic"
+            },
+            {
+              "mag": {
+                "pve": 0.075
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Toxic_Psi_Mez_Res_5",
+              "mezType": "Immobilization"
+            },
+            {
+              "mag": {
+                "pve": 0.075
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Toxic_Psi_Mez_Res_5",
+              "mezType": "Hold"
+            },
+            {
+              "mag": {
+                "pve": 0.075
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Toxic_Psi_Mez_Res_5",
+              "mezType": "Stun"
+            },
+            {
+              "mag": {
+                "pve": 0.075
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Toxic_Psi_Mez_Res_5",
+              "mezType": "Sleep"
+            },
+            {
+              "mag": {
+                "pve": 0.075
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Toxic_Psi_Mez_Res_5",
+              "mezType": "Terrorize"
+            },
+            {
+              "mag": {
+                "pve": 0.075
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Toxic_Psi_Mez_Res_5",
+              "mezType": "Confuse"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "setType": 6,
+  "displayName": "Brilliant Leadership",
+  "imageName": "sBrilliantLeadership.png"
+}

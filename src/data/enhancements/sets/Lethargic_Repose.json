@@ -1,1 +1,608 @@
-{"fullName":"IOSet.Lethargic_Repose","enhancements":[{"type":"set","description":{"short":"+ACC, +Rech","long":"Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Lethargic_Repose_A.Attuned_Lethargic_Repose_A","setName":"Lethargic_Repose","displayName":"Accuracy/Recharge","effects":[{"mag":0.265,"effectId":"Recharge"},{"mag":0.265,"effectId":"Accuracy"}]},{"type":"set","description":{"short":"-End Cost, +Sleep","long":"Enhances the sleep duration of a power by {Boost.Attrib.Sleep.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Lethargic_Repose_B.Attuned_Lethargic_Repose_B","setName":"Lethargic_Repose","displayName":"Endurance/Sleep","effects":[{"mag":0.265,"effectId":"Endurance"},{"mag":0.265,"effectId":"Sleep","mezType":9}]},{"type":"set","description":{"short":"+ACC, -End Cost","long":"Enhances the accuracy by {Boost.Attrib.Accuracy.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Lethargic_Repose_C.Attuned_Lethargic_Repose_C","setName":"Lethargic_Repose","displayName":"Accuracy/Endurance","effects":[{"mag":0.265,"effectId":"Accuracy"},{"mag":0.265,"effectId":"Endurance"}]},{"type":"set","description":{"short":"+Range, +Sleep","long":"Enhances the range of a power by {Boost.Attrib.Range.Scale}% and sleep duration by {Boost.Attrib.sleep.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Lethargic_Repose_D.Attuned_Lethargic_Repose_D","setName":"Lethargic_Repose","displayName":"Sleep/Range","effects":[{"mag":0.265,"effectId":"Sleep","mezType":9},{"mag":0.159375,"effectId":"Range"}]},{"type":"set","description":{"short":"+ACC, +Rech, +Sleep","long":"Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}%, sleep duration by {Boost.Attrib.Sleep.Scale}% and reduces the attack rate by {Boost.Attrib.Recharge.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Lethargic_Repose_E.Attuned_Lethargic_Repose_E","setName":"Lethargic_Repose","displayName":"Accuracy/Sleep/Recharge","effects":[{"mag":0.212,"effectId":"Sleep","mezType":9},{"mag":0.212,"effectId":"Accuracy"},{"mag":0.212,"effectId":"Recharge"}]},{"type":"set","description":{"short":"+ACC, +Sleep","long":"Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and sleep duration by {Boost.Attrib.sleep.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Lethargic_Repose_F.Attuned_Lethargic_Repose_F","setName":"Lethargic_Repose","displayName":"Accuracy/Sleep","effects":[{"mag":0.265,"effectId":"Sleep","mezType":9},{"mag":0.265,"effectId":"Accuracy"}]}],"levels":{"min":20,"max":50},"bonuses":["Sleep_Dur_3","Increased_Energy_Neg_Ranged_Def_2","Increased_Lethal_Smash_Melee_Def_2","Increased_AoE_Fire_Cold_Def_2","Toxic_Psi_Mez_Res_4"],"setType":14,"displayName":"Lethargic Repose","imageName":"sLethargicRepose.png"}
+{
+  "fullName": "IOSet.Lethargic_Repose",
+  "enhancements": [
+    {
+      "description": {
+        "short": "+ACC, +Rech",
+        "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Recharge",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 25,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Lethargic_Repose_A.Attuned_Lethargic_Repose_A"
+            }
+          ]
+        },
+        {
+          "effectType": "Accuracy",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 1,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Lethargic_Repose_A.Attuned_Lethargic_Repose_A"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Lethargic_Repose_A.Attuned_Lethargic_Repose_A",
+      "setName": "Lethargic_Repose",
+      "displayName": "Accuracy/Recharge"
+    },
+    {
+      "description": {
+        "short": "-End Cost, +Sleep",
+        "long": "Enhances the sleep duration of a power by {Boost.Attrib.Sleep.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Endurance",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 8,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Lethargic_Repose_B.Attuned_Lethargic_Repose_B"
+            }
+          ]
+        },
+        {
+          "effectType": "Sleep",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 19,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Lethargic_Repose_B.Attuned_Lethargic_Repose_B",
+              "mezType": "Sleep"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Lethargic_Repose_B.Attuned_Lethargic_Repose_B",
+      "setName": "Lethargic_Repose",
+      "displayName": "Endurance/Sleep"
+    },
+    {
+      "description": {
+        "short": "+ACC, -End Cost",
+        "long": "Enhances the accuracy by {Boost.Attrib.Accuracy.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Accuracy",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 1,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Lethargic_Repose_C.Attuned_Lethargic_Repose_C"
+            }
+          ]
+        },
+        {
+          "effectType": "Endurance",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 8,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Lethargic_Repose_C.Attuned_Lethargic_Repose_C"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Lethargic_Repose_C.Attuned_Lethargic_Repose_C",
+      "setName": "Lethargic_Repose",
+      "displayName": "Accuracy/Endurance"
+    },
+    {
+      "description": {
+        "short": "+Range, +Sleep",
+        "long": "Enhances the range of a power by {Boost.Attrib.Range.Scale}% and sleep duration by {Boost.Attrib.sleep.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Sleep",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 19,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Lethargic_Repose_D.Attuned_Lethargic_Repose_D",
+              "mezType": "Sleep"
+            }
+          ]
+        },
+        {
+          "effectType": "Range",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.159375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 24,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Lethargic_Repose_D.Attuned_Lethargic_Repose_D"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Lethargic_Repose_D.Attuned_Lethargic_Repose_D",
+      "setName": "Lethargic_Repose",
+      "displayName": "Sleep/Range"
+    },
+    {
+      "description": {
+        "short": "+ACC, +Rech, +Sleep",
+        "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}%, sleep duration by {Boost.Attrib.Sleep.Scale}% and reduces the attack rate by {Boost.Attrib.Recharge.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Sleep",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 19,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Lethargic_Repose_E.Attuned_Lethargic_Repose_E",
+              "mezType": "Sleep"
+            }
+          ]
+        },
+        {
+          "effectType": "Accuracy",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 1,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Lethargic_Repose_E.Attuned_Lethargic_Repose_E"
+            }
+          ]
+        },
+        {
+          "effectType": "Recharge",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 25,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Lethargic_Repose_E.Attuned_Lethargic_Repose_E"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Lethargic_Repose_E.Attuned_Lethargic_Repose_E",
+      "setName": "Lethargic_Repose",
+      "displayName": "Accuracy/Sleep/Recharge"
+    },
+    {
+      "description": {
+        "short": "+ACC, +Sleep",
+        "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and sleep duration by {Boost.Attrib.sleep.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Sleep",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 19,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Lethargic_Repose_F.Attuned_Lethargic_Repose_F",
+              "mezType": "Sleep"
+            }
+          ]
+        },
+        {
+          "effectType": "Accuracy",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 1,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Lethargic_Repose_F.Attuned_Lethargic_Repose_F"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Lethargic_Repose_F.Attuned_Lethargic_Repose_F",
+      "setName": "Lethargic_Repose",
+      "displayName": "Accuracy/Sleep"
+    }
+  ],
+  "levels": {
+    "min": 20,
+    "max": 50
+  },
+  "bonuses": [
+    {
+      "description": {
+        "short": "+Duration Sleep",
+        "long": "Improves the duration of your Sleep effects by 4%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 2,
+      "powerSetIndex": 470,
+      "fullName": "Set_Bonus.Set_Bonus.Sleep_Dur_3",
+      "setName": "Set_Bonus",
+      "displayName": "Moderate Sleep Duration Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.04
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 19,
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Sleep_Dur_3",
+              "mezType": "Sleep"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+DEF",
+        "long": "Increases energy and negative energy defense by 1.88% and ranged defense by 0.94%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 3,
+      "powerSetIndex": 236,
+      "fullName": "Set_Bonus.Set_Bonus.Increased_Energy_Neg_Ranged_Def_2",
+      "setName": "Set_Bonus",
+      "displayName": "Small Increased Energy/Negative Energy/Ranged Def Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.01875
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Energy_Neg_Ranged_Def_2",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.01875
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Energy_Neg_Ranged_Def_2",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.00938
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Energy_Neg_Ranged_Def_2",
+              "damageType": "Ranged"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+DEF",
+        "long": "Increases lethal and smashing defense by 1.88% and melee defense by 0.94%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 4,
+      "powerSetIndex": 306,
+      "fullName": "Set_Bonus.Set_Bonus.Increased_Lethal_Smash_Melee_Def_2",
+      "setName": "Set_Bonus",
+      "displayName": "Small Increased Lethal/Smashing/Melee Def Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.01875
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Lethal_Smash_Melee_Def_2",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.01875
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Lethal_Smash_Melee_Def_2",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 0.00938
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Lethal_Smash_Melee_Def_2",
+              "damageType": "Melee"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+DEF",
+        "long": "Increases area effect defense by 1.88% and fire and cold defense by 0.94%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 5,
+      "powerSetIndex": 194,
+      "fullName": "Set_Bonus.Set_Bonus.Increased_AoE_Fire_Cold_Def_2",
+      "setName": "Set_Bonus",
+      "displayName": "Small Increased AoE/Fire/Cold Def Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.01875
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_AoE_Fire_Cold_Def_2",
+              "damageType": "AoE"
+            },
+            {
+              "mag": {
+                "pve": 0.00938
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_AoE_Fire_Cold_Def_2",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.00938
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_AoE_Fire_Cold_Def_2",
+              "damageType": "Cold"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+Res (Toxic, Psionic, Mez)",
+        "long": "Increases Toxic and Psionic resistance by 3.75% and Mez Resistance by 6.25%"
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 6,
+      "powerSetIndex": 524,
+      "fullName": "Set_Bonus.Set_Bonus.Toxic_Psi_Mez_Res_4",
+      "setName": "Set_Bonus",
+      "displayName": "Large Toxic, Psionic and Mez Resistance",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Toxic_Psi_Mez_Res_4",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Toxic_Psi_Mez_Res_4",
+              "damageType": "Psionic"
+            },
+            {
+              "mag": {
+                "pve": 0.0625
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Toxic_Psi_Mez_Res_4",
+              "mezType": "Immobilization"
+            },
+            {
+              "mag": {
+                "pve": 0.0625
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Toxic_Psi_Mez_Res_4",
+              "mezType": "Hold"
+            },
+            {
+              "mag": {
+                "pve": 0.0625
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Toxic_Psi_Mez_Res_4",
+              "mezType": "Stun"
+            },
+            {
+              "mag": {
+                "pve": 0.0625
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Toxic_Psi_Mez_Res_4",
+              "mezType": "Sleep"
+            },
+            {
+              "mag": {
+                "pve": 0.0625
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Toxic_Psi_Mez_Res_4",
+              "mezType": "Terrorize"
+            },
+            {
+              "mag": {
+                "pve": 0.0625
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Toxic_Psi_Mez_Res_4",
+              "mezType": "Confuse"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "setType": 14,
+  "displayName": "Lethargic Repose",
+  "imageName": "sLethargicRepose.png"
+}

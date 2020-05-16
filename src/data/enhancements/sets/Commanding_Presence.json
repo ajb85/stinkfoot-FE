@@ -1,1 +1,633 @@
-{"fullName":"IOSet.Commanding_Presence","enhancements":[{"type":"set","description":{"short":"Enhances Accuracy and Damage","long":"Enhances the damage of a power by {Boost.Attrib.Damage.Scale}% and accuracy by {Boost.Attrib.Accuracy.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Commanding_Presence_A.Attuned_Commanding_Presence_A","setName":"Commanding_Presence","displayName":"Accuracy/Damage","effects":[{"mag":0.265,"effectId":"Damage","damageType":1},{"mag":0.265,"effectId":"Boosts_33","damageType":2},{"mag":0.265,"effectId":"Boosts_33","damageType":3},{"mag":0.265,"effectId":"Boosts_33","damageType":4},{"mag":0.265,"effectId":"Boosts_33","damageType":5},{"mag":0.265,"effectId":"Boosts_33","damageType":6},{"mag":0.265,"effectId":"Boosts_33","damageType":7},{"mag":0.265,"effectId":"Boosts_33","damageType":8},{"mag":0.265,"effectId":"Accuracy"}]},{"type":"set","description":{"short":"Enhances Damage and Reduces Endurance Cost","long":"Enhances the damage of a power by {Boost.Attrib.Damage.Scale}% and reduces endurance cost by {Boost.Attrib.Endurance.Scale}%"},"isUnique":false,"fullName":"Boosts.Attuned_Commanding_Presence_B.Attuned_Commanding_Presence_B","setName":"Commanding_Presence","displayName":"Damage/Endurance","effects":[{"mag":0.265,"effectId":"Damage","damageType":1},{"mag":0.265,"effectId":"Boosts_33","damageType":2},{"mag":0.265,"effectId":"Boosts_33","damageType":3},{"mag":0.265,"effectId":"Boosts_33","damageType":4},{"mag":0.265,"effectId":"Boosts_33","damageType":5},{"mag":0.265,"effectId":"Boosts_33","damageType":6},{"mag":0.265,"effectId":"Boosts_33","damageType":7},{"mag":0.265,"effectId":"Boosts_33","damageType":8},{"mag":0.265,"effectId":"Endurance"}]},{"type":"set","description":{"short":"Enhances Accuracy and Reduces Endurance Cost","long":"Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and reduces endurance cost by {Boost.Attrib.Endurance.Scale}%"},"isUnique":false,"fullName":"Boosts.Attuned_Commanding_Presence_C.Attuned_Commanding_Presence_C","setName":"Commanding_Presence","displayName":"Accuracy/Endurance","effects":[{"mag":0.265,"effectId":"Accuracy"},{"mag":0.265,"effectId":"Endurance"}]},{"type":"set","description":{"short":"Enhances Damage, Reduces Endurance Cost and Increases Accuracy","long":"Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and damage by {Boost.Attrib.Damage.Scale}% and reduces endurance cost by {Boost.Attrib.Endurance.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Commanding_Presence_D.Attuned_Commanding_Presence_D","setName":"Commanding_Presence","displayName":" Accuracy/Damage/Endurance","effects":[{"mag":0.212,"effectId":"Damage","damageType":1},{"mag":0.212,"effectId":"Boosts_33","damageType":2},{"mag":0.212,"effectId":"Boosts_33","damageType":3},{"mag":0.212,"effectId":"Boosts_33","damageType":4},{"mag":0.212,"effectId":"Boosts_33","damageType":5},{"mag":0.212,"effectId":"Boosts_33","damageType":6},{"mag":0.212,"effectId":"Boosts_33","damageType":7},{"mag":0.212,"effectId":"Boosts_33","damageType":8},{"mag":0.212,"effectId":"Endurance"},{"mag":0.212,"effectId":"Accuracy"}]},{"type":"set","description":{"short":"RES (Taunt, Placate)","long":"Grants Resistance to Taunt and Placate to your pets when they are near you."},"isUnique":false,"fullName":"Boosts.Attuned_Commanding_Presence_E.Attuned_Commanding_Presence_E","setName":"Commanding_Presence","displayName":" Taunt/Placate Resist","effects":[{"cancelOnMiss":true,"mag":1,"variableModified":true,"effectId":"Resist","stacking":1}]}],"levels":{"min":10,"max":30},"bonuses":["Improved_Recovery_2","Increased_Health_2","Increased_Endurance_2","Increased_AoE_Fire_Cold_Def_1"],"setType":6,"displayName":"Commanding Presence","imageName":"sCommandingPresence.png"}
+{
+  "fullName": "IOSet.Commanding_Presence",
+  "enhancements": [
+    {
+      "description": {
+        "short": "Enhances Accuracy and Damage",
+        "long": "Enhances the damage of a power by {Boost.Attrib.Damage.Scale}% and accuracy by {Boost.Attrib.Accuracy.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Commanding_Presence_A.Attuned_Commanding_Presence_A",
+              "damageType": "Smashing"
+            }
+          ]
+        },
+        {
+          "effectType": "Boosts_33",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Commanding_Presence_A.Attuned_Commanding_Presence_A",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Commanding_Presence_A.Attuned_Commanding_Presence_A",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Commanding_Presence_A.Attuned_Commanding_Presence_A",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Commanding_Presence_A.Attuned_Commanding_Presence_A",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Commanding_Presence_A.Attuned_Commanding_Presence_A",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Commanding_Presence_A.Attuned_Commanding_Presence_A",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Commanding_Presence_A.Attuned_Commanding_Presence_A",
+              "damageType": "Psionic"
+            }
+          ]
+        },
+        {
+          "effectType": "Accuracy",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 1,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Commanding_Presence_A.Attuned_Commanding_Presence_A"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Commanding_Presence_A.Attuned_Commanding_Presence_A",
+      "setName": "Commanding_Presence",
+      "displayName": "Accuracy/Damage"
+    },
+    {
+      "description": {
+        "short": "Enhances Damage and Reduces Endurance Cost",
+        "long": "Enhances the damage of a power by {Boost.Attrib.Damage.Scale}% and reduces endurance cost by {Boost.Attrib.Endurance.Scale}%"
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Commanding_Presence_B.Attuned_Commanding_Presence_B",
+              "damageType": "Smashing"
+            }
+          ]
+        },
+        {
+          "effectType": "Boosts_33",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Commanding_Presence_B.Attuned_Commanding_Presence_B",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Commanding_Presence_B.Attuned_Commanding_Presence_B",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Commanding_Presence_B.Attuned_Commanding_Presence_B",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Commanding_Presence_B.Attuned_Commanding_Presence_B",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Commanding_Presence_B.Attuned_Commanding_Presence_B",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Commanding_Presence_B.Attuned_Commanding_Presence_B",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Commanding_Presence_B.Attuned_Commanding_Presence_B",
+              "damageType": "Psionic"
+            }
+          ]
+        },
+        {
+          "effectType": "Endurance",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 8,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Commanding_Presence_B.Attuned_Commanding_Presence_B"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Commanding_Presence_B.Attuned_Commanding_Presence_B",
+      "setName": "Commanding_Presence",
+      "displayName": "Damage/Endurance"
+    },
+    {
+      "description": {
+        "short": "Enhances Accuracy and Reduces Endurance Cost",
+        "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and reduces endurance cost by {Boost.Attrib.Endurance.Scale}%"
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Accuracy",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 1,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Commanding_Presence_C.Attuned_Commanding_Presence_C"
+            }
+          ]
+        },
+        {
+          "effectType": "Endurance",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 8,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Commanding_Presence_C.Attuned_Commanding_Presence_C"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Commanding_Presence_C.Attuned_Commanding_Presence_C",
+      "setName": "Commanding_Presence",
+      "displayName": "Accuracy/Endurance"
+    },
+    {
+      "description": {
+        "short": "Enhances Damage, Reduces Endurance Cost and Increases Accuracy",
+        "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and damage by {Boost.Attrib.Damage.Scale}% and reduces endurance cost by {Boost.Attrib.Endurance.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Commanding_Presence_D.Attuned_Commanding_Presence_D",
+              "damageType": "Smashing"
+            }
+          ]
+        },
+        {
+          "effectType": "Boosts_33",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Commanding_Presence_D.Attuned_Commanding_Presence_D",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Commanding_Presence_D.Attuned_Commanding_Presence_D",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Commanding_Presence_D.Attuned_Commanding_Presence_D",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Commanding_Presence_D.Attuned_Commanding_Presence_D",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Commanding_Presence_D.Attuned_Commanding_Presence_D",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Commanding_Presence_D.Attuned_Commanding_Presence_D",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Commanding_Presence_D.Attuned_Commanding_Presence_D",
+              "damageType": "Psionic"
+            }
+          ]
+        },
+        {
+          "effectType": "Endurance",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 8,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Commanding_Presence_D.Attuned_Commanding_Presence_D"
+            }
+          ]
+        },
+        {
+          "effectType": "Accuracy",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 1,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Commanding_Presence_D.Attuned_Commanding_Presence_D"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Commanding_Presence_D.Attuned_Commanding_Presence_D",
+      "setName": "Commanding_Presence",
+      "displayName": " Accuracy/Damage/Endurance"
+    },
+    {
+      "description": {
+        "short": "RES (Taunt, Placate)",
+        "long": "Grants Resistance to Taunt and Placate to your pets when they are near you."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Resist",
+          "values": [
+            {
+              "mag": {
+                "pve": 1
+              },
+              "cancelOnMiss": true,
+              "probability": 1,
+              "variableModified": true,
+              "effectType": "Null",
+              "stacking": 1,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Commanding_Presence_E.Attuned_Commanding_Presence_E"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Commanding_Presence_E.Attuned_Commanding_Presence_E",
+      "setName": "Commanding_Presence",
+      "displayName": " Taunt/Placate Resist"
+    }
+  ],
+  "levels": {
+    "min": 10,
+    "max": 30
+  },
+  "bonuses": [
+    {
+      "description": {
+        "short": "+Recovery",
+        "long": "Improves your Recovery by 1.5%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 2,
+      "powerSetIndex": 145,
+      "fullName": "Set_Bonus.Set_Bonus.Improved_Recovery_2",
+      "setName": "Set_Bonus",
+      "displayName": "Small Improved Recovery Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.015
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Recovery",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Improved_Recovery_2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+Max HP",
+        "long": "Increases maximum health by 1.13%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 3,
+      "powerSetIndex": 285,
+      "fullName": "Set_Bonus.Set_Bonus.Increased_Health_2",
+      "setName": "Set_Bonus",
+      "displayName": "Small Increased Health Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "HealSelf",
+          "values": [
+            {
+              "mag": {
+                "pve": 13.5535383
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "HitPoints",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Health_2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+Max End",
+        "long": "Increases maximum Endurance by 1.35%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 4,
+      "powerSetIndex": 222,
+      "fullName": "Set_Bonus.Set_Bonus.Increased_Endurance_2",
+      "setName": "Set_Bonus",
+      "displayName": "Small Increased Endurance Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 1.35
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Endurance",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Endurance_2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+DEF",
+        "long": "Increases area effect defense by 1.25% and fire and cold defense by 0.625%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 5,
+      "powerSetIndex": 193,
+      "fullName": "Set_Bonus.Set_Bonus.Increased_AoE_Fire_Cold_Def_1",
+      "setName": "Set_Bonus",
+      "displayName": "Tiny Increased AoE/Fire/Cold Def Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.0125
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_AoE_Fire_Cold_Def_1",
+              "damageType": "AoE"
+            },
+            {
+              "mag": {
+                "pve": 0.00625
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_AoE_Fire_Cold_Def_1",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.00625
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_AoE_Fire_Cold_Def_1",
+              "damageType": "Cold"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "setType": 6,
+  "displayName": "Commanding Presence",
+  "imageName": "sCommandingPresence.png"
+}

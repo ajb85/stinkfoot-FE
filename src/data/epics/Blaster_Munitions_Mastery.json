@@ -1,1 +1,661 @@
-{"fullName":"Epic_Munitions_Mastery","archetypeOrder":"epicPool","description":"You have Mastery of weapons and Munitions gives you access to uncommon munitions and equipment.","imageName":"MunitionsMastery.png","displayName":"Munitions Mastery","powers":[{"allowedEnhancements":["Res_Damage"],"enhancementCount":6,"archetypeOrder":"epicPool","powerIndex":0,"fullName":"Epic_Munitions_Mastery_Body_Armor","displayName":"Body Armor","requires":{"powers":{},"count":0},"accuracy":1,"accuracyMult":1,"target":1,"targetLoS":true,"activatePeriod":10,"effectArea":1,"numAllowed":1,"ignoreStrength":true,"description":{"short":"Auto: Self +Res (Smash, Lethal)","long":"You have Body Armor that will reduce all Smashing and Lethal damage. This power is always on, and costs no Endurance."},"setTypes":[8],"level":35,"ignoreEnh":[],"ignore_Buff":[],"castTime":0.132,"slottable":true,"aoeModifier":1},{"allowedEnhancements":["Accuracy","Damage","Endurance_Discount","Hold","Range","Recharge"],"enhancementCount":6,"archetypeOrder":"epicPool","powerIndex":1,"castTimeReal":1.87,"toggleCost":8.58,"fullName":"Epic_Munitions_Mastery_Cryo_Freeze_Ray","displayName":"Cryo Freeze Ray","requires":{"powers":{},"count":0},"accuracy":1,"accuracyMult":1,"attackTypes":34,"target":2048,"targetLoS":true,"range":60,"endCost":8.58,"rechargeTime":16,"baseRechargeTime":16,"effectArea":1,"numAllowed":1,"description":{"short":"Ranged, Minor DMG(Cold), Foe Hold","long":"Although this weapon deals very little damage, the Cryo Freeze Ray encases your foe in a block of ice, holding him helpless in place for a while. Damage: Minor, Recharge: Moderate"},"setTypes":[2,10,44],"level":35,"ignoreEnh":[],"ignore_Buff":[],"castTime":2.112,"slottable":true,"aoeModifier":1},{"allowedEnhancements":["Accuracy","Damage","Endurance_Discount","Range","Recharge","Sleep"],"enhancementCount":6,"archetypeOrder":"epicPool","powerIndex":2,"castTimeReal":1.87,"toggleCost":19.5,"fullName":"Epic_Munitions_Mastery_Sleep_Grenade","displayName":"Sleep Grenade","requires":{"powers":{"Epic_Munitions_Mastery_Body_Armor":true,"Epic_Munitions_Mastery_Cryo_Freeze_Ray":true},"count":1},"accuracy":1.05,"accuracyMult":1.05,"attackTypes":12,"target":2048,"targetLoS":true,"range":80,"endCost":19.5,"rechargeTime":90,"baseRechargeTime":90,"effectArea":2,"radius":15,"maxTargets":10,"numAllowed":1,"description":{"short":"Ranged (Targeted AoE), Minor DMG(Smash), Foe Sleep","long":"Launches a Sleep Grenade at long range from beneath the barrel of your Assault Rifle. This small blast does minor smashing damage but affects all foes within the blast radius, and can knock them back. You must be level 41 and have Body Armor or Cryo Freeze Ray before selecting this power. Damage: Minor, Recharge: Slow"},"setTypes":[3,14,44],"level":41,"ignoreEnh":[],"ignore_Buff":[],"castTime":2.112,"slottable":true,"aoeModifier":3.25},{"allowedEnhancements":["Accuracy","Defense_Debuff","Endurance_Discount","Recharge"],"enhancementCount":6,"archetypeOrder":"epicPool","powerIndex":3,"castTimeReal":1.5,"toggleCost":10.66,"fullName":"Epic_Munitions_Mastery_Surveillance","displayName":"Surveillance","requires":{"powers":{"Epic_Munitions_Mastery_Body_Armor":true,"Epic_Munitions_Mastery_Cryo_Freeze_Ray":true},"count":1},"accuracy":1,"accuracyMult":1,"target":2048,"targetLoS":true,"range":80,"endCost":10.66,"rechargeTime":45,"baseRechargeTime":45,"effectArea":1,"aIReport":1,"numAllowed":1,"description":{"short":"Ranged Foe -DEF, -RES (All)","long":"When this power is activated, you focus your senses to analyze your target's defensive capabilities and discover their weaknesses.  By sharing your knowledge of the target's weaknesses with your team mates, you effectively reduce their defense and resistance to damage. Your Combat Attributes Window will also show the combat attributes of the target. You must be level 41 and have Body Armor or Cryo Freeze Ray before selecting this power. Recharge: Slow"},"setTypes":[21,30],"level":41,"ignoreEnh":[],"ignore_Buff":[],"castTime":1.716,"slottable":true,"aoeModifier":1},{"allowedEnhancements":["Accuracy","Damage","Endurance_Discount","Interrupt","Knockback","Range","Recharge"],"enhancementCount":6,"archetypeOrder":"epicPool","powerIndex":4,"castTimeReal":5.87,"toggleCost":22.75,"fullName":"Epic_Munitions_Mastery_LRM_Rocket","displayName":"LRM Rocket","requires":{"powers":{"Epic_Munitions_Mastery_Body_Armor":true,"Epic_Munitions_Mastery_Cryo_Freeze_Ray":true,"Epic_Munitions_Mastery_Sleep_Grenade":true,"Epic_Munitions_Mastery_Surveillance":true},"count":2},"accuracy":1.05,"accuracyMult":1.05,"attackTypes":18,"target":2048,"targetLoS":true,"range":150,"endCost":22.75,"interruptTime":4,"rechargeTime":240,"baseRechargeTime":240,"effectArea":2,"radius":20,"maxTargets":16,"numAllowed":1,"description":{"short":"Interruptible (Targeted AoE), Superior DMG(Lethal/Smash), Foe Knockback","long":"The LRM Rocket is a powerful piece of hardware. It is very accurate and has a very long range. The impressive round can knock down its target. The LRM Rocket is bulky, awkward to use and you must take your time to aim, so this attack can be interrupted. You must be level 44 and have two other Munitions Mastery Powers before selecting this power. Damage: Superior, Recharge: Slow"},"setTypes":[3,23,44],"level":44,"ignoreEnh":[],"ignore_Buff":[],"castTime":6.072,"slottable":true,"aoeModifier":4}]}
+{
+  "fullName": "Epic_Munitions_Mastery",
+  "archetypeOrder": "epicPool",
+  "description": "You have Mastery of weapons and Munitions gives you access to uncommon munitions and equipment.",
+  "imageName": "MunitionsMastery.png",
+  "displayName": "Munitions Mastery",
+  "powers": [
+    {
+      "allowedEnhancements": [
+        "Res_Damage"
+      ],
+      "enhancementCount": 6,
+      "archetypeOrder": "epicPool",
+      "effects": [
+        {
+          "effectType": "Res_Dmg",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.0875,
+                "pvp": 0.0875
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Epic.Munitions_Mastery.Body_Armor",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 0.0875,
+                "pvp": 0.0875
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Epic.Munitions_Mastery.Body_Armor",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pvp": 0.0875
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Epic.Munitions_Mastery.Body_Armor",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pvp": 0.0875
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Epic.Munitions_Mastery.Body_Armor",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pvp": 0.0875
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Epic.Munitions_Mastery.Body_Armor",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pvp": 0.0875
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Epic.Munitions_Mastery.Body_Armor",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pvp": 0.0875
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Epic.Munitions_Mastery.Body_Armor",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pvp": 0.0875
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Epic.Munitions_Mastery.Body_Armor",
+              "damageType": "Psionic"
+            }
+          ]
+        }
+      ],
+      "powerIndex": 0,
+      "fullName": "Epic_Munitions_Mastery_Body_Armor",
+      "displayName": "Body Armor",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "target": 1,
+      "targetLoS": true,
+      "activatePeriod": 10,
+      "effectArea": 1,
+      "numAllowed": 1,
+      "ignoreStrength": true,
+      "description": {
+        "short": "Auto: Self +Res (Smash, Lethal)",
+        "long": "You have Body Armor that will reduce all Smashing and Lethal damage. This power is always on, and costs no Endurance."
+      },
+      "setTypes": [
+        8
+      ],
+      "level": 35,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 0.132,
+      "slottable": true,
+      "aoeModifier": 1,
+      "powerType": "Auto"
+    },
+    {
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Hold",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "archetypeOrder": "epicPool",
+      "effects": [
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 6.25615025
+              },
+              "probability": 1,
+              "effectType": "Damage",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Epic.Munitions_Mastery.Cryo_Freeze_Ray",
+              "damageType": "Cold"
+            }
+          ]
+        },
+        {
+          "effectType": "Immobilize",
+          "values": [
+            {
+              "mag": {
+                "pve": 3,
+                "pvp": 3
+              },
+              "probability": 1,
+              "duration": 11.92,
+              "effectType": "Mez",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "attribType": 1,
+              "powerFullName": "Epic.Munitions_Mastery.Cryo_Freeze_Ray",
+              "mezType": "Hold"
+            }
+          ]
+        },
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 100
+              },
+              "probability": 1,
+              "duration": 10,
+              "effectType": "MezResist",
+              "stacking": 1,
+              "toWho": "Target",
+              "powerFullName": "Epic.Munitions_Mastery.Cryo_Freeze_Ray",
+              "mezType": "Knockback"
+            },
+            {
+              "mag": {
+                "pve": 100
+              },
+              "probability": 1,
+              "duration": 10,
+              "effectType": "MezResist",
+              "stacking": 1,
+              "toWho": "Target",
+              "powerFullName": "Epic.Munitions_Mastery.Cryo_Freeze_Ray",
+              "mezType": "Knockup"
+            },
+            {
+              "mag": {
+                "pve": -100
+              },
+              "probability": 1,
+              "duration": 10,
+              "effectType": "Mez",
+              "stacking": 1,
+              "toWho": "Target",
+              "powerFullName": "Epic.Munitions_Mastery.Cryo_Freeze_Ray",
+              "mezType": "Knockback"
+            },
+            {
+              "mag": {
+                "pve": -100
+              },
+              "probability": 1,
+              "duration": 10,
+              "effectType": "Mez",
+              "stacking": 1,
+              "toWho": "Target",
+              "powerFullName": "Epic.Munitions_Mastery.Cryo_Freeze_Ray",
+              "mezType": "Knockup"
+            }
+          ]
+        }
+      ],
+      "powerIndex": 1,
+      "castTimeReal": 1.87,
+      "toggleCost": 8.58,
+      "fullName": "Epic_Munitions_Mastery_Cryo_Freeze_Ray",
+      "displayName": "Cryo Freeze Ray",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "attackTypes": 34,
+      "target": 2048,
+      "targetLoS": true,
+      "range": 60,
+      "endCost": 8.58,
+      "rechargeTime": 16,
+      "baseRechargeTime": 16,
+      "effectArea": 1,
+      "numAllowed": 1,
+      "description": {
+        "short": "Ranged, Minor DMG(Cold), Foe Hold",
+        "long": "Although this weapon deals very little damage, the Cryo Freeze Ray encases your foe in a block of ice, holding him helpless in place for a while. Damage: Minor, Recharge: Moderate"
+      },
+      "setTypes": [
+        2,
+        10,
+        44
+      ],
+      "level": 35,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 2.112,
+      "slottable": true,
+      "aoeModifier": 1
+    },
+    {
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Range",
+        "Recharge",
+        "Sleep"
+      ],
+      "enhancementCount": 6,
+      "archetypeOrder": "epicPool",
+      "effects": [
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 6.25615025
+              },
+              "probability": 1,
+              "effectType": "Damage",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Epic.Munitions_Mastery.Sleep_Grenade",
+              "damageType": "Smashing"
+            }
+          ]
+        },
+        {
+          "effectType": "Sleep",
+          "values": [
+            {
+              "mag": {
+                "pve": 3,
+                "pvp": 3
+              },
+              "probability": 1,
+              "duration": 23.84,
+              "effectType": "Mez",
+              "delayedTime": 0.26,
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "attribType": 1,
+              "powerFullName": "Epic.Munitions_Mastery.Sleep_Grenade",
+              "mezType": "Sleep"
+            }
+          ]
+        }
+      ],
+      "powerIndex": 2,
+      "castTimeReal": 1.87,
+      "toggleCost": 19.5,
+      "fullName": "Epic_Munitions_Mastery_Sleep_Grenade",
+      "displayName": "Sleep Grenade",
+      "requires": {
+        "powers": {
+          "Epic_Munitions_Mastery_Body_Armor": true,
+          "Epic_Munitions_Mastery_Cryo_Freeze_Ray": true
+        },
+        "count": 1
+      },
+      "accuracy": 1.05,
+      "accuracyMult": 1.05,
+      "attackTypes": 12,
+      "target": 2048,
+      "targetLoS": true,
+      "range": 80,
+      "endCost": 19.5,
+      "rechargeTime": 90,
+      "baseRechargeTime": 90,
+      "effectArea": 2,
+      "radius": 15,
+      "maxTargets": 10,
+      "numAllowed": 1,
+      "description": {
+        "short": "Ranged (Targeted AoE), Minor DMG(Smash), Foe Sleep",
+        "long": "Launches a Sleep Grenade at long range from beneath the barrel of your Assault Rifle. This small blast does minor smashing damage but affects all foes within the blast radius, and can knock them back. You must be level 41 and have Body Armor or Cryo Freeze Ray before selecting this power. Damage: Minor, Recharge: Slow"
+      },
+      "setTypes": [
+        3,
+        14,
+        44
+      ],
+      "level": 41,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 2.112,
+      "slottable": true,
+      "aoeModifier": 3.25
+    },
+    {
+      "allowedEnhancements": [
+        "Accuracy",
+        "Defense_Debuff",
+        "Endurance_Discount",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "archetypeOrder": "epicPool",
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 54
+              },
+              "cancelOnMiss": true,
+              "probability": 1,
+              "effectType": "ViewAttrib",
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Epic.Munitions_Mastery.Surveillance"
+            }
+          ]
+        },
+        {
+          "effectType": "Res_Dmg",
+          "values": [
+            {
+              "mag": {
+                "pve": -0.14
+              },
+              "probability": 1,
+              "duration": 20,
+              "effectType": "Resistance",
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Epic.Munitions_Mastery.Surveillance",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": -0.14
+              },
+              "probability": 1,
+              "duration": 20,
+              "effectType": "Resistance",
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Epic.Munitions_Mastery.Surveillance",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": -0.14
+              },
+              "probability": 1,
+              "duration": 20,
+              "effectType": "Resistance",
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Epic.Munitions_Mastery.Surveillance",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": -0.14
+              },
+              "probability": 1,
+              "duration": 20,
+              "effectType": "Resistance",
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Epic.Munitions_Mastery.Surveillance",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": -0.14
+              },
+              "probability": 1,
+              "duration": 20,
+              "effectType": "Resistance",
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Epic.Munitions_Mastery.Surveillance",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": -0.14
+              },
+              "probability": 1,
+              "duration": 20,
+              "effectType": "Resistance",
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Epic.Munitions_Mastery.Surveillance",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": -0.14
+              },
+              "probability": 1,
+              "duration": 20,
+              "effectType": "Resistance",
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Epic.Munitions_Mastery.Surveillance",
+              "damageType": "Psionic"
+            },
+            {
+              "mag": {
+                "pve": -0.14
+              },
+              "probability": 1,
+              "duration": 20,
+              "effectType": "Resistance",
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Epic.Munitions_Mastery.Surveillance",
+              "damageType": "Toxic"
+            }
+          ]
+        },
+        {
+          "effectType": "Debuff_Def",
+          "values": [
+            {
+              "mag": {
+                "pve": -0.14
+              },
+              "probability": 1,
+              "duration": 20,
+              "effectType": "Defense",
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Epic.Munitions_Mastery.Surveillance"
+            }
+          ]
+        }
+      ],
+      "powerIndex": 3,
+      "castTimeReal": 1.5,
+      "toggleCost": 10.66,
+      "fullName": "Epic_Munitions_Mastery_Surveillance",
+      "displayName": "Surveillance",
+      "requires": {
+        "powers": {
+          "Epic_Munitions_Mastery_Body_Armor": true,
+          "Epic_Munitions_Mastery_Cryo_Freeze_Ray": true
+        },
+        "count": 1
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "target": 2048,
+      "targetLoS": true,
+      "range": 80,
+      "endCost": 10.66,
+      "rechargeTime": 45,
+      "baseRechargeTime": 45,
+      "effectArea": 1,
+      "aIReport": 1,
+      "numAllowed": 1,
+      "description": {
+        "short": "Ranged Foe -DEF, -RES (All)",
+        "long": "When this power is activated, you focus your senses to analyze your target's defensive capabilities and discover their weaknesses.  By sharing your knowledge of the target's weaknesses with your team mates, you effectively reduce their defense and resistance to damage. Your Combat Attributes Window will also show the combat attributes of the target. You must be level 41 and have Body Armor or Cryo Freeze Ray before selecting this power. Recharge: Slow"
+      },
+      "setTypes": [
+        21,
+        30
+      ],
+      "level": 41,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 1.716,
+      "slottable": true,
+      "aoeModifier": 1
+    },
+    {
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Interrupt",
+        "Knockback",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "archetypeOrder": "epicPool",
+      "effects": [
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 93.21664,
+                "pvp": 46.29551
+              },
+              "probability": 1,
+              "effectType": "Damage",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Epic.Munitions_Mastery.LRM_Rocket",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 62.5615
+              },
+              "probability": 1,
+              "effectType": "Damage",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Epic.Munitions_Mastery.LRM_Rocket",
+              "damageType": "Smashing"
+            }
+          ]
+        },
+        {
+          "effectType": "Knockback",
+          "values": [
+            {
+              "mag": {
+                "pve": 1.16319,
+                "pvp": 1.16319
+              },
+              "probability": 0.5,
+              "effectType": "Mez",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Epic.Munitions_Mastery.LRM_Rocket",
+              "mezType": "Knockback"
+            }
+          ]
+        }
+      ],
+      "powerIndex": 4,
+      "castTimeReal": 5.87,
+      "toggleCost": 22.75,
+      "fullName": "Epic_Munitions_Mastery_LRM_Rocket",
+      "displayName": "LRM Rocket",
+      "requires": {
+        "powers": {
+          "Epic_Munitions_Mastery_Body_Armor": true,
+          "Epic_Munitions_Mastery_Cryo_Freeze_Ray": true,
+          "Epic_Munitions_Mastery_Sleep_Grenade": true,
+          "Epic_Munitions_Mastery_Surveillance": true
+        },
+        "count": 2
+      },
+      "accuracy": 1.05,
+      "accuracyMult": 1.05,
+      "attackTypes": 18,
+      "target": 2048,
+      "targetLoS": true,
+      "range": 150,
+      "endCost": 22.75,
+      "interruptTime": 4,
+      "rechargeTime": 240,
+      "baseRechargeTime": 240,
+      "effectArea": 2,
+      "radius": 20,
+      "maxTargets": 16,
+      "numAllowed": 1,
+      "description": {
+        "short": "Interruptible (Targeted AoE), Superior DMG(Lethal/Smash), Foe Knockback",
+        "long": "The LRM Rocket is a powerful piece of hardware. It is very accurate and has a very long range. The impressive round can knock down its target. The LRM Rocket is bulky, awkward to use and you must take your time to aim, so this attack can be interrupted. You must be level 44 and have two other Munitions Mastery Powers before selecting this power. Damage: Superior, Recharge: Slow"
+      },
+      "setTypes": [
+        3,
+        23,
+        44
+      ],
+      "level": 44,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 6.072,
+      "slottable": true,
+      "aoeModifier": 4
+    }
+  ]
+}

@@ -1,1 +1,268 @@
-{"fullName":"IOSet.Celerity","enhancements":[{"type":"set","description":{"short":"-End Cost","long":"Reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Celerity_A.Attuned_Celerity_A","setName":"Celerity","displayName":"Endurance","effects":[{"mag":0.424,"effectId":"Endurance"}]},{"type":"set","description":{"short":"+Run","long":"Enhances the run speed of a power by {Boost.Attrib.Run.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Celerity_B.Attuned_Celerity_B","setName":"Celerity","displayName":"Run","effects":[{"mag":0.424,"effectId":"Run"}]},{"type":"set","description":{"short":"Grants Stealth","long":"UNIQUE -- No more than 1 enhancement of this type may be slotted by a character.  May not be slotted if you have any other enhancements which grant stealth.  Grants Stealth for 120 seconds when used in an instant effect power."},"isUnique":true,"fullName":"Boosts.Attuned_Celerity_C.Attuned_Celerity_C","setName":"Celerity","displayName":"Stealth","effects":[{"cancelOnMiss":true,"mag":30,"effectId":"Stealth","suppression":448},{"cancelOnMiss":true,"mag":300,"effectId":"Ones","suppression":448},{"cancelOnMiss":true,"mag":0.5,"effectId":"Ones","suppression":448},{"cancelOnMiss":true,"mag":0.8,"effectId":"Ones"}]}],"levels":{"min":15,"max":50},"bonuses":["Lethal_Smash_Mez_Res_2","Increased_Health_3"],"setType":19,"displayName":"Celerity","imageName":"sCelerity.png"}
+{
+  "fullName": "IOSet.Celerity",
+  "enhancements": [
+    {
+      "description": {
+        "short": "-End Cost",
+        "long": "Reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Endurance",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.424
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 8,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Celerity_A.Attuned_Celerity_A"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Celerity_A.Attuned_Celerity_A",
+      "setName": "Celerity",
+      "displayName": "Endurance"
+    },
+    {
+      "description": {
+        "short": "+Run",
+        "long": "Enhances the run speed of a power by {Boost.Attrib.Run.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Run",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.424
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 32,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Celerity_B.Attuned_Celerity_B"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Celerity_B.Attuned_Celerity_B",
+      "setName": "Celerity",
+      "displayName": "Run"
+    },
+    {
+      "description": {
+        "short": "Grants Stealth",
+        "long": "UNIQUE -- No more than 1 enhancement of this type may be slotted by a character.  May not be slotted if you have any other enhancements which grant stealth.  Grants Stealth for 120 seconds when used in an instant effect power."
+      },
+      "isUnique": true,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Stealth",
+          "values": [
+            {
+              "mag": {
+                "pve": 30
+              },
+              "cancelOnMiss": true,
+              "probability": 1,
+              "duration": 120,
+              "effectType": "StealthRadius",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Celerity_C.Attuned_Celerity_C"
+            }
+          ]
+        },
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 300
+              },
+              "cancelOnMiss": true,
+              "probability": 1,
+              "duration": 120,
+              "effectType": "StealthRadiusPlayer",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Celerity_C.Attuned_Celerity_C"
+            },
+            {
+              "mag": {
+                "pve": 0.8
+              },
+              "cancelOnMiss": true,
+              "probability": 1,
+              "duration": 120,
+              "effectType": "Translucency",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Celerity_C.Attuned_Celerity_C"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Celerity_C.Attuned_Celerity_C",
+      "setName": "Celerity",
+      "displayName": "Stealth"
+    }
+  ],
+  "levels": {
+    "min": 15,
+    "max": 50
+  },
+  "bonuses": [
+    {
+      "description": {
+        "short": "+Res (Lethal, Smash, Mez)",
+        "long": "Increases Lethal and Smashing resistance by 2.25% and Mez Resistance by 3.75%"
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 2,
+      "powerSetIndex": 447,
+      "fullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_2",
+      "setName": "Set_Bonus",
+      "displayName": "Small Lethal, Smash and Mez Resistance",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.0225
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_2",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.0225
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_2",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_2",
+              "mezType": "Immobilization"
+            },
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_2",
+              "mezType": "Hold"
+            },
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_2",
+              "mezType": "Stun"
+            },
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_2",
+              "mezType": "Sleep"
+            },
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_2",
+              "mezType": "Terrorize"
+            },
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_2",
+              "mezType": "Confuse"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+Max HP",
+        "long": "Increases maximum health by 1.5%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 3,
+      "powerSetIndex": 286,
+      "fullName": "Set_Bonus.Set_Bonus.Increased_Health_3",
+      "setName": "Set_Bonus",
+      "displayName": "Moderate Increased Health Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "HealSelf",
+          "values": [
+            {
+              "mag": {
+                "pve": 18.0713863
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "HitPoints",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Health_3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "setType": 19,
+  "displayName": "Celerity",
+  "imageName": "sCelerity.png"
+}

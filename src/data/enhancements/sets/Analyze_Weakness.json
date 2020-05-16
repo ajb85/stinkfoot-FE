@@ -1,1 +1,676 @@
-{"fullName":"IOSet.Analyze_Weakness","enhancements":[{"type":"set","description":{"short":"+Defense Debuff","long":"Enhances the defense debuff potential of a power by {Boost.Attrib.DefenseDebuff.Scale}%.  NOTE: This enhancement can only be slotted into defense debuff powers that require a To Hit check."},"isUnique":false,"fullName":"Boosts.Attuned_Analyze_Weakness_A.Attuned_Analyze_Weakness_A","setName":"Analyze_Weakness","displayName":"Defense Debuff","effects":[{"mag":0.424,"effectId":"DefenseDebuff"}]},{"type":"set","description":{"short":"+ACC, +Defense Debuff","long":"Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and defense debuff potential of a power by {Boost.Attrib.DefenseDebuff.Scale}%.  NOTE: This enhancement can only be slotted into defense debuff powers that require a To Hit check."},"isUnique":false,"fullName":"Boosts.Attuned_Analyze_Weakness_B.Attuned_Analyze_Weakness_B","setName":"Analyze_Weakness","displayName":"Accuracy/Defense Debuff","effects":[{"mag":0.265,"effectId":"Accuracy"},{"mag":0.265,"effectId":"DefenseDebuff"}]},{"type":"set","description":{"short":"+ACC, +Rech","long":"Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and and reduces recharge time by {Boost.Attrib.Recharge.Scale}%.  NOTE: This enhancement can only be slotted into defense debuff powers that require a To Hit check."},"isUnique":false,"fullName":"Boosts.Attuned_Analyze_Weakness_C.Attuned_Analyze_Weakness_C","setName":"Analyze_Weakness","displayName":"Accuracy/Recharge","effects":[{"mag":0.265,"effectId":"Recharge"},{"mag":0.265,"effectId":"Accuracy"}]},{"type":"set","description":{"short":"+Defense Debuff, -End Cost, +Rech","long":"Enhances the defense debuff potential of a power by {Boost.Attrib.DefenseDebuff.Scale}%, reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}% and reduces recharge time by {Boost.Attrib.Recharge.Scale}%  NOTE: This enhancement can only be slotted into defense debuff powers that require a To Hit check."},"isUnique":false,"fullName":"Boosts.Attuned_Analyze_Weakness_D.Attuned_Analyze_Weakness_D","setName":"Analyze_Weakness","displayName":"Defense Debuff/Endurance/Recharge","effects":[{"mag":0.212,"effectId":"Recharge"},{"mag":0.212,"effectId":"DefenseDebuff"},{"mag":0.212,"effectId":"Endurance"}]},{"type":"set","description":{"short":"+ACC, -End Cost, +Rech","long":"Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}%, reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}% and reduces recharge time by {Boost.Attrib.Recharge.Scale}%.  NOTE: This enhancement can only be slotted into defense debuff powers that require a To Hit check."},"isUnique":false,"fullName":"Boosts.Attuned_Analyze_Weakness_E.Attuned_Analyze_Weakness_E","setName":"Analyze_Weakness","displayName":"Accuracy/Endurance/Recharge","effects":[{"mag":0.212,"effectId":"Recharge"},{"mag":0.212,"effectId":"Accuracy"},{"mag":0.212,"effectId":"Endurance"}]},{"type":"set","description":{"short":"Chance for +To Hit","long":"Gives a chance to boost the user's chance to hit.  This effect will trigger roughly 2times per minute.  NOTE: This enhancement can only be slotted into defense debuff powers that require a to hit check."},"isUnique":false,"fullName":"Boosts.Attuned_Analyze_Weakness_F.Attuned_Analyze_Weakness_F","setName":"Analyze_Weakness","displayName":"Chance for +To Hit","effects":[{"procsPerMinute":2,"cancelOnMiss":true,"mag":1,"effectId":"Boost","ticks":1}],"hasGrantPowerEffect":true}],"levels":{"min":30,"max":50},"bonuses":["Improved_Regeneration_4","Energy_Neg_Mez_Res_2","Increased_Damage_5","Accuracy_5","Lethal_Smash_Mez_Res_5"],"setType":30,"displayName":"Analyze Weakness","imageName":"AnalyzeWeakness.png"}
+{
+  "fullName": "IOSet.Analyze_Weakness",
+  "enhancements": [
+    {
+      "description": {
+        "short": "+Defense Debuff",
+        "long": "Enhances the defense debuff potential of a power by {Boost.Attrib.DefenseDebuff.Scale}%.  NOTE: This enhancement can only be slotted into defense debuff powers that require a To Hit check."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "DefenseDebuff",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.424
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 5,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Analyze_Weakness_A.Attuned_Analyze_Weakness_A"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Analyze_Weakness_A.Attuned_Analyze_Weakness_A",
+      "setName": "Analyze_Weakness",
+      "displayName": "Defense Debuff"
+    },
+    {
+      "description": {
+        "short": "+ACC, +Defense Debuff",
+        "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and defense debuff potential of a power by {Boost.Attrib.DefenseDebuff.Scale}%.  NOTE: This enhancement can only be slotted into defense debuff powers that require a To Hit check."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Accuracy",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 1,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Analyze_Weakness_B.Attuned_Analyze_Weakness_B"
+            }
+          ]
+        },
+        {
+          "effectType": "DefenseDebuff",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 5,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Analyze_Weakness_B.Attuned_Analyze_Weakness_B"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Analyze_Weakness_B.Attuned_Analyze_Weakness_B",
+      "setName": "Analyze_Weakness",
+      "displayName": "Accuracy/Defense Debuff"
+    },
+    {
+      "description": {
+        "short": "+ACC, +Rech",
+        "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and and reduces recharge time by {Boost.Attrib.Recharge.Scale}%.  NOTE: This enhancement can only be slotted into defense debuff powers that require a To Hit check."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Recharge",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 25,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Analyze_Weakness_C.Attuned_Analyze_Weakness_C"
+            }
+          ]
+        },
+        {
+          "effectType": "Accuracy",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 1,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Analyze_Weakness_C.Attuned_Analyze_Weakness_C"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Analyze_Weakness_C.Attuned_Analyze_Weakness_C",
+      "setName": "Analyze_Weakness",
+      "displayName": "Accuracy/Recharge"
+    },
+    {
+      "description": {
+        "short": "+Defense Debuff, -End Cost, +Rech",
+        "long": "Enhances the defense debuff potential of a power by {Boost.Attrib.DefenseDebuff.Scale}%, reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}% and reduces recharge time by {Boost.Attrib.Recharge.Scale}%  NOTE: This enhancement can only be slotted into defense debuff powers that require a To Hit check."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Recharge",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 25,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Analyze_Weakness_D.Attuned_Analyze_Weakness_D"
+            }
+          ]
+        },
+        {
+          "effectType": "DefenseDebuff",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 5,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Analyze_Weakness_D.Attuned_Analyze_Weakness_D"
+            }
+          ]
+        },
+        {
+          "effectType": "Endurance",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 8,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Analyze_Weakness_D.Attuned_Analyze_Weakness_D"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Analyze_Weakness_D.Attuned_Analyze_Weakness_D",
+      "setName": "Analyze_Weakness",
+      "displayName": "Defense Debuff/Endurance/Recharge"
+    },
+    {
+      "description": {
+        "short": "+ACC, -End Cost, +Rech",
+        "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}%, reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}% and reduces recharge time by {Boost.Attrib.Recharge.Scale}%.  NOTE: This enhancement can only be slotted into defense debuff powers that require a To Hit check."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Recharge",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 25,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Analyze_Weakness_E.Attuned_Analyze_Weakness_E"
+            }
+          ]
+        },
+        {
+          "effectType": "Accuracy",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 1,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Analyze_Weakness_E.Attuned_Analyze_Weakness_E"
+            }
+          ]
+        },
+        {
+          "effectType": "Endurance",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 8,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Analyze_Weakness_E.Attuned_Analyze_Weakness_E"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Analyze_Weakness_E.Attuned_Analyze_Weakness_E",
+      "setName": "Analyze_Weakness",
+      "displayName": "Accuracy/Endurance/Recharge"
+    },
+    {
+      "description": {
+        "short": "Chance for +To Hit",
+        "long": "Gives a chance to boost the user's chance to hit.  This effect will trigger roughly 2times per minute.  NOTE: This enhancement can only be slotted into defense debuff powers that require a to hit check."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Boost",
+          "values": [
+            {
+              "mag": {
+                "pve": 1
+              },
+              "procsPerMinute": 2,
+              "cancelOnMiss": true,
+              "duration": 10,
+              "effectType": "GrantPower",
+              "ticks": 1,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Analyze_Weakness_F.Attuned_Analyze_Weakness_F"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Analyze_Weakness_F.Attuned_Analyze_Weakness_F",
+      "setName": "Analyze_Weakness",
+      "displayName": "Chance for +To Hit",
+      "hasGrantPowerEffect": true
+    }
+  ],
+  "levels": {
+    "min": 30,
+    "max": 50
+  },
+  "bonuses": [
+    {
+      "description": {
+        "short": "+Regeneration",
+        "long": "Improves your Regeneration by 10%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 2,
+      "powerSetIndex": 154,
+      "fullName": "Set_Bonus.Set_Bonus.Improved_Regeneration_4",
+      "setName": "Set_Bonus",
+      "displayName": "Large Improved Regeneration Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.1
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Regeneration",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Improved_Regeneration_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+Res (Energy, Negative, Mez)",
+        "long": "Increases Energy and Negative Energy resistance by 2.25% and Mez Resistance by 3.75%"
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 3,
+      "powerSetIndex": 57,
+      "fullName": "Set_Bonus.Set_Bonus.Energy_Neg_Mez_Res_2",
+      "setName": "Set_Bonus",
+      "displayName": "Small Energy, Negative Energy and Mez Resistance",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.0225
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Energy_Neg_Mez_Res_2",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.0225
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Energy_Neg_Mez_Res_2",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Energy_Neg_Mez_Res_2",
+              "mezType": "Immobilization"
+            },
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Energy_Neg_Mez_Res_2",
+              "mezType": "Hold"
+            },
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Energy_Neg_Mez_Res_2",
+              "mezType": "Stun"
+            },
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Energy_Neg_Mez_Res_2",
+              "mezType": "Sleep"
+            },
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Energy_Neg_Mez_Res_2",
+              "mezType": "Terrorize"
+            },
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Energy_Neg_Mez_Res_2",
+              "mezType": "Confuse"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+DMG",
+        "long": "Increases damage by 3%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 4,
+      "powerSetIndex": 218,
+      "fullName": "Set_Bonus.Set_Bonus.Increased_Damage_5",
+      "setName": "Set_Bonus",
+      "displayName": "Huge Increased Damage Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.03
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "DamageBuff",
+              "toWho": "All",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Damage_5",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 0.03
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "DamageBuff",
+              "toWho": "All",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Damage_5",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.03
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "DamageBuff",
+              "toWho": "All",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Damage_5",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.03
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "DamageBuff",
+              "toWho": "All",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Damage_5",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 0.03
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "DamageBuff",
+              "toWho": "All",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Damage_5",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.03
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "DamageBuff",
+              "toWho": "All",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Damage_5",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.03
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "DamageBuff",
+              "toWho": "All",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Damage_5",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pve": 0.03
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "DamageBuff",
+              "toWho": "All",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Damage_5",
+              "damageType": "Psionic"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+Accuracy",
+        "long": "Improves the accuracy of all of your powers by 11%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 5,
+      "powerSetIndex": 5,
+      "fullName": "Set_Bonus.Set_Bonus.Accuracy_5",
+      "setName": "Set_Bonus",
+      "displayName": "Huge Accuracy Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.11
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 1,
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Accuracy_5"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+Res (Lethal, Smash, Mez)",
+        "long": "Increases Lethal and Smashing resistance by 4.5% and Mez Resistance by 7.5%"
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 6,
+      "powerSetIndex": 450,
+      "fullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_5",
+      "setName": "Set_Bonus",
+      "displayName": "Huge Lethal, Smash and Mez Resistance",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.045
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_5",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.045
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_5",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 0.075
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_5",
+              "mezType": "Immobilization"
+            },
+            {
+              "mag": {
+                "pve": 0.075
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_5",
+              "mezType": "Hold"
+            },
+            {
+              "mag": {
+                "pve": 0.075
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_5",
+              "mezType": "Stun"
+            },
+            {
+              "mag": {
+                "pve": 0.075
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_5",
+              "mezType": "Sleep"
+            },
+            {
+              "mag": {
+                "pve": 0.075
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_5",
+              "mezType": "Terrorize"
+            },
+            {
+              "mag": {
+                "pve": 0.075
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_5",
+              "mezType": "Confuse"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "setType": 30,
+  "displayName": "Analyze Weakness",
+  "imageName": "AnalyzeWeakness.png"
+}

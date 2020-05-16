@@ -1,1 +1,293 @@
-{"fullName":"IOSet.Jaunt","enhancements":[{"type":"set","description":{"short":"+Range","long":"Enhances the range of a teleport power by {Boost.Attrib.Range.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Jaunt_A.Attuned_Jaunt_A","setName":"Jaunt","displayName":"Range","effects":[{"mag":0.255,"effectId":"Range"}]},{"type":"set","description":{"short":"-End Cost","long":"Reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Jaunt_B.Attuned_Jaunt_B","setName":"Jaunt","displayName":"Endurance","effects":[{"mag":0.424,"effectId":"Endurance"}]},{"type":"set","description":{"short":"+Range, -End Cost","long":"Enhances the range of a teleport power by {Boost.Attrib.Range.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Jaunt_C.Attuned_Jaunt_C","setName":"Jaunt","displayName":"Endurance/Range","effects":[{"mag":0.265,"effectId":"Endurance"},{"mag":0.159375,"effectId":"Range"}]},{"type":"set","description":{"short":"-End Cost","long":"Reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_TimeSpace_Manipulation_A.Attuned_TimeSpace_Manipulation_A","setName":"Jaunt","displayName":"Endurance","effects":[{"mag":0.424,"effectId":"Endurance"}]},{"type":"set","description":{"short":"+Range","long":"Enhances the range of a teleport power by {Boost.Attrib.Range.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_TimeSpace_Manipulation_B.Attuned_TimeSpace_Manipulation_B","setName":"Jaunt","displayName":"Range","effects":[{"mag":0.255,"effectId":"Range"}]},{"type":"set","description":{"short":"Grants Stealth","long":"UNIQUE -- No more than 1 enhancement of this type may be slotted by a character.  May not be slotted if you have any other enhancements which grant stealth.  Grants Stealth for 120 seconds after teleporting."},"isUnique":true,"fullName":"Boosts.Attuned_TimeSpace_Manipulation_C.Attuned_TimeSpace_Manipulation_C","setName":"Jaunt","displayName":"Stealth","effects":[{"cancelOnMiss":true,"mag":30,"effectId":"Stealth","suppression":448},{"cancelOnMiss":true,"mag":300,"effectId":"Ones","suppression":448},{"cancelOnMiss":true,"mag":0.5,"effectId":"Ones","suppression":448},{"cancelOnMiss":true,"mag":0.8,"effectId":"Ones"}]}],"levels":{"min":15,"max":50},"bonuses":["Improved_Regeneration_1","Increased_Health_1"],"setType":20,"displayName":"Jaunt","imageName":"sJaunt.png"}
+{
+  "fullName": "IOSet.Jaunt",
+  "enhancements": [
+    {
+      "description": {
+        "short": "+Range",
+        "long": "Enhances the range of a teleport power by {Boost.Attrib.Range.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Range",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.255
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 24,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Jaunt_A.Attuned_Jaunt_A"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Jaunt_A.Attuned_Jaunt_A",
+      "setName": "Jaunt",
+      "displayName": "Range"
+    },
+    {
+      "description": {
+        "short": "-End Cost",
+        "long": "Reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Endurance",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.424
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 8,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Jaunt_B.Attuned_Jaunt_B"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Jaunt_B.Attuned_Jaunt_B",
+      "setName": "Jaunt",
+      "displayName": "Endurance"
+    },
+    {
+      "description": {
+        "short": "+Range, -End Cost",
+        "long": "Enhances the range of a teleport power by {Boost.Attrib.Range.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Endurance",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 8,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Jaunt_C.Attuned_Jaunt_C"
+            }
+          ]
+        },
+        {
+          "effectType": "Range",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.159375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 24,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Jaunt_C.Attuned_Jaunt_C"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Jaunt_C.Attuned_Jaunt_C",
+      "setName": "Jaunt",
+      "displayName": "Endurance/Range"
+    },
+    {
+      "description": {
+        "short": "-End Cost",
+        "long": "Reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Endurance",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.424
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 8,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_TimeSpace_Manipulation_A.Attuned_TimeSpace_Manipulation_A"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_TimeSpace_Manipulation_A.Attuned_TimeSpace_Manipulation_A",
+      "setName": "Jaunt",
+      "displayName": "Endurance"
+    },
+    {
+      "description": {
+        "short": "+Range",
+        "long": "Enhances the range of a teleport power by {Boost.Attrib.Range.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Range",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.255
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 24,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_TimeSpace_Manipulation_B.Attuned_TimeSpace_Manipulation_B"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_TimeSpace_Manipulation_B.Attuned_TimeSpace_Manipulation_B",
+      "setName": "Jaunt",
+      "displayName": "Range"
+    },
+    {
+      "description": {
+        "short": "Grants Stealth",
+        "long": "UNIQUE -- No more than 1 enhancement of this type may be slotted by a character.  May not be slotted if you have any other enhancements which grant stealth.  Grants Stealth for 120 seconds after teleporting."
+      },
+      "isUnique": true,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Stealth",
+          "values": [
+            {
+              "mag": {
+                "pve": 30
+              },
+              "cancelOnMiss": true,
+              "probability": 1,
+              "duration": 120,
+              "effectType": "StealthRadius",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_TimeSpace_Manipulation_C.Attuned_TimeSpace_Manipulation_C"
+            }
+          ]
+        },
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 300
+              },
+              "cancelOnMiss": true,
+              "probability": 1,
+              "duration": 120,
+              "effectType": "StealthRadiusPlayer",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_TimeSpace_Manipulation_C.Attuned_TimeSpace_Manipulation_C"
+            },
+            {
+              "mag": {
+                "pve": 0.8
+              },
+              "cancelOnMiss": true,
+              "probability": 1,
+              "duration": 120,
+              "effectType": "Translucency",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_TimeSpace_Manipulation_C.Attuned_TimeSpace_Manipulation_C"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_TimeSpace_Manipulation_C.Attuned_TimeSpace_Manipulation_C",
+      "setName": "Jaunt",
+      "displayName": "Stealth"
+    }
+  ],
+  "levels": {
+    "min": 15,
+    "max": 50
+  },
+  "bonuses": [
+    {
+      "description": {
+        "short": "+Regeneration",
+        "long": "Improves your Regeneration by 4%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 2,
+      "powerSetIndex": 151,
+      "fullName": "Set_Bonus.Set_Bonus.Improved_Regeneration_1",
+      "setName": "Set_Bonus",
+      "displayName": "Tiny Improved Regeneration Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.04
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Regeneration",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Improved_Regeneration_1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+Max HP",
+        "long": "Increases maximum health by 0.75%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 3,
+      "powerSetIndex": 284,
+      "fullName": "Set_Bonus.Set_Bonus.Increased_Health_1",
+      "setName": "Set_Bonus",
+      "displayName": "Tiny Increased Health Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "HealSelf",
+          "values": [
+            {
+              "mag": {
+                "pve": 9.035693
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "HitPoints",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Health_1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "setType": 20,
+  "displayName": "Jaunt",
+  "imageName": "sJaunt.png"
+}

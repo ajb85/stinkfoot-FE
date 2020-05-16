@@ -1,1 +1,202 @@
-{"fullName":"IOSet.Rectified_Reticle","enhancements":[{"type":"set","description":{"short":"+To Hit Buff","long":"Enhances the to hit buff potential of a power by {Boost.Attrib.ToHitBuff.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Rectified_Reticle_A.Attuned_Rectified_Reticle_A","setName":"Rectified_Reticle","displayName":"To Hit Buff","effects":[{"mag":0.255,"effectId":"ToHitBuff"}]},{"type":"set","description":{"short":"+To Hit Buff, +Rech","long":"Enhances the to hit buff potential of a power by {Boost.Attrib.ToHitBuff.Scale}% and reduces the recharge time by {Boost.Attrib.Recharge.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Rectified_Reticle_B.Attuned_Rectified_Reticle_B","setName":"Rectified_Reticle","displayName":"To Hit Buff/Recharge","effects":[{"mag":0.265,"effectId":"Recharge"},{"mag":0.159375,"effectId":"ToHitBuff"}]},{"type":"set","description":{"short":"+Perception","long":"UNIQUE -- No more than 1 enhancement of this type may be slotted by a character.  Adds {Boost.Attrib.Perception.Scale}%  to your perception radius."},"isUnique":true,"fullName":"Boosts.Attuned_Rectified_Reticle_C.Attuned_Rectified_Reticle_C","setName":"Rectified_Reticle","displayName":"Increased Perception","effects":[{"cancelOnMiss":true,"mag":0.2,"effectId":"Perception"}]}],"levels":{"min":10,"max":20},"bonuses":["Increased_Lethal_Smash_Melee_Def_2","Improved_Regeneration_2"],"setType":25,"displayName":"Rectified Reticle","imageName":"sRectifiedReticle.png"}
+{
+  "fullName": "IOSet.Rectified_Reticle",
+  "enhancements": [
+    {
+      "description": {
+        "short": "+To Hit Buff",
+        "long": "Enhances the to hit buff potential of a power by {Boost.Attrib.ToHitBuff.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "ToHitBuff",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.255
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 40,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Rectified_Reticle_A.Attuned_Rectified_Reticle_A"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Rectified_Reticle_A.Attuned_Rectified_Reticle_A",
+      "setName": "Rectified_Reticle",
+      "displayName": "To Hit Buff"
+    },
+    {
+      "description": {
+        "short": "+To Hit Buff, +Rech",
+        "long": "Enhances the to hit buff potential of a power by {Boost.Attrib.ToHitBuff.Scale}% and reduces the recharge time by {Boost.Attrib.Recharge.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Recharge",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 25,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Rectified_Reticle_B.Attuned_Rectified_Reticle_B"
+            }
+          ]
+        },
+        {
+          "effectType": "ToHitBuff",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.159375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 40,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Rectified_Reticle_B.Attuned_Rectified_Reticle_B"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Rectified_Reticle_B.Attuned_Rectified_Reticle_B",
+      "setName": "Rectified_Reticle",
+      "displayName": "To Hit Buff/Recharge"
+    },
+    {
+      "description": {
+        "short": "+Perception",
+        "long": "UNIQUE -- No more than 1 enhancement of this type may be slotted by a character.  Adds {Boost.Attrib.Perception.Scale}%  to your perception radius."
+      },
+      "isUnique": true,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Perception",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.2
+              },
+              "cancelOnMiss": true,
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Null",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Rectified_Reticle_C.Attuned_Rectified_Reticle_C"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Rectified_Reticle_C.Attuned_Rectified_Reticle_C",
+      "setName": "Rectified_Reticle",
+      "displayName": "Increased Perception"
+    }
+  ],
+  "levels": {
+    "min": 10,
+    "max": 20
+  },
+  "bonuses": [
+    {
+      "description": {
+        "short": "+DEF",
+        "long": "Increases lethal and smashing defense by 1.88% and melee defense by 0.94%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 2,
+      "powerSetIndex": 306,
+      "fullName": "Set_Bonus.Set_Bonus.Increased_Lethal_Smash_Melee_Def_2",
+      "setName": "Set_Bonus",
+      "displayName": "Small Increased Lethal/Smashing/Melee Def Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.01875
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Lethal_Smash_Melee_Def_2",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.01875
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Lethal_Smash_Melee_Def_2",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 0.00938
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Lethal_Smash_Melee_Def_2",
+              "damageType": "Melee"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+Regeneration",
+        "long": "Improves your Regeneration by 6%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 3,
+      "powerSetIndex": 152,
+      "fullName": "Set_Bonus.Set_Bonus.Improved_Regeneration_2",
+      "setName": "Set_Bonus",
+      "displayName": "Small Improved Regeneration Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.06
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Regeneration",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Improved_Regeneration_2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "setType": 25,
+  "displayName": "Rectified Reticle",
+  "imageName": "sRectifiedReticle.png"
+}

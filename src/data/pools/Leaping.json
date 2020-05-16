@@ -1,1 +1,649 @@
-{"fullName":"Pool_Leaping","archetypeOrder":"poolPower","description":"Grants you various travel and combat jumping abilities. Jumping powers tend to be very efficient and use very little endurance compared to other travel powers.","imageName":"Leaping.png","displayName":"Leaping","powers":[{"allowedEnhancements":["Accuracy","Damage","Endurance_Discount","Knockback","Recharge"],"enhancementCount":6,"archetypeOrder":"poolPower","powerIndex":0,"castTimeReal":1.5,"toggleCost":5.46,"fullName":"Pool_Leaping_Jump_Kick","displayName":"Jump Kick","requires":{"powers":{},"count":0},"accuracy":1,"accuracyMult":1,"attackTypes":9,"target":2048,"targetLoS":true,"range":7,"endCost":5.46,"rechargeTime":2.8,"baseRechargeTime":2.8,"effectArea":1,"castFlags":1,"numAllowed":1,"description":{"short":"Melee, Moderate DMG(Smash), Foe Knockdown","long":"A good jumping kick attack that may knock foes down. Good if you are looking for another attack power."},"setTypes":[1,23,44],"level":4,"ignoreEnh":[13],"ignore_Buff":[],"castTime":1.716,"slottable":true,"aoeModifier":1},{"allowedEnhancements":["Endurance_Discount","Jump"],"enhancementCount":6,"archetypeOrder":"poolPower","powerIndex":1,"toggleCost":0.456,"fullName":"Pool_Leaping_Super_Jump","displayName":"Super Jump","requires":{"powers":{},"count":0},"accuracy":1,"accuracyMult":1,"target":1,"targetLoS":true,"endCost":0.228,"activatePeriod":0.5,"effectArea":1,"numAllowed":1,"description":{"short":"Toggle: Self Long Jump","long":"While this power is active, you can leap great distances and heights, easily jumping over buildings and from rooftop to rooftop!  If you attack a target while this power is on, you will temporarily be reduced to a normal jump height."},"setTypes":[18,28],"level":4,"ignoreEnh":[],"ignore_Buff":[],"castTime":0.132,"slottable":true,"aoeModifier":1},{"allowedEnhancements":["Defense_Buff","Endurance_Discount","Jump"],"enhancementCount":6,"archetypeOrder":"poolPower","powerIndex":2,"castTimeReal":1.716,"toggleCost":0.065,"fullName":"Pool_Leaping_Combat_Jumping","displayName":"Combat Jumping","requires":{"powers":{},"count":0},"accuracy":1,"accuracyMult":1,"target":1,"targetLoS":true,"endCost":0.0325,"activatePeriod":0.5,"effectArea":1,"numAllowed":1,"description":{"short":"Toggle: Self +Jump, +DEF(All), Res(Immobilization)","long":"While active, Combat Jumping increases your Defense to all attacks, and adds resistance to Immobilization. Moderately increases your jump height and distance while providing good air control."},"setTypes":[7,18,28],"level":4,"ignoreEnh":[],"ignore_Buff":[],"neverAutoUpdate":true,"castTime":1.848,"slottable":true,"aoeModifier":1},{"allowedEnhancements":["Endurance_Discount","Knockback","Recharge"],"enhancementCount":6,"archetypeOrder":"poolPower","powerIndex":3,"castTimeReal":0.67,"toggleCost":0.26,"fullName":"Pool_Leaping_Acrobatics","displayName":"Acrobatics","requires":{"powers":{"Pool_Leaping_Jump_Kick":true,"Pool_Leaping_Combat_Jumping":true,"Pool_Leaping_Super_Jump":true},"count":2},"accuracy":1,"accuracyMult":1,"target":1,"targetLoS":true,"endCost":0.26,"rechargeTime":10,"baseRechargeTime":10,"activatePeriod":1,"effectArea":1,"numAllowed":1,"description":{"short":"Toggle: Self +Res(Knockback, Hold)","long":"While this power is active, you are very nimble and Acrobatic. You can avoid most Knockback effects and are resistant to Hold effects. You must be at least level 14 and have two other Leaping Powers before selecting Acrobatics."},"setTypes":[],"level":14,"ignoreEnh":[],"ignore_Buff":[],"castTime":0.924,"slottable":true,"aoeModifier":1},{"allowedEnhancements":["Accuracy","Damage","Endurance_Discount","Knockback","Range","Recharge"],"enhancementCount":6,"archetypeOrder":"poolPower","powerIndex":4,"castTimeReal":1.5,"toggleCost":13.52,"fullName":"Pool_Leaping_Spring_Attack","displayName":"Spring Attack","requires":{"powers":{"Pool_Leaping_Jump_Kick":true,"Pool_Leaping_Combat_Jumping":true,"Pool_Leaping_Super_Jump":true},"count":2},"accuracy":1,"accuracyMult":1,"target":16384,"targetLoS":true,"range":60,"endCost":13.52,"rechargeTime":120,"baseRechargeTime":120,"effectArea":4,"numAllowed":1,"description":{"short":"PBAoE Superior DMG(Smashing), Foe Knockdown; Self Teleport","long":"You leap into the air and smash down among ranks of foes in the blink of an eye.  Using this power allows you to jump to a selected area to deal significant smashing damage to all foes near the location you teleport to, most foes that are struck by your Spring Attack will be knocked down.  You must be at least level 14 and have two other Leaping Powers before selecting Spring Attack. Damage: High, Recharge: Very Long."},"setTypes":[4,23,44],"level":14,"ignoreEnh":[],"ignore_Buff":[],"absorbSummonEffects":true,"neverAutoUpdate":true,"castTime":1.716,"slottable":true,"aoeModifier":1}]}
+{
+  "fullName": "Pool_Leaping",
+  "archetypeOrder": "poolPower",
+  "description": "Grants you various travel and combat jumping abilities. Jumping powers tend to be very efficient and use very little endurance compared to other travel powers.",
+  "imageName": "Leaping.png",
+  "displayName": "Leaping",
+  "powers": [
+    {
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Knockback",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "archetypeOrder": "poolPower",
+      "effects": [
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 46.7125664,
+                "pvp": 117.484329
+              },
+              "probability": 1,
+              "effectType": "Damage",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Pool.Leaping.Jump_Kick",
+              "damageType": "Smashing"
+            }
+          ]
+        },
+        {
+          "effectType": "Knockback",
+          "values": [
+            {
+              "mag": {
+                "pve": 4.1542
+              },
+              "probability": 0.2,
+              "effectType": "Mez",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Pool.Leaping.Jump_Kick",
+              "mezType": "Knockup"
+            }
+          ]
+        },
+        {
+          "effectType": "InherentTaunt",
+          "values": [
+            {
+              "mag": {
+                "pve": 4
+              },
+              "probability": 1,
+              "duration": 13.6,
+              "effectType": "Mez",
+              "stacking": 1,
+              "resistible": true,
+              "specialCase": 14,
+              "toWho": "Target",
+              "attribType": 1,
+              "powerFullName": "Pool.Leaping.Jump_Kick",
+              "requiresToHitCheck": true,
+              "mezType": "Taunt"
+            }
+          ]
+        }
+      ],
+      "powerIndex": 0,
+      "castTimeReal": 1.5,
+      "toggleCost": 5.46,
+      "fullName": "Pool_Leaping_Jump_Kick",
+      "displayName": "Jump Kick",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "attackTypes": 9,
+      "target": 2048,
+      "targetLoS": true,
+      "range": 7,
+      "endCost": 5.46,
+      "rechargeTime": 2.8,
+      "baseRechargeTime": 2.8,
+      "effectArea": 1,
+      "castFlags": 1,
+      "numAllowed": 1,
+      "description": {
+        "short": "Melee, Moderate DMG(Smash), Foe Knockdown",
+        "long": "A good jumping kick attack that may knock foes down. Good if you are looking for another attack power."
+      },
+      "setTypes": [
+        1,
+        23,
+        44
+      ],
+      "level": 4,
+      "ignoreEnh": [
+        13
+      ],
+      "ignore_Buff": [],
+      "castTime": 1.716,
+      "slottable": true,
+      "aoeModifier": 1
+    },
+    {
+      "allowedEnhancements": [
+        "Endurance_Discount",
+        "Jump"
+      ],
+      "enhancementCount": 6,
+      "archetypeOrder": "poolPower",
+      "effects": [
+        {
+          "effectType": "Leap",
+          "values": [
+            {
+              "mag": {
+                "pve": 27.8,
+                "pvp": 27.8
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "JumpHeight",
+              "toWho": "Self",
+              "powerFullName": "Pool.Leaping.Long_Jump"
+            }
+          ]
+        },
+        {
+          "effectType": "SpeedJumping",
+          "values": [
+            {
+              "mag": {
+                "pve": 2.49,
+                "pvp": 2.49
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "SpeedJumping",
+              "toWho": "Self",
+              "powerFullName": "Pool.Leaping.Long_Jump"
+            }
+          ]
+        },
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 10,
+                "pvp": 10
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "MovementControl",
+              "toWho": "Self",
+              "powerFullName": "Pool.Leaping.Long_Jump"
+            },
+            {
+              "mag": {
+                "pve": 2,
+                "pvp": 2
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "MovementFriction",
+              "toWho": "Self",
+              "powerFullName": "Pool.Leaping.Long_Jump"
+            }
+          ]
+        }
+      ],
+      "powerIndex": 1,
+      "toggleCost": 0.456,
+      "fullName": "Pool_Leaping_Super_Jump",
+      "displayName": "Super Jump",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "target": 1,
+      "targetLoS": true,
+      "endCost": 0.228,
+      "activatePeriod": 0.5,
+      "effectArea": 1,
+      "numAllowed": 1,
+      "description": {
+        "short": "Toggle: Self Long Jump",
+        "long": "While this power is active, you can leap great distances and heights, easily jumping over buildings and from rooftop to rooftop!  If you attack a target while this power is on, you will temporarily be reduced to a normal jump height."
+      },
+      "setTypes": [
+        18,
+        28
+      ],
+      "level": 4,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 0.132,
+      "slottable": true,
+      "aoeModifier": 1,
+      "powerType": "Toggle"
+    },
+    {
+      "allowedEnhancements": [
+        "Defense_Buff",
+        "Endurance_Discount",
+        "Jump"
+      ],
+      "enhancementCount": 6,
+      "archetypeOrder": "poolPower",
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 2
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "JumpHeight",
+              "toWho": "Self",
+              "powerFullName": "Pool.Leaping.Combat_Jumping"
+            },
+            {
+              "mag": {
+                "pve": 0.01
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "SpeedJumping",
+              "toWho": "Self",
+              "powerFullName": "Pool.Leaping.Combat_Jumping"
+            },
+            {
+              "mag": {
+                "pve": 0.2
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "MovementFriction",
+              "toWho": "Self",
+              "powerFullName": "Pool.Leaping.Combat_Jumping"
+            }
+          ]
+        },
+        {
+          "effectType": "Buff_Def",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.0175,
+                "pvp": 0.0175
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Pool.Leaping.Combat_Jumping",
+              "damageType": "Melee"
+            },
+            {
+              "mag": {
+                "pve": 0.0175,
+                "pvp": 0.0175
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Pool.Leaping.Combat_Jumping",
+              "damageType": "Ranged"
+            },
+            {
+              "mag": {
+                "pve": 0.0175,
+                "pvp": 0.0175
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Pool.Leaping.Combat_Jumping",
+              "damageType": "AoE"
+            },
+            {
+              "mag": {
+                "pve": 0.0175,
+                "pvp": 0.0175
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Pool.Leaping.Combat_Jumping",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 0.0175,
+                "pvp": 0.0175
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Pool.Leaping.Combat_Jumping",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.0175,
+                "pvp": 0.0175
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Pool.Leaping.Combat_Jumping",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.0175,
+                "pvp": 0.0175
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Pool.Leaping.Combat_Jumping",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 0.0175,
+                "pvp": 0.0175
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Pool.Leaping.Combat_Jumping",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.0175,
+                "pvp": 0.0175
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Pool.Leaping.Combat_Jumping",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.0175,
+                "pvp": 0.0175
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Pool.Leaping.Combat_Jumping",
+              "damageType": "Psionic"
+            }
+          ]
+        },
+        {
+          "effectType": "Control",
+          "values": [
+            {
+              "mag": {
+                "pve": 40
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "MovementControl",
+              "toWho": "Self",
+              "powerFullName": "Pool.Leaping.Combat_Jumping"
+            }
+          ]
+        },
+        {
+          "effectType": "Res_Boolean",
+          "values": [
+            {
+              "mag": {
+                "pve": -8.304
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Mez",
+              "toWho": "Self",
+              "powerFullName": "Pool.Leaping.Combat_Jumping",
+              "mezType": "Immobilization"
+            },
+            {
+              "mag": {
+                "pvp": 0.8304
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Pool.Leaping.Combat_Jumping",
+              "mezType": "Immobilization"
+            }
+          ]
+        }
+      ],
+      "powerIndex": 2,
+      "castTimeReal": 1.716,
+      "toggleCost": 0.065,
+      "fullName": "Pool_Leaping_Combat_Jumping",
+      "displayName": "Combat Jumping",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "target": 1,
+      "targetLoS": true,
+      "endCost": 0.0325,
+      "activatePeriod": 0.5,
+      "effectArea": 1,
+      "numAllowed": 1,
+      "description": {
+        "short": "Toggle: Self +Jump, +DEF(All), Res(Immobilization)",
+        "long": "While active, Combat Jumping increases your Defense to all attacks, and adds resistance to Immobilization. Moderately increases your jump height and distance while providing good air control."
+      },
+      "setTypes": [
+        7,
+        18,
+        28
+      ],
+      "level": 4,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "neverAutoUpdate": true,
+      "castTime": 1.848,
+      "slottable": true,
+      "aoeModifier": 1,
+      "powerType": "Toggle"
+    },
+    {
+      "allowedEnhancements": [
+        "Endurance_Discount",
+        "Knockback",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "archetypeOrder": "poolPower",
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": -2,
+                "pvp": -2
+              },
+              "probability": 1,
+              "duration": 1.25,
+              "effectType": "Mez",
+              "toWho": "Self",
+              "powerFullName": "Pool.Leaping.Leap",
+              "mezType": "Knockback"
+            },
+            {
+              "mag": {
+                "pve": -2,
+                "pvp": -2
+              },
+              "probability": 1,
+              "duration": 1.25,
+              "effectType": "Mez",
+              "toWho": "Self",
+              "powerFullName": "Pool.Leaping.Leap",
+              "mezType": "Knockup"
+            },
+            {
+              "mag": {
+                "pve": -2
+              },
+              "probability": 1,
+              "duration": 1.25,
+              "effectType": "Mez",
+              "toWho": "Self",
+              "powerFullName": "Pool.Leaping.Leap",
+              "mezType": "Hold"
+            }
+          ]
+        },
+        {
+          "effectType": "Res_Boolean",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.4844,
+                "pvp": 1.038
+              },
+              "probability": 1,
+              "duration": 1.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Pool.Leaping.Leap",
+              "mezType": "Hold"
+            }
+          ]
+        }
+      ],
+      "powerIndex": 3,
+      "castTimeReal": 0.67,
+      "toggleCost": 0.26,
+      "fullName": "Pool_Leaping_Acrobatics",
+      "displayName": "Acrobatics",
+      "requires": {
+        "powers": {
+          "Pool_Leaping_Jump_Kick": true,
+          "Pool_Leaping_Combat_Jumping": true,
+          "Pool_Leaping_Super_Jump": true
+        },
+        "count": 2
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "target": 1,
+      "targetLoS": true,
+      "endCost": 0.26,
+      "rechargeTime": 10,
+      "baseRechargeTime": 10,
+      "activatePeriod": 1,
+      "effectArea": 1,
+      "numAllowed": 1,
+      "description": {
+        "short": "Toggle: Self +Res(Knockback, Hold)",
+        "long": "While this power is active, you are very nimble and Acrobatic. You can avoid most Knockback effects and are resistant to Hold effects. You must be at least level 14 and have two other Leaping Powers before selecting Acrobatics."
+      },
+      "setTypes": [],
+      "level": 14,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 0.924,
+      "slottable": true,
+      "aoeModifier": 1,
+      "powerType": "Toggle"
+    },
+    {
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Knockback",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "archetypeOrder": "poolPower",
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 1
+              },
+              "probability": 1,
+              "variableModified": true,
+              "effectType": "Mez",
+              "delayedTime": 0.7,
+              "stacking": 1,
+              "toWho": "Self",
+              "powerFullName": "Pool.Leaping.Spring_Attack",
+              "mezType": "Teleport"
+            },
+            {
+              "mag": {
+                "pve": -1
+              },
+              "probability": 1,
+              "duration": 4,
+              "effectType": "EntCreate",
+              "delayedTime": 0.625,
+              "toWho": "All",
+              "powerFullName": "Pool.Leaping.Spring_Attack"
+            }
+          ]
+        }
+      ],
+      "powerIndex": 4,
+      "castTimeReal": 1.5,
+      "toggleCost": 13.52,
+      "fullName": "Pool_Leaping_Spring_Attack",
+      "displayName": "Spring Attack",
+      "requires": {
+        "powers": {
+          "Pool_Leaping_Jump_Kick": true,
+          "Pool_Leaping_Combat_Jumping": true,
+          "Pool_Leaping_Super_Jump": true
+        },
+        "count": 2
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "target": 16384,
+      "targetLoS": true,
+      "range": 60,
+      "endCost": 13.52,
+      "rechargeTime": 120,
+      "baseRechargeTime": 120,
+      "effectArea": 4,
+      "numAllowed": 1,
+      "description": {
+        "short": "PBAoE Superior DMG(Smashing), Foe Knockdown; Self Teleport",
+        "long": "You leap into the air and smash down among ranks of foes in the blink of an eye.  Using this power allows you to jump to a selected area to deal significant smashing damage to all foes near the location you teleport to, most foes that are struck by your Spring Attack will be knocked down.  You must be at least level 14 and have two other Leaping Powers before selecting Spring Attack. Damage: High, Recharge: Very Long."
+      },
+      "setTypes": [
+        4,
+        23,
+        44
+      ],
+      "level": 14,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "absorbSummonEffects": true,
+      "neverAutoUpdate": true,
+      "castTime": 1.716,
+      "slottable": true,
+      "aoeModifier": 1
+    }
+  ]
+}

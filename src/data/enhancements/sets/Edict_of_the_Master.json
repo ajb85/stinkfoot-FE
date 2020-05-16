@@ -1,1 +1,1016 @@
-{"fullName":"IOSet.Edict_of_the_Master","enhancements":[{"type":"set","description":{"short":"Enhances Accuracy and Damage","long":"Enhances the damage of a power by {Boost.Attrib.Damage.Scale}% and accuracy by {Boost.Attrib.Accuracy.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Edict_of_the_Master_A.Attuned_Edict_of_the_Master_A","setName":"Edict_of_the_Master","displayName":"Accuracy/Damage","effects":[{"mag":0.265,"effectId":"Damage","damageType":1},{"mag":0.265,"effectId":"Boosts_33","damageType":2},{"mag":0.265,"effectId":"Boosts_33","damageType":3},{"mag":0.265,"effectId":"Boosts_33","damageType":4},{"mag":0.265,"effectId":"Boosts_33","damageType":5},{"mag":0.265,"effectId":"Boosts_33","damageType":6},{"mag":0.265,"effectId":"Boosts_33","damageType":7},{"mag":0.265,"effectId":"Boosts_33","damageType":8},{"mag":0.265,"effectId":"Accuracy"}]},{"type":"set","description":{"short":"Enhances Damage and Reduces Endurance Cost","long":"Enhances the damage of a power by {Boost.Attrib.Damage.Scale}% and reduces endurance cost by {Boost.Attrib.Endurance.Scale}%"},"isUnique":false,"fullName":"Boosts.Attuned_Edict_of_the_Master_B.Attuned_Edict_of_the_Master_B","setName":"Edict_of_the_Master","displayName":"Damage/Endurance","effects":[{"mag":0.265,"effectId":"Damage","damageType":1},{"mag":0.265,"effectId":"Boosts_33","damageType":2},{"mag":0.265,"effectId":"Boosts_33","damageType":3},{"mag":0.265,"effectId":"Boosts_33","damageType":4},{"mag":0.265,"effectId":"Boosts_33","damageType":5},{"mag":0.265,"effectId":"Boosts_33","damageType":6},{"mag":0.265,"effectId":"Boosts_33","damageType":7},{"mag":0.265,"effectId":"Boosts_33","damageType":8},{"mag":0.265,"effectId":"Endurance"}]},{"type":"set","description":{"short":"Enhances Accuracy and Reduces Endurance Cost","long":"Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and reduces endurance cost by {Boost.Attrib.Endurance.Scale}%"},"isUnique":false,"fullName":"Boosts.Attuned_Edict_of_the_Master_C.Attuned_Edict_of_the_Master_C","setName":"Edict_of_the_Master","displayName":"Accuracy/Endurance","effects":[{"mag":0.265,"effectId":"Accuracy"},{"mag":0.265,"effectId":"Endurance"}]},{"type":"set","description":{"short":"Enhances Damage, Reduces Endurance Cost and Increases Accuracy","long":"Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and damage by {Boost.Attrib.Damage.Scale}% and reduces endurance cost by {Boost.Attrib.Endurance.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Edict_of_the_Master_D.Attuned_Edict_of_the_Master_D","setName":"Edict_of_the_Master","displayName":" Accuracy/Damage/Endurance","effects":[{"mag":0.212,"effectId":"Damage","damageType":1},{"mag":0.212,"effectId":"Boosts_33","damageType":2},{"mag":0.212,"effectId":"Boosts_33","damageType":3},{"mag":0.212,"effectId":"Boosts_33","damageType":4},{"mag":0.212,"effectId":"Boosts_33","damageType":5},{"mag":0.212,"effectId":"Boosts_33","damageType":6},{"mag":0.212,"effectId":"Boosts_33","damageType":7},{"mag":0.212,"effectId":"Boosts_33","damageType":8},{"mag":0.212,"effectId":"Endurance"},{"mag":0.212,"effectId":"Accuracy"}]},{"type":"set","description":{"short":"Enhances Damage","long":"Enhances the damage of a power by {Boost.Attrib.Damage.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Edict_of_the_Master_E.Attuned_Edict_of_the_Master_E","setName":"Edict_of_the_Master","displayName":" Damage","effects":[{"mag":0.424,"effectId":"Damage","damageType":1},{"mag":0.424,"effectId":"Boosts_33","damageType":2},{"mag":0.424,"effectId":"Boosts_33","damageType":3},{"mag":0.424,"effectId":"Boosts_33","damageType":4},{"mag":0.424,"effectId":"Boosts_33","damageType":5},{"mag":0.424,"effectId":"Boosts_33","damageType":6},{"mag":0.424,"effectId":"Boosts_33","damageType":7},{"mag":0.424,"effectId":"Boosts_33","damageType":8}]},{"type":"set","description":{"short":"+DEF (all) for Henchmen","long":"UNIQUE -- No more than 1 enhancement of this type may be slotted by a character.  Grants you a 40' radius aura which increases your Henchmen's Defense by 5%."},"isUnique":true,"fullName":"Boosts.Attuned_Edict_of_the_Master_F.Attuned_Edict_of_the_Master_F","setName":"Edict_of_the_Master","displayName":" Defense Bonus","effects":[{"cancelOnMiss":true,"mag":1,"variableModified":true,"effectId":"Defense","stacking":1}]}],"levels":{"min":15,"max":40},"bonuses":["Increased_Move_3","Increased_Health_3","Lethal_Smash_Mez_Res_3","Energy_Neg_Mez_Res_4","Toxic_Psi_Mez_Res_5"],"setType":6,"displayName":"Edict of the Master","imageName":"sEdictOfTheMaster.png"}
+{
+  "fullName": "IOSet.Edict_of_the_Master",
+  "enhancements": [
+    {
+      "description": {
+        "short": "Enhances Accuracy and Damage",
+        "long": "Enhances the damage of a power by {Boost.Attrib.Damage.Scale}% and accuracy by {Boost.Attrib.Accuracy.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Edict_of_the_Master_A.Attuned_Edict_of_the_Master_A",
+              "damageType": "Smashing"
+            }
+          ]
+        },
+        {
+          "effectType": "Boosts_33",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Edict_of_the_Master_A.Attuned_Edict_of_the_Master_A",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Edict_of_the_Master_A.Attuned_Edict_of_the_Master_A",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Edict_of_the_Master_A.Attuned_Edict_of_the_Master_A",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Edict_of_the_Master_A.Attuned_Edict_of_the_Master_A",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Edict_of_the_Master_A.Attuned_Edict_of_the_Master_A",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Edict_of_the_Master_A.Attuned_Edict_of_the_Master_A",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Edict_of_the_Master_A.Attuned_Edict_of_the_Master_A",
+              "damageType": "Psionic"
+            }
+          ]
+        },
+        {
+          "effectType": "Accuracy",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 1,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Edict_of_the_Master_A.Attuned_Edict_of_the_Master_A"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Edict_of_the_Master_A.Attuned_Edict_of_the_Master_A",
+      "setName": "Edict_of_the_Master",
+      "displayName": "Accuracy/Damage"
+    },
+    {
+      "description": {
+        "short": "Enhances Damage and Reduces Endurance Cost",
+        "long": "Enhances the damage of a power by {Boost.Attrib.Damage.Scale}% and reduces endurance cost by {Boost.Attrib.Endurance.Scale}%"
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Edict_of_the_Master_B.Attuned_Edict_of_the_Master_B",
+              "damageType": "Smashing"
+            }
+          ]
+        },
+        {
+          "effectType": "Boosts_33",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Edict_of_the_Master_B.Attuned_Edict_of_the_Master_B",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Edict_of_the_Master_B.Attuned_Edict_of_the_Master_B",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Edict_of_the_Master_B.Attuned_Edict_of_the_Master_B",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Edict_of_the_Master_B.Attuned_Edict_of_the_Master_B",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Edict_of_the_Master_B.Attuned_Edict_of_the_Master_B",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Edict_of_the_Master_B.Attuned_Edict_of_the_Master_B",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Edict_of_the_Master_B.Attuned_Edict_of_the_Master_B",
+              "damageType": "Psionic"
+            }
+          ]
+        },
+        {
+          "effectType": "Endurance",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 8,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Edict_of_the_Master_B.Attuned_Edict_of_the_Master_B"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Edict_of_the_Master_B.Attuned_Edict_of_the_Master_B",
+      "setName": "Edict_of_the_Master",
+      "displayName": "Damage/Endurance"
+    },
+    {
+      "description": {
+        "short": "Enhances Accuracy and Reduces Endurance Cost",
+        "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and reduces endurance cost by {Boost.Attrib.Endurance.Scale}%"
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Accuracy",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 1,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Edict_of_the_Master_C.Attuned_Edict_of_the_Master_C"
+            }
+          ]
+        },
+        {
+          "effectType": "Endurance",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 8,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Edict_of_the_Master_C.Attuned_Edict_of_the_Master_C"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Edict_of_the_Master_C.Attuned_Edict_of_the_Master_C",
+      "setName": "Edict_of_the_Master",
+      "displayName": "Accuracy/Endurance"
+    },
+    {
+      "description": {
+        "short": "Enhances Damage, Reduces Endurance Cost and Increases Accuracy",
+        "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and damage by {Boost.Attrib.Damage.Scale}% and reduces endurance cost by {Boost.Attrib.Endurance.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Edict_of_the_Master_D.Attuned_Edict_of_the_Master_D",
+              "damageType": "Smashing"
+            }
+          ]
+        },
+        {
+          "effectType": "Boosts_33",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Edict_of_the_Master_D.Attuned_Edict_of_the_Master_D",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Edict_of_the_Master_D.Attuned_Edict_of_the_Master_D",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Edict_of_the_Master_D.Attuned_Edict_of_the_Master_D",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Edict_of_the_Master_D.Attuned_Edict_of_the_Master_D",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Edict_of_the_Master_D.Attuned_Edict_of_the_Master_D",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Edict_of_the_Master_D.Attuned_Edict_of_the_Master_D",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Edict_of_the_Master_D.Attuned_Edict_of_the_Master_D",
+              "damageType": "Psionic"
+            }
+          ]
+        },
+        {
+          "effectType": "Endurance",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 8,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Edict_of_the_Master_D.Attuned_Edict_of_the_Master_D"
+            }
+          ]
+        },
+        {
+          "effectType": "Accuracy",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 1,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Edict_of_the_Master_D.Attuned_Edict_of_the_Master_D"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Edict_of_the_Master_D.Attuned_Edict_of_the_Master_D",
+      "setName": "Edict_of_the_Master",
+      "displayName": " Accuracy/Damage/Endurance"
+    },
+    {
+      "description": {
+        "short": "Enhances Damage",
+        "long": "Enhances the damage of a power by {Boost.Attrib.Damage.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.424
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Edict_of_the_Master_E.Attuned_Edict_of_the_Master_E",
+              "damageType": "Smashing"
+            }
+          ]
+        },
+        {
+          "effectType": "Boosts_33",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.424
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Edict_of_the_Master_E.Attuned_Edict_of_the_Master_E",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.424
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Edict_of_the_Master_E.Attuned_Edict_of_the_Master_E",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.424
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Edict_of_the_Master_E.Attuned_Edict_of_the_Master_E",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 0.424
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Edict_of_the_Master_E.Attuned_Edict_of_the_Master_E",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.424
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Edict_of_the_Master_E.Attuned_Edict_of_the_Master_E",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.424
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Edict_of_the_Master_E.Attuned_Edict_of_the_Master_E",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pve": 0.424
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Edict_of_the_Master_E.Attuned_Edict_of_the_Master_E",
+              "damageType": "Psionic"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Edict_of_the_Master_E.Attuned_Edict_of_the_Master_E",
+      "setName": "Edict_of_the_Master",
+      "displayName": " Damage"
+    },
+    {
+      "description": {
+        "short": "+DEF (all) for Henchmen",
+        "long": "UNIQUE -- No more than 1 enhancement of this type may be slotted by a character.  Grants you a 40' radius aura which increases your Henchmen's Defense by 5%."
+      },
+      "isUnique": true,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Defense",
+          "values": [
+            {
+              "mag": {
+                "pve": 1
+              },
+              "cancelOnMiss": true,
+              "probability": 1,
+              "variableModified": true,
+              "effectType": "Null",
+              "stacking": 1,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Edict_of_the_Master_F.Attuned_Edict_of_the_Master_F"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Edict_of_the_Master_F.Attuned_Edict_of_the_Master_F",
+      "setName": "Edict_of_the_Master",
+      "displayName": " Defense Bonus"
+    }
+  ],
+  "levels": {
+    "min": 15,
+    "max": 40
+  },
+  "bonuses": [
+    {
+      "description": {
+        "short": "+Move",
+        "long": "Improves all of your Movement speeds by 6%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 2,
+      "powerSetIndex": 328,
+      "fullName": "Set_Bonus.Set_Bonus.Increased_Move_3",
+      "setName": "Set_Bonus",
+      "displayName": "Moderate Improved Movement Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.06
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "SpeedJumping",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Move_3"
+            },
+            {
+              "mag": {
+                "pve": 0.06
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "JumpHeight",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Move_3"
+            },
+            {
+              "mag": {
+                "pve": 0.06
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "SpeedFlying",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Move_3"
+            },
+            {
+              "mag": {
+                "pve": 0.06
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "SpeedRunning",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Move_3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+Max HP",
+        "long": "Increases maximum health by 1.5%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 3,
+      "powerSetIndex": 286,
+      "fullName": "Set_Bonus.Set_Bonus.Increased_Health_3",
+      "setName": "Set_Bonus",
+      "displayName": "Moderate Increased Health Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "HealSelf",
+          "values": [
+            {
+              "mag": {
+                "pve": 18.0713863
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "HitPoints",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Health_3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+Res (Lethal, Smash, Mez)",
+        "long": "Increases Lethal and Smashing resistance by 3% and Mez Resistance by 5%"
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 4,
+      "powerSetIndex": 448,
+      "fullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_3",
+      "setName": "Set_Bonus",
+      "displayName": "Moderate Lethal, Smash and Mez Resistance",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.03
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_3",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.03
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_3",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 0.05
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_3",
+              "mezType": "Immobilization"
+            },
+            {
+              "mag": {
+                "pve": 0.05
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_3",
+              "mezType": "Hold"
+            },
+            {
+              "mag": {
+                "pve": 0.05
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_3",
+              "mezType": "Stun"
+            },
+            {
+              "mag": {
+                "pve": 0.05
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_3",
+              "mezType": "Sleep"
+            },
+            {
+              "mag": {
+                "pve": 0.05
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_3",
+              "mezType": "Terrorize"
+            },
+            {
+              "mag": {
+                "pve": 0.05
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_3",
+              "mezType": "Confuse"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+Res (Energy, Negative, Mez)",
+        "long": "Increases Energy and Negative Energy resistance by 3.75% and Mez Resistance by 6.25%"
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 5,
+      "powerSetIndex": 59,
+      "fullName": "Set_Bonus.Set_Bonus.Energy_Neg_Mez_Res_4",
+      "setName": "Set_Bonus",
+      "displayName": "Large Energy, Negative Energy and Mez Resistance",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Energy_Neg_Mez_Res_4",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Energy_Neg_Mez_Res_4",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.0625
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Energy_Neg_Mez_Res_4",
+              "mezType": "Immobilization"
+            },
+            {
+              "mag": {
+                "pve": 0.0625
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Energy_Neg_Mez_Res_4",
+              "mezType": "Hold"
+            },
+            {
+              "mag": {
+                "pve": 0.0625
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Energy_Neg_Mez_Res_4",
+              "mezType": "Stun"
+            },
+            {
+              "mag": {
+                "pve": 0.0625
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Energy_Neg_Mez_Res_4",
+              "mezType": "Sleep"
+            },
+            {
+              "mag": {
+                "pve": 0.0625
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Energy_Neg_Mez_Res_4",
+              "mezType": "Terrorize"
+            },
+            {
+              "mag": {
+                "pve": 0.0625
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Energy_Neg_Mez_Res_4",
+              "mezType": "Confuse"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+Res (Toxic, Psionic, Mez)",
+        "long": "Increases Toxic and Psionic resistance by 4.5% and Mez Resistance by 7.5%"
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 6,
+      "powerSetIndex": 525,
+      "fullName": "Set_Bonus.Set_Bonus.Toxic_Psi_Mez_Res_5",
+      "setName": "Set_Bonus",
+      "displayName": "Huge Toxic, Psionic and Mez Resistance",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.045
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Toxic_Psi_Mez_Res_5",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pve": 0.045
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Toxic_Psi_Mez_Res_5",
+              "damageType": "Psionic"
+            },
+            {
+              "mag": {
+                "pve": 0.075
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Toxic_Psi_Mez_Res_5",
+              "mezType": "Immobilization"
+            },
+            {
+              "mag": {
+                "pve": 0.075
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Toxic_Psi_Mez_Res_5",
+              "mezType": "Hold"
+            },
+            {
+              "mag": {
+                "pve": 0.075
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Toxic_Psi_Mez_Res_5",
+              "mezType": "Stun"
+            },
+            {
+              "mag": {
+                "pve": 0.075
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Toxic_Psi_Mez_Res_5",
+              "mezType": "Sleep"
+            },
+            {
+              "mag": {
+                "pve": 0.075
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Toxic_Psi_Mez_Res_5",
+              "mezType": "Terrorize"
+            },
+            {
+              "mag": {
+                "pve": 0.075
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Toxic_Psi_Mez_Res_5",
+              "mezType": "Confuse"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "setType": 6,
+  "displayName": "Edict of the Master",
+  "imageName": "sEdictOfTheMaster.png"
+}

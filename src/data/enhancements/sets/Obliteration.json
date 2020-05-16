@@ -1,1 +1,983 @@
-{"fullName":"IOSet.Obliteration","enhancements":[{"type":"set","description":{"short":"+DMG","long":"Enhances the damage of a power by {Boost.Attrib.Damage.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Obliteration_A.Attuned_Obliteration_A","setName":"Obliteration","displayName":"Damage","effects":[{"mag":0.424,"effectId":"Damage","damageType":1},{"mag":0.424,"effectId":"Boosts_33","damageType":2},{"mag":0.424,"effectId":"Boosts_33","damageType":3},{"mag":0.424,"effectId":"Boosts_33","damageType":4},{"mag":0.424,"effectId":"Boosts_33","damageType":5},{"mag":0.424,"effectId":"Boosts_33","damageType":6},{"mag":0.424,"effectId":"Boosts_33","damageType":7},{"mag":0.424,"effectId":"Boosts_33","damageType":8}]},{"type":"set","description":{"short":"+ACC, +Rech","long":"Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and reduces recharge time by {Boost.Attrib.Recharge.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Obliteration_B.Attuned_Obliteration_B","setName":"Obliteration","displayName":"Accuracy/Recharge","effects":[{"mag":0.265,"effectId":"Accuracy"},{"mag":0.265,"effectId":"Recharge"}]},{"type":"set","description":{"short":"+DMG, +Rech","long":"Enhances the damage of a power by {Boost.Attrib.Damage.Scale}% and reduces recharge time by {Boost.Attrib.Recharge.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Obliteration_C.Attuned_Obliteration_C","setName":"Obliteration","displayName":"Damage/Recharge","effects":[{"mag":0.265,"effectId":"Damage","damageType":1},{"mag":0.265,"effectId":"Boosts_33","damageType":2},{"mag":0.265,"effectId":"Boosts_33","damageType":3},{"mag":0.265,"effectId":"Boosts_33","damageType":4},{"mag":0.265,"effectId":"Boosts_33","damageType":5},{"mag":0.265,"effectId":"Boosts_33","damageType":6},{"mag":0.265,"effectId":"Boosts_33","damageType":7},{"mag":0.265,"effectId":"Boosts_33","damageType":8},{"mag":0.265,"effectId":"Recharge"}]},{"type":"set","description":{"short":"+ACC, +DMG, +Rech","long":"Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and damage by {Boost.Attrib.Damage.Scale}% and reduces recharge time by {Boost.Attrib.Recharge.Scale}% ."},"isUnique":false,"fullName":"Boosts.Attuned_Obliteration_D.Attuned_Obliteration_D","setName":"Obliteration","displayName":"Accuracy/Damage/Recharge","effects":[{"mag":0.212,"effectId":"Damage","damageType":1},{"mag":0.212,"effectId":"Boosts_33","damageType":2},{"mag":0.212,"effectId":"Boosts_33","damageType":3},{"mag":0.212,"effectId":"Boosts_33","damageType":4},{"mag":0.212,"effectId":"Boosts_33","damageType":5},{"mag":0.212,"effectId":"Boosts_33","damageType":6},{"mag":0.212,"effectId":"Boosts_33","damageType":7},{"mag":0.212,"effectId":"Boosts_33","damageType":8},{"mag":0.212,"effectId":"Accuracy"},{"mag":0.212,"effectId":"Recharge"}]},{"type":"set","description":{"short":"+ACC, +DMG, -End Cost, +Rech","long":"Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}%, damage by {Boost.Attrib.Damage.Scale}%, reduces endurance cost by {Boost.Attrib.Endurance.Scale}% and reduces recharge time by {Boost.Attrib.Recharge.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Obliteration_E.Attuned_Obliteration_E","setName":"Obliteration","displayName":"Accuracy/Damage/Endurance/Recharge","effects":[{"mag":0.1855,"effectId":"Damage","damageType":1},{"mag":0.1855,"effectId":"Boosts_33","damageType":2},{"mag":0.1855,"effectId":"Boosts_33","damageType":3},{"mag":0.1855,"effectId":"Boosts_33","damageType":4},{"mag":0.1855,"effectId":"Boosts_33","damageType":5},{"mag":0.1855,"effectId":"Boosts_33","damageType":6},{"mag":0.1855,"effectId":"Boosts_33","damageType":7},{"mag":0.1855,"effectId":"Boosts_33","damageType":8},{"mag":0.1855,"effectId":"Accuracy"},{"mag":0.1855,"effectId":"Recharge"},{"mag":0.1855,"effectId":"Endurance"}]},{"type":"set","description":{"short":"Chance for Minor DMG (Smashing)","long":"Provides a chance to cause minor smashing damage to your targets.  This effect will trigger roughly 3.5 times per minute."},"isUnique":false,"fullName":"Boosts.Attuned_Obliteration_F.Attuned_Obliteration_F","setName":"Obliteration","displayName":"Chance for Smashing Damage","effects":[{"procsPerMinute":3.5,"cancelOnMiss":true,"mag":71.7501,"effectId":"Damage","damageType":1,"stacking":1,"resistible":true,"pvMode":1},{"procsPerMinute":3.5,"cancelOnMiss":true,"mag":71.7501,"effectId":"TempDamage","damageType":1,"stacking":1,"pvMode":2}]}],"levels":{"min":30,"max":50},"bonuses":["Lethal_Smash_Mez_Res_2","Increased_Damage_5","Accuracy_4","Improved_Recharge_Time_3","Increased_Melee_Lethal_Smash_Def_5"],"setType":4,"displayName":"Obliteration","imageName":"Obliteration.png"}
+{
+  "fullName": "IOSet.Obliteration",
+  "enhancements": [
+    {
+      "description": {
+        "short": "+DMG",
+        "long": "Enhances the damage of a power by {Boost.Attrib.Damage.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.424
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Obliteration_A.Attuned_Obliteration_A",
+              "damageType": "Smashing"
+            }
+          ]
+        },
+        {
+          "effectType": "Boosts_33",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.424
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Obliteration_A.Attuned_Obliteration_A",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.424
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Obliteration_A.Attuned_Obliteration_A",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.424
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Obliteration_A.Attuned_Obliteration_A",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 0.424
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Obliteration_A.Attuned_Obliteration_A",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.424
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Obliteration_A.Attuned_Obliteration_A",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.424
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Obliteration_A.Attuned_Obliteration_A",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pve": 0.424
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Obliteration_A.Attuned_Obliteration_A",
+              "damageType": "Psionic"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Obliteration_A.Attuned_Obliteration_A",
+      "setName": "Obliteration",
+      "displayName": "Damage"
+    },
+    {
+      "description": {
+        "short": "+ACC, +Rech",
+        "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and reduces recharge time by {Boost.Attrib.Recharge.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Accuracy",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 1,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Obliteration_B.Attuned_Obliteration_B"
+            }
+          ]
+        },
+        {
+          "effectType": "Recharge",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 25,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Obliteration_B.Attuned_Obliteration_B"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Obliteration_B.Attuned_Obliteration_B",
+      "setName": "Obliteration",
+      "displayName": "Accuracy/Recharge"
+    },
+    {
+      "description": {
+        "short": "+DMG, +Rech",
+        "long": "Enhances the damage of a power by {Boost.Attrib.Damage.Scale}% and reduces recharge time by {Boost.Attrib.Recharge.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Obliteration_C.Attuned_Obliteration_C",
+              "damageType": "Smashing"
+            }
+          ]
+        },
+        {
+          "effectType": "Boosts_33",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Obliteration_C.Attuned_Obliteration_C",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Obliteration_C.Attuned_Obliteration_C",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Obliteration_C.Attuned_Obliteration_C",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Obliteration_C.Attuned_Obliteration_C",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Obliteration_C.Attuned_Obliteration_C",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Obliteration_C.Attuned_Obliteration_C",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Obliteration_C.Attuned_Obliteration_C",
+              "damageType": "Psionic"
+            }
+          ]
+        },
+        {
+          "effectType": "Recharge",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 25,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Obliteration_C.Attuned_Obliteration_C"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Obliteration_C.Attuned_Obliteration_C",
+      "setName": "Obliteration",
+      "displayName": "Damage/Recharge"
+    },
+    {
+      "description": {
+        "short": "+ACC, +DMG, +Rech",
+        "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and damage by {Boost.Attrib.Damage.Scale}% and reduces recharge time by {Boost.Attrib.Recharge.Scale}% ."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Obliteration_D.Attuned_Obliteration_D",
+              "damageType": "Smashing"
+            }
+          ]
+        },
+        {
+          "effectType": "Boosts_33",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Obliteration_D.Attuned_Obliteration_D",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Obliteration_D.Attuned_Obliteration_D",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Obliteration_D.Attuned_Obliteration_D",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Obliteration_D.Attuned_Obliteration_D",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Obliteration_D.Attuned_Obliteration_D",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Obliteration_D.Attuned_Obliteration_D",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Obliteration_D.Attuned_Obliteration_D",
+              "damageType": "Psionic"
+            }
+          ]
+        },
+        {
+          "effectType": "Accuracy",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 1,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Obliteration_D.Attuned_Obliteration_D"
+            }
+          ]
+        },
+        {
+          "effectType": "Recharge",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 25,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Obliteration_D.Attuned_Obliteration_D"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Obliteration_D.Attuned_Obliteration_D",
+      "setName": "Obliteration",
+      "displayName": "Accuracy/Damage/Recharge"
+    },
+    {
+      "description": {
+        "short": "+ACC, +DMG, -End Cost, +Rech",
+        "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}%, damage by {Boost.Attrib.Damage.Scale}%, reduces endurance cost by {Boost.Attrib.Endurance.Scale}% and reduces recharge time by {Boost.Attrib.Recharge.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.1855
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Obliteration_E.Attuned_Obliteration_E",
+              "damageType": "Smashing"
+            }
+          ]
+        },
+        {
+          "effectType": "Boosts_33",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.1855
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Obliteration_E.Attuned_Obliteration_E",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.1855
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Obliteration_E.Attuned_Obliteration_E",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.1855
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Obliteration_E.Attuned_Obliteration_E",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 0.1855
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Obliteration_E.Attuned_Obliteration_E",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.1855
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Obliteration_E.Attuned_Obliteration_E",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.1855
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Obliteration_E.Attuned_Obliteration_E",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pve": 0.1855
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Obliteration_E.Attuned_Obliteration_E",
+              "damageType": "Psionic"
+            }
+          ]
+        },
+        {
+          "effectType": "Accuracy",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.1855
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 1,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Obliteration_E.Attuned_Obliteration_E"
+            }
+          ]
+        },
+        {
+          "effectType": "Recharge",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.1855
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 25,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Obliteration_E.Attuned_Obliteration_E"
+            }
+          ]
+        },
+        {
+          "effectType": "Endurance",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.1855
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 8,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Obliteration_E.Attuned_Obliteration_E"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Obliteration_E.Attuned_Obliteration_E",
+      "setName": "Obliteration",
+      "displayName": "Accuracy/Damage/Endurance/Recharge"
+    },
+    {
+      "description": {
+        "short": "Chance for Minor DMG (Smashing)",
+        "long": "Provides a chance to cause minor smashing damage to your targets.  This effect will trigger roughly 3.5 times per minute."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 71.7501
+              },
+              "procsPerMinute": 3.5,
+              "cancelOnMiss": true,
+              "effectType": "Damage",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "All",
+              "powerFullName": "Boosts.Attuned_Obliteration_F.Attuned_Obliteration_F",
+              "damageType": "Smashing"
+            }
+          ]
+        },
+        {
+          "effectType": "TempDamage",
+          "values": [
+            {
+              "mag": {
+                "pvp": 71.7501
+              },
+              "procsPerMinute": 3.5,
+              "cancelOnMiss": true,
+              "effectType": "Damage",
+              "stacking": 1,
+              "toWho": "All",
+              "powerFullName": "Boosts.Attuned_Obliteration_F.Attuned_Obliteration_F",
+              "damageType": "Smashing"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Obliteration_F.Attuned_Obliteration_F",
+      "setName": "Obliteration",
+      "displayName": "Chance for Smashing Damage"
+    }
+  ],
+  "levels": {
+    "min": 30,
+    "max": 50
+  },
+  "bonuses": [
+    {
+      "description": {
+        "short": "+Res (Lethal, Smash, Mez)",
+        "long": "Increases Lethal and Smashing resistance by 2.25% and Mez Resistance by 3.75%"
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 2,
+      "powerSetIndex": 447,
+      "fullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_2",
+      "setName": "Set_Bonus",
+      "displayName": "Small Lethal, Smash and Mez Resistance",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.0225
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_2",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.0225
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_2",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_2",
+              "mezType": "Immobilization"
+            },
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_2",
+              "mezType": "Hold"
+            },
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_2",
+              "mezType": "Stun"
+            },
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_2",
+              "mezType": "Sleep"
+            },
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_2",
+              "mezType": "Terrorize"
+            },
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_2",
+              "mezType": "Confuse"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+DMG",
+        "long": "Increases damage by 3%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 3,
+      "powerSetIndex": 218,
+      "fullName": "Set_Bonus.Set_Bonus.Increased_Damage_5",
+      "setName": "Set_Bonus",
+      "displayName": "Huge Increased Damage Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.03
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "DamageBuff",
+              "toWho": "All",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Damage_5",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 0.03
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "DamageBuff",
+              "toWho": "All",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Damage_5",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.03
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "DamageBuff",
+              "toWho": "All",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Damage_5",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.03
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "DamageBuff",
+              "toWho": "All",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Damage_5",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 0.03
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "DamageBuff",
+              "toWho": "All",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Damage_5",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.03
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "DamageBuff",
+              "toWho": "All",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Damage_5",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.03
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "DamageBuff",
+              "toWho": "All",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Damage_5",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pve": 0.03
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "DamageBuff",
+              "toWho": "All",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Damage_5",
+              "damageType": "Psionic"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+Accuracy",
+        "long": "Improves the accuracy of all of your powers by 9%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 4,
+      "powerSetIndex": 4,
+      "fullName": "Set_Bonus.Set_Bonus.Accuracy_4",
+      "setName": "Set_Bonus",
+      "displayName": "Large Accuracy Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.09
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 1,
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Accuracy_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+Recharge Time",
+        "long": "Improves the Recharge Time of all of your powers by 5%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 5,
+      "powerSetIndex": 139,
+      "fullName": "Set_Bonus.Set_Bonus.Improved_Recharge_Time_3",
+      "setName": "Set_Bonus",
+      "displayName": "Moderate Improved Recharge Time Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.05
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 25,
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Improved_Recharge_Time_3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+DEF",
+        "long": "Increases melee defense by 3.75% and lethal and smashing defense by 1.875%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 6,
+      "powerSetIndex": 323,
+      "fullName": "Set_Bonus.Set_Bonus.Increased_Melee_Lethal_Smash_Def_5",
+      "setName": "Set_Bonus",
+      "displayName": "Huge Increased Melee/Lethal/Smashing Def Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Melee_Lethal_Smash_Def_5",
+              "damageType": "Melee"
+            },
+            {
+              "mag": {
+                "pve": 0.01875
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Melee_Lethal_Smash_Def_5",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.01875
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Melee_Lethal_Smash_Def_5",
+              "damageType": "Smashing"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "setType": 4,
+  "displayName": "Obliteration",
+  "imageName": "Obliteration.png"
+}

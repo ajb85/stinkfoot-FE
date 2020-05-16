@@ -1,1 +1,190 @@
-{"fullName":"IOSet.Freebird","enhancements":[{"type":"set","description":{"short":"-End Cost","long":"Reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Freebird_A.Attuned_Freebird_A","setName":"Freebird","displayName":"Endurance","effects":[{"mag":0.424,"effectId":"Endurance"}]},{"type":"set","description":{"short":"+Fly","long":"Enhances the flight speed of a power by {Boost.Attrib.Fly.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Freebird_B.Attuned_Freebird_B","setName":"Freebird","displayName":"Fly","effects":[{"mag":0.424,"effectId":"Fly"}]},{"type":"set","description":{"short":"Grants Stealth","long":"UNIQUE -- No more than 1 enhancement of this type may be slotted by a character.  May not be slotted if you have any other enhancements which grant stealth.  Grants Stealth for 120 seconds when used in an instant effect power."},"isUnique":true,"fullName":"Boosts.Attuned_Freebird_C.Attuned_Freebird_C","setName":"Freebird","displayName":"Stealth","effects":[{"cancelOnMiss":true,"mag":30,"effectId":"Stealth","suppression":448},{"cancelOnMiss":true,"mag":300,"effectId":"Ones","suppression":448},{"cancelOnMiss":true,"mag":0.5,"effectId":"Ones","suppression":448},{"cancelOnMiss":true,"mag":0.8,"effectId":"Ones"}]}],"levels":{"min":15,"max":50},"bonuses":["Improved_Regeneration_3","Increased_Health_3"],"setType":17,"displayName":"Freebird","imageName":"sFreeBird.png"}
+{
+  "fullName": "IOSet.Freebird",
+  "enhancements": [
+    {
+      "description": {
+        "short": "-End Cost",
+        "long": "Reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Endurance",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.424
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 8,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Freebird_A.Attuned_Freebird_A"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Freebird_A.Attuned_Freebird_A",
+      "setName": "Freebird",
+      "displayName": "Endurance"
+    },
+    {
+      "description": {
+        "short": "+Fly",
+        "long": "Enhances the flight speed of a power by {Boost.Attrib.Fly.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Fly",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.424
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 11,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Freebird_B.Attuned_Freebird_B"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Freebird_B.Attuned_Freebird_B",
+      "setName": "Freebird",
+      "displayName": "Fly"
+    },
+    {
+      "description": {
+        "short": "Grants Stealth",
+        "long": "UNIQUE -- No more than 1 enhancement of this type may be slotted by a character.  May not be slotted if you have any other enhancements which grant stealth.  Grants Stealth for 120 seconds when used in an instant effect power."
+      },
+      "isUnique": true,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Stealth",
+          "values": [
+            {
+              "mag": {
+                "pve": 30
+              },
+              "cancelOnMiss": true,
+              "probability": 1,
+              "duration": 120,
+              "effectType": "StealthRadius",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Freebird_C.Attuned_Freebird_C"
+            }
+          ]
+        },
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 300
+              },
+              "cancelOnMiss": true,
+              "probability": 1,
+              "duration": 120,
+              "effectType": "StealthRadiusPlayer",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Freebird_C.Attuned_Freebird_C"
+            },
+            {
+              "mag": {
+                "pve": 0.8
+              },
+              "cancelOnMiss": true,
+              "probability": 1,
+              "duration": 120,
+              "effectType": "Translucency",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Freebird_C.Attuned_Freebird_C"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Freebird_C.Attuned_Freebird_C",
+      "setName": "Freebird",
+      "displayName": "Stealth"
+    }
+  ],
+  "levels": {
+    "min": 15,
+    "max": 50
+  },
+  "bonuses": [
+    {
+      "description": {
+        "short": "+Regeneration",
+        "long": "Improves your Regeneration by 8%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 2,
+      "powerSetIndex": 153,
+      "fullName": "Set_Bonus.Set_Bonus.Improved_Regeneration_3",
+      "setName": "Set_Bonus",
+      "displayName": "Moderate Improved Regeneration Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.08
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Regeneration",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Improved_Regeneration_3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+Max HP",
+        "long": "Increases maximum health by 1.5%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 3,
+      "powerSetIndex": 286,
+      "fullName": "Set_Bonus.Set_Bonus.Increased_Health_3",
+      "setName": "Set_Bonus",
+      "displayName": "Moderate Increased Health Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "HealSelf",
+          "values": [
+            {
+              "mag": {
+                "pve": 18.0713863
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "HitPoints",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Health_3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "setType": 17,
+  "displayName": "Freebird",
+  "imageName": "sFreeBird.png"
+}

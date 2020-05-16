@@ -1,1 +1,716 @@
-{"fullName":"Epic_Cold_Mastery","archetypeOrder":"epicPool","description":"You have Mastery over Ice and Cold to control your foes and to add some much needed armor and defense.","imageName":"IceArmor.png","displayName":"Cold Mastery","powers":[{"allowedEnhancements":["Endurance_Discount","Recharge","Slow"],"enhancementCount":6,"archetypeOrder":"epicPool","powerIndex":0,"castTimeReal":2.03,"toggleCost":0.65,"fullName":"Epic_Cold_Mastery_Snow_Storm","displayName":"Snow Storm","requires":{"powers":{},"count":0},"accuracy":1,"accuracyMult":1,"attackTypes":36,"target":2048,"targetLoS":true,"range":80,"endCost":0.325,"rechargeTime":20,"baseRechargeTime":20,"activatePeriod":0.5,"effectArea":2,"radius":25,"maxTargets":10,"numAllowed":1,"description":{"short":"Toggle: Ranged (Targeted AoE), Foe -Speed, -Recharge","long":"While active, the chill from this Snow Storm can dramatically Slow the attack and movement speed of the target and all nearby foes. Recharge: Slow"},"setTypes":[13],"level":35,"ignoreEnh":[],"ignore_Buff":[],"castTime":2.244,"slottable":true,"aoeModifier":4.75},{"allowedEnhancements":["Accuracy","Damage","Endurance_Discount","Range","Recharge","Sleep"],"enhancementCount":6,"archetypeOrder":"epicPool","powerIndex":1,"castTimeReal":2.37,"toggleCost":19.5,"fullName":"Epic_Cold_Mastery_Flash_Freeze","displayName":"Flash Freeze","requires":{"powers":{},"count":0},"accuracy":1,"accuracyMult":1,"attackTypes":36,"target":2048,"targetLoS":true,"range":60,"endCost":19.5,"rechargeTime":90,"baseRechargeTime":90,"effectArea":2,"radius":25,"maxTargets":10,"castFlags":2,"numAllowed":1,"description":{"short":"Ranged (Targeted AoE), Minor DMG(Cold/Lethal), Foe Sleep","long":"You can Flash Freeze a large patch of ground beneath a targeted foe, instantly forming dozens of deadly ice shards that do Cold damage to all enemies in the area. The victims are left trapped within the icicles, but can break free if disturbed. Only targets near the ground can be affected. Damage: Minor, Recharge: Slow"},"setTypes":[3,14,44],"level":35,"ignoreEnh":[],"ignore_Buff":[],"castTime":2.508,"slottable":true,"aoeModifier":4.75},{"allowedEnhancements":["Defense_Buff","Endurance_Discount","Recharge","Res_Damage"],"enhancementCount":6,"archetypeOrder":"epicPool","powerIndex":2,"castTimeReal":0.73,"toggleCost":0.325,"fullName":"Epic_Cold_Mastery_Frozen_Armor","displayName":"Frozen Armor","requires":{"powers":{"Epic_Cold_Mastery_Snow_Storm":true,"Epic_Cold_Mastery_Flash_Freeze":true},"count":1},"accuracy":1,"accuracyMult":1,"target":1,"targetLoS":true,"endCost":0.1625,"rechargeTime":2,"baseRechargeTime":2,"activatePeriod":0.5,"effectArea":1,"numAllowed":1,"ignoreStrength":true,"description":{"short":"Toggle: Self +Def(Smash, Lethal), +Res(Cold, Fire)","long":"While this power is active, you coat yourself in rock hard Frozen Armor. The hardness of the Frozen Armor offers good defense to Smashing and Lethal attack as well as reduces Cold damage. Also, Fire attacks deal slightly less damage. You must be level 41 and have Snow Storm or Flash Freeze before selecting this power. Recharge: Very Fast"},"setTypes":[7,8],"alwaysToggle":true,"level":41,"ignoreEnh":[],"ignore_Buff":[],"castTime":0.924,"slottable":true,"aoeModifier":1},{"allowedEnhancements":["Endurance_Discount","Heal","Recharge","Res_Damage"],"enhancementCount":6,"archetypeOrder":"epicPool","powerIndex":3,"castTimeReal":0.73,"toggleCost":18.2,"fullName":"Epic_Cold_Mastery_Hoarfrost","displayName":"Hoarfrost","requires":{"powers":{"Epic_Cold_Mastery_Snow_Storm":true,"Epic_Cold_Mastery_Flash_Freeze":true},"count":1},"accuracy":1,"accuracyMult":1,"target":1,"targetLoS":true,"endCost":18.2,"rechargeTime":540,"baseRechargeTime":540,"effectArea":1,"numAllowed":1,"ignoreStrength":true,"description":{"short":"Self Heal, +Max HP, Res(Toxic)","long":"Activating this power covers you in a thick layer of Hoarfrost. The frost can absorb the impact from enemy attacks, effectively increasing your maximum Hit Points for a short time. Hoarfrost also grants you resistance to Toxic Damage. You must be level 41 and have Snow Storm or Flash Freeze before selecting this power. Recharge: Very Long"},"setTypes":[8,9],"clickBuff":true,"level":41,"ignoreEnh":[],"ignore_Buff":[],"castTime":0.924,"slottable":true,"aoeModifier":1},{"allowedEnhancements":["Endurance_Discount","Heal","Recharge","Endurance_Modification"],"enhancementCount":6,"archetypeOrder":"epicPool","powerIndex":4,"castTimeReal":0.07,"toggleCost":0.325,"fullName":"Epic_Cold_Mastery_Hibernate","displayName":"Hibernate","requires":{"powers":{"Epic_Cold_Mastery_Snow_Storm":true,"Epic_Cold_Mastery_Flash_Freeze":true,"Epic_Cold_Mastery_Frozen_Armor":true,"Epic_Cold_Mastery_Hoarfrost":true},"count":2},"accuracy":1,"accuracyMult":1,"target":1,"targetLoS":true,"endCost":0.1625,"rechargeTime":240,"baseRechargeTime":240,"activatePeriod":0.5,"effectArea":1,"numAllowed":1,"description":{"short":"Toggle: Self +Regeneration, +Recovery, Invulnerable; Self Hold","long":"When you activate this power, you encase yourself in a block of solid ice, making yourself invulnerable, though you are frozen solid and cannot act. While Hibernating within this block of ice, you heal damage and recover endurance at an incredible rate. You can emerge at will by deactivating the power, but you cannot Hibernate for more than 30 seconds. If you activate this power while in the air, you will fall. You must be level 44 and have two other Cold Mastery Powers before selecting this power. Recharge: Long"},"setTypes":[9,22],"clickBuff":true,"level":44,"ignoreEnh":[],"ignore_Buff":[],"hasGrantPowerEffect":true,"castTime":0.264,"slottable":true,"aoeModifier":1}]}
+{
+  "fullName": "Epic_Cold_Mastery",
+  "archetypeOrder": "epicPool",
+  "description": "You have Mastery over Ice and Cold to control your foes and to add some much needed armor and defense.",
+  "imageName": "IceArmor.png",
+  "displayName": "Cold Mastery",
+  "powers": [
+    {
+      "allowedEnhancements": [
+        "Endurance_Discount",
+        "Recharge",
+        "Slow"
+      ],
+      "enhancementCount": 6,
+      "archetypeOrder": "epicPool",
+      "effects": [
+        {
+          "effectType": "Slow",
+          "values": [
+            {
+              "mag": {
+                "pve": -0.5
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "SpeedRunning",
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Epic.Cold_Mastery.Snow_Storm"
+            },
+            {
+              "mag": {
+                "pve": -0.5
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Enhancement",
+              "eTModifies": 25,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Epic.Cold_Mastery.Snow_Storm"
+            },
+            {
+              "mag": {
+                "pve": -0.5
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "SpeedJumping",
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Epic.Cold_Mastery.Snow_Storm"
+            },
+            {
+              "mag": {
+                "pve": -0.5
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "SpeedFlying",
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Epic.Cold_Mastery.Snow_Storm"
+            }
+          ]
+        },
+        {
+          "effectType": "SpeedRunning",
+          "values": [
+            {
+              "mag": {
+                "pve": -3.5
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "SpeedRunning",
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Epic.Cold_Mastery.Snow_Storm"
+            }
+          ]
+        },
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": -1
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Fly",
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Epic.Cold_Mastery.Snow_Storm"
+            }
+          ]
+        }
+      ],
+      "powerIndex": 0,
+      "castTimeReal": 2.03,
+      "toggleCost": 0.65,
+      "fullName": "Epic_Cold_Mastery_Snow_Storm",
+      "displayName": "Snow Storm",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "attackTypes": 36,
+      "target": 2048,
+      "targetLoS": true,
+      "range": 80,
+      "endCost": 0.325,
+      "rechargeTime": 20,
+      "baseRechargeTime": 20,
+      "activatePeriod": 0.5,
+      "effectArea": 2,
+      "radius": 25,
+      "maxTargets": 10,
+      "numAllowed": 1,
+      "description": {
+        "short": "Toggle: Ranged (Targeted AoE), Foe -Speed, -Recharge",
+        "long": "While active, the chill from this Snow Storm can dramatically Slow the attack and movement speed of the target and all nearby foes. Recharge: Slow"
+      },
+      "setTypes": [
+        13
+      ],
+      "level": 35,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 2.244,
+      "slottable": true,
+      "aoeModifier": 4.75,
+      "powerType": "Toggle"
+    },
+    {
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Range",
+        "Recharge",
+        "Sleep"
+      ],
+      "enhancementCount": 6,
+      "archetypeOrder": "epicPool",
+      "effects": [
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 6.25615025
+              },
+              "probability": 1,
+              "effectType": "Damage",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Epic.Cold_Mastery.Flash_Freeze",
+              "nearGround": true,
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 6.25615025
+              },
+              "probability": 1,
+              "effectType": "Damage",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Epic.Cold_Mastery.Flash_Freeze",
+              "nearGround": true,
+              "damageType": "Cold"
+            }
+          ]
+        },
+        {
+          "effectType": "Sleep",
+          "values": [
+            {
+              "mag": {
+                "pve": 3,
+                "pvp": 3
+              },
+              "probability": 1,
+              "duration": 17.8800011,
+              "effectType": "Mez",
+              "delayedTime": 0.25,
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "attribType": 1,
+              "powerFullName": "Epic.Cold_Mastery.Flash_Freeze",
+              "nearGround": true,
+              "mezType": "Sleep"
+            }
+          ]
+        }
+      ],
+      "powerIndex": 1,
+      "castTimeReal": 2.37,
+      "toggleCost": 19.5,
+      "fullName": "Epic_Cold_Mastery_Flash_Freeze",
+      "displayName": "Flash Freeze",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "attackTypes": 36,
+      "target": 2048,
+      "targetLoS": true,
+      "range": 60,
+      "endCost": 19.5,
+      "rechargeTime": 90,
+      "baseRechargeTime": 90,
+      "effectArea": 2,
+      "radius": 25,
+      "maxTargets": 10,
+      "castFlags": 2,
+      "numAllowed": 1,
+      "description": {
+        "short": "Ranged (Targeted AoE), Minor DMG(Cold/Lethal), Foe Sleep",
+        "long": "You can Flash Freeze a large patch of ground beneath a targeted foe, instantly forming dozens of deadly ice shards that do Cold damage to all enemies in the area. The victims are left trapped within the icicles, but can break free if disturbed. Only targets near the ground can be affected. Damage: Minor, Recharge: Slow"
+      },
+      "setTypes": [
+        3,
+        14,
+        44
+      ],
+      "level": 35,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 2.508,
+      "slottable": true,
+      "aoeModifier": 4.75
+    },
+    {
+      "allowedEnhancements": [
+        "Defense_Buff",
+        "Endurance_Discount",
+        "Recharge",
+        "Res_Damage"
+      ],
+      "enhancementCount": 6,
+      "archetypeOrder": "epicPool",
+      "effects": [
+        {
+          "effectType": "Buff_Def",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.105000004,
+                "pvp": 0.105000004
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Epic.Cold_Mastery.Frozen_Armor",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 0.105000004,
+                "pvp": 0.105000004
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Epic.Cold_Mastery.Frozen_Armor",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pvp": 0.105000004
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Epic.Cold_Mastery.Frozen_Armor",
+              "damageType": "Psionic"
+            },
+            {
+              "mag": {
+                "pvp": 0.105000004
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Epic.Cold_Mastery.Frozen_Armor",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pvp": 0.105000004
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Epic.Cold_Mastery.Frozen_Armor",
+              "damageType": "Negative"
+            }
+          ]
+        },
+        {
+          "effectType": "Res_Dmg",
+          "values": [
+            {
+              "mag": {
+                "pvp": 0.210000008,
+                "pve": 0.210000008
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Epic.Cold_Mastery.Frozen_Armor",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pvp": 0.1925,
+                "pve": 0.07
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Epic.Cold_Mastery.Frozen_Armor",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pvp": 0.1925
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Epic.Cold_Mastery.Frozen_Armor",
+              "damageType": "Toxic"
+            }
+          ]
+        },
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pvp": 0.1
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Elusivity",
+              "toWho": "Self",
+              "powerFullName": "Epic.Cold_Mastery.Frozen_Armor",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pvp": 0.1
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Elusivity",
+              "toWho": "Self",
+              "powerFullName": "Epic.Cold_Mastery.Frozen_Armor",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pvp": 0.1
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Elusivity",
+              "toWho": "Self",
+              "powerFullName": "Epic.Cold_Mastery.Frozen_Armor",
+              "damageType": "Psionic"
+            },
+            {
+              "mag": {
+                "pvp": 0.1
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Elusivity",
+              "toWho": "Self",
+              "powerFullName": "Epic.Cold_Mastery.Frozen_Armor",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pvp": 0.1
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "toWho": "Self",
+              "powerFullName": "Epic.Cold_Mastery.Frozen_Armor"
+            }
+          ]
+        }
+      ],
+      "powerIndex": 2,
+      "castTimeReal": 0.73,
+      "toggleCost": 0.325,
+      "fullName": "Epic_Cold_Mastery_Frozen_Armor",
+      "displayName": "Frozen Armor",
+      "requires": {
+        "powers": {
+          "Epic_Cold_Mastery_Snow_Storm": true,
+          "Epic_Cold_Mastery_Flash_Freeze": true
+        },
+        "count": 1
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "target": 1,
+      "targetLoS": true,
+      "endCost": 0.1625,
+      "rechargeTime": 2,
+      "baseRechargeTime": 2,
+      "activatePeriod": 0.5,
+      "effectArea": 1,
+      "numAllowed": 1,
+      "ignoreStrength": true,
+      "description": {
+        "short": "Toggle: Self +Def(Smash, Lethal), +Res(Cold, Fire)",
+        "long": "While this power is active, you coat yourself in rock hard Frozen Armor. The hardness of the Frozen Armor offers good defense to Smashing and Lethal attack as well as reduces Cold damage. Also, Fire attacks deal slightly less damage. You must be level 41 and have Snow Storm or Flash Freeze before selecting this power. Recharge: Very Fast"
+      },
+      "setTypes": [
+        7,
+        8
+      ],
+      "alwaysToggle": true,
+      "level": 41,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 0.924,
+      "slottable": true,
+      "aoeModifier": 1,
+      "powerType": "Toggle"
+    },
+    {
+      "allowedEnhancements": [
+        "Endurance_Discount",
+        "Heal",
+        "Recharge",
+        "Res_Damage"
+      ],
+      "enhancementCount": 6,
+      "archetypeOrder": "epicPool",
+      "effects": [
+        {
+          "effectType": "HealSelf",
+          "values": [
+            {
+              "mag": {
+                "pve": 180.713852
+              },
+              "probability": 1,
+              "duration": 120,
+              "variableModified": true,
+              "effectType": "HitPoints",
+              "stacking": 1,
+              "toWho": "Self",
+              "powerFullName": "Epic.Cold_Mastery.Hoarfrost"
+            },
+            {
+              "mag": {
+                "pve": 361.4277
+              },
+              "probability": 1,
+              "variableModified": true,
+              "effectType": "Heal",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Self",
+              "powerFullName": "Epic.Cold_Mastery.Hoarfrost"
+            }
+          ]
+        },
+        {
+          "effectType": "Res_Dmg",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.105000004
+              },
+              "probability": 1,
+              "duration": 120,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Epic.Cold_Mastery.Hoarfrost",
+              "damageType": "Toxic"
+            }
+          ]
+        }
+      ],
+      "powerIndex": 3,
+      "castTimeReal": 0.73,
+      "toggleCost": 18.2,
+      "fullName": "Epic_Cold_Mastery_Hoarfrost",
+      "displayName": "Hoarfrost",
+      "requires": {
+        "powers": {
+          "Epic_Cold_Mastery_Snow_Storm": true,
+          "Epic_Cold_Mastery_Flash_Freeze": true
+        },
+        "count": 1
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "target": 1,
+      "targetLoS": true,
+      "endCost": 18.2,
+      "rechargeTime": 540,
+      "baseRechargeTime": 540,
+      "effectArea": 1,
+      "numAllowed": 1,
+      "ignoreStrength": true,
+      "description": {
+        "short": "Self Heal, +Max HP, Res(Toxic)",
+        "long": "Activating this power covers you in a thick layer of Hoarfrost. The frost can absorb the impact from enemy attacks, effectively increasing your maximum Hit Points for a short time. Hoarfrost also grants you resistance to Toxic Damage. You must be level 41 and have Snow Storm or Flash Freeze before selecting this power. Recharge: Very Long"
+      },
+      "setTypes": [
+        8,
+        9
+      ],
+      "clickBuff": true,
+      "level": 41,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 0.924,
+      "slottable": true,
+      "aoeModifier": 1
+    },
+    {
+      "allowedEnhancements": [
+        "Endurance_Discount",
+        "Heal",
+        "Recharge",
+        "Endurance_Modification"
+      ],
+      "enhancementCount": 6,
+      "archetypeOrder": "epicPool",
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 10
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Epic.Cold_Mastery.Hibernate",
+              "mezType": "Knockback"
+            },
+            {
+              "mag": {
+                "pve": 10
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Epic.Cold_Mastery.Hibernate",
+              "mezType": "Knockup"
+            },
+            {
+              "mag": {
+                "pve": -10
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Mez",
+              "toWho": "Self",
+              "powerFullName": "Epic.Cold_Mastery.Hibernate",
+              "mezType": "Knockback"
+            },
+            {
+              "mag": {
+                "pve": -10
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Mez",
+              "toWho": "Self",
+              "powerFullName": "Epic.Cold_Mastery.Hibernate",
+              "mezType": "Knockup"
+            },
+            {
+              "mag": {
+                "pve": 100
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Mez",
+              "toWho": "Self",
+              "attribType": 1,
+              "powerFullName": "Epic.Cold_Mastery.Hibernate",
+              "mezType": "Untouchable"
+            },
+            {
+              "mag": {
+                "pve": 100
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Mez",
+              "toWho": "Self",
+              "attribType": 1,
+              "powerFullName": "Epic.Cold_Mastery.Hibernate",
+              "mezType": "Immobilization"
+            },
+            {
+              "mag": {
+                "pve": 100
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Mez",
+              "toWho": "Self",
+              "attribType": 1,
+              "powerFullName": "Epic.Cold_Mastery.Hibernate",
+              "mezType": "OnlyAffectsSelf"
+            },
+            {
+              "mag": {
+                "pve": 10
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Regeneration",
+              "toWho": "Self",
+              "powerFullName": "Epic.Cold_Mastery.Hibernate"
+            },
+            {
+              "mag": {
+                "pve": 4
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Recovery",
+              "toWho": "Self",
+              "powerFullName": "Epic.Cold_Mastery.Hibernate"
+            },
+            {
+              "mag": {
+                "pve": 1
+              },
+              "probability": 1,
+              "effectType": "GrantPower",
+              "toWho": "Self",
+              "powerFullName": "Epic.Cold_Mastery.Hibernate"
+            }
+          ]
+        }
+      ],
+      "powerIndex": 4,
+      "castTimeReal": 0.07,
+      "toggleCost": 0.325,
+      "fullName": "Epic_Cold_Mastery_Hibernate",
+      "displayName": "Hibernate",
+      "requires": {
+        "powers": {
+          "Epic_Cold_Mastery_Snow_Storm": true,
+          "Epic_Cold_Mastery_Flash_Freeze": true,
+          "Epic_Cold_Mastery_Frozen_Armor": true,
+          "Epic_Cold_Mastery_Hoarfrost": true
+        },
+        "count": 2
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "target": 1,
+      "targetLoS": true,
+      "endCost": 0.1625,
+      "rechargeTime": 240,
+      "baseRechargeTime": 240,
+      "activatePeriod": 0.5,
+      "effectArea": 1,
+      "numAllowed": 1,
+      "description": {
+        "short": "Toggle: Self +Regeneration, +Recovery, Invulnerable; Self Hold",
+        "long": "When you activate this power, you encase yourself in a block of solid ice, making yourself invulnerable, though you are frozen solid and cannot act. While Hibernating within this block of ice, you heal damage and recover endurance at an incredible rate. You can emerge at will by deactivating the power, but you cannot Hibernate for more than 30 seconds. If you activate this power while in the air, you will fall. You must be level 44 and have two other Cold Mastery Powers before selecting this power. Recharge: Long"
+      },
+      "setTypes": [
+        9,
+        22
+      ],
+      "clickBuff": true,
+      "level": 44,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "hasGrantPowerEffect": true,
+      "castTime": 0.264,
+      "slottable": true,
+      "aoeModifier": 1,
+      "powerType": "Toggle"
+    }
+  ]
+}

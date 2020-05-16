@@ -1,1 +1,462 @@
-{"fullName":"IOSet.Paralytic","enhancements":[{"type":"set","description":{"short":"+ACC, +Rech","long":"Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Paralytic_A.Attuned_Paralytic_A","setName":"Paralytic","displayName":"Accuracy/Recharge","effects":[{"mag":0.265,"effectId":"Recharge"},{"mag":0.265,"effectId":"Accuracy"}]},{"type":"set","description":{"short":"+End, +Hold","long":"Enhances the hold duration of a power by {Boost.Attrib.Hold.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Paralytic_B.Attuned_Paralytic_B","setName":"Paralytic","displayName":"Endurance/Hold","effects":[{"mag":0.265,"effectId":"Endurance"},{"mag":0.265,"effectId":"Hold","mezType":2}]},{"type":"set","description":{"short":"+ACC, -End Cost","long":"Enhances the accuracy by {Boost.Attrib.Accuracy.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Paralytic_C.Attuned_Paralytic_C","setName":"Paralytic","displayName":"Accuracy/Endurance","effects":[{"mag":0.265,"effectId":"Accuracy"},{"mag":0.265,"effectId":"Endurance"}]},{"type":"set","description":{"short":"+Range, +Hold","long":"Enhances the range of a power by {Boost.Attrib.Range.Scale}% and hold duration by {Boost.Attrib.Hold.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Paralytic_D.Attuned_Paralytic_D","setName":"Paralytic","displayName":"Hold/Range","effects":[{"mag":0.265,"effectId":"Hold","mezType":2},{"mag":0.159375,"effectId":"Range"}]},{"type":"set","description":{"short":"+ACC, +Rech, +Hold","long":"Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}%, the hold duration of a power by {Boost.Attrib.Hold.Scale}% and reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Paralytic_E.Attuned_Paralytic_E","setName":"Paralytic","displayName":"Accuracy/Hold/Recharge","effects":[{"mag":0.212,"effectId":"Accuracy"},{"mag":0.212,"effectId":"Hold","mezType":2},{"mag":0.212,"effectId":"Recharge"}]}],"levels":{"min":10,"max":30},"bonuses":["Improved_Recovery_1","Energy_Neg_Mez_Res_1","Increased_Endurance_1","Hold_Dur_1"],"setType":10,"displayName":"Paralytic","imageName":"sParalytic.png"}
+{
+  "fullName": "IOSet.Paralytic",
+  "enhancements": [
+    {
+      "description": {
+        "short": "+ACC, +Rech",
+        "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Recharge",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 25,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Paralytic_A.Attuned_Paralytic_A"
+            }
+          ]
+        },
+        {
+          "effectType": "Accuracy",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 1,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Paralytic_A.Attuned_Paralytic_A"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Paralytic_A.Attuned_Paralytic_A",
+      "setName": "Paralytic",
+      "displayName": "Accuracy/Recharge"
+    },
+    {
+      "description": {
+        "short": "+End, +Hold",
+        "long": "Enhances the hold duration of a power by {Boost.Attrib.Hold.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Endurance",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 8,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Paralytic_B.Attuned_Paralytic_B"
+            }
+          ]
+        },
+        {
+          "effectType": "Hold",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 19,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Paralytic_B.Attuned_Paralytic_B",
+              "mezType": "Hold"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Paralytic_B.Attuned_Paralytic_B",
+      "setName": "Paralytic",
+      "displayName": "Endurance/Hold"
+    },
+    {
+      "description": {
+        "short": "+ACC, -End Cost",
+        "long": "Enhances the accuracy by {Boost.Attrib.Accuracy.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Accuracy",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 1,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Paralytic_C.Attuned_Paralytic_C"
+            }
+          ]
+        },
+        {
+          "effectType": "Endurance",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 8,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Paralytic_C.Attuned_Paralytic_C"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Paralytic_C.Attuned_Paralytic_C",
+      "setName": "Paralytic",
+      "displayName": "Accuracy/Endurance"
+    },
+    {
+      "description": {
+        "short": "+Range, +Hold",
+        "long": "Enhances the range of a power by {Boost.Attrib.Range.Scale}% and hold duration by {Boost.Attrib.Hold.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Hold",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 19,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Paralytic_D.Attuned_Paralytic_D",
+              "mezType": "Hold"
+            }
+          ]
+        },
+        {
+          "effectType": "Range",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.159375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 24,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Paralytic_D.Attuned_Paralytic_D"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Paralytic_D.Attuned_Paralytic_D",
+      "setName": "Paralytic",
+      "displayName": "Hold/Range"
+    },
+    {
+      "description": {
+        "short": "+ACC, +Rech, +Hold",
+        "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}%, the hold duration of a power by {Boost.Attrib.Hold.Scale}% and reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Accuracy",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 1,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Paralytic_E.Attuned_Paralytic_E"
+            }
+          ]
+        },
+        {
+          "effectType": "Hold",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 19,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Paralytic_E.Attuned_Paralytic_E",
+              "mezType": "Hold"
+            }
+          ]
+        },
+        {
+          "effectType": "Recharge",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 25,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Paralytic_E.Attuned_Paralytic_E"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Paralytic_E.Attuned_Paralytic_E",
+      "setName": "Paralytic",
+      "displayName": "Accuracy/Hold/Recharge"
+    }
+  ],
+  "levels": {
+    "min": 10,
+    "max": 30
+  },
+  "bonuses": [
+    {
+      "description": {
+        "short": "+Recovery",
+        "long": "Improves your Recovery by 1%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 2,
+      "powerSetIndex": 144,
+      "fullName": "Set_Bonus.Set_Bonus.Improved_Recovery_1",
+      "setName": "Set_Bonus",
+      "displayName": "Tiny Improved Recovery Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.01
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Recovery",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Improved_Recovery_1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+Res (Energy, Negative, Mez)",
+        "long": "Increases Energy and Negative Energy resistance by 1.5% and Mez Resistance by 2.5%"
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 3,
+      "powerSetIndex": 56,
+      "fullName": "Set_Bonus.Set_Bonus.Energy_Neg_Mez_Res_1",
+      "setName": "Set_Bonus",
+      "displayName": "Tiny Energy, Negative Energy and Mez Resistance",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.015
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Energy_Neg_Mez_Res_1",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.015
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Energy_Neg_Mez_Res_1",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.025
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Energy_Neg_Mez_Res_1",
+              "mezType": "Immobilization"
+            },
+            {
+              "mag": {
+                "pve": 0.025
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Energy_Neg_Mez_Res_1",
+              "mezType": "Hold"
+            },
+            {
+              "mag": {
+                "pve": 0.025
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Energy_Neg_Mez_Res_1",
+              "mezType": "Stun"
+            },
+            {
+              "mag": {
+                "pve": 0.025
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Energy_Neg_Mez_Res_1",
+              "mezType": "Sleep"
+            },
+            {
+              "mag": {
+                "pve": 0.025
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Energy_Neg_Mez_Res_1",
+              "mezType": "Terrorize"
+            },
+            {
+              "mag": {
+                "pve": 0.025
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Energy_Neg_Mez_Res_1",
+              "mezType": "Confuse"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+Max End",
+        "long": "Increases maximum Endurance by 0.9%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 4,
+      "powerSetIndex": 221,
+      "fullName": "Set_Bonus.Set_Bonus.Increased_Endurance_1",
+      "setName": "Set_Bonus",
+      "displayName": "Tiny Increased Endurance Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.9
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Endurance",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Endurance_1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+Duration Hold",
+        "long": "Improves the duration of your Hold effects by 1%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 5,
+      "powerSetIndex": 93,
+      "fullName": "Set_Bonus.Set_Bonus.Hold_Dur_1",
+      "setName": "Set_Bonus",
+      "displayName": "Tiny Hold Duration Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.01
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 19,
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Hold_Dur_1",
+              "mezType": "Hold"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "setType": 10,
+  "displayName": "Paralytic",
+  "imageName": "sParalytic.png"
+}

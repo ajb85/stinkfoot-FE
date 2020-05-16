@@ -1,1 +1,955 @@
-{"fullName":"IOSet.Extreme_Measures","enhancements":[{"type":"set","description":{"short":"Enhances Accuracy and Damage","long":"Enhances the damage of a power by {Boost.Attrib.Damage.Scale}% and accuracy by {Boost.Attrib.Accuracy.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Extreme_Measures_A.Attuned_Extreme_Measures_A","setName":"Extreme_Measures","displayName":"Accuracy/Damage","effects":[{"mag":0.265,"effectId":"Damage","damageType":1},{"mag":0.265,"effectId":"Boosts_33","damageType":2},{"mag":0.265,"effectId":"Boosts_33","damageType":3},{"mag":0.265,"effectId":"Boosts_33","damageType":4},{"mag":0.265,"effectId":"Boosts_33","damageType":5},{"mag":0.265,"effectId":"Boosts_33","damageType":6},{"mag":0.265,"effectId":"Boosts_33","damageType":7},{"mag":0.265,"effectId":"Boosts_33","damageType":8},{"mag":0.265,"effectId":"Accuracy"}]},{"type":"set","description":{"short":"Enhances Damage and Reduces Endurance Cost","long":"Enhances the damage of a power by {Boost.Attrib.Damage.Scale}% and reduces endurance cost by {Boost.Attrib.Endurance.Scale}%"},"isUnique":false,"fullName":"Boosts.Attuned_Extreme_Measures_B.Attuned_Extreme_Measures_B","setName":"Extreme_Measures","displayName":"Damage/Endurance","effects":[{"mag":0.265,"effectId":"Damage","damageType":1},{"mag":0.265,"effectId":"Boosts_33","damageType":2},{"mag":0.265,"effectId":"Boosts_33","damageType":3},{"mag":0.265,"effectId":"Boosts_33","damageType":4},{"mag":0.265,"effectId":"Boosts_33","damageType":5},{"mag":0.265,"effectId":"Boosts_33","damageType":6},{"mag":0.265,"effectId":"Boosts_33","damageType":7},{"mag":0.265,"effectId":"Boosts_33","damageType":8},{"mag":0.265,"effectId":"Endurance"}]},{"type":"set","description":{"short":"Enhances Accuracy, Range and Decreases Interrupt Time","long":"Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}%, the range of a power by {Boost.Attrib.Range.Scale}% and reduces interrupt time by {Boost.Attrib.Interrupt.Scale}%"},"isUnique":false,"fullName":"Boosts.Attuned_Extreme_Measures_C.Attuned_Extreme_Measures_C","setName":"Extreme_Measures","displayName":"Accuracy/Interrupt/Range","effects":[{"mag":0.212,"effectId":"Accuracy"},{"mag":0.2545,"effectId":"Interrupt"},{"mag":0.1275,"effectId":"Range"}]},{"type":"set","description":{"short":"Enhances Damage and Reduces Interrupt and Recharge Time","long":"Enhances the damage of a power by {Boost.Attrib.Damage.Scale}%, reduces interrupt time by {Boost.Attrib.Interrupt.Scale}% and and reduces recharge time by {Boost.Attrib.Recharge.Scale}%"},"isUnique":false,"fullName":"Boosts.Attuned_Extreme_Measures_D.Attuned_Extreme_Measures_D","setName":"Extreme_Measures","displayName":"Damage/Interrupt/Recharge","effects":[{"mag":0.212,"effectId":"Damage","damageType":1},{"mag":0.212,"effectId":"Boosts_33","damageType":2},{"mag":0.212,"effectId":"Boosts_33","damageType":3},{"mag":0.212,"effectId":"Boosts_33","damageType":4},{"mag":0.212,"effectId":"Boosts_33","damageType":5},{"mag":0.212,"effectId":"Boosts_33","damageType":6},{"mag":0.212,"effectId":"Boosts_33","damageType":7},{"mag":0.212,"effectId":"Boosts_33","damageType":8},{"mag":0.2545,"effectId":"Interrupt"},{"mag":0.212,"effectId":"Recharge"}]},{"type":"set","description":{"short":"Enhances Damage, Reduces Endurance Cost and Increases Attack Rate","long":"Enhances the damage by {Boost.Attrib.Damage.Scale}%, endurance costs by {Boost.Attrib.Endurance.Scale}% and reduces recharge time by {Boost.Attrib.Recharge.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Extreme_Measures_E.Attuned_Extreme_Measures_E","setName":"Extreme_Measures","displayName":"Damage/Endurance/Recharge","effects":[{"mag":0.212,"effectId":"Damage","damageType":1},{"mag":0.212,"effectId":"Boosts_33","damageType":2},{"mag":0.212,"effectId":"Boosts_33","damageType":3},{"mag":0.212,"effectId":"Boosts_33","damageType":4},{"mag":0.212,"effectId":"Boosts_33","damageType":5},{"mag":0.212,"effectId":"Boosts_33","damageType":6},{"mag":0.212,"effectId":"Boosts_33","damageType":7},{"mag":0.212,"effectId":"Boosts_33","damageType":8},{"mag":0.212,"effectId":"Endurance"},{"mag":0.212,"effectId":"Recharge"}]},{"type":"set","description":{"short":"Enhances Accuracy, Range and Decreases Recharge Time","long":"Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}%, the range of a power by {Boost.Attrib.Range.Scale}% and reduces recharge time by {Boost.Attrib.Recharge.Scale}%"},"isUnique":false,"fullName":"Boosts.Attuned_Extreme_Measures_F.Attuned_Extreme_Measures_F","setName":"Extreme_Measures","displayName":"Accuracy/Range/Recharge","effects":[{"mag":0.212,"effectId":"Accuracy"},{"mag":0.212,"effectId":"Recharge"},{"mag":0.1275,"effectId":"Range"}]}],"levels":{"min":35,"max":50},"bonuses":["Improved_Recovery_2","Increased_Health_3","Increased_Damage_3","Increased_AoE_Fire_Cold_Def_3","Increased_Melee_Lethal_Smash_Def_3"],"setType":5,"displayName":"Extreme Measures","imageName":"sExtremeMeasures.png"}
+{
+  "fullName": "IOSet.Extreme_Measures",
+  "enhancements": [
+    {
+      "description": {
+        "short": "Enhances Accuracy and Damage",
+        "long": "Enhances the damage of a power by {Boost.Attrib.Damage.Scale}% and accuracy by {Boost.Attrib.Accuracy.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Extreme_Measures_A.Attuned_Extreme_Measures_A",
+              "damageType": "Smashing"
+            }
+          ]
+        },
+        {
+          "effectType": "Boosts_33",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Extreme_Measures_A.Attuned_Extreme_Measures_A",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Extreme_Measures_A.Attuned_Extreme_Measures_A",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Extreme_Measures_A.Attuned_Extreme_Measures_A",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Extreme_Measures_A.Attuned_Extreme_Measures_A",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Extreme_Measures_A.Attuned_Extreme_Measures_A",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Extreme_Measures_A.Attuned_Extreme_Measures_A",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Extreme_Measures_A.Attuned_Extreme_Measures_A",
+              "damageType": "Psionic"
+            }
+          ]
+        },
+        {
+          "effectType": "Accuracy",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 1,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Extreme_Measures_A.Attuned_Extreme_Measures_A"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Extreme_Measures_A.Attuned_Extreme_Measures_A",
+      "setName": "Extreme_Measures",
+      "displayName": "Accuracy/Damage"
+    },
+    {
+      "description": {
+        "short": "Enhances Damage and Reduces Endurance Cost",
+        "long": "Enhances the damage of a power by {Boost.Attrib.Damage.Scale}% and reduces endurance cost by {Boost.Attrib.Endurance.Scale}%"
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Extreme_Measures_B.Attuned_Extreme_Measures_B",
+              "damageType": "Smashing"
+            }
+          ]
+        },
+        {
+          "effectType": "Boosts_33",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Extreme_Measures_B.Attuned_Extreme_Measures_B",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Extreme_Measures_B.Attuned_Extreme_Measures_B",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Extreme_Measures_B.Attuned_Extreme_Measures_B",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Extreme_Measures_B.Attuned_Extreme_Measures_B",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Extreme_Measures_B.Attuned_Extreme_Measures_B",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Extreme_Measures_B.Attuned_Extreme_Measures_B",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Extreme_Measures_B.Attuned_Extreme_Measures_B",
+              "damageType": "Psionic"
+            }
+          ]
+        },
+        {
+          "effectType": "Endurance",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 8,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Extreme_Measures_B.Attuned_Extreme_Measures_B"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Extreme_Measures_B.Attuned_Extreme_Measures_B",
+      "setName": "Extreme_Measures",
+      "displayName": "Damage/Endurance"
+    },
+    {
+      "description": {
+        "short": "Enhances Accuracy, Range and Decreases Interrupt Time",
+        "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}%, the range of a power by {Boost.Attrib.Range.Scale}% and reduces interrupt time by {Boost.Attrib.Interrupt.Scale}%"
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Accuracy",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 1,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Extreme_Measures_C.Attuned_Extreme_Measures_C"
+            }
+          ]
+        },
+        {
+          "effectType": "Interrupt",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.2545
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 15,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Extreme_Measures_C.Attuned_Extreme_Measures_C"
+            }
+          ]
+        },
+        {
+          "effectType": "Range",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.1275
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 24,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Extreme_Measures_C.Attuned_Extreme_Measures_C"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Extreme_Measures_C.Attuned_Extreme_Measures_C",
+      "setName": "Extreme_Measures",
+      "displayName": "Accuracy/Interrupt/Range"
+    },
+    {
+      "description": {
+        "short": "Enhances Damage and Reduces Interrupt and Recharge Time",
+        "long": "Enhances the damage of a power by {Boost.Attrib.Damage.Scale}%, reduces interrupt time by {Boost.Attrib.Interrupt.Scale}% and and reduces recharge time by {Boost.Attrib.Recharge.Scale}%"
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Extreme_Measures_D.Attuned_Extreme_Measures_D",
+              "damageType": "Smashing"
+            }
+          ]
+        },
+        {
+          "effectType": "Boosts_33",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Extreme_Measures_D.Attuned_Extreme_Measures_D",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Extreme_Measures_D.Attuned_Extreme_Measures_D",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Extreme_Measures_D.Attuned_Extreme_Measures_D",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Extreme_Measures_D.Attuned_Extreme_Measures_D",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Extreme_Measures_D.Attuned_Extreme_Measures_D",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Extreme_Measures_D.Attuned_Extreme_Measures_D",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Extreme_Measures_D.Attuned_Extreme_Measures_D",
+              "damageType": "Psionic"
+            }
+          ]
+        },
+        {
+          "effectType": "Interrupt",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.2545
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 15,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Extreme_Measures_D.Attuned_Extreme_Measures_D"
+            }
+          ]
+        },
+        {
+          "effectType": "Recharge",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 25,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Extreme_Measures_D.Attuned_Extreme_Measures_D"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Extreme_Measures_D.Attuned_Extreme_Measures_D",
+      "setName": "Extreme_Measures",
+      "displayName": "Damage/Interrupt/Recharge"
+    },
+    {
+      "description": {
+        "short": "Enhances Damage, Reduces Endurance Cost and Increases Attack Rate",
+        "long": "Enhances the damage by {Boost.Attrib.Damage.Scale}%, endurance costs by {Boost.Attrib.Endurance.Scale}% and reduces recharge time by {Boost.Attrib.Recharge.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Extreme_Measures_E.Attuned_Extreme_Measures_E",
+              "damageType": "Smashing"
+            }
+          ]
+        },
+        {
+          "effectType": "Boosts_33",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Extreme_Measures_E.Attuned_Extreme_Measures_E",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Extreme_Measures_E.Attuned_Extreme_Measures_E",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Extreme_Measures_E.Attuned_Extreme_Measures_E",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Extreme_Measures_E.Attuned_Extreme_Measures_E",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Extreme_Measures_E.Attuned_Extreme_Measures_E",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Extreme_Measures_E.Attuned_Extreme_Measures_E",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Extreme_Measures_E.Attuned_Extreme_Measures_E",
+              "damageType": "Psionic"
+            }
+          ]
+        },
+        {
+          "effectType": "Endurance",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 8,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Extreme_Measures_E.Attuned_Extreme_Measures_E"
+            }
+          ]
+        },
+        {
+          "effectType": "Recharge",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 25,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Extreme_Measures_E.Attuned_Extreme_Measures_E"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Extreme_Measures_E.Attuned_Extreme_Measures_E",
+      "setName": "Extreme_Measures",
+      "displayName": "Damage/Endurance/Recharge"
+    },
+    {
+      "description": {
+        "short": "Enhances Accuracy, Range and Decreases Recharge Time",
+        "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}%, the range of a power by {Boost.Attrib.Range.Scale}% and reduces recharge time by {Boost.Attrib.Recharge.Scale}%"
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Accuracy",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 1,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Extreme_Measures_F.Attuned_Extreme_Measures_F"
+            }
+          ]
+        },
+        {
+          "effectType": "Recharge",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 25,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Extreme_Measures_F.Attuned_Extreme_Measures_F"
+            }
+          ]
+        },
+        {
+          "effectType": "Range",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.1275
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 24,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Extreme_Measures_F.Attuned_Extreme_Measures_F"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Extreme_Measures_F.Attuned_Extreme_Measures_F",
+      "setName": "Extreme_Measures",
+      "displayName": "Accuracy/Range/Recharge"
+    }
+  ],
+  "levels": {
+    "min": 35,
+    "max": 50
+  },
+  "bonuses": [
+    {
+      "description": {
+        "short": "+Recovery",
+        "long": "Improves your Recovery by 1.5%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 2,
+      "powerSetIndex": 145,
+      "fullName": "Set_Bonus.Set_Bonus.Improved_Recovery_2",
+      "setName": "Set_Bonus",
+      "displayName": "Small Improved Recovery Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.015
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Recovery",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Improved_Recovery_2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+Max HP",
+        "long": "Increases maximum health by 1.5%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 3,
+      "powerSetIndex": 286,
+      "fullName": "Set_Bonus.Set_Bonus.Increased_Health_3",
+      "setName": "Set_Bonus",
+      "displayName": "Moderate Increased Health Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "HealSelf",
+          "values": [
+            {
+              "mag": {
+                "pve": 18.0713863
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "HitPoints",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Health_3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+DMG",
+        "long": "Increases damage by 2%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 4,
+      "powerSetIndex": 216,
+      "fullName": "Set_Bonus.Set_Bonus.Increased_Damage_3",
+      "setName": "Set_Bonus",
+      "displayName": "Moderate Increased Damage Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.02
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "DamageBuff",
+              "toWho": "All",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Damage_3",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 0.02
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "DamageBuff",
+              "toWho": "All",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Damage_3",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.02
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "DamageBuff",
+              "toWho": "All",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Damage_3",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.02
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "DamageBuff",
+              "toWho": "All",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Damage_3",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 0.02
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "DamageBuff",
+              "toWho": "All",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Damage_3",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.02
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "DamageBuff",
+              "toWho": "All",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Damage_3",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.02
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "DamageBuff",
+              "toWho": "All",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Damage_3",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pve": 0.02
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "DamageBuff",
+              "toWho": "All",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Damage_3",
+              "damageType": "Psionic"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+DEF",
+        "long": "Increases area effect defense by 2.5% and fire and cold defense by 1.25%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 5,
+      "powerSetIndex": 195,
+      "fullName": "Set_Bonus.Set_Bonus.Increased_AoE_Fire_Cold_Def_3",
+      "setName": "Set_Bonus",
+      "displayName": "Moderate Increased AoE/Fire/Cold Def Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.025
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_AoE_Fire_Cold_Def_3",
+              "damageType": "AoE"
+            },
+            {
+              "mag": {
+                "pve": 0.0125
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_AoE_Fire_Cold_Def_3",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.0125
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_AoE_Fire_Cold_Def_3",
+              "damageType": "Cold"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+DEF",
+        "long": "Increases melee defense by 2.5% and lethal and smashing defense by 1.25%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 6,
+      "powerSetIndex": 321,
+      "fullName": "Set_Bonus.Set_Bonus.Increased_Melee_Lethal_Smash_Def_3",
+      "setName": "Set_Bonus",
+      "displayName": "Moderate Increased Melee/Lethal/Smashing Def Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.025
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Melee_Lethal_Smash_Def_3",
+              "damageType": "Melee"
+            },
+            {
+              "mag": {
+                "pve": 0.0125
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Melee_Lethal_Smash_Def_3",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.0125
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Melee_Lethal_Smash_Def_3",
+              "damageType": "Smashing"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "setType": 5,
+  "displayName": "Extreme Measures",
+  "imageName": "sExtremeMeasures.png"
+}

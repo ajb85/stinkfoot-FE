@@ -1,1 +1,463 @@
-{"fullName":"IOSet.Horror","enhancements":[{"type":"set","description":{"short":"+ACC, +Rech","long":"Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Horror_A.Attuned_Horror_A","setName":"Horror","displayName":"Accuracy/Recharge","effects":[{"mag":0.265,"effectId":"Recharge"},{"mag":0.265,"effectId":"Accuracy"}]},{"type":"set","description":{"short":"-End Cost, +Fear","long":"Enhances the fear duration of a power by {Boost.Attrib.Terrorized.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Horror_B.Attuned_Horror_B","setName":"Horror","displayName":"Endurance/Fear","effects":[{"mag":0.265,"effectId":"Endurance"},{"mag":0.265,"effectId":"Terrorized","mezType":12}]},{"type":"set","description":{"short":"+ACC, -End Cost","long":"Enhances the accuracy by {Boost.Attrib.Accuracy.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Horror_C.Attuned_Horror_C","setName":"Horror","displayName":"Accuracy/Endurance","effects":[{"mag":0.265,"effectId":"Accuracy"},{"mag":0.265,"effectId":"Endurance"}]},{"type":"set","description":{"short":"+Range, +Fear","long":"Enhances the range of a power by {Boost.Attrib.Range.Scale}% and fear duration by {Boost.Attrib.Fear.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Horror_D.Attuned_Horror_D","setName":"Horror","displayName":"Fear/Range","effects":[{"mag":0.265,"effectId":"Fear","mezType":12},{"mag":0.159375,"effectId":"Range"}]},{"type":"set","description":{"short":"+ACC, +Rech, +Fear","long":"Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}%, Fear duration by {Boost.Attrib.Fear.Scale}% and reduces the attack rate by {Boost.Attrib.Recharge.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Horror_E.Attuned_Horror_E","setName":"Horror","displayName":"Accuracy/Fear/Recharge","effects":[{"mag":0.212,"effectId":"Fear","mezType":12},{"mag":0.212,"effectId":"Accuracy"},{"mag":0.212,"effectId":"Recharge"}]}],"levels":{"min":10,"max":30},"bonuses":["Fear_Dur_1","Increased_Health_1","Lethal_Smash_Mez_Res_2","Improved_Recharge_Time_1"],"setType":15,"displayName":"Horror","imageName":"sHorror.png"}
+{
+  "fullName": "IOSet.Horror",
+  "enhancements": [
+    {
+      "description": {
+        "short": "+ACC, +Rech",
+        "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Recharge",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 25,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Horror_A.Attuned_Horror_A"
+            }
+          ]
+        },
+        {
+          "effectType": "Accuracy",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 1,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Horror_A.Attuned_Horror_A"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Horror_A.Attuned_Horror_A",
+      "setName": "Horror",
+      "displayName": "Accuracy/Recharge"
+    },
+    {
+      "description": {
+        "short": "-End Cost, +Fear",
+        "long": "Enhances the fear duration of a power by {Boost.Attrib.Terrorized.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Endurance",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 8,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Horror_B.Attuned_Horror_B"
+            }
+          ]
+        },
+        {
+          "effectType": "Terrorized",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 19,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Horror_B.Attuned_Horror_B",
+              "mezType": "Terrorize"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Horror_B.Attuned_Horror_B",
+      "setName": "Horror",
+      "displayName": "Endurance/Fear"
+    },
+    {
+      "description": {
+        "short": "+ACC, -End Cost",
+        "long": "Enhances the accuracy by {Boost.Attrib.Accuracy.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Accuracy",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 1,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Horror_C.Attuned_Horror_C"
+            }
+          ]
+        },
+        {
+          "effectType": "Endurance",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 8,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Horror_C.Attuned_Horror_C"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Horror_C.Attuned_Horror_C",
+      "setName": "Horror",
+      "displayName": "Accuracy/Endurance"
+    },
+    {
+      "description": {
+        "short": "+Range, +Fear",
+        "long": "Enhances the range of a power by {Boost.Attrib.Range.Scale}% and fear duration by {Boost.Attrib.Fear.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Fear",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 19,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Horror_D.Attuned_Horror_D",
+              "mezType": "Terrorize"
+            }
+          ]
+        },
+        {
+          "effectType": "Range",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.159375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 24,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Horror_D.Attuned_Horror_D"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Horror_D.Attuned_Horror_D",
+      "setName": "Horror",
+      "displayName": "Fear/Range"
+    },
+    {
+      "description": {
+        "short": "+ACC, +Rech, +Fear",
+        "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}%, Fear duration by {Boost.Attrib.Fear.Scale}% and reduces the attack rate by {Boost.Attrib.Recharge.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Fear",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 19,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Horror_E.Attuned_Horror_E",
+              "mezType": "Terrorize"
+            }
+          ]
+        },
+        {
+          "effectType": "Accuracy",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 1,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Horror_E.Attuned_Horror_E"
+            }
+          ]
+        },
+        {
+          "effectType": "Recharge",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 25,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Horror_E.Attuned_Horror_E"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Horror_E.Attuned_Horror_E",
+      "setName": "Horror",
+      "displayName": "Accuracy/Fear/Recharge"
+    }
+  ],
+  "levels": {
+    "min": 10,
+    "max": 30
+  },
+  "bonuses": [
+    {
+      "description": {
+        "short": "+Duration Fear",
+        "long": "Improves the duration of your Fear effects by 1.1%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 2,
+      "powerSetIndex": 66,
+      "fullName": "Set_Bonus.Set_Bonus.Fear_Dur_1",
+      "setName": "Set_Bonus",
+      "displayName": "Tiny Fear Duration Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.011
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 19,
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Fear_Dur_1",
+              "mezType": "Terrorize"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+Max HP",
+        "long": "Increases maximum health by 0.75%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 3,
+      "powerSetIndex": 284,
+      "fullName": "Set_Bonus.Set_Bonus.Increased_Health_1",
+      "setName": "Set_Bonus",
+      "displayName": "Tiny Increased Health Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "HealSelf",
+          "values": [
+            {
+              "mag": {
+                "pve": 9.035693
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "HitPoints",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Health_1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+Res (Lethal, Smash, Mez)",
+        "long": "Increases Lethal and Smashing resistance by 2.25% and Mez Resistance by 3.75%"
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 4,
+      "powerSetIndex": 447,
+      "fullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_2",
+      "setName": "Set_Bonus",
+      "displayName": "Small Lethal, Smash and Mez Resistance",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.0225
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_2",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.0225
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_2",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_2",
+              "mezType": "Immobilization"
+            },
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_2",
+              "mezType": "Hold"
+            },
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_2",
+              "mezType": "Stun"
+            },
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_2",
+              "mezType": "Sleep"
+            },
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_2",
+              "mezType": "Terrorize"
+            },
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_2",
+              "mezType": "Confuse"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+Recharge Time",
+        "long": "Improves the Recharge Time of all of your powers by 2.5%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 5,
+      "powerSetIndex": 137,
+      "fullName": "Set_Bonus.Set_Bonus.Improved_Recharge_Time_1",
+      "setName": "Set_Bonus",
+      "displayName": "Tiny Improved Recharge Time Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.025
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 25,
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Improved_Recharge_Time_1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "setType": 15,
+  "displayName": "Horror",
+  "imageName": "sHorror.png"
+}

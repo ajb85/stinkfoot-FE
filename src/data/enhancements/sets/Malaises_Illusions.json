@@ -1,1 +1,565 @@
-{"fullName":"IOSet.Malaises_Illusions","enhancements":[{"type":"set","description":{"short":"+ACC, +Rech","long":"Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Malaises_Illusions_A.Attuned_Malaises_Illusions_A","setName":"Malaises_Illusions","displayName":"Accuracy/Recharge","effects":[{"mag":0.265,"effectId":"Recharge"},{"mag":0.265,"effectId":"Accuracy"}]},{"type":"set","description":{"short":"-End Cost, +Confuse","long":"Enhances the confuse duration of a power by {Boost.Attrib.Confused.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Malaises_Illusions_B.Attuned_Malaises_Illusions_B","setName":"Malaises_Illusions","displayName":"Endurance/Confuse","effects":[{"mag":0.265,"effectId":"Endurance"},{"mag":0.265,"effectId":"Confused","mezType":1}]},{"type":"set","description":{"short":"+ACC, -End Cost","long":"Enhances the accuracy by {Boost.Attrib.Accuracy.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Malaises_Illusions_C.Attuned_Malaises_Illusions_C","setName":"Malaises_Illusions","displayName":"Accuracy/Endurance","effects":[{"mag":0.265,"effectId":"Accuracy"},{"mag":0.265,"effectId":"Endurance"}]},{"type":"set","description":{"short":"+Range, +Confuse","long":"Enhances the range of a power by {Boost.Attrib.Range.Scale}% and confuse duration by {Boost.Attrib.confuse.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Malaises_Illusions_D.Attuned_Malaises_Illusions_D","setName":"Malaises_Illusions","displayName":"Confuse/Range","effects":[{"mag":0.265,"effectId":"Confuse","mezType":1},{"mag":0.159375,"effectId":"Range"}]},{"type":"set","description":{"short":"+ACC, +Rech, +Confuse","long":"Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}%, Confuse duration by {Boost.Attrib.Confuse.Scale}% and reduces the attack rate by {Boost.Attrib.Recharge.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Malaises_Illusions_E.Attuned_Malaises_Illusions_E","setName":"Malaises_Illusions","displayName":"Accuracy/Confuse/Recharge","effects":[{"mag":0.212,"effectId":"Confuse","mezType":1},{"mag":0.212,"effectId":"Accuracy"},{"mag":0.212,"effectId":"Recharge"}]},{"type":"set","description":{"short":"Chance for Psionic DMG","long":"Provides a chance to cause minor psionic damage to your targets.  This effect will trigger roughly 3.5 times per minute."},"isUnique":false,"fullName":"Boosts.Attuned_Malaises_Illusions_F.Attuned_Malaises_Illusions_F","setName":"Malaises_Illusions","displayName":"Chance for Psionic Damage","effects":[{"procsPerMinute":3.5,"cancelOnMiss":true,"mag":71.7501,"effectId":"Damage","damageType":8,"stacking":1,"resistible":true,"pvMode":1},{"procsPerMinute":3.5,"cancelOnMiss":true,"mag":71.7501,"effectId":"TempDamage","damageType":8,"stacking":1,"pvMode":2}]}],"levels":{"min":20,"max":50},"bonuses":["Improved_Recovery_4","Confuse_Dur_4","Increased_Damage_4","Improved_Recharge_Time_4","Increased_Ranged_Energy_Neg_Def_4"],"setType":16,"displayName":"Malaise's Illusions","imageName":"sMalaisesIllusions.png"}
+{
+  "fullName": "IOSet.Malaises_Illusions",
+  "enhancements": [
+    {
+      "description": {
+        "short": "+ACC, +Rech",
+        "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Recharge",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 25,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Malaises_Illusions_A.Attuned_Malaises_Illusions_A"
+            }
+          ]
+        },
+        {
+          "effectType": "Accuracy",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 1,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Malaises_Illusions_A.Attuned_Malaises_Illusions_A"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Malaises_Illusions_A.Attuned_Malaises_Illusions_A",
+      "setName": "Malaises_Illusions",
+      "displayName": "Accuracy/Recharge"
+    },
+    {
+      "description": {
+        "short": "-End Cost, +Confuse",
+        "long": "Enhances the confuse duration of a power by {Boost.Attrib.Confused.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Endurance",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 8,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Malaises_Illusions_B.Attuned_Malaises_Illusions_B"
+            }
+          ]
+        },
+        {
+          "effectType": "Confused",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 19,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Malaises_Illusions_B.Attuned_Malaises_Illusions_B",
+              "mezType": "Confuse"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Malaises_Illusions_B.Attuned_Malaises_Illusions_B",
+      "setName": "Malaises_Illusions",
+      "displayName": "Endurance/Confuse"
+    },
+    {
+      "description": {
+        "short": "+ACC, -End Cost",
+        "long": "Enhances the accuracy by {Boost.Attrib.Accuracy.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Accuracy",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 1,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Malaises_Illusions_C.Attuned_Malaises_Illusions_C"
+            }
+          ]
+        },
+        {
+          "effectType": "Endurance",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 8,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Malaises_Illusions_C.Attuned_Malaises_Illusions_C"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Malaises_Illusions_C.Attuned_Malaises_Illusions_C",
+      "setName": "Malaises_Illusions",
+      "displayName": "Accuracy/Endurance"
+    },
+    {
+      "description": {
+        "short": "+Range, +Confuse",
+        "long": "Enhances the range of a power by {Boost.Attrib.Range.Scale}% and confuse duration by {Boost.Attrib.confuse.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Confuse",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 19,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Malaises_Illusions_D.Attuned_Malaises_Illusions_D",
+              "mezType": "Confuse"
+            }
+          ]
+        },
+        {
+          "effectType": "Range",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.159375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 24,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Malaises_Illusions_D.Attuned_Malaises_Illusions_D"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Malaises_Illusions_D.Attuned_Malaises_Illusions_D",
+      "setName": "Malaises_Illusions",
+      "displayName": "Confuse/Range"
+    },
+    {
+      "description": {
+        "short": "+ACC, +Rech, +Confuse",
+        "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}%, Confuse duration by {Boost.Attrib.Confuse.Scale}% and reduces the attack rate by {Boost.Attrib.Recharge.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Confuse",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 19,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Malaises_Illusions_E.Attuned_Malaises_Illusions_E",
+              "mezType": "Confuse"
+            }
+          ]
+        },
+        {
+          "effectType": "Accuracy",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 1,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Malaises_Illusions_E.Attuned_Malaises_Illusions_E"
+            }
+          ]
+        },
+        {
+          "effectType": "Recharge",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 25,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Malaises_Illusions_E.Attuned_Malaises_Illusions_E"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Malaises_Illusions_E.Attuned_Malaises_Illusions_E",
+      "setName": "Malaises_Illusions",
+      "displayName": "Accuracy/Confuse/Recharge"
+    },
+    {
+      "description": {
+        "short": "Chance for Psionic DMG",
+        "long": "Provides a chance to cause minor psionic damage to your targets.  This effect will trigger roughly 3.5 times per minute."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 71.7501
+              },
+              "procsPerMinute": 3.5,
+              "cancelOnMiss": true,
+              "effectType": "Damage",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "All",
+              "powerFullName": "Boosts.Attuned_Malaises_Illusions_F.Attuned_Malaises_Illusions_F",
+              "damageType": "Psionic"
+            }
+          ]
+        },
+        {
+          "effectType": "TempDamage",
+          "values": [
+            {
+              "mag": {
+                "pvp": 71.7501
+              },
+              "procsPerMinute": 3.5,
+              "cancelOnMiss": true,
+              "effectType": "Damage",
+              "stacking": 1,
+              "toWho": "All",
+              "powerFullName": "Boosts.Attuned_Malaises_Illusions_F.Attuned_Malaises_Illusions_F",
+              "damageType": "Psionic"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Malaises_Illusions_F.Attuned_Malaises_Illusions_F",
+      "setName": "Malaises_Illusions",
+      "displayName": "Chance for Psionic Damage"
+    }
+  ],
+  "levels": {
+    "min": 20,
+    "max": 50
+  },
+  "bonuses": [
+    {
+      "description": {
+        "short": "+Recovery",
+        "long": "Improves your Recovery by 2.5%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 2,
+      "powerSetIndex": 147,
+      "fullName": "Set_Bonus.Set_Bonus.Improved_Recovery_4",
+      "setName": "Set_Bonus",
+      "displayName": "Large Improved Recovery Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.025
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Recovery",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Improved_Recovery_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+Duration Confuse",
+        "long": "Improves the duration of your Confuse effects by 2.5%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 3,
+      "powerSetIndex": 25,
+      "fullName": "Set_Bonus.Set_Bonus.Confuse_Dur_4",
+      "setName": "Set_Bonus",
+      "displayName": "Large Confuse Duration Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.025
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 19,
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Confuse_Dur_4",
+              "mezType": "Confuse"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+DMG",
+        "long": "Increases damage by 2.5%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 4,
+      "powerSetIndex": 217,
+      "fullName": "Set_Bonus.Set_Bonus.Increased_Damage_4",
+      "setName": "Set_Bonus",
+      "displayName": "Large Increased Damage Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.025
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "DamageBuff",
+              "toWho": "All",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Damage_4",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 0.025
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "DamageBuff",
+              "toWho": "All",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Damage_4",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.025
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "DamageBuff",
+              "toWho": "All",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Damage_4",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.025
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "DamageBuff",
+              "toWho": "All",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Damage_4",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 0.025
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "DamageBuff",
+              "toWho": "All",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Damage_4",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.025
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "DamageBuff",
+              "toWho": "All",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Damage_4",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.025
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "DamageBuff",
+              "toWho": "All",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Damage_4",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pve": 0.025
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "DamageBuff",
+              "toWho": "All",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Damage_4",
+              "damageType": "Psionic"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+Recharge Time",
+        "long": "Improves the Recharge Time of all of your powers by 6.25%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 5,
+      "powerSetIndex": 140,
+      "fullName": "Set_Bonus.Set_Bonus.Improved_Recharge_Time_4",
+      "setName": "Set_Bonus",
+      "displayName": "Large Improved Recharge Time Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.0625
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 25,
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Improved_Recharge_Time_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+DEF",
+        "long": "Increases ranged defense by 3.13% and energy and negative energy defense by 1.565%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 6,
+      "powerSetIndex": 385,
+      "fullName": "Set_Bonus.Set_Bonus.Increased_Ranged_Energy_Neg_Def_4",
+      "setName": "Set_Bonus",
+      "displayName": "Large Increased Ranged/Energy/Negative Energy Def Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.03125
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Ranged_Energy_Neg_Def_4",
+              "damageType": "Ranged"
+            },
+            {
+              "mag": {
+                "pve": 0.01563
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Ranged_Energy_Neg_Def_4",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.01563
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Ranged_Energy_Neg_Def_4",
+              "damageType": "Negative"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "setType": 16,
+  "displayName": "Malaise's Illusions",
+  "imageName": "sMalaisesIllusions.png"
+}

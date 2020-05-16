@@ -1,1 +1,707 @@
-{"fullName":"Epic_Flame_Mastery","archetypeOrder":"epicPool","description":"You have Mastery over Fire and Flame to control your foes and to add some much needed armor and defense.","imageName":"FireMastery.png","displayName":"Flame Mastery","powers":[{"allowedEnhancements":["Accuracy","Damage","Endurance_Discount","Recharge","Endurance_Modification"],"enhancementCount":6,"archetypeOrder":"epicPool","powerIndex":0,"castTimeReal":3.828,"toggleCost":0.65,"fullName":"Epic_Flame_Mastery_Consume","displayName":"Consume","requires":{"powers":{"Epic.Fire_Mastery.Fire_Blast":true,"Epic.Fire_Mastery.Fire_Ball":true,"Epic.Fire_Mastery.Fire_Shield":true,"Epic.Fire_Mastery.Rise_of_the_Phoenix":true},"count":2},"accuracy":1,"accuracyMult":1,"attackTypes":68,"target":1,"targetLoS":true,"endCost":0.65,"rechargeTime":360,"effectArea":2,"radius":20,"maxTargets":10,"numAllowed":1,"description":{"short":"PBAoE, Minor DMG(Fire), Self +End","long":"You can drain body heat from all nearby foes in order to replenish your own Endurance. The more foes affected, the more Endurance is gained. Foes suffer minimal Fire damage. You must be level 47 and have two other Fire Mastery Powers before selecting this power. Damage: Minor, Recharge: Very Long"},"setTypes":[4,22,44],"clickBuff":true,"level":35,"variableEnabled":true,"variableMin":1,"variableMax":10,"ignoreEnh":[],"ignore_Buff":[],"neverAutoUpdate":true,"castTime":3.828,"slottable":true,"aoeModifier":4},{"allowedEnhancements":["Accuracy","Damage","Endurance_Discount","Hold","Range","Recharge"],"enhancementCount":6,"archetypeOrder":"epicPool","powerIndex":1,"castTimeReal":1.07,"toggleCost":10.66,"fullName":"Epic_Flame_Mastery_Char","displayName":"Char","requires":{"powers":{},"count":0},"accuracy":1,"accuracyMult":1,"attackTypes":66,"target":2048,"targetLoS":true,"range":50,"endCost":10.66,"rechargeTime":32,"effectArea":1,"numAllowed":1,"description":{"short":"Ranged, Minor DoT(Fire), Foe Hold","long":"Incapacitates a distant foe by Charring him with smoldering soot and cinders. The target is left helpless, choking on the soot. The target will take some fire damage from char, but the damage is very trivial. Damage: Minor(DoT), Recharge: Moderate"},"setTypes":[2,10,44],"level":35,"ignoreEnh":[],"ignore_Buff":[],"castTime":1.07,"slottable":true,"aoeModifier":1},{"allowedEnhancements":["Endurance_Discount","Recharge","Res_Damage"],"enhancementCount":6,"archetypeOrder":"epicPool","powerIndex":2,"castTimeReal":1.67,"toggleCost":0.325,"fullName":"Epic_Flame_Mastery_Fire_Shield","displayName":"Fire Shield","requires":{"powers":{"Epic.Fire_Mastery.Fire_Blast":true,"Epic.Fire_Mastery.Fire_Ball":true},"count":1},"accuracy":1,"accuracyMult":1,"target":1,"targetLoS":true,"endCost":0.1625,"rechargeTime":2,"activatePeriod":0.5,"effectArea":1,"numAllowed":1,"ignoreStrength":true,"description":{"short":"Toggle: Self +Res(Fire, Lethal, Smash, Cold)","long":"While this power is active, you get a good resistance to Lethal, Smashing and Fire damage. Fire Shield also provides minimal resistance to Cold damage. You must be level 41 and have Fire Blast or Fire Ball before selecting this power. Recharge: Very Fast"},"setTypes":[8],"alwaysToggle":true,"level":41,"ignoreEnh":[],"ignore_Buff":[],"castTime":1.67,"slottable":true,"aoeModifier":1},{"allowedEnhancements":["Damage","Heal","Recharge","Endurance_Modification","Stun"],"enhancementCount":6,"archetypeOrder":"epicPool","powerIndex":3,"castTimeReal":1.5,"fullName":"Epic_Flame_Mastery_Rise_of_the_Phoenix","displayName":"Rise of the Phoenix","requires":{"powers":{"Epic.Fire_Mastery_Dominator.Fire_Blast":true,"Epic.Fire_Mastery_Dominator.Fire_Ball":true},"count":1},"accuracy":1,"accuracyMult":1,"target":1,"targetLoS":true,"rechargeTime":300,"effectArea":4,"castFlags":4,"numAllowed":1,"description":{"short":"Self Rez, Special","long":"If you are defeated, you can rise from the ashes. The fiery resurrection blasts nearby foes with an explosion and knocks them down. You will revive with about half of your Hit Points and Endurance. Rise of the Phoenix will actually leave you invulnerable for a brief time and protected from XP Debt for 20 seconds. You must be level 41 and have Rain of Fire or Fire Ball before selecting this power. Recharge: Very Long"},"setTypes":[4,9,11,22,44],"level":41,"ignoreEnh":[],"ignore_Buff":[],"absorbSummonEffects":true,"castTime":1.5,"slottable":true,"aoeModifier":1},{"allowedEnhancements":["Accuracy","Damage","Endurance_Discount","Recharge","Taunt"],"enhancementCount":6,"archetypeOrder":"epicPool","powerIndex":4,"castTimeReal":2.33,"toggleCost":12.688,"fullName":"Epic_Flame_Mastery_Greater_Fire_Sword","displayName":"Greater Fire Sword","requires":{"powers":{},"count":0},"accuracy":1.2,"accuracyMult":1.2,"attackTypes":81,"target":2048,"targetLoS":true,"range":7,"endCost":12.688,"rechargeTime":12,"effectArea":1,"numAllowed":1,"description":{"short":"Melee, Superior DMG(Fire/Lethal)","long":"Your mastery of fire allows you to create an enhanced Sword of Fire that can set foes ablaze. Successful attacks from the Greater Fire Sword will ignite your target, dealing damage over time. Damage: Superior, Recharge: Slow"},"setTypes":[1,24,34,44],"level":43,"ignoreEnh":[13],"ignore_Buff":[],"castTime":2.33,"slottable":true,"aoeModifier":1}]}
+{
+  "fullName": "Epic_Flame_Mastery",
+  "archetypeOrder": "epicPool",
+  "description": "You have Mastery over Fire and Flame to control your foes and to add some much needed armor and defense.",
+  "imageName": "FireMastery.png",
+  "displayName": "Flame Mastery",
+  "powers": [
+    {
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Recharge",
+        "Endurance_Modification"
+      ],
+      "enhancementCount": 6,
+      "archetypeOrder": "epicPool",
+      "effects": [
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 22.24408,
+                "pvp": 22.24408
+              },
+              "probability": 1,
+              "effectType": "Damage",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Epic.Fire_Mastery.Consume",
+              "damageType": "Fire"
+            }
+          ]
+        },
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 20
+              },
+              "probability": 1,
+              "variableModified": true,
+              "effectType": "Endurance",
+              "delayedTime": 0.25,
+              "stacking": 1,
+              "toWho": "Self",
+              "powerFullName": "Epic.Fire_Mastery.Consume"
+            },
+            {
+              "mag": {
+                "pve": 0.05
+              },
+              "probability": 1,
+              "duration": 15,
+              "variableModified": true,
+              "effectType": "Recovery",
+              "delayedTime": 0.25,
+              "stacking": 1,
+              "toWho": "Self",
+              "powerFullName": "Epic.Fire_Mastery.Consume",
+              "requiresToHitCheck": true
+            },
+            {
+              "mag": {
+                "pve": 0.5
+              },
+              "probability": 1,
+              "duration": 120,
+              "effectType": "ResEffect",
+              "eTModifies": 7,
+              "delayedTime": 0.25,
+              "toWho": "Self",
+              "powerFullName": "Epic.Fire_Mastery.Consume"
+            }
+          ]
+        }
+      ],
+      "powerIndex": 0,
+      "castTimeReal": 3.828,
+      "toggleCost": 0.65,
+      "fullName": "Epic_Flame_Mastery_Consume",
+      "displayName": "Consume",
+      "requires": {
+        "powers": {
+          "Epic.Fire_Mastery.Fire_Blast": true,
+          "Epic.Fire_Mastery.Fire_Ball": true,
+          "Epic.Fire_Mastery.Fire_Shield": true,
+          "Epic.Fire_Mastery.Rise_of_the_Phoenix": true
+        },
+        "count": 2
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "attackTypes": 68,
+      "target": 1,
+      "targetLoS": true,
+      "endCost": 0.65,
+      "rechargeTime": 360,
+      "effectArea": 2,
+      "radius": 20,
+      "maxTargets": 10,
+      "numAllowed": 1,
+      "description": {
+        "short": "PBAoE, Minor DMG(Fire), Self +End",
+        "long": "You can drain body heat from all nearby foes in order to replenish your own Endurance. The more foes affected, the more Endurance is gained. Foes suffer minimal Fire damage. You must be level 47 and have two other Fire Mastery Powers before selecting this power. Damage: Minor, Recharge: Very Long"
+      },
+      "setTypes": [
+        4,
+        22,
+        44
+      ],
+      "clickBuff": true,
+      "level": 35,
+      "variableEnabled": true,
+      "variableMin": 1,
+      "variableMax": 10,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "neverAutoUpdate": true,
+      "castTime": 3.828,
+      "slottable": true,
+      "aoeModifier": 4
+    },
+    {
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Hold",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "archetypeOrder": "epicPool",
+      "effects": [
+        {
+          "effectType": "Immobilize",
+          "values": [
+            {
+              "mag": {
+                "pve": 3
+              },
+              "probability": 1,
+              "duration": 14.3040009,
+              "effectType": "Mez",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "attribType": 1,
+              "powerFullName": "Epic.Pyre_Mastery.Char",
+              "mezType": "Hold"
+            }
+          ]
+        },
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pvp": 3
+              },
+              "probability": 1,
+              "duration": 2,
+              "effectType": "Mez",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "attribType": 1,
+              "powerFullName": "Epic.Pyre_Mastery.Char",
+              "mezType": "Hold"
+            },
+            {
+              "mag": {
+                "pvp": 4
+              },
+              "probability": 0.13,
+              "duration": 6,
+              "effectType": "Mez",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "attribType": 1,
+              "powerFullName": "Epic.Pyre_Mastery.Char",
+              "mezType": "Taunt"
+            }
+          ]
+        },
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pvp": 27.40415,
+                "pve": 5.56102
+              },
+              "probability": 1,
+              "duration": 4.2,
+              "effectType": "Damage",
+              "ticks": 5,
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Epic.Pyre_Mastery.Char",
+              "damageType": "Fire"
+            }
+          ]
+        },
+        {
+          "effectType": "InherentTaunt",
+          "values": [
+            {
+              "mag": {
+                "pve": 4
+              },
+              "cancelOnMiss": true,
+              "probability": 1,
+              "duration": 13.6,
+              "effectType": "Mez",
+              "stacking": 1,
+              "resistible": true,
+              "specialCase": 14,
+              "toWho": "Target",
+              "attribType": 1,
+              "powerFullName": "Epic.Pyre_Mastery.Char",
+              "requiresToHitCheck": true,
+              "mezType": "Taunt"
+            }
+          ]
+        },
+        {
+          "effectType": "FieryEmbrace",
+          "values": [
+            {
+              "mag": {
+                "pve": 2.502459
+              },
+              "duration": 4.2,
+              "effectType": "Damage",
+              "ticks": 5,
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Epic.Pyre_Mastery.Char",
+              "damageType": "Fire"
+            }
+          ]
+        }
+      ],
+      "powerIndex": 1,
+      "castTimeReal": 1.07,
+      "toggleCost": 10.66,
+      "fullName": "Epic_Flame_Mastery_Char",
+      "displayName": "Char",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "attackTypes": 66,
+      "target": 2048,
+      "targetLoS": true,
+      "range": 50,
+      "endCost": 10.66,
+      "rechargeTime": 32,
+      "effectArea": 1,
+      "numAllowed": 1,
+      "description": {
+        "short": "Ranged, Minor DoT(Fire), Foe Hold",
+        "long": "Incapacitates a distant foe by Charring him with smoldering soot and cinders. The target is left helpless, choking on the soot. The target will take some fire damage from char, but the damage is very trivial. Damage: Minor(DoT), Recharge: Moderate"
+      },
+      "setTypes": [
+        2,
+        10,
+        44
+      ],
+      "level": 35,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 1.07,
+      "slottable": true,
+      "aoeModifier": 1
+    },
+    {
+      "allowedEnhancements": [
+        "Endurance_Discount",
+        "Recharge",
+        "Res_Damage"
+      ],
+      "enhancementCount": 6,
+      "archetypeOrder": "epicPool",
+      "effects": [
+        {
+          "effectType": "Res_Dmg",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.1925,
+                "pvp": 0.1925
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Epic.Fire_Mastery.Fire_Shield",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 0.1925,
+                "pvp": 0.1925
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Epic.Fire_Mastery.Fire_Shield",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.14,
+                "pvp": 0.210000008
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Epic.Fire_Mastery.Fire_Shield",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.07,
+                "pvp": 0.1925
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Epic.Fire_Mastery.Fire_Shield",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pvp": 0.1925
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Epic.Fire_Mastery.Fire_Shield",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pvp": 0.1925
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Epic.Fire_Mastery.Fire_Shield",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pvp": 0.1925
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Epic.Fire_Mastery.Fire_Shield",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pvp": 0.1925
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Epic.Fire_Mastery.Fire_Shield",
+              "damageType": "Psionic"
+            }
+          ]
+        }
+      ],
+      "powerIndex": 2,
+      "castTimeReal": 1.67,
+      "toggleCost": 0.325,
+      "fullName": "Epic_Flame_Mastery_Fire_Shield",
+      "displayName": "Fire Shield",
+      "requires": {
+        "powers": {
+          "Epic.Fire_Mastery.Fire_Blast": true,
+          "Epic.Fire_Mastery.Fire_Ball": true
+        },
+        "count": 1
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "target": 1,
+      "targetLoS": true,
+      "endCost": 0.1625,
+      "rechargeTime": 2,
+      "activatePeriod": 0.5,
+      "effectArea": 1,
+      "numAllowed": 1,
+      "ignoreStrength": true,
+      "description": {
+        "short": "Toggle: Self +Res(Fire, Lethal, Smash, Cold)",
+        "long": "While this power is active, you get a good resistance to Lethal, Smashing and Fire damage. Fire Shield also provides minimal resistance to Cold damage. You must be level 41 and have Fire Blast or Fire Ball before selecting this power. Recharge: Very Fast"
+      },
+      "setTypes": [
+        8
+      ],
+      "alwaysToggle": true,
+      "level": 41,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 1.67,
+      "slottable": true,
+      "aoeModifier": 1,
+      "powerType": "Toggle"
+    },
+    {
+      "allowedEnhancements": [
+        "Damage",
+        "Heal",
+        "Recharge",
+        "Endurance_Modification",
+        "Stun"
+      ],
+      "enhancementCount": 6,
+      "archetypeOrder": "epicPool",
+      "effects": [
+        {
+          "effectType": "HealSelf",
+          "values": [
+            {
+              "mag": {
+                "pve": 602.3795
+              },
+              "probability": 1,
+              "duration": 0.5,
+              "variableModified": true,
+              "effectType": "Heal",
+              "ticks": 1,
+              "stacking": 1,
+              "toWho": "Self",
+              "powerFullName": "Epic.Fire_Mastery_Dominator.Rise_of_the_Phoenix"
+            }
+          ]
+        },
+        {
+          "effectType": "Level",
+          "values": [
+            {
+              "mag": {
+                "pve": 50
+              },
+              "probability": 1,
+              "duration": 5,
+              "variableModified": true,
+              "effectType": "EntCreate",
+              "stacking": 1,
+              "toWho": "Self",
+              "powerFullName": "Epic.Fire_Mastery_Dominator.Rise_of_the_Phoenix"
+            }
+          ]
+        },
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 10
+              },
+              "probability": 1,
+              "duration": 15,
+              "effectType": "Mez",
+              "toWho": "Self",
+              "attribType": 1,
+              "powerFullName": "Epic.Fire_Mastery_Dominator.Rise_of_the_Phoenix",
+              "mezType": "Untouchable"
+            },
+            {
+              "mag": {
+                "pve": 50
+              },
+              "probability": 1,
+              "variableModified": true,
+              "effectType": "Endurance",
+              "delayedTime": 0.125,
+              "stacking": 1,
+              "toWho": "Self",
+              "powerFullName": "Epic.Fire_Mastery_Dominator.Rise_of_the_Phoenix"
+            },
+            {
+              "mag": {
+                "pve": 50
+              },
+              "probability": 1,
+              "duration": 4,
+              "variableModified": true,
+              "effectType": "Mez",
+              "stacking": 1,
+              "toWho": "Self",
+              "attribType": 1,
+              "powerFullName": "Epic.Fire_Mastery_Dominator.Rise_of_the_Phoenix",
+              "mezType": "Immobilization"
+            },
+            {
+              "mag": {
+                "pve": 1
+              },
+              "probability": 1,
+              "duration": 60,
+              "effectType": "XPDebtProtection",
+              "toWho": "Self",
+              "powerFullName": "Epic.Fire_Mastery_Dominator.Rise_of_the_Phoenix"
+            }
+          ]
+        }
+      ],
+      "powerIndex": 3,
+      "castTimeReal": 1.5,
+      "fullName": "Epic_Flame_Mastery_Rise_of_the_Phoenix",
+      "displayName": "Rise of the Phoenix",
+      "requires": {
+        "powers": {
+          "Epic.Fire_Mastery_Dominator.Fire_Blast": true,
+          "Epic.Fire_Mastery_Dominator.Fire_Ball": true
+        },
+        "count": 1
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "target": 1,
+      "targetLoS": true,
+      "rechargeTime": 300,
+      "effectArea": 4,
+      "castFlags": 4,
+      "numAllowed": 1,
+      "description": {
+        "short": "Self Rez, Special",
+        "long": "If you are defeated, you can rise from the ashes. The fiery resurrection blasts nearby foes with an explosion and knocks them down. You will revive with about half of your Hit Points and Endurance. Rise of the Phoenix will actually leave you invulnerable for a brief time and protected from XP Debt for 20 seconds. You must be level 41 and have Rain of Fire or Fire Ball before selecting this power. Recharge: Very Long"
+      },
+      "setTypes": [
+        4,
+        9,
+        11,
+        22,
+        44
+      ],
+      "level": 41,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "absorbSummonEffects": true,
+      "castTime": 1.5,
+      "slottable": true,
+      "aoeModifier": 1
+    },
+    {
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Recharge",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "archetypeOrder": "epicPool",
+      "effects": [
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 55.6102,
+                "pvp": 75.5447845
+              },
+              "probability": 1,
+              "effectType": "Damage",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Brute_Melee.Fiery_Melee.Greater_Fire_Sword",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 11.12204,
+                "pvp": 113.317459
+              },
+              "probability": 1,
+              "effectType": "Damage",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Brute_Melee.Fiery_Melee.Greater_Fire_Sword",
+              "damageType": "Fire"
+            }
+          ]
+        },
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pvp": 0.05
+              },
+              "probability": 1,
+              "variableModified": true,
+              "effectType": "Rage",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Self",
+              "powerFullName": "Brute_Melee.Fiery_Melee.Greater_Fire_Sword"
+            }
+          ]
+        },
+        {
+          "effectType": "InherentTaunt",
+          "values": [
+            {
+              "mag": {
+                "pve": 4
+              },
+              "cancelOnMiss": true,
+              "probability": 1,
+              "duration": 13.6,
+              "effectType": "Mez",
+              "stacking": 1,
+              "resistible": true,
+              "specialCase": 14,
+              "toWho": "Target",
+              "attribType": 1,
+              "powerFullName": "Brute_Melee.Fiery_Melee.Greater_Fire_Sword",
+              "requiresToHitCheck": true,
+              "mezType": "Taunt"
+            }
+          ]
+        },
+        {
+          "effectType": "FieryEmbrace",
+          "values": [
+            {
+              "mag": {
+                "pve": 5.004918
+              },
+              "effectType": "Damage",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Brute_Melee.Fiery_Melee.Greater_Fire_Sword",
+              "damageType": "Fire"
+            }
+          ]
+        }
+      ],
+      "powerIndex": 4,
+      "castTimeReal": 2.33,
+      "toggleCost": 12.688,
+      "fullName": "Epic_Flame_Mastery_Greater_Fire_Sword",
+      "displayName": "Greater Fire Sword",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1.2,
+      "accuracyMult": 1.2,
+      "attackTypes": 81,
+      "target": 2048,
+      "targetLoS": true,
+      "range": 7,
+      "endCost": 12.688,
+      "rechargeTime": 12,
+      "effectArea": 1,
+      "numAllowed": 1,
+      "description": {
+        "short": "Melee, Superior DMG(Fire/Lethal)",
+        "long": "Your mastery of fire allows you to create an enhanced Sword of Fire that can set foes ablaze. Successful attacks from the Greater Fire Sword will ignite your target, dealing damage over time. Damage: Superior, Recharge: Slow"
+      },
+      "setTypes": [
+        1,
+        24,
+        34,
+        44
+      ],
+      "level": 43,
+      "ignoreEnh": [
+        13
+      ],
+      "ignore_Buff": [],
+      "castTime": 2.33,
+      "slottable": true,
+      "aoeModifier": 1
+    }
+  ]
+}

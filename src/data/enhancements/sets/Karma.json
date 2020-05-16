@@ -1,1 +1,447 @@
-{"fullName":"IOSet.Karma","enhancements":[{"type":"set","description":{"short":"+DEF (all), Reduces End cost","long":"Enhances the defense of a power by {Boost.Attrib.Defense.Scale}% and reduces endurance cost by {Boost.Attrib.Endurance.Scale}%"},"isUnique":false,"fullName":"Boosts.Attuned_Karma_A.Attuned_Karma_A","setName":"Karma","displayName":"Defense/Endurance","effects":[{"mag":0.159375,"effectId":"Defense"},{"mag":0.159375,"effectId":"Boosts_20","damageType":10},{"mag":0.159375,"effectId":"Boosts_20","damageType":11},{"mag":0.159375,"effectId":"Boosts_20","damageType":12},{"mag":0.159375,"effectId":"Boosts_20","damageType":1},{"mag":0.159375,"effectId":"Boosts_20","damageType":2},{"mag":0.159375,"effectId":"Boosts_20","damageType":3},{"mag":0.159375,"effectId":"Boosts_20","damageType":4},{"mag":0.159375,"effectId":"Boosts_20","damageType":5},{"mag":0.159375,"effectId":"Boosts_20","damageType":6},{"mag":0.159375,"effectId":"Boosts_20","damageType":8},{"mag":0.265,"effectId":"Endurance"}]},{"type":"set","description":{"short":"+DEF (all), +Rech","long":"Enhances the defense of a power by {Boost.Attrib.Defense.Scale}% and reduces recharge time by {Boost.Attrib.Recharge.Scale}%"},"isUnique":false,"fullName":"Boosts.Attuned_Karma_B.Attuned_Karma_B","setName":"Karma","displayName":"Defense/Recharge","effects":[{"mag":0.159375,"effectId":"Defense"},{"mag":0.159375,"effectId":"Boosts_20","damageType":10},{"mag":0.159375,"effectId":"Boosts_20","damageType":11},{"mag":0.159375,"effectId":"Boosts_20","damageType":12},{"mag":0.159375,"effectId":"Boosts_20","damageType":1},{"mag":0.159375,"effectId":"Boosts_20","damageType":2},{"mag":0.159375,"effectId":"Boosts_20","damageType":3},{"mag":0.159375,"effectId":"Boosts_20","damageType":4},{"mag":0.159375,"effectId":"Boosts_20","damageType":5},{"mag":0.159375,"effectId":"Boosts_20","damageType":6},{"mag":0.159375,"effectId":"Boosts_20","damageType":8},{"mag":0.265,"effectId":"Recharge"}]},{"type":"set","description":{"short":"-KB","long":"Provides 4 points of Knockback protection."},"isUnique":false,"fullName":"Boosts.Attuned_Karma_C.Attuned_Karma_C","setName":"Karma","displayName":"Knockback Protection","effects":[{"cancelOnMiss":true,"mag":-4,"variableModified":true,"effectId":"Knockback","stacking":1}]}],"levels":{"min":10,"max":30},"bonuses":["Increased_Endurance_2","Increased_Health_3"],"setType":7,"displayName":"Karma","imageName":"sKarma.png"}
+{
+  "fullName": "IOSet.Karma",
+  "enhancements": [
+    {
+      "description": {
+        "short": "+DEF (all), Reduces End cost",
+        "long": "Enhances the defense of a power by {Boost.Attrib.Defense.Scale}% and reduces endurance cost by {Boost.Attrib.Endurance.Scale}%"
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Defense",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.159375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 5,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Karma_A.Attuned_Karma_A"
+            }
+          ]
+        },
+        {
+          "effectType": "Boosts_20",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.159375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 5,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Karma_A.Attuned_Karma_A",
+              "damageType": "Melee"
+            },
+            {
+              "mag": {
+                "pve": 0.159375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 5,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Karma_A.Attuned_Karma_A",
+              "damageType": "Ranged"
+            },
+            {
+              "mag": {
+                "pve": 0.159375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 5,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Karma_A.Attuned_Karma_A",
+              "damageType": "AoE"
+            },
+            {
+              "mag": {
+                "pve": 0.159375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 5,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Karma_A.Attuned_Karma_A",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 0.159375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 5,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Karma_A.Attuned_Karma_A",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.159375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 5,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Karma_A.Attuned_Karma_A",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.159375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 5,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Karma_A.Attuned_Karma_A",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 0.159375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 5,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Karma_A.Attuned_Karma_A",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.159375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 5,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Karma_A.Attuned_Karma_A",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.159375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 5,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Karma_A.Attuned_Karma_A",
+              "damageType": "Psionic"
+            }
+          ]
+        },
+        {
+          "effectType": "Endurance",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 8,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Karma_A.Attuned_Karma_A"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Karma_A.Attuned_Karma_A",
+      "setName": "Karma",
+      "displayName": "Defense/Endurance"
+    },
+    {
+      "description": {
+        "short": "+DEF (all), +Rech",
+        "long": "Enhances the defense of a power by {Boost.Attrib.Defense.Scale}% and reduces recharge time by {Boost.Attrib.Recharge.Scale}%"
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Defense",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.159375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 5,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Karma_B.Attuned_Karma_B"
+            }
+          ]
+        },
+        {
+          "effectType": "Boosts_20",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.159375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 5,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Karma_B.Attuned_Karma_B",
+              "damageType": "Melee"
+            },
+            {
+              "mag": {
+                "pve": 0.159375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 5,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Karma_B.Attuned_Karma_B",
+              "damageType": "Ranged"
+            },
+            {
+              "mag": {
+                "pve": 0.159375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 5,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Karma_B.Attuned_Karma_B",
+              "damageType": "AoE"
+            },
+            {
+              "mag": {
+                "pve": 0.159375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 5,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Karma_B.Attuned_Karma_B",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 0.159375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 5,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Karma_B.Attuned_Karma_B",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.159375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 5,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Karma_B.Attuned_Karma_B",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.159375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 5,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Karma_B.Attuned_Karma_B",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 0.159375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 5,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Karma_B.Attuned_Karma_B",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.159375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 5,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Karma_B.Attuned_Karma_B",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.159375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 5,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Karma_B.Attuned_Karma_B",
+              "damageType": "Psionic"
+            }
+          ]
+        },
+        {
+          "effectType": "Recharge",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 25,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Karma_B.Attuned_Karma_B"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Karma_B.Attuned_Karma_B",
+      "setName": "Karma",
+      "displayName": "Defense/Recharge"
+    },
+    {
+      "description": {
+        "short": "-KB",
+        "long": "Provides 4 points of Knockback protection."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Knockback",
+          "values": [
+            {
+              "mag": {
+                "pve": -4
+              },
+              "cancelOnMiss": true,
+              "probability": 1,
+              "duration": 10.125,
+              "variableModified": true,
+              "effectType": "Null",
+              "stacking": 1,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Karma_C.Attuned_Karma_C"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Karma_C.Attuned_Karma_C",
+      "setName": "Karma",
+      "displayName": "Knockback Protection"
+    }
+  ],
+  "levels": {
+    "min": 10,
+    "max": 30
+  },
+  "bonuses": [
+    {
+      "description": {
+        "short": "+Max End",
+        "long": "Increases maximum Endurance by 1.35%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 2,
+      "powerSetIndex": 222,
+      "fullName": "Set_Bonus.Set_Bonus.Increased_Endurance_2",
+      "setName": "Set_Bonus",
+      "displayName": "Small Increased Endurance Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 1.35
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Endurance",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Endurance_2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+Max HP",
+        "long": "Increases maximum health by 1.5%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 3,
+      "powerSetIndex": 286,
+      "fullName": "Set_Bonus.Set_Bonus.Increased_Health_3",
+      "setName": "Set_Bonus",
+      "displayName": "Moderate Increased Health Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "HealSelf",
+          "values": [
+            {
+              "mag": {
+                "pve": 18.0713863
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "HitPoints",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Health_3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "setType": 7,
+  "displayName": "Karma",
+  "imageName": "sKarma.png"
+}

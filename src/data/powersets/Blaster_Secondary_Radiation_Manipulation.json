@@ -1,1 +1,1984 @@
-{"fullName":"Blaster_Secondary_Atomic_Manipulation","archetypeOrder":"secondary","description":"You have complete control over atomic particles and waves, and can use them to disable and weaken your enemies, as well as boost your own power. Many of your powers have the ability to surround your targets with negatrons or positrons. Should you combine both of these in a single target, it will result in Electron-Positron annihilation producing a burst of Gamma Rays which will inflict a small amount of damage, in addition to debuff the target's damage output and accuracy. Enemies also have a small chance of being stunned or confused.","imageName":"RadiationArmor.png","displayName":"Atomic Manipulation","powers":[{"allowedEnhancements":["Accuracy","Damage","Endurance_Discount","Immobilize","Range","Recharge","Endurance_Modification"],"enhancementCount":6,"archetypeOrder":"secondary","powerIndex":0,"castTimeReal":1.17,"toggleCost":5.2,"fullName":"Blaster_Secondary_Atomic_Manipulation_Electron_Shackles","displayName":"Electron Shackles","requires":{"powers":{},"count":0},"accuracy":1,"accuracyMult":1,"attackTypes":130,"target":2048,"targetLoS":true,"range":50,"endCost":5.2,"rechargeTime":4,"baseRechargeTime":4,"effectArea":1,"numAllowed":1,"castThroughHold":true,"description":{"short":"Ranged, Moderate DoT(Energy), Foe Immobilize","long":"Immobilizes a single target and deals some energy damage over time. Some more resilient foes may require multiple attacks to Immobilize. Electron Shackles can also reduce a target's Defense and will  surround it in negatively charged particles. Damage: Moderate(DoT), Recharge: Fast"},"setTypes":[2,12,22,33,44],"level":1,"ignoreEnh":[],"ignore_Buff":[],"hasGrantPowerEffect":true,"castTime":1.31999993,"slottable":true,"aoeModifier":1},{"allowedEnhancements":["Accuracy","Damage","Defense_Debuff","Endurance_Discount","Knockback","Recharge"],"enhancementCount":6,"archetypeOrder":"secondary","powerIndex":1,"castTimeReal":1.5,"toggleCost":10.192,"fullName":"Blaster_Secondary_Atomic_Manipulation_Negatron_Slam","displayName":"Negatron Slam","requires":{"powers":{},"count":0},"accuracy":1,"accuracyMult":1,"attackTypes":137,"target":2048,"targetLoS":true,"range":7,"endCost":10.192,"rechargeTime":10,"baseRechargeTime":10,"effectArea":1,"numAllowed":1,"description":{"short":"Melee, High DMG(Energy/Smash), Foe -Def, Knockdown, Special","long":"You channel a greater amount of radiation into your fists and deliver a hard hitting blow that deals Moderate Energy and Smashing damage to the target as well as reducing their Defense for a short time. The affected target will also be surround it in negatively charged particles. Damage: Moderate, Recharge: Fast"},"setTypes":[1,23,30,33,44],"level":2,"ignoreEnh":[13],"ignore_Buff":[],"hasGrantPowerEffect":true,"castTime":1.716,"slottable":true,"aoeModifier":1},{"allowedEnhancements":["Accuracy","Damage","ToHit_Debuff","Endurance_Discount","Hold","Range","Recharge"],"enhancementCount":6,"archetypeOrder":"secondary","powerIndex":2,"castTimeReal":1.67,"toggleCost":11.388,"fullName":"Blaster_Secondary_Atomic_Manipulation_Positron_Cell","displayName":"Positron Cell","requires":{"powers":{},"count":0},"accuracy":1.2,"accuracyMult":1.2,"attackTypes":130,"target":2048,"targetLoS":true,"range":60,"endCost":11.388,"rechargeTime":16,"baseRechargeTime":16,"effectArea":1,"numAllowed":1,"description":{"short":"Ranged, Moderate DMG(Energy), Foe Hold, -To Hit","long":"Encases a single target in a cage made of positrons. The radiation emitted slowly hurts the victim inflicting energy damage over time. The encased victim is held helpless and unable to defend themselves in addition to being surrounded by positively charged particles. Damage, Moderate, Recharge: Moderate"},"setTypes":[2,10,26,31,33,44],"level":4,"ignoreEnh":[],"ignore_Buff":[],"hasGrantPowerEffect":true,"castTime":1.848,"slottable":true,"aoeModifier":1},{"allowedEnhancements":["ToHit_Buff","Endurance_Discount","Recharge"],"enhancementCount":6,"archetypeOrder":"secondary","powerIndex":3,"castTimeReal":1.17,"toggleCost":5.2,"fullName":"Blaster_Secondary_Atomic_Manipulation_Ionize","displayName":"Ionize","requires":{"powers":{},"count":0},"accuracy":1,"accuracyMult":1,"target":1,"targetLoS":true,"endCost":5.2,"rechargeTime":90,"baseRechargeTime":90,"effectArea":1,"numAllowed":1,"description":{"short":"Self +DMG, +To Hit","long":"Greatly increases the amount of damage you deal for a few seconds, as well as slightly increasing your chance to hit."},"setTypes":[25],"level":10,"ignoreEnh":[],"ignore_Buff":[],"castTime":1.31999993,"slottable":true,"aoeModifier":1},{"allowedEnhancements":["Defense_Debuff","ToHit_Debuff","Endurance_Discount","Recharge"],"enhancementCount":6,"archetypeOrder":"secondary","powerIndex":4,"castTimeReal":0.67,"toggleCost":0.208,"fullName":"Blaster_Secondary_Atomic_Manipulation_Beta_Decay","displayName":"Beta Decay","requires":{"powers":{},"count":0},"accuracy":1,"accuracyMult":1,"target":1,"targetLoS":true,"endCost":0.208,"rechargeTime":10,"baseRechargeTime":10,"activatePeriod":1,"effectArea":2,"radius":15,"maxTargets":10,"numAllowed":1,"description":{"short":"Toggle: Foe, -To Hit, -Defense, Self +Recharge","long":"While Beta Decay is active, nearby foes will have their chance to hit and defense decreased slightly. You will gain a recharge bonus per nearby target up to 10 targets. The first target grants the largest benefit. Recharge: Moderate"},"setTypes":[21,26,30,31],"level":16,"variableEnabled":true,"variableMax":10,"ignoreEnh":[],"ignore_Buff":[],"castTime":0.924,"slottable":true,"aoeModifier":3.25},{"allowedEnhancements":["Endurance_Discount","Heal","Recharge","Endurance_Modification"],"enhancementCount":6,"archetypeOrder":"secondary","powerIndex":5,"castTimeReal":0.73,"fullName":"Blaster_Secondary_Atomic_Manipulation_Metabolic_Acceleration","displayName":"Metabolic Acceleration","requires":{"powers":{},"count":0},"accuracy":1,"accuracyMult":1,"target":1,"targetLoS":true,"rechargeTime":10,"baseRechargeTime":10,"activatePeriod":0.5,"effectArea":1,"numAllowed":1,"description":{"short":"Toggle: Self +Recharge, +Special, +Regeneration, +Recovery, +Res(Hold, Stun, Sleep, Immob, End)","long":"You cloak yourself in a field of radiation that increases the running speed, attack speed, Endurance recovery and Regeneration rate. However, only half of this regeneration bonus is enhanceable. Your metabolisms is increased so much that they become resistant to effects such as Sleep, Hold, Disorient, Immobilization and Endurance Drain. Recharge: Moderate"},"setTypes":[9,22],"level":20,"ignoreEnh":[],"ignore_Buff":[],"castTime":0.924,"slottable":true,"aoeModifier":1},{"allowedEnhancements":["Accuracy","Damage","Defense_Debuff","Endurance_Discount","Recharge","Stun"],"enhancementCount":6,"archetypeOrder":"secondary","powerIndex":6,"castTimeReal":2.93,"toggleCost":20.176,"fullName":"Blaster_Secondary_Atomic_Manipulation_Atom_Smasher","displayName":"Atom Smasher","requires":{"powers":{},"count":0},"accuracy":1,"accuracyMult":1,"attackTypes":137,"target":1,"targetLoS":true,"range":7,"endCost":20.176,"rechargeTime":22,"baseRechargeTime":22,"effectArea":2,"radius":10,"maxTargets":10,"numAllowed":1,"description":{"short":"PBAoE, High DMG(Energy/Toxic), Foe -Def, Disorient, Special","long":"You charge up a dangerously unstable amount of radioactive energy into a single fist before driving it into the ground and causing a small explosion. Foes caught in the blast will suffer High Energy and Toxic damage and have their defense reduced. Damage: High, Recharge: Long"},"setTypes":[4,11,30,33,44],"level":28,"ignoreEnh":[13],"ignore_Buff":[],"castTime":3.168,"slottable":true,"aoeModifier":2.5},{"allowedEnhancements":["Accuracy","Endurance_Discount","Hold","Recharge"],"enhancementCount":6,"archetypeOrder":"secondary","powerIndex":7,"castTimeReal":1.07,"toggleCost":20.18,"fullName":"Blaster_Secondary_Atomic_Manipulation_Radioactive_Cloud","displayName":"Radioactive Cloud","requires":{"powers":{},"count":0},"accuracy":0.8,"accuracyMult":0.8,"attackTypes":132,"target":1,"targetLoS":true,"endCost":20.18,"rechargeTime":90,"baseRechargeTime":90,"effectArea":1,"numAllowed":1,"description":{"short":"PBAoE, Foe Hold","long":"When activated, you generate toxic radioactive gas around yourself. Any nearby foes may be overcome by the gas, leaving them choking and helpless. Recharge: Long"},"setTypes":[10],"level":35,"ignoreEnh":[],"ignore_Buff":[],"castTime":1.31999993,"slottable":true,"aoeModifier":1},{"allowedEnhancements":["Accuracy","Damage","Defense_Debuff","Endurance_Discount","Recharge","Stun"],"enhancementCount":6,"archetypeOrder":"secondary","powerIndex":8,"castTimeReal":2.67,"toggleCost":18.512,"fullName":"Blaster_Secondary_Atomic_Manipulation_Positronic_Fist","displayName":"Positronic Fist","requires":{"powers":{},"count":0},"accuracy":1.2,"accuracyMult":1.2,"attackTypes":137,"target":2048,"targetLoS":true,"range":7,"endCost":18.512,"rechargeTime":20,"baseRechargeTime":20,"effectArea":1,"numAllowed":1,"description":{"short":"Melee, Extreme DMG(Energy/Smash), Foe -Def, Disorient, Special","long":"You hammer your foe with a brutal smashing attack charged with a lethal dose of radiation. Your target will suffer Extreme Energy and Smashing damage, will have its defense reduced and will be disoriented for a short time in addition to being surrounded by positively charged particles."},"setTypes":[1,11,30,33,44],"level":38,"ignoreEnh":[13],"ignore_Buff":[],"hasGrantPowerEffect":true,"castTime":2.904,"slottable":true,"aoeModifier":1}]}
+{
+  "fullName": "Blaster_Secondary_Atomic_Manipulation",
+  "archetypeOrder": "secondary",
+  "description": "You have complete control over atomic particles and waves, and can use them to disable and weaken your enemies, as well as boost your own power. Many of your powers have the ability to surround your targets with negatrons or positrons. Should you combine both of these in a single target, it will result in Electron-Positron annihilation producing a burst of Gamma Rays which will inflict a small amount of damage, in addition to debuff the target's damage output and accuracy. Enemies also have a small chance of being stunned or confused.",
+  "imageName": "RadiationArmor.png",
+  "displayName": "Atomic Manipulation",
+  "powers": [
+    {
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Immobilize",
+        "Range",
+        "Recharge",
+        "Endurance_Modification"
+      ],
+      "enhancementCount": 6,
+      "archetypeOrder": "secondary",
+      "effects": [
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 7.194573,
+                "pvp": 21.215229
+              },
+              "probability": 1,
+              "duration": 4.75,
+              "effectType": "Damage",
+              "ticks": 10,
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Blaster_Support.Radiation_Manipulation.Electron_Shackles",
+              "damageType": "Energy"
+            }
+          ]
+        },
+        {
+          "effectType": "Immobilize",
+          "values": [
+            {
+              "mag": {
+                "pve": 3,
+                "pvp": 3
+              },
+              "probability": 1,
+              "duration": 17.8800011,
+              "effectType": "Mez",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "attribType": 1,
+              "powerFullName": "Blaster_Support.Radiation_Manipulation.Electron_Shackles",
+              "mezType": "Immobilization"
+            }
+          ]
+        },
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 100
+              },
+              "probability": 1,
+              "duration": 15,
+              "effectType": "MezResist",
+              "stacking": 1,
+              "toWho": "Target",
+              "powerFullName": "Blaster_Support.Radiation_Manipulation.Electron_Shackles",
+              "mezType": "Knockback"
+            },
+            {
+              "mag": {
+                "pve": 100
+              },
+              "probability": 1,
+              "duration": 15,
+              "effectType": "MezResist",
+              "stacking": 1,
+              "toWho": "Target",
+              "powerFullName": "Blaster_Support.Radiation_Manipulation.Electron_Shackles",
+              "mezType": "Knockup"
+            },
+            {
+              "mag": {
+                "pve": -100
+              },
+              "probability": 1,
+              "duration": 15,
+              "effectType": "Mez",
+              "stacking": 1,
+              "toWho": "Target",
+              "powerFullName": "Blaster_Support.Radiation_Manipulation.Electron_Shackles",
+              "mezType": "Knockback"
+            },
+            {
+              "mag": {
+                "pve": -100
+              },
+              "probability": 1,
+              "duration": 15,
+              "effectType": "Mez",
+              "stacking": 1,
+              "toWho": "Target",
+              "powerFullName": "Blaster_Support.Radiation_Manipulation.Electron_Shackles",
+              "mezType": "Knockup"
+            }
+          ]
+        },
+        {
+          "effectType": "Debuff_Def",
+          "values": [
+            {
+              "mag": {
+                "pve": -0.105000004
+              },
+              "cancelOnMiss": true,
+              "probability": 1,
+              "duration": 10,
+              "effectType": "Defense",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Blaster_Support.Radiation_Manipulation.Electron_Shackles"
+            }
+          ]
+        },
+        {
+          "effectType": "Polarize",
+          "values": [
+            {
+              "mag": {
+                "pve": 1
+              },
+              "probability": 1,
+              "effectType": "GrantPower",
+              "toWho": "Target",
+              "powerFullName": "Blaster_Support.Radiation_Manipulation.Electron_Shackles"
+            },
+            {
+              "mag": {
+                "pve": 1
+              },
+              "probability": 1,
+              "effectType": "RevokePower",
+              "toWho": "Target",
+              "powerFullName": "Blaster_Support.Radiation_Manipulation.Electron_Shackles"
+            }
+          ]
+        },
+        {
+          "effectType": "GammaBurst",
+          "values": [
+            {
+              "mag": {
+                "pve": 1
+              },
+              "probability": 1,
+              "effectType": "GrantPower",
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Blaster_Support.Radiation_Manipulation.Electron_Shackles"
+            }
+          ]
+        },
+        {
+          "effectType": "Defiance",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.077
+              },
+              "probability": 1,
+              "duration": 8.67,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "specialCase": 11,
+              "toWho": "Self",
+              "powerFullName": "Blaster_Support.Radiation_Manipulation.Electron_Shackles",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 0.077
+              },
+              "probability": 1,
+              "duration": 8.67,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "specialCase": 11,
+              "toWho": "Self",
+              "powerFullName": "Blaster_Support.Radiation_Manipulation.Electron_Shackles",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.077
+              },
+              "probability": 1,
+              "duration": 8.67,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "specialCase": 11,
+              "toWho": "Self",
+              "powerFullName": "Blaster_Support.Radiation_Manipulation.Electron_Shackles",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.077
+              },
+              "probability": 1,
+              "duration": 8.67,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "specialCase": 11,
+              "toWho": "Self",
+              "powerFullName": "Blaster_Support.Radiation_Manipulation.Electron_Shackles",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 0.077
+              },
+              "probability": 1,
+              "duration": 8.67,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "specialCase": 11,
+              "toWho": "Self",
+              "powerFullName": "Blaster_Support.Radiation_Manipulation.Electron_Shackles",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.077
+              },
+              "probability": 1,
+              "duration": 8.67,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "specialCase": 11,
+              "toWho": "Self",
+              "powerFullName": "Blaster_Support.Radiation_Manipulation.Electron_Shackles",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.077
+              },
+              "probability": 1,
+              "duration": 8.67,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "specialCase": 11,
+              "toWho": "Self",
+              "powerFullName": "Blaster_Support.Radiation_Manipulation.Electron_Shackles",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pve": 0.077
+              },
+              "probability": 1,
+              "duration": 8.67,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "specialCase": 11,
+              "toWho": "Self",
+              "powerFullName": "Blaster_Support.Radiation_Manipulation.Electron_Shackles",
+              "damageType": "Psionic"
+            }
+          ]
+        }
+      ],
+      "powerIndex": 0,
+      "castTimeReal": 1.17,
+      "toggleCost": 5.2,
+      "fullName": "Blaster_Secondary_Atomic_Manipulation_Electron_Shackles",
+      "displayName": "Electron Shackles",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "attackTypes": 130,
+      "target": 2048,
+      "targetLoS": true,
+      "range": 50,
+      "endCost": 5.2,
+      "rechargeTime": 4,
+      "baseRechargeTime": 4,
+      "effectArea": 1,
+      "numAllowed": 1,
+      "castThroughHold": true,
+      "description": {
+        "short": "Ranged, Moderate DoT(Energy), Foe Immobilize",
+        "long": "Immobilizes a single target and deals some energy damage over time. Some more resilient foes may require multiple attacks to Immobilize. Electron Shackles can also reduce a target's Defense and will  surround it in negatively charged particles. Damage: Moderate(DoT), Recharge: Fast"
+      },
+      "setTypes": [
+        2,
+        12,
+        22,
+        33,
+        44
+      ],
+      "level": 1,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "hasGrantPowerEffect": true,
+      "castTime": 1.31999993,
+      "slottable": true,
+      "aoeModifier": 1
+    },
+    {
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Defense_Debuff",
+        "Endurance_Discount",
+        "Knockback",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "archetypeOrder": "secondary",
+      "effects": [
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 27.2489986,
+                "pvp": 31.62385
+              },
+              "probability": 1,
+              "effectType": "Damage",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Blaster_Support.Radiation_Manipulation.Negatron_Slam",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 81.746994,
+                "pvp": 94.87211
+              },
+              "probability": 1,
+              "effectType": "Damage",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Blaster_Support.Radiation_Manipulation.Negatron_Slam",
+              "damageType": "Energy"
+            }
+          ]
+        },
+        {
+          "effectType": "Debuff_Def",
+          "values": [
+            {
+              "mag": {
+                "pve": -0.105000004
+              },
+              "cancelOnMiss": true,
+              "probability": 1,
+              "duration": 10,
+              "effectType": "Defense",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Blaster_Support.Radiation_Manipulation.Negatron_Slam"
+            }
+          ]
+        },
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.67,
+                "pvp": 0.67
+              },
+              "probability": 0.33,
+              "effectType": "Mez",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Blaster_Support.Radiation_Manipulation.Negatron_Slam",
+              "mezType": "Knockback"
+            }
+          ]
+        },
+        {
+          "effectType": "Polarize",
+          "values": [
+            {
+              "mag": {
+                "pve": 1
+              },
+              "probability": 1,
+              "effectType": "GrantPower",
+              "toWho": "Target",
+              "powerFullName": "Blaster_Support.Radiation_Manipulation.Negatron_Slam"
+            },
+            {
+              "mag": {
+                "pve": 1
+              },
+              "probability": 1,
+              "effectType": "RevokePower",
+              "toWho": "Target",
+              "powerFullName": "Blaster_Support.Radiation_Manipulation.Negatron_Slam"
+            }
+          ]
+        },
+        {
+          "effectType": "GammaBurst",
+          "values": [
+            {
+              "mag": {
+                "pve": 1
+              },
+              "probability": 1,
+              "effectType": "GrantPower",
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Blaster_Support.Radiation_Manipulation.Negatron_Slam"
+            }
+          ]
+        },
+        {
+          "effectType": "Defiance",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.099
+              },
+              "probability": 1,
+              "duration": 9,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "specialCase": 11,
+              "toWho": "Self",
+              "powerFullName": "Blaster_Support.Radiation_Manipulation.Negatron_Slam",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 0.099
+              },
+              "probability": 1,
+              "duration": 9,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "specialCase": 11,
+              "toWho": "Self",
+              "powerFullName": "Blaster_Support.Radiation_Manipulation.Negatron_Slam",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.099
+              },
+              "probability": 1,
+              "duration": 9,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "specialCase": 11,
+              "toWho": "Self",
+              "powerFullName": "Blaster_Support.Radiation_Manipulation.Negatron_Slam",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.099
+              },
+              "probability": 1,
+              "duration": 9,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "specialCase": 11,
+              "toWho": "Self",
+              "powerFullName": "Blaster_Support.Radiation_Manipulation.Negatron_Slam",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 0.099
+              },
+              "probability": 1,
+              "duration": 9,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "specialCase": 11,
+              "toWho": "Self",
+              "powerFullName": "Blaster_Support.Radiation_Manipulation.Negatron_Slam",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.099
+              },
+              "probability": 1,
+              "duration": 9,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "specialCase": 11,
+              "toWho": "Self",
+              "powerFullName": "Blaster_Support.Radiation_Manipulation.Negatron_Slam",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.099
+              },
+              "probability": 1,
+              "duration": 9,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "specialCase": 11,
+              "toWho": "Self",
+              "powerFullName": "Blaster_Support.Radiation_Manipulation.Negatron_Slam",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pve": 0.099
+              },
+              "probability": 1,
+              "duration": 9,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "specialCase": 11,
+              "toWho": "Self",
+              "powerFullName": "Blaster_Support.Radiation_Manipulation.Negatron_Slam",
+              "damageType": "Psionic"
+            }
+          ]
+        }
+      ],
+      "powerIndex": 1,
+      "castTimeReal": 1.5,
+      "toggleCost": 10.192,
+      "fullName": "Blaster_Secondary_Atomic_Manipulation_Negatron_Slam",
+      "displayName": "Negatron Slam",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "attackTypes": 137,
+      "target": 2048,
+      "targetLoS": true,
+      "range": 7,
+      "endCost": 10.192,
+      "rechargeTime": 10,
+      "baseRechargeTime": 10,
+      "effectArea": 1,
+      "numAllowed": 1,
+      "description": {
+        "short": "Melee, High DMG(Energy/Smash), Foe -Def, Knockdown, Special",
+        "long": "You channel a greater amount of radiation into your fists and deliver a hard hitting blow that deals Moderate Energy and Smashing damage to the target as well as reducing their Defense for a short time. The affected target will also be surround it in negatively charged particles. Damage: Moderate, Recharge: Fast"
+      },
+      "setTypes": [
+        1,
+        23,
+        30,
+        33,
+        44
+      ],
+      "level": 2,
+      "ignoreEnh": [
+        13
+      ],
+      "ignore_Buff": [],
+      "hasGrantPowerEffect": true,
+      "castTime": 1.716,
+      "slottable": true,
+      "aoeModifier": 1
+    },
+    {
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "ToHit_Debuff",
+        "Endurance_Discount",
+        "Hold",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "archetypeOrder": "secondary",
+      "effects": [
+        {
+          "effectType": "Immobilize",
+          "values": [
+            {
+              "mag": {
+                "pve": 3,
+                "pvp": 4
+              },
+              "probability": 1,
+              "duration": 14.3040009,
+              "effectType": "Mez",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "attribType": 1,
+              "powerFullName": "Blaster_Support.Radiation_Manipulation.Positron_Cell",
+              "mezType": "Hold"
+            }
+          ]
+        },
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 13.76353,
+                "pvp": 24.13873
+              },
+              "probability": 1,
+              "duration": 4.2,
+              "effectType": "Damage",
+              "ticks": 5,
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Blaster_Support.Radiation_Manipulation.Positron_Cell",
+              "damageType": "Energy"
+            }
+          ]
+        },
+        {
+          "effectType": "Debuff_Def",
+          "values": [
+            {
+              "mag": {
+                "pve": -0.105000004
+              },
+              "probability": 1,
+              "duration": 10,
+              "effectType": "Defense",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Blaster_Support.Radiation_Manipulation.Positron_Cell"
+            }
+          ]
+        },
+        {
+          "effectType": "Polarize",
+          "values": [
+            {
+              "mag": {
+                "pve": 1
+              },
+              "probability": 1,
+              "effectType": "GrantPower",
+              "toWho": "Target",
+              "powerFullName": "Blaster_Support.Radiation_Manipulation.Positron_Cell"
+            },
+            {
+              "mag": {
+                "pve": 1
+              },
+              "probability": 1,
+              "effectType": "RevokePower",
+              "toWho": "Target",
+              "powerFullName": "Blaster_Support.Radiation_Manipulation.Positron_Cell"
+            }
+          ]
+        },
+        {
+          "effectType": "GammaBurst",
+          "values": [
+            {
+              "mag": {
+                "pve": 1
+              },
+              "probability": 1,
+              "effectType": "GrantPower",
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Blaster_Support.Radiation_Manipulation.Positron_Cell"
+            }
+          ]
+        },
+        {
+          "effectType": "Defiance",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.11
+              },
+              "probability": 1,
+              "duration": 9.17,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "specialCase": 11,
+              "toWho": "Self",
+              "powerFullName": "Blaster_Support.Radiation_Manipulation.Positron_Cell",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 0.11
+              },
+              "probability": 1,
+              "duration": 9.17,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "specialCase": 11,
+              "toWho": "Self",
+              "powerFullName": "Blaster_Support.Radiation_Manipulation.Positron_Cell",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.11
+              },
+              "probability": 1,
+              "duration": 9.17,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "specialCase": 11,
+              "toWho": "Self",
+              "powerFullName": "Blaster_Support.Radiation_Manipulation.Positron_Cell",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.11
+              },
+              "probability": 1,
+              "duration": 9.17,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "specialCase": 11,
+              "toWho": "Self",
+              "powerFullName": "Blaster_Support.Radiation_Manipulation.Positron_Cell",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 0.11
+              },
+              "probability": 1,
+              "duration": 9.17,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "specialCase": 11,
+              "toWho": "Self",
+              "powerFullName": "Blaster_Support.Radiation_Manipulation.Positron_Cell",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.11
+              },
+              "probability": 1,
+              "duration": 9.17,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "specialCase": 11,
+              "toWho": "Self",
+              "powerFullName": "Blaster_Support.Radiation_Manipulation.Positron_Cell",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.11
+              },
+              "probability": 1,
+              "duration": 9.17,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "specialCase": 11,
+              "toWho": "Self",
+              "powerFullName": "Blaster_Support.Radiation_Manipulation.Positron_Cell",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pve": 0.11
+              },
+              "probability": 1,
+              "duration": 9.17,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "specialCase": 11,
+              "toWho": "Self",
+              "powerFullName": "Blaster_Support.Radiation_Manipulation.Positron_Cell",
+              "damageType": "Psionic"
+            }
+          ]
+        }
+      ],
+      "powerIndex": 2,
+      "castTimeReal": 1.67,
+      "toggleCost": 11.388,
+      "fullName": "Blaster_Secondary_Atomic_Manipulation_Positron_Cell",
+      "displayName": "Positron Cell",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1.2,
+      "accuracyMult": 1.2,
+      "attackTypes": 130,
+      "target": 2048,
+      "targetLoS": true,
+      "range": 60,
+      "endCost": 11.388,
+      "rechargeTime": 16,
+      "baseRechargeTime": 16,
+      "effectArea": 1,
+      "numAllowed": 1,
+      "description": {
+        "short": "Ranged, Moderate DMG(Energy), Foe Hold, -To Hit",
+        "long": "Encases a single target in a cage made of positrons. The radiation emitted slowly hurts the victim inflicting energy damage over time. The encased victim is held helpless and unable to defend themselves in addition to being surrounded by positively charged particles. Damage, Moderate, Recharge: Moderate"
+      },
+      "setTypes": [
+        2,
+        10,
+        26,
+        31,
+        33,
+        44
+      ],
+      "level": 4,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "hasGrantPowerEffect": true,
+      "castTime": 1.848,
+      "slottable": true,
+      "aoeModifier": 1
+    },
+    {
+      "allowedEnhancements": [
+        "ToHit_Buff",
+        "Endurance_Discount",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "archetypeOrder": "secondary",
+      "effects": [
+        {
+          "effectType": "Buff_ToHit",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.2
+              },
+              "probability": 1,
+              "duration": 10,
+              "variableModified": true,
+              "effectType": "ToHit",
+              "stacking": 1,
+              "toWho": "Self",
+              "powerFullName": "Blaster_Support.Radiation_Manipulation.Ionize"
+            }
+          ]
+        },
+        {
+          "effectType": "Buff_Dmg",
+          "values": [
+            {
+              "mag": {
+                "pve": 1
+              },
+              "probability": 1,
+              "duration": 10,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "toWho": "Self",
+              "powerFullName": "Blaster_Support.Radiation_Manipulation.Ionize",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 1
+              },
+              "probability": 1,
+              "duration": 10,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "toWho": "Self",
+              "powerFullName": "Blaster_Support.Radiation_Manipulation.Ionize",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 1
+              },
+              "probability": 1,
+              "duration": 10,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "toWho": "Self",
+              "powerFullName": "Blaster_Support.Radiation_Manipulation.Ionize",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 1
+              },
+              "probability": 1,
+              "duration": 10,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "toWho": "Self",
+              "powerFullName": "Blaster_Support.Radiation_Manipulation.Ionize",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 1
+              },
+              "probability": 1,
+              "duration": 10,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "toWho": "Self",
+              "powerFullName": "Blaster_Support.Radiation_Manipulation.Ionize",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 1
+              },
+              "probability": 1,
+              "duration": 10,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "toWho": "Self",
+              "powerFullName": "Blaster_Support.Radiation_Manipulation.Ionize",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 1
+              },
+              "probability": 1,
+              "duration": 10,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "toWho": "Self",
+              "powerFullName": "Blaster_Support.Radiation_Manipulation.Ionize",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pve": 1
+              },
+              "probability": 1,
+              "duration": 10,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "toWho": "Self",
+              "powerFullName": "Blaster_Support.Radiation_Manipulation.Ionize",
+              "damageType": "Psionic"
+            }
+          ]
+        }
+      ],
+      "powerIndex": 3,
+      "castTimeReal": 1.17,
+      "toggleCost": 5.2,
+      "fullName": "Blaster_Secondary_Atomic_Manipulation_Ionize",
+      "displayName": "Ionize",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "target": 1,
+      "targetLoS": true,
+      "endCost": 5.2,
+      "rechargeTime": 90,
+      "baseRechargeTime": 90,
+      "effectArea": 1,
+      "numAllowed": 1,
+      "description": {
+        "short": "Self +DMG, +To Hit",
+        "long": "Greatly increases the amount of damage you deal for a few seconds, as well as slightly increasing your chance to hit."
+      },
+      "setTypes": [
+        25
+      ],
+      "level": 10,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 1.31999993,
+      "slottable": true,
+      "aoeModifier": 1,
+      "powerType": "Toggle"
+    },
+    {
+      "allowedEnhancements": [
+        "Defense_Debuff",
+        "ToHit_Debuff",
+        "Endurance_Discount",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "archetypeOrder": "secondary",
+      "effects": [
+        {
+          "effectType": "DeBuff_ToHit",
+          "values": [
+            {
+              "mag": {
+                "pve": -0.0525000021
+              },
+              "probability": 1,
+              "duration": 1,
+              "effectType": "ToHit",
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Blaster_Support.Radiation_Manipulation.Beta_Decay"
+            }
+          ]
+        },
+        {
+          "effectType": "Debuff_Def",
+          "values": [
+            {
+              "mag": {
+                "pve": -0.105000004
+              },
+              "probability": 1,
+              "duration": 1,
+              "effectType": "Defense",
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Blaster_Support.Radiation_Manipulation.Beta_Decay"
+            }
+          ]
+        },
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.025
+              },
+              "probability": 1,
+              "duration": 1,
+              "variableModified": true,
+              "effectType": "Enhancement",
+              "eTModifies": 25,
+              "variableModifiedOverride": true,
+              "toWho": "Self",
+              "powerFullName": "Blaster_Support.Radiation_Manipulation.Beta_Decay"
+            }
+          ]
+        }
+      ],
+      "powerIndex": 4,
+      "castTimeReal": 0.67,
+      "toggleCost": 0.208,
+      "fullName": "Blaster_Secondary_Atomic_Manipulation_Beta_Decay",
+      "displayName": "Beta Decay",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "target": 1,
+      "targetLoS": true,
+      "endCost": 0.208,
+      "rechargeTime": 10,
+      "baseRechargeTime": 10,
+      "activatePeriod": 1,
+      "effectArea": 2,
+      "radius": 15,
+      "maxTargets": 10,
+      "numAllowed": 1,
+      "description": {
+        "short": "Toggle: Foe, -To Hit, -Defense, Self +Recharge",
+        "long": "While Beta Decay is active, nearby foes will have their chance to hit and defense decreased slightly. You will gain a recharge bonus per nearby target up to 10 targets. The first target grants the largest benefit. Recharge: Moderate"
+      },
+      "setTypes": [
+        21,
+        26,
+        30,
+        31
+      ],
+      "level": 16,
+      "variableEnabled": true,
+      "variableMax": 10,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 0.924,
+      "slottable": true,
+      "aoeModifier": 3.25,
+      "powerType": "Toggle"
+    },
+    {
+      "allowedEnhancements": [
+        "Endurance_Discount",
+        "Heal",
+        "Recharge",
+        "Endurance_Modification"
+      ],
+      "enhancementCount": 6,
+      "archetypeOrder": "secondary",
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 1.125
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Regeneration",
+              "toWho": "Self",
+              "powerFullName": "Blaster_Support.Radiation_Manipulation.Metabolic_Acceleration"
+            },
+            {
+              "mag": {
+                "pve": 0.5
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Recovery",
+              "toWho": "Self",
+              "powerFullName": "Blaster_Support.Radiation_Manipulation.Metabolic_Acceleration"
+            },
+            {
+              "mag": {
+                "pve": 0.2
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Enhancement",
+              "eTModifies": 25,
+              "toWho": "Self",
+              "powerFullName": "Blaster_Support.Radiation_Manipulation.Metabolic_Acceleration"
+            }
+          ]
+        },
+        {
+          "effectType": "Res_Boolean",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.2768
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Blaster_Support.Radiation_Manipulation.Metabolic_Acceleration",
+              "mezType": "Hold"
+            },
+            {
+              "mag": {
+                "pve": 0.2768
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Blaster_Support.Radiation_Manipulation.Metabolic_Acceleration",
+              "mezType": "Stun"
+            },
+            {
+              "mag": {
+                "pve": 0.2768
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Blaster_Support.Radiation_Manipulation.Metabolic_Acceleration",
+              "mezType": "Sleep"
+            },
+            {
+              "mag": {
+                "pve": 0.2768
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Blaster_Support.Radiation_Manipulation.Metabolic_Acceleration",
+              "mezType": "Immobilization"
+            },
+            {
+              "mag": {
+                "pve": 0.2768
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "ResEffect",
+              "eTModifies": 26,
+              "toWho": "All",
+              "powerFullName": "Blaster_Support.Radiation_Manipulation.Metabolic_Acceleration"
+            }
+          ]
+        }
+      ],
+      "powerIndex": 5,
+      "castTimeReal": 0.73,
+      "fullName": "Blaster_Secondary_Atomic_Manipulation_Metabolic_Acceleration",
+      "displayName": "Metabolic Acceleration",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "target": 1,
+      "targetLoS": true,
+      "rechargeTime": 10,
+      "baseRechargeTime": 10,
+      "activatePeriod": 0.5,
+      "effectArea": 1,
+      "numAllowed": 1,
+      "description": {
+        "short": "Toggle: Self +Recharge, +Special, +Regeneration, +Recovery, +Res(Hold, Stun, Sleep, Immob, End)",
+        "long": "You cloak yourself in a field of radiation that increases the running speed, attack speed, Endurance recovery and Regeneration rate. However, only half of this regeneration bonus is enhanceable. Your metabolisms is increased so much that they become resistant to effects such as Sleep, Hold, Disorient, Immobilization and Endurance Drain. Recharge: Moderate"
+      },
+      "setTypes": [
+        9,
+        22
+      ],
+      "level": 20,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 0.924,
+      "slottable": true,
+      "aoeModifier": 1,
+      "powerType": "Toggle"
+    },
+    {
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Defense_Debuff",
+        "Endurance_Discount",
+        "Recharge",
+        "Stun"
+      ],
+      "enhancementCount": 6,
+      "archetypeOrder": "secondary",
+      "effects": [
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 21.5767574,
+                "pvp": 22.77627
+              },
+              "probability": 1,
+              "effectType": "Damage",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Blaster_Support.Radiation_Manipulation.Atom_Smasher",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 64.73027,
+                "pvp": 68.3282547
+              },
+              "probability": 1,
+              "effectType": "Damage",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Blaster_Support.Radiation_Manipulation.Atom_Smasher",
+              "damageType": "Toxic"
+            }
+          ]
+        },
+        {
+          "effectType": "Debuff_Def",
+          "values": [
+            {
+              "mag": {
+                "pve": -0.08400001
+              },
+              "cancelOnMiss": true,
+              "probability": 1,
+              "duration": 10,
+              "effectType": "Defense",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Blaster_Support.Radiation_Manipulation.Atom_Smasher"
+            }
+          ]
+        },
+        {
+          "effectType": "Immobilize",
+          "values": [
+            {
+              "mag": {
+                "pve": 2
+              },
+              "probability": 0.25,
+              "duration": 7.15200043,
+              "effectType": "Mez",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "attribType": 1,
+              "powerFullName": "Blaster_Support.Radiation_Manipulation.Atom_Smasher",
+              "mezType": "Stun"
+            }
+          ]
+        },
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pvp": 2
+              },
+              "probability": 0.25,
+              "duration": 2,
+              "effectType": "Mez",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "attribType": 1,
+              "powerFullName": "Blaster_Support.Radiation_Manipulation.Atom_Smasher",
+              "mezType": "Stun"
+            }
+          ]
+        },
+        {
+          "effectType": "Defiance",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.077
+              },
+              "probability": 1,
+              "duration": 10.43,
+              "effectType": "DamageBuff",
+              "specialCase": 11,
+              "toWho": "Self",
+              "powerFullName": "Blaster_Support.Radiation_Manipulation.Atom_Smasher",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 0.077
+              },
+              "probability": 1,
+              "duration": 10.43,
+              "effectType": "DamageBuff",
+              "specialCase": 11,
+              "toWho": "Self",
+              "powerFullName": "Blaster_Support.Radiation_Manipulation.Atom_Smasher",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.077
+              },
+              "probability": 1,
+              "duration": 10.43,
+              "effectType": "DamageBuff",
+              "specialCase": 11,
+              "toWho": "Self",
+              "powerFullName": "Blaster_Support.Radiation_Manipulation.Atom_Smasher",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.077
+              },
+              "probability": 1,
+              "duration": 10.43,
+              "effectType": "DamageBuff",
+              "specialCase": 11,
+              "toWho": "Self",
+              "powerFullName": "Blaster_Support.Radiation_Manipulation.Atom_Smasher",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 0.077
+              },
+              "probability": 1,
+              "duration": 10.43,
+              "effectType": "DamageBuff",
+              "specialCase": 11,
+              "toWho": "Self",
+              "powerFullName": "Blaster_Support.Radiation_Manipulation.Atom_Smasher",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.077
+              },
+              "probability": 1,
+              "duration": 10.43,
+              "effectType": "DamageBuff",
+              "specialCase": 11,
+              "toWho": "Self",
+              "powerFullName": "Blaster_Support.Radiation_Manipulation.Atom_Smasher",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.077
+              },
+              "probability": 1,
+              "duration": 10.43,
+              "effectType": "DamageBuff",
+              "specialCase": 11,
+              "toWho": "Self",
+              "powerFullName": "Blaster_Support.Radiation_Manipulation.Atom_Smasher",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pve": 0.077
+              },
+              "probability": 1,
+              "duration": 10.43,
+              "effectType": "DamageBuff",
+              "specialCase": 11,
+              "toWho": "Self",
+              "powerFullName": "Blaster_Support.Radiation_Manipulation.Atom_Smasher",
+              "damageType": "Psionic"
+            }
+          ]
+        }
+      ],
+      "powerIndex": 6,
+      "castTimeReal": 2.93,
+      "toggleCost": 20.176,
+      "fullName": "Blaster_Secondary_Atomic_Manipulation_Atom_Smasher",
+      "displayName": "Atom Smasher",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "attackTypes": 137,
+      "target": 1,
+      "targetLoS": true,
+      "range": 7,
+      "endCost": 20.176,
+      "rechargeTime": 22,
+      "baseRechargeTime": 22,
+      "effectArea": 2,
+      "radius": 10,
+      "maxTargets": 10,
+      "numAllowed": 1,
+      "description": {
+        "short": "PBAoE, High DMG(Energy/Toxic), Foe -Def, Disorient, Special",
+        "long": "You charge up a dangerously unstable amount of radioactive energy into a single fist before driving it into the ground and causing a small explosion. Foes caught in the blast will suffer High Energy and Toxic damage and have their defense reduced. Damage: High, Recharge: Long"
+      },
+      "setTypes": [
+        4,
+        11,
+        30,
+        33,
+        44
+      ],
+      "level": 28,
+      "ignoreEnh": [
+        13
+      ],
+      "ignore_Buff": [],
+      "castTime": 3.168,
+      "slottable": true,
+      "aoeModifier": 2.5
+    },
+    {
+      "allowedEnhancements": [
+        "Accuracy",
+        "Endurance_Discount",
+        "Hold",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "archetypeOrder": "secondary",
+      "effects": [
+        {
+          "effectType": "Level",
+          "values": [
+            {
+              "mag": {
+                "pve": 50
+              },
+              "probability": 1,
+              "duration": 10,
+              "variableModified": true,
+              "effectType": "EntCreate",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Self",
+              "powerFullName": "Blaster_Support.Radiation_Manipulation.Radioactive_Cloud"
+            }
+          ]
+        },
+        {
+          "effectType": "Defiance",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.018
+              },
+              "probability": 1,
+              "duration": 8.57,
+              "effectType": "DamageBuff",
+              "specialCase": 11,
+              "toWho": "Self",
+              "powerFullName": "Blaster_Support.Radiation_Manipulation.Radioactive_Cloud",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 0.018
+              },
+              "probability": 1,
+              "duration": 8.57,
+              "effectType": "DamageBuff",
+              "specialCase": 11,
+              "toWho": "Self",
+              "powerFullName": "Blaster_Support.Radiation_Manipulation.Radioactive_Cloud",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.018
+              },
+              "probability": 1,
+              "duration": 8.57,
+              "effectType": "DamageBuff",
+              "specialCase": 11,
+              "toWho": "Self",
+              "powerFullName": "Blaster_Support.Radiation_Manipulation.Radioactive_Cloud",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.018
+              },
+              "probability": 1,
+              "duration": 8.57,
+              "effectType": "DamageBuff",
+              "specialCase": 11,
+              "toWho": "Self",
+              "powerFullName": "Blaster_Support.Radiation_Manipulation.Radioactive_Cloud",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 0.018
+              },
+              "probability": 1,
+              "duration": 8.57,
+              "effectType": "DamageBuff",
+              "specialCase": 11,
+              "toWho": "Self",
+              "powerFullName": "Blaster_Support.Radiation_Manipulation.Radioactive_Cloud",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.018
+              },
+              "probability": 1,
+              "duration": 8.57,
+              "effectType": "DamageBuff",
+              "specialCase": 11,
+              "toWho": "Self",
+              "powerFullName": "Blaster_Support.Radiation_Manipulation.Radioactive_Cloud",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.018
+              },
+              "probability": 1,
+              "duration": 8.57,
+              "effectType": "DamageBuff",
+              "specialCase": 11,
+              "toWho": "Self",
+              "powerFullName": "Blaster_Support.Radiation_Manipulation.Radioactive_Cloud",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pve": 0.018
+              },
+              "probability": 1,
+              "duration": 8.57,
+              "effectType": "DamageBuff",
+              "specialCase": 11,
+              "toWho": "Self",
+              "powerFullName": "Blaster_Support.Radiation_Manipulation.Radioactive_Cloud",
+              "damageType": "Psionic"
+            }
+          ]
+        }
+      ],
+      "powerIndex": 7,
+      "castTimeReal": 1.07,
+      "toggleCost": 20.18,
+      "fullName": "Blaster_Secondary_Atomic_Manipulation_Radioactive_Cloud",
+      "displayName": "Radioactive Cloud",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 0.8,
+      "accuracyMult": 0.8,
+      "attackTypes": 132,
+      "target": 1,
+      "targetLoS": true,
+      "endCost": 20.18,
+      "rechargeTime": 90,
+      "baseRechargeTime": 90,
+      "effectArea": 1,
+      "numAllowed": 1,
+      "description": {
+        "short": "PBAoE, Foe Hold",
+        "long": "When activated, you generate toxic radioactive gas around yourself. Any nearby foes may be overcome by the gas, leaving them choking and helpless. Recharge: Long"
+      },
+      "setTypes": [
+        10
+      ],
+      "level": 35,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 1.31999993,
+      "slottable": true,
+      "aoeModifier": 1
+    },
+    {
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Defense_Debuff",
+        "Endurance_Discount",
+        "Recharge",
+        "Stun"
+      ],
+      "enhancementCount": 6,
+      "archetypeOrder": "secondary",
+      "effects": [
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 49.4930763,
+                "pvp": 52.4615479
+              },
+              "probability": 1,
+              "effectType": "Damage",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Blaster_Support.Radiation_Manipulation.Positronic_Fist",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 148.479233,
+                "pvp": 157.3852
+              },
+              "probability": 1,
+              "effectType": "Damage",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Blaster_Support.Radiation_Manipulation.Positronic_Fist",
+              "damageType": "Energy"
+            }
+          ]
+        },
+        {
+          "effectType": "Debuff_Def",
+          "values": [
+            {
+              "mag": {
+                "pve": -0.14
+              },
+              "cancelOnMiss": true,
+              "probability": 1,
+              "duration": 10,
+              "effectType": "Defense",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Blaster_Support.Radiation_Manipulation.Positronic_Fist"
+            }
+          ]
+        },
+        {
+          "effectType": "Immobilize",
+          "values": [
+            {
+              "mag": {
+                "pve": 3
+              },
+              "probability": 0.6,
+              "duration": 11.92,
+              "effectType": "Mez",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "attribType": 1,
+              "powerFullName": "Blaster_Support.Radiation_Manipulation.Positronic_Fist",
+              "mezType": "Stun"
+            }
+          ]
+        },
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pvp": 3
+              },
+              "probability": 0.6,
+              "duration": 2,
+              "effectType": "Mez",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "attribType": 1,
+              "powerFullName": "Blaster_Support.Radiation_Manipulation.Positronic_Fist",
+              "mezType": "Stun"
+            }
+          ]
+        },
+        {
+          "effectType": "Polarize",
+          "values": [
+            {
+              "mag": {
+                "pve": 1
+              },
+              "probability": 1,
+              "effectType": "GrantPower",
+              "toWho": "Target",
+              "powerFullName": "Blaster_Support.Radiation_Manipulation.Positronic_Fist"
+            },
+            {
+              "mag": {
+                "pve": 1
+              },
+              "probability": 1,
+              "effectType": "RevokePower",
+              "toWho": "Target",
+              "powerFullName": "Blaster_Support.Radiation_Manipulation.Positronic_Fist"
+            }
+          ]
+        },
+        {
+          "effectType": "GammaBurst",
+          "values": [
+            {
+              "mag": {
+                "pve": 1
+              },
+              "probability": 1,
+              "effectType": "GrantPower",
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Blaster_Support.Radiation_Manipulation.Positronic_Fist"
+            }
+          ]
+        },
+        {
+          "effectType": "Defiance",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.176
+              },
+              "probability": 1,
+              "duration": 10.17,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "specialCase": 11,
+              "toWho": "Self",
+              "powerFullName": "Blaster_Support.Radiation_Manipulation.Positronic_Fist",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 0.176
+              },
+              "probability": 1,
+              "duration": 10.17,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "specialCase": 11,
+              "toWho": "Self",
+              "powerFullName": "Blaster_Support.Radiation_Manipulation.Positronic_Fist",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.176
+              },
+              "probability": 1,
+              "duration": 10.17,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "specialCase": 11,
+              "toWho": "Self",
+              "powerFullName": "Blaster_Support.Radiation_Manipulation.Positronic_Fist",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.176
+              },
+              "probability": 1,
+              "duration": 10.17,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "specialCase": 11,
+              "toWho": "Self",
+              "powerFullName": "Blaster_Support.Radiation_Manipulation.Positronic_Fist",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 0.176
+              },
+              "probability": 1,
+              "duration": 10.17,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "specialCase": 11,
+              "toWho": "Self",
+              "powerFullName": "Blaster_Support.Radiation_Manipulation.Positronic_Fist",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.176
+              },
+              "probability": 1,
+              "duration": 10.17,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "specialCase": 11,
+              "toWho": "Self",
+              "powerFullName": "Blaster_Support.Radiation_Manipulation.Positronic_Fist",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.176
+              },
+              "probability": 1,
+              "duration": 10.17,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "specialCase": 11,
+              "toWho": "Self",
+              "powerFullName": "Blaster_Support.Radiation_Manipulation.Positronic_Fist",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pve": 0.176
+              },
+              "probability": 1,
+              "duration": 10.17,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "specialCase": 11,
+              "toWho": "Self",
+              "powerFullName": "Blaster_Support.Radiation_Manipulation.Positronic_Fist",
+              "damageType": "Psionic"
+            }
+          ]
+        }
+      ],
+      "powerIndex": 8,
+      "castTimeReal": 2.67,
+      "toggleCost": 18.512,
+      "fullName": "Blaster_Secondary_Atomic_Manipulation_Positronic_Fist",
+      "displayName": "Positronic Fist",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1.2,
+      "accuracyMult": 1.2,
+      "attackTypes": 137,
+      "target": 2048,
+      "targetLoS": true,
+      "range": 7,
+      "endCost": 18.512,
+      "rechargeTime": 20,
+      "baseRechargeTime": 20,
+      "effectArea": 1,
+      "numAllowed": 1,
+      "description": {
+        "short": "Melee, Extreme DMG(Energy/Smash), Foe -Def, Disorient, Special",
+        "long": "You hammer your foe with a brutal smashing attack charged with a lethal dose of radiation. Your target will suffer Extreme Energy and Smashing damage, will have its defense reduced and will be disoriented for a short time in addition to being surrounded by positively charged particles."
+      },
+      "setTypes": [
+        1,
+        11,
+        30,
+        33,
+        44
+      ],
+      "level": 38,
+      "ignoreEnh": [
+        13
+      ],
+      "ignore_Buff": [],
+      "hasGrantPowerEffect": true,
+      "castTime": 2.904,
+      "slottable": true,
+      "aoeModifier": 1
+    }
+  ]
+}

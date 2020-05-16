@@ -1,1 +1,703 @@
-{"fullName":"IOSet.Lockdown","enhancements":[{"type":"set","description":{"short":"+ACC, +Hold","long":"Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and hold duration of a power by {Boost.Attrib.Hold.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Lockdown_A.Attuned_Lockdown_A","setName":"Lockdown","displayName":"Accuracy/Hold","effects":[{"mag":0.265,"effectId":"Hold","mezType":2},{"mag":0.265,"effectId":"Accuracy"}]},{"type":"set","description":{"short":"+ACC, +Rech","long":"Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and reduces the attack rate by {Boost.Attrib.Recharge.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Lockdown_B.Attuned_Lockdown_B","setName":"Lockdown","displayName":"Accuracy/Recharge","effects":[{"mag":0.265,"effectId":"Accuracy"},{"mag":0.265,"effectId":"Recharge"}]},{"type":"set","description":{"short":"+Rech, +Hold","long":"Reduces the attack rate by {Boost.Attrib.Recharge.Scale}% and hold duration of a power by {Boost.Attrib.Hold.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Lockdown_C.Attuned_Lockdown_C","setName":"Lockdown","displayName":"Recharge/Hold","effects":[{"mag":0.265,"effectId":"Hold","mezType":2},{"mag":0.265,"effectId":"Recharge"}]},{"type":"set","description":{"short":"-End Cost, +Rech, +Hold","long":"Reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%, reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}% and increases the hold duration of a power by {Boost.Attrib.Hold.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Lockdown_D.Attuned_Lockdown_D","setName":"Lockdown","displayName":"Endurance Reduction/Recharge/Hold","effects":[{"mag":0.212,"effectId":"Hold","mezType":2},{"mag":0.212,"effectId":"Endurance"},{"mag":0.212,"effectId":"Recharge"}]},{"type":"set","description":{"short":"+Acc, -End Cost, +Rech, +Hold","long":"Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}%, reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%, reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}% and increases the hold duration of a power by {Boost.Attrib.Hold.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Lockdown_E.Attuned_Lockdown_E","setName":"Lockdown","displayName":"Accuracy/Endurance Reduction/Recharge/Hold","effects":[{"mag":0.1855,"effectId":"Accuracy"},{"mag":0.1855,"effectId":"Hold","mezType":2},{"mag":0.1855,"effectId":"Endurance"},{"mag":0.1855,"effectId":"Recharge"}]},{"type":"set","description":{"short":"Chance for +2 Mag Hold","long":"Gives a chance to hold your target.  This effect will trigger roughly 2.5 times per minute."},"isUnique":false,"fullName":"Boosts.Attuned_Lockdown_F.Attuned_Lockdown_F","setName":"Lockdown","displayName":"Chance for +2 Mag Hold","effects":[{"procsPerMinute":2.5,"cancelOnMiss":true,"mag":2,"effectId":"Hold","mezType":2,"stacking":1,"resistible":true,"pvMode":1,"attribType":1},{"procsPerMinute":2.5,"cancelOnMiss":true,"mag":2,"effectId":"Ones","mezType":2,"stacking":1,"suppression":31,"resistible":true,"pvMode":2,"attribType":1}]}],"levels":{"min":30,"max":50},"bonuses":["Increased_Damage_5","Hold_Dur_4","Fire_Cold_Mez_Res_4","Increased_AoE_Fire_Cold_Def_3","Increased_Ranged_Energy_Neg_Def_5"],"setType":10,"displayName":"Lockdown","imageName":"Lockdown.png"}
+{
+  "fullName": "IOSet.Lockdown",
+  "enhancements": [
+    {
+      "description": {
+        "short": "+ACC, +Hold",
+        "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and hold duration of a power by {Boost.Attrib.Hold.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Hold",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 19,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Lockdown_A.Attuned_Lockdown_A",
+              "mezType": "Hold"
+            }
+          ]
+        },
+        {
+          "effectType": "Accuracy",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 1,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Lockdown_A.Attuned_Lockdown_A"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Lockdown_A.Attuned_Lockdown_A",
+      "setName": "Lockdown",
+      "displayName": "Accuracy/Hold"
+    },
+    {
+      "description": {
+        "short": "+ACC, +Rech",
+        "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and reduces the attack rate by {Boost.Attrib.Recharge.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Accuracy",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 1,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Lockdown_B.Attuned_Lockdown_B"
+            }
+          ]
+        },
+        {
+          "effectType": "Recharge",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 25,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Lockdown_B.Attuned_Lockdown_B"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Lockdown_B.Attuned_Lockdown_B",
+      "setName": "Lockdown",
+      "displayName": "Accuracy/Recharge"
+    },
+    {
+      "description": {
+        "short": "+Rech, +Hold",
+        "long": "Reduces the attack rate by {Boost.Attrib.Recharge.Scale}% and hold duration of a power by {Boost.Attrib.Hold.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Hold",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 19,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Lockdown_C.Attuned_Lockdown_C",
+              "mezType": "Hold"
+            }
+          ]
+        },
+        {
+          "effectType": "Recharge",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 25,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Lockdown_C.Attuned_Lockdown_C"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Lockdown_C.Attuned_Lockdown_C",
+      "setName": "Lockdown",
+      "displayName": "Recharge/Hold"
+    },
+    {
+      "description": {
+        "short": "-End Cost, +Rech, +Hold",
+        "long": "Reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%, reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}% and increases the hold duration of a power by {Boost.Attrib.Hold.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Hold",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 19,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Lockdown_D.Attuned_Lockdown_D",
+              "mezType": "Hold"
+            }
+          ]
+        },
+        {
+          "effectType": "Endurance",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 8,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Lockdown_D.Attuned_Lockdown_D"
+            }
+          ]
+        },
+        {
+          "effectType": "Recharge",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 25,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Lockdown_D.Attuned_Lockdown_D"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Lockdown_D.Attuned_Lockdown_D",
+      "setName": "Lockdown",
+      "displayName": "Endurance Reduction/Recharge/Hold"
+    },
+    {
+      "description": {
+        "short": "+Acc, -End Cost, +Rech, +Hold",
+        "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}%, reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%, reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}% and increases the hold duration of a power by {Boost.Attrib.Hold.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Accuracy",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.1855
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 1,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Lockdown_E.Attuned_Lockdown_E"
+            }
+          ]
+        },
+        {
+          "effectType": "Hold",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.1855
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 19,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Lockdown_E.Attuned_Lockdown_E",
+              "mezType": "Hold"
+            }
+          ]
+        },
+        {
+          "effectType": "Endurance",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.1855
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 8,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Lockdown_E.Attuned_Lockdown_E"
+            }
+          ]
+        },
+        {
+          "effectType": "Recharge",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.1855
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 25,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Lockdown_E.Attuned_Lockdown_E"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Lockdown_E.Attuned_Lockdown_E",
+      "setName": "Lockdown",
+      "displayName": "Accuracy/Endurance Reduction/Recharge/Hold"
+    },
+    {
+      "description": {
+        "short": "Chance for +2 Mag Hold",
+        "long": "Gives a chance to hold your target.  This effect will trigger roughly 2.5 times per minute."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Hold",
+          "values": [
+            {
+              "mag": {
+                "pve": 2
+              },
+              "procsPerMinute": 2.5,
+              "cancelOnMiss": true,
+              "duration": 8,
+              "effectType": "Mez",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "All",
+              "attribType": 1,
+              "powerFullName": "Boosts.Attuned_Lockdown_F.Attuned_Lockdown_F",
+              "mezType": "Hold"
+            }
+          ]
+        },
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pvp": 2
+              },
+              "procsPerMinute": 2.5,
+              "cancelOnMiss": true,
+              "duration": 6,
+              "effectType": "Mez",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "All",
+              "attribType": 1,
+              "powerFullName": "Boosts.Attuned_Lockdown_F.Attuned_Lockdown_F",
+              "mezType": "Hold"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Lockdown_F.Attuned_Lockdown_F",
+      "setName": "Lockdown",
+      "displayName": "Chance for +2 Mag Hold"
+    }
+  ],
+  "levels": {
+    "min": 30,
+    "max": 50
+  },
+  "bonuses": [
+    {
+      "description": {
+        "short": "+DMG",
+        "long": "Increases damage by 3%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 2,
+      "powerSetIndex": 218,
+      "fullName": "Set_Bonus.Set_Bonus.Increased_Damage_5",
+      "setName": "Set_Bonus",
+      "displayName": "Huge Increased Damage Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.03
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "DamageBuff",
+              "toWho": "All",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Damage_5",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 0.03
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "DamageBuff",
+              "toWho": "All",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Damage_5",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.03
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "DamageBuff",
+              "toWho": "All",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Damage_5",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.03
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "DamageBuff",
+              "toWho": "All",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Damage_5",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 0.03
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "DamageBuff",
+              "toWho": "All",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Damage_5",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.03
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "DamageBuff",
+              "toWho": "All",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Damage_5",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.03
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "DamageBuff",
+              "toWho": "All",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Damage_5",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pve": 0.03
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "DamageBuff",
+              "toWho": "All",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Damage_5",
+              "damageType": "Psionic"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+Duration Hold",
+        "long": "Improves the duration of your Hold effects by 2.5%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 3,
+      "powerSetIndex": 96,
+      "fullName": "Set_Bonus.Set_Bonus.Hold_Dur_4",
+      "setName": "Set_Bonus",
+      "displayName": "Large Hold Duration Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.025
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 19,
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Hold_Dur_4",
+              "mezType": "Hold"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+Res (Fire, Cold, Mez)",
+        "long": "Increases Fire and Cold resistance by 3.75% and Mez Resistance by 6.25%"
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 4,
+      "powerSetIndex": 83,
+      "fullName": "Set_Bonus.Set_Bonus.Fire_Cold_Mez_Res_4",
+      "setName": "Set_Bonus",
+      "displayName": "Large Fire, Cold and Mez Resistance",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Fire_Cold_Mez_Res_4",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Fire_Cold_Mez_Res_4",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 0.0625
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Fire_Cold_Mez_Res_4",
+              "mezType": "Immobilization"
+            },
+            {
+              "mag": {
+                "pve": 0.0625
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Fire_Cold_Mez_Res_4",
+              "mezType": "Hold"
+            },
+            {
+              "mag": {
+                "pve": 0.0625
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Fire_Cold_Mez_Res_4",
+              "mezType": "Stun"
+            },
+            {
+              "mag": {
+                "pve": 0.0625
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Fire_Cold_Mez_Res_4",
+              "mezType": "Sleep"
+            },
+            {
+              "mag": {
+                "pve": 0.0625
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Fire_Cold_Mez_Res_4",
+              "mezType": "Terrorize"
+            },
+            {
+              "mag": {
+                "pve": 0.0625
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Fire_Cold_Mez_Res_4",
+              "mezType": "Confuse"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+DEF",
+        "long": "Increases area effect defense by 2.5% and fire and cold defense by 1.25%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 5,
+      "powerSetIndex": 195,
+      "fullName": "Set_Bonus.Set_Bonus.Increased_AoE_Fire_Cold_Def_3",
+      "setName": "Set_Bonus",
+      "displayName": "Moderate Increased AoE/Fire/Cold Def Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.025
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_AoE_Fire_Cold_Def_3",
+              "damageType": "AoE"
+            },
+            {
+              "mag": {
+                "pve": 0.0125
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_AoE_Fire_Cold_Def_3",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.0125
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_AoE_Fire_Cold_Def_3",
+              "damageType": "Cold"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+DEF",
+        "long": "Increases ranged defense by 3.75% and energy and negative energy defense by 1.875%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 6,
+      "powerSetIndex": 386,
+      "fullName": "Set_Bonus.Set_Bonus.Increased_Ranged_Energy_Neg_Def_5",
+      "setName": "Set_Bonus",
+      "displayName": "Huge Increased Ranged/Energy/Negative Energy Def Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Ranged_Energy_Neg_Def_5",
+              "damageType": "Ranged"
+            },
+            {
+              "mag": {
+                "pve": 0.01875
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Ranged_Energy_Neg_Def_5",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.01875
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Ranged_Energy_Neg_Def_5",
+              "damageType": "Negative"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "setType": 10,
+  "displayName": "Lockdown",
+  "imageName": "Lockdown.png"
+}

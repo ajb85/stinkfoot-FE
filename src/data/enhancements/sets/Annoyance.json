@@ -1,1 +1,237 @@
-{"fullName":"IOSet.Annoyance","enhancements":[{"type":"set","description":{"short":"+Taunt","long":"Enhances the taunt duration of a power by {Boost.Attrib.Taunt.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Annoyance_A.Attuned_Annoyance_A","setName":"Annoyance","displayName":"Taunt","effects":[{"mag":0.424,"effectId":"Taunt","mezType":11}]},{"type":"set","description":{"short":"+Taunt, +Rech","long":"Enhances the taunt duration of a power by {Boost.Attrib.Taunt.Scale}% and reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Annoyance_B.Attuned_Annoyance_B","setName":"Annoyance","displayName":"Taunt/Recharge","effects":[{"mag":0.265,"effectId":"Recharge"},{"mag":0.265,"effectId":"Taunt","mezType":11}]},{"type":"set","description":{"short":"+Taunt, +Rech, +Range","long":"Enhances the taunt duration of a power by {Boost.Attrib.Taunt.Scale}%, the range by {Boost.Attrib.Range.Scale}% and reduces the recharge time by {Boost.Attrib.Recharge.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Annoyance_C.Attuned_Annoyance_C","setName":"Annoyance","displayName":"Taunt/Recharge/Range","effects":[{"mag":0.212,"effectId":"Recharge"},{"mag":0.212,"effectId":"Taunt","mezType":11},{"mag":0.1275,"effectId":"Range"}]}],"levels":{"min":10,"max":20},"bonuses":["Improved_Regeneration_1","Increased_Lethal_Smash_Melee_Def_1"],"setType":24,"displayName":"Annoyance","imageName":"sAnnoyance.png"}
+{
+  "fullName": "IOSet.Annoyance",
+  "enhancements": [
+    {
+      "description": {
+        "short": "+Taunt",
+        "long": "Enhances the taunt duration of a power by {Boost.Attrib.Taunt.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Taunt",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.424
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 19,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Annoyance_A.Attuned_Annoyance_A",
+              "mezType": "Taunt"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Annoyance_A.Attuned_Annoyance_A",
+      "setName": "Annoyance",
+      "displayName": "Taunt"
+    },
+    {
+      "description": {
+        "short": "+Taunt, +Rech",
+        "long": "Enhances the taunt duration of a power by {Boost.Attrib.Taunt.Scale}% and reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Recharge",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 25,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Annoyance_B.Attuned_Annoyance_B"
+            }
+          ]
+        },
+        {
+          "effectType": "Taunt",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 19,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Annoyance_B.Attuned_Annoyance_B",
+              "mezType": "Taunt"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Annoyance_B.Attuned_Annoyance_B",
+      "setName": "Annoyance",
+      "displayName": "Taunt/Recharge"
+    },
+    {
+      "description": {
+        "short": "+Taunt, +Rech, +Range",
+        "long": "Enhances the taunt duration of a power by {Boost.Attrib.Taunt.Scale}%, the range by {Boost.Attrib.Range.Scale}% and reduces the recharge time by {Boost.Attrib.Recharge.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Recharge",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 25,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Annoyance_C.Attuned_Annoyance_C"
+            }
+          ]
+        },
+        {
+          "effectType": "Taunt",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 19,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Annoyance_C.Attuned_Annoyance_C",
+              "mezType": "Taunt"
+            }
+          ]
+        },
+        {
+          "effectType": "Range",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.1275
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 24,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Annoyance_C.Attuned_Annoyance_C"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Annoyance_C.Attuned_Annoyance_C",
+      "setName": "Annoyance",
+      "displayName": "Taunt/Recharge/Range"
+    }
+  ],
+  "levels": {
+    "min": 10,
+    "max": 20
+  },
+  "bonuses": [
+    {
+      "description": {
+        "short": "+Regeneration",
+        "long": "Improves your Regeneration by 4%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 2,
+      "powerSetIndex": 151,
+      "fullName": "Set_Bonus.Set_Bonus.Improved_Regeneration_1",
+      "setName": "Set_Bonus",
+      "displayName": "Tiny Improved Regeneration Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.04
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Regeneration",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Improved_Regeneration_1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+DEF",
+        "long": "Increases lethal and smashing defense by 1.25% and melee defense by 0.625%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 3,
+      "powerSetIndex": 305,
+      "fullName": "Set_Bonus.Set_Bonus.Increased_Lethal_Smash_Melee_Def_1",
+      "setName": "Set_Bonus",
+      "displayName": "Tiny Increased Lethal/Smashing/Melee Def Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.0125
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Lethal_Smash_Melee_Def_1",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.0125
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Lethal_Smash_Melee_Def_1",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 0.00625
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Lethal_Smash_Melee_Def_1",
+              "damageType": "Melee"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "setType": 24,
+  "displayName": "Annoyance",
+  "imageName": "sAnnoyance.png"
+}
