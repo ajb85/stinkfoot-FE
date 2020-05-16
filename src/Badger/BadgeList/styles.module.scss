@@ -5,6 +5,7 @@
     display: flex;
     align-items: center;
     cursor: pointer;
+    width: fit-content;
 
     & + .row {
       height: $lh * 6;
@@ -20,18 +21,11 @@
 
       &:first-of-type {
         width: 100px;
+        line-height: $lh * 6;
       }
 
       &.name {
         width: 200px;
-      }
-
-      &.location {
-        width: 100px;
-      }
-
-      &.zone {
-        width: 100px;
       }
 
       &.bonusNotes {
@@ -50,13 +44,42 @@
       align-items: center;
       justify-content: center;
       height: $lh * 6;
+      border: 1px solid $secondary;
 
       p {
-        width: 200px;
         font-size: 12px;
         line-height: $lh;
         text-align: center;
+        padding-left: 5px;
+        padding-right: 5px;
+
+        &.name {
+          width: 200px;
+        }
       }
+    }
+
+    .notes {
+      display: flex;
+      align-items: center;
+      border: 1px solid $secondary;
+      p {
+        font-size: 12px;
+        display: table-cell;
+        vertical-align: middle;
+        padding: 0 $lh/2;
+        width: 300px;
+        text-align: left;
+      }
+    }
+
+    .location {
+      width: 120px;
+    }
+
+    .zone {
+      width: 100px;
+      word-wrap: break-word;
     }
 
     & > h3 {
@@ -74,15 +97,9 @@
     & > p {
       font-size: 12px;
       height: $lh * 6;
-      line-height: $lh * 6;
       display: table-cell;
       vertical-align: middle;
       padding: 0 $lh/2;
-
-      &:last-of-type {
-        width: 300px;
-        text-align: left;
-      }
     }
   }
 }

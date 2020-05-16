@@ -18,8 +18,8 @@ function BadgeList({ section, search }) {
       <div className={styles.row}>
         <h3>Availability</h3>
         <h3 className={styles.name}>Name</h3>
-        {location && <h3 className={styles.location}>Location</h3>}
         {zone && <h3 className={styles.zone}>Zone</h3>}
+        {location && <h3 className={styles.location}>Location</h3>}
         {bonusNotes && <h3 className={styles.bonusNotes}>Receive</h3>}
         <h3>Notes</h3>
       </div>
@@ -53,14 +53,24 @@ const mapBadges = (complete) => (b, i) => {
           </p>
         ))}
       </div>
-      {location && (
-        <p
-          className={styles.location}
-        >{`(${location.x}, ${location.y}, ${location.z})`}</p>
+      {zone && (
+        <div className={styles.zone}>
+          <p>{zone}</p>
+        </div>
       )}
-      {zone && <p className={styles.zone}>{zone}</p>}
-      {bonusNotes && <p className={styles.bonusNotes}>{bonusNotes}</p>}
-      <p>{notes}</p>
+      {location && (
+        <div className={styles.location}>
+          <p>{`(${location.x}, ${location.y}, ${location.z})`}</p>
+        </div>
+      )}
+      {bonusNotes && (
+        <div className={styles.bonusNotes}>
+          <p>{bonusNotes}</p>
+        </div>
+      )}
+      <div className={styles.notes}>
+        <p>{notes}</p>
+      </div>
     </div>
   );
 };
