@@ -21,7 +21,7 @@ function Routes(props) {
         </BadgeProvider>
       </Route>
       <Route>
-        <Redirect to="/badger" />
+        <Redirect to="/shopper" />
       </Route>
     </Switch>
   );
