@@ -10,6 +10,7 @@ function BadgeList({ section, search }) {
   if (!badges.characters || !badges.active) {
     return <div />;
   }
+
   const badgeList = badges.characters[badges.active][section].filter(
     filterSearch(search)
   );
