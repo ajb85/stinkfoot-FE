@@ -8,7 +8,7 @@ function Selection({ section, updateSection, searchState }) {
   // const [search, setSearch] = searchState;
   return (
     <div>
-      {badges.active && (
+      {badges.active && Object.keys(badges.characters).length > 0 && (
         <select value={section} onChange={updateSection}>
           {badgeTypes.map(({ display, code }) => (
             <option key={code} value={code}>
