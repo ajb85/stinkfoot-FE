@@ -1,1 +1,642 @@
-{"fullName":"IOSet.Pounding_Slugfest","enhancements":[{"type":"set","description":{"short":"Enhances Accuracy and Damage","long":"Enhances the damage of a power by {Boost.Attrib.Damage.Scale}% and accuracy by {Boost.Attrib.Accuracy.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Pounding_Slugfest_A.Attuned_Pounding_Slugfest_A","setName":"Pounding_Slugfest","displayName":"Accuracy/Damage","effects":[{"mag":0.265,"effectId":"Damage","damageType":1},{"mag":0.265,"effectId":"Boosts_33","damageType":2},{"mag":0.265,"effectId":"Boosts_33","damageType":3},{"mag":0.265,"effectId":"Boosts_33","damageType":4},{"mag":0.265,"effectId":"Boosts_33","damageType":5},{"mag":0.265,"effectId":"Boosts_33","damageType":6},{"mag":0.265,"effectId":"Boosts_33","damageType":7},{"mag":0.265,"effectId":"Boosts_33","damageType":8},{"mag":0.265,"effectId":"Accuracy"}]},{"type":"set","description":{"short":"Enhances Damage and Reduces Endurance Cost","long":"Enhances the damage of a power by {Boost.Attrib.Damage.Scale}% and reduces endurance cost by {Boost.Attrib.Endurance.Scale}%"},"isUnique":false,"fullName":"Boosts.Attuned_Pounding_Slugfest_B.Attuned_Pounding_Slugfest_B","setName":"Pounding_Slugfest","displayName":"Damage/Endurance","effects":[{"mag":0.265,"effectId":"Damage","damageType":1},{"mag":0.265,"effectId":"Boosts_33","damageType":2},{"mag":0.265,"effectId":"Boosts_33","damageType":3},{"mag":0.265,"effectId":"Boosts_33","damageType":4},{"mag":0.265,"effectId":"Boosts_33","damageType":5},{"mag":0.265,"effectId":"Boosts_33","damageType":6},{"mag":0.265,"effectId":"Boosts_33","damageType":7},{"mag":0.265,"effectId":"Boosts_33","damageType":8},{"mag":0.265,"effectId":"Endurance"}]},{"type":"set","description":{"short":"Enhances Damage and Recharge","long":"Enhances the damage of a power by {Boost.Attrib.Damage.Scale}% and reduces recharge cost by {Boost.Attrib.Recharge.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Pounding_Slugfest_C.Attuned_Pounding_Slugfest_C","setName":"Pounding_Slugfest","displayName":"Damage/Recharge","effects":[{"mag":0.265,"effectId":"Damage","damageType":1},{"mag":0.265,"effectId":"Boosts_33","damageType":2},{"mag":0.265,"effectId":"Boosts_33","damageType":3},{"mag":0.265,"effectId":"Boosts_33","damageType":4},{"mag":0.265,"effectId":"Boosts_33","damageType":5},{"mag":0.265,"effectId":"Boosts_33","damageType":6},{"mag":0.265,"effectId":"Boosts_33","damageType":7},{"mag":0.265,"effectId":"Boosts_33","damageType":8},{"mag":0.265,"effectId":"Recharge"}]},{"type":"set","description":{"short":"Adds Disorient Chance","long":"Adds a minor chance to Disorient your foe.  This effect will trigger roughly 2.5 times per minute."},"isUnique":false,"fullName":"Boosts.Attuned_Pounding_Slugfest_D.Attuned_Pounding_Slugfest_D","setName":"Pounding_Slugfest","displayName":"Disorient Bonus","effects":[{"procsPerMinute":2.5,"cancelOnMiss":true,"mag":2,"effectId":"Stun","mezType":10,"stacking":1,"resistible":true,"pvMode":1,"attribType":1},{"procsPerMinute":2.5,"cancelOnMiss":true,"mag":2,"effectId":"Ones","mezType":10,"stacking":1,"suppression":31,"resistible":true,"pvMode":2,"attribType":1}]}],"levels":{"min":15,"max":30},"bonuses":["Improved_Regeneration_3","Increased_Energy_Neg_Ranged_Def_1","Increased_Damage_3"],"setType":1,"displayName":"Pounding Slugfest","imageName":"sPoundingSlugfest.png"}
+{
+  "fullName": "IOSet.Pounding_Slugfest",
+  "enhancements": [
+    {
+      "description": {
+        "short": "Enhances Accuracy and Damage",
+        "long": "Enhances the damage of a power by {Boost.Attrib.Damage.Scale}% and accuracy by {Boost.Attrib.Accuracy.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Pounding_Slugfest_A.Attuned_Pounding_Slugfest_A",
+              "damageType": "Smashing"
+            }
+          ]
+        },
+        {
+          "effectType": "Boosts_33",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Pounding_Slugfest_A.Attuned_Pounding_Slugfest_A",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Pounding_Slugfest_A.Attuned_Pounding_Slugfest_A",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Pounding_Slugfest_A.Attuned_Pounding_Slugfest_A",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Pounding_Slugfest_A.Attuned_Pounding_Slugfest_A",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Pounding_Slugfest_A.Attuned_Pounding_Slugfest_A",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Pounding_Slugfest_A.Attuned_Pounding_Slugfest_A",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Pounding_Slugfest_A.Attuned_Pounding_Slugfest_A",
+              "damageType": "Psionic"
+            }
+          ]
+        },
+        {
+          "effectType": "Accuracy",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 1,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Pounding_Slugfest_A.Attuned_Pounding_Slugfest_A"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Pounding_Slugfest_A.Attuned_Pounding_Slugfest_A",
+      "setName": "Pounding_Slugfest",
+      "displayName": "Accuracy/Damage"
+    },
+    {
+      "description": {
+        "short": "Enhances Damage and Reduces Endurance Cost",
+        "long": "Enhances the damage of a power by {Boost.Attrib.Damage.Scale}% and reduces endurance cost by {Boost.Attrib.Endurance.Scale}%"
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Pounding_Slugfest_B.Attuned_Pounding_Slugfest_B",
+              "damageType": "Smashing"
+            }
+          ]
+        },
+        {
+          "effectType": "Boosts_33",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Pounding_Slugfest_B.Attuned_Pounding_Slugfest_B",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Pounding_Slugfest_B.Attuned_Pounding_Slugfest_B",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Pounding_Slugfest_B.Attuned_Pounding_Slugfest_B",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Pounding_Slugfest_B.Attuned_Pounding_Slugfest_B",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Pounding_Slugfest_B.Attuned_Pounding_Slugfest_B",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Pounding_Slugfest_B.Attuned_Pounding_Slugfest_B",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Pounding_Slugfest_B.Attuned_Pounding_Slugfest_B",
+              "damageType": "Psionic"
+            }
+          ]
+        },
+        {
+          "effectType": "Endurance",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 8,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Pounding_Slugfest_B.Attuned_Pounding_Slugfest_B"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Pounding_Slugfest_B.Attuned_Pounding_Slugfest_B",
+      "setName": "Pounding_Slugfest",
+      "displayName": "Damage/Endurance"
+    },
+    {
+      "description": {
+        "short": "Enhances Damage and Recharge",
+        "long": "Enhances the damage of a power by {Boost.Attrib.Damage.Scale}% and reduces recharge cost by {Boost.Attrib.Recharge.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Pounding_Slugfest_C.Attuned_Pounding_Slugfest_C",
+              "damageType": "Smashing"
+            }
+          ]
+        },
+        {
+          "effectType": "Boosts_33",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Pounding_Slugfest_C.Attuned_Pounding_Slugfest_C",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Pounding_Slugfest_C.Attuned_Pounding_Slugfest_C",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Pounding_Slugfest_C.Attuned_Pounding_Slugfest_C",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Pounding_Slugfest_C.Attuned_Pounding_Slugfest_C",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Pounding_Slugfest_C.Attuned_Pounding_Slugfest_C",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Pounding_Slugfest_C.Attuned_Pounding_Slugfest_C",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Pounding_Slugfest_C.Attuned_Pounding_Slugfest_C",
+              "damageType": "Psionic"
+            }
+          ]
+        },
+        {
+          "effectType": "Recharge",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 25,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Pounding_Slugfest_C.Attuned_Pounding_Slugfest_C"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Pounding_Slugfest_C.Attuned_Pounding_Slugfest_C",
+      "setName": "Pounding_Slugfest",
+      "displayName": "Damage/Recharge"
+    },
+    {
+      "description": {
+        "short": "Adds Disorient Chance",
+        "long": "Adds a minor chance to Disorient your foe.  This effect will trigger roughly 2.5 times per minute."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Stun",
+          "values": [
+            {
+              "mag": {
+                "pve": 2
+              },
+              "procsPerMinute": 2.5,
+              "cancelOnMiss": true,
+              "duration": 8,
+              "effectType": "Mez",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "All",
+              "attribType": 1,
+              "powerFullName": "Boosts.Attuned_Pounding_Slugfest_D.Attuned_Pounding_Slugfest_D",
+              "mezType": "Stun"
+            }
+          ]
+        },
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pvp": 2
+              },
+              "procsPerMinute": 2.5,
+              "cancelOnMiss": true,
+              "duration": 5.336,
+              "effectType": "Mez",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "All",
+              "attribType": 1,
+              "powerFullName": "Boosts.Attuned_Pounding_Slugfest_D.Attuned_Pounding_Slugfest_D",
+              "mezType": "Stun"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Pounding_Slugfest_D.Attuned_Pounding_Slugfest_D",
+      "setName": "Pounding_Slugfest",
+      "displayName": "Disorient Bonus"
+    }
+  ],
+  "levels": {
+    "min": 15,
+    "max": 30
+  },
+  "bonuses": [
+    {
+      "description": {
+        "short": "+Regeneration",
+        "long": "Improves your Regeneration by 8%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 2,
+      "powerSetIndex": 153,
+      "fullName": "Set_Bonus.Set_Bonus.Improved_Regeneration_3",
+      "setName": "Set_Bonus",
+      "displayName": "Moderate Improved Regeneration Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.08
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Regeneration",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Improved_Regeneration_3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+DEF",
+        "long": "Increases energy and negative energy defense by 1.25% and ranged defense by 0.625%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 3,
+      "powerSetIndex": 235,
+      "fullName": "Set_Bonus.Set_Bonus.Increased_Energy_Neg_Ranged_Def_1",
+      "setName": "Set_Bonus",
+      "displayName": "Tiny Increased Energy/Negative Energy/Ranged Def Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.0125
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Energy_Neg_Ranged_Def_1",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.0125
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Energy_Neg_Ranged_Def_1",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.00625
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Energy_Neg_Ranged_Def_1",
+              "damageType": "Ranged"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+DMG",
+        "long": "Increases damage by 2%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 4,
+      "powerSetIndex": 216,
+      "fullName": "Set_Bonus.Set_Bonus.Increased_Damage_3",
+      "setName": "Set_Bonus",
+      "displayName": "Moderate Increased Damage Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.02
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "DamageBuff",
+              "toWho": "All",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Damage_3",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 0.02
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "DamageBuff",
+              "toWho": "All",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Damage_3",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.02
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "DamageBuff",
+              "toWho": "All",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Damage_3",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.02
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "DamageBuff",
+              "toWho": "All",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Damage_3",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 0.02
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "DamageBuff",
+              "toWho": "All",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Damage_3",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.02
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "DamageBuff",
+              "toWho": "All",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Damage_3",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.02
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "DamageBuff",
+              "toWho": "All",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Damage_3",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pve": 0.02
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "DamageBuff",
+              "toWho": "All",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Damage_3",
+              "damageType": "Psionic"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "setType": 1,
+  "displayName": "Pounding Slugfest",
+  "imageName": "sPoundingSlugfest.png"
+}

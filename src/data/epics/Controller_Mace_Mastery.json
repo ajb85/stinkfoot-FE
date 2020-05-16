@@ -1,1 +1,726 @@
-{"fullName":"Epic_Mace_Mastery","archetypeOrder":"epicPool","description":"Black Scorpion has granted you access to the advanced technology of the Nullifier Mace. The signature weapon of the Bane Spider Commandos, it is not a typical clumsy mace. The Bane Mace is capable of firing a variety of energy projectiles and grenades.  It can even be modified to summon and command some or Black Scorpion's RV technologies.","imageName":"PatronShield.png","displayName":"Mace Mastery","powers":[{"allowedEnhancements":["Accuracy","Damage","Defense_Debuff","Endurance_Discount","Range","Recharge"],"enhancementCount":6,"archetypeOrder":"epicPool","powerIndex":0,"castTimeReal":2,"toggleCost":13,"fullName":"Epic_Mace_Mastery_Poisonous_Ray","displayName":"Poisonous Ray","requires":{"powers":{},"count":0},"accuracy":1.05,"accuracyMult":1.05,"attackTypes":2,"target":2048,"targetLoS":true,"range":80,"endCost":13,"rechargeTime":24,"baseRechargeTime":24,"effectArea":1,"numAllowed":1,"description":{"short":"Ranged DoT(Poison), Foe -RES, -DEF","long":"The Bane Mace can fire a nasty Poison Ray.  This toxin is suspended in a polarized plasma field and delivered like an energy blast.  Upon impact, the toxin directly attacks the immune system, reducing the affected targets Defense and Damage Resistance as it deals toxic damage. Damage: Moderate, Recharge: Slow"},"setTypes":[2,21,30,44],"level":35,"ignoreEnh":[],"ignore_Buff":[],"castTime":2.244,"slottable":true,"aoeModifier":1},{"allowedEnhancements":["Defense_Buff","Endurance_Discount","Recharge"],"enhancementCount":6,"archetypeOrder":"epicPool","powerIndex":1,"castTimeReal":2,"toggleCost":0.325,"fullName":"Epic_Mace_Mastery_Scorpion_Shield","displayName":"Scorpion Shield","requires":{"powers":{},"count":0},"accuracy":1,"accuracyMult":1,"target":1,"targetLoS":true,"endCost":0.1625,"rechargeTime":4,"baseRechargeTime":4,"activatePeriod":0.5,"effectArea":1,"numAllowed":1,"ignoreStrength":true,"description":{"short":"Toggle: Self, +Def(Smash,Lethal,Energy), +Res(Toxic)","long":"Black Scorpion's technologies are impressive indeed.  This energy shield grants you Defense to Lethal, Smashing and Energy attacks, as well as improves your damage resistance to Toxic damage. Recharge: Fast"},"setTypes":[7],"level":35,"ignoreEnh":[],"ignore_Buff":[],"castTime":2.244,"slottable":true,"aoeModifier":1},{"allowedEnhancements":["Accuracy","Damage","Endurance_Discount","Knockback","Range","Recharge"],"enhancementCount":6,"archetypeOrder":"epicPool","powerIndex":2,"castTimeReal":2,"toggleCost":18.98,"fullName":"Epic_Mace_Mastery_Disruptor_Blast","displayName":"Disruptor Blast","requires":{"powers":{"epic.controller_mace_mastery.poisonous_ray":true,"epic.controller_mace_mastery.scorpion_shield":true},"count":1},"accuracy":1.05,"accuracyMult":1.05,"attackTypes":140,"target":2048,"targetLoS":true,"range":80,"endCost":18.98,"rechargeTime":32,"baseRechargeTime":32,"effectArea":2,"radius":15,"maxTargets":16,"numAllowed":1,"description":{"short":"Ranged (Targeted AoE), Moderate DMG(Smashing/Energy), Foe Knockback","long":"Fires a tremendous charge of kinetic energy from your Bane Mace. This charge is so powerful it will explode on impact, blasting all nearby foes.  Some affected foes may be knocked back by the force of the blast. You must be level 41 and have Poisonous Ray or Scorpion Shield before selecting this power. Damage: Moderate, Recharge: Long"},"setTypes":[3,23,44],"level":41,"ignoreEnh":[],"ignore_Buff":[],"castTime":2.244,"slottable":true,"aoeModifier":3.25},{"allowedEnhancements":["ToHit_Buff","Endurance_Discount","Recharge"],"enhancementCount":6,"archetypeOrder":"epicPool","powerIndex":3,"castTimeReal":1.17,"toggleCost":0.78,"fullName":"Epic_Mace_Mastery_Focused_Accuracy","displayName":"Focused Accuracy","requires":{"powers":{"Epic_Mace_Mastery_Poisonous_Ray":true,"Epic_Mace_Mastery_Scorpion_Shield":true},"count":1},"accuracy":1,"accuracyMult":1,"target":1,"targetLoS":true,"endCost":0.39,"rechargeTime":10,"baseRechargeTime":10,"activatePeriod":0.5,"effectArea":1,"numAllowed":1,"description":{"short":"Toggle: Self +To Hit, +ACC, +Perception, Res(DeBuff To Hit)","long":"When this power is activated, the Villain focuses their senses to dramatically improve their accuracy. Additionally, Focused Accuracy increase your Perception, allowing you to better see stealthy foes. It also grants you resistance to powers that DeBuff your Accuracy. Focused Accuracy is a toggle power and must be activated and deactivated manually. Like all toggle powers, while active, Focused Accuracy drains Endurance while active. You must be level 41 and have Poisonous Ray or Scorpion Shield before selecting this power. Recharge: Slow"},"setTypes":[25],"level":41,"ignoreEnh":[],"ignore_Buff":[],"castTime":1.31999993,"slottable":true,"aoeModifier":1},{"allowedEnhancements":["Accuracy","Damage","Defense_Debuff","Endurance_Discount","Range","Recharge","Slow"],"enhancementCount":6,"archetypeOrder":"epicPool","powerIndex":4,"castTimeReal":3.03,"toggleCost":26,"fullName":"Epic_Mace_Mastery_Summon_Tarantula","displayName":"Summon Tarantula","requires":{"powers":{"Epic_Mace_Mastery_Poisonous_Ray":true,"Epic_Mace_Mastery_Scorpion_Shield":true,"Epic_Mace_Mastery_Disruptor_Blast":true,"Epic_Mace_Mastery_Focused_Accuracy":true},"count":2},"accuracy":1,"accuracyMult":1,"target":8192,"targetLoS":true,"range":60,"endCost":26,"rechargeTime":900,"baseRechargeTime":900,"effectArea":4,"numAllowed":1,"description":{"short":"Summon Tarantula: Ranged Moderate DMG(Toxic)","long":"Black Scorpion has granted you an Toxic Tarantula for you to command. Weaver One developed the Tarantula Exoskeleton Armor, which so radically transforms an Arachnos troop that hardly anything human is recognizable. Your access to this Tarantula is very limited. You can only summon it once every 15 minutes and it will leave after 4 minutes, or if you exit a zone or mission. You must be level 44 and have two other Mace Mastery Powers before selecting this power. Recharge: Extremely Long"},"setTypes":[6,21,27,44],"level":44,"ignoreEnh":[],"ignore_Buff":[],"castTime":3.168,"slottable":true,"aoeModifier":1}]}
+{
+  "fullName": "Epic_Mace_Mastery",
+  "archetypeOrder": "epicPool",
+  "description": "Black Scorpion has granted you access to the advanced technology of the Nullifier Mace. The signature weapon of the Bane Spider Commandos, it is not a typical clumsy mace. The Bane Mace is capable of firing a variety of energy projectiles and grenades.  It can even be modified to summon and command some or Black Scorpion's RV technologies.",
+  "imageName": "PatronShield.png",
+  "displayName": "Mace Mastery",
+  "powers": [
+    {
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Defense_Debuff",
+        "Endurance_Discount",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "archetypeOrder": "epicPool",
+      "effects": [
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 62.5615,
+                "pvp": 241.73764
+              },
+              "probability": 1,
+              "effectType": "Damage",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Epic.Controller_Mace_Mastery.Poisonous_Ray",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 3.12807512,
+                "pvp": 12.0868826
+              },
+              "probability": 1,
+              "duration": 9.3,
+              "effectType": "Damage",
+              "ticks": 10,
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Epic.Controller_Mace_Mastery.Poisonous_Ray",
+              "damageType": "Toxic"
+            }
+          ]
+        },
+        {
+          "effectType": "Debuff_Def",
+          "values": [
+            {
+              "mag": {
+                "pve": -0.14
+              },
+              "probability": 1,
+              "duration": 30,
+              "effectType": "Defense",
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Epic.Controller_Mace_Mastery.Poisonous_Ray"
+            }
+          ]
+        },
+        {
+          "effectType": "Res_Dmg",
+          "values": [
+            {
+              "mag": {
+                "pve": -0.1625
+              },
+              "probability": 1,
+              "duration": 30,
+              "effectType": "Resistance",
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Epic.Controller_Mace_Mastery.Poisonous_Ray",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": -0.1625
+              },
+              "probability": 1,
+              "duration": 30,
+              "effectType": "Resistance",
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Epic.Controller_Mace_Mastery.Poisonous_Ray",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": -0.1625
+              },
+              "probability": 1,
+              "duration": 30,
+              "effectType": "Resistance",
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Epic.Controller_Mace_Mastery.Poisonous_Ray",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": -0.1625
+              },
+              "probability": 1,
+              "duration": 30,
+              "effectType": "Resistance",
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Epic.Controller_Mace_Mastery.Poisonous_Ray",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": -0.1625
+              },
+              "probability": 1,
+              "duration": 30,
+              "effectType": "Resistance",
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Epic.Controller_Mace_Mastery.Poisonous_Ray",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": -0.1625
+              },
+              "probability": 1,
+              "duration": 30,
+              "effectType": "Resistance",
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Epic.Controller_Mace_Mastery.Poisonous_Ray",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": -0.1625
+              },
+              "probability": 1,
+              "duration": 30,
+              "effectType": "Resistance",
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Epic.Controller_Mace_Mastery.Poisonous_Ray",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pve": -0.1625
+              },
+              "probability": 1,
+              "duration": 30,
+              "effectType": "Resistance",
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Epic.Controller_Mace_Mastery.Poisonous_Ray",
+              "damageType": "Psionic"
+            }
+          ]
+        }
+      ],
+      "powerIndex": 0,
+      "castTimeReal": 2,
+      "toggleCost": 13,
+      "fullName": "Epic_Mace_Mastery_Poisonous_Ray",
+      "displayName": "Poisonous Ray",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1.05,
+      "accuracyMult": 1.05,
+      "attackTypes": 2,
+      "target": 2048,
+      "targetLoS": true,
+      "range": 80,
+      "endCost": 13,
+      "rechargeTime": 24,
+      "baseRechargeTime": 24,
+      "effectArea": 1,
+      "numAllowed": 1,
+      "description": {
+        "short": "Ranged DoT(Poison), Foe -RES, -DEF",
+        "long": "The Bane Mace can fire a nasty Poison Ray.  This toxin is suspended in a polarized plasma field and delivered like an energy blast.  Upon impact, the toxin directly attacks the immune system, reducing the affected targets Defense and Damage Resistance as it deals toxic damage. Damage: Moderate, Recharge: Slow"
+      },
+      "setTypes": [
+        2,
+        21,
+        30,
+        44
+      ],
+      "level": 35,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 2.244,
+      "slottable": true,
+      "aoeModifier": 1
+    },
+    {
+      "allowedEnhancements": [
+        "Defense_Buff",
+        "Endurance_Discount",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "archetypeOrder": "epicPool",
+      "effects": [
+        {
+          "effectType": "Buff_Def",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.105000004,
+                "pvp": 0.105000004
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Epic.Controller_Mace_Mastery.Scorpion_Shield",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 0.105000004,
+                "pvp": 0.105000004
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Epic.Controller_Mace_Mastery.Scorpion_Shield",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.07,
+                "pvp": 0.105000004
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Epic.Controller_Mace_Mastery.Scorpion_Shield",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pvp": 0.105000004
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Epic.Controller_Mace_Mastery.Scorpion_Shield",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pvp": 0.105000004
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Epic.Controller_Mace_Mastery.Scorpion_Shield",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pvp": 0.105000004
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Epic.Controller_Mace_Mastery.Scorpion_Shield",
+              "damageType": "Psionic"
+            },
+            {
+              "mag": {
+                "pvp": 0.105000004
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Epic.Controller_Mace_Mastery.Scorpion_Shield",
+              "damageType": "Negative"
+            }
+          ]
+        },
+        {
+          "effectType": "Res_Dmg",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.1225,
+                "pvp": 0.1925
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Epic.Controller_Mace_Mastery.Scorpion_Shield",
+              "damageType": "Toxic"
+            }
+          ]
+        },
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pvp": 0.1
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Elusivity",
+              "toWho": "Self",
+              "powerFullName": "Epic.Controller_Mace_Mastery.Scorpion_Shield",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pvp": 0.1
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Elusivity",
+              "toWho": "Self",
+              "powerFullName": "Epic.Controller_Mace_Mastery.Scorpion_Shield",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pvp": 0.1
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Elusivity",
+              "toWho": "Self",
+              "powerFullName": "Epic.Controller_Mace_Mastery.Scorpion_Shield",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pvp": 0.1
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Elusivity",
+              "toWho": "Self",
+              "powerFullName": "Epic.Controller_Mace_Mastery.Scorpion_Shield",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pvp": 0.1
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Elusivity",
+              "toWho": "Self",
+              "powerFullName": "Epic.Controller_Mace_Mastery.Scorpion_Shield",
+              "damageType": "Psionic"
+            },
+            {
+              "mag": {
+                "pvp": 0.1
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Elusivity",
+              "toWho": "Self",
+              "powerFullName": "Epic.Controller_Mace_Mastery.Scorpion_Shield",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pvp": 0.1
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "toWho": "Self",
+              "powerFullName": "Epic.Controller_Mace_Mastery.Scorpion_Shield"
+            }
+          ]
+        }
+      ],
+      "powerIndex": 1,
+      "castTimeReal": 2,
+      "toggleCost": 0.325,
+      "fullName": "Epic_Mace_Mastery_Scorpion_Shield",
+      "displayName": "Scorpion Shield",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "target": 1,
+      "targetLoS": true,
+      "endCost": 0.1625,
+      "rechargeTime": 4,
+      "baseRechargeTime": 4,
+      "activatePeriod": 0.5,
+      "effectArea": 1,
+      "numAllowed": 1,
+      "ignoreStrength": true,
+      "description": {
+        "short": "Toggle: Self, +Def(Smash,Lethal,Energy), +Res(Toxic)",
+        "long": "Black Scorpion's technologies are impressive indeed.  This energy shield grants you Defense to Lethal, Smashing and Energy attacks, as well as improves your damage resistance to Toxic damage. Recharge: Fast"
+      },
+      "setTypes": [
+        7
+      ],
+      "level": 35,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 2.244,
+      "slottable": true,
+      "aoeModifier": 1,
+      "powerType": "Toggle"
+    },
+    {
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Knockback",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "archetypeOrder": "epicPool",
+      "effects": [
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 31.28075,
+                "pvp": 41.50205
+              },
+              "probability": 1,
+              "effectType": "Damage",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Epic.Controller_Mace_Mastery.Disruptor_Blast",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 62.5615,
+                "pvp": 269.765167
+              },
+              "probability": 1,
+              "effectType": "Damage",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Epic.Controller_Mace_Mastery.Disruptor_Blast",
+              "damageType": "Energy"
+            }
+          ]
+        },
+        {
+          "effectType": "Knockback",
+          "values": [
+            {
+              "mag": {
+                "pve": 1.6617,
+                "pvp": 1.6617
+              },
+              "probability": 0.2,
+              "effectType": "Mez",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Epic.Controller_Mace_Mastery.Disruptor_Blast",
+              "mezType": "Knockback"
+            }
+          ]
+        }
+      ],
+      "powerIndex": 2,
+      "castTimeReal": 2,
+      "toggleCost": 18.98,
+      "fullName": "Epic_Mace_Mastery_Disruptor_Blast",
+      "displayName": "Disruptor Blast",
+      "requires": {
+        "powers": {
+          "epic.controller_mace_mastery.poisonous_ray": true,
+          "epic.controller_mace_mastery.scorpion_shield": true
+        },
+        "count": 1
+      },
+      "accuracy": 1.05,
+      "accuracyMult": 1.05,
+      "attackTypes": 140,
+      "target": 2048,
+      "targetLoS": true,
+      "range": 80,
+      "endCost": 18.98,
+      "rechargeTime": 32,
+      "baseRechargeTime": 32,
+      "effectArea": 2,
+      "radius": 15,
+      "maxTargets": 16,
+      "numAllowed": 1,
+      "description": {
+        "short": "Ranged (Targeted AoE), Moderate DMG(Smashing/Energy), Foe Knockback",
+        "long": "Fires a tremendous charge of kinetic energy from your Bane Mace. This charge is so powerful it will explode on impact, blasting all nearby foes.  Some affected foes may be knocked back by the force of the blast. You must be level 41 and have Poisonous Ray or Scorpion Shield before selecting this power. Damage: Moderate, Recharge: Long"
+      },
+      "setTypes": [
+        3,
+        23,
+        44
+      ],
+      "level": 41,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 2.244,
+      "slottable": true,
+      "aoeModifier": 3.25
+    },
+    {
+      "allowedEnhancements": [
+        "ToHit_Buff",
+        "Endurance_Discount",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "archetypeOrder": "epicPool",
+      "effects": [
+        {
+          "effectType": "Buff_ToHit",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.05
+              },
+              "cancelOnMiss": true,
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "ToHit",
+              "toWho": "All",
+              "powerFullName": "Epic.Controller_Mace_Mastery.Personal_Force_Field"
+            }
+          ]
+        },
+        {
+          "effectType": "Res_Boolean",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.5536
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "ResEffect",
+              "eTModifies": 40,
+              "toWho": "All",
+              "powerFullName": "Epic.Controller_Mace_Mastery.Personal_Force_Field"
+            }
+          ]
+        },
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.2
+              },
+              "cancelOnMiss": true,
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Enhancement",
+              "eTModifies": 1,
+              "toWho": "All",
+              "powerFullName": "Epic.Controller_Mace_Mastery.Personal_Force_Field"
+            },
+            {
+              "mag": {
+                "pve": 0.6
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "ResEffect",
+              "eTModifies": 23,
+              "toWho": "Self",
+              "powerFullName": "Epic.Controller_Mace_Mastery.Personal_Force_Field"
+            },
+            {
+              "mag": {
+                "pve": 0.6
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "PerceptionRadius",
+              "toWho": "Self",
+              "powerFullName": "Epic.Controller_Mace_Mastery.Personal_Force_Field"
+            }
+          ]
+        }
+      ],
+      "powerIndex": 3,
+      "castTimeReal": 1.17,
+      "toggleCost": 0.78,
+      "fullName": "Epic_Mace_Mastery_Focused_Accuracy",
+      "displayName": "Focused Accuracy",
+      "requires": {
+        "powers": {
+          "Epic_Mace_Mastery_Poisonous_Ray": true,
+          "Epic_Mace_Mastery_Scorpion_Shield": true
+        },
+        "count": 1
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "target": 1,
+      "targetLoS": true,
+      "endCost": 0.39,
+      "rechargeTime": 10,
+      "baseRechargeTime": 10,
+      "activatePeriod": 0.5,
+      "effectArea": 1,
+      "numAllowed": 1,
+      "description": {
+        "short": "Toggle: Self +To Hit, +ACC, +Perception, Res(DeBuff To Hit)",
+        "long": "When this power is activated, the Villain focuses their senses to dramatically improve their accuracy. Additionally, Focused Accuracy increase your Perception, allowing you to better see stealthy foes. It also grants you resistance to powers that DeBuff your Accuracy. Focused Accuracy is a toggle power and must be activated and deactivated manually. Like all toggle powers, while active, Focused Accuracy drains Endurance while active. You must be level 41 and have Poisonous Ray or Scorpion Shield before selecting this power. Recharge: Slow"
+      },
+      "setTypes": [
+        25
+      ],
+      "level": 41,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 1.31999993,
+      "slottable": true,
+      "aoeModifier": 1,
+      "powerType": "Toggle"
+    },
+    {
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Defense_Debuff",
+        "Endurance_Discount",
+        "Range",
+        "Recharge",
+        "Slow"
+      ],
+      "enhancementCount": 6,
+      "archetypeOrder": "epicPool",
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": -1
+              },
+              "probability": 1,
+              "duration": 240,
+              "effectType": "EntCreate",
+              "toWho": "All",
+              "powerFullName": "Epic.Controller_Mace_Mastery.Summon_Tarantula"
+            }
+          ]
+        }
+      ],
+      "powerIndex": 4,
+      "castTimeReal": 3.03,
+      "toggleCost": 26,
+      "fullName": "Epic_Mace_Mastery_Summon_Tarantula",
+      "displayName": "Summon Tarantula",
+      "requires": {
+        "powers": {
+          "Epic_Mace_Mastery_Poisonous_Ray": true,
+          "Epic_Mace_Mastery_Scorpion_Shield": true,
+          "Epic_Mace_Mastery_Disruptor_Blast": true,
+          "Epic_Mace_Mastery_Focused_Accuracy": true
+        },
+        "count": 2
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "target": 8192,
+      "targetLoS": true,
+      "range": 60,
+      "endCost": 26,
+      "rechargeTime": 900,
+      "baseRechargeTime": 900,
+      "effectArea": 4,
+      "numAllowed": 1,
+      "description": {
+        "short": "Summon Tarantula: Ranged Moderate DMG(Toxic)",
+        "long": "Black Scorpion has granted you an Toxic Tarantula for you to command. Weaver One developed the Tarantula Exoskeleton Armor, which so radically transforms an Arachnos troop that hardly anything human is recognizable. Your access to this Tarantula is very limited. You can only summon it once every 15 minutes and it will leave after 4 minutes, or if you exit a zone or mission. You must be level 44 and have two other Mace Mastery Powers before selecting this power. Recharge: Extremely Long"
+      },
+      "setTypes": [
+        6,
+        21,
+        27,
+        44
+      ],
+      "level": 44,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 3.168,
+      "slottable": true,
+      "aoeModifier": 1
+    }
+  ]
+}

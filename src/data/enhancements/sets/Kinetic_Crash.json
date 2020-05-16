@@ -1,1 +1,928 @@
-{"fullName":"IOSet.Kinetic_Crash","enhancements":[{"type":"set","description":{"short":"+Knockback, +DMG","long":"Enhances the Knockback potential of a power by {Boost.Attrib.Knockback.Scale}% and the damage by {Boost.Attrib.Damage.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Kinetic_Crash_A.Attuned_Kinetic_Crash_A","setName":"Kinetic_Crash","displayName":"Knockback/Damage","effects":[{"mag":0.4775,"effectId":"Knockback","mezType":4},{"mag":0.4775,"effectId":"Boosts_60","mezType":5},{"mag":0.265,"effectId":"Damage","damageType":1},{"mag":0.265,"effectId":"Boosts_33","damageType":2},{"mag":0.265,"effectId":"Boosts_33","damageType":3},{"mag":0.265,"effectId":"Boosts_33","damageType":4},{"mag":0.265,"effectId":"Boosts_33","damageType":5},{"mag":0.265,"effectId":"Boosts_33","damageType":6},{"mag":0.265,"effectId":"Boosts_33","damageType":7},{"mag":0.265,"effectId":"Boosts_33","damageType":8}]},{"type":"set","description":{"short":"+Knockback, +ACC","long":"Enhances the Knockback potential of a power by {Boost.Attrib.Knockback.Scale}% and the accuracy by {Boost.Attrib.Accuracy.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Kinetic_Crash_B.Attuned_Kinetic_Crash_B","setName":"Kinetic_Crash","displayName":"Knockback/Accuracy","effects":[{"mag":0.265,"effectId":"Accuracy"},{"mag":0.4775,"effectId":"Knockback","mezType":4},{"mag":0.4775,"effectId":"Boosts_60","mezType":5}]},{"type":"set","description":{"short":"+Knockback, +Rech","long":"Enhances the Knockback potential of a power by {Boost.Attrib.Knockback.Scale}% and reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Kinetic_Crash_C.Attuned_Kinetic_Crash_C","setName":"Kinetic_Crash","displayName":"Knockback/Recharge","effects":[{"mag":0.265,"effectId":"Recharge"},{"mag":0.4775,"effectId":"Knockback","mezType":4},{"mag":0.4775,"effectId":"Boosts_60","mezType":5}]},{"type":"set","description":{"short":"+Rech, +End","long":"Reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}% and the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Kinetic_Crash_D.Attuned_Kinetic_Crash_D","setName":"Kinetic_Crash","displayName":"Recharge/Endurance","effects":[{"mag":0.265,"effectId":"Recharge"},{"mag":0.265,"effectId":"Endurance"}]},{"type":"set","description":{"short":"+Knockback, +DMG, +End","long":"Enhances the Knockback potential of a power by {Boost.Attrib.Knockback.Scale}%, the damage by {Boost.Attrib.Damage.Scale}% and reduces the endurance cost by {Boost.Attrib.Endurance.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Kinetic_Crash_E.Attuned_Kinetic_Crash_E","setName":"Kinetic_Crash","displayName":"Knockback/Damage/Endurance","effects":[{"mag":0.382,"effectId":"Knockback","mezType":4},{"mag":0.382,"effectId":"Boosts_60","mezType":5},{"mag":0.212,"effectId":"Damage","damageType":1},{"mag":0.212,"effectId":"Boosts_33","damageType":2},{"mag":0.212,"effectId":"Boosts_33","damageType":3},{"mag":0.212,"effectId":"Boosts_33","damageType":4},{"mag":0.212,"effectId":"Boosts_33","damageType":5},{"mag":0.212,"effectId":"Boosts_33","damageType":6},{"mag":0.212,"effectId":"Boosts_33","damageType":7},{"mag":0.212,"effectId":"Boosts_33","damageType":8},{"mag":0.212,"effectId":"Endurance"}]},{"type":"set","description":{"short":"+Knockback, +DMG, +ACC","long":"Enhances the Knockback potential of a power by {Boost.Attrib.Knockback.Scale}%, the damage by {Boost.Attrib.Damage.Scale}% and  the accuracy by {Boost.Attrib.Accuracy.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Kinetic_Crash_F.Attuned_Kinetic_Crash_F","setName":"Kinetic_Crash","displayName":"Knockback/Damage/Accuracy","effects":[{"mag":0.382,"effectId":"Knockback","mezType":4},{"mag":0.382,"effectId":"Boosts_60","mezType":5},{"mag":0.212,"effectId":"Damage","damageType":1},{"mag":0.212,"effectId":"Boosts_33","damageType":2},{"mag":0.212,"effectId":"Boosts_33","damageType":3},{"mag":0.212,"effectId":"Boosts_33","damageType":4},{"mag":0.212,"effectId":"Boosts_33","damageType":5},{"mag":0.212,"effectId":"Boosts_33","damageType":6},{"mag":0.212,"effectId":"Boosts_33","damageType":7},{"mag":0.212,"effectId":"Boosts_33","damageType":8},{"mag":0.212,"effectId":"Accuracy"}]}],"levels":{"min":21,"max":50},"bonuses":["Increased_Move_2","Lethal_Smash_Mez_Res_2","Knockback_Protection_2","Improved_Regeneration_2","Improved_Recharge_Time_5"],"setType":23,"displayName":"Kinetic Crash","imageName":"sKineticCrash.png"}
+{
+  "fullName": "IOSet.Kinetic_Crash",
+  "enhancements": [
+    {
+      "description": {
+        "short": "+Knockback, +DMG",
+        "long": "Enhances the Knockback potential of a power by {Boost.Attrib.Knockback.Scale}% and the damage by {Boost.Attrib.Damage.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Knockback",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.4775
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 19,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Kinetic_Crash_A.Attuned_Kinetic_Crash_A",
+              "mezType": "Knockback"
+            }
+          ]
+        },
+        {
+          "effectType": "Boosts_60",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.4775
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 19,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Kinetic_Crash_A.Attuned_Kinetic_Crash_A",
+              "mezType": "Knockup"
+            }
+          ]
+        },
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Kinetic_Crash_A.Attuned_Kinetic_Crash_A",
+              "damageType": "Smashing"
+            }
+          ]
+        },
+        {
+          "effectType": "Boosts_33",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Kinetic_Crash_A.Attuned_Kinetic_Crash_A",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Kinetic_Crash_A.Attuned_Kinetic_Crash_A",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Kinetic_Crash_A.Attuned_Kinetic_Crash_A",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Kinetic_Crash_A.Attuned_Kinetic_Crash_A",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Kinetic_Crash_A.Attuned_Kinetic_Crash_A",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Kinetic_Crash_A.Attuned_Kinetic_Crash_A",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Kinetic_Crash_A.Attuned_Kinetic_Crash_A",
+              "damageType": "Psionic"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Kinetic_Crash_A.Attuned_Kinetic_Crash_A",
+      "setName": "Kinetic_Crash",
+      "displayName": "Knockback/Damage"
+    },
+    {
+      "description": {
+        "short": "+Knockback, +ACC",
+        "long": "Enhances the Knockback potential of a power by {Boost.Attrib.Knockback.Scale}% and the accuracy by {Boost.Attrib.Accuracy.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Accuracy",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 1,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Kinetic_Crash_B.Attuned_Kinetic_Crash_B"
+            }
+          ]
+        },
+        {
+          "effectType": "Knockback",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.4775
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 19,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Kinetic_Crash_B.Attuned_Kinetic_Crash_B",
+              "mezType": "Knockback"
+            }
+          ]
+        },
+        {
+          "effectType": "Boosts_60",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.4775
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 19,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Kinetic_Crash_B.Attuned_Kinetic_Crash_B",
+              "mezType": "Knockup"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Kinetic_Crash_B.Attuned_Kinetic_Crash_B",
+      "setName": "Kinetic_Crash",
+      "displayName": "Knockback/Accuracy"
+    },
+    {
+      "description": {
+        "short": "+Knockback, +Rech",
+        "long": "Enhances the Knockback potential of a power by {Boost.Attrib.Knockback.Scale}% and reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Recharge",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 25,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Kinetic_Crash_C.Attuned_Kinetic_Crash_C"
+            }
+          ]
+        },
+        {
+          "effectType": "Knockback",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.4775
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 19,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Kinetic_Crash_C.Attuned_Kinetic_Crash_C",
+              "mezType": "Knockback"
+            }
+          ]
+        },
+        {
+          "effectType": "Boosts_60",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.4775
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 19,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Kinetic_Crash_C.Attuned_Kinetic_Crash_C",
+              "mezType": "Knockup"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Kinetic_Crash_C.Attuned_Kinetic_Crash_C",
+      "setName": "Kinetic_Crash",
+      "displayName": "Knockback/Recharge"
+    },
+    {
+      "description": {
+        "short": "+Rech, +End",
+        "long": "Reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}% and the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Recharge",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 25,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Kinetic_Crash_D.Attuned_Kinetic_Crash_D"
+            }
+          ]
+        },
+        {
+          "effectType": "Endurance",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 8,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Kinetic_Crash_D.Attuned_Kinetic_Crash_D"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Kinetic_Crash_D.Attuned_Kinetic_Crash_D",
+      "setName": "Kinetic_Crash",
+      "displayName": "Recharge/Endurance"
+    },
+    {
+      "description": {
+        "short": "+Knockback, +DMG, +End",
+        "long": "Enhances the Knockback potential of a power by {Boost.Attrib.Knockback.Scale}%, the damage by {Boost.Attrib.Damage.Scale}% and reduces the endurance cost by {Boost.Attrib.Endurance.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Knockback",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.382
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 19,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Kinetic_Crash_E.Attuned_Kinetic_Crash_E",
+              "mezType": "Knockback"
+            }
+          ]
+        },
+        {
+          "effectType": "Boosts_60",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.382
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 19,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Kinetic_Crash_E.Attuned_Kinetic_Crash_E",
+              "mezType": "Knockup"
+            }
+          ]
+        },
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Kinetic_Crash_E.Attuned_Kinetic_Crash_E",
+              "damageType": "Smashing"
+            }
+          ]
+        },
+        {
+          "effectType": "Boosts_33",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Kinetic_Crash_E.Attuned_Kinetic_Crash_E",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Kinetic_Crash_E.Attuned_Kinetic_Crash_E",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Kinetic_Crash_E.Attuned_Kinetic_Crash_E",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Kinetic_Crash_E.Attuned_Kinetic_Crash_E",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Kinetic_Crash_E.Attuned_Kinetic_Crash_E",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Kinetic_Crash_E.Attuned_Kinetic_Crash_E",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Kinetic_Crash_E.Attuned_Kinetic_Crash_E",
+              "damageType": "Psionic"
+            }
+          ]
+        },
+        {
+          "effectType": "Endurance",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 8,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Kinetic_Crash_E.Attuned_Kinetic_Crash_E"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Kinetic_Crash_E.Attuned_Kinetic_Crash_E",
+      "setName": "Kinetic_Crash",
+      "displayName": "Knockback/Damage/Endurance"
+    },
+    {
+      "description": {
+        "short": "+Knockback, +DMG, +ACC",
+        "long": "Enhances the Knockback potential of a power by {Boost.Attrib.Knockback.Scale}%, the damage by {Boost.Attrib.Damage.Scale}% and  the accuracy by {Boost.Attrib.Accuracy.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Knockback",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.382
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 19,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Kinetic_Crash_F.Attuned_Kinetic_Crash_F",
+              "mezType": "Knockback"
+            }
+          ]
+        },
+        {
+          "effectType": "Boosts_60",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.382
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 19,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Kinetic_Crash_F.Attuned_Kinetic_Crash_F",
+              "mezType": "Knockup"
+            }
+          ]
+        },
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Kinetic_Crash_F.Attuned_Kinetic_Crash_F",
+              "damageType": "Smashing"
+            }
+          ]
+        },
+        {
+          "effectType": "Boosts_33",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Kinetic_Crash_F.Attuned_Kinetic_Crash_F",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Kinetic_Crash_F.Attuned_Kinetic_Crash_F",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Kinetic_Crash_F.Attuned_Kinetic_Crash_F",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Kinetic_Crash_F.Attuned_Kinetic_Crash_F",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Kinetic_Crash_F.Attuned_Kinetic_Crash_F",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Kinetic_Crash_F.Attuned_Kinetic_Crash_F",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Kinetic_Crash_F.Attuned_Kinetic_Crash_F",
+              "damageType": "Psionic"
+            }
+          ]
+        },
+        {
+          "effectType": "Accuracy",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 1,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Kinetic_Crash_F.Attuned_Kinetic_Crash_F"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Kinetic_Crash_F.Attuned_Kinetic_Crash_F",
+      "setName": "Kinetic_Crash",
+      "displayName": "Knockback/Damage/Accuracy"
+    }
+  ],
+  "levels": {
+    "min": 21,
+    "max": 50
+  },
+  "bonuses": [
+    {
+      "description": {
+        "short": "+Move",
+        "long": "Improves all of your Movement speeds by 4.5%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 2,
+      "powerSetIndex": 327,
+      "fullName": "Set_Bonus.Set_Bonus.Increased_Move_2",
+      "setName": "Set_Bonus",
+      "displayName": "Small Improved Movement Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.045
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "SpeedJumping",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Move_2"
+            },
+            {
+              "mag": {
+                "pve": 0.045
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "JumpHeight",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Move_2"
+            },
+            {
+              "mag": {
+                "pve": 0.045
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "SpeedFlying",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Move_2"
+            },
+            {
+              "mag": {
+                "pve": 0.045
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "SpeedRunning",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Move_2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+Res (Lethal, Smash, Mez)",
+        "long": "Increases Lethal and Smashing resistance by 2.25% and Mez Resistance by 3.75%"
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 3,
+      "powerSetIndex": 447,
+      "fullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_2",
+      "setName": "Set_Bonus",
+      "displayName": "Small Lethal, Smash and Mez Resistance",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.0225
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_2",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.0225
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_2",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_2",
+              "mezType": "Immobilization"
+            },
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_2",
+              "mezType": "Hold"
+            },
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_2",
+              "mezType": "Stun"
+            },
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_2",
+              "mezType": "Sleep"
+            },
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_2",
+              "mezType": "Terrorize"
+            },
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_2",
+              "mezType": "Confuse"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+Knockback",
+        "long": "Grants Knockback Protection of 3pts."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 4,
+      "powerSetIndex": 439,
+      "fullName": "Set_Bonus.Set_Bonus.Knockback_Protection_2",
+      "setName": "Set_Bonus",
+      "displayName": "Small Knockback Protection Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": -3
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Mez",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Knockback_Protection_2",
+              "mezType": "Knockback"
+            },
+            {
+              "mag": {
+                "pve": -3
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Mez",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Knockback_Protection_2",
+              "mezType": "Knockup"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+Regeneration",
+        "long": "Improves your Regeneration by 6%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 5,
+      "powerSetIndex": 152,
+      "fullName": "Set_Bonus.Set_Bonus.Improved_Regeneration_2",
+      "setName": "Set_Bonus",
+      "displayName": "Small Improved Regeneration Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.06
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Regeneration",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Improved_Regeneration_2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+Recharge Time",
+        "long": "Improves the Recharge Time of all of your powers by 7.5%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 6,
+      "powerSetIndex": 141,
+      "fullName": "Set_Bonus.Set_Bonus.Improved_Recharge_Time_5",
+      "setName": "Set_Bonus",
+      "displayName": "Huge Improved Recharge Time Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.075
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 25,
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Improved_Recharge_Time_5"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "setType": 23,
+  "displayName": "Kinetic Crash",
+  "imageName": "sKineticCrash.png"
+}

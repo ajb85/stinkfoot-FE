@@ -1,1 +1,526 @@
-{"fullName":"Epic_Heat_Mastery","archetypeOrder":"epicPool","description":"You have Mastery over Fire and Flame to control your foes and to add some much needed armor and defense.","imageName":"PyreMastery.png","displayName":"Heat Mastery","powers":[{"allowedEnhancements":["Damage","Endurance_Discount","Knockback","Range","Recharge"],"enhancementCount":6,"archetypeOrder":"epicPool","powerIndex":0,"castTimeReal":3.07,"toggleCost":16.25,"fullName":"Epic_Heat_Mastery_Bonfire","displayName":"Bonfire","requires":{"powers":{},"count":0},"accuracy":2,"accuracyMult":2,"target":8192,"targetLoS":true,"range":70,"endCost":16.25,"rechargeTime":120,"baseRechargeTime":120,"effectArea":4,"castFlags":2,"numAllowed":1,"description":{"short":"Ranged (Location AoE), Minor DMG(Fire), Foe Knockback","long":"You can create a Bonfire that knocks back and burns any foes who try to pass through it. Cannot do critical hits.Recharge: Long"},"setTypes":[3,23,44],"level":35,"ignoreEnh":[],"ignore_Buff":[],"castTime":3.3,"slottable":true,"aoeModifier":1},{"allowedEnhancements":["Accuracy","Damage","Endurance_Discount","Range","Recharge"],"enhancementCount":6,"archetypeOrder":"epicPool","powerIndex":1,"castTimeReal":1.67,"toggleCost":6.5,"fullName":"Epic_Heat_Mastery_Fire_Blast","displayName":"Fire Blast","requires":{"powers":{},"count":0},"accuracy":1,"accuracyMult":1,"attackTypes":66,"target":2048,"targetLoS":true,"range":80,"endCost":6.5,"rechargeTime":8,"baseRechargeTime":8,"effectArea":1,"numAllowed":1,"description":{"short":"Ranged, Moderate DMG(Fire)","long":"Sends a Blast of Fire at a targeted foe and sets the target on fire for a short period of time. Slower recharge rate than Flares, but more damage. Damage: Moderate, Recharge: Fast"},"setTypes":[2,44],"level":35,"ignoreEnh":[],"ignore_Buff":[],"castTime":1.848,"slottable":true,"aoeModifier":1},{"allowedEnhancements":["Accuracy","Damage","Endurance_Discount","Range","Recharge"],"enhancementCount":6,"archetypeOrder":"epicPool","powerIndex":2,"castTimeReal":1,"toggleCost":18.98,"fullName":"Epic_Heat_Mastery_Fire_Ball","displayName":"Fire Ball","requires":{"powers":{"Epic_Heat_Mastery_Bonfire":true,"Epic_Heat_Mastery_Fire_Blast":true},"count":1},"accuracy":1,"accuracyMult":1,"attackTypes":68,"target":2048,"targetLoS":true,"range":80,"endCost":18.98,"rechargeTime":32,"baseRechargeTime":32,"effectArea":2,"radius":15,"maxTargets":16,"numAllowed":1,"description":{"short":"Ranged (Targeted AoE), Moderate DMG(Fire/Smash)","long":"Hurls an exploding Fireball that consumes a targeted foe, and all nearby enemies. Anyone in that explosion is burned and set ablaze. You must be level 41 and have Bonfire or Fire Blast before selecting this power.  Damage: Moderate, Recharge: Slow"},"setTypes":[3,44],"level":41,"ignoreEnh":[],"ignore_Buff":[],"castTime":1.188,"slottable":true,"aoeModifier":3.25},{"allowedEnhancements":["Accuracy","Damage","Endurance_Discount","Hold","Range","Recharge"],"enhancementCount":6,"archetypeOrder":"epicPool","powerIndex":3,"castTimeReal":1.07,"toggleCost":10.66,"fullName":"Epic_Heat_Mastery_Char","displayName":"Char","requires":{"powers":{"Epic_Heat_Mastery_Bonfire":true,"Epic_Heat_Mastery_Fire_Blast":true},"count":1},"accuracy":1,"accuracyMult":1,"attackTypes":66,"target":2048,"targetLoS":true,"range":50,"endCost":10.66,"rechargeTime":32,"baseRechargeTime":32,"effectArea":1,"numAllowed":1,"description":{"short":"Ranged, Minor DoT(Fire), Foe Hold","long":"Incapacitates a distant foe by Charring him with smoldering soot and cinders. The target is left helpless, choking on the soot. The target will take some fire damage from char, but the damage is very trivial.  You must be level 41 and have Bonfire or Fire Blast before selecting this power.  Damage: Minor(DoT), Recharge: Moderate"},"setTypes":[2,10,44],"level":41,"ignoreEnh":[],"ignore_Buff":[],"castTime":1.31999993,"slottable":true,"aoeModifier":1},{"allowedEnhancements":["Damage","Heal","Recharge","Endurance_Modification","Stun"],"enhancementCount":6,"archetypeOrder":"epicPool","powerIndex":4,"castTimeReal":1.5,"fullName":"Epic_Heat_Mastery_Rise_of_the_Phoenix","displayName":"Rise of the Phoenix","requires":{"powers":{"Epic_Heat_Mastery_Bonfire":true,"Epic_Heat_Mastery_Fire_Blast":true,"Epic_Heat_Mastery_Fire_Ball":true,"Epic_Heat_Mastery_Char":true},"count":2},"accuracy":1,"accuracyMult":1,"target":1,"targetLoS":true,"rechargeTime":300,"baseRechargeTime":300,"effectArea":4,"castFlags":4,"numAllowed":1,"description":{"short":"Self Rez, Special","long":"If you are defeated, you can rise from the ashes. The fiery resurrection blasts nearby foes with an explosion and knocks them down. You will revive with about half of your Hit Points and Endurance. Rise of the Phoenix will actually leave you invulnerable for a brief time and protected from XP Debt for 20 seconds. You must be level 44 and have two other Flame Mastery Powers before selecting this power. Recharge: Very Long"},"setTypes":[4,9,11,22,44],"level":44,"ignoreEnh":[],"ignore_Buff":[],"castTime":1.716,"slottable":true,"aoeModifier":1}]}
+{
+  "fullName": "Epic_Heat_Mastery",
+  "archetypeOrder": "epicPool",
+  "description": "You have Mastery over Fire and Flame to control your foes and to add some much needed armor and defense.",
+  "imageName": "PyreMastery.png",
+  "displayName": "Heat Mastery",
+  "powers": [
+    {
+      "allowedEnhancements": [
+        "Damage",
+        "Endurance_Discount",
+        "Knockback",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "archetypeOrder": "epicPool",
+      "effects": [
+        {
+          "effectType": "Level",
+          "values": [
+            {
+              "mag": {
+                "pve": 50
+              },
+              "probability": 1,
+              "duration": 45,
+              "effectType": "EntCreate",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "All",
+              "powerFullName": "Epic.Heat_Mastery_Stalker.Bonfire"
+            }
+          ]
+        }
+      ],
+      "powerIndex": 0,
+      "castTimeReal": 3.07,
+      "toggleCost": 16.25,
+      "fullName": "Epic_Heat_Mastery_Bonfire",
+      "displayName": "Bonfire",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 2,
+      "accuracyMult": 2,
+      "target": 8192,
+      "targetLoS": true,
+      "range": 70,
+      "endCost": 16.25,
+      "rechargeTime": 120,
+      "baseRechargeTime": 120,
+      "effectArea": 4,
+      "castFlags": 2,
+      "numAllowed": 1,
+      "description": {
+        "short": "Ranged (Location AoE), Minor DMG(Fire), Foe Knockback",
+        "long": "You can create a Bonfire that knocks back and burns any foes who try to pass through it. Cannot do critical hits.Recharge: Long"
+      },
+      "setTypes": [
+        3,
+        23,
+        44
+      ],
+      "level": 35,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 3.3,
+      "slottable": true,
+      "aoeModifier": 1
+    },
+    {
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "archetypeOrder": "epicPool",
+      "effects": [
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 6.25615025,
+                "pvp": 198.1479
+              },
+              "probability": 1,
+              "effectType": "Damage",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Epic.Heat_Mastery_Stalker.Fire_Blast",
+              "damageType": "Fire"
+            }
+          ]
+        }
+      ],
+      "powerIndex": 1,
+      "castTimeReal": 1.67,
+      "toggleCost": 6.5,
+      "fullName": "Epic_Heat_Mastery_Fire_Blast",
+      "displayName": "Fire Blast",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "attackTypes": 66,
+      "target": 2048,
+      "targetLoS": true,
+      "range": 80,
+      "endCost": 6.5,
+      "rechargeTime": 8,
+      "baseRechargeTime": 8,
+      "effectArea": 1,
+      "numAllowed": 1,
+      "description": {
+        "short": "Ranged, Moderate DMG(Fire)",
+        "long": "Sends a Blast of Fire at a targeted foe and sets the target on fire for a short period of time. Slower recharge rate than Flares, but more damage. Damage: Moderate, Recharge: Fast"
+      },
+      "setTypes": [
+        2,
+        44
+      ],
+      "level": 35,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 1.848,
+      "slottable": true,
+      "aoeModifier": 1
+    },
+    {
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "archetypeOrder": "epicPool",
+      "effects": [
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 9.384226,
+                "pvp": 10.7543221
+              },
+              "probability": 1,
+              "effectType": "Damage",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Epic.Heat_Mastery_Stalker.Fire_Ball",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 6.25615025,
+                "pvp": 66.06182
+              },
+              "probability": 1,
+              "effectType": "Damage",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Epic.Heat_Mastery_Stalker.Fire_Ball",
+              "damageType": "Fire"
+            }
+          ]
+        }
+      ],
+      "powerIndex": 2,
+      "castTimeReal": 1,
+      "toggleCost": 18.98,
+      "fullName": "Epic_Heat_Mastery_Fire_Ball",
+      "displayName": "Fire Ball",
+      "requires": {
+        "powers": {
+          "Epic_Heat_Mastery_Bonfire": true,
+          "Epic_Heat_Mastery_Fire_Blast": true
+        },
+        "count": 1
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "attackTypes": 68,
+      "target": 2048,
+      "targetLoS": true,
+      "range": 80,
+      "endCost": 18.98,
+      "rechargeTime": 32,
+      "baseRechargeTime": 32,
+      "effectArea": 2,
+      "radius": 15,
+      "maxTargets": 16,
+      "numAllowed": 1,
+      "description": {
+        "short": "Ranged (Targeted AoE), Moderate DMG(Fire/Smash)",
+        "long": "Hurls an exploding Fireball that consumes a targeted foe, and all nearby enemies. Anyone in that explosion is burned and set ablaze. You must be level 41 and have Bonfire or Fire Blast before selecting this power.  Damage: Moderate, Recharge: Slow"
+      },
+      "setTypes": [
+        3,
+        44
+      ],
+      "level": 41,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 1.188,
+      "slottable": true,
+      "aoeModifier": 3.25
+    },
+    {
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Hold",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "archetypeOrder": "epicPool",
+      "effects": [
+        {
+          "effectType": "Immobilize",
+          "values": [
+            {
+              "mag": {
+                "pve": 3
+              },
+              "probability": 1,
+              "duration": 14.3040009,
+              "effectType": "Mez",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "attribType": 1,
+              "powerFullName": "Epic.Heat_Mastery_Stalker.Melt_Armor",
+              "mezType": "Hold"
+            }
+          ]
+        },
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pvp": 3
+              },
+              "probability": 1,
+              "duration": 2,
+              "effectType": "Mez",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "attribType": 1,
+              "powerFullName": "Epic.Heat_Mastery_Stalker.Melt_Armor",
+              "mezType": "Hold"
+            },
+            {
+              "mag": {
+                "pvp": 4
+              },
+              "probability": 0.13,
+              "duration": 6,
+              "effectType": "Mez",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "attribType": 1,
+              "powerFullName": "Epic.Heat_Mastery_Stalker.Melt_Armor",
+              "mezType": "Taunt"
+            }
+          ]
+        },
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pvp": 27.40415,
+                "pve": 5.56102
+              },
+              "probability": 1,
+              "duration": 4.2,
+              "effectType": "Damage",
+              "ticks": 5,
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Epic.Heat_Mastery_Stalker.Melt_Armor",
+              "damageType": "Fire"
+            }
+          ]
+        },
+        {
+          "effectType": "InherentTaunt",
+          "values": [
+            {
+              "mag": {
+                "pve": 4
+              },
+              "cancelOnMiss": true,
+              "probability": 1,
+              "duration": 13.6,
+              "effectType": "Mez",
+              "stacking": 1,
+              "resistible": true,
+              "specialCase": 14,
+              "toWho": "Target",
+              "attribType": 1,
+              "powerFullName": "Epic.Heat_Mastery_Stalker.Melt_Armor",
+              "requiresToHitCheck": true,
+              "mezType": "Taunt"
+            }
+          ]
+        },
+        {
+          "effectType": "FieryEmbrace",
+          "values": [
+            {
+              "mag": {
+                "pve": 2.502459
+              },
+              "duration": 4.2,
+              "effectType": "Damage",
+              "ticks": 5,
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Epic.Heat_Mastery_Stalker.Melt_Armor",
+              "damageType": "Fire"
+            }
+          ]
+        }
+      ],
+      "powerIndex": 3,
+      "castTimeReal": 1.07,
+      "toggleCost": 10.66,
+      "fullName": "Epic_Heat_Mastery_Char",
+      "displayName": "Char",
+      "requires": {
+        "powers": {
+          "Epic_Heat_Mastery_Bonfire": true,
+          "Epic_Heat_Mastery_Fire_Blast": true
+        },
+        "count": 1
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "attackTypes": 66,
+      "target": 2048,
+      "targetLoS": true,
+      "range": 50,
+      "endCost": 10.66,
+      "rechargeTime": 32,
+      "baseRechargeTime": 32,
+      "effectArea": 1,
+      "numAllowed": 1,
+      "description": {
+        "short": "Ranged, Minor DoT(Fire), Foe Hold",
+        "long": "Incapacitates a distant foe by Charring him with smoldering soot and cinders. The target is left helpless, choking on the soot. The target will take some fire damage from char, but the damage is very trivial.  You must be level 41 and have Bonfire or Fire Blast before selecting this power.  Damage: Minor(DoT), Recharge: Moderate"
+      },
+      "setTypes": [
+        2,
+        10,
+        44
+      ],
+      "level": 41,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 1.31999993,
+      "slottable": true,
+      "aoeModifier": 1
+    },
+    {
+      "allowedEnhancements": [
+        "Damage",
+        "Heal",
+        "Recharge",
+        "Endurance_Modification",
+        "Stun"
+      ],
+      "enhancementCount": 6,
+      "archetypeOrder": "epicPool",
+      "effects": [
+        {
+          "effectType": "HealSelf",
+          "values": [
+            {
+              "mag": {
+                "pve": 602.3795
+              },
+              "probability": 1,
+              "duration": 0.5,
+              "variableModified": true,
+              "effectType": "Heal",
+              "ticks": 1,
+              "stacking": 1,
+              "toWho": "Self",
+              "powerFullName": "Epic.Heat_Mastery_Stalker.Rise_of_the_Phoenix"
+            }
+          ]
+        },
+        {
+          "effectType": "Level",
+          "values": [
+            {
+              "mag": {
+                "pve": 50
+              },
+              "probability": 1,
+              "duration": 5,
+              "variableModified": true,
+              "effectType": "EntCreate",
+              "stacking": 1,
+              "toWho": "Self",
+              "powerFullName": "Epic.Heat_Mastery_Stalker.Rise_of_the_Phoenix"
+            }
+          ]
+        },
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 10
+              },
+              "probability": 1,
+              "duration": 15,
+              "effectType": "Mez",
+              "toWho": "Self",
+              "attribType": 1,
+              "powerFullName": "Epic.Heat_Mastery_Stalker.Rise_of_the_Phoenix",
+              "mezType": "Untouchable"
+            },
+            {
+              "mag": {
+                "pve": 50
+              },
+              "probability": 1,
+              "variableModified": true,
+              "effectType": "Endurance",
+              "delayedTime": 0.125,
+              "stacking": 1,
+              "toWho": "Self",
+              "powerFullName": "Epic.Heat_Mastery_Stalker.Rise_of_the_Phoenix"
+            },
+            {
+              "mag": {
+                "pve": 50
+              },
+              "probability": 1,
+              "duration": 4,
+              "variableModified": true,
+              "effectType": "Mez",
+              "stacking": 1,
+              "toWho": "Self",
+              "attribType": 1,
+              "powerFullName": "Epic.Heat_Mastery_Stalker.Rise_of_the_Phoenix",
+              "mezType": "Immobilization"
+            },
+            {
+              "mag": {
+                "pve": 1
+              },
+              "probability": 1,
+              "duration": 60,
+              "effectType": "XPDebtProtection",
+              "toWho": "Self",
+              "powerFullName": "Epic.Heat_Mastery_Stalker.Rise_of_the_Phoenix"
+            }
+          ]
+        }
+      ],
+      "powerIndex": 4,
+      "castTimeReal": 1.5,
+      "fullName": "Epic_Heat_Mastery_Rise_of_the_Phoenix",
+      "displayName": "Rise of the Phoenix",
+      "requires": {
+        "powers": {
+          "Epic_Heat_Mastery_Bonfire": true,
+          "Epic_Heat_Mastery_Fire_Blast": true,
+          "Epic_Heat_Mastery_Fire_Ball": true,
+          "Epic_Heat_Mastery_Char": true
+        },
+        "count": 2
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "target": 1,
+      "targetLoS": true,
+      "rechargeTime": 300,
+      "baseRechargeTime": 300,
+      "effectArea": 4,
+      "castFlags": 4,
+      "numAllowed": 1,
+      "description": {
+        "short": "Self Rez, Special",
+        "long": "If you are defeated, you can rise from the ashes. The fiery resurrection blasts nearby foes with an explosion and knocks them down. You will revive with about half of your Hit Points and Endurance. Rise of the Phoenix will actually leave you invulnerable for a brief time and protected from XP Debt for 20 seconds. You must be level 44 and have two other Flame Mastery Powers before selecting this power. Recharge: Very Long"
+      },
+      "setTypes": [
+        4,
+        9,
+        11,
+        22,
+        44
+      ],
+      "level": 44,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 1.716,
+      "slottable": true,
+      "aoeModifier": 1
+    }
+  ]
+}

@@ -1,1 +1,586 @@
-{"fullName":"IOSet.Enfeebled_Operation","enhancements":[{"type":"set","description":{"short":"+ACC, +Rech","long":"Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Enfeebled_Operation_A.Attuned_Enfeebled_Operation_A","setName":"Enfeebled_Operation","displayName":"Accuracy/Recharge","effects":[{"mag":0.265,"effectId":"Recharge"},{"mag":0.265,"effectId":"Accuracy"}]},{"type":"set","description":{"short":"+End, +Immobilize","long":"Enhances the Immobilize duration of a power by {Boost.Attrib.Immobilize.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Enfeebled_Operation_B.Attuned_Enfeebled_Operation_B","setName":"Enfeebled_Operation","displayName":"Endurance/Immobilize","effects":[{"mag":0.265,"effectId":"Endurance"},{"mag":0.265,"effectId":"Immobilize","mezType":3}]},{"type":"set","description":{"short":"+ACC, -End Cost","long":"Enhances the accuracy by {Boost.Attrib.Accuracy.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Enfeebled_Operation_C.Attuned_Enfeebled_Operation_C","setName":"Enfeebled_Operation","displayName":"Accuracy/Endurance","effects":[{"mag":0.265,"effectId":"Accuracy"},{"mag":0.265,"effectId":"Endurance"}]},{"type":"set","description":{"short":"+Range, +Immobilize","long":"Enhances the range of a power by {Boost.Attrib.Range.Scale}% and immobilize duration by {Boost.Attrib.immobilize.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Enfeebled_Operation_D.Attuned_Enfeebled_Operation_D","setName":"Enfeebled_Operation","displayName":"Immobilize/Range","effects":[{"mag":0.265,"effectId":"Immobilize","mezType":3},{"mag":0.159375,"effectId":"Range"}]},{"type":"set","description":{"short":"+ACC, +Rech, +Immob","long":"Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}%, immobilize duration by {Boost.Attrib.Immobilize.Scale}% and reduces the attack rate by {Boost.Attrib.Recharge.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Enfeebled_Operation_E.Attuned_Enfeebled_Operation_E","setName":"Enfeebled_Operation","displayName":"Accuracy/Immob/Recharge","effects":[{"mag":0.212,"effectId":"Immobilize","mezType":3},{"mag":0.212,"effectId":"Accuracy"},{"mag":0.212,"effectId":"Recharge"}]},{"type":"set","description":{"short":"+ACC, +Immobilize","long":"Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and immobilize duration by {Boost.Attrib.immobilize.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Enfeebled_Operation_F.Attuned_Enfeebled_Operation_F","setName":"Enfeebled_Operation","displayName":"Accuracy/Immobilize","effects":[{"mag":0.265,"effectId":"Accuracy"},{"mag":0.265,"effectId":"Immobilize","mezType":3}]}],"levels":{"min":20,"max":50},"bonuses":["Immob_Dur_2","Energy_Neg_Mez_Res_2","Increased_Lethal_Smash_Melee_Def_3","Improved_Recharge_Time_2","Increased_Melee_Lethal_Smash_Def_4"],"setType":12,"displayName":"Enfeebled Operation","imageName":"sEnfeebledOperation.png"}
+{
+  "fullName": "IOSet.Enfeebled_Operation",
+  "enhancements": [
+    {
+      "description": {
+        "short": "+ACC, +Rech",
+        "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Recharge",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 25,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Enfeebled_Operation_A.Attuned_Enfeebled_Operation_A"
+            }
+          ]
+        },
+        {
+          "effectType": "Accuracy",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 1,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Enfeebled_Operation_A.Attuned_Enfeebled_Operation_A"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Enfeebled_Operation_A.Attuned_Enfeebled_Operation_A",
+      "setName": "Enfeebled_Operation",
+      "displayName": "Accuracy/Recharge"
+    },
+    {
+      "description": {
+        "short": "+End, +Immobilize",
+        "long": "Enhances the Immobilize duration of a power by {Boost.Attrib.Immobilize.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Endurance",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 8,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Enfeebled_Operation_B.Attuned_Enfeebled_Operation_B"
+            }
+          ]
+        },
+        {
+          "effectType": "Immobilize",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 19,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Enfeebled_Operation_B.Attuned_Enfeebled_Operation_B",
+              "mezType": "Immobilization"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Enfeebled_Operation_B.Attuned_Enfeebled_Operation_B",
+      "setName": "Enfeebled_Operation",
+      "displayName": "Endurance/Immobilize"
+    },
+    {
+      "description": {
+        "short": "+ACC, -End Cost",
+        "long": "Enhances the accuracy by {Boost.Attrib.Accuracy.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Accuracy",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 1,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Enfeebled_Operation_C.Attuned_Enfeebled_Operation_C"
+            }
+          ]
+        },
+        {
+          "effectType": "Endurance",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 8,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Enfeebled_Operation_C.Attuned_Enfeebled_Operation_C"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Enfeebled_Operation_C.Attuned_Enfeebled_Operation_C",
+      "setName": "Enfeebled_Operation",
+      "displayName": "Accuracy/Endurance"
+    },
+    {
+      "description": {
+        "short": "+Range, +Immobilize",
+        "long": "Enhances the range of a power by {Boost.Attrib.Range.Scale}% and immobilize duration by {Boost.Attrib.immobilize.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Immobilize",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 19,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Enfeebled_Operation_D.Attuned_Enfeebled_Operation_D",
+              "mezType": "Immobilization"
+            }
+          ]
+        },
+        {
+          "effectType": "Range",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.159375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 24,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Enfeebled_Operation_D.Attuned_Enfeebled_Operation_D"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Enfeebled_Operation_D.Attuned_Enfeebled_Operation_D",
+      "setName": "Enfeebled_Operation",
+      "displayName": "Immobilize/Range"
+    },
+    {
+      "description": {
+        "short": "+ACC, +Rech, +Immob",
+        "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}%, immobilize duration by {Boost.Attrib.Immobilize.Scale}% and reduces the attack rate by {Boost.Attrib.Recharge.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Immobilize",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 19,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Enfeebled_Operation_E.Attuned_Enfeebled_Operation_E",
+              "mezType": "Immobilization"
+            }
+          ]
+        },
+        {
+          "effectType": "Accuracy",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 1,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Enfeebled_Operation_E.Attuned_Enfeebled_Operation_E"
+            }
+          ]
+        },
+        {
+          "effectType": "Recharge",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 25,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Enfeebled_Operation_E.Attuned_Enfeebled_Operation_E"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Enfeebled_Operation_E.Attuned_Enfeebled_Operation_E",
+      "setName": "Enfeebled_Operation",
+      "displayName": "Accuracy/Immob/Recharge"
+    },
+    {
+      "description": {
+        "short": "+ACC, +Immobilize",
+        "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and immobilize duration by {Boost.Attrib.immobilize.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Accuracy",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 1,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Enfeebled_Operation_F.Attuned_Enfeebled_Operation_F"
+            }
+          ]
+        },
+        {
+          "effectType": "Immobilize",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 19,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Enfeebled_Operation_F.Attuned_Enfeebled_Operation_F",
+              "mezType": "Immobilization"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Enfeebled_Operation_F.Attuned_Enfeebled_Operation_F",
+      "setName": "Enfeebled_Operation",
+      "displayName": "Accuracy/Immobilize"
+    }
+  ],
+  "levels": {
+    "min": 20,
+    "max": 50
+  },
+  "bonuses": [
+    {
+      "description": {
+        "short": "+Duration Immob",
+        "long": "Improves the duration of your Immobilize effects by 3%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 2,
+      "powerSetIndex": 108,
+      "fullName": "Set_Bonus.Set_Bonus.Immob_Dur_2",
+      "setName": "Set_Bonus",
+      "displayName": "Small Immobilize Duration Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.03
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 19,
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Immob_Dur_2",
+              "mezType": "Immobilization"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+Res (Energy, Negative, Mez)",
+        "long": "Increases Energy and Negative Energy resistance by 2.25% and Mez Resistance by 3.75%"
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 3,
+      "powerSetIndex": 57,
+      "fullName": "Set_Bonus.Set_Bonus.Energy_Neg_Mez_Res_2",
+      "setName": "Set_Bonus",
+      "displayName": "Small Energy, Negative Energy and Mez Resistance",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.0225
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Energy_Neg_Mez_Res_2",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.0225
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Energy_Neg_Mez_Res_2",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Energy_Neg_Mez_Res_2",
+              "mezType": "Immobilization"
+            },
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Energy_Neg_Mez_Res_2",
+              "mezType": "Hold"
+            },
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Energy_Neg_Mez_Res_2",
+              "mezType": "Stun"
+            },
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Energy_Neg_Mez_Res_2",
+              "mezType": "Sleep"
+            },
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Energy_Neg_Mez_Res_2",
+              "mezType": "Terrorize"
+            },
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Energy_Neg_Mez_Res_2",
+              "mezType": "Confuse"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+DEF",
+        "long": "Increases lethal and smashing defense by 2.5% and melee defense by 1.25%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 4,
+      "powerSetIndex": 307,
+      "fullName": "Set_Bonus.Set_Bonus.Increased_Lethal_Smash_Melee_Def_3",
+      "setName": "Set_Bonus",
+      "displayName": "Moderate Increased Lethal/Smashing/Melee Def Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.025
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Lethal_Smash_Melee_Def_3",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.025
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Lethal_Smash_Melee_Def_3",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 0.0125
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Lethal_Smash_Melee_Def_3",
+              "damageType": "Melee"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+Recharge Time",
+        "long": "Improves the Recharge Time of all of your powers by 3.75%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 5,
+      "powerSetIndex": 138,
+      "fullName": "Set_Bonus.Set_Bonus.Improved_Recharge_Time_2",
+      "setName": "Set_Bonus",
+      "displayName": "Small Improved Recharge Time Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 25,
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Improved_Recharge_Time_2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+DEF",
+        "long": "Increases melee defense by 3.13% and lethal and smashing defense by 1.565%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 6,
+      "powerSetIndex": 322,
+      "fullName": "Set_Bonus.Set_Bonus.Increased_Melee_Lethal_Smash_Def_4",
+      "setName": "Set_Bonus",
+      "displayName": "Large Increased Melee/Lethal/Smashing Def Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.03125
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Melee_Lethal_Smash_Def_4",
+              "damageType": "Melee"
+            },
+            {
+              "mag": {
+                "pve": 0.01563
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Melee_Lethal_Smash_Def_4",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.01563
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Melee_Lethal_Smash_Def_4",
+              "damageType": "Smashing"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "setType": 12,
+  "displayName": "Enfeebled Operation",
+  "imageName": "sEnfeebledOperation.png"
+}

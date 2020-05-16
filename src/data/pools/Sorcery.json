@@ -1,1 +1,725 @@
-{"prevents":["Pool_Force_of_Will"],"fullName":"Pool_Sorcery","archetypeOrder":"poolPower","description":"Sorcery grants you access to several arcane powers that both weaken foes and empower allies. This power pool also grants you access to Mystic Flight as its travel power. Mystic Flight allows you to fly at moderate speeds. While this power is active you also gain access to Translocation, which allows you to teleport to distant locations.","imageName":"Sorcery.png","displayName":"Sorcery","powers":[{"allowedEnhancements":["Endurance_Discount","Heal","Recharge"],"enhancementCount":6,"archetypeOrder":"poolPower","powerIndex":0,"castTimeReal":2,"toggleCost":7.8,"fullName":"Pool_Sorcery_Spirit_Ward","displayName":"Spirit Ward","requires":{"powers":{},"count":0},"accuracy":1,"accuracyMult":1,"target":512,"targetLoS":true,"range":80,"endCost":7.8,"rechargeTime":60,"baseRechargeTime":60,"effectArea":1,"numAllowed":1,"description":{"short":"Ally, +Absorb over time","long":"You encompass an ally in a mystical Spirit Ward, which causes them to gain a small amount of damage absorption every few seconds for a short time.  Recharge: Long"},"setTypes":[9],"level":4,"ignoreEnh":[],"ignore_Buff":[],"castTime":2.244,"slottable":true,"aoeModifier":1},{"allowedEnhancements":["Accuracy","Damage","Endurance_Discount","Knockback","Range","Recharge"],"enhancementCount":6,"archetypeOrder":"poolPower","powerIndex":1,"castTimeReal":2.07,"toggleCost":7.696,"fullName":"Pool_Sorcery_Arcane_Bolt","displayName":"Arcane Bolt","requires":{"powers":{},"count":0},"accuracy":1,"accuracyMult":1,"attackTypes":130,"target":2048,"targetLoS":true,"range":80,"endCost":7.696,"rechargeTime":7,"baseRechargeTime":7,"effectArea":1,"numAllowed":1,"description":{"short":"Ranged, Moderate DMG(Energy), Foe Knockdown","long":"You channel arcane energies into a concentrated blast and release them upon your target dealing Moderate energy damage and possibly knocking them down. Recharge: Fast"},"setTypes":[2,23,44],"level":4,"ignoreEnh":[],"ignore_Buff":[],"castTime":2.244,"slottable":true,"aoeModifier":1},{"allowedEnhancements":["Endurance_Discount","Fly"],"enhancementCount":6,"archetypeOrder":"poolPower","subPowers":[{"allowedEnhancements":[],"enhancementCount":6,"archetypeOrder":"poolPower","powerIndex":0,"parent":"Pool_Sorcery_Mystic_Flight","castTimeReal":2,"toggleCost":13,"fullName":"Pool_Sorcery_Translocation","displayName":"Translocation","accuracy":1,"accuracyMult":1,"target":16384,"targetLoS":true,"range":300,"endCost":13,"effectArea":4,"numAllowed":1,"description":{"short":"Click, Self Teleport","long":"Clicking on this power and then selecting a location will cause the caster to vanish and reappear at their target location. Recharge: Very Fast"},"setTypes":[],"ignoreEnh":[],"ignore_Buff":[],"castTime":2.244,"aoeModifier":1}],"powerIndex":2,"toggleCost":0.464,"fullName":"Pool_Sorcery_Mystic_Flight","displayName":"Mystic Flight","requires":{"powers":{},"count":0},"accuracy":1,"accuracyMult":1,"target":1,"targetLoS":true,"endCost":0.232,"activatePeriod":0.5,"effectArea":1,"numAllowed":1,"description":{"short":"Toggle: Self Fly, (Special)","long":"Using powerful magic you are able to lift yourself from the ground and fly. While Mystic Flight is active you can use Translocation to teleport to a distant location.  Recharge: Very Fast"},"setTypes":[17,28],"level":4,"ignoreEnh":[],"ignore_Buff":[],"castTime":0.132,"slottable":true,"aoeModifier":1},{"allowedEnhancements":["Accuracy","Damage","Endurance_Discount","Range","Recharge"],"enhancementCount":6,"archetypeOrder":"poolPower","powerIndex":3,"castTimeReal":2.07,"toggleCost":5.2,"fullName":"Pool_Sorcery_Enflame","displayName":"Enflame","requires":{"powers":{"Pool_Sorcery_Spirit_Ward":true,"Pool_Sorcery_Arcane_Bolt":true,"Pool_Sorcery_Mystic_Flight":true},"count":2},"accuracy":1,"accuracyMult":1,"target":32768,"targetLoS":true,"range":80,"endCost":5.2,"rechargeTime":90,"baseRechargeTime":90,"effectArea":1,"castFlags":2,"numAllowed":1,"description":{"short":"Ranged Friend/Foe, Special","long":"This ritual allows you to imbue an ally or curse a foe with a fiery spell. If Enflame is cast on an ally or a foe they will leave a fiery trail behind them that will damage foes. Enflame requires you to have 2 other powers from the Sorcery power pool and be at least level 14. Recharge: Long"},"setTypes":[3,44],"level":14,"ignoreEnh":[],"ignore_Buff":[],"castTime":2.244,"slottable":true,"aoeModifier":1},{"allowedEnhancements":["Endurance_Discount","Recharge","Res_Damage"],"enhancementCount":6,"archetypeOrder":"poolPower","powerIndex":4,"castTimeReal":2.03,"toggleCost":2.6,"fullName":"Pool_Sorcery_Rune_of_Protection","displayName":"Rune of Protection","requires":{"powers":{"Pool_Sorcery_Spirit_Ward":true,"Pool_Sorcery_Arcane_Bolt":true,"Pool_Sorcery_Mystic_Flight":true},"count":2},"accuracy":1,"accuracyMult":1,"target":1,"targetLoS":true,"endCost":2.6,"rechargeTime":600,"baseRechargeTime":600,"effectArea":1,"numAllowed":1,"castThroughHold":true,"ignoreStrength":true,"description":{"short":"Self, +Res(All Dmg, Hold, Sleep, Immobilize, Knockdown, Disorient)","long":"You cast a Rune of Projection upon yourself granting you protection from Hold, Sleep, Immobilize, Knockdown and Disorient effects as well as granting you a measure of damage resistance against all forms of damage for a short time. Rune of Protection requires you to have 2 other powers from the Sorcery power pool and be at least level 20. Recharge: Very Long"},"setTypes":[8],"clickBuff":true,"level":20,"ignoreEnh":[],"ignore_Buff":[],"castTime":2.244,"slottable":true,"aoeModifier":1}]}
+{
+  "prevents": [
+    "Pool_Force_of_Will"
+  ],
+  "fullName": "Pool_Sorcery",
+  "archetypeOrder": "poolPower",
+  "description": "Sorcery grants you access to several arcane powers that both weaken foes and empower allies. This power pool also grants you access to Mystic Flight as its travel power. Mystic Flight allows you to fly at moderate speeds. While this power is active you also gain access to Translocation, which allows you to teleport to distant locations.",
+  "imageName": "Sorcery.png",
+  "displayName": "Sorcery",
+  "powers": [
+    {
+      "allowedEnhancements": [
+        "Endurance_Discount",
+        "Heal",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "archetypeOrder": "poolPower",
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {},
+              "probability": 1,
+              "effectType": "Absorb",
+              "toWho": "Target",
+              "powerFullName": "Pool.Sorcery.Spirit_Ward"
+            }
+          ]
+        }
+      ],
+      "powerIndex": 0,
+      "castTimeReal": 2,
+      "toggleCost": 7.8,
+      "fullName": "Pool_Sorcery_Spirit_Ward",
+      "displayName": "Spirit Ward",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "target": 512,
+      "targetLoS": true,
+      "range": 80,
+      "endCost": 7.8,
+      "rechargeTime": 60,
+      "baseRechargeTime": 60,
+      "effectArea": 1,
+      "numAllowed": 1,
+      "description": {
+        "short": "Ally, +Absorb over time",
+        "long": "You encompass an ally in a mystical Spirit Ward, which causes them to gain a small amount of damage absorption every few seconds for a short time.  Recharge: Long"
+      },
+      "setTypes": [
+        9
+      ],
+      "level": 4,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 2.244,
+      "slottable": true,
+      "aoeModifier": 1
+    },
+    {
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Knockback",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "archetypeOrder": "poolPower",
+      "effects": [
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 92.59102,
+                "pvp": 180.1471
+              },
+              "probability": 1,
+              "effectType": "Damage",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Pool.Sorcery.Arcane_Bolt",
+              "damageType": "Energy"
+            }
+          ]
+        },
+        {
+          "effectType": "Knockback",
+          "values": [
+            {
+              "mag": {
+                "pve": 1.11333907,
+                "pvp": 1.11333907
+              },
+              "probability": 0.25,
+              "effectType": "Mez",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Pool.Sorcery.Arcane_Bolt",
+              "mezType": "Knockback"
+            }
+          ]
+        },
+        {
+          "effectType": "InherentTaunt",
+          "values": [
+            {
+              "mag": {
+                "pve": 4
+              },
+              "probability": 1,
+              "duration": 13.33,
+              "effectType": "Mez",
+              "stacking": 1,
+              "resistible": true,
+              "specialCase": 14,
+              "toWho": "Target",
+              "attribType": 1,
+              "powerFullName": "Pool.Sorcery.Arcane_Bolt",
+              "requiresToHitCheck": true,
+              "mezType": "Taunt"
+            }
+          ]
+        }
+      ],
+      "powerIndex": 1,
+      "castTimeReal": 2.07,
+      "toggleCost": 7.696,
+      "fullName": "Pool_Sorcery_Arcane_Bolt",
+      "displayName": "Arcane Bolt",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "attackTypes": 130,
+      "target": 2048,
+      "targetLoS": true,
+      "range": 80,
+      "endCost": 7.696,
+      "rechargeTime": 7,
+      "baseRechargeTime": 7,
+      "effectArea": 1,
+      "numAllowed": 1,
+      "description": {
+        "short": "Ranged, Moderate DMG(Energy), Foe Knockdown",
+        "long": "You channel arcane energies into a concentrated blast and release them upon your target dealing Moderate energy damage and possibly knocking them down. Recharge: Fast"
+      },
+      "setTypes": [
+        2,
+        23,
+        44
+      ],
+      "level": 4,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 2.244,
+      "slottable": true,
+      "aoeModifier": 1
+    },
+    {
+      "allowedEnhancements": [
+        "Endurance_Discount",
+        "Fly"
+      ],
+      "enhancementCount": 6,
+      "archetypeOrder": "poolPower",
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 1
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Fly",
+              "toWho": "Self",
+              "powerFullName": "Pool.Sorcery.Mystic_Flight"
+            },
+            {
+              "mag": {
+                "pve": -1.01,
+                "pvp": 0.8
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "SpeedFlying",
+              "toWho": "Self",
+              "powerFullName": "Pool.Sorcery.Mystic_Flight"
+            },
+            {
+              "mag": {
+                "pve": 128
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "SetMode",
+              "toWho": "Self",
+              "powerFullName": "Pool.Sorcery.Mystic_Flight"
+            }
+          ]
+        },
+        {
+          "effectType": "SpeedFlying",
+          "values": [
+            {
+              "mag": {
+                "pve": 1.365,
+                "pvp": 1.365
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "SpeedFlying",
+              "toWho": "Self",
+              "powerFullName": "Pool.Sorcery.Mystic_Flight"
+            }
+          ]
+        },
+        {
+          "effectType": "Control",
+          "values": [
+            {
+              "mag": {
+                "pve": 8
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "MovementControl",
+              "toWho": "Self",
+              "powerFullName": "Pool.Sorcery.Mystic_Flight"
+            }
+          ]
+        },
+        {
+          "effectType": "Friction",
+          "values": [
+            {
+              "mag": {
+                "pve": 8
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "MovementFriction",
+              "toWho": "Self",
+              "powerFullName": "Pool.Sorcery.Mystic_Flight"
+            }
+          ]
+        }
+      ],
+      "subPowers": [
+        {
+          "allowedEnhancements": [],
+          "enhancementCount": 6,
+          "archetypeOrder": "poolPower",
+          "effects": [
+            {
+              "effectType": "Ones",
+              "values": [
+                {
+                  "mag": {},
+                  "probability": 1,
+                  "duration": 1.5,
+                  "variableModified": true,
+                  "effectType": "Translucency",
+                  "stacking": 1,
+                  "toWho": "Self",
+                  "powerFullName": "Pool.Sorcery.Translocation"
+                },
+                {
+                  "mag": {
+                    "pve": 1
+                  },
+                  "probability": 1,
+                  "variableModified": true,
+                  "effectType": "Mez",
+                  "delayedTime": 1.17,
+                  "stacking": 1,
+                  "toWho": "Self",
+                  "powerFullName": "Pool.Sorcery.Translocation",
+                  "mezType": "Teleport"
+                }
+              ]
+            }
+          ],
+          "powerIndex": 0,
+          "parent": "Pool_Sorcery_Mystic_Flight",
+          "castTimeReal": 2,
+          "toggleCost": 13,
+          "fullName": "Pool_Sorcery_Translocation",
+          "displayName": "Translocation",
+          "accuracy": 1,
+          "accuracyMult": 1,
+          "target": 16384,
+          "targetLoS": true,
+          "range": 300,
+          "endCost": 13,
+          "effectArea": 4,
+          "numAllowed": 1,
+          "description": {
+            "short": "Click, Self Teleport",
+            "long": "Clicking on this power and then selecting a location will cause the caster to vanish and reappear at their target location. Recharge: Very Fast"
+          },
+          "setTypes": [],
+          "ignoreEnh": [],
+          "ignore_Buff": [],
+          "castTime": 2.244,
+          "aoeModifier": 1
+        }
+      ],
+      "powerIndex": 2,
+      "toggleCost": 0.464,
+      "fullName": "Pool_Sorcery_Mystic_Flight",
+      "displayName": "Mystic Flight",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "target": 1,
+      "targetLoS": true,
+      "endCost": 0.232,
+      "activatePeriod": 0.5,
+      "effectArea": 1,
+      "numAllowed": 1,
+      "description": {
+        "short": "Toggle: Self Fly, (Special)",
+        "long": "Using powerful magic you are able to lift yourself from the ground and fly. While Mystic Flight is active you can use Translocation to teleport to a distant location.  Recharge: Very Fast"
+      },
+      "setTypes": [
+        17,
+        28
+      ],
+      "level": 4,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 0.132,
+      "slottable": true,
+      "aoeModifier": 1,
+      "powerType": "Toggle"
+    },
+    {
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "archetypeOrder": "poolPower",
+      "effects": [
+        {
+          "effectType": "Level",
+          "values": [
+            {
+              "mag": {
+                "pve": 50
+              },
+              "probability": 1,
+              "duration": 5,
+              "variableModified": true,
+              "effectType": "EntCreate",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Pool.Sorcery.Enflame"
+            }
+          ]
+        }
+      ],
+      "powerIndex": 3,
+      "castTimeReal": 2.07,
+      "toggleCost": 5.2,
+      "fullName": "Pool_Sorcery_Enflame",
+      "displayName": "Enflame",
+      "requires": {
+        "powers": {
+          "Pool_Sorcery_Spirit_Ward": true,
+          "Pool_Sorcery_Arcane_Bolt": true,
+          "Pool_Sorcery_Mystic_Flight": true
+        },
+        "count": 2
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "target": 32768,
+      "targetLoS": true,
+      "range": 80,
+      "endCost": 5.2,
+      "rechargeTime": 90,
+      "baseRechargeTime": 90,
+      "effectArea": 1,
+      "castFlags": 2,
+      "numAllowed": 1,
+      "description": {
+        "short": "Ranged Friend/Foe, Special",
+        "long": "This ritual allows you to imbue an ally or curse a foe with a fiery spell. If Enflame is cast on an ally or a foe they will leave a fiery trail behind them that will damage foes. Enflame requires you to have 2 other powers from the Sorcery power pool and be at least level 14. Recharge: Long"
+      },
+      "setTypes": [
+        3,
+        44
+      ],
+      "level": 14,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 2.244,
+      "slottable": true,
+      "aoeModifier": 1
+    },
+    {
+      "allowedEnhancements": [
+        "Endurance_Discount",
+        "Recharge",
+        "Res_Damage"
+      ],
+      "enhancementCount": 6,
+      "archetypeOrder": "poolPower",
+      "effects": [
+        {
+          "effectType": "Res_Dmg",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.1625
+              },
+              "probability": 1,
+              "duration": 90,
+              "variableModified": true,
+              "effectType": "Resistance",
+              "stacking": 1,
+              "toWho": "Self",
+              "powerFullName": "Pool.Sorcery.Rune_of_Protection",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 0.1625
+              },
+              "probability": 1,
+              "duration": 90,
+              "variableModified": true,
+              "effectType": "Resistance",
+              "stacking": 1,
+              "toWho": "Self",
+              "powerFullName": "Pool.Sorcery.Rune_of_Protection",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.1625
+              },
+              "probability": 1,
+              "duration": 90,
+              "variableModified": true,
+              "effectType": "Resistance",
+              "stacking": 1,
+              "toWho": "Self",
+              "powerFullName": "Pool.Sorcery.Rune_of_Protection",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.1625
+              },
+              "probability": 1,
+              "duration": 90,
+              "variableModified": true,
+              "effectType": "Resistance",
+              "stacking": 1,
+              "toWho": "Self",
+              "powerFullName": "Pool.Sorcery.Rune_of_Protection",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 0.1625
+              },
+              "probability": 1,
+              "duration": 90,
+              "variableModified": true,
+              "effectType": "Resistance",
+              "stacking": 1,
+              "toWho": "Self",
+              "powerFullName": "Pool.Sorcery.Rune_of_Protection",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.1625
+              },
+              "probability": 1,
+              "duration": 90,
+              "variableModified": true,
+              "effectType": "Resistance",
+              "stacking": 1,
+              "toWho": "Self",
+              "powerFullName": "Pool.Sorcery.Rune_of_Protection",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.1625
+              },
+              "probability": 1,
+              "duration": 90,
+              "variableModified": true,
+              "effectType": "Resistance",
+              "stacking": 1,
+              "toWho": "Self",
+              "powerFullName": "Pool.Sorcery.Rune_of_Protection",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pve": 0.1625
+              },
+              "probability": 1,
+              "duration": 90,
+              "variableModified": true,
+              "effectType": "Resistance",
+              "stacking": 1,
+              "toWho": "Self",
+              "powerFullName": "Pool.Sorcery.Rune_of_Protection",
+              "damageType": "Psionic"
+            }
+          ]
+        },
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 100
+              },
+              "probability": 1,
+              "duration": 90,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Pool.Sorcery.Rune_of_Protection",
+              "mezType": "Knockback"
+            },
+            {
+              "mag": {
+                "pve": 100
+              },
+              "probability": 1,
+              "duration": 90,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Pool.Sorcery.Rune_of_Protection",
+              "mezType": "Knockup"
+            },
+            {
+              "mag": {
+                "pve": -10
+              },
+              "probability": 1,
+              "duration": 90,
+              "effectType": "Mez",
+              "toWho": "Self",
+              "powerFullName": "Pool.Sorcery.Rune_of_Protection",
+              "mezType": "Knockback"
+            },
+            {
+              "mag": {
+                "pve": -10
+              },
+              "probability": 1,
+              "duration": 90,
+              "effectType": "Mez",
+              "toWho": "Self",
+              "powerFullName": "Pool.Sorcery.Rune_of_Protection",
+              "mezType": "Knockup"
+            },
+            {
+              "mag": {
+                "pve": -10
+              },
+              "probability": 1,
+              "duration": 90,
+              "effectType": "Mez",
+              "toWho": "Self",
+              "powerFullName": "Pool.Sorcery.Rune_of_Protection",
+              "mezType": "Stun"
+            },
+            {
+              "mag": {
+                "pve": -10
+              },
+              "probability": 1,
+              "duration": 90,
+              "effectType": "Mez",
+              "toWho": "Self",
+              "powerFullName": "Pool.Sorcery.Rune_of_Protection",
+              "mezType": "Hold"
+            },
+            {
+              "mag": {
+                "pve": -10
+              },
+              "probability": 1,
+              "duration": 90,
+              "effectType": "Mez",
+              "toWho": "Self",
+              "powerFullName": "Pool.Sorcery.Rune_of_Protection",
+              "mezType": "Sleep"
+            },
+            {
+              "mag": {
+                "pve": -10
+              },
+              "probability": 1,
+              "duration": 90,
+              "effectType": "Mez",
+              "toWho": "Self",
+              "powerFullName": "Pool.Sorcery.Rune_of_Protection",
+              "mezType": "Immobilization"
+            }
+          ]
+        },
+        {
+          "effectType": "Res_Boolean",
+          "values": [
+            {
+              "mag": {
+                "pvp": 0.4844
+              },
+              "probability": 1,
+              "duration": 90,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Pool.Sorcery.Rune_of_Protection",
+              "mezType": "Stun"
+            },
+            {
+              "mag": {
+                "pvp": 0.4844
+              },
+              "probability": 1,
+              "duration": 90,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Pool.Sorcery.Rune_of_Protection",
+              "mezType": "Hold"
+            },
+            {
+              "mag": {
+                "pvp": 0.4844
+              },
+              "probability": 1,
+              "duration": 90,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Pool.Sorcery.Rune_of_Protection",
+              "mezType": "Sleep"
+            },
+            {
+              "mag": {
+                "pvp": 0.4844
+              },
+              "probability": 1,
+              "duration": 90,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Pool.Sorcery.Rune_of_Protection",
+              "mezType": "Immobilization"
+            }
+          ]
+        }
+      ],
+      "powerIndex": 4,
+      "castTimeReal": 2.03,
+      "toggleCost": 2.6,
+      "fullName": "Pool_Sorcery_Rune_of_Protection",
+      "displayName": "Rune of Protection",
+      "requires": {
+        "powers": {
+          "Pool_Sorcery_Spirit_Ward": true,
+          "Pool_Sorcery_Arcane_Bolt": true,
+          "Pool_Sorcery_Mystic_Flight": true
+        },
+        "count": 2
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "target": 1,
+      "targetLoS": true,
+      "endCost": 2.6,
+      "rechargeTime": 600,
+      "baseRechargeTime": 600,
+      "effectArea": 1,
+      "numAllowed": 1,
+      "castThroughHold": true,
+      "ignoreStrength": true,
+      "description": {
+        "short": "Self, +Res(All Dmg, Hold, Sleep, Immobilize, Knockdown, Disorient)",
+        "long": "You cast a Rune of Projection upon yourself granting you protection from Hold, Sleep, Immobilize, Knockdown and Disorient effects as well as granting you a measure of damage resistance against all forms of damage for a short time. Rune of Protection requires you to have 2 other powers from the Sorcery power pool and be at least level 20. Recharge: Very Long"
+      },
+      "setTypes": [
+        8
+      ],
+      "clickBuff": true,
+      "level": 20,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 2.244,
+      "slottable": true,
+      "aoeModifier": 1
+    }
+  ]
+}

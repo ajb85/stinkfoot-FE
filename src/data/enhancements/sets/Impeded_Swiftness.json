@@ -1,1 +1,859 @@
-{"fullName":"IOSet.Impeded_Swiftness","enhancements":[{"type":"set","description":{"short":"+ACC, +Slow","long":"Enhances the accuracy by {Boost.Attrib.Accuracy.Scale}% and slowing ability of a power by {Boost.Attrib.Slow.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Impeded_Swiftness_A.Attuned_Impeded_Swiftness_A","setName":"Impeded_Swiftness","displayName":"Accuracy/Slow","effects":[{"mag":0.265,"effectId":"Accuracy"},{"mag":0.265,"effectId":"Slow"},{"mag":0.265,"effectId":"Boosts_33"},{"mag":0.265,"effectId":"Boosts_33"}]},{"type":"set","description":{"short":"+DMG, +Slow","long":"Enhances the damage by {Boost.Attrib.Damage.Scale}% and slowing ability of a power by {Boost.Attrib.Slow.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Impeded_Swiftness_B.Attuned_Impeded_Swiftness_B","setName":"Impeded_Swiftness","displayName":"Damage/Slow","effects":[{"mag":0.265,"effectId":"Damage","damageType":1},{"mag":0.265,"effectId":"Boosts_33","damageType":2},{"mag":0.265,"effectId":"Boosts_33","damageType":3},{"mag":0.265,"effectId":"Boosts_33","damageType":4},{"mag":0.265,"effectId":"Boosts_33","damageType":5},{"mag":0.265,"effectId":"Boosts_33","damageType":6},{"mag":0.265,"effectId":"Boosts_33","damageType":7},{"mag":0.265,"effectId":"Boosts_33","damageType":8},{"mag":0.265,"effectId":"Slow"},{"mag":0.265,"effectId":"Boosts_33"},{"mag":0.265,"effectId":"Boosts_33"}]},{"type":"set","description":{"short":"+ACC, -End Cost","long":"Enhances the accuracy by {Boost.Attrib.Accuracy.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Impeded_Swiftness_C.Attuned_Impeded_Swiftness_C","setName":"Impeded_Swiftness","displayName":"Accuracy/Endurance","effects":[{"mag":0.265,"effectId":"Accuracy"},{"mag":0.265,"effectId":"Endurance"}]},{"type":"set","description":{"short":"+Range, +Slow","long":"Enhances the range by {Boost.Attrib.Range.Scale}% and slowing ability of a power by {Boost.Attrib.Slow.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Impeded_Swiftness_D.Attuned_Impeded_Swiftness_D","setName":"Impeded_Swiftness","displayName":"Range/Slow","effects":[{"mag":0.159375,"effectId":"Range"},{"mag":0.265,"effectId":"Slow"},{"mag":0.265,"effectId":"Boosts_33"},{"mag":0.265,"effectId":"Boosts_33"}]},{"type":"set","description":{"short":"+Slow, +Rech, -End Cost","long":"Enhances the slowing ability of a power by {Boost.Attrib.Slow.Scale}%, reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}% and reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Impeded_Swiftness_E.Attuned_Impeded_Swiftness_E","setName":"Impeded_Swiftness","displayName":"Endurance/Recharge/Slow","effects":[{"mag":0.212,"effectId":"Endurance"},{"mag":0.212,"effectId":"Recharge"},{"mag":0.212,"effectId":"Slow"},{"mag":0.212,"effectId":"Boosts_33"},{"mag":0.212,"effectId":"Boosts_33"}]},{"type":"set","description":{"short":"Chance for Smashing DMG","long":"Provides a chance to cause minor smashing damage to your targets.  This effect will trigger roughly 3.5 times per minute."},"isUnique":false,"fullName":"Boosts.Attuned_Impeded_Swiftness_F.Attuned_Impeded_Swiftness_F","setName":"Impeded_Swiftness","displayName":"Chance for Smashing Damage","effects":[{"procsPerMinute":3.5,"cancelOnMiss":true,"mag":71.7501,"effectId":"Damage","damageType":1,"stacking":1,"resistible":true,"pvMode":1},{"procsPerMinute":3.5,"cancelOnMiss":true,"mag":71.7501,"effectId":"TempDamage","damageType":1,"stacking":1,"pvMode":2}]}],"levels":{"min":10,"max":30},"bonuses":["Lethal_Smash_Mez_Res_1","Improved_Slow_5","Energy_Neg_Mez_Res_3","Fire_Cold_Mez_Res_4","Increased_Melee_Lethal_Smash_Def_3"],"setType":13,"displayName":"Impeded Swiftness","imageName":"sImpededSwiftness.png"}
+{
+  "fullName": "IOSet.Impeded_Swiftness",
+  "enhancements": [
+    {
+      "description": {
+        "short": "+ACC, +Slow",
+        "long": "Enhances the accuracy by {Boost.Attrib.Accuracy.Scale}% and slowing ability of a power by {Boost.Attrib.Slow.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Accuracy",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 1,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Impeded_Swiftness_A.Attuned_Impeded_Swiftness_A"
+            }
+          ]
+        },
+        {
+          "effectType": "Slow",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 32,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Impeded_Swiftness_A.Attuned_Impeded_Swiftness_A"
+            }
+          ]
+        },
+        {
+          "effectType": "Boosts_33",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 17,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Impeded_Swiftness_A.Attuned_Impeded_Swiftness_A"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Impeded_Swiftness_A.Attuned_Impeded_Swiftness_A",
+      "setName": "Impeded_Swiftness",
+      "displayName": "Accuracy/Slow"
+    },
+    {
+      "description": {
+        "short": "+DMG, +Slow",
+        "long": "Enhances the damage by {Boost.Attrib.Damage.Scale}% and slowing ability of a power by {Boost.Attrib.Slow.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Impeded_Swiftness_B.Attuned_Impeded_Swiftness_B",
+              "damageType": "Smashing"
+            }
+          ]
+        },
+        {
+          "effectType": "Boosts_33",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Impeded_Swiftness_B.Attuned_Impeded_Swiftness_B",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Impeded_Swiftness_B.Attuned_Impeded_Swiftness_B",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Impeded_Swiftness_B.Attuned_Impeded_Swiftness_B",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Impeded_Swiftness_B.Attuned_Impeded_Swiftness_B",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Impeded_Swiftness_B.Attuned_Impeded_Swiftness_B",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Impeded_Swiftness_B.Attuned_Impeded_Swiftness_B",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Impeded_Swiftness_B.Attuned_Impeded_Swiftness_B",
+              "damageType": "Psionic"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 17,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Impeded_Swiftness_B.Attuned_Impeded_Swiftness_B"
+            }
+          ]
+        },
+        {
+          "effectType": "Slow",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 32,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Impeded_Swiftness_B.Attuned_Impeded_Swiftness_B"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Impeded_Swiftness_B.Attuned_Impeded_Swiftness_B",
+      "setName": "Impeded_Swiftness",
+      "displayName": "Damage/Slow"
+    },
+    {
+      "description": {
+        "short": "+ACC, -End Cost",
+        "long": "Enhances the accuracy by {Boost.Attrib.Accuracy.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Accuracy",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 1,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Impeded_Swiftness_C.Attuned_Impeded_Swiftness_C"
+            }
+          ]
+        },
+        {
+          "effectType": "Endurance",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 8,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Impeded_Swiftness_C.Attuned_Impeded_Swiftness_C"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Impeded_Swiftness_C.Attuned_Impeded_Swiftness_C",
+      "setName": "Impeded_Swiftness",
+      "displayName": "Accuracy/Endurance"
+    },
+    {
+      "description": {
+        "short": "+Range, +Slow",
+        "long": "Enhances the range by {Boost.Attrib.Range.Scale}% and slowing ability of a power by {Boost.Attrib.Slow.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Range",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.159375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 24,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Impeded_Swiftness_D.Attuned_Impeded_Swiftness_D"
+            }
+          ]
+        },
+        {
+          "effectType": "Slow",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 32,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Impeded_Swiftness_D.Attuned_Impeded_Swiftness_D"
+            }
+          ]
+        },
+        {
+          "effectType": "Boosts_33",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 17,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Impeded_Swiftness_D.Attuned_Impeded_Swiftness_D"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Impeded_Swiftness_D.Attuned_Impeded_Swiftness_D",
+      "setName": "Impeded_Swiftness",
+      "displayName": "Range/Slow"
+    },
+    {
+      "description": {
+        "short": "+Slow, +Rech, -End Cost",
+        "long": "Enhances the slowing ability of a power by {Boost.Attrib.Slow.Scale}%, reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}% and reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Endurance",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 8,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Impeded_Swiftness_E.Attuned_Impeded_Swiftness_E"
+            }
+          ]
+        },
+        {
+          "effectType": "Recharge",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 25,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Impeded_Swiftness_E.Attuned_Impeded_Swiftness_E"
+            }
+          ]
+        },
+        {
+          "effectType": "Slow",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 32,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Impeded_Swiftness_E.Attuned_Impeded_Swiftness_E"
+            }
+          ]
+        },
+        {
+          "effectType": "Boosts_33",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 17,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Impeded_Swiftness_E.Attuned_Impeded_Swiftness_E"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Impeded_Swiftness_E.Attuned_Impeded_Swiftness_E",
+      "setName": "Impeded_Swiftness",
+      "displayName": "Endurance/Recharge/Slow"
+    },
+    {
+      "description": {
+        "short": "Chance for Smashing DMG",
+        "long": "Provides a chance to cause minor smashing damage to your targets.  This effect will trigger roughly 3.5 times per minute."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 71.7501
+              },
+              "procsPerMinute": 3.5,
+              "cancelOnMiss": true,
+              "effectType": "Damage",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "All",
+              "powerFullName": "Boosts.Attuned_Impeded_Swiftness_F.Attuned_Impeded_Swiftness_F",
+              "damageType": "Smashing"
+            }
+          ]
+        },
+        {
+          "effectType": "TempDamage",
+          "values": [
+            {
+              "mag": {
+                "pvp": 71.7501
+              },
+              "procsPerMinute": 3.5,
+              "cancelOnMiss": true,
+              "effectType": "Damage",
+              "stacking": 1,
+              "toWho": "All",
+              "powerFullName": "Boosts.Attuned_Impeded_Swiftness_F.Attuned_Impeded_Swiftness_F",
+              "damageType": "Smashing"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Impeded_Swiftness_F.Attuned_Impeded_Swiftness_F",
+      "setName": "Impeded_Swiftness",
+      "displayName": "Chance for Smashing Damage"
+    }
+  ],
+  "levels": {
+    "min": 10,
+    "max": 30
+  },
+  "bonuses": [
+    {
+      "description": {
+        "short": "+Res (Lethal, Smash, Mez)",
+        "long": "Increases Lethal and Smashing resistance by 1.5% and Mez Resistance by 2.5%"
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 2,
+      "powerSetIndex": 446,
+      "fullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_1",
+      "setName": "Set_Bonus",
+      "displayName": "Tiny Lethal, Smash and Mez Resistance",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.015
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_1",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.015
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_1",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 0.025
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_1",
+              "mezType": "Immobilization"
+            },
+            {
+              "mag": {
+                "pve": 0.025
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_1",
+              "mezType": "Hold"
+            },
+            {
+              "mag": {
+                "pve": 0.025
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_1",
+              "mezType": "Stun"
+            },
+            {
+              "mag": {
+                "pve": 0.025
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_1",
+              "mezType": "Sleep"
+            },
+            {
+              "mag": {
+                "pve": 0.025
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_1",
+              "mezType": "Terrorize"
+            },
+            {
+              "mag": {
+                "pve": 0.025
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_1",
+              "mezType": "Confuse"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+Slow",
+        "long": "Improves all of your Slow powers by 3%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 3,
+      "powerSetIndex": 169,
+      "fullName": "Set_Bonus.Set_Bonus.Improved_Slow_5",
+      "setName": "Set_Bonus",
+      "displayName": "Huge Improved Slow Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "buffMode": 2,
+              "mag": {
+                "pve": 0.03
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 17,
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Improved_Slow_5"
+            }
+          ]
+        }
+      ],
+      "buffMode": 2
+    },
+    {
+      "description": {
+        "short": "+Res (Energy, Negative, Mez)",
+        "long": "Increases Energy and Negative Energy resistance by 3% and Mez Resistance by 5%"
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 4,
+      "powerSetIndex": 58,
+      "fullName": "Set_Bonus.Set_Bonus.Energy_Neg_Mez_Res_3",
+      "setName": "Set_Bonus",
+      "displayName": "Moderate Energy, Negative Energy and Mez Resistance",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.03
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Energy_Neg_Mez_Res_3",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.03
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Energy_Neg_Mez_Res_3",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.05
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Energy_Neg_Mez_Res_3",
+              "mezType": "Immobilization"
+            },
+            {
+              "mag": {
+                "pve": 0.05
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Energy_Neg_Mez_Res_3",
+              "mezType": "Hold"
+            },
+            {
+              "mag": {
+                "pve": 0.05
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Energy_Neg_Mez_Res_3",
+              "mezType": "Stun"
+            },
+            {
+              "mag": {
+                "pve": 0.05
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Energy_Neg_Mez_Res_3",
+              "mezType": "Sleep"
+            },
+            {
+              "mag": {
+                "pve": 0.05
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Energy_Neg_Mez_Res_3",
+              "mezType": "Terrorize"
+            },
+            {
+              "mag": {
+                "pve": 0.05
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Energy_Neg_Mez_Res_3",
+              "mezType": "Confuse"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+Res (Fire, Cold, Mez)",
+        "long": "Increases Fire and Cold resistance by 3.75% and Mez Resistance by 6.25%"
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 5,
+      "powerSetIndex": 83,
+      "fullName": "Set_Bonus.Set_Bonus.Fire_Cold_Mez_Res_4",
+      "setName": "Set_Bonus",
+      "displayName": "Large Fire, Cold and Mez Resistance",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Fire_Cold_Mez_Res_4",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Fire_Cold_Mez_Res_4",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 0.0625
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Fire_Cold_Mez_Res_4",
+              "mezType": "Immobilization"
+            },
+            {
+              "mag": {
+                "pve": 0.0625
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Fire_Cold_Mez_Res_4",
+              "mezType": "Hold"
+            },
+            {
+              "mag": {
+                "pve": 0.0625
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Fire_Cold_Mez_Res_4",
+              "mezType": "Stun"
+            },
+            {
+              "mag": {
+                "pve": 0.0625
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Fire_Cold_Mez_Res_4",
+              "mezType": "Sleep"
+            },
+            {
+              "mag": {
+                "pve": 0.0625
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Fire_Cold_Mez_Res_4",
+              "mezType": "Terrorize"
+            },
+            {
+              "mag": {
+                "pve": 0.0625
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Fire_Cold_Mez_Res_4",
+              "mezType": "Confuse"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+DEF",
+        "long": "Increases melee defense by 2.5% and lethal and smashing defense by 1.25%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 6,
+      "powerSetIndex": 321,
+      "fullName": "Set_Bonus.Set_Bonus.Increased_Melee_Lethal_Smash_Def_3",
+      "setName": "Set_Bonus",
+      "displayName": "Moderate Increased Melee/Lethal/Smashing Def Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.025
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Melee_Lethal_Smash_Def_3",
+              "damageType": "Melee"
+            },
+            {
+              "mag": {
+                "pve": 0.0125
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Melee_Lethal_Smash_Def_3",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.0125
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Melee_Lethal_Smash_Def_3",
+              "damageType": "Smashing"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "setType": 13,
+  "displayName": "Impeded Swiftness",
+  "imageName": "sImpededSwiftness.png"
+}

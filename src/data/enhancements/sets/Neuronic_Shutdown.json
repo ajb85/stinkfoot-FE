@@ -1,1 +1,565 @@
-{"fullName":"IOSet.Neuronic_Shutdown","enhancements":[{"type":"set","description":{"short":"+ACC, +Rech","long":"Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Neuronic_Shutdown_A.Attuned_Neuronic_Shutdown_A","setName":"Neuronic_Shutdown","displayName":"Accuracy/Recharge","effects":[{"mag":0.265,"effectId":"Recharge"},{"mag":0.265,"effectId":"Accuracy"}]},{"type":"set","description":{"short":"+End, +Hold","long":"Enhances the hold duration of a power by {Boost.Attrib.Hold.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Neuronic_Shutdown_B.Attuned_Neuronic_Shutdown_B","setName":"Neuronic_Shutdown","displayName":"Endurance/Hold","effects":[{"mag":0.265,"effectId":"Endurance"},{"mag":0.265,"effectId":"Hold","mezType":2}]},{"type":"set","description":{"short":"+ACC, -End Cost","long":"Enhances the accuracy by {Boost.Attrib.Accuracy.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Neuronic_Shutdown_C.Attuned_Neuronic_Shutdown_C","setName":"Neuronic_Shutdown","displayName":"Accuracy/Endurance","effects":[{"mag":0.265,"effectId":"Accuracy"},{"mag":0.265,"effectId":"Endurance"}]},{"type":"set","description":{"short":"+Range, +Hold","long":"Enhances the range of a power by {Boost.Attrib.Range.Scale}% and hold duration by {Boost.Attrib.Hold.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Neuronic_Shutdown_D.Attuned_Neuronic_Shutdown_D","setName":"Neuronic_Shutdown","displayName":"Hold/Range","effects":[{"mag":0.265,"effectId":"Hold","mezType":2},{"mag":0.159375,"effectId":"Range"}]},{"type":"set","description":{"short":"+ACC, +Rech, +Hold","long":"Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}%, the hold duration of a power by {Boost.Attrib.Hold.Scale}% and reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Neuronic_Shutdown_E.Attuned_Neuronic_Shutdown_E","setName":"Neuronic_Shutdown","displayName":"Accuracy/Hold/Recharge","effects":[{"mag":0.212,"effectId":"Accuracy"},{"mag":0.212,"effectId":"Hold","mezType":2},{"mag":0.212,"effectId":"Recharge"}]},{"type":"set","description":{"short":"Chance for Psionic Damage","long":"Provides a chance to cause minor psionic damage to your targets.  This effect will trigger roughly 3.5 times per minute."},"isUnique":false,"fullName":"Boosts.Attuned_Neuronic_Shutdown_F.Attuned_Neuronic_Shutdown_F","setName":"Neuronic_Shutdown","displayName":"Chance for Psionic Damage","effects":[{"procsPerMinute":3.5,"cancelOnMiss":true,"mag":71.7501,"effectId":"Damage","damageType":8,"stacking":1,"resistible":true,"pvMode":1},{"procsPerMinute":3.5,"cancelOnMiss":true,"mag":71.7501,"effectId":"TempDamage","damageType":8,"stacking":1,"pvMode":2}]}],"levels":{"min":10,"max":30},"bonuses":["Lethal_Smash_Mez_Res_2","Increased_Health_3","Accuracy_3","Hold_Dur_3","Increased_Melee_Lethal_Smash_Def_3"],"setType":10,"displayName":"Neuronic Shutdown","imageName":"sNeuronicShutdown.png"}
+{
+  "fullName": "IOSet.Neuronic_Shutdown",
+  "enhancements": [
+    {
+      "description": {
+        "short": "+ACC, +Rech",
+        "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Recharge",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 25,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Neuronic_Shutdown_A.Attuned_Neuronic_Shutdown_A"
+            }
+          ]
+        },
+        {
+          "effectType": "Accuracy",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 1,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Neuronic_Shutdown_A.Attuned_Neuronic_Shutdown_A"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Neuronic_Shutdown_A.Attuned_Neuronic_Shutdown_A",
+      "setName": "Neuronic_Shutdown",
+      "displayName": "Accuracy/Recharge"
+    },
+    {
+      "description": {
+        "short": "+End, +Hold",
+        "long": "Enhances the hold duration of a power by {Boost.Attrib.Hold.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Endurance",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 8,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Neuronic_Shutdown_B.Attuned_Neuronic_Shutdown_B"
+            }
+          ]
+        },
+        {
+          "effectType": "Hold",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 19,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Neuronic_Shutdown_B.Attuned_Neuronic_Shutdown_B",
+              "mezType": "Hold"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Neuronic_Shutdown_B.Attuned_Neuronic_Shutdown_B",
+      "setName": "Neuronic_Shutdown",
+      "displayName": "Endurance/Hold"
+    },
+    {
+      "description": {
+        "short": "+ACC, -End Cost",
+        "long": "Enhances the accuracy by {Boost.Attrib.Accuracy.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Accuracy",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 1,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Neuronic_Shutdown_C.Attuned_Neuronic_Shutdown_C"
+            }
+          ]
+        },
+        {
+          "effectType": "Endurance",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 8,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Neuronic_Shutdown_C.Attuned_Neuronic_Shutdown_C"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Neuronic_Shutdown_C.Attuned_Neuronic_Shutdown_C",
+      "setName": "Neuronic_Shutdown",
+      "displayName": "Accuracy/Endurance"
+    },
+    {
+      "description": {
+        "short": "+Range, +Hold",
+        "long": "Enhances the range of a power by {Boost.Attrib.Range.Scale}% and hold duration by {Boost.Attrib.Hold.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Hold",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 19,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Neuronic_Shutdown_D.Attuned_Neuronic_Shutdown_D",
+              "mezType": "Hold"
+            }
+          ]
+        },
+        {
+          "effectType": "Range",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.159375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 24,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Neuronic_Shutdown_D.Attuned_Neuronic_Shutdown_D"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Neuronic_Shutdown_D.Attuned_Neuronic_Shutdown_D",
+      "setName": "Neuronic_Shutdown",
+      "displayName": "Hold/Range"
+    },
+    {
+      "description": {
+        "short": "+ACC, +Rech, +Hold",
+        "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}%, the hold duration of a power by {Boost.Attrib.Hold.Scale}% and reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Accuracy",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 1,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Neuronic_Shutdown_E.Attuned_Neuronic_Shutdown_E"
+            }
+          ]
+        },
+        {
+          "effectType": "Hold",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 19,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Neuronic_Shutdown_E.Attuned_Neuronic_Shutdown_E",
+              "mezType": "Hold"
+            }
+          ]
+        },
+        {
+          "effectType": "Recharge",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 25,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Neuronic_Shutdown_E.Attuned_Neuronic_Shutdown_E"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Neuronic_Shutdown_E.Attuned_Neuronic_Shutdown_E",
+      "setName": "Neuronic_Shutdown",
+      "displayName": "Accuracy/Hold/Recharge"
+    },
+    {
+      "description": {
+        "short": "Chance for Psionic Damage",
+        "long": "Provides a chance to cause minor psionic damage to your targets.  This effect will trigger roughly 3.5 times per minute."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 71.7501
+              },
+              "procsPerMinute": 3.5,
+              "cancelOnMiss": true,
+              "effectType": "Damage",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "All",
+              "powerFullName": "Boosts.Attuned_Neuronic_Shutdown_F.Attuned_Neuronic_Shutdown_F",
+              "damageType": "Psionic"
+            }
+          ]
+        },
+        {
+          "effectType": "TempDamage",
+          "values": [
+            {
+              "mag": {
+                "pvp": 71.7501
+              },
+              "procsPerMinute": 3.5,
+              "cancelOnMiss": true,
+              "effectType": "Damage",
+              "stacking": 1,
+              "toWho": "All",
+              "powerFullName": "Boosts.Attuned_Neuronic_Shutdown_F.Attuned_Neuronic_Shutdown_F",
+              "damageType": "Psionic"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Neuronic_Shutdown_F.Attuned_Neuronic_Shutdown_F",
+      "setName": "Neuronic_Shutdown",
+      "displayName": "Chance for Psionic Damage"
+    }
+  ],
+  "levels": {
+    "min": 10,
+    "max": 30
+  },
+  "bonuses": [
+    {
+      "description": {
+        "short": "+Res (Lethal, Smash, Mez)",
+        "long": "Increases Lethal and Smashing resistance by 2.25% and Mez Resistance by 3.75%"
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 2,
+      "powerSetIndex": 447,
+      "fullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_2",
+      "setName": "Set_Bonus",
+      "displayName": "Small Lethal, Smash and Mez Resistance",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.0225
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_2",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.0225
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_2",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_2",
+              "mezType": "Immobilization"
+            },
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_2",
+              "mezType": "Hold"
+            },
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_2",
+              "mezType": "Stun"
+            },
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_2",
+              "mezType": "Sleep"
+            },
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_2",
+              "mezType": "Terrorize"
+            },
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_2",
+              "mezType": "Confuse"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+Max HP",
+        "long": "Increases maximum health by 1.5%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 3,
+      "powerSetIndex": 286,
+      "fullName": "Set_Bonus.Set_Bonus.Increased_Health_3",
+      "setName": "Set_Bonus",
+      "displayName": "Moderate Increased Health Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "HealSelf",
+          "values": [
+            {
+              "mag": {
+                "pve": 18.0713863
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "HitPoints",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Health_3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+Accuracy",
+        "long": "Improves the accuracy of all of your powers by 7%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 4,
+      "powerSetIndex": 3,
+      "fullName": "Set_Bonus.Set_Bonus.Accuracy_3",
+      "setName": "Set_Bonus",
+      "displayName": "Moderate Accuracy Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.07
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 1,
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Accuracy_3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+Duration Hold",
+        "long": "Improves the duration of your Hold effects by 2%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 5,
+      "powerSetIndex": 95,
+      "fullName": "Set_Bonus.Set_Bonus.Hold_Dur_3",
+      "setName": "Set_Bonus",
+      "displayName": "Moderate Hold Duration Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.02
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 19,
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Hold_Dur_3",
+              "mezType": "Hold"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+DEF",
+        "long": "Increases melee defense by 2.5% and lethal and smashing defense by 1.25%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 6,
+      "powerSetIndex": 321,
+      "fullName": "Set_Bonus.Set_Bonus.Increased_Melee_Lethal_Smash_Def_3",
+      "setName": "Set_Bonus",
+      "displayName": "Moderate Increased Melee/Lethal/Smashing Def Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.025
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Melee_Lethal_Smash_Def_3",
+              "damageType": "Melee"
+            },
+            {
+              "mag": {
+                "pve": 0.0125
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Melee_Lethal_Smash_Def_3",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.0125
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Melee_Lethal_Smash_Def_3",
+              "damageType": "Smashing"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "setType": 10,
+  "displayName": "Neuronic Shutdown",
+  "imageName": "sNeuronicShutdown.png"
+}

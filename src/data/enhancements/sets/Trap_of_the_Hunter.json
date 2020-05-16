@@ -1,1 +1,565 @@
-{"fullName":"IOSet.Trap_of_the_Hunter","enhancements":[{"type":"set","description":{"short":"+ACC, +Rech","long":"Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Trap_of_the_Hunter_A.Attuned_Trap_of_the_Hunter_A","setName":"Trap_of_the_Hunter","displayName":"Accuracy/Recharge","effects":[{"mag":0.265,"effectId":"Recharge"},{"mag":0.265,"effectId":"Accuracy"}]},{"type":"set","description":{"short":"-End Cost, +Immobilize","long":"Enhances the Immobilize duration of a power by {Boost.Attrib.Immobilize.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Trap_of_the_Hunter_B.Attuned_Trap_of_the_Hunter_B","setName":"Trap_of_the_Hunter","displayName":"Endurance/Immobilize","effects":[{"mag":0.265,"effectId":"Endurance"},{"mag":0.265,"effectId":"Immobilize","mezType":3}]},{"type":"set","description":{"short":"+ACC, -End Cost","long":"Enhances the accuracy by {Boost.Attrib.Accuracy.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Trap_of_the_Hunter_C.Attuned_Trap_of_the_Hunter_C","setName":"Trap_of_the_Hunter","displayName":"Accuracy/Endurance","effects":[{"mag":0.265,"effectId":"Accuracy"},{"mag":0.265,"effectId":"Endurance"}]},{"type":"set","description":{"short":"+ACC, +Immobilize","long":"Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and immobilize duration by {Boost.Attrib.immobilize.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Trap_of_the_Hunter_D.Attuned_Trap_of_the_Hunter_D","setName":"Trap_of_the_Hunter","displayName":"Immobilize/Accuracy","effects":[{"mag":0.265,"effectId":"Immobilize","mezType":3},{"mag":0.265,"effectId":"Accuracy"}]},{"type":"set","description":{"short":"+ACC, +Rech, +Immob","long":"Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}%, immobilize duration by {Boost.Attrib.Immobilize.Scale}% and reduces the attack rate by {Boost.Attrib.Recharge.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Trap_of_the_Hunter_E.Attuned_Trap_of_the_Hunter_E","setName":"Trap_of_the_Hunter","displayName":"Accuracy/Immob/Recharge","effects":[{"mag":0.212,"effectId":"Immobilize","mezType":3},{"mag":0.212,"effectId":"Accuracy"},{"mag":0.212,"effectId":"Recharge"}]},{"type":"set","description":{"short":"Chance for Lethal DMG","long":"Provides a chance to cause minor lethal damage to your targets.  This effect will trigger roughly 3.5 times per minute."},"isUnique":false,"fullName":"Boosts.Attuned_Trap_of_the_Hunter_F.Attuned_Trap_of_the_Hunter_F","setName":"Trap_of_the_Hunter","displayName":"Chance for Lethal Damage","effects":[{"procsPerMinute":3.5,"cancelOnMiss":true,"mag":71.7501,"effectId":"Damage","damageType":2,"stacking":1,"resistible":true,"pvMode":1},{"procsPerMinute":3.5,"cancelOnMiss":true,"mag":71.7501,"effectId":"TempDamage","damageType":2,"stacking":1,"pvMode":2}]}],"levels":{"min":20,"max":50},"bonuses":["Immob_Dur_4","Increased_Health_4","Accuracy_4","Lethal_Smash_Mez_Res_4","Increased_Ranged_Energy_Neg_Def_4"],"setType":12,"displayName":"Trap of the Hunter","imageName":"sTrapOfTheHunter.png"}
+{
+  "fullName": "IOSet.Trap_of_the_Hunter",
+  "enhancements": [
+    {
+      "description": {
+        "short": "+ACC, +Rech",
+        "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Recharge",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 25,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Trap_of_the_Hunter_A.Attuned_Trap_of_the_Hunter_A"
+            }
+          ]
+        },
+        {
+          "effectType": "Accuracy",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 1,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Trap_of_the_Hunter_A.Attuned_Trap_of_the_Hunter_A"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Trap_of_the_Hunter_A.Attuned_Trap_of_the_Hunter_A",
+      "setName": "Trap_of_the_Hunter",
+      "displayName": "Accuracy/Recharge"
+    },
+    {
+      "description": {
+        "short": "-End Cost, +Immobilize",
+        "long": "Enhances the Immobilize duration of a power by {Boost.Attrib.Immobilize.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Endurance",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 8,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Trap_of_the_Hunter_B.Attuned_Trap_of_the_Hunter_B"
+            }
+          ]
+        },
+        {
+          "effectType": "Immobilize",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 19,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Trap_of_the_Hunter_B.Attuned_Trap_of_the_Hunter_B",
+              "mezType": "Immobilization"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Trap_of_the_Hunter_B.Attuned_Trap_of_the_Hunter_B",
+      "setName": "Trap_of_the_Hunter",
+      "displayName": "Endurance/Immobilize"
+    },
+    {
+      "description": {
+        "short": "+ACC, -End Cost",
+        "long": "Enhances the accuracy by {Boost.Attrib.Accuracy.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Accuracy",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 1,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Trap_of_the_Hunter_C.Attuned_Trap_of_the_Hunter_C"
+            }
+          ]
+        },
+        {
+          "effectType": "Endurance",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 8,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Trap_of_the_Hunter_C.Attuned_Trap_of_the_Hunter_C"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Trap_of_the_Hunter_C.Attuned_Trap_of_the_Hunter_C",
+      "setName": "Trap_of_the_Hunter",
+      "displayName": "Accuracy/Endurance"
+    },
+    {
+      "description": {
+        "short": "+ACC, +Immobilize",
+        "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and immobilize duration by {Boost.Attrib.immobilize.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Immobilize",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 19,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Trap_of_the_Hunter_D.Attuned_Trap_of_the_Hunter_D",
+              "mezType": "Immobilization"
+            }
+          ]
+        },
+        {
+          "effectType": "Accuracy",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 1,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Trap_of_the_Hunter_D.Attuned_Trap_of_the_Hunter_D"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Trap_of_the_Hunter_D.Attuned_Trap_of_the_Hunter_D",
+      "setName": "Trap_of_the_Hunter",
+      "displayName": "Immobilize/Accuracy"
+    },
+    {
+      "description": {
+        "short": "+ACC, +Rech, +Immob",
+        "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}%, immobilize duration by {Boost.Attrib.Immobilize.Scale}% and reduces the attack rate by {Boost.Attrib.Recharge.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Immobilize",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 19,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Trap_of_the_Hunter_E.Attuned_Trap_of_the_Hunter_E",
+              "mezType": "Immobilization"
+            }
+          ]
+        },
+        {
+          "effectType": "Accuracy",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 1,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Trap_of_the_Hunter_E.Attuned_Trap_of_the_Hunter_E"
+            }
+          ]
+        },
+        {
+          "effectType": "Recharge",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 25,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Trap_of_the_Hunter_E.Attuned_Trap_of_the_Hunter_E"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Trap_of_the_Hunter_E.Attuned_Trap_of_the_Hunter_E",
+      "setName": "Trap_of_the_Hunter",
+      "displayName": "Accuracy/Immob/Recharge"
+    },
+    {
+      "description": {
+        "short": "Chance for Lethal DMG",
+        "long": "Provides a chance to cause minor lethal damage to your targets.  This effect will trigger roughly 3.5 times per minute."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 71.7501
+              },
+              "procsPerMinute": 3.5,
+              "cancelOnMiss": true,
+              "effectType": "Damage",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "All",
+              "powerFullName": "Boosts.Attuned_Trap_of_the_Hunter_F.Attuned_Trap_of_the_Hunter_F",
+              "damageType": "Lethal"
+            }
+          ]
+        },
+        {
+          "effectType": "TempDamage",
+          "values": [
+            {
+              "mag": {
+                "pvp": 71.7501
+              },
+              "procsPerMinute": 3.5,
+              "cancelOnMiss": true,
+              "effectType": "Damage",
+              "stacking": 1,
+              "toWho": "All",
+              "powerFullName": "Boosts.Attuned_Trap_of_the_Hunter_F.Attuned_Trap_of_the_Hunter_F",
+              "damageType": "Lethal"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Trap_of_the_Hunter_F.Attuned_Trap_of_the_Hunter_F",
+      "setName": "Trap_of_the_Hunter",
+      "displayName": "Chance for Lethal Damage"
+    }
+  ],
+  "levels": {
+    "min": 20,
+    "max": 50
+  },
+  "bonuses": [
+    {
+      "description": {
+        "short": "+Duration Immob",
+        "long": "Improves the duration of your Immobilize effects by 5%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 2,
+      "powerSetIndex": 110,
+      "fullName": "Set_Bonus.Set_Bonus.Immob_Dur_4",
+      "setName": "Set_Bonus",
+      "displayName": "Large Immobilize Duration Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.05
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 19,
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Immob_Dur_4",
+              "mezType": "Immobilization"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+Max HP",
+        "long": "Increases maximum health by 1.88%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 3,
+      "powerSetIndex": 287,
+      "fullName": "Set_Bonus.Set_Bonus.Increased_Health_4",
+      "setName": "Set_Bonus",
+      "displayName": "Large Increased Health Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "HealSelf",
+          "values": [
+            {
+              "mag": {
+                "pve": 22.5892315
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "HitPoints",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Health_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+Accuracy",
+        "long": "Improves the accuracy of all of your powers by 9%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 4,
+      "powerSetIndex": 4,
+      "fullName": "Set_Bonus.Set_Bonus.Accuracy_4",
+      "setName": "Set_Bonus",
+      "displayName": "Large Accuracy Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.09
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 1,
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Accuracy_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+Res (Lethal, Smash, Mez)",
+        "long": "Increases Lethal and Smashing resistance by 3.75% and Mez Resistance by 6.25%"
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 5,
+      "powerSetIndex": 449,
+      "fullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_4",
+      "setName": "Set_Bonus",
+      "displayName": "Large Lethal, Smash and Mez Resistance",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_4",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_4",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 0.0625
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_4",
+              "mezType": "Immobilization"
+            },
+            {
+              "mag": {
+                "pve": 0.0625
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_4",
+              "mezType": "Hold"
+            },
+            {
+              "mag": {
+                "pve": 0.0625
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_4",
+              "mezType": "Stun"
+            },
+            {
+              "mag": {
+                "pve": 0.0625
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_4",
+              "mezType": "Sleep"
+            },
+            {
+              "mag": {
+                "pve": 0.0625
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_4",
+              "mezType": "Terrorize"
+            },
+            {
+              "mag": {
+                "pve": 0.0625
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_4",
+              "mezType": "Confuse"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+DEF",
+        "long": "Increases ranged defense by 3.13% and energy and negative energy defense by 1.565%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 6,
+      "powerSetIndex": 385,
+      "fullName": "Set_Bonus.Set_Bonus.Increased_Ranged_Energy_Neg_Def_4",
+      "setName": "Set_Bonus",
+      "displayName": "Large Increased Ranged/Energy/Negative Energy Def Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.03125
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Ranged_Energy_Neg_Def_4",
+              "damageType": "Ranged"
+            },
+            {
+              "mag": {
+                "pve": 0.01563
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Ranged_Energy_Neg_Def_4",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.01563
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Ranged_Energy_Neg_Def_4",
+              "damageType": "Negative"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "setType": 12,
+  "displayName": "Trap of the Hunter",
+  "imageName": "sTrapOfTheHunter.png"
+}

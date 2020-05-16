@@ -1,1 +1,496 @@
-{"fullName":"IOSet.Induced_Coma","enhancements":[{"type":"set","description":{"short":"+ACC, +Rech","long":"Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Induced_Coma_A.Attuned_Induced_Coma_A","setName":"Induced_Coma","displayName":"Accuracy/Recharge","effects":[{"mag":0.265,"effectId":"Recharge"},{"mag":0.265,"effectId":"Accuracy"}]},{"type":"set","description":{"short":"-End Cost, +Sleep","long":"Enhances the sleep duration of a power by {Boost.Attrib.Sleep.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Induced_Coma_B.Attuned_Induced_Coma_B","setName":"Induced_Coma","displayName":"Endurance/Sleep","effects":[{"mag":0.265,"effectId":"Endurance"},{"mag":0.265,"effectId":"Sleep","mezType":9}]},{"type":"set","description":{"short":"+ACC, -End Cost","long":"Enhances the accuracy by {Boost.Attrib.Accuracy.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Induced_Coma_C.Attuned_Induced_Coma_C","setName":"Induced_Coma","displayName":"Accuracy/Endurance","effects":[{"mag":0.265,"effectId":"Accuracy"},{"mag":0.265,"effectId":"Endurance"}]},{"type":"set","description":{"short":"+Range, +Sleep","long":"Enhances the range of a power by {Boost.Attrib.Range.Scale}% and sleep duration by {Boost.Attrib.sleep.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Induced_Coma_D.Attuned_Induced_Coma_D","setName":"Induced_Coma","displayName":"Sleep/Range","effects":[{"mag":0.265,"effectId":"Sleep","mezType":9},{"mag":0.159375,"effectId":"Range"}]},{"type":"set","description":{"short":"+ACC, +Rech, +Sleep","long":"Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}%, sleep duration by {Boost.Attrib.Sleep.Scale}% and reduces the attack rate by {Boost.Attrib.Recharge.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Induced_Coma_E.Attuned_Induced_Coma_E","setName":"Induced_Coma","displayName":"Accuracy/Sleep/Recharge","effects":[{"mag":0.212,"effectId":"Sleep","mezType":9},{"mag":0.212,"effectId":"Accuracy"},{"mag":0.212,"effectId":"Recharge"}]},{"type":"set","description":{"short":"Chance for -Rech","long":"Gives a chance of slowing targets recharge times by 20%.  This effect will trigger roughly 3.5 times per minute."},"isUnique":false,"fullName":"Boosts.Attuned_Induced_Coma_F.Attuned_Induced_Coma_F","setName":"Induced_Coma","displayName":"Chance for Recharge Slow","effects":[{"procsPerMinute":3.5,"effectId":"Recharge","resistible":true}]}],"levels":{"min":10,"max":30},"bonuses":["Sleep_Dur_5","Increased_Health_1","Improved_Regeneration_4","Increased_Move_2","Increased_Melee_Lethal_Smash_Def_3"],"setType":14,"displayName":"Induced Coma","imageName":"sInducedComa.png"}
+{
+  "fullName": "IOSet.Induced_Coma",
+  "enhancements": [
+    {
+      "description": {
+        "short": "+ACC, +Rech",
+        "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Recharge",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 25,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Induced_Coma_A.Attuned_Induced_Coma_A"
+            }
+          ]
+        },
+        {
+          "effectType": "Accuracy",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 1,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Induced_Coma_A.Attuned_Induced_Coma_A"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Induced_Coma_A.Attuned_Induced_Coma_A",
+      "setName": "Induced_Coma",
+      "displayName": "Accuracy/Recharge"
+    },
+    {
+      "description": {
+        "short": "-End Cost, +Sleep",
+        "long": "Enhances the sleep duration of a power by {Boost.Attrib.Sleep.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Endurance",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 8,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Induced_Coma_B.Attuned_Induced_Coma_B"
+            }
+          ]
+        },
+        {
+          "effectType": "Sleep",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 19,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Induced_Coma_B.Attuned_Induced_Coma_B",
+              "mezType": "Sleep"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Induced_Coma_B.Attuned_Induced_Coma_B",
+      "setName": "Induced_Coma",
+      "displayName": "Endurance/Sleep"
+    },
+    {
+      "description": {
+        "short": "+ACC, -End Cost",
+        "long": "Enhances the accuracy by {Boost.Attrib.Accuracy.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Accuracy",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 1,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Induced_Coma_C.Attuned_Induced_Coma_C"
+            }
+          ]
+        },
+        {
+          "effectType": "Endurance",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 8,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Induced_Coma_C.Attuned_Induced_Coma_C"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Induced_Coma_C.Attuned_Induced_Coma_C",
+      "setName": "Induced_Coma",
+      "displayName": "Accuracy/Endurance"
+    },
+    {
+      "description": {
+        "short": "+Range, +Sleep",
+        "long": "Enhances the range of a power by {Boost.Attrib.Range.Scale}% and sleep duration by {Boost.Attrib.sleep.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Sleep",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 19,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Induced_Coma_D.Attuned_Induced_Coma_D",
+              "mezType": "Sleep"
+            }
+          ]
+        },
+        {
+          "effectType": "Range",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.159375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 24,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Induced_Coma_D.Attuned_Induced_Coma_D"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Induced_Coma_D.Attuned_Induced_Coma_D",
+      "setName": "Induced_Coma",
+      "displayName": "Sleep/Range"
+    },
+    {
+      "description": {
+        "short": "+ACC, +Rech, +Sleep",
+        "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}%, sleep duration by {Boost.Attrib.Sleep.Scale}% and reduces the attack rate by {Boost.Attrib.Recharge.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Sleep",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 19,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Induced_Coma_E.Attuned_Induced_Coma_E",
+              "mezType": "Sleep"
+            }
+          ]
+        },
+        {
+          "effectType": "Accuracy",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 1,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Induced_Coma_E.Attuned_Induced_Coma_E"
+            }
+          ]
+        },
+        {
+          "effectType": "Recharge",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 25,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Induced_Coma_E.Attuned_Induced_Coma_E"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Induced_Coma_E.Attuned_Induced_Coma_E",
+      "setName": "Induced_Coma",
+      "displayName": "Accuracy/Sleep/Recharge"
+    },
+    {
+      "description": {
+        "short": "Chance for -Rech",
+        "long": "Gives a chance of slowing targets recharge times by 20%.  This effect will trigger roughly 3.5 times per minute."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Recharge",
+          "values": [
+            {
+              "mag": {},
+              "procsPerMinute": 3.5,
+              "duration": 20,
+              "effectType": "Enhancement",
+              "eTModifies": 25,
+              "resistible": true,
+              "toWho": "All",
+              "powerFullName": "Boosts.Attuned_Induced_Coma_F.Attuned_Induced_Coma_F"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Induced_Coma_F.Attuned_Induced_Coma_F",
+      "setName": "Induced_Coma",
+      "displayName": "Chance for Recharge Slow"
+    }
+  ],
+  "levels": {
+    "min": 10,
+    "max": 30
+  },
+  "bonuses": [
+    {
+      "description": {
+        "short": "+Duration Sleep",
+        "long": "Improves the duration of your Sleep effects by 6%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 2,
+      "powerSetIndex": 472,
+      "fullName": "Set_Bonus.Set_Bonus.Sleep_Dur_5",
+      "setName": "Set_Bonus",
+      "displayName": "Huge Sleep Duration Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.06
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 19,
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Sleep_Dur_5",
+              "mezType": "Sleep"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+Max HP",
+        "long": "Increases maximum health by 0.75%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 3,
+      "powerSetIndex": 284,
+      "fullName": "Set_Bonus.Set_Bonus.Increased_Health_1",
+      "setName": "Set_Bonus",
+      "displayName": "Tiny Increased Health Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "HealSelf",
+          "values": [
+            {
+              "mag": {
+                "pve": 9.035693
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "HitPoints",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Health_1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+Regeneration",
+        "long": "Improves your Regeneration by 10%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 4,
+      "powerSetIndex": 154,
+      "fullName": "Set_Bonus.Set_Bonus.Improved_Regeneration_4",
+      "setName": "Set_Bonus",
+      "displayName": "Large Improved Regeneration Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.1
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Regeneration",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Improved_Regeneration_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+Move",
+        "long": "Improves all of your Movement speeds by 4.5%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 5,
+      "powerSetIndex": 327,
+      "fullName": "Set_Bonus.Set_Bonus.Increased_Move_2",
+      "setName": "Set_Bonus",
+      "displayName": "Small Improved Movement Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.045
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "SpeedJumping",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Move_2"
+            },
+            {
+              "mag": {
+                "pve": 0.045
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "JumpHeight",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Move_2"
+            },
+            {
+              "mag": {
+                "pve": 0.045
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "SpeedFlying",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Move_2"
+            },
+            {
+              "mag": {
+                "pve": 0.045
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "SpeedRunning",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Move_2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+DEF",
+        "long": "Increases melee defense by 2.5% and lethal and smashing defense by 1.25%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 6,
+      "powerSetIndex": 321,
+      "fullName": "Set_Bonus.Set_Bonus.Increased_Melee_Lethal_Smash_Def_3",
+      "setName": "Set_Bonus",
+      "displayName": "Moderate Increased Melee/Lethal/Smashing Def Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.025
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Melee_Lethal_Smash_Def_3",
+              "damageType": "Melee"
+            },
+            {
+              "mag": {
+                "pve": 0.0125
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Melee_Lethal_Smash_Def_3",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.0125
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Melee_Lethal_Smash_Def_3",
+              "damageType": "Smashing"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "setType": 14,
+  "displayName": "Induced Coma",
+  "imageName": "sInducedComa.png"
+}

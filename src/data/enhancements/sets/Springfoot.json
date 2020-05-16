@@ -1,1 +1,241 @@
-{"fullName":"IOSet.Springfoot","enhancements":[{"type":"set","description":{"short":"+Jump","long":"Enhances the jumping ability of a power by {Boost.Attrib.Jump.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Springfoot_A.Attuned_Springfoot_A","setName":"Springfoot","displayName":"Jump","effects":[{"mag":0.424,"effectId":"Jump"},{"mag":0.424,"effectId":"Boosts_33"}]},{"type":"set","description":{"short":"-End Cost","long":"Reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Springfoot_B.Attuned_Springfoot_B","setName":"Springfoot","displayName":"Endurance","effects":[{"mag":0.424,"effectId":"Endurance"}]},{"type":"set","description":{"short":"+Jump, -End Cost","long":"Enhances the jumping ability of a power by {Boost.Attrib.Jump.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Springfoot_C.Attuned_Springfoot_C","setName":"Springfoot","displayName":"Endurance/Jump","effects":[{"mag":0.265,"effectId":"Endurance"},{"mag":0.265,"effectId":"Jump"},{"mag":0.265,"effectId":"Boosts_33"}]}],"levels":{"min":15,"max":50},"bonuses":["Increased_Move_1","Increased_Health_1"],"setType":18,"displayName":"Springfoot","imageName":"sSpringfoot.png"}
+{
+  "fullName": "IOSet.Springfoot",
+  "enhancements": [
+    {
+      "description": {
+        "short": "+Jump",
+        "long": "Enhances the jumping ability of a power by {Boost.Attrib.Jump.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Jump",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.424
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 17,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Springfoot_A.Attuned_Springfoot_A"
+            }
+          ]
+        },
+        {
+          "effectType": "Boosts_33",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.424
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 16,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Springfoot_A.Attuned_Springfoot_A"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Springfoot_A.Attuned_Springfoot_A",
+      "setName": "Springfoot",
+      "displayName": "Jump"
+    },
+    {
+      "description": {
+        "short": "-End Cost",
+        "long": "Reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Endurance",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.424
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 8,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Springfoot_B.Attuned_Springfoot_B"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Springfoot_B.Attuned_Springfoot_B",
+      "setName": "Springfoot",
+      "displayName": "Endurance"
+    },
+    {
+      "description": {
+        "short": "+Jump, -End Cost",
+        "long": "Enhances the jumping ability of a power by {Boost.Attrib.Jump.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Endurance",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 8,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Springfoot_C.Attuned_Springfoot_C"
+            }
+          ]
+        },
+        {
+          "effectType": "Jump",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 17,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Springfoot_C.Attuned_Springfoot_C"
+            }
+          ]
+        },
+        {
+          "effectType": "Boosts_33",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 16,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Springfoot_C.Attuned_Springfoot_C"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Springfoot_C.Attuned_Springfoot_C",
+      "setName": "Springfoot",
+      "displayName": "Endurance/Jump"
+    }
+  ],
+  "levels": {
+    "min": 15,
+    "max": 50
+  },
+  "bonuses": [
+    {
+      "description": {
+        "short": "+Move",
+        "long": "Improves all of your Movement speeds by 3%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 2,
+      "powerSetIndex": 326,
+      "fullName": "Set_Bonus.Set_Bonus.Increased_Move_1",
+      "setName": "Set_Bonus",
+      "displayName": "Tiny Improved Movement Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.03
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "SpeedJumping",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Move_1"
+            },
+            {
+              "mag": {
+                "pve": 0.03
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "JumpHeight",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Move_1"
+            },
+            {
+              "mag": {
+                "pve": 0.03
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "SpeedFlying",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Move_1"
+            },
+            {
+              "mag": {
+                "pve": 0.03
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "SpeedRunning",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Move_1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+Max HP",
+        "long": "Increases maximum health by 0.75%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 3,
+      "powerSetIndex": 284,
+      "fullName": "Set_Bonus.Set_Bonus.Increased_Health_1",
+      "setName": "Set_Bonus",
+      "displayName": "Tiny Increased Health Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "HealSelf",
+          "values": [
+            {
+              "mag": {
+                "pve": 9.035693
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "HitPoints",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Health_1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "setType": 18,
+  "displayName": "Springfoot",
+  "imageName": "sSpringfoot.png"
+}

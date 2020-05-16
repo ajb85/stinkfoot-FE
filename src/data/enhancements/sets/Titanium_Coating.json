@@ -1,1 +1,930 @@
-{"fullName":"IOSet.Titanium_Coating","enhancements":[{"type":"set","description":{"short":"+RES (all), Reduces End cost","long":"Enhances the damage resistance of a power by {Boost.Attrib.Resist.Scale}% and reduces endurance cost by {Boost.Attrib.Endurance.Scale}%"},"isUnique":false,"fullName":"Boosts.Attuned_Titanium_Coating_A.Attuned_Titanium_Coating_A","setName":"Titanium_Coating","displayName":"Resistance/Endurance","effects":[{"mag":0.159375,"effectId":"Resist","damageType":1},{"mag":0.159375,"effectId":"Boosts_20","damageType":2},{"mag":0.159375,"effectId":"Boosts_20","damageType":3},{"mag":0.159375,"effectId":"Boosts_20","damageType":4},{"mag":0.159375,"effectId":"Boosts_20","damageType":5},{"mag":0.159375,"effectId":"Boosts_20","damageType":6},{"mag":0.159375,"effectId":"Boosts_20","damageType":7},{"mag":0.159375,"effectId":"Boosts_20","damageType":8},{"mag":0.265,"effectId":"Endurance"}]},{"type":"set","description":{"short":"+RES (all), +Rech","long":"Enhances the damage resistance of a power by {Boost.Attrib.Resist.Scale}% and reduces recharge time by {Boost.Attrib.Recharge.Scale}%"},"isUnique":false,"fullName":"Boosts.Attuned_Titanium_Coating_B.Attuned_Titanium_Coating_B","setName":"Titanium_Coating","displayName":"Resistance/Recharge","effects":[{"mag":0.159375,"effectId":"Resist","damageType":1},{"mag":0.159375,"effectId":"Boosts_20","damageType":2},{"mag":0.159375,"effectId":"Boosts_20","damageType":3},{"mag":0.159375,"effectId":"Boosts_20","damageType":4},{"mag":0.159375,"effectId":"Boosts_20","damageType":5},{"mag":0.159375,"effectId":"Boosts_20","damageType":6},{"mag":0.159375,"effectId":"Boosts_20","damageType":7},{"mag":0.159375,"effectId":"Boosts_20","damageType":8},{"mag":0.265,"effectId":"Recharge"}]},{"type":"set","description":{"short":"Reduces Endurance Cost and Increases Attack Rate","long":"Reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}% and recharge time by {Boost.Attrib.Recharge.Scale}%"},"isUnique":false,"fullName":"Boosts.Attuned_Titanium_Coating_C.Attuned_Titanium_Coating_C","setName":"Titanium_Coating","displayName":"Endurance/Recharge","effects":[{"mag":0.265,"effectId":"Endurance"},{"mag":0.265,"effectId":"Recharge"}]},{"type":"set","description":{"short":"Enhances Resistance, Reduces Endurance Cost and Increases Attack Rate","long":"Enhances the damage resistance of a power by {Boost.Attrib.Resist.Scale}%, reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%and recharge time by {Boost.Attrib.Recharge.Scale}%"},"isUnique":false,"fullName":"Boosts.Attuned_Titanium_Coating_D.Attuned_Titanium_Coating_D","setName":"Titanium_Coating","displayName":"Resistance/Endurance/Recharge","effects":[{"mag":0.1275,"effectId":"Resist","damageType":1},{"mag":0.1275,"effectId":"Boosts_20","damageType":2},{"mag":0.1275,"effectId":"Boosts_20","damageType":3},{"mag":0.1275,"effectId":"Boosts_20","damageType":4},{"mag":0.1275,"effectId":"Boosts_20","damageType":5},{"mag":0.1275,"effectId":"Boosts_20","damageType":6},{"mag":0.1275,"effectId":"Boosts_20","damageType":7},{"mag":0.1275,"effectId":"Boosts_20","damageType":8},{"mag":0.212,"effectId":"Endurance"},{"mag":0.212,"effectId":"Recharge"}]},{"type":"set","description":{"short":"+RES (all)","long":"Enhances the damage resistance of a power by {Boost.Attrib.Resist.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Titanium_Coating_E.Attuned_Titanium_Coating_E","setName":"Titanium_Coating","displayName":"Resistance","effects":[{"mag":0.255,"effectId":"Resist","damageType":1},{"mag":0.255,"effectId":"Boosts_20","damageType":2},{"mag":0.255,"effectId":"Boosts_20","damageType":3},{"mag":0.255,"effectId":"Boosts_20","damageType":4},{"mag":0.255,"effectId":"Boosts_20","damageType":5},{"mag":0.255,"effectId":"Boosts_20","damageType":6},{"mag":0.255,"effectId":"Boosts_20","damageType":7},{"mag":0.255,"effectId":"Boosts_20","damageType":8}]},{"type":"set","description":{"short":"Reduces Endurance Cost","long":"Reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Titanium_Coating_F.Attuned_Titanium_Coating_F","setName":"Titanium_Coating","displayName":"Endurance","effects":[{"mag":0.424,"effectId":"Endurance"}]}],"levels":{"min":25,"max":50},"bonuses":["Energy_Neg_Mez_Res_1","Increased_Health_3","Lethal_Smash_Mez_Res_3","Improved_Regeneration_4","Increased_Melee_Lethal_Smash_Def_3"],"setType":8,"displayName":"Titanium Coating","imageName":"sTitaniumCoating.png"}
+{
+  "fullName": "IOSet.Titanium_Coating",
+  "enhancements": [
+    {
+      "description": {
+        "short": "+RES (all), Reduces End cost",
+        "long": "Enhances the damage resistance of a power by {Boost.Attrib.Resist.Scale}% and reduces endurance cost by {Boost.Attrib.Endurance.Scale}%"
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Resist",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.159375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Titanium_Coating_A.Attuned_Titanium_Coating_A",
+              "damageType": "Smashing"
+            }
+          ]
+        },
+        {
+          "effectType": "Boosts_20",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.159375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Titanium_Coating_A.Attuned_Titanium_Coating_A",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.159375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Titanium_Coating_A.Attuned_Titanium_Coating_A",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.159375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Titanium_Coating_A.Attuned_Titanium_Coating_A",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 0.159375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Titanium_Coating_A.Attuned_Titanium_Coating_A",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.159375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Titanium_Coating_A.Attuned_Titanium_Coating_A",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.159375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Titanium_Coating_A.Attuned_Titanium_Coating_A",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pve": 0.159375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Titanium_Coating_A.Attuned_Titanium_Coating_A",
+              "damageType": "Psionic"
+            }
+          ]
+        },
+        {
+          "effectType": "Endurance",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 8,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Titanium_Coating_A.Attuned_Titanium_Coating_A"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Titanium_Coating_A.Attuned_Titanium_Coating_A",
+      "setName": "Titanium_Coating",
+      "displayName": "Resistance/Endurance"
+    },
+    {
+      "description": {
+        "short": "+RES (all), +Rech",
+        "long": "Enhances the damage resistance of a power by {Boost.Attrib.Resist.Scale}% and reduces recharge time by {Boost.Attrib.Recharge.Scale}%"
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Resist",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.159375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Titanium_Coating_B.Attuned_Titanium_Coating_B",
+              "damageType": "Smashing"
+            }
+          ]
+        },
+        {
+          "effectType": "Boosts_20",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.159375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Titanium_Coating_B.Attuned_Titanium_Coating_B",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.159375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Titanium_Coating_B.Attuned_Titanium_Coating_B",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.159375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Titanium_Coating_B.Attuned_Titanium_Coating_B",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 0.159375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Titanium_Coating_B.Attuned_Titanium_Coating_B",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.159375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Titanium_Coating_B.Attuned_Titanium_Coating_B",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.159375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Titanium_Coating_B.Attuned_Titanium_Coating_B",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pve": 0.159375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Titanium_Coating_B.Attuned_Titanium_Coating_B",
+              "damageType": "Psionic"
+            }
+          ]
+        },
+        {
+          "effectType": "Recharge",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 25,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Titanium_Coating_B.Attuned_Titanium_Coating_B"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Titanium_Coating_B.Attuned_Titanium_Coating_B",
+      "setName": "Titanium_Coating",
+      "displayName": "Resistance/Recharge"
+    },
+    {
+      "description": {
+        "short": "Reduces Endurance Cost and Increases Attack Rate",
+        "long": "Reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}% and recharge time by {Boost.Attrib.Recharge.Scale}%"
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Endurance",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 8,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Titanium_Coating_C.Attuned_Titanium_Coating_C"
+            }
+          ]
+        },
+        {
+          "effectType": "Recharge",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 25,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Titanium_Coating_C.Attuned_Titanium_Coating_C"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Titanium_Coating_C.Attuned_Titanium_Coating_C",
+      "setName": "Titanium_Coating",
+      "displayName": "Endurance/Recharge"
+    },
+    {
+      "description": {
+        "short": "Enhances Resistance, Reduces Endurance Cost and Increases Attack Rate",
+        "long": "Enhances the damage resistance of a power by {Boost.Attrib.Resist.Scale}%, reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%and recharge time by {Boost.Attrib.Recharge.Scale}%"
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Resist",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.1275
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Titanium_Coating_D.Attuned_Titanium_Coating_D",
+              "damageType": "Smashing"
+            }
+          ]
+        },
+        {
+          "effectType": "Boosts_20",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.1275
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Titanium_Coating_D.Attuned_Titanium_Coating_D",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.1275
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Titanium_Coating_D.Attuned_Titanium_Coating_D",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.1275
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Titanium_Coating_D.Attuned_Titanium_Coating_D",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 0.1275
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Titanium_Coating_D.Attuned_Titanium_Coating_D",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.1275
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Titanium_Coating_D.Attuned_Titanium_Coating_D",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.1275
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Titanium_Coating_D.Attuned_Titanium_Coating_D",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pve": 0.1275
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Titanium_Coating_D.Attuned_Titanium_Coating_D",
+              "damageType": "Psionic"
+            }
+          ]
+        },
+        {
+          "effectType": "Endurance",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 8,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Titanium_Coating_D.Attuned_Titanium_Coating_D"
+            }
+          ]
+        },
+        {
+          "effectType": "Recharge",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 25,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Titanium_Coating_D.Attuned_Titanium_Coating_D"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Titanium_Coating_D.Attuned_Titanium_Coating_D",
+      "setName": "Titanium_Coating",
+      "displayName": "Resistance/Endurance/Recharge"
+    },
+    {
+      "description": {
+        "short": "+RES (all)",
+        "long": "Enhances the damage resistance of a power by {Boost.Attrib.Resist.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Resist",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.255
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Titanium_Coating_E.Attuned_Titanium_Coating_E",
+              "damageType": "Smashing"
+            }
+          ]
+        },
+        {
+          "effectType": "Boosts_20",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.255
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Titanium_Coating_E.Attuned_Titanium_Coating_E",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.255
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Titanium_Coating_E.Attuned_Titanium_Coating_E",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.255
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Titanium_Coating_E.Attuned_Titanium_Coating_E",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 0.255
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Titanium_Coating_E.Attuned_Titanium_Coating_E",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.255
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Titanium_Coating_E.Attuned_Titanium_Coating_E",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.255
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Titanium_Coating_E.Attuned_Titanium_Coating_E",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pve": 0.255
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Titanium_Coating_E.Attuned_Titanium_Coating_E",
+              "damageType": "Psionic"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Titanium_Coating_E.Attuned_Titanium_Coating_E",
+      "setName": "Titanium_Coating",
+      "displayName": "Resistance"
+    },
+    {
+      "description": {
+        "short": "Reduces Endurance Cost",
+        "long": "Reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Endurance",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.424
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 8,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Titanium_Coating_F.Attuned_Titanium_Coating_F"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Titanium_Coating_F.Attuned_Titanium_Coating_F",
+      "setName": "Titanium_Coating",
+      "displayName": "Endurance"
+    }
+  ],
+  "levels": {
+    "min": 25,
+    "max": 50
+  },
+  "bonuses": [
+    {
+      "description": {
+        "short": "+Res (Energy, Negative, Mez)",
+        "long": "Increases Energy and Negative Energy resistance by 1.5% and Mez Resistance by 2.5%"
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 2,
+      "powerSetIndex": 56,
+      "fullName": "Set_Bonus.Set_Bonus.Energy_Neg_Mez_Res_1",
+      "setName": "Set_Bonus",
+      "displayName": "Tiny Energy, Negative Energy and Mez Resistance",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.015
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Energy_Neg_Mez_Res_1",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.015
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Energy_Neg_Mez_Res_1",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.025
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Energy_Neg_Mez_Res_1",
+              "mezType": "Immobilization"
+            },
+            {
+              "mag": {
+                "pve": 0.025
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Energy_Neg_Mez_Res_1",
+              "mezType": "Hold"
+            },
+            {
+              "mag": {
+                "pve": 0.025
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Energy_Neg_Mez_Res_1",
+              "mezType": "Stun"
+            },
+            {
+              "mag": {
+                "pve": 0.025
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Energy_Neg_Mez_Res_1",
+              "mezType": "Sleep"
+            },
+            {
+              "mag": {
+                "pve": 0.025
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Energy_Neg_Mez_Res_1",
+              "mezType": "Terrorize"
+            },
+            {
+              "mag": {
+                "pve": 0.025
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Energy_Neg_Mez_Res_1",
+              "mezType": "Confuse"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+Max HP",
+        "long": "Increases maximum health by 1.5%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 3,
+      "powerSetIndex": 286,
+      "fullName": "Set_Bonus.Set_Bonus.Increased_Health_3",
+      "setName": "Set_Bonus",
+      "displayName": "Moderate Increased Health Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "HealSelf",
+          "values": [
+            {
+              "mag": {
+                "pve": 18.0713863
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "HitPoints",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Health_3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+Res (Lethal, Smash, Mez)",
+        "long": "Increases Lethal and Smashing resistance by 3% and Mez Resistance by 5%"
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 4,
+      "powerSetIndex": 448,
+      "fullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_3",
+      "setName": "Set_Bonus",
+      "displayName": "Moderate Lethal, Smash and Mez Resistance",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.03
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_3",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.03
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_3",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 0.05
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_3",
+              "mezType": "Immobilization"
+            },
+            {
+              "mag": {
+                "pve": 0.05
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_3",
+              "mezType": "Hold"
+            },
+            {
+              "mag": {
+                "pve": 0.05
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_3",
+              "mezType": "Stun"
+            },
+            {
+              "mag": {
+                "pve": 0.05
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_3",
+              "mezType": "Sleep"
+            },
+            {
+              "mag": {
+                "pve": 0.05
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_3",
+              "mezType": "Terrorize"
+            },
+            {
+              "mag": {
+                "pve": 0.05
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_3",
+              "mezType": "Confuse"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+Regeneration",
+        "long": "Improves your Regeneration by 10%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 5,
+      "powerSetIndex": 154,
+      "fullName": "Set_Bonus.Set_Bonus.Improved_Regeneration_4",
+      "setName": "Set_Bonus",
+      "displayName": "Large Improved Regeneration Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.1
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Regeneration",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Improved_Regeneration_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+DEF",
+        "long": "Increases melee defense by 2.5% and lethal and smashing defense by 1.25%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 6,
+      "powerSetIndex": 321,
+      "fullName": "Set_Bonus.Set_Bonus.Increased_Melee_Lethal_Smash_Def_3",
+      "setName": "Set_Bonus",
+      "displayName": "Moderate Increased Melee/Lethal/Smashing Def Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.025
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Melee_Lethal_Smash_Def_3",
+              "damageType": "Melee"
+            },
+            {
+              "mag": {
+                "pve": 0.0125
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Melee_Lethal_Smash_Def_3",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.0125
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Melee_Lethal_Smash_Def_3",
+              "damageType": "Smashing"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "setType": 8,
+  "displayName": "Titanium Coating",
+  "imageName": "sTitaniumCoating.png"
+}

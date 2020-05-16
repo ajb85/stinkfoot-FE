@@ -1,1 +1,349 @@
-{"fullName":"IOSet.Achilles'_Heel","enhancements":[{"type":"set","description":{"short":"+Defense Debuff","long":"Enhances the defense debuff potential of a power by {Boost.Attrib.DefenseDebuff.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Achilles_Heel_A.Attuned_Achilles_Heel_A","setName":"Achilles'_Heel","displayName":"Defense Debuff","effects":[{"mag":0.424,"effectId":"DefenseDebuff"}]},{"type":"set","description":{"short":"+Defense Debuff, +Rech","long":"Enhances the defense debuff potential of a power by {Boost.Attrib.DefenseDebuff.Scale}% and reduces the recharge time by {Boost.Attrib.Recharge.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Achilles_Heel_B.Attuned_Achilles_Heel_B","setName":"Achilles'_Heel","displayName":"Defense Debuff/Recharge","effects":[{"mag":0.265,"effectId":"Recharge"},{"mag":0.265,"effectId":"DefenseDebuff"}]},{"type":"set","description":{"short":"-RES (All)","long":"Gives a chance to reduce your foes damage resistance by 20%.  This effect will trigger roughly 3.5 times per minute."},"isUnique":false,"fullName":"Boosts.Attuned_Achilles_Heel_C.Attuned_Achilles_Heel_C","setName":"Achilles'_Heel","displayName":"Chance for Resistance Debuff","effects":[{"procsPerMinute":3.5,"effectId":"Ones","damageType":1,"resistible":true},{"procsPerMinute":3.5,"effectId":"Ones","damageType":2,"resistible":true},{"procsPerMinute":3.5,"effectId":"Ones","damageType":3,"resistible":true},{"procsPerMinute":3.5,"effectId":"Ones","damageType":4,"resistible":true},{"procsPerMinute":3.5,"effectId":"Ones","damageType":5,"resistible":true},{"procsPerMinute":3.5,"effectId":"Ones","damageType":6,"resistible":true},{"procsPerMinute":3.5,"effectId":"Ones","damageType":7,"resistible":true},{"procsPerMinute":3.5,"effectId":"Ones","damageType":8,"resistible":true}]}],"levels":{"min":10,"max":20},"bonuses":["Increased_Damage_2","Increased_AoE_Fire_Cold_Def_2"],"setType":21,"displayName":"Achilles' Heel","imageName":"sAchillesHeel.png"}
+{
+  "fullName": "IOSet.Achilles'_Heel",
+  "enhancements": [
+    {
+      "description": {
+        "short": "+Defense Debuff",
+        "long": "Enhances the defense debuff potential of a power by {Boost.Attrib.DefenseDebuff.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "DefenseDebuff",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.424
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 5,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Achilles_Heel_A.Attuned_Achilles_Heel_A"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Achilles_Heel_A.Attuned_Achilles_Heel_A",
+      "setName": "Achilles'_Heel",
+      "displayName": "Defense Debuff"
+    },
+    {
+      "description": {
+        "short": "+Defense Debuff, +Rech",
+        "long": "Enhances the defense debuff potential of a power by {Boost.Attrib.DefenseDebuff.Scale}% and reduces the recharge time by {Boost.Attrib.Recharge.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Recharge",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 25,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Achilles_Heel_B.Attuned_Achilles_Heel_B"
+            }
+          ]
+        },
+        {
+          "effectType": "DefenseDebuff",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 5,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Achilles_Heel_B.Attuned_Achilles_Heel_B"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Achilles_Heel_B.Attuned_Achilles_Heel_B",
+      "setName": "Achilles'_Heel",
+      "displayName": "Defense Debuff/Recharge"
+    },
+    {
+      "description": {
+        "short": "-RES (All)",
+        "long": "Gives a chance to reduce your foes damage resistance by 20%.  This effect will trigger roughly 3.5 times per minute."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {},
+              "procsPerMinute": 3.5,
+              "duration": 10,
+              "effectType": "Resistance",
+              "resistible": true,
+              "toWho": "All",
+              "powerFullName": "Boosts.Attuned_Achilles_Heel_C.Attuned_Achilles_Heel_C",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {},
+              "procsPerMinute": 3.5,
+              "duration": 10,
+              "effectType": "Resistance",
+              "resistible": true,
+              "toWho": "All",
+              "powerFullName": "Boosts.Attuned_Achilles_Heel_C.Attuned_Achilles_Heel_C",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {},
+              "procsPerMinute": 3.5,
+              "duration": 10,
+              "effectType": "Resistance",
+              "resistible": true,
+              "toWho": "All",
+              "powerFullName": "Boosts.Attuned_Achilles_Heel_C.Attuned_Achilles_Heel_C",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {},
+              "procsPerMinute": 3.5,
+              "duration": 10,
+              "effectType": "Resistance",
+              "resistible": true,
+              "toWho": "All",
+              "powerFullName": "Boosts.Attuned_Achilles_Heel_C.Attuned_Achilles_Heel_C",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {},
+              "procsPerMinute": 3.5,
+              "duration": 10,
+              "effectType": "Resistance",
+              "resistible": true,
+              "toWho": "All",
+              "powerFullName": "Boosts.Attuned_Achilles_Heel_C.Attuned_Achilles_Heel_C",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {},
+              "procsPerMinute": 3.5,
+              "duration": 10,
+              "effectType": "Resistance",
+              "resistible": true,
+              "toWho": "All",
+              "powerFullName": "Boosts.Attuned_Achilles_Heel_C.Attuned_Achilles_Heel_C",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {},
+              "procsPerMinute": 3.5,
+              "duration": 10,
+              "effectType": "Resistance",
+              "resistible": true,
+              "toWho": "All",
+              "powerFullName": "Boosts.Attuned_Achilles_Heel_C.Attuned_Achilles_Heel_C",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {},
+              "procsPerMinute": 3.5,
+              "duration": 10,
+              "effectType": "Resistance",
+              "resistible": true,
+              "toWho": "All",
+              "powerFullName": "Boosts.Attuned_Achilles_Heel_C.Attuned_Achilles_Heel_C",
+              "damageType": "Psionic"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Achilles_Heel_C.Attuned_Achilles_Heel_C",
+      "setName": "Achilles'_Heel",
+      "displayName": "Chance for Resistance Debuff"
+    }
+  ],
+  "levels": {
+    "min": 10,
+    "max": 20
+  },
+  "bonuses": [
+    {
+      "description": {
+        "short": "+DMG",
+        "long": "Increases damage by 1.5%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 2,
+      "powerSetIndex": 215,
+      "fullName": "Set_Bonus.Set_Bonus.Increased_Damage_2",
+      "setName": "Set_Bonus",
+      "displayName": "Small Increased Damage Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.015
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "DamageBuff",
+              "toWho": "All",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Damage_2",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 0.015
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "DamageBuff",
+              "toWho": "All",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Damage_2",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.015
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "DamageBuff",
+              "toWho": "All",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Damage_2",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.015
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "DamageBuff",
+              "toWho": "All",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Damage_2",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 0.015
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "DamageBuff",
+              "toWho": "All",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Damage_2",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.015
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "DamageBuff",
+              "toWho": "All",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Damage_2",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.015
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "DamageBuff",
+              "toWho": "All",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Damage_2",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pve": 0.015
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "DamageBuff",
+              "toWho": "All",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Damage_2",
+              "damageType": "Psionic"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+DEF",
+        "long": "Increases area effect defense by 1.88% and fire and cold defense by 0.94%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 3,
+      "powerSetIndex": 194,
+      "fullName": "Set_Bonus.Set_Bonus.Increased_AoE_Fire_Cold_Def_2",
+      "setName": "Set_Bonus",
+      "displayName": "Small Increased AoE/Fire/Cold Def Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.01875
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_AoE_Fire_Cold_Def_2",
+              "damageType": "AoE"
+            },
+            {
+              "mag": {
+                "pve": 0.00938
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_AoE_Fire_Cold_Def_2",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.00938
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_AoE_Fire_Cold_Def_2",
+              "damageType": "Cold"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "setType": 21,
+  "displayName": "Achilles' Heel",
+  "imageName": "sAchillesHeel.png"
+}

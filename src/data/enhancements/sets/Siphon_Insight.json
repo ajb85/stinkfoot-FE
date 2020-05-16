@@ -1,1 +1,518 @@
-{"fullName":"IOSet.Siphon_Insight","enhancements":[{"type":"set","description":{"short":"+To Hit Debuff","long":"Enhances the to hit debuff potential of a power by {Boost.Attrib.ToHitDebuff.Scale}%.  NOTE: This enhancement can only be slotted into to hit debuff powers that require a to hit check."},"isUnique":false,"fullName":"Boosts.Attuned_Siphon_Insight_A.Attuned_Siphon_Insight_A","setName":"Siphon_Insight","displayName":"To Hit Debuff","effects":[{"mag":0.255,"effectId":"ToHitDebuff"}]},{"type":"set","description":{"short":"+ACC, +To Hit Debuff","long":"Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and to hit debuff potential of a power by {Boost.Attrib.ToHitDebuff.Scale}%.  NOTE: This enhancement can only be slotted into to hit debuff powers that require a to hit check."},"isUnique":false,"fullName":"Boosts.Attuned_Siphon_Insight_B.Attuned_Siphon_Insight_B","setName":"Siphon_Insight","displayName":"Accuracy/To Hit Debuff","effects":[{"mag":0.265,"effectId":"Accuracy"},{"mag":0.159375,"effectId":"ToHitDebuff"}]},{"type":"set","description":{"short":"+ACC, +Rech","long":"Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and and reduces recharge time by {Boost.Attrib.Recharge.Scale}%.  NOTE: This enhancement can only be slotted into to hit debuff powers that require a to hit check."},"isUnique":false,"fullName":"Boosts.Attuned_Siphon_Insight_C.Attuned_Siphon_Insight_C","setName":"Siphon_Insight","displayName":"Accuracy/Recharge","effects":[{"mag":0.265,"effectId":"Recharge"},{"mag":0.265,"effectId":"Accuracy"}]},{"type":"set","description":{"short":"+To Hit Debuff, -End Cost, +Rech","long":"Enhances the to hit debuff potential of a power by {Boost.Attrib.ToHitDebuff.Scale}%, reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}% and reduces recharge time by {Boost.Attrib.Recharge.Scale}%.  NOTE: This enhancement can only be slotted into to hit debuff powers that require a to hit check."},"isUnique":false,"fullName":"Boosts.Attuned_Siphon_Insight_D.Attuned_Siphon_Insight_D","setName":"Siphon_Insight","displayName":"To Hit Debuff/Endurance/Recharge","effects":[{"mag":0.212,"effectId":"Recharge"},{"mag":0.1275,"effectId":"ToHitDebuff"},{"mag":0.212,"effectId":"Endurance"}]},{"type":"set","description":{"short":"+ACC, -End Cost, +Rech","long":"Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}%, reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}% and reduces recharge time by {Boost.Attrib.Recharge.Scale}%.  NOTE: This enhancement can only be slotted into to hit debuff powers that require a to hit check."},"isUnique":false,"fullName":"Boosts.Attuned_Siphon_Insight_E.Attuned_Siphon_Insight_E","setName":"Siphon_Insight","displayName":"Accuracy/Endurance/Recharge","effects":[{"mag":0.212,"effectId":"Recharge"},{"mag":0.212,"effectId":"Accuracy"},{"mag":0.212,"effectId":"Endurance"}]},{"type":"set","description":{"short":"Chance for +To Hit","long":"Gives a chance to boost the user's chance to hit.  This effect will trigger roughly 2 times per minute.  NOTE: This enhancement can only be slotted into to hit debuff powers that require a to hit check."},"isUnique":false,"fullName":"Boosts.Attuned_Siphon_Insight_F.Attuned_Siphon_Insight_F","setName":"Siphon_Insight","displayName":"Chance for +To Hit","effects":[{"procsPerMinute":2,"cancelOnMiss":true,"mag":1,"effectId":"Boost","ticks":1}],"hasGrantPowerEffect":true}],"levels":{"min":30,"max":50},"bonuses":["Increased_Move_3","Improved_Recovery_3","Accuracy_4","Increased_Lethal_Smash_Melee_Def_5","Increased_AoE_Fire_Cold_Def_5"],"setType":31,"displayName":"Siphon Insight","imageName":"SiphonInsight.png"}
+{
+  "fullName": "IOSet.Siphon_Insight",
+  "enhancements": [
+    {
+      "description": {
+        "short": "+To Hit Debuff",
+        "long": "Enhances the to hit debuff potential of a power by {Boost.Attrib.ToHitDebuff.Scale}%.  NOTE: This enhancement can only be slotted into to hit debuff powers that require a to hit check."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "ToHitDebuff",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.255
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 40,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Siphon_Insight_A.Attuned_Siphon_Insight_A"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Siphon_Insight_A.Attuned_Siphon_Insight_A",
+      "setName": "Siphon_Insight",
+      "displayName": "To Hit Debuff"
+    },
+    {
+      "description": {
+        "short": "+ACC, +To Hit Debuff",
+        "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and to hit debuff potential of a power by {Boost.Attrib.ToHitDebuff.Scale}%.  NOTE: This enhancement can only be slotted into to hit debuff powers that require a to hit check."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Accuracy",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 1,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Siphon_Insight_B.Attuned_Siphon_Insight_B"
+            }
+          ]
+        },
+        {
+          "effectType": "ToHitDebuff",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.159375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 40,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Siphon_Insight_B.Attuned_Siphon_Insight_B"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Siphon_Insight_B.Attuned_Siphon_Insight_B",
+      "setName": "Siphon_Insight",
+      "displayName": "Accuracy/To Hit Debuff"
+    },
+    {
+      "description": {
+        "short": "+ACC, +Rech",
+        "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and and reduces recharge time by {Boost.Attrib.Recharge.Scale}%.  NOTE: This enhancement can only be slotted into to hit debuff powers that require a to hit check."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Recharge",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 25,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Siphon_Insight_C.Attuned_Siphon_Insight_C"
+            }
+          ]
+        },
+        {
+          "effectType": "Accuracy",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 1,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Siphon_Insight_C.Attuned_Siphon_Insight_C"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Siphon_Insight_C.Attuned_Siphon_Insight_C",
+      "setName": "Siphon_Insight",
+      "displayName": "Accuracy/Recharge"
+    },
+    {
+      "description": {
+        "short": "+To Hit Debuff, -End Cost, +Rech",
+        "long": "Enhances the to hit debuff potential of a power by {Boost.Attrib.ToHitDebuff.Scale}%, reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}% and reduces recharge time by {Boost.Attrib.Recharge.Scale}%.  NOTE: This enhancement can only be slotted into to hit debuff powers that require a to hit check."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Recharge",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 25,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Siphon_Insight_D.Attuned_Siphon_Insight_D"
+            }
+          ]
+        },
+        {
+          "effectType": "ToHitDebuff",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.1275
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 40,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Siphon_Insight_D.Attuned_Siphon_Insight_D"
+            }
+          ]
+        },
+        {
+          "effectType": "Endurance",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 8,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Siphon_Insight_D.Attuned_Siphon_Insight_D"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Siphon_Insight_D.Attuned_Siphon_Insight_D",
+      "setName": "Siphon_Insight",
+      "displayName": "To Hit Debuff/Endurance/Recharge"
+    },
+    {
+      "description": {
+        "short": "+ACC, -End Cost, +Rech",
+        "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}%, reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}% and reduces recharge time by {Boost.Attrib.Recharge.Scale}%.  NOTE: This enhancement can only be slotted into to hit debuff powers that require a to hit check."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Recharge",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 25,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Siphon_Insight_E.Attuned_Siphon_Insight_E"
+            }
+          ]
+        },
+        {
+          "effectType": "Accuracy",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 1,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Siphon_Insight_E.Attuned_Siphon_Insight_E"
+            }
+          ]
+        },
+        {
+          "effectType": "Endurance",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 8,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Siphon_Insight_E.Attuned_Siphon_Insight_E"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Siphon_Insight_E.Attuned_Siphon_Insight_E",
+      "setName": "Siphon_Insight",
+      "displayName": "Accuracy/Endurance/Recharge"
+    },
+    {
+      "description": {
+        "short": "Chance for +To Hit",
+        "long": "Gives a chance to boost the user's chance to hit.  This effect will trigger roughly 2 times per minute.  NOTE: This enhancement can only be slotted into to hit debuff powers that require a to hit check."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Boost",
+          "values": [
+            {
+              "mag": {
+                "pve": 1
+              },
+              "procsPerMinute": 2,
+              "cancelOnMiss": true,
+              "duration": 10,
+              "effectType": "GrantPower",
+              "ticks": 1,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Siphon_Insight_F.Attuned_Siphon_Insight_F"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Siphon_Insight_F.Attuned_Siphon_Insight_F",
+      "setName": "Siphon_Insight",
+      "displayName": "Chance for +To Hit",
+      "hasGrantPowerEffect": true
+    }
+  ],
+  "levels": {
+    "min": 30,
+    "max": 50
+  },
+  "bonuses": [
+    {
+      "description": {
+        "short": "+Move",
+        "long": "Improves all of your Movement speeds by 6%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 2,
+      "powerSetIndex": 328,
+      "fullName": "Set_Bonus.Set_Bonus.Increased_Move_3",
+      "setName": "Set_Bonus",
+      "displayName": "Moderate Improved Movement Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.06
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "SpeedJumping",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Move_3"
+            },
+            {
+              "mag": {
+                "pve": 0.06
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "JumpHeight",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Move_3"
+            },
+            {
+              "mag": {
+                "pve": 0.06
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "SpeedFlying",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Move_3"
+            },
+            {
+              "mag": {
+                "pve": 0.06
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "SpeedRunning",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Move_3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+Recovery",
+        "long": "Improves your Recovery by 2%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 3,
+      "powerSetIndex": 146,
+      "fullName": "Set_Bonus.Set_Bonus.Improved_Recovery_3",
+      "setName": "Set_Bonus",
+      "displayName": "Moderate Improved Recovery Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.02
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Recovery",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Improved_Recovery_3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+Accuracy",
+        "long": "Improves the accuracy of all of your powers by 9%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 4,
+      "powerSetIndex": 4,
+      "fullName": "Set_Bonus.Set_Bonus.Accuracy_4",
+      "setName": "Set_Bonus",
+      "displayName": "Large Accuracy Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.09
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 1,
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Accuracy_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+DEF",
+        "long": "Increases lethal and smashing defense by 3.75% and melee defense by 1.875%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 5,
+      "powerSetIndex": 309,
+      "fullName": "Set_Bonus.Set_Bonus.Increased_Lethal_Smash_Melee_Def_5",
+      "setName": "Set_Bonus",
+      "displayName": "Huge Increased Lethal/Smashing/Melee Def Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Lethal_Smash_Melee_Def_5",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Lethal_Smash_Melee_Def_5",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 0.01875
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Lethal_Smash_Melee_Def_5",
+              "damageType": "Melee"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+DEF",
+        "long": "Increases area effect defense by 3.75% and fire and cold defense by 1.875%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 6,
+      "powerSetIndex": 197,
+      "fullName": "Set_Bonus.Set_Bonus.Increased_AoE_Fire_Cold_Def_5",
+      "setName": "Set_Bonus",
+      "displayName": "Huge Increased AoE/Fire/Cold Def Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_AoE_Fire_Cold_Def_5",
+              "damageType": "AoE"
+            },
+            {
+              "mag": {
+                "pve": 0.01875
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_AoE_Fire_Cold_Def_5",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.01875
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_AoE_Fire_Cold_Def_5",
+              "damageType": "Cold"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "setType": 31,
+  "displayName": "Siphon Insight",
+  "imageName": "SiphonInsight.png"
+}

@@ -1,1 +1,668 @@
-{"fullName":"IOSet.Entomb","enhancements":[{"type":"attuned","description":{"short":"Enhances Accuracy and Hold Duration","long":"UNIQUE -- No more than 1 enhancement of this type may be slotted by a character.  Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and hold duration of a power by {Boost.Attrib.Hold.Scale}%."},"isUnique":true,"fullName":"Boosts.Attuned_Entomb_A.Attuned_Entomb_A","setName":"Entomb","displayName":"Accuracy/Hold Duration","effects":[{"mag":{"regular":0.265,"superior":0.3312712},"effectId":"Hold","mezType":2},{"mag":{"regular":0.265,"superior":0.3312712},"effectId":"Accuracy"}]},{"type":"attuned","description":{"short":"Enhances Hold Duration and Recharge","long":"UNIQUE -- No more than 1 enhancement of this type may be slotted by a character.  Enhances the hold duration of a power by {Boost.Attrib.Hold.Scale}% and Reduces recharge time of a power by {Boost.Attrib.Recharge.Scale}%."},"isUnique":true,"fullName":"Boosts.Attuned_Entomb_B.Attuned_Entomb_B","setName":"Entomb","displayName":"Hold Duration/Recharge","effects":[{"mag":{"regular":0.265,"superior":0.3312712},"effectId":"Hold","mezType":2},{"mag":{"regular":0.265,"superior":0.3312712},"effectId":"Recharge"}]},{"type":"attuned","description":{"short":"Enhances Recharge and Reduces Endurance Cost","long":"UNIQUE -- No more than 1 enhancement of this type may be slotted by a character.  Reduces recharge time of a power by {Boost.Attrib.Recharge.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."},"isUnique":true,"fullName":"Boosts.Attuned_Entomb_C.Attuned_Entomb_C","setName":"Entomb","displayName":"Endurance/Recharge","effects":[{"mag":{"regular":0.265,"superior":0.3312712},"effectId":"Endurance"},{"mag":{"regular":0.265,"superior":0.3312712},"effectId":"Recharge"}]},{"type":"attuned","description":{"short":"Enhances Accuracy and Hold Duration and Reduces Endurance Cost","long":"UNIQUE -- No more than 1 enhancement of this type may be slotted by a character.  Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and hold duration of a power by {Boost.Attrib.Hold.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."},"isUnique":true,"fullName":"Boosts.Attuned_Entomb_D.Attuned_Entomb_D","setName":"Entomb","displayName":"Accuracy/Hold Duration/Endurance","effects":[{"mag":{"regular":0.212,"superior":0.2612688},"effectId":"Hold","mezType":2},{"mag":{"regular":0.212,"superior":0.2612688},"effectId":"Endurance"},{"mag":{"regular":0.212,"superior":0.2612688},"effectId":"Accuracy"}]},{"type":"attuned","description":{"short":"Enhances Accuracy, Hold Duration, Recharge and Reduces Endurance Cost","long":"UNIQUE -- No more than 1 enhancement of this type may be slotted by a character.  Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}%, reduces recharge time of a power by {Boost.Attrib.Recharge.Scale}% and hold duration of a power by {Boost.Attrib.Hold.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."},"isUnique":true,"fullName":"Boosts.Attuned_Entomb_E.Attuned_Entomb_E","setName":"Entomb","displayName":"Accuracy/Hold Duration/Endurance/Recharge","effects":[{"mag":{"regular":0.1855,"superior":0.231885582},"effectId":"Accuracy"},{"mag":{"regular":0.1855,"superior":0.231885582},"effectId":"Hold","mezType":2},{"mag":{"regular":0.1855,"superior":0.231885582},"effectId":"Endurance"},{"mag":{"regular":0.1855,"superior":0.231885582},"effectId":"Recharge"}]},{"type":"attuned","description":{"short":"Enhances Recharge and chance for +Absorb","long":"UNIQUE -- Reduces recharge time of a power by {Boost.Attrib.Recharge.Scale}% and has a chance to apply a minor Damage Absorb effect on the caster.  This enhancement's chance to trigger is equal to approximately 2 times per minute."},"isUnique":true,"fullName":"Boosts.Attuned_Entomb_F.Attuned_Entomb_F","setName":"Entomb","displayName":"Rech/Chance for +Absorb","effects":[{"procsPerMinute":2,"mag":{"regular":0.1855,"superior":0.231885582},"effectId":"Recharge"},{"procsPerMinute":2,"cancelOnMiss":true,"mag":{"regular":1,"superior":1},"effectId":"Boost","ticks":1}],"hasGrantPowerEffect":true}],"levels":{"min":10,"max":50},"bonuses":["Fire_Cold_Mez_Res_2","Slow_Resist_3","Improved_Recovery_3","Increased_Energy_Neg_Ranged_Def_2","Increased_Fire_Cold_AoE_Def_5"],"setType":10,"displayName":"Entomb","imageName":"SEO_Entomb.png","isAttuned":true}
+{
+  "fullName": "IOSet.Entomb",
+  "enhancements": [
+    {
+      "description": {
+        "short": "Enhances Accuracy and Hold Duration",
+        "long": "UNIQUE -- No more than 1 enhancement of this type may be slotted by a character.  Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and hold duration of a power by {Boost.Attrib.Hold.Scale}%."
+      },
+      "isUnique": true,
+      "type": "attuned",
+      "effects": [
+        {
+          "effectType": "Hold",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 19,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Entomb_A.Attuned_Entomb_A",
+              "mezType": "Hold",
+              "magSuperior": {
+                "pve": 0.3312712
+              }
+            }
+          ]
+        },
+        {
+          "effectType": "Accuracy",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 1,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Entomb_A.Attuned_Entomb_A",
+              "magSuperior": {
+                "pve": 0.3312712
+              }
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Entomb_A.Attuned_Entomb_A",
+      "setName": "Entomb",
+      "displayName": "Accuracy/Hold Duration"
+    },
+    {
+      "description": {
+        "short": "Enhances Hold Duration and Recharge",
+        "long": "UNIQUE -- No more than 1 enhancement of this type may be slotted by a character.  Enhances the hold duration of a power by {Boost.Attrib.Hold.Scale}% and Reduces recharge time of a power by {Boost.Attrib.Recharge.Scale}%."
+      },
+      "isUnique": true,
+      "type": "attuned",
+      "effects": [
+        {
+          "effectType": "Hold",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 19,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Entomb_B.Attuned_Entomb_B",
+              "mezType": "Hold",
+              "magSuperior": {
+                "pve": 0.3312712
+              }
+            }
+          ]
+        },
+        {
+          "effectType": "Recharge",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 25,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Entomb_B.Attuned_Entomb_B",
+              "magSuperior": {
+                "pve": 0.3312712
+              }
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Entomb_B.Attuned_Entomb_B",
+      "setName": "Entomb",
+      "displayName": "Hold Duration/Recharge"
+    },
+    {
+      "description": {
+        "short": "Enhances Recharge and Reduces Endurance Cost",
+        "long": "UNIQUE -- No more than 1 enhancement of this type may be slotted by a character.  Reduces recharge time of a power by {Boost.Attrib.Recharge.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."
+      },
+      "isUnique": true,
+      "type": "attuned",
+      "effects": [
+        {
+          "effectType": "Endurance",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 8,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Entomb_C.Attuned_Entomb_C",
+              "magSuperior": {
+                "pve": 0.3312712
+              }
+            }
+          ]
+        },
+        {
+          "effectType": "Recharge",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 25,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Entomb_C.Attuned_Entomb_C",
+              "magSuperior": {
+                "pve": 0.3312712
+              }
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Entomb_C.Attuned_Entomb_C",
+      "setName": "Entomb",
+      "displayName": "Endurance/Recharge"
+    },
+    {
+      "description": {
+        "short": "Enhances Accuracy and Hold Duration and Reduces Endurance Cost",
+        "long": "UNIQUE -- No more than 1 enhancement of this type may be slotted by a character.  Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and hold duration of a power by {Boost.Attrib.Hold.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."
+      },
+      "isUnique": true,
+      "type": "attuned",
+      "effects": [
+        {
+          "effectType": "Hold",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 19,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Entomb_D.Attuned_Entomb_D",
+              "mezType": "Hold",
+              "magSuperior": {
+                "pve": 0.2612688
+              }
+            }
+          ]
+        },
+        {
+          "effectType": "Endurance",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 8,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Entomb_D.Attuned_Entomb_D",
+              "magSuperior": {
+                "pve": 0.2612688
+              }
+            }
+          ]
+        },
+        {
+          "effectType": "Accuracy",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 1,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Entomb_D.Attuned_Entomb_D",
+              "magSuperior": {
+                "pve": 0.2612688
+              }
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Entomb_D.Attuned_Entomb_D",
+      "setName": "Entomb",
+      "displayName": "Accuracy/Hold Duration/Endurance"
+    },
+    {
+      "description": {
+        "short": "Enhances Accuracy, Hold Duration, Recharge and Reduces Endurance Cost",
+        "long": "UNIQUE -- No more than 1 enhancement of this type may be slotted by a character.  Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}%, reduces recharge time of a power by {Boost.Attrib.Recharge.Scale}% and hold duration of a power by {Boost.Attrib.Hold.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."
+      },
+      "isUnique": true,
+      "type": "attuned",
+      "effects": [
+        {
+          "effectType": "Accuracy",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.1855
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 1,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Entomb_E.Attuned_Entomb_E",
+              "magSuperior": {
+                "pve": 0.231885582
+              }
+            }
+          ]
+        },
+        {
+          "effectType": "Hold",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.1855
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 19,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Entomb_E.Attuned_Entomb_E",
+              "mezType": "Hold",
+              "magSuperior": {
+                "pve": 0.231885582
+              }
+            }
+          ]
+        },
+        {
+          "effectType": "Endurance",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.1855
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 8,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Entomb_E.Attuned_Entomb_E",
+              "magSuperior": {
+                "pve": 0.231885582
+              }
+            }
+          ]
+        },
+        {
+          "effectType": "Recharge",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.1855
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 25,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Entomb_E.Attuned_Entomb_E",
+              "magSuperior": {
+                "pve": 0.231885582
+              }
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Entomb_E.Attuned_Entomb_E",
+      "setName": "Entomb",
+      "displayName": "Accuracy/Hold Duration/Endurance/Recharge"
+    },
+    {
+      "description": {
+        "short": "Enhances Recharge and chance for +Absorb",
+        "long": "UNIQUE -- Reduces recharge time of a power by {Boost.Attrib.Recharge.Scale}% and has a chance to apply a minor Damage Absorb effect on the caster.  This enhancement's chance to trigger is equal to approximately 2 times per minute."
+      },
+      "isUnique": true,
+      "type": "attuned",
+      "effects": [
+        {
+          "effectType": "Recharge",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.1855
+              },
+              "procsPerMinute": 2,
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 25,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Entomb_F.Attuned_Entomb_F",
+              "magSuperior": {
+                "pve": 0.231885582
+              }
+            }
+          ]
+        },
+        {
+          "effectType": "Boost",
+          "values": [
+            {
+              "mag": {
+                "pve": 1
+              },
+              "procsPerMinute": 2,
+              "cancelOnMiss": true,
+              "duration": 0.5,
+              "effectType": "GrantPower",
+              "ticks": 1,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Entomb_F.Attuned_Entomb_F",
+              "magSuperior": {
+                "pve": 1
+              }
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Entomb_F.Attuned_Entomb_F",
+      "setName": "Entomb",
+      "displayName": "Rech/Chance for +Absorb",
+      "hasGrantPowerEffect": true
+    }
+  ],
+  "levels": {
+    "min": 10,
+    "max": 50
+  },
+  "bonuses": [
+    {
+      "description": {
+        "short": "+Res (Fire, Cold, Mez)",
+        "long": "Increases Fire and Cold resistance by 2.25% and Mez Resistance by 3.75%"
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 2,
+      "powerSetIndex": 81,
+      "fullName": "Set_Bonus.Set_Bonus.Fire_Cold_Mez_Res_2",
+      "setName": "Set_Bonus",
+      "displayName": "Small Fire, Cold and Mez Resistance",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.0225
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Fire_Cold_Mez_Res_2",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.0225
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Fire_Cold_Mez_Res_2",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Fire_Cold_Mez_Res_2",
+              "mezType": "Immobilization"
+            },
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Fire_Cold_Mez_Res_2",
+              "mezType": "Hold"
+            },
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Fire_Cold_Mez_Res_2",
+              "mezType": "Stun"
+            },
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Fire_Cold_Mez_Res_2",
+              "mezType": "Sleep"
+            },
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Fire_Cold_Mez_Res_2",
+              "mezType": "Terrorize"
+            },
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Fire_Cold_Mez_Res_2",
+              "mezType": "Confuse"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+RES (Slow)",
+        "long": "Grants the user a 10% resistance to slow effects."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 3,
+      "powerSetIndex": 484,
+      "fullName": "Set_Bonus.Set_Bonus.Slow_Resist_3",
+      "setName": "Set_Bonus",
+      "displayName": "Large Slow Resist",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "buffMode": 2,
+              "mag": {
+                "pve": 0.1
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "ResEffect",
+              "eTModifies": 32,
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Slow_Resist_3"
+            }
+          ]
+        }
+      ],
+      "buffMode": 2
+    },
+    {
+      "description": {
+        "short": "+Recovery",
+        "long": "Improves your Recovery by 2%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 4,
+      "powerSetIndex": 146,
+      "fullName": "Set_Bonus.Set_Bonus.Improved_Recovery_3",
+      "setName": "Set_Bonus",
+      "displayName": "Moderate Improved Recovery Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.02
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Recovery",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Improved_Recovery_3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+DEF",
+        "long": "Increases energy and negative energy defense by 1.88% and ranged defense by 0.94%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 5,
+      "powerSetIndex": 236,
+      "fullName": "Set_Bonus.Set_Bonus.Increased_Energy_Neg_Ranged_Def_2",
+      "setName": "Set_Bonus",
+      "displayName": "Small Increased Energy/Negative Energy/Ranged Def Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.01875
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Energy_Neg_Ranged_Def_2",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.01875
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Energy_Neg_Ranged_Def_2",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.00938
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Energy_Neg_Ranged_Def_2",
+              "damageType": "Ranged"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+DEF",
+        "long": "Increases fire and cold defense by 3.75% and area effect defense by 1.875%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 6,
+      "powerSetIndex": 253,
+      "fullName": "Set_Bonus.Set_Bonus.Increased_Fire_Cold_AoE_Def_5",
+      "setName": "Set_Bonus",
+      "displayName": "Huge Increased Fire/Cold/AoE Def Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Fire_Cold_AoE_Def_5",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Fire_Cold_AoE_Def_5",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 0.01875
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Fire_Cold_AoE_Def_5",
+              "damageType": "AoE"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "setType": 10,
+  "displayName": "Entomb",
+  "imageName": "EO_Entomb.png",
+  "isAttuned": true,
+  "imageNameSuperior": "SEO_Entomb.png"
+}

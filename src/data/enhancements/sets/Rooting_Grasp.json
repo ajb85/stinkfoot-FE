@@ -1,1 +1,463 @@
-{"fullName":"IOSet.Rooting_Grasp","enhancements":[{"type":"set","description":{"short":"+ACC, +Rech","long":"Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Rooting_Grasp_A.Attuned_Rooting_Grasp_A","setName":"Rooting_Grasp","displayName":"Accuracy/Recharge","effects":[{"mag":0.265,"effectId":"Recharge"},{"mag":0.265,"effectId":"Accuracy"}]},{"type":"set","description":{"short":"+End, +Immobilize","long":"Enhances the Immobilize duration of a power by {Boost.Attrib.Immobilize.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Rooting_Grasp_B.Attuned_Rooting_Grasp_B","setName":"Rooting_Grasp","displayName":"Endurance/Immobilize","effects":[{"mag":0.265,"effectId":"Endurance"},{"mag":0.265,"effectId":"Immobilize","mezType":3}]},{"type":"set","description":{"short":"+ACC, -End Cost","long":"Enhances the accuracy by {Boost.Attrib.Accuracy.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Rooting_Grasp_C.Attuned_Rooting_Grasp_C","setName":"Rooting_Grasp","displayName":"Accuracy/Endurance","effects":[{"mag":0.265,"effectId":"Accuracy"},{"mag":0.265,"effectId":"Endurance"}]},{"type":"set","description":{"short":"+Range, +Immobilize","long":"Enhances the range of a power by {Boost.Attrib.Range.Scale}% and immobilize duration by {Boost.Attrib.immobilize.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Rooting_Grasp_D.Attuned_Rooting_Grasp_D","setName":"Rooting_Grasp","displayName":"Immobilize/Range","effects":[{"mag":0.265,"effectId":"Immobilize","mezType":3},{"mag":0.159375,"effectId":"Range"}]},{"type":"set","description":{"short":"+ACC, +Rech, +Immob","long":"Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}%, immobilize duration by {Boost.Attrib.Immobilize.Scale}% and reduces the attack rate by {Boost.Attrib.Recharge.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Rooting_Grasp_E.Attuned_Rooting_Grasp_E","setName":"Rooting_Grasp","displayName":"Accuracy/Immob/Recharge","effects":[{"mag":0.212,"effectId":"Immobilize","mezType":3},{"mag":0.212,"effectId":"Accuracy"},{"mag":0.212,"effectId":"Recharge"}]}],"levels":{"min":10,"max":30},"bonuses":["Immob_Dur_1","Increased_Health_1","Increased_Damage_1","Improved_Recharge_Time_1"],"setType":12,"displayName":"Rooting Grasp","imageName":"sRoothingGrasp.png"}
+{
+  "fullName": "IOSet.Rooting_Grasp",
+  "enhancements": [
+    {
+      "description": {
+        "short": "+ACC, +Rech",
+        "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Recharge",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 25,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Rooting_Grasp_A.Attuned_Rooting_Grasp_A"
+            }
+          ]
+        },
+        {
+          "effectType": "Accuracy",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 1,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Rooting_Grasp_A.Attuned_Rooting_Grasp_A"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Rooting_Grasp_A.Attuned_Rooting_Grasp_A",
+      "setName": "Rooting_Grasp",
+      "displayName": "Accuracy/Recharge"
+    },
+    {
+      "description": {
+        "short": "+End, +Immobilize",
+        "long": "Enhances the Immobilize duration of a power by {Boost.Attrib.Immobilize.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Endurance",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 8,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Rooting_Grasp_B.Attuned_Rooting_Grasp_B"
+            }
+          ]
+        },
+        {
+          "effectType": "Immobilize",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 19,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Rooting_Grasp_B.Attuned_Rooting_Grasp_B",
+              "mezType": "Immobilization"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Rooting_Grasp_B.Attuned_Rooting_Grasp_B",
+      "setName": "Rooting_Grasp",
+      "displayName": "Endurance/Immobilize"
+    },
+    {
+      "description": {
+        "short": "+ACC, -End Cost",
+        "long": "Enhances the accuracy by {Boost.Attrib.Accuracy.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Accuracy",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 1,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Rooting_Grasp_C.Attuned_Rooting_Grasp_C"
+            }
+          ]
+        },
+        {
+          "effectType": "Endurance",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 8,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Rooting_Grasp_C.Attuned_Rooting_Grasp_C"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Rooting_Grasp_C.Attuned_Rooting_Grasp_C",
+      "setName": "Rooting_Grasp",
+      "displayName": "Accuracy/Endurance"
+    },
+    {
+      "description": {
+        "short": "+Range, +Immobilize",
+        "long": "Enhances the range of a power by {Boost.Attrib.Range.Scale}% and immobilize duration by {Boost.Attrib.immobilize.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Immobilize",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 19,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Rooting_Grasp_D.Attuned_Rooting_Grasp_D",
+              "mezType": "Immobilization"
+            }
+          ]
+        },
+        {
+          "effectType": "Range",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.159375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 24,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Rooting_Grasp_D.Attuned_Rooting_Grasp_D"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Rooting_Grasp_D.Attuned_Rooting_Grasp_D",
+      "setName": "Rooting_Grasp",
+      "displayName": "Immobilize/Range"
+    },
+    {
+      "description": {
+        "short": "+ACC, +Rech, +Immob",
+        "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}%, immobilize duration by {Boost.Attrib.Immobilize.Scale}% and reduces the attack rate by {Boost.Attrib.Recharge.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Immobilize",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 19,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Rooting_Grasp_E.Attuned_Rooting_Grasp_E",
+              "mezType": "Immobilization"
+            }
+          ]
+        },
+        {
+          "effectType": "Accuracy",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 1,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Rooting_Grasp_E.Attuned_Rooting_Grasp_E"
+            }
+          ]
+        },
+        {
+          "effectType": "Recharge",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 25,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Rooting_Grasp_E.Attuned_Rooting_Grasp_E"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Rooting_Grasp_E.Attuned_Rooting_Grasp_E",
+      "setName": "Rooting_Grasp",
+      "displayName": "Accuracy/Immob/Recharge"
+    }
+  ],
+  "levels": {
+    "min": 10,
+    "max": 30
+  },
+  "bonuses": [
+    {
+      "description": {
+        "short": "+Duration Immob",
+        "long": "Improves the duration of your Immobilize effects by 2%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 2,
+      "powerSetIndex": 107,
+      "fullName": "Set_Bonus.Set_Bonus.Immob_Dur_1",
+      "setName": "Set_Bonus",
+      "displayName": "Tiny Immobilize Duration Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.02
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 19,
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Immob_Dur_1",
+              "mezType": "Immobilization"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+Max HP",
+        "long": "Increases maximum health by 0.75%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 3,
+      "powerSetIndex": 284,
+      "fullName": "Set_Bonus.Set_Bonus.Increased_Health_1",
+      "setName": "Set_Bonus",
+      "displayName": "Tiny Increased Health Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "HealSelf",
+          "values": [
+            {
+              "mag": {
+                "pve": 9.035693
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "HitPoints",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Health_1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+DMG",
+        "long": "Increases damage by 1%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 4,
+      "powerSetIndex": 214,
+      "fullName": "Set_Bonus.Set_Bonus.Increased_Damage_1",
+      "setName": "Set_Bonus",
+      "displayName": "Tiny Increased Damage Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.01
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "DamageBuff",
+              "toWho": "All",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Damage_1",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 0.01
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "DamageBuff",
+              "toWho": "All",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Damage_1",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.01
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "DamageBuff",
+              "toWho": "All",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Damage_1",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.01
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "DamageBuff",
+              "toWho": "All",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Damage_1",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 0.01
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "DamageBuff",
+              "toWho": "All",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Damage_1",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.01
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "DamageBuff",
+              "toWho": "All",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Damage_1",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.01
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "DamageBuff",
+              "toWho": "All",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Damage_1",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pve": 0.01
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "DamageBuff",
+              "toWho": "All",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Damage_1",
+              "damageType": "Psionic"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+Recharge Time",
+        "long": "Improves the Recharge Time of all of your powers by 2.5%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 5,
+      "powerSetIndex": 137,
+      "fullName": "Set_Bonus.Set_Bonus.Improved_Recharge_Time_1",
+      "setName": "Set_Bonus",
+      "displayName": "Tiny Improved Recharge Time Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.025
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 25,
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Improved_Recharge_Time_1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "setType": 12,
+  "displayName": "Rooting Grasp",
+  "imageName": "sRoothingGrasp.png"
+}

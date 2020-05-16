@@ -1,1 +1,400 @@
-{"fullName":"IOSet.Triage","enhancements":[{"type":"set","description":{"short":"+Heal, -End Cost, +Absorb","long":"Enhances the healing potential and damage absorption of a power by {Boost.Attrib.Heal.Scale}% and reduces endurance cost by {Boost.Attrib.Endurance.Scale}%"},"isUnique":false,"fullName":"Boosts.Attuned_Triage_A.Attuned_Triage_A","setName":"Triage","displayName":"Healing/Absorb/Endurance","effects":[{"mag":0.265,"effectId":"Heal"},{"mag":0.265,"effectId":"Boosts_33"},{"mag":0.265,"effectId":"Boosts_33"},{"mag":0.265,"effectId":"Endurance"},{"mag":0.265,"effectId":"Absorb"}]},{"type":"set","description":{"short":"-End Cost, +Rech","long":"Reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}% and recharge time by {Boost.Attrib.Recharge.Scale}%"},"isUnique":false,"fullName":"Boosts.Attuned_Triage_B.Attuned_Triage_B","setName":"Triage","displayName":"Endurance/Recharge","effects":[{"mag":0.265,"effectId":"Endurance"},{"mag":0.265,"effectId":"Recharge"}]},{"type":"set","description":{"short":"+Heal, +Rech, +Absorb","long":"Enhances the healing potential and damage absorption of a power by {Boost.Attrib.Heal.Scale}% and reduces recharge time by  {Boost.Attrib.Recharge.Scale}%"},"isUnique":false,"fullName":"Boosts.Attuned_Triage_C.Attuned_Triage_C","setName":"Triage","displayName":"Healing/Absorb/Recharge","effects":[{"mag":0.265,"effectId":"Heal"},{"mag":0.265,"effectId":"Boosts_33"},{"mag":0.265,"effectId":"Boosts_33"},{"mag":0.265,"effectId":"Recharge"},{"mag":0.265,"effectId":"Absorb"}]},{"type":"set","description":{"short":"+Heal, -End Cost, +Rech, +Absorb","long":"Enhances the healing potential and damage absorption of a power by {Boost.Attrib.Heal.Scale}%, reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}% and recharge time by  {Boost.Attrib.Recharge.Scale}%"},"isUnique":false,"fullName":"Boosts.Attuned_Triage_D.Attuned_Triage_D","setName":"Triage","displayName":"Healing/Absorb/Endurance/Recharge","effects":[{"mag":0.212,"effectId":"Heal"},{"mag":0.212,"effectId":"Boosts_33"},{"mag":0.212,"effectId":"Boosts_33"},{"mag":0.212,"effectId":"Endurance"},{"mag":0.212,"effectId":"Recharge"},{"mag":0.212,"effectId":"Absorb"}]}],"levels":{"min":10,"max":30},"bonuses":["Improved_Regeneration_1","Increased_Health_1","Improved_Heal_1"],"setType":9,"displayName":"Triage","imageName":"sTriage.png"}
+{
+  "fullName": "IOSet.Triage",
+  "enhancements": [
+    {
+      "description": {
+        "short": "+Heal, -End Cost, +Absorb",
+        "long": "Enhances the healing potential and damage absorption of a power by {Boost.Attrib.Heal.Scale}% and reduces endurance cost by {Boost.Attrib.Endurance.Scale}%"
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Heal",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 13,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Triage_A.Attuned_Triage_A"
+            }
+          ]
+        },
+        {
+          "effectType": "Boosts_33",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 27,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Triage_A.Attuned_Triage_A"
+            }
+          ]
+        },
+        {
+          "effectType": "Endurance",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 8,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Triage_A.Attuned_Triage_A"
+            }
+          ]
+        },
+        {
+          "effectType": "Absorb",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 66,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Triage_A.Attuned_Triage_A"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Triage_A.Attuned_Triage_A",
+      "setName": "Triage",
+      "displayName": "Healing/Absorb/Endurance"
+    },
+    {
+      "description": {
+        "short": "-End Cost, +Rech",
+        "long": "Reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}% and recharge time by {Boost.Attrib.Recharge.Scale}%"
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Endurance",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 8,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Triage_B.Attuned_Triage_B"
+            }
+          ]
+        },
+        {
+          "effectType": "Recharge",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 25,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Triage_B.Attuned_Triage_B"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Triage_B.Attuned_Triage_B",
+      "setName": "Triage",
+      "displayName": "Endurance/Recharge"
+    },
+    {
+      "description": {
+        "short": "+Heal, +Rech, +Absorb",
+        "long": "Enhances the healing potential and damage absorption of a power by {Boost.Attrib.Heal.Scale}% and reduces recharge time by  {Boost.Attrib.Recharge.Scale}%"
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Heal",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 13,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Triage_C.Attuned_Triage_C"
+            }
+          ]
+        },
+        {
+          "effectType": "Boosts_33",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 27,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Triage_C.Attuned_Triage_C"
+            }
+          ]
+        },
+        {
+          "effectType": "Recharge",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 25,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Triage_C.Attuned_Triage_C"
+            }
+          ]
+        },
+        {
+          "effectType": "Absorb",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 66,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Triage_C.Attuned_Triage_C"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Triage_C.Attuned_Triage_C",
+      "setName": "Triage",
+      "displayName": "Healing/Absorb/Recharge"
+    },
+    {
+      "description": {
+        "short": "+Heal, -End Cost, +Rech, +Absorb",
+        "long": "Enhances the healing potential and damage absorption of a power by {Boost.Attrib.Heal.Scale}%, reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}% and recharge time by  {Boost.Attrib.Recharge.Scale}%"
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Heal",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 13,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Triage_D.Attuned_Triage_D"
+            }
+          ]
+        },
+        {
+          "effectType": "Boosts_33",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 27,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Triage_D.Attuned_Triage_D"
+            }
+          ]
+        },
+        {
+          "effectType": "Endurance",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 8,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Triage_D.Attuned_Triage_D"
+            }
+          ]
+        },
+        {
+          "effectType": "Recharge",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 25,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Triage_D.Attuned_Triage_D"
+            }
+          ]
+        },
+        {
+          "effectType": "Absorb",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 66,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Triage_D.Attuned_Triage_D"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Triage_D.Attuned_Triage_D",
+      "setName": "Triage",
+      "displayName": "Healing/Absorb/Endurance/Recharge"
+    }
+  ],
+  "levels": {
+    "min": 10,
+    "max": 30
+  },
+  "bonuses": [
+    {
+      "description": {
+        "short": "+Regeneration",
+        "long": "Improves your Regeneration by 4%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 2,
+      "powerSetIndex": 151,
+      "fullName": "Set_Bonus.Set_Bonus.Improved_Regeneration_1",
+      "setName": "Set_Bonus",
+      "displayName": "Tiny Improved Regeneration Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.04
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Regeneration",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Improved_Regeneration_1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+Max HP",
+        "long": "Increases maximum health by 0.75%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 3,
+      "powerSetIndex": 284,
+      "fullName": "Set_Bonus.Set_Bonus.Increased_Health_1",
+      "setName": "Set_Bonus",
+      "displayName": "Tiny Increased Health Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "HealSelf",
+          "values": [
+            {
+              "mag": {
+                "pve": 9.035693
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "HitPoints",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Health_1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+Heal",
+        "long": "Improves all of your healing powers by 2%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 4,
+      "powerSetIndex": 123,
+      "fullName": "Set_Bonus.Set_Bonus.Improved_Heal_1",
+      "setName": "Set_Bonus",
+      "displayName": "Tiny Improved Heal Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.02
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 13,
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Improved_Heal_1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "setType": 9,
+  "displayName": "Triage",
+  "imageName": "sTriage.png"
+}

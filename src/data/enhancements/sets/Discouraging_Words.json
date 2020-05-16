@@ -1,1 +1,312 @@
-{"fullName":"IOSet.Discouraging_Words","enhancements":[{"type":"set","description":{"short":"+To Hit Debuff","long":"Enhances the to hit debuff potential of a power by {Boost.Attrib.ToHitDebuff.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Discouraging_Words_A.Attuned_Discouraging_Words_A","setName":"Discouraging_Words","displayName":"To Hit Debuff","effects":[{"mag":0.255,"effectId":"ToHitDebuff"}]},{"type":"set","description":{"short":"+To Hit Debuff, +Rech","long":"Enhances the to hit debuff potential of a power by {Boost.Attrib.ToHitDebuff.Scale}% and reduces the recharge time by {Boost.Attrib.Recharge.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Discouraging_Words_B.Attuned_Discouraging_Words_B","setName":"Discouraging_Words","displayName":"To Hit Debuff/Recharge","effects":[{"mag":0.265,"effectId":"Recharge"},{"mag":0.159375,"effectId":"ToHitDebuff"}]},{"type":"set","description":{"short":"+To Hit Debuff, +Rech, +End","long":"Enhances the to hit debuff potential of a power by {Boost.Attrib.ToHitDebuff.Scale}%, reduces the endurance cost by {Boost.Attrib.Endurance.Scale}% and the recharge time of a power by {Boost.Attrib.Recharge.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Discouraging_Words_C.Attuned_Discouraging_Words_C","setName":"Discouraging_Words","displayName":"To Hit Debuff/Recharge/Endurance Reduction","effects":[{"mag":0.212,"effectId":"Recharge"},{"mag":0.212,"effectId":"Endurance"},{"mag":0.1275,"effectId":"ToHitDebuff"}]}],"levels":{"min":10,"max":20},"bonuses":["Toxic_Psi_Mez_Res_1","Increased_Lethal_Smash_Melee_Def_1"],"setType":26,"displayName":"Discouraging Words","imageName":"sDiscouragingWords.png"}
+{
+  "fullName": "IOSet.Discouraging_Words",
+  "enhancements": [
+    {
+      "description": {
+        "short": "+To Hit Debuff",
+        "long": "Enhances the to hit debuff potential of a power by {Boost.Attrib.ToHitDebuff.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "ToHitDebuff",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.255
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 40,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Discouraging_Words_A.Attuned_Discouraging_Words_A"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Discouraging_Words_A.Attuned_Discouraging_Words_A",
+      "setName": "Discouraging_Words",
+      "displayName": "To Hit Debuff"
+    },
+    {
+      "description": {
+        "short": "+To Hit Debuff, +Rech",
+        "long": "Enhances the to hit debuff potential of a power by {Boost.Attrib.ToHitDebuff.Scale}% and reduces the recharge time by {Boost.Attrib.Recharge.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Recharge",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 25,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Discouraging_Words_B.Attuned_Discouraging_Words_B"
+            }
+          ]
+        },
+        {
+          "effectType": "ToHitDebuff",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.159375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 40,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Discouraging_Words_B.Attuned_Discouraging_Words_B"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Discouraging_Words_B.Attuned_Discouraging_Words_B",
+      "setName": "Discouraging_Words",
+      "displayName": "To Hit Debuff/Recharge"
+    },
+    {
+      "description": {
+        "short": "+To Hit Debuff, +Rech, +End",
+        "long": "Enhances the to hit debuff potential of a power by {Boost.Attrib.ToHitDebuff.Scale}%, reduces the endurance cost by {Boost.Attrib.Endurance.Scale}% and the recharge time of a power by {Boost.Attrib.Recharge.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Recharge",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 25,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Discouraging_Words_C.Attuned_Discouraging_Words_C"
+            }
+          ]
+        },
+        {
+          "effectType": "Endurance",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 8,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Discouraging_Words_C.Attuned_Discouraging_Words_C"
+            }
+          ]
+        },
+        {
+          "effectType": "ToHitDebuff",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.1275
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 40,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Discouraging_Words_C.Attuned_Discouraging_Words_C"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Discouraging_Words_C.Attuned_Discouraging_Words_C",
+      "setName": "Discouraging_Words",
+      "displayName": "To Hit Debuff/Recharge/Endurance Reduction"
+    }
+  ],
+  "levels": {
+    "min": 10,
+    "max": 20
+  },
+  "bonuses": [
+    {
+      "description": {
+        "short": "+Res (Toxic, Psionic, Mez)",
+        "long": "Increases Toxic and Psionic resistance by 1.5% and Mez Resistance by 2.5%"
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 2,
+      "powerSetIndex": 521,
+      "fullName": "Set_Bonus.Set_Bonus.Toxic_Psi_Mez_Res_1",
+      "setName": "Set_Bonus",
+      "displayName": "Tiny Toxic, Psionic and Mez Resistance",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.015
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Toxic_Psi_Mez_Res_1",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pve": 0.015
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Toxic_Psi_Mez_Res_1",
+              "damageType": "Psionic"
+            },
+            {
+              "mag": {
+                "pve": 0.025
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Toxic_Psi_Mez_Res_1",
+              "mezType": "Immobilization"
+            },
+            {
+              "mag": {
+                "pve": 0.025
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Toxic_Psi_Mez_Res_1",
+              "mezType": "Hold"
+            },
+            {
+              "mag": {
+                "pve": 0.025
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Toxic_Psi_Mez_Res_1",
+              "mezType": "Stun"
+            },
+            {
+              "mag": {
+                "pve": 0.025
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Toxic_Psi_Mez_Res_1",
+              "mezType": "Sleep"
+            },
+            {
+              "mag": {
+                "pve": 0.025
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Toxic_Psi_Mez_Res_1",
+              "mezType": "Terrorize"
+            },
+            {
+              "mag": {
+                "pve": 0.025
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Toxic_Psi_Mez_Res_1",
+              "mezType": "Confuse"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+DEF",
+        "long": "Increases lethal and smashing defense by 1.25% and melee defense by 0.625%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 3,
+      "powerSetIndex": 305,
+      "fullName": "Set_Bonus.Set_Bonus.Increased_Lethal_Smash_Melee_Def_1",
+      "setName": "Set_Bonus",
+      "displayName": "Tiny Increased Lethal/Smashing/Melee Def Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.0125
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Lethal_Smash_Melee_Def_1",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.0125
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Lethal_Smash_Melee_Def_1",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 0.00625
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Lethal_Smash_Melee_Def_1",
+              "damageType": "Melee"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "setType": 26,
+  "displayName": "Discouraging Words",
+  "imageName": "sDiscouragingWords.png"
+}

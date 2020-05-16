@@ -1,1 +1,777 @@
-{"fullName":"Epic_Power_Mastery","archetypeOrder":"epicPool","description":"You have Mastery over Power and Energy to defeat your foes, increase your power, and to add some much needed armor and defense.","imageName":"PowerMastery.png","displayName":"Power Mastery","powers":[{"allowedEnhancements":["Endurance_Discount","Recharge"],"enhancementCount":6,"archetypeOrder":"epicPool","powerIndex":0,"castTimeReal":1.17,"toggleCost":9.75,"fullName":"Epic_Power_Mastery_Conserve_Power","displayName":"Conserve Power","requires":{"powers":{},"count":0},"accuracy":1,"accuracyMult":1,"target":1,"targetLoS":true,"endCost":9.75,"rechargeTime":600,"baseRechargeTime":600,"effectArea":1,"numAllowed":1,"description":{"short":"Self Endurance Discount","long":"You can focus for a moment to conserve your Endurance. After activating this power, you expend less Endurance on all other powers for a while. Recharge: Very Long"},"setTypes":[],"clickBuff":true,"level":35,"ignoreEnh":[],"ignore_Buff":[],"castTime":1.31999993,"slottable":true,"aoeModifier":1},{"allowedEnhancements":["ToHit_Buff","Endurance_Discount","Recharge"],"enhancementCount":6,"archetypeOrder":"epicPool","powerIndex":1,"castTimeReal":1.17,"toggleCost":13,"fullName":"Epic_Power_Mastery_Power_Build_Up","displayName":"Power Build Up","requires":{"powers":{},"count":0},"accuracy":1,"accuracyMult":1,"target":1,"targetLoS":true,"endCost":13,"rechargeTime":240,"baseRechargeTime":240,"effectArea":1,"numAllowed":1,"description":{"short":"Self +DMG, +ACC, +Special","long":"Your mastery of power and energy allows you to greatly increase the damage you deal for a few seconds, as well as slightly increasing your Accuracy  Additionally, Power Build Up greatly boosts the secondary effects of your powers. Your powers effects like Heals, Defense Buffs, Endurance Drains, Disorients, Holds, Immobilizes, Knockbacks and more, are all improved. Recharge: Long"},"setTypes":[25],"clickBuff":true,"level":35,"ignoreEnh":[],"ignore_Buff":[],"castTime":1.31999993,"slottable":true,"aoeModifier":1},{"allowedEnhancements":["Endurance_Discount","Recharge","Endurance_Modification","Res_Damage"],"enhancementCount":6,"archetypeOrder":"epicPool","powerIndex":2,"castTimeReal":3.1,"toggleCost":3.25,"fullName":"Epic_Power_Mastery_Force_of_Nature","displayName":"Force of Nature","requires":{"powers":{"Epic_Power_Mastery_Conserve_Power":true,"Epic_Power_Mastery_Power_Build_Up":true},"count":1},"accuracy":1,"accuracyMult":1,"target":1,"targetLoS":true,"endCost":3.25,"rechargeTime":1000,"baseRechargeTime":1000,"effectArea":1,"numAllowed":1,"ignoreStrength":true,"description":{"short":"Self, +Res(All DMG but Psionics)","long":"When you activate this power, you become highly resistant to all damage types except psionics. Your Endurance recovery is also increased. Force of Nature costs little Endurance to activate, but when it wears off you are left exhausted, and drained of almost all Endurance, and unable to recover Endurance for a short while. You must be level 41 and have Conserve Power or Power Build Up before selecting this power. Recharge: Very Long"},"setTypes":[8,22],"clickBuff":true,"level":41,"ignoreEnh":[],"ignore_Buff":[],"castTime":3.3,"slottable":true,"aoeModifier":1},{"allowedEnhancements":["Endurance_Discount","Recharge","Res_Damage"],"enhancementCount":6,"archetypeOrder":"epicPool","powerIndex":3,"castTimeReal":0.67,"toggleCost":0.325,"fullName":"Epic_Power_Mastery_Temp_Invulnerability","displayName":"Temp Invulnerability","requires":{"powers":{"Epic_Power_Mastery_Conserve_Power":true,"Epic_Power_Mastery_Power_Build_Up":true},"count":1},"accuracy":1,"accuracyMult":1,"target":1,"targetLoS":true,"endCost":0.1625,"rechargeTime":2,"baseRechargeTime":2,"activatePeriod":0.5,"effectArea":1,"numAllowed":1,"ignoreStrength":true,"description":{"short":"Toggle: Self +Res(Smash, Lethal)","long":"When you toggle on this power, you become highly resistant to Smashing and Lethal damage. You must be level 41 and have Conserve Power or Power Build Up before selecting this power. Recharge: Fast"},"setTypes":[8],"level":41,"ignoreEnh":[],"ignore_Buff":[],"castTime":0.924,"slottable":true,"aoeModifier":1},{"allowedEnhancements":["Accuracy","Damage","Endurance_Discount","Recharge","Stun"],"enhancementCount":6,"archetypeOrder":"epicPool","powerIndex":4,"castTimeReal":3.3,"toggleCost":23.14,"fullName":"Epic_Power_Mastery_Total_Focus","displayName":"Total Focus","requires":{"powers":{"Epic_Power_Mastery_Conserve_Power":true,"Epic_Power_Mastery_Power_Build_Up":true,"Epic_Power_Mastery_Force_of_Nature":true,"Epic_Power_Mastery_Temp_Invulnerability":true},"count":2},"accuracy":1.2,"accuracyMult":1.2,"attackTypes":137,"target":2048,"targetLoS":true,"range":7,"endCost":23.14,"rechargeTime":40,"baseRechargeTime":40,"effectArea":1,"numAllowed":1,"description":{"short":"Melee, Extreme DMG(Energy/Smash), Foe Disorient","long":"Total Focus is complete mastery over Energy Melee. This is a very slow, but incredibly devastating attack that can knock out most opponents, leaving them Disoriented. Due to the exhausting nature of Total Focus, recharge time is very long. You must be level 44 and have two other Power Mastery Powers before selecting this power. Damage: Extreme, Recharge: Long"},"setTypes":[1,11,44],"level":44,"ignoreEnh":[],"ignore_Buff":[],"castTime":3.432,"slottable":true,"aoeModifier":1}]}
+{
+  "fullName": "Epic_Power_Mastery",
+  "archetypeOrder": "epicPool",
+  "description": "You have Mastery over Power and Energy to defeat your foes, increase your power, and to add some much needed armor and defense.",
+  "imageName": "PowerMastery.png",
+  "displayName": "Power Mastery",
+  "powers": [
+    {
+      "allowedEnhancements": [
+        "Endurance_Discount",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "archetypeOrder": "epicPool",
+      "effects": [
+        {
+          "effectType": "Stun",
+          "values": [
+            {
+              "mag": {
+                "pve": 1.192
+              },
+              "probability": 1,
+              "duration": 90,
+              "variableModified": true,
+              "effectType": "Enhancement",
+              "eTModifies": 8,
+              "stacking": 1,
+              "toWho": "Self",
+              "powerFullName": "Epic.Power_Mastery.Conserve_Power"
+            }
+          ]
+        }
+      ],
+      "powerIndex": 0,
+      "castTimeReal": 1.17,
+      "toggleCost": 9.75,
+      "fullName": "Epic_Power_Mastery_Conserve_Power",
+      "displayName": "Conserve Power",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "target": 1,
+      "targetLoS": true,
+      "endCost": 9.75,
+      "rechargeTime": 600,
+      "baseRechargeTime": 600,
+      "effectArea": 1,
+      "numAllowed": 1,
+      "description": {
+        "short": "Self Endurance Discount",
+        "long": "You can focus for a moment to conserve your Endurance. After activating this power, you expend less Endurance on all other powers for a while. Recharge: Very Long"
+      },
+      "setTypes": [],
+      "clickBuff": true,
+      "level": 35,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 1.31999993,
+      "slottable": true,
+      "aoeModifier": 1
+    },
+    {
+      "allowedEnhancements": [
+        "ToHit_Buff",
+        "Endurance_Discount",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "archetypeOrder": "epicPool",
+      "effects": [
+        {
+          "effectType": "Stun",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.786720037
+              },
+              "probability": 1,
+              "duration": 12.5,
+              "effectType": "Enhancement",
+              "eTModifies": 19,
+              "toWho": "Self",
+              "powerFullName": "Epic.Power_Mastery.Power_Build_Up",
+              "mezType": "Stun"
+            },
+            {
+              "mag": {
+                "pve": 0.786720037
+              },
+              "probability": 1,
+              "duration": 12.5,
+              "effectType": "Enhancement",
+              "eTModifies": 19,
+              "toWho": "Self",
+              "powerFullName": "Epic.Power_Mastery.Power_Build_Up",
+              "mezType": "Sleep"
+            },
+            {
+              "mag": {
+                "pve": 0.786720037
+              },
+              "probability": 1,
+              "duration": 12.5,
+              "effectType": "Enhancement",
+              "eTModifies": 19,
+              "toWho": "Self",
+              "powerFullName": "Epic.Power_Mastery.Power_Build_Up",
+              "mezType": "Confuse"
+            },
+            {
+              "mag": {
+                "pve": 0.786720037
+              },
+              "probability": 1,
+              "duration": 12.5,
+              "effectType": "Enhancement",
+              "eTModifies": 19,
+              "toWho": "Self",
+              "powerFullName": "Epic.Power_Mastery.Power_Build_Up",
+              "mezType": "Terrorize"
+            },
+            {
+              "mag": {
+                "pve": 0.786720037
+              },
+              "probability": 1,
+              "duration": 12.5,
+              "effectType": "Enhancement",
+              "eTModifies": 19,
+              "toWho": "Self",
+              "powerFullName": "Epic.Power_Mastery.Power_Build_Up",
+              "mezType": "Immobilization"
+            },
+            {
+              "mag": {
+                "pve": 0.786720037
+              },
+              "probability": 1,
+              "duration": 12.5,
+              "effectType": "Enhancement",
+              "eTModifies": 19,
+              "toWho": "Self",
+              "powerFullName": "Epic.Power_Mastery.Power_Build_Up",
+              "mezType": "Hold"
+            },
+            {
+              "mag": {
+                "pve": 0.786720037
+              },
+              "probability": 1,
+              "duration": 12.5,
+              "effectType": "Enhancement",
+              "eTModifies": 32,
+              "toWho": "Self",
+              "powerFullName": "Epic.Power_Mastery.Power_Build_Up"
+            }
+          ]
+        },
+        {
+          "effectType": "Buff_ToHit",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.1
+              },
+              "probability": 1,
+              "duration": 12.5,
+              "effectType": "ToHit",
+              "toWho": "Self",
+              "powerFullName": "Epic.Power_Mastery.Power_Build_Up"
+            }
+          ]
+        },
+        {
+          "effectType": "Buff_Dmg",
+          "values": [
+            {
+              "mag": {
+                "pve": 1
+              },
+              "probability": 1,
+              "duration": 12.5,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Epic.Power_Mastery.Power_Build_Up",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 1
+              },
+              "probability": 1,
+              "duration": 12.5,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Epic.Power_Mastery.Power_Build_Up",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 1
+              },
+              "probability": 1,
+              "duration": 12.5,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Epic.Power_Mastery.Power_Build_Up",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 1
+              },
+              "probability": 1,
+              "duration": 12.5,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Epic.Power_Mastery.Power_Build_Up",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 1
+              },
+              "probability": 1,
+              "duration": 12.5,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Epic.Power_Mastery.Power_Build_Up",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 1
+              },
+              "probability": 1,
+              "duration": 12.5,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Epic.Power_Mastery.Power_Build_Up",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 1
+              },
+              "probability": 1,
+              "duration": 12.5,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Epic.Power_Mastery.Power_Build_Up",
+              "damageType": "Psionic"
+            }
+          ]
+        }
+      ],
+      "powerIndex": 1,
+      "castTimeReal": 1.17,
+      "toggleCost": 13,
+      "fullName": "Epic_Power_Mastery_Power_Build_Up",
+      "displayName": "Power Build Up",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "target": 1,
+      "targetLoS": true,
+      "endCost": 13,
+      "rechargeTime": 240,
+      "baseRechargeTime": 240,
+      "effectArea": 1,
+      "numAllowed": 1,
+      "description": {
+        "short": "Self +DMG, +ACC, +Special",
+        "long": "Your mastery of power and energy allows you to greatly increase the damage you deal for a few seconds, as well as slightly increasing your Accuracy  Additionally, Power Build Up greatly boosts the secondary effects of your powers. Your powers effects like Heals, Defense Buffs, Endurance Drains, Disorients, Holds, Immobilizes, Knockbacks and more, are all improved. Recharge: Long"
+      },
+      "setTypes": [
+        25
+      ],
+      "clickBuff": true,
+      "level": 35,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 1.31999993,
+      "slottable": true,
+      "aoeModifier": 1
+    },
+    {
+      "allowedEnhancements": [
+        "Endurance_Discount",
+        "Recharge",
+        "Endurance_Modification",
+        "Res_Damage"
+      ],
+      "enhancementCount": 6,
+      "archetypeOrder": "epicPool",
+      "effects": [
+        {
+          "effectType": "Res_Dmg",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.35
+              },
+              "probability": 1,
+              "duration": 120,
+              "variableModified": true,
+              "effectType": "Resistance",
+              "stacking": 1,
+              "toWho": "Self",
+              "powerFullName": "Epic.Power_Mastery.Force_of_Nature",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 0.35
+              },
+              "probability": 1,
+              "duration": 120,
+              "variableModified": true,
+              "effectType": "Resistance",
+              "stacking": 1,
+              "toWho": "Self",
+              "powerFullName": "Epic.Power_Mastery.Force_of_Nature",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.35
+              },
+              "probability": 1,
+              "duration": 120,
+              "variableModified": true,
+              "effectType": "Resistance",
+              "stacking": 1,
+              "toWho": "Self",
+              "powerFullName": "Epic.Power_Mastery.Force_of_Nature",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.35
+              },
+              "probability": 1,
+              "duration": 120,
+              "variableModified": true,
+              "effectType": "Resistance",
+              "stacking": 1,
+              "toWho": "Self",
+              "powerFullName": "Epic.Power_Mastery.Force_of_Nature",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 0.35
+              },
+              "probability": 1,
+              "duration": 120,
+              "variableModified": true,
+              "effectType": "Resistance",
+              "stacking": 1,
+              "toWho": "Self",
+              "powerFullName": "Epic.Power_Mastery.Force_of_Nature",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.35
+              },
+              "probability": 1,
+              "duration": 120,
+              "variableModified": true,
+              "effectType": "Resistance",
+              "stacking": 1,
+              "toWho": "Self",
+              "powerFullName": "Epic.Power_Mastery.Force_of_Nature",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.35
+              },
+              "probability": 1,
+              "duration": 120,
+              "variableModified": true,
+              "effectType": "Resistance",
+              "stacking": 1,
+              "toWho": "Self",
+              "powerFullName": "Epic.Power_Mastery.Force_of_Nature",
+              "damageType": "Toxic"
+            }
+          ]
+        },
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 1
+              },
+              "probability": 1,
+              "duration": 120,
+              "variableModified": true,
+              "effectType": "Recovery",
+              "stacking": 1,
+              "toWho": "Self",
+              "powerFullName": "Epic.Power_Mastery.Force_of_Nature"
+            },
+            {
+              "mag": {
+                "pve": 1
+              },
+              "probability": 1,
+              "duration": 30,
+              "effectType": "GlobalChanceMod",
+              "toWho": "Self",
+              "powerFullName": "Epic.Power_Mastery.Force_of_Nature"
+            }
+          ]
+        },
+        {
+          "effectType": "GlobalCrash",
+          "values": [
+            {
+              "mag": {
+                "pve": -1
+              },
+              "probability": 1,
+              "duration": 15,
+              "variableModified": true,
+              "effectType": "Recovery",
+              "delayedTime": 120,
+              "stacking": 1,
+              "toWho": "Self",
+              "powerFullName": "Epic.Power_Mastery.Force_of_Nature"
+            },
+            {
+              "mag": {
+                "pve": -1
+              },
+              "probability": 1,
+              "variableModified": true,
+              "effectType": "Endurance",
+              "delayedTime": 120,
+              "stacking": 1,
+              "toWho": "Self",
+              "powerFullName": "Epic.Power_Mastery.Force_of_Nature"
+            }
+          ]
+        }
+      ],
+      "powerIndex": 2,
+      "castTimeReal": 3.1,
+      "toggleCost": 3.25,
+      "fullName": "Epic_Power_Mastery_Force_of_Nature",
+      "displayName": "Force of Nature",
+      "requires": {
+        "powers": {
+          "Epic_Power_Mastery_Conserve_Power": true,
+          "Epic_Power_Mastery_Power_Build_Up": true
+        },
+        "count": 1
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "target": 1,
+      "targetLoS": true,
+      "endCost": 3.25,
+      "rechargeTime": 1000,
+      "baseRechargeTime": 1000,
+      "effectArea": 1,
+      "numAllowed": 1,
+      "ignoreStrength": true,
+      "description": {
+        "short": "Self, +Res(All DMG but Psionics)",
+        "long": "When you activate this power, you become highly resistant to all damage types except psionics. Your Endurance recovery is also increased. Force of Nature costs little Endurance to activate, but when it wears off you are left exhausted, and drained of almost all Endurance, and unable to recover Endurance for a short while. You must be level 41 and have Conserve Power or Power Build Up before selecting this power. Recharge: Very Long"
+      },
+      "setTypes": [
+        8,
+        22
+      ],
+      "clickBuff": true,
+      "level": 41,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 3.3,
+      "slottable": true,
+      "aoeModifier": 1
+    },
+    {
+      "allowedEnhancements": [
+        "Endurance_Discount",
+        "Recharge",
+        "Res_Damage"
+      ],
+      "enhancementCount": 6,
+      "archetypeOrder": "epicPool",
+      "effects": [
+        {
+          "effectType": "Res_Dmg",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.210000008,
+                "pvp": 0.210000008
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Epic.Power_Mastery.Temp_Invulnerability",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 0.210000008,
+                "pvp": 0.210000008
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Epic.Power_Mastery.Temp_Invulnerability",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pvp": 0.210000008
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Epic.Power_Mastery.Temp_Invulnerability",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pvp": 0.210000008
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Epic.Power_Mastery.Temp_Invulnerability",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pvp": 0.210000008
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Epic.Power_Mastery.Temp_Invulnerability",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pvp": 0.210000008
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Epic.Power_Mastery.Temp_Invulnerability",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pvp": 0.210000008
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Epic.Power_Mastery.Temp_Invulnerability",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pvp": 0.210000008
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Epic.Power_Mastery.Temp_Invulnerability",
+              "damageType": "Psionic"
+            }
+          ]
+        }
+      ],
+      "powerIndex": 3,
+      "castTimeReal": 0.67,
+      "toggleCost": 0.325,
+      "fullName": "Epic_Power_Mastery_Temp_Invulnerability",
+      "displayName": "Temp Invulnerability",
+      "requires": {
+        "powers": {
+          "Epic_Power_Mastery_Conserve_Power": true,
+          "Epic_Power_Mastery_Power_Build_Up": true
+        },
+        "count": 1
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "target": 1,
+      "targetLoS": true,
+      "endCost": 0.1625,
+      "rechargeTime": 2,
+      "baseRechargeTime": 2,
+      "activatePeriod": 0.5,
+      "effectArea": 1,
+      "numAllowed": 1,
+      "ignoreStrength": true,
+      "description": {
+        "short": "Toggle: Self +Res(Smash, Lethal)",
+        "long": "When you toggle on this power, you become highly resistant to Smashing and Lethal damage. You must be level 41 and have Conserve Power or Power Build Up before selecting this power. Recharge: Fast"
+      },
+      "setTypes": [
+        8
+      ],
+      "level": 41,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 0.924,
+      "slottable": true,
+      "aoeModifier": 1,
+      "powerType": "Toggle"
+    },
+    {
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Recharge",
+        "Stun"
+      ],
+      "enhancementCount": 6,
+      "archetypeOrder": "epicPool",
+      "effects": [
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 55.6102,
+                "pvp": 104.732353
+              },
+              "probability": 1,
+              "effectType": "Damage",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Epic.Power_Mastery.Total_Focus",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 142.3621,
+                "pvp": 269.3124
+              },
+              "probability": 1,
+              "effectType": "Damage",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Epic.Power_Mastery.Total_Focus",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 55.6102,
+                "pvp": 374.044769
+              },
+              "probability": 1,
+              "inherentSpecial": true,
+              "effectType": "Damage",
+              "stacking": 1,
+              "resistible": true,
+              "specialCase": 3,
+              "toWho": "Target",
+              "powerFullName": "Epic.Power_Mastery.Total_Focus",
+              "damageType": "Negative"
+            }
+          ]
+        },
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pvp": 3
+              },
+              "probability": 1,
+              "duration": 2,
+              "effectType": "Mez",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "attribType": 1,
+              "powerFullName": "Epic.Power_Mastery.Total_Focus",
+              "mezType": "Stun"
+            }
+          ]
+        },
+        {
+          "effectType": "Immobilize",
+          "values": [
+            {
+              "mag": {
+                "pve": 3
+              },
+              "probability": 1,
+              "duration": 11.92,
+              "effectType": "Mez",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "attribType": 1,
+              "powerFullName": "Epic.Power_Mastery.Total_Focus",
+              "mezType": "Stun"
+            }
+          ]
+        }
+      ],
+      "powerIndex": 4,
+      "castTimeReal": 3.3,
+      "toggleCost": 23.14,
+      "fullName": "Epic_Power_Mastery_Total_Focus",
+      "displayName": "Total Focus",
+      "requires": {
+        "powers": {
+          "Epic_Power_Mastery_Conserve_Power": true,
+          "Epic_Power_Mastery_Power_Build_Up": true,
+          "Epic_Power_Mastery_Force_of_Nature": true,
+          "Epic_Power_Mastery_Temp_Invulnerability": true
+        },
+        "count": 2
+      },
+      "accuracy": 1.2,
+      "accuracyMult": 1.2,
+      "attackTypes": 137,
+      "target": 2048,
+      "targetLoS": true,
+      "range": 7,
+      "endCost": 23.14,
+      "rechargeTime": 40,
+      "baseRechargeTime": 40,
+      "effectArea": 1,
+      "numAllowed": 1,
+      "description": {
+        "short": "Melee, Extreme DMG(Energy/Smash), Foe Disorient",
+        "long": "Total Focus is complete mastery over Energy Melee. This is a very slow, but incredibly devastating attack that can knock out most opponents, leaving them Disoriented. Due to the exhausting nature of Total Focus, recharge time is very long. You must be level 44 and have two other Power Mastery Powers before selecting this power. Damage: Extreme, Recharge: Long"
+      },
+      "setTypes": [
+        1,
+        11,
+        44
+      ],
+      "level": 44,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 3.432,
+      "slottable": true,
+      "aoeModifier": 1
+    }
+  ]
+}

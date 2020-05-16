@@ -1,1 +1,552 @@
-{"fullName":"IOSet.Mocking_Beratement","enhancements":[{"type":"set","description":{"short":"+Taunt","long":"Enhances the taunt duration of a power by {Boost.Attrib.Taunt.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Mocking_Beratement_A.Attuned_Mocking_Beratement_A","setName":"Mocking_Beratement","displayName":"Taunt","effects":[{"mag":0.424,"effectId":"Taunt","mezType":11}]},{"type":"set","description":{"short":"+Taunt, +Rech","long":"Enhances the taunt duration of a power by {Boost.Attrib.Taunt.Scale}% and reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Mocking_Beratement_B.Attuned_Mocking_Beratement_B","setName":"Mocking_Beratement","displayName":"Taunt/Recharge","effects":[{"mag":0.265,"effectId":"Recharge"},{"mag":0.265,"effectId":"Taunt","mezType":11}]},{"type":"set","description":{"short":"+Taunt, +Rech, +Range","long":"Enhances the taunt duration of a power by {Boost.Attrib.Taunt.Scale}% the range by {Boost.Attrib.Range.Scale}% and reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Mocking_Beratement_C.Attuned_Mocking_Beratement_C","setName":"Mocking_Beratement","displayName":"Taunt/Recharge/Range","effects":[{"mag":0.212,"effectId":"Recharge"},{"mag":0.212,"effectId":"Taunt","mezType":11},{"mag":0.1275,"effectId":"Range"}]},{"type":"set","description":{"short":"+ACC, +Rech","long":"Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Mocking_Beratement_D.Attuned_Mocking_Beratement_D","setName":"Mocking_Beratement","displayName":"Recharge/Accuracy","effects":[{"mag":0.265,"effectId":"Recharge"},{"mag":0.265,"effectId":"Accuracy"}]},{"type":"set","description":{"short":"+Taunt, +Range","long":"Enhances the taunt duration of a power by {Boost.Attrib.Taunt.Scale}% and the range by {Boost.Attrib.Range.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Mocking_Beratement_E.Attuned_Mocking_Beratement_E","setName":"Mocking_Beratement","displayName":"Taunt/Range","effects":[{"mag":0.265,"effectId":"Taunt","mezType":11},{"mag":0.159375,"effectId":"Range"}]},{"type":"set","description":{"short":"+Rech","long":"Reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Mocking_Beratement_F.Attuned_Mocking_Beratement_F","setName":"Mocking_Beratement","displayName":"Recharge","effects":[{"mag":0.424,"effectId":"Recharge"}]}],"levels":{"min":21,"max":50},"bonuses":["Increased_Endurance_3","Lethal_Smash_Mez_Res_2","Increased_Lethal_Smash_Melee_Def_3","Increased_Fire_Cold_AoE_Def_4","Improved_Recharge_Time_5"],"setType":24,"displayName":"Mocking Beratement","imageName":"sMockingBeratement.png"}
+{
+  "fullName": "IOSet.Mocking_Beratement",
+  "enhancements": [
+    {
+      "description": {
+        "short": "+Taunt",
+        "long": "Enhances the taunt duration of a power by {Boost.Attrib.Taunt.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Taunt",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.424
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 19,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Mocking_Beratement_A.Attuned_Mocking_Beratement_A",
+              "mezType": "Taunt"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Mocking_Beratement_A.Attuned_Mocking_Beratement_A",
+      "setName": "Mocking_Beratement",
+      "displayName": "Taunt"
+    },
+    {
+      "description": {
+        "short": "+Taunt, +Rech",
+        "long": "Enhances the taunt duration of a power by {Boost.Attrib.Taunt.Scale}% and reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Recharge",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 25,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Mocking_Beratement_B.Attuned_Mocking_Beratement_B"
+            }
+          ]
+        },
+        {
+          "effectType": "Taunt",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 19,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Mocking_Beratement_B.Attuned_Mocking_Beratement_B",
+              "mezType": "Taunt"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Mocking_Beratement_B.Attuned_Mocking_Beratement_B",
+      "setName": "Mocking_Beratement",
+      "displayName": "Taunt/Recharge"
+    },
+    {
+      "description": {
+        "short": "+Taunt, +Rech, +Range",
+        "long": "Enhances the taunt duration of a power by {Boost.Attrib.Taunt.Scale}% the range by {Boost.Attrib.Range.Scale}% and reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Recharge",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 25,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Mocking_Beratement_C.Attuned_Mocking_Beratement_C"
+            }
+          ]
+        },
+        {
+          "effectType": "Taunt",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 19,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Mocking_Beratement_C.Attuned_Mocking_Beratement_C",
+              "mezType": "Taunt"
+            }
+          ]
+        },
+        {
+          "effectType": "Range",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.1275
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 24,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Mocking_Beratement_C.Attuned_Mocking_Beratement_C"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Mocking_Beratement_C.Attuned_Mocking_Beratement_C",
+      "setName": "Mocking_Beratement",
+      "displayName": "Taunt/Recharge/Range"
+    },
+    {
+      "description": {
+        "short": "+ACC, +Rech",
+        "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Recharge",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 25,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Mocking_Beratement_D.Attuned_Mocking_Beratement_D"
+            }
+          ]
+        },
+        {
+          "effectType": "Accuracy",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 1,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Mocking_Beratement_D.Attuned_Mocking_Beratement_D"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Mocking_Beratement_D.Attuned_Mocking_Beratement_D",
+      "setName": "Mocking_Beratement",
+      "displayName": "Recharge/Accuracy"
+    },
+    {
+      "description": {
+        "short": "+Taunt, +Range",
+        "long": "Enhances the taunt duration of a power by {Boost.Attrib.Taunt.Scale}% and the range by {Boost.Attrib.Range.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Taunt",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 19,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Mocking_Beratement_E.Attuned_Mocking_Beratement_E",
+              "mezType": "Taunt"
+            }
+          ]
+        },
+        {
+          "effectType": "Range",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.159375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 24,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Mocking_Beratement_E.Attuned_Mocking_Beratement_E"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Mocking_Beratement_E.Attuned_Mocking_Beratement_E",
+      "setName": "Mocking_Beratement",
+      "displayName": "Taunt/Range"
+    },
+    {
+      "description": {
+        "short": "+Rech",
+        "long": "Reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Recharge",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.424
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 25,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Mocking_Beratement_F.Attuned_Mocking_Beratement_F"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Mocking_Beratement_F.Attuned_Mocking_Beratement_F",
+      "setName": "Mocking_Beratement",
+      "displayName": "Recharge"
+    }
+  ],
+  "levels": {
+    "min": 21,
+    "max": 50
+  },
+  "bonuses": [
+    {
+      "description": {
+        "short": "+Max End",
+        "long": "Increases maximum Endurance by 1.8%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 2,
+      "powerSetIndex": 223,
+      "fullName": "Set_Bonus.Set_Bonus.Increased_Endurance_3",
+      "setName": "Set_Bonus",
+      "displayName": "Moderate Increased Endurance Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 1.8
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Endurance",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Endurance_3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+Res (Lethal, Smash, Mez)",
+        "long": "Increases Lethal and Smashing resistance by 2.25% and Mez Resistance by 3.75%"
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 3,
+      "powerSetIndex": 447,
+      "fullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_2",
+      "setName": "Set_Bonus",
+      "displayName": "Small Lethal, Smash and Mez Resistance",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.0225
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_2",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.0225
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_2",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_2",
+              "mezType": "Immobilization"
+            },
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_2",
+              "mezType": "Hold"
+            },
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_2",
+              "mezType": "Stun"
+            },
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_2",
+              "mezType": "Sleep"
+            },
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_2",
+              "mezType": "Terrorize"
+            },
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_2",
+              "mezType": "Confuse"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+DEF",
+        "long": "Increases lethal and smashing defense by 2.5% and melee defense by 1.25%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 4,
+      "powerSetIndex": 307,
+      "fullName": "Set_Bonus.Set_Bonus.Increased_Lethal_Smash_Melee_Def_3",
+      "setName": "Set_Bonus",
+      "displayName": "Moderate Increased Lethal/Smashing/Melee Def Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.025
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Lethal_Smash_Melee_Def_3",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.025
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Lethal_Smash_Melee_Def_3",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 0.0125
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Lethal_Smash_Melee_Def_3",
+              "damageType": "Melee"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+DEF",
+        "long": "Increases fire and cold defense by 3.13% and area effect defense by 1.565%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 5,
+      "powerSetIndex": 252,
+      "fullName": "Set_Bonus.Set_Bonus.Increased_Fire_Cold_AoE_Def_4",
+      "setName": "Set_Bonus",
+      "displayName": "Large Increased Fire/Cold/AoE Def Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.03125
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Fire_Cold_AoE_Def_4",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.03125
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Fire_Cold_AoE_Def_4",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 0.01563
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Fire_Cold_AoE_Def_4",
+              "damageType": "AoE"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+Recharge Time",
+        "long": "Improves the Recharge Time of all of your powers by 7.5%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 6,
+      "powerSetIndex": 141,
+      "fullName": "Set_Bonus.Set_Bonus.Improved_Recharge_Time_5",
+      "setName": "Set_Bonus",
+      "displayName": "Huge Improved Recharge Time Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.075
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 25,
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Improved_Recharge_Time_5"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "setType": 24,
+  "displayName": "Mocking Beratement",
+  "imageName": "sMockingBeratement.png"
+}

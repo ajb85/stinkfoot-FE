@@ -1,1 +1,722 @@
-{"fullName":"Epic_Electricity_Mastery","archetypeOrder":"epicPool","description":"You have Mastery over Electricity to defeat your foes, and to add some much needed armor and defense.","imageName":"ElectricityMastery.png","displayName":"Electricity Mastery","powers":[{"allowedEnhancements":["Accuracy","Damage","Endurance_Discount","Immobilize","Range","Recharge","Endurance_Modification"],"enhancementCount":6,"archetypeOrder":"epicPool","powerIndex":0,"castTimeReal":1.67,"toggleCost":9.75,"fullName":"Epic_Electricity_Mastery_Electric_Fence","displayName":"Electric Fence","requires":{"powers":{},"count":0},"accuracy":1,"accuracyMult":1,"attackTypes":130,"target":2048,"targetLoS":true,"range":50,"endCost":9.75,"rechargeTime":4,"baseRechargeTime":4,"effectArea":1,"numAllowed":1,"description":{"short":"Ranged, Moderate DoT(Energy), Foe Immobilize, -End","long":"Surrounds and Immobilizes a single target in an Electric Fence. Deals some damage over time and slowly drains some Endurance. Useful for keeping villains at bay. Damage: Minor(DoT), Recharge: Fast"},"setTypes":[2,12,22,44],"level":35,"ignoreEnh":[],"ignore_Buff":[],"castTime":1.848,"slottable":true,"aoeModifier":1},{"allowedEnhancements":["Accuracy","Damage","Endurance_Discount","Knockback","Recharge","Stun"],"enhancementCount":6,"archetypeOrder":"epicPool","powerIndex":1,"castTimeReal":3.3,"toggleCost":23.14,"fullName":"Epic_Electricity_Mastery_Thunder_Strike","displayName":"Thunder Strike","requires":{"powers":{},"count":0},"accuracy":1,"accuracyMult":1,"attackTypes":137,"target":2048,"targetLoS":true,"range":7,"endCost":23.14,"rechargeTime":40,"baseRechargeTime":40,"effectArea":2,"radius":12,"maxTargets":16,"numAllowed":1,"description":{"short":"Melee (AoE), High DMG(Smash, Energy), Foe Disorient, Knockback","long":"A massive attack. You smash your foes with all the power of a lightning bolt. The pummeled victim takes tremendous damage and may be Disoriented. Any nearby foes may be knocked down and take some damage from the shockwave. Damage: High, Recharge: Slow"},"setTypes":[4,11,23,44],"level":35,"ignoreEnh":[],"ignore_Buff":[],"castTime":3.432,"slottable":true,"aoeModifier":2.8},{"allowedEnhancements":["Endurance_Discount","Recharge","Res_Damage"],"enhancementCount":6,"archetypeOrder":"epicPool","powerIndex":2,"castTimeReal":0.67,"toggleCost":0.325,"fullName":"Epic_Electricity_Mastery_Charged_Armor","displayName":"Charged Armor","requires":{"powers":{"epic.electricity_mastery.electric_fence":true,"epic.electricity_mastery.thunder_strike":true},"count":1},"accuracy":1,"accuracyMult":1,"target":1,"targetLoS":true,"endCost":0.1625,"rechargeTime":2,"baseRechargeTime":2,"activatePeriod":0.5,"effectArea":1,"numAllowed":1,"ignoreStrength":true,"description":{"short":"Toggle: Self +Res(Smash, Lethal, Energy)","long":"When you toggle on this power, you are surrounded in a charged field that makes you highly resistant to Smashing, Lethal and Energy damage. You must be level 41 and have one other Electricity Mastery power to select this power. Recharge: Fast"},"setTypes":[8],"level":41,"ignoreEnh":[],"ignore_Buff":[],"castTime":0.924,"slottable":true,"aoeModifier":1},{"allowedEnhancements":["Accuracy","Damage","Endurance_Discount","Hold","Range","Recharge","Endurance_Modification"],"enhancementCount":6,"archetypeOrder":"epicPool","powerIndex":3,"castTimeReal":2,"toggleCost":10.66,"fullName":"Epic_Electricity_Mastery_Shocking_Bolt","displayName":"Shocking Bolt","requires":{"powers":{"Epic_Electricity_Mastery_Electric_Fence":true,"Epic_Electricity_Mastery_Thunder_Strike":true},"count":1},"accuracy":1,"accuracyMult":1,"attackTypes":130,"target":2048,"targetLoS":true,"range":80,"endCost":10.66,"rechargeTime":16,"baseRechargeTime":16,"effectArea":1,"numAllowed":1,"description":{"short":"Ranged, Minor DoT(Energy), Foe Hold, -END","long":"Holds a distant foe by shocking him with electricity. The seized target is left writhing in agony and is unable to defend himself. Shocking Bolt also drains some Endurance from the target over time. A portion of drained Endurance may be returned to you.  You must be level 41 and have one other Electricity Mastery power to select this power.  Damage: Minor(DoT), Recharge: Moderate"},"setTypes":[2,4,10,22,44],"level":41,"ignoreEnh":[],"ignore_Buff":[],"castTime":2.244,"slottable":true,"aoeModifier":1},{"allowedEnhancements":["Endurance_Discount","Recharge","Endurance_Modification"],"enhancementCount":6,"archetypeOrder":"epicPool","powerIndex":4,"castTimeReal":3.828,"toggleCost":16.25,"fullName":"Epic_Electricity_Mastery_Power_Sink","displayName":"Power Sink","requires":{"powers":{"Epic_Electricity_Mastery_Electric_Fence":true,"Epic_Electricity_Mastery_Thunder_Strike":true,"Epic_Electricity_Mastery_Charged_Armor":true,"Epic_Electricity_Mastery_Shocking_Bolt":true},"count":2},"accuracy":1,"accuracyMult":1,"attackTypes":132,"target":1,"targetLoS":true,"endCost":16.25,"rechargeTime":120,"baseRechargeTime":120,"effectArea":2,"radius":12,"maxTargets":10,"numAllowed":1,"description":{"short":"PBAoE, Self +End, Foe -End","long":"Power Sink leeches energy directly from the bodies of all nearby foes, draining their Endurance. Each foe you draw energy from increases your Endurance. If there are no foes within range, you will not gain any Endurance. You must be level 47 and have two other Electricity Mastery Powers before selecting this power. Recharge: Long"},"setTypes":[22],"level":44,"variableEnabled":true,"variableMin":1,"variableMax":10,"ignoreEnh":[],"ignore_Buff":[],"neverAutoUpdate":true,"castTime":3.96,"slottable":true,"aoeModifier":2.8}]}
+{
+  "fullName": "Epic_Electricity_Mastery",
+  "archetypeOrder": "epicPool",
+  "description": "You have Mastery over Electricity to defeat your foes, and to add some much needed armor and defense.",
+  "imageName": "ElectricityMastery.png",
+  "displayName": "Electricity Mastery",
+  "powers": [
+    {
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Immobilize",
+        "Range",
+        "Recharge",
+        "Endurance_Modification"
+      ],
+      "enhancementCount": 6,
+      "archetypeOrder": "epicPool",
+      "effects": [
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 12.5123005,
+                "pvp": 33.7619362
+              },
+              "probability": 1,
+              "duration": 8.2,
+              "effectType": "Damage",
+              "ticks": 5,
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Epic.Electricity_Mastery.Electric_Fence",
+              "damageType": "Energy"
+            }
+          ]
+        },
+        {
+          "effectType": "Immobilize",
+          "values": [
+            {
+              "mag": {
+                "pve": 3,
+                "pvp": 3
+              },
+              "probability": 1,
+              "duration": 17.8800011,
+              "effectType": "Mez",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "attribType": 1,
+              "powerFullName": "Epic.Electricity_Mastery.Electric_Fence",
+              "mezType": "Immobilization"
+            }
+          ]
+        },
+        {
+          "effectType": "EndDrain",
+          "values": [
+            {
+              "mag": {
+                "pve": -2,
+                "pvp": -1
+              },
+              "probability": 1,
+              "duration": 6.2,
+              "effectType": "Endurance",
+              "ticks": 4,
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Epic.Electricity_Mastery.Electric_Fence"
+            }
+          ]
+        },
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 100
+              },
+              "probability": 1,
+              "duration": 15,
+              "effectType": "MezResist",
+              "stacking": 1,
+              "toWho": "Target",
+              "powerFullName": "Epic.Electricity_Mastery.Electric_Fence",
+              "mezType": "Knockback"
+            },
+            {
+              "mag": {
+                "pve": 100
+              },
+              "probability": 1,
+              "duration": 15,
+              "effectType": "MezResist",
+              "stacking": 1,
+              "toWho": "Target",
+              "powerFullName": "Epic.Electricity_Mastery.Electric_Fence",
+              "mezType": "Knockup"
+            },
+            {
+              "mag": {
+                "pve": -100
+              },
+              "probability": 1,
+              "duration": 15,
+              "effectType": "Mez",
+              "stacking": 1,
+              "toWho": "Target",
+              "powerFullName": "Epic.Electricity_Mastery.Electric_Fence",
+              "mezType": "Knockback"
+            },
+            {
+              "mag": {
+                "pve": -100
+              },
+              "probability": 1,
+              "duration": 15,
+              "effectType": "Mez",
+              "stacking": 1,
+              "toWho": "Target",
+              "powerFullName": "Epic.Electricity_Mastery.Electric_Fence",
+              "mezType": "Knockup"
+            },
+            {
+              "mag": {
+                "pve": -1
+              },
+              "probability": 0.2,
+              "duration": 2,
+              "effectType": "Recovery",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Epic.Electricity_Mastery.Electric_Fence"
+            }
+          ]
+        }
+      ],
+      "powerIndex": 0,
+      "castTimeReal": 1.67,
+      "toggleCost": 9.75,
+      "fullName": "Epic_Electricity_Mastery_Electric_Fence",
+      "displayName": "Electric Fence",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "attackTypes": 130,
+      "target": 2048,
+      "targetLoS": true,
+      "range": 50,
+      "endCost": 9.75,
+      "rechargeTime": 4,
+      "baseRechargeTime": 4,
+      "effectArea": 1,
+      "numAllowed": 1,
+      "description": {
+        "short": "Ranged, Moderate DoT(Energy), Foe Immobilize, -End",
+        "long": "Surrounds and Immobilizes a single target in an Electric Fence. Deals some damage over time and slowly drains some Endurance. Useful for keeping villains at bay. Damage: Minor(DoT), Recharge: Fast"
+      },
+      "setTypes": [
+        2,
+        12,
+        22,
+        44
+      ],
+      "level": 35,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 1.848,
+      "slottable": true,
+      "aoeModifier": 1
+    },
+    {
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Knockback",
+        "Recharge",
+        "Stun"
+      ],
+      "enhancementCount": 6,
+      "archetypeOrder": "epicPool",
+      "effects": [
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 142.3621,
+                "pvp": 128.671448
+              },
+              "probability": 1,
+              "effectType": "Damage",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Epic.Electricity_Mastery.Thunder_Strike",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pvp": 149.618134,
+                "pve": 23.3562832
+              },
+              "probability": 1,
+              "effectType": "Damage",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Epic.Electricity_Mastery.Thunder_Strike",
+              "damageType": "Energy"
+            }
+          ]
+        },
+        {
+          "effectType": "Stun",
+          "values": [
+            {
+              "mag": {
+                "pve": 3
+              },
+              "probability": 0.5,
+              "duration": 5.96,
+              "effectType": "Mez",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "attribType": 1,
+              "powerFullName": "Epic.Electricity_Mastery.Thunder_Strike",
+              "mezType": "Stun"
+            }
+          ]
+        },
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pvp": 3
+              },
+              "probability": 0.5,
+              "duration": 2,
+              "effectType": "Mez",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "attribType": 1,
+              "powerFullName": "Epic.Electricity_Mastery.Thunder_Strike",
+              "mezType": "Stun"
+            },
+            {
+              "mag": {
+                "pve": -1
+              },
+              "probability": 0.4,
+              "duration": 4,
+              "effectType": "Recovery",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Epic.Electricity_Mastery.Thunder_Strike"
+            }
+          ]
+        },
+        {
+          "effectType": "Knockback",
+          "values": [
+            {
+              "mag": {
+                "pve": 4.1542,
+                "pvp": 4.1542
+              },
+              "probability": 1,
+              "effectType": "Mez",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Epic.Electricity_Mastery.Thunder_Strike",
+              "mezType": "Knockback"
+            }
+          ]
+        }
+      ],
+      "powerIndex": 1,
+      "castTimeReal": 3.3,
+      "toggleCost": 23.14,
+      "fullName": "Epic_Electricity_Mastery_Thunder_Strike",
+      "displayName": "Thunder Strike",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "attackTypes": 137,
+      "target": 2048,
+      "targetLoS": true,
+      "range": 7,
+      "endCost": 23.14,
+      "rechargeTime": 40,
+      "baseRechargeTime": 40,
+      "effectArea": 2,
+      "radius": 12,
+      "maxTargets": 16,
+      "numAllowed": 1,
+      "description": {
+        "short": "Melee (AoE), High DMG(Smash, Energy), Foe Disorient, Knockback",
+        "long": "A massive attack. You smash your foes with all the power of a lightning bolt. The pummeled victim takes tremendous damage and may be Disoriented. Any nearby foes may be knocked down and take some damage from the shockwave. Damage: High, Recharge: Slow"
+      },
+      "setTypes": [
+        4,
+        11,
+        23,
+        44
+      ],
+      "level": 35,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 3.432,
+      "slottable": true,
+      "aoeModifier": 2.8
+    },
+    {
+      "allowedEnhancements": [
+        "Endurance_Discount",
+        "Recharge",
+        "Res_Damage"
+      ],
+      "enhancementCount": 6,
+      "archetypeOrder": "epicPool",
+      "effects": [
+        {
+          "effectType": "Res_Dmg",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.1925,
+                "pvp": 0.1925
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Epic.Electricity_Mastery.Charged_Armor",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 0.1925,
+                "pvp": 0.1925
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Epic.Electricity_Mastery.Charged_Armor",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.14,
+                "pvp": 0.1925
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Epic.Electricity_Mastery.Charged_Armor",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pvp": 0.1925
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Epic.Electricity_Mastery.Charged_Armor",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pvp": 0.1925
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Epic.Electricity_Mastery.Charged_Armor",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pvp": 0.1925
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Epic.Electricity_Mastery.Charged_Armor",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pvp": 0.1925
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Epic.Electricity_Mastery.Charged_Armor",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pvp": 0.1925
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Epic.Electricity_Mastery.Charged_Armor",
+              "damageType": "Psionic"
+            }
+          ]
+        }
+      ],
+      "powerIndex": 2,
+      "castTimeReal": 0.67,
+      "toggleCost": 0.325,
+      "fullName": "Epic_Electricity_Mastery_Charged_Armor",
+      "displayName": "Charged Armor",
+      "requires": {
+        "powers": {
+          "epic.electricity_mastery.electric_fence": true,
+          "epic.electricity_mastery.thunder_strike": true
+        },
+        "count": 1
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "target": 1,
+      "targetLoS": true,
+      "endCost": 0.1625,
+      "rechargeTime": 2,
+      "baseRechargeTime": 2,
+      "activatePeriod": 0.5,
+      "effectArea": 1,
+      "numAllowed": 1,
+      "ignoreStrength": true,
+      "description": {
+        "short": "Toggle: Self +Res(Smash, Lethal, Energy)",
+        "long": "When you toggle on this power, you are surrounded in a charged field that makes you highly resistant to Smashing, Lethal and Energy damage. You must be level 41 and have one other Electricity Mastery power to select this power. Recharge: Fast"
+      },
+      "setTypes": [
+        8
+      ],
+      "level": 41,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 0.924,
+      "slottable": true,
+      "aoeModifier": 1,
+      "powerType": "Toggle"
+    },
+    {
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Hold",
+        "Range",
+        "Recharge",
+        "Endurance_Modification"
+      ],
+      "enhancementCount": 6,
+      "archetypeOrder": "epicPool",
+      "effects": [
+        {
+          "effectType": "Immobilize",
+          "values": [
+            {
+              "mag": {
+                "pve": 3
+              },
+              "probability": 1,
+              "duration": 14.3040009,
+              "effectType": "Mez",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "attribType": 1,
+              "powerFullName": "Epic.Electricity_Mastery.Shocking_Bolt",
+              "mezType": "Hold"
+            }
+          ]
+        },
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 6.25615025,
+                "pvp": 47.6449623
+              },
+              "probability": 1,
+              "duration": 4.2,
+              "effectType": "Damage",
+              "ticks": 5,
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Epic.Electricity_Mastery.Shocking_Bolt",
+              "damageType": "Energy"
+            }
+          ]
+        },
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pvp": 3
+              },
+              "probability": 1,
+              "duration": 2,
+              "effectType": "Mez",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "attribType": 1,
+              "powerFullName": "Epic.Electricity_Mastery.Shocking_Bolt",
+              "mezType": "Hold"
+            },
+            {
+              "mag": {
+                "pve": 5.33
+              },
+              "probability": 0.3,
+              "variableModified": true,
+              "effectType": "Endurance",
+              "stacking": 1,
+              "toWho": "Self",
+              "powerFullName": "Epic.Electricity_Mastery.Shocking_Bolt"
+            }
+          ]
+        },
+        {
+          "effectType": "EndDrain",
+          "values": [
+            {
+              "mag": {
+                "pve": -2,
+                "pvp": -1
+              },
+              "probability": 1,
+              "duration": 8.1,
+              "effectType": "Endurance",
+              "ticks": 5,
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Epic.Electricity_Mastery.Shocking_Bolt"
+            }
+          ]
+        }
+      ],
+      "powerIndex": 3,
+      "castTimeReal": 2,
+      "toggleCost": 10.66,
+      "fullName": "Epic_Electricity_Mastery_Shocking_Bolt",
+      "displayName": "Shocking Bolt",
+      "requires": {
+        "powers": {
+          "Epic_Electricity_Mastery_Electric_Fence": true,
+          "Epic_Electricity_Mastery_Thunder_Strike": true
+        },
+        "count": 1
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "attackTypes": 130,
+      "target": 2048,
+      "targetLoS": true,
+      "range": 80,
+      "endCost": 10.66,
+      "rechargeTime": 16,
+      "baseRechargeTime": 16,
+      "effectArea": 1,
+      "numAllowed": 1,
+      "description": {
+        "short": "Ranged, Minor DoT(Energy), Foe Hold, -END",
+        "long": "Holds a distant foe by shocking him with electricity. The seized target is left writhing in agony and is unable to defend himself. Shocking Bolt also drains some Endurance from the target over time. A portion of drained Endurance may be returned to you.  You must be level 41 and have one other Electricity Mastery power to select this power.  Damage: Minor(DoT), Recharge: Moderate"
+      },
+      "setTypes": [
+        2,
+        4,
+        10,
+        22,
+        44
+      ],
+      "level": 41,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 2.244,
+      "slottable": true,
+      "aoeModifier": 1
+    },
+    {
+      "allowedEnhancements": [
+        "Endurance_Discount",
+        "Recharge",
+        "Endurance_Modification"
+      ],
+      "enhancementCount": 6,
+      "archetypeOrder": "epicPool",
+      "effects": [
+        {
+          "effectType": "EndDrain",
+          "values": [
+            {
+              "mag": {
+                "pve": -33,
+                "pvp": -10
+              },
+              "probability": 1,
+              "effectType": "Endurance",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Epic.Electricity_Mastery.Power_Sink"
+            }
+          ]
+        },
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": -1
+              },
+              "probability": 0.3,
+              "duration": 4,
+              "effectType": "Recovery",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Epic.Electricity_Mastery.Power_Sink"
+            },
+            {
+              "mag": {
+                "pve": 25
+              },
+              "probability": 1,
+              "variableModified": true,
+              "effectType": "Endurance",
+              "delayedTime": 0.25,
+              "stacking": 1,
+              "toWho": "Self",
+              "powerFullName": "Epic.Electricity_Mastery.Power_Sink"
+            }
+          ]
+        }
+      ],
+      "powerIndex": 4,
+      "castTimeReal": 3.828,
+      "toggleCost": 16.25,
+      "fullName": "Epic_Electricity_Mastery_Power_Sink",
+      "displayName": "Power Sink",
+      "requires": {
+        "powers": {
+          "Epic_Electricity_Mastery_Electric_Fence": true,
+          "Epic_Electricity_Mastery_Thunder_Strike": true,
+          "Epic_Electricity_Mastery_Charged_Armor": true,
+          "Epic_Electricity_Mastery_Shocking_Bolt": true
+        },
+        "count": 2
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "attackTypes": 132,
+      "target": 1,
+      "targetLoS": true,
+      "endCost": 16.25,
+      "rechargeTime": 120,
+      "baseRechargeTime": 120,
+      "effectArea": 2,
+      "radius": 12,
+      "maxTargets": 10,
+      "numAllowed": 1,
+      "description": {
+        "short": "PBAoE, Self +End, Foe -End",
+        "long": "Power Sink leeches energy directly from the bodies of all nearby foes, draining their Endurance. Each foe you draw energy from increases your Endurance. If there are no foes within range, you will not gain any Endurance. You must be level 47 and have two other Electricity Mastery Powers before selecting this power. Recharge: Long"
+      },
+      "setTypes": [
+        22
+      ],
+      "level": 44,
+      "variableEnabled": true,
+      "variableMin": 1,
+      "variableMax": 10,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "neverAutoUpdate": true,
+      "castTime": 3.96,
+      "slottable": true,
+      "aoeModifier": 2.8
+    }
+  ]
+}

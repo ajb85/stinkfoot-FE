@@ -1,1 +1,645 @@
-{"fullName":"Epic_Mu_Mastery","archetypeOrder":"epicPool","description":"Scirocco has taught you the ancient powers of the Mu. In their eternal struggle against the Oranbega, the Mu have unlocked many mystical powers, including their very signature crimson lightning.  Now you posses these their secrets.","imageName":"PatronSnipe.png","displayName":"Mu Mastery","powers":[{"allowedEnhancements":["Accuracy","Damage","Endurance_Discount","Range","Recharge","Endurance_Modification"],"enhancementCount":6,"archetypeOrder":"epicPool","powerIndex":0,"castTimeReal":1.17,"toggleCost":8.58,"fullName":"Epic_Mu_Mastery_Mu_Lightning","displayName":"Mu Lightning","requires":{"powers":{},"count":0},"accuracy":1,"accuracyMult":1,"attackTypes":130,"target":2048,"targetLoS":true,"range":80,"endCost":8.58,"rechargeTime":9,"baseRechargeTime":9,"effectArea":1,"numAllowed":1,"description":{"short":"Ranged, High DMG(Energy), Foe -End","long":"You can send a large blast of Mu electrical energy at a foe, dealing heavy damage and draining some Endurance. Some of this Endurance may transfer back to you. Damage: High, Recharge: Fast"},"setTypes":[2,22,44],"level":35,"ignoreEnh":[],"ignore_Buff":[],"castTime":1.31999993,"slottable":true,"aoeModifier":1},{"allowedEnhancements":["Accuracy","Damage","Endurance_Discount","Immobilize","Range","Recharge","Endurance_Modification"],"enhancementCount":6,"archetypeOrder":"epicPool","powerIndex":1,"castTimeReal":1.17,"toggleCost":12.74,"fullName":"Epic_Mu_Mastery_Electrifying_Fences","displayName":"Electrifying Fences","requires":{"powers":{},"count":0},"accuracy":1,"accuracyMult":1,"attackTypes":132,"target":2048,"targetLoS":true,"range":40,"endCost":12.74,"rechargeTime":20,"baseRechargeTime":20,"effectArea":2,"radius":10,"maxTargets":10,"numAllowed":1,"description":{"short":"Ranged (Targeted AoE), Minor DoT(Energy), Foe Immobilize, -END","long":"The Electrifying Fences attempts to Immobilize a group of foes in an area. This power deals some energy damage over time as it slowly drains some Endurance. Damage: Moderate(DoT), Recharge: Slow"},"setTypes":[3,12,22,44],"level":35,"ignoreEnh":[],"ignore_Buff":[],"castTime":1.31999993,"slottable":true,"aoeModifier":2.5},{"allowedEnhancements":["Accuracy","Damage","Endurance_Discount","Range","Recharge","Endurance_Modification"],"enhancementCount":6,"archetypeOrder":"epicPool","powerIndex":2,"castTimeReal":1.07,"toggleCost":18.98,"fullName":"Epic_Mu_Mastery_Ball_Lightning","displayName":"Ball Lightning","requires":{"powers":{"Epic_Mu_Mastery_Mu_Lightning":true,"Epic_Mu_Mastery_Electrifying_Fences":true},"count":1},"accuracy":1,"accuracyMult":1,"attackTypes":132,"target":2048,"targetLoS":true,"range":80,"endCost":18.98,"rechargeTime":32,"baseRechargeTime":32,"effectArea":2,"radius":15,"maxTargets":16,"numAllowed":1,"description":{"short":"Ranged (Targeted AoE), Moderate DoT(Energy), Foe -End","long":"Hurls a highly charged ball of Mu lightning that explodes on contact. Ball Lightning deals good damage in an area of effect, and drains some Endurance from each target it hits. You must be level 41 and have Mu Lightning or Electrifying Fences before selecting this power. Damage: Moderate(DoT), Recharge: Long"},"setTypes":[3,22,44],"level":41,"ignoreEnh":[],"ignore_Buff":[],"castTime":1.31999993,"slottable":true,"aoeModifier":3.25},{"allowedEnhancements":["Accuracy","Damage","Endurance_Discount","Range","Recharge","Endurance_Modification"],"enhancementCount":6,"archetypeOrder":"epicPool","powerIndex":3,"castTimeReal":2.07,"toggleCost":18.98,"fullName":"Epic_Mu_Mastery_Static_Discharge","displayName":"Static Discharge","requires":{"powers":{"Epic_Mu_Mastery_Mu_Lightning":true,"Epic_Mu_Mastery_Electrifying_Fences":true},"count":1},"accuracy":1,"accuracyMult":1,"attackTypes":132,"target":2048,"targetLoS":true,"range":40,"endCost":18.98,"rechargeTime":24,"baseRechargeTime":24,"effectArea":3,"radius":40,"arc":45,"maxTargets":10,"numAllowed":1,"description":{"short":"Ranged (Cone), Moderate DMG(Energy), -END","long":"Hurls multiple bolts of Mu Electricity in an arc that deals damage and drains Endurance from all affected foes in the area.  You must be level 41 and have Mu Lightning or Electrifying Fences before selecting this power.  Damage: Moderate, Recharge: Long"},"setTypes":[3,22,44],"level":41,"ignoreEnh":[],"ignore_Buff":[],"castTime":2.244,"slottable":true,"aoeModifier":2.37995839},{"allowedEnhancements":["Accuracy","Damage","Endurance_Discount","Heal","Hold","Recharge","Endurance_Modification"],"enhancementCount":6,"archetypeOrder":"epicPool","powerIndex":4,"castTimeReal":1.17,"toggleCost":26,"fullName":"Epic_Mu_Mastery_Summon_Striker","displayName":"Summon Striker","requires":{"powers":{"Epic_Mu_Mastery_Mu_Lightning":true,"Epic_Mu_Mastery_Electrifying_Fences":true,"Epic_Mu_Mastery_Ball_Lightning":true,"Epic_Mu_Mastery_Static_Discharge":true},"count":2},"accuracy":1,"accuracyMult":1,"target":8192,"targetLoS":true,"range":60,"endCost":26,"rechargeTime":900,"baseRechargeTime":900,"effectArea":4,"numAllowed":1,"description":{"short":"Summon Mu Strike: Ranged Moderate DMG(Energy)","long":"Scirocco has shown you how to call upon a mystical Mu Striker to assist you. The Mu pulse with the blood of their slaughtered ancestors in their veins, and are well practiced in the dark arts. Your access to this Striker is very limited. You can only summon him once every 15 minutes and he will leave after 4 minutes, or if you exit a zone or mission. You must be level 44 and have two other Mu Mastery Powers before selecting this power. Recharge: Extremely Long"},"setTypes":[6,22,27,44],"level":44,"ignoreEnh":[],"ignore_Buff":[],"castTime":1.31999993,"slottable":true,"aoeModifier":1}]}
+{
+  "fullName": "Epic_Mu_Mastery",
+  "archetypeOrder": "epicPool",
+  "description": "Scirocco has taught you the ancient powers of the Mu. In their eternal struggle against the Oranbega, the Mu have unlocked many mystical powers, including their very signature crimson lightning.  Now you posses these their secrets.",
+  "imageName": "PatronSnipe.png",
+  "displayName": "Mu Mastery",
+  "powers": [
+    {
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Range",
+        "Recharge",
+        "Endurance_Modification"
+      ],
+      "enhancementCount": 6,
+      "archetypeOrder": "epicPool",
+      "effects": [
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 73.4054642,
+                "pvp": 89.07197
+              },
+              "probability": 1,
+              "effectType": "Damage",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Epic.VEAT_Mu_Mastery.Mu_Lightning",
+              "damageType": "Energy"
+            }
+          ]
+        },
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": -0.1
+              },
+              "probability": 1,
+              "effectType": "Endurance",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Epic.VEAT_Mu_Mastery.Mu_Lightning"
+            },
+            {
+              "mag": {
+                "pve": -3
+              },
+              "probability": 0.3,
+              "duration": 4,
+              "effectType": "Recovery",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Epic.VEAT_Mu_Mastery.Mu_Lightning"
+            },
+            {
+              "mag": {
+                "pve": 4.29
+              },
+              "probability": 0.3,
+              "variableModified": true,
+              "effectType": "Endurance",
+              "stacking": 1,
+              "toWho": "Self",
+              "powerFullName": "Epic.VEAT_Mu_Mastery.Mu_Lightning"
+            }
+          ]
+        },
+        {
+          "effectType": "EndDrain",
+          "values": [
+            {
+              "mag": {
+                "pvp": -2
+              },
+              "probability": 1,
+              "effectType": "Endurance",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Epic.VEAT_Mu_Mastery.Mu_Lightning"
+            }
+          ]
+        }
+      ],
+      "powerIndex": 0,
+      "castTimeReal": 1.17,
+      "toggleCost": 8.58,
+      "fullName": "Epic_Mu_Mastery_Mu_Lightning",
+      "displayName": "Mu Lightning",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "attackTypes": 130,
+      "target": 2048,
+      "targetLoS": true,
+      "range": 80,
+      "endCost": 8.58,
+      "rechargeTime": 9,
+      "baseRechargeTime": 9,
+      "effectArea": 1,
+      "numAllowed": 1,
+      "description": {
+        "short": "Ranged, High DMG(Energy), Foe -End",
+        "long": "You can send a large blast of Mu electrical energy at a foe, dealing heavy damage and draining some Endurance. Some of this Endurance may transfer back to you. Damage: High, Recharge: Fast"
+      },
+      "setTypes": [
+        2,
+        22,
+        44
+      ],
+      "level": 35,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 1.31999993,
+      "slottable": true,
+      "aoeModifier": 1
+    },
+    {
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Immobilize",
+        "Range",
+        "Recharge",
+        "Endurance_Modification"
+      ],
+      "enhancementCount": 6,
+      "archetypeOrder": "epicPool",
+      "effects": [
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 5.56102,
+                "pvp": 14.2367668
+              },
+              "probability": 1,
+              "duration": 7.1,
+              "effectType": "Damage",
+              "ticks": 8,
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Epic.VEAT_Mu_Mastery.Electrifying_Fences",
+              "damageType": "Energy"
+            }
+          ]
+        },
+        {
+          "effectType": "Immobilize",
+          "values": [
+            {
+              "mag": {
+                "pve": 3
+              },
+              "probability": 1,
+              "duration": 17.8800011,
+              "effectType": "Mez",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "attribType": 1,
+              "powerFullName": "Epic.VEAT_Mu_Mastery.Electrifying_Fences",
+              "mezType": "Immobilization"
+            }
+          ]
+        },
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pvp": 3
+              },
+              "probability": 1,
+              "duration": 2,
+              "effectType": "Mez",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "attribType": 1,
+              "powerFullName": "Epic.VEAT_Mu_Mastery.Electrifying_Fences",
+              "mezType": "Immobilization"
+            },
+            {
+              "mag": {
+                "pve": -0.04
+              },
+              "probability": 1,
+              "duration": 6.2,
+              "effectType": "Endurance",
+              "ticks": 4,
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Epic.VEAT_Mu_Mastery.Electrifying_Fences"
+            },
+            {
+              "mag": {
+                "pve": 100
+              },
+              "probability": 1,
+              "duration": 15,
+              "effectType": "MezResist",
+              "stacking": 1,
+              "toWho": "Target",
+              "powerFullName": "Epic.VEAT_Mu_Mastery.Electrifying_Fences",
+              "mezType": "Knockback"
+            },
+            {
+              "mag": {
+                "pve": 100
+              },
+              "probability": 1,
+              "duration": 15,
+              "effectType": "MezResist",
+              "stacking": 1,
+              "toWho": "Target",
+              "powerFullName": "Epic.VEAT_Mu_Mastery.Electrifying_Fences",
+              "mezType": "Knockup"
+            },
+            {
+              "mag": {
+                "pve": -100
+              },
+              "probability": 1,
+              "duration": 15,
+              "effectType": "Mez",
+              "stacking": 1,
+              "toWho": "Target",
+              "powerFullName": "Epic.VEAT_Mu_Mastery.Electrifying_Fences",
+              "mezType": "Knockback"
+            },
+            {
+              "mag": {
+                "pve": -100
+              },
+              "probability": 1,
+              "duration": 15,
+              "effectType": "Mez",
+              "stacking": 1,
+              "toWho": "Target",
+              "powerFullName": "Epic.VEAT_Mu_Mastery.Electrifying_Fences",
+              "mezType": "Knockup"
+            },
+            {
+              "mag": {
+                "pve": -1
+              },
+              "probability": 0.2,
+              "duration": 2,
+              "effectType": "Recovery",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Epic.VEAT_Mu_Mastery.Electrifying_Fences"
+            }
+          ]
+        },
+        {
+          "effectType": "EndDrain",
+          "values": [
+            {
+              "mag": {
+                "pvp": -1
+              },
+              "probability": 1,
+              "duration": 6.2,
+              "effectType": "Endurance",
+              "ticks": 4,
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Epic.VEAT_Mu_Mastery.Electrifying_Fences"
+            }
+          ]
+        }
+      ],
+      "powerIndex": 1,
+      "castTimeReal": 1.17,
+      "toggleCost": 12.74,
+      "fullName": "Epic_Mu_Mastery_Electrifying_Fences",
+      "displayName": "Electrifying Fences",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "attackTypes": 132,
+      "target": 2048,
+      "targetLoS": true,
+      "range": 40,
+      "endCost": 12.74,
+      "rechargeTime": 20,
+      "baseRechargeTime": 20,
+      "effectArea": 2,
+      "radius": 10,
+      "maxTargets": 10,
+      "numAllowed": 1,
+      "description": {
+        "short": "Ranged (Targeted AoE), Minor DoT(Energy), Foe Immobilize, -END",
+        "long": "The Electrifying Fences attempts to Immobilize a group of foes in an area. This power deals some energy damage over time as it slowly drains some Endurance. Damage: Moderate(DoT), Recharge: Slow"
+      },
+      "setTypes": [
+        3,
+        12,
+        22,
+        44
+      ],
+      "level": 35,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 1.31999993,
+      "slottable": true,
+      "aoeModifier": 2.5
+    },
+    {
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Range",
+        "Recharge",
+        "Endurance_Modification"
+      ],
+      "enhancementCount": 6,
+      "archetypeOrder": "epicPool",
+      "effects": [
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 10.0098362,
+                "pvp": 7.377805
+              },
+              "probability": 1,
+              "effectType": "Damage",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Epic.VEAT_Mu_Mastery.Ball_Lightning",
+              "damageType": "Energy"
+            }
+          ]
+        },
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": -0.07
+              },
+              "probability": 1,
+              "effectType": "Endurance",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Epic.VEAT_Mu_Mastery.Ball_Lightning"
+            },
+            {
+              "mag": {
+                "pve": -1
+              },
+              "probability": 0.3,
+              "duration": 4,
+              "effectType": "Recovery",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Epic.VEAT_Mu_Mastery.Ball_Lightning"
+            }
+          ]
+        },
+        {
+          "effectType": "EndDrain",
+          "values": [
+            {
+              "mag": {
+                "pvp": -1.25
+              },
+              "probability": 1,
+              "effectType": "Endurance",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Epic.VEAT_Mu_Mastery.Ball_Lightning"
+            }
+          ]
+        }
+      ],
+      "powerIndex": 2,
+      "castTimeReal": 1.07,
+      "toggleCost": 18.98,
+      "fullName": "Epic_Mu_Mastery_Ball_Lightning",
+      "displayName": "Ball Lightning",
+      "requires": {
+        "powers": {
+          "Epic_Mu_Mastery_Mu_Lightning": true,
+          "Epic_Mu_Mastery_Electrifying_Fences": true
+        },
+        "count": 1
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "attackTypes": 132,
+      "target": 2048,
+      "targetLoS": true,
+      "range": 80,
+      "endCost": 18.98,
+      "rechargeTime": 32,
+      "baseRechargeTime": 32,
+      "effectArea": 2,
+      "radius": 15,
+      "maxTargets": 16,
+      "numAllowed": 1,
+      "description": {
+        "short": "Ranged (Targeted AoE), Moderate DoT(Energy), Foe -End",
+        "long": "Hurls a highly charged ball of Mu lightning that explodes on contact. Ball Lightning deals good damage in an area of effect, and drains some Endurance from each target it hits. You must be level 41 and have Mu Lightning or Electrifying Fences before selecting this power. Damage: Moderate(DoT), Recharge: Long"
+      },
+      "setTypes": [
+        3,
+        22,
+        44
+      ],
+      "level": 41,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 1.31999993,
+      "slottable": true,
+      "aoeModifier": 3.25
+    },
+    {
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Range",
+        "Recharge",
+        "Endurance_Modification"
+      ],
+      "enhancementCount": 6,
+      "archetypeOrder": "epicPool",
+      "effects": [
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 60.05904,
+                "pvp": 77.17086
+              },
+              "probability": 1,
+              "effectType": "Damage",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Epic.VEAT_Mu_Mastery.Static_Discharge",
+              "damageType": "Energy"
+            }
+          ]
+        },
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": -0.07
+              },
+              "probability": 1,
+              "effectType": "Endurance",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Epic.VEAT_Mu_Mastery.Static_Discharge"
+            },
+            {
+              "mag": {
+                "pve": -1
+              },
+              "probability": 1,
+              "duration": 4,
+              "effectType": "Recovery",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Epic.VEAT_Mu_Mastery.Static_Discharge"
+            },
+            {
+              "mag": {
+                "pve": 4.29
+              },
+              "probability": 0.1,
+              "effectType": "Endurance",
+              "toWho": "Self",
+              "powerFullName": "Epic.VEAT_Mu_Mastery.Static_Discharge"
+            }
+          ]
+        },
+        {
+          "effectType": "EndDrain",
+          "values": [
+            {
+              "mag": {
+                "pvp": -1.25
+              },
+              "probability": 1,
+              "effectType": "Endurance",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Epic.VEAT_Mu_Mastery.Static_Discharge"
+            }
+          ]
+        }
+      ],
+      "powerIndex": 3,
+      "castTimeReal": 2.07,
+      "toggleCost": 18.98,
+      "fullName": "Epic_Mu_Mastery_Static_Discharge",
+      "displayName": "Static Discharge",
+      "requires": {
+        "powers": {
+          "Epic_Mu_Mastery_Mu_Lightning": true,
+          "Epic_Mu_Mastery_Electrifying_Fences": true
+        },
+        "count": 1
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "attackTypes": 132,
+      "target": 2048,
+      "targetLoS": true,
+      "range": 40,
+      "endCost": 18.98,
+      "rechargeTime": 24,
+      "baseRechargeTime": 24,
+      "effectArea": 3,
+      "radius": 40,
+      "arc": 45,
+      "maxTargets": 10,
+      "numAllowed": 1,
+      "description": {
+        "short": "Ranged (Cone), Moderate DMG(Energy), -END",
+        "long": "Hurls multiple bolts of Mu Electricity in an arc that deals damage and drains Endurance from all affected foes in the area.  You must be level 41 and have Mu Lightning or Electrifying Fences before selecting this power.  Damage: Moderate, Recharge: Long"
+      },
+      "setTypes": [
+        3,
+        22,
+        44
+      ],
+      "level": 41,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 2.244,
+      "slottable": true,
+      "aoeModifier": 2.37995839
+    },
+    {
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Heal",
+        "Hold",
+        "Recharge",
+        "Endurance_Modification"
+      ],
+      "enhancementCount": 6,
+      "archetypeOrder": "epicPool",
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": -1
+              },
+              "probability": 1,
+              "duration": 240,
+              "effectType": "EntCreate",
+              "toWho": "All",
+              "powerFullName": "Epic.VEAT_Mu_Mastery.Summon_Striker"
+            }
+          ]
+        }
+      ],
+      "powerIndex": 4,
+      "castTimeReal": 1.17,
+      "toggleCost": 26,
+      "fullName": "Epic_Mu_Mastery_Summon_Striker",
+      "displayName": "Summon Striker",
+      "requires": {
+        "powers": {
+          "Epic_Mu_Mastery_Mu_Lightning": true,
+          "Epic_Mu_Mastery_Electrifying_Fences": true,
+          "Epic_Mu_Mastery_Ball_Lightning": true,
+          "Epic_Mu_Mastery_Static_Discharge": true
+        },
+        "count": 2
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "target": 8192,
+      "targetLoS": true,
+      "range": 60,
+      "endCost": 26,
+      "rechargeTime": 900,
+      "baseRechargeTime": 900,
+      "effectArea": 4,
+      "numAllowed": 1,
+      "description": {
+        "short": "Summon Mu Strike: Ranged Moderate DMG(Energy)",
+        "long": "Scirocco has shown you how to call upon a mystical Mu Striker to assist you. The Mu pulse with the blood of their slaughtered ancestors in their veins, and are well practiced in the dark arts. Your access to this Striker is very limited. You can only summon him once every 15 minutes and he will leave after 4 minutes, or if you exit a zone or mission. You must be level 44 and have two other Mu Mastery Powers before selecting this power. Recharge: Extremely Long"
+      },
+      "setTypes": [
+        6,
+        22,
+        27,
+        44
+      ],
+      "level": 44,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 1.31999993,
+      "slottable": true,
+      "aoeModifier": 1
+    }
+  ]
+}

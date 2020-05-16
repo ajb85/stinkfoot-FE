@@ -1,1 +1,817 @@
-{"fullName":"IOSet.Kismet","enhancements":[{"type":"set","description":{"short":"+DEF (all), Reduces End cost","long":"Enhances the defense of a power by {Boost.Attrib.Defense.Scale}% and reduces endurance cost by {Boost.Attrib.Endurance.Scale}%"},"isUnique":false,"fullName":"Boosts.Attuned_Kismet_A.Attuned_Kismet_A","setName":"Kismet","displayName":"Defense/Endurance","effects":[{"mag":0.159375,"effectId":"Defense"},{"mag":0.159375,"effectId":"Boosts_20","damageType":10},{"mag":0.159375,"effectId":"Boosts_20","damageType":11},{"mag":0.159375,"effectId":"Boosts_20","damageType":12},{"mag":0.159375,"effectId":"Boosts_20","damageType":1},{"mag":0.159375,"effectId":"Boosts_20","damageType":2},{"mag":0.159375,"effectId":"Boosts_20","damageType":3},{"mag":0.159375,"effectId":"Boosts_20","damageType":4},{"mag":0.159375,"effectId":"Boosts_20","damageType":5},{"mag":0.159375,"effectId":"Boosts_20","damageType":6},{"mag":0.159375,"effectId":"Boosts_20","damageType":8},{"mag":0.265,"effectId":"Endurance"}]},{"type":"set","description":{"short":"+DEF (all), +Rech","long":"Enhances the defense of a power by {Boost.Attrib.Defense.Scale}% and reduces recharge time by {Boost.Attrib.Recharge.Scale}%"},"isUnique":false,"fullName":"Boosts.Attuned_Kismet_B.Attuned_Kismet_B","setName":"Kismet","displayName":"Defense/Recharge","effects":[{"mag":0.159375,"effectId":"Defense"},{"mag":0.159375,"effectId":"Boosts_20","damageType":10},{"mag":0.159375,"effectId":"Boosts_20","damageType":11},{"mag":0.159375,"effectId":"Boosts_20","damageType":12},{"mag":0.159375,"effectId":"Boosts_20","damageType":1},{"mag":0.159375,"effectId":"Boosts_20","damageType":2},{"mag":0.159375,"effectId":"Boosts_20","damageType":3},{"mag":0.159375,"effectId":"Boosts_20","damageType":4},{"mag":0.159375,"effectId":"Boosts_20","damageType":5},{"mag":0.159375,"effectId":"Boosts_20","damageType":6},{"mag":0.159375,"effectId":"Boosts_20","damageType":8},{"mag":0.265,"effectId":"Recharge"}]},{"type":"set","description":{"short":"Reduces Endurance Cost and Increases Attack Rate","long":"Reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}% and reduces endurance cost by {Boost.Attrib.Endurance.Scale}%"},"isUnique":false,"fullName":"Boosts.Attuned_Kismet_C.Attuned_Kismet_C","setName":"Kismet","displayName":"Endurance/Recharge","effects":[{"mag":0.265,"effectId":"Endurance"},{"mag":0.265,"effectId":"Recharge"}]},{"type":"set","description":{"short":"Enhances Defense, Reduces Endurance Cost and Increases Attack Rate","long":"Enhances the defense of a power by {Boost.Attrib.Defense.Scale}%, reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}% and recharge time by {Boost.Attrib.Recharge.Scale}%"},"isUnique":false,"fullName":"Boosts.Attuned_Kismet_D.Attuned_Kismet_D","setName":"Kismet","displayName":"Defense/Endurance/Recharge","effects":[{"mag":0.1275,"effectId":"Defense"},{"mag":0.1275,"effectId":"Boosts_20","damageType":10},{"mag":0.1275,"effectId":"Boosts_20","damageType":11},{"mag":0.1275,"effectId":"Boosts_20","damageType":12},{"mag":0.1275,"effectId":"Boosts_20","damageType":1},{"mag":0.1275,"effectId":"Boosts_20","damageType":2},{"mag":0.1275,"effectId":"Boosts_20","damageType":3},{"mag":0.1275,"effectId":"Boosts_20","damageType":4},{"mag":0.1275,"effectId":"Boosts_20","damageType":5},{"mag":0.1275,"effectId":"Boosts_20","damageType":6},{"mag":0.1275,"effectId":"Boosts_20","damageType":8},{"mag":0.212,"effectId":"Endurance"},{"mag":0.212,"effectId":"Recharge"}]},{"type":"set","description":{"short":"+ACC","long":"UNIQUE -- No more than 1 enhancement of this type may be slotted by a character.  Increases Accuracy for all attacks by {Boost.Attrib.Accuracy.Scale}% for 120 seconds."},"isUnique":true,"fullName":"Boosts.Attuned_Kismet_E.Attuned_Kismet_E","setName":"Kismet","displayName":"Accuracy","effects":[{"cancelOnMiss":true,"mag":0.06,"effectId":"Accuracy"}]}],"levels":{"min":10,"max":30},"bonuses":["Improved_Recovery_2","Lethal_Smash_Mez_Res_2","Improved_Regeneration_2","Improved_Recharge_Time_2"],"setType":7,"displayName":"Kismet","imageName":"sKismet.png"}
+{
+  "fullName": "IOSet.Kismet",
+  "enhancements": [
+    {
+      "description": {
+        "short": "+DEF (all), Reduces End cost",
+        "long": "Enhances the defense of a power by {Boost.Attrib.Defense.Scale}% and reduces endurance cost by {Boost.Attrib.Endurance.Scale}%"
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Defense",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.159375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 5,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Kismet_A.Attuned_Kismet_A"
+            }
+          ]
+        },
+        {
+          "effectType": "Boosts_20",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.159375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 5,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Kismet_A.Attuned_Kismet_A",
+              "damageType": "Melee"
+            },
+            {
+              "mag": {
+                "pve": 0.159375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 5,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Kismet_A.Attuned_Kismet_A",
+              "damageType": "Ranged"
+            },
+            {
+              "mag": {
+                "pve": 0.159375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 5,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Kismet_A.Attuned_Kismet_A",
+              "damageType": "AoE"
+            },
+            {
+              "mag": {
+                "pve": 0.159375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 5,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Kismet_A.Attuned_Kismet_A",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 0.159375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 5,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Kismet_A.Attuned_Kismet_A",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.159375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 5,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Kismet_A.Attuned_Kismet_A",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.159375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 5,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Kismet_A.Attuned_Kismet_A",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 0.159375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 5,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Kismet_A.Attuned_Kismet_A",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.159375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 5,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Kismet_A.Attuned_Kismet_A",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.159375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 5,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Kismet_A.Attuned_Kismet_A",
+              "damageType": "Psionic"
+            }
+          ]
+        },
+        {
+          "effectType": "Endurance",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 8,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Kismet_A.Attuned_Kismet_A"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Kismet_A.Attuned_Kismet_A",
+      "setName": "Kismet",
+      "displayName": "Defense/Endurance"
+    },
+    {
+      "description": {
+        "short": "+DEF (all), +Rech",
+        "long": "Enhances the defense of a power by {Boost.Attrib.Defense.Scale}% and reduces recharge time by {Boost.Attrib.Recharge.Scale}%"
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Defense",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.159375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 5,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Kismet_B.Attuned_Kismet_B"
+            }
+          ]
+        },
+        {
+          "effectType": "Boosts_20",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.159375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 5,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Kismet_B.Attuned_Kismet_B",
+              "damageType": "Melee"
+            },
+            {
+              "mag": {
+                "pve": 0.159375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 5,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Kismet_B.Attuned_Kismet_B",
+              "damageType": "Ranged"
+            },
+            {
+              "mag": {
+                "pve": 0.159375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 5,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Kismet_B.Attuned_Kismet_B",
+              "damageType": "AoE"
+            },
+            {
+              "mag": {
+                "pve": 0.159375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 5,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Kismet_B.Attuned_Kismet_B",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 0.159375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 5,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Kismet_B.Attuned_Kismet_B",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.159375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 5,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Kismet_B.Attuned_Kismet_B",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.159375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 5,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Kismet_B.Attuned_Kismet_B",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 0.159375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 5,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Kismet_B.Attuned_Kismet_B",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.159375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 5,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Kismet_B.Attuned_Kismet_B",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.159375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 5,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Kismet_B.Attuned_Kismet_B",
+              "damageType": "Psionic"
+            }
+          ]
+        },
+        {
+          "effectType": "Recharge",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 25,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Kismet_B.Attuned_Kismet_B"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Kismet_B.Attuned_Kismet_B",
+      "setName": "Kismet",
+      "displayName": "Defense/Recharge"
+    },
+    {
+      "description": {
+        "short": "Reduces Endurance Cost and Increases Attack Rate",
+        "long": "Reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}% and reduces endurance cost by {Boost.Attrib.Endurance.Scale}%"
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Endurance",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 8,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Kismet_C.Attuned_Kismet_C"
+            }
+          ]
+        },
+        {
+          "effectType": "Recharge",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 25,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Kismet_C.Attuned_Kismet_C"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Kismet_C.Attuned_Kismet_C",
+      "setName": "Kismet",
+      "displayName": "Endurance/Recharge"
+    },
+    {
+      "description": {
+        "short": "Enhances Defense, Reduces Endurance Cost and Increases Attack Rate",
+        "long": "Enhances the defense of a power by {Boost.Attrib.Defense.Scale}%, reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}% and recharge time by {Boost.Attrib.Recharge.Scale}%"
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Defense",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.1275
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 5,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Kismet_D.Attuned_Kismet_D"
+            }
+          ]
+        },
+        {
+          "effectType": "Boosts_20",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.1275
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 5,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Kismet_D.Attuned_Kismet_D",
+              "damageType": "Melee"
+            },
+            {
+              "mag": {
+                "pve": 0.1275
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 5,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Kismet_D.Attuned_Kismet_D",
+              "damageType": "Ranged"
+            },
+            {
+              "mag": {
+                "pve": 0.1275
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 5,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Kismet_D.Attuned_Kismet_D",
+              "damageType": "AoE"
+            },
+            {
+              "mag": {
+                "pve": 0.1275
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 5,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Kismet_D.Attuned_Kismet_D",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 0.1275
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 5,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Kismet_D.Attuned_Kismet_D",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.1275
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 5,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Kismet_D.Attuned_Kismet_D",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.1275
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 5,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Kismet_D.Attuned_Kismet_D",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 0.1275
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 5,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Kismet_D.Attuned_Kismet_D",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.1275
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 5,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Kismet_D.Attuned_Kismet_D",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.1275
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 5,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Kismet_D.Attuned_Kismet_D",
+              "damageType": "Psionic"
+            }
+          ]
+        },
+        {
+          "effectType": "Endurance",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 8,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Kismet_D.Attuned_Kismet_D"
+            }
+          ]
+        },
+        {
+          "effectType": "Recharge",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 25,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Kismet_D.Attuned_Kismet_D"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Kismet_D.Attuned_Kismet_D",
+      "setName": "Kismet",
+      "displayName": "Defense/Endurance/Recharge"
+    },
+    {
+      "description": {
+        "short": "+ACC",
+        "long": "UNIQUE -- No more than 1 enhancement of this type may be slotted by a character.  Increases Accuracy for all attacks by {Boost.Attrib.Accuracy.Scale}% for 120 seconds."
+      },
+      "isUnique": true,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Accuracy",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.06
+              },
+              "cancelOnMiss": true,
+              "probability": 1,
+              "duration": 120,
+              "effectType": "ToHit",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Kismet_E.Attuned_Kismet_E"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Kismet_E.Attuned_Kismet_E",
+      "setName": "Kismet",
+      "displayName": "Accuracy"
+    }
+  ],
+  "levels": {
+    "min": 10,
+    "max": 30
+  },
+  "bonuses": [
+    {
+      "description": {
+        "short": "+Recovery",
+        "long": "Improves your Recovery by 1.5%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 2,
+      "powerSetIndex": 145,
+      "fullName": "Set_Bonus.Set_Bonus.Improved_Recovery_2",
+      "setName": "Set_Bonus",
+      "displayName": "Small Improved Recovery Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.015
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Recovery",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Improved_Recovery_2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+Res (Lethal, Smash, Mez)",
+        "long": "Increases Lethal and Smashing resistance by 2.25% and Mez Resistance by 3.75%"
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 3,
+      "powerSetIndex": 447,
+      "fullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_2",
+      "setName": "Set_Bonus",
+      "displayName": "Small Lethal, Smash and Mez Resistance",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.0225
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_2",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.0225
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_2",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_2",
+              "mezType": "Immobilization"
+            },
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_2",
+              "mezType": "Hold"
+            },
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_2",
+              "mezType": "Stun"
+            },
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_2",
+              "mezType": "Sleep"
+            },
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_2",
+              "mezType": "Terrorize"
+            },
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_2",
+              "mezType": "Confuse"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+Regeneration",
+        "long": "Improves your Regeneration by 6%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 4,
+      "powerSetIndex": 152,
+      "fullName": "Set_Bonus.Set_Bonus.Improved_Regeneration_2",
+      "setName": "Set_Bonus",
+      "displayName": "Small Improved Regeneration Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.06
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Regeneration",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Improved_Regeneration_2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+Recharge Time",
+        "long": "Improves the Recharge Time of all of your powers by 3.75%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 5,
+      "powerSetIndex": 138,
+      "fullName": "Set_Bonus.Set_Bonus.Improved_Recharge_Time_2",
+      "setName": "Set_Bonus",
+      "displayName": "Small Improved Recharge Time Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 25,
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Improved_Recharge_Time_2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "setType": 7,
+  "displayName": "Kismet",
+  "imageName": "sKismet.png"
+}

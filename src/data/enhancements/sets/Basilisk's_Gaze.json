@@ -1,1 +1,576 @@
-{"fullName":"IOSet.Basilisk's_Gaze","enhancements":[{"type":"set","description":{"short":"+ACC, +Hold","long":"Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and hold duration of a power by {Boost.Attrib.Hold.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Basilisks_Gaze_A.Attuned_Basilisks_Gaze_A","setName":"Basilisk's_Gaze","displayName":"Accuracy/Hold","effects":[{"mag":0.265,"effectId":"Hold","mezType":2},{"mag":0.265,"effectId":"Accuracy"}]},{"type":"set","description":{"short":"+ACC, +Rech","long":"Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and reduces the attack rate by {Boost.Attrib.Recharge.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Basilisks_Gaze_B.Attuned_Basilisks_Gaze_B","setName":"Basilisk's_Gaze","displayName":"Accuracy/Recharge","effects":[{"mag":0.265,"effectId":"Accuracy"},{"mag":0.265,"effectId":"Recharge"}]},{"type":"set","description":{"short":"+Rech, +Hold","long":"Reduces the attack rate by {Boost.Attrib.Recharge.Scale}% and hold duration of a power by {Boost.Attrib.Hold.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Basilisks_Gaze_C.Attuned_Basilisks_Gaze_C","setName":"Basilisk's_Gaze","displayName":"Recharge/Hold","effects":[{"mag":0.265,"effectId":"Hold","mezType":2},{"mag":0.265,"effectId":"Recharge"}]},{"type":"set","description":{"short":"-End Cost, +Rech, +Hold","long":"Reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%, reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}% and increases the hold duration of a power by {Boost.Attrib.Hold.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Basilisks_Gaze_D.Attuned_Basilisks_Gaze_D","setName":"Basilisk's_Gaze","displayName":"Endurance Reduction/Recharge/Hold","effects":[{"mag":0.212,"effectId":"Hold","mezType":2},{"mag":0.212,"effectId":"Endurance"},{"mag":0.212,"effectId":"Recharge"}]},{"type":"set","description":{"short":"+Acc, -End Cost, +Rech, +Hold","long":"Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}%, reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%, reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}% and increases the hold duration of a power by {Boost.Attrib.Hold.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Basilisks_Gaze_E.Attuned_Basilisks_Gaze_E","setName":"Basilisk's_Gaze","displayName":"Accuracy/Endurance Reduction/Recharge/Hold","effects":[{"mag":0.1855,"effectId":"Accuracy"},{"mag":0.1855,"effectId":"Hold","mezType":2},{"mag":0.1855,"effectId":"Endurance"},{"mag":0.1855,"effectId":"Recharge"}]},{"type":"set","description":{"short":"Chance for -Rech","long":"Gives a chance to slow your foes recharge rate by 25%.  This effect will trigger roughly 3.5 times per minute."},"isUnique":false,"fullName":"Boosts.Attuned_Basilisks_Gaze_F.Attuned_Basilisks_Gaze_F","setName":"Basilisk's_Gaze","displayName":"Chance for Recharge Slow","effects":[{"procsPerMinute":3.5,"effectId":"Recharge","resistible":true}]}],"levels":{"min":10,"max":30},"bonuses":["Increased_Energy_Neg_Ranged_Def_3","Improved_Recovery_3","Improved_Recharge_Time_5","Energy_Neg_Mez_Res_4","Improved_Regeneration_4"],"setType":10,"displayName":"Basilisk's Gaze","imageName":"Basilisk.png"}
+{
+  "fullName": "IOSet.Basilisk's_Gaze",
+  "enhancements": [
+    {
+      "description": {
+        "short": "+ACC, +Hold",
+        "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and hold duration of a power by {Boost.Attrib.Hold.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Hold",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 19,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Basilisks_Gaze_A.Attuned_Basilisks_Gaze_A",
+              "mezType": "Hold"
+            }
+          ]
+        },
+        {
+          "effectType": "Accuracy",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 1,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Basilisks_Gaze_A.Attuned_Basilisks_Gaze_A"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Basilisks_Gaze_A.Attuned_Basilisks_Gaze_A",
+      "setName": "Basilisk's_Gaze",
+      "displayName": "Accuracy/Hold"
+    },
+    {
+      "description": {
+        "short": "+ACC, +Rech",
+        "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and reduces the attack rate by {Boost.Attrib.Recharge.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Accuracy",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 1,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Basilisks_Gaze_B.Attuned_Basilisks_Gaze_B"
+            }
+          ]
+        },
+        {
+          "effectType": "Recharge",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 25,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Basilisks_Gaze_B.Attuned_Basilisks_Gaze_B"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Basilisks_Gaze_B.Attuned_Basilisks_Gaze_B",
+      "setName": "Basilisk's_Gaze",
+      "displayName": "Accuracy/Recharge"
+    },
+    {
+      "description": {
+        "short": "+Rech, +Hold",
+        "long": "Reduces the attack rate by {Boost.Attrib.Recharge.Scale}% and hold duration of a power by {Boost.Attrib.Hold.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Hold",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 19,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Basilisks_Gaze_C.Attuned_Basilisks_Gaze_C",
+              "mezType": "Hold"
+            }
+          ]
+        },
+        {
+          "effectType": "Recharge",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 25,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Basilisks_Gaze_C.Attuned_Basilisks_Gaze_C"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Basilisks_Gaze_C.Attuned_Basilisks_Gaze_C",
+      "setName": "Basilisk's_Gaze",
+      "displayName": "Recharge/Hold"
+    },
+    {
+      "description": {
+        "short": "-End Cost, +Rech, +Hold",
+        "long": "Reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%, reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}% and increases the hold duration of a power by {Boost.Attrib.Hold.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Hold",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 19,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Basilisks_Gaze_D.Attuned_Basilisks_Gaze_D",
+              "mezType": "Hold"
+            }
+          ]
+        },
+        {
+          "effectType": "Endurance",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 8,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Basilisks_Gaze_D.Attuned_Basilisks_Gaze_D"
+            }
+          ]
+        },
+        {
+          "effectType": "Recharge",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 25,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Basilisks_Gaze_D.Attuned_Basilisks_Gaze_D"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Basilisks_Gaze_D.Attuned_Basilisks_Gaze_D",
+      "setName": "Basilisk's_Gaze",
+      "displayName": "Endurance Reduction/Recharge/Hold"
+    },
+    {
+      "description": {
+        "short": "+Acc, -End Cost, +Rech, +Hold",
+        "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}%, reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%, reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}% and increases the hold duration of a power by {Boost.Attrib.Hold.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Accuracy",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.1855
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 1,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Basilisks_Gaze_E.Attuned_Basilisks_Gaze_E"
+            }
+          ]
+        },
+        {
+          "effectType": "Hold",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.1855
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 19,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Basilisks_Gaze_E.Attuned_Basilisks_Gaze_E",
+              "mezType": "Hold"
+            }
+          ]
+        },
+        {
+          "effectType": "Endurance",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.1855
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 8,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Basilisks_Gaze_E.Attuned_Basilisks_Gaze_E"
+            }
+          ]
+        },
+        {
+          "effectType": "Recharge",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.1855
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 25,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Basilisks_Gaze_E.Attuned_Basilisks_Gaze_E"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Basilisks_Gaze_E.Attuned_Basilisks_Gaze_E",
+      "setName": "Basilisk's_Gaze",
+      "displayName": "Accuracy/Endurance Reduction/Recharge/Hold"
+    },
+    {
+      "description": {
+        "short": "Chance for -Rech",
+        "long": "Gives a chance to slow your foes recharge rate by 25%.  This effect will trigger roughly 3.5 times per minute."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Recharge",
+          "values": [
+            {
+              "mag": {},
+              "procsPerMinute": 3.5,
+              "duration": 20,
+              "effectType": "Enhancement",
+              "eTModifies": 25,
+              "resistible": true,
+              "toWho": "All",
+              "powerFullName": "Boosts.Attuned_Basilisks_Gaze_F.Attuned_Basilisks_Gaze_F"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Basilisks_Gaze_F.Attuned_Basilisks_Gaze_F",
+      "setName": "Basilisk's_Gaze",
+      "displayName": "Chance for Recharge Slow"
+    }
+  ],
+  "levels": {
+    "min": 10,
+    "max": 30
+  },
+  "bonuses": [
+    {
+      "description": {
+        "short": "+DEF",
+        "long": "Increases energy and negative energy defense by 2.5% and ranged defense by 1.25%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 2,
+      "powerSetIndex": 237,
+      "fullName": "Set_Bonus.Set_Bonus.Increased_Energy_Neg_Ranged_Def_3",
+      "setName": "Set_Bonus",
+      "displayName": "Moderate Increased Energy/Negative Energy/Ranged Def Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.025
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Energy_Neg_Ranged_Def_3",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.025
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Energy_Neg_Ranged_Def_3",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.0125
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Energy_Neg_Ranged_Def_3",
+              "damageType": "Ranged"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+Recovery",
+        "long": "Improves your Recovery by 2%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 3,
+      "powerSetIndex": 146,
+      "fullName": "Set_Bonus.Set_Bonus.Improved_Recovery_3",
+      "setName": "Set_Bonus",
+      "displayName": "Moderate Improved Recovery Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.02
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Recovery",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Improved_Recovery_3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+Recharge Time",
+        "long": "Improves the Recharge Time of all of your powers by 7.5%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 4,
+      "powerSetIndex": 141,
+      "fullName": "Set_Bonus.Set_Bonus.Improved_Recharge_Time_5",
+      "setName": "Set_Bonus",
+      "displayName": "Huge Improved Recharge Time Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.075
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 25,
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Improved_Recharge_Time_5"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+Res (Energy, Negative, Mez)",
+        "long": "Increases Energy and Negative Energy resistance by 3.75% and Mez Resistance by 6.25%"
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 5,
+      "powerSetIndex": 59,
+      "fullName": "Set_Bonus.Set_Bonus.Energy_Neg_Mez_Res_4",
+      "setName": "Set_Bonus",
+      "displayName": "Large Energy, Negative Energy and Mez Resistance",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Energy_Neg_Mez_Res_4",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Energy_Neg_Mez_Res_4",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.0625
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Energy_Neg_Mez_Res_4",
+              "mezType": "Immobilization"
+            },
+            {
+              "mag": {
+                "pve": 0.0625
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Energy_Neg_Mez_Res_4",
+              "mezType": "Hold"
+            },
+            {
+              "mag": {
+                "pve": 0.0625
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Energy_Neg_Mez_Res_4",
+              "mezType": "Stun"
+            },
+            {
+              "mag": {
+                "pve": 0.0625
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Energy_Neg_Mez_Res_4",
+              "mezType": "Sleep"
+            },
+            {
+              "mag": {
+                "pve": 0.0625
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Energy_Neg_Mez_Res_4",
+              "mezType": "Terrorize"
+            },
+            {
+              "mag": {
+                "pve": 0.0625
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Energy_Neg_Mez_Res_4",
+              "mezType": "Confuse"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+Regeneration",
+        "long": "Improves your Regeneration by 10%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 6,
+      "powerSetIndex": 154,
+      "fullName": "Set_Bonus.Set_Bonus.Improved_Regeneration_4",
+      "setName": "Set_Bonus",
+      "displayName": "Large Improved Regeneration Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.1
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Regeneration",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Improved_Regeneration_4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "setType": 10,
+  "displayName": "Basilisk's Gaze",
+  "imageName": "Basilisk.png"
+}

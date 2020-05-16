@@ -1,1 +1,722 @@
-{"fullName":"Epic_Electrical_Mastery","archetypeOrder":"epicPool","description":"You have Mastery over Electrical power to defeat your foes, and to add some much needed armor and defense.","imageName":"ElectricalMastery.png","displayName":"Electrical Mastery","powers":[{"allowedEnhancements":["Accuracy","Damage","Endurance_Discount","Range","Recharge","Endurance_Modification"],"enhancementCount":6,"archetypeOrder":"epicPool","powerIndex":0,"castTimeReal":2.17,"toggleCost":14.82,"fullName":"Epic_Electrical_Mastery_Static_Discharge","displayName":"Static Discharge","requires":{"powers":{},"count":0},"accuracy":1,"accuracyMult":1,"attackTypes":132,"target":2048,"targetLoS":true,"range":40,"endCost":14.82,"rechargeTime":12,"baseRechargeTime":12,"effectArea":3,"radius":40,"arc":45,"maxTargets":10,"numAllowed":1,"description":{"short":"Ranged (Cone), Moderate DMG(Energy), -END","long":"Discharges a cone of Static Electricity that deals damage and drains Endurance from all affected foes in the area. Damage: Moderate, Recharge: Slow"},"setTypes":[3,22,44],"level":35,"ignoreEnh":[],"ignore_Buff":[],"castTime":2.376,"slottable":true,"aoeModifier":2.37995839},{"allowedEnhancements":["Accuracy","Damage","Endurance_Discount","Hold","Range","Recharge","Endurance_Modification"],"enhancementCount":6,"archetypeOrder":"epicPool","powerIndex":1,"castTimeReal":2,"toggleCost":10.66,"fullName":"Epic_Electrical_Mastery_Shocking_Bolt","displayName":"Shocking Bolt","requires":{"powers":{},"count":0},"accuracy":1,"accuracyMult":1,"attackTypes":130,"target":2048,"targetLoS":true,"range":80,"endCost":10.66,"rechargeTime":16,"baseRechargeTime":16,"effectArea":1,"numAllowed":1,"description":{"short":"Ranged, Minor DoT(Energy), Foe Hold, -END","long":"Holds a distant foe by shocking him with electricity. The seized target is left writhing in agony and is unable to defend himself. Shocking Bolt also drains some Endurance from the target over time. A portion of drained Endurance may be returned to you. Damage: Minor(DoT), Recharge: Moderate"},"setTypes":[2,10,22,44],"level":35,"ignoreEnh":[],"ignore_Buff":[],"castTime":2.244,"slottable":true,"aoeModifier":1},{"allowedEnhancements":["Endurance_Discount","Recharge","Res_Damage"],"enhancementCount":6,"archetypeOrder":"epicPool","powerIndex":2,"castTimeReal":0.67,"toggleCost":0.325,"fullName":"Epic_Electrical_Mastery_Charged_Armor","displayName":"Charged Armor","requires":{"powers":{"Epic_Electrical_Mastery_Static_Discharge":true,"Epic_Electrical_Mastery_Shocking_Bolt":true},"count":1},"accuracy":1,"accuracyMult":1,"target":1,"targetLoS":true,"endCost":0.1625,"rechargeTime":2,"baseRechargeTime":2,"activatePeriod":0.5,"effectArea":1,"numAllowed":1,"ignoreStrength":true,"description":{"short":"Toggle: Self +Res(Smash, Lethal, Energy)","long":"When you toggle on this power, you are surrounded in a charged field that makes you highly resistant to Smashing, Lethal and Energy damage. You must be level 41 and have Static Discharge or Shocking Bolt before selecting this power. Recharge: Fast"},"setTypes":[8],"alwaysToggle":true,"level":41,"ignoreEnh":[],"ignore_Buff":[],"castTime":0.924,"slottable":true,"aoeModifier":1},{"allowedEnhancements":["Endurance_Discount","Recharge","Endurance_Modification","Res_Damage"],"enhancementCount":6,"archetypeOrder":"epicPool","powerIndex":3,"castTimeReal":1.96,"toggleCost":3.25,"fullName":"Epic_Electrical_Mastery_Surge_of_Power","displayName":"Surge of Power","requires":{"powers":{"Epic_Electrical_Mastery_Static_Discharge":true,"Epic_Electrical_Mastery_Shocking_Bolt":true},"count":1},"accuracy":1,"accuracyMult":1,"target":1,"targetLoS":true,"endCost":3.25,"rechargeTime":1000,"baseRechargeTime":1000,"effectArea":1,"numAllowed":1,"ignoreStrength":true,"description":{"short":"Self, +Res(Special)","long":"When you activate this power, you transform your body into living Electricity and become extremely resistant to all damage but Psionics.  However, expending all this energy will leave you exhausted, and drained of all endurance.  You must be level 41 and have Static Discharge or Shocking Bolt before selecting this power. Recharge: Very Long"},"setTypes":[8,22],"clickBuff":true,"level":41,"ignoreEnh":[],"ignore_Buff":[],"castTime":2.112,"slottable":true,"aoeModifier":1},{"allowedEnhancements":["Accuracy","Endurance_Discount","Recharge","Endurance_Modification","Stun"],"enhancementCount":6,"archetypeOrder":"epicPool","powerIndex":4,"castTimeReal":2.93,"toggleCost":26,"fullName":"Epic_Electrical_Mastery_EM_Pulse","displayName":"EM Pulse","requires":{"powers":{"Epic_Electrical_Mastery_Static_Discharge":true,"Epic_Electrical_Mastery_Shocking_Bolt":true,"Epic_Electrical_Mastery_Charged_Armor":true,"Epic_Electrical_Mastery_Surge_of_Power":true},"count":2},"accuracy":1,"accuracyMult":1,"attackTypes":132,"target":1,"targetLoS":true,"endCost":26,"rechargeTime":800,"baseRechargeTime":800,"effectArea":2,"radius":40,"maxTargets":16,"numAllowed":1,"description":{"short":"PBAoE, Foe Disorient, -END, -Regen, Special vs. Robots; Self -Recovery","long":"You can unleash a massive pulse of electromagnetic energy. This EMP will drain the endurance and HP regeneration of all affected targets and leave them incapacitated and Disoriented for a while. Additionally, most machines and robots will take moderate high damage. However, this power uses a lot of endurance and leaves you unable to recover endurance for a while. You must be level 44 and have two other Electrical Mastery Powers before selecting this power. Recharge: Very Long"},"setTypes":[11,22],"level":44,"ignoreEnh":[],"ignore_Buff":[],"castTime":3.168,"slottable":true,"aoeModifier":7}]}
+{
+  "fullName": "Epic_Electrical_Mastery",
+  "archetypeOrder": "epicPool",
+  "description": "You have Mastery over Electrical power to defeat your foes, and to add some much needed armor and defense.",
+  "imageName": "ElectricalMastery.png",
+  "displayName": "Electrical Mastery",
+  "powers": [
+    {
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Range",
+        "Recharge",
+        "Endurance_Modification"
+      ],
+      "enhancementCount": 6,
+      "archetypeOrder": "epicPool",
+      "effects": [
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 56.9309654,
+                "pvp": 79.88728
+              },
+              "probability": 1,
+              "effectType": "Damage",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Epic.Electrical_Mastery.Static_Discharge",
+              "damageType": "Energy"
+            }
+          ]
+        },
+        {
+          "effectType": "EndDrain",
+          "values": [
+            {
+              "mag": {
+                "pve": -5,
+                "pvp": -1.25
+              },
+              "probability": 1,
+              "effectType": "Endurance",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Epic.Electrical_Mastery.Static_Discharge"
+            }
+          ]
+        }
+      ],
+      "powerIndex": 0,
+      "castTimeReal": 2.17,
+      "toggleCost": 14.82,
+      "fullName": "Epic_Electrical_Mastery_Static_Discharge",
+      "displayName": "Static Discharge",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "attackTypes": 132,
+      "target": 2048,
+      "targetLoS": true,
+      "range": 40,
+      "endCost": 14.82,
+      "rechargeTime": 12,
+      "baseRechargeTime": 12,
+      "effectArea": 3,
+      "radius": 40,
+      "arc": 45,
+      "maxTargets": 10,
+      "numAllowed": 1,
+      "description": {
+        "short": "Ranged (Cone), Moderate DMG(Energy), -END",
+        "long": "Discharges a cone of Static Electricity that deals damage and drains Endurance from all affected foes in the area. Damage: Moderate, Recharge: Slow"
+      },
+      "setTypes": [
+        3,
+        22,
+        44
+      ],
+      "level": 35,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 2.376,
+      "slottable": true,
+      "aoeModifier": 2.37995839
+    },
+    {
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Hold",
+        "Range",
+        "Recharge",
+        "Endurance_Modification"
+      ],
+      "enhancementCount": 6,
+      "archetypeOrder": "epicPool",
+      "effects": [
+        {
+          "effectType": "Immobilize",
+          "values": [
+            {
+              "mag": {
+                "pve": 3,
+                "pvp": 3
+              },
+              "probability": 1,
+              "duration": 14.3040009,
+              "effectType": "Mez",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "attribType": 1,
+              "powerFullName": "Epic.Electrical_Mastery.Shocking_Bolt",
+              "mezType": "Hold"
+            }
+          ]
+        },
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 6.25615025
+              },
+              "probability": 1,
+              "duration": 4.2,
+              "effectType": "Damage",
+              "ticks": 5,
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Epic.Electrical_Mastery.Shocking_Bolt",
+              "damageType": "Energy"
+            }
+          ]
+        },
+        {
+          "effectType": "EndDrain",
+          "values": [
+            {
+              "mag": {
+                "pve": -2,
+                "pvp": -1
+              },
+              "probability": 1,
+              "duration": 8.1,
+              "effectType": "Endurance",
+              "ticks": 5,
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Epic.Electrical_Mastery.Shocking_Bolt"
+            }
+          ]
+        },
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 5.33
+              },
+              "probability": 0.3,
+              "variableModified": true,
+              "effectType": "Endurance",
+              "stacking": 1,
+              "toWho": "Self",
+              "powerFullName": "Epic.Electrical_Mastery.Shocking_Bolt"
+            }
+          ]
+        }
+      ],
+      "powerIndex": 1,
+      "castTimeReal": 2,
+      "toggleCost": 10.66,
+      "fullName": "Epic_Electrical_Mastery_Shocking_Bolt",
+      "displayName": "Shocking Bolt",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "attackTypes": 130,
+      "target": 2048,
+      "targetLoS": true,
+      "range": 80,
+      "endCost": 10.66,
+      "rechargeTime": 16,
+      "baseRechargeTime": 16,
+      "effectArea": 1,
+      "numAllowed": 1,
+      "description": {
+        "short": "Ranged, Minor DoT(Energy), Foe Hold, -END",
+        "long": "Holds a distant foe by shocking him with electricity. The seized target is left writhing in agony and is unable to defend himself. Shocking Bolt also drains some Endurance from the target over time. A portion of drained Endurance may be returned to you. Damage: Minor(DoT), Recharge: Moderate"
+      },
+      "setTypes": [
+        2,
+        10,
+        22,
+        44
+      ],
+      "level": 35,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 2.244,
+      "slottable": true,
+      "aoeModifier": 1
+    },
+    {
+      "allowedEnhancements": [
+        "Endurance_Discount",
+        "Recharge",
+        "Res_Damage"
+      ],
+      "enhancementCount": 6,
+      "archetypeOrder": "epicPool",
+      "effects": [
+        {
+          "effectType": "Res_Dmg",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.1925,
+                "pvp": 0.1925
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Epic.Electrical_Mastery.Charged_Armor",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 0.1925,
+                "pvp": 0.1925
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Epic.Electrical_Mastery.Charged_Armor",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.1925,
+                "pvp": 0.1925
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Epic.Electrical_Mastery.Charged_Armor",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pvp": 0.1925
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Epic.Electrical_Mastery.Charged_Armor",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pvp": 0.1925
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Epic.Electrical_Mastery.Charged_Armor",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pvp": 0.1925
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Epic.Electrical_Mastery.Charged_Armor",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pvp": 0.1925
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Epic.Electrical_Mastery.Charged_Armor",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pvp": 0.1925
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Epic.Electrical_Mastery.Charged_Armor",
+              "damageType": "Psionic"
+            }
+          ]
+        }
+      ],
+      "powerIndex": 2,
+      "castTimeReal": 0.67,
+      "toggleCost": 0.325,
+      "fullName": "Epic_Electrical_Mastery_Charged_Armor",
+      "displayName": "Charged Armor",
+      "requires": {
+        "powers": {
+          "Epic_Electrical_Mastery_Static_Discharge": true,
+          "Epic_Electrical_Mastery_Shocking_Bolt": true
+        },
+        "count": 1
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "target": 1,
+      "targetLoS": true,
+      "endCost": 0.1625,
+      "rechargeTime": 2,
+      "baseRechargeTime": 2,
+      "activatePeriod": 0.5,
+      "effectArea": 1,
+      "numAllowed": 1,
+      "ignoreStrength": true,
+      "description": {
+        "short": "Toggle: Self +Res(Smash, Lethal, Energy)",
+        "long": "When you toggle on this power, you are surrounded in a charged field that makes you highly resistant to Smashing, Lethal and Energy damage. You must be level 41 and have Static Discharge or Shocking Bolt before selecting this power. Recharge: Fast"
+      },
+      "setTypes": [
+        8
+      ],
+      "alwaysToggle": true,
+      "level": 41,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 0.924,
+      "slottable": true,
+      "aoeModifier": 1,
+      "powerType": "Toggle"
+    },
+    {
+      "allowedEnhancements": [
+        "Endurance_Discount",
+        "Recharge",
+        "Endurance_Modification",
+        "Res_Damage"
+      ],
+      "enhancementCount": 6,
+      "archetypeOrder": "epicPool",
+      "effects": [
+        {
+          "effectType": "Res_Dmg",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.35
+              },
+              "probability": 1,
+              "duration": 120,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Epic.Electrical_Mastery.Surge_of_Power",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 0.35
+              },
+              "probability": 1,
+              "duration": 120,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Epic.Electrical_Mastery.Surge_of_Power",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.35
+              },
+              "probability": 1,
+              "duration": 120,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Epic.Electrical_Mastery.Surge_of_Power",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.35
+              },
+              "probability": 1,
+              "duration": 120,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Epic.Electrical_Mastery.Surge_of_Power",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 0.420000017
+              },
+              "probability": 1,
+              "duration": 120,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Epic.Electrical_Mastery.Surge_of_Power",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.28
+              },
+              "probability": 1,
+              "duration": 120,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Epic.Electrical_Mastery.Surge_of_Power",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.35
+              },
+              "probability": 1,
+              "duration": 120,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Epic.Electrical_Mastery.Surge_of_Power",
+              "damageType": "Toxic"
+            }
+          ]
+        },
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 1
+              },
+              "probability": 1,
+              "duration": 120,
+              "effectType": "Recovery",
+              "toWho": "Self",
+              "powerFullName": "Epic.Electrical_Mastery.Surge_of_Power"
+            },
+            {
+              "mag": {},
+              "probability": 1,
+              "duration": 120,
+              "effectType": "Translucency",
+              "toWho": "Self",
+              "powerFullName": "Epic.Electrical_Mastery.Surge_of_Power"
+            },
+            {
+              "mag": {
+                "pve": 1
+              },
+              "probability": 1,
+              "duration": 5,
+              "effectType": "Null",
+              "delayedTime": 120,
+              "toWho": "Self",
+              "powerFullName": "Epic.Electrical_Mastery.Surge_of_Power"
+            },
+            {
+              "mag": {
+                "pve": 1
+              },
+              "probability": 1,
+              "duration": 30,
+              "effectType": "GlobalChanceMod",
+              "toWho": "Self",
+              "powerFullName": "Epic.Electrical_Mastery.Surge_of_Power"
+            }
+          ]
+        },
+        {
+          "effectType": "GlobalCrash",
+          "values": [
+            {
+              "mag": {
+                "pve": -1
+              },
+              "probability": 1,
+              "effectType": "Endurance",
+              "delayedTime": 120,
+              "toWho": "Self",
+              "powerFullName": "Epic.Electrical_Mastery.Surge_of_Power"
+            },
+            {
+              "mag": {
+                "pve": -100
+              },
+              "probability": 1,
+              "duration": 15,
+              "effectType": "Recovery",
+              "delayedTime": 120,
+              "toWho": "Self",
+              "powerFullName": "Epic.Electrical_Mastery.Surge_of_Power"
+            }
+          ]
+        }
+      ],
+      "powerIndex": 3,
+      "castTimeReal": 1.96,
+      "toggleCost": 3.25,
+      "fullName": "Epic_Electrical_Mastery_Surge_of_Power",
+      "displayName": "Surge of Power",
+      "requires": {
+        "powers": {
+          "Epic_Electrical_Mastery_Static_Discharge": true,
+          "Epic_Electrical_Mastery_Shocking_Bolt": true
+        },
+        "count": 1
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "target": 1,
+      "targetLoS": true,
+      "endCost": 3.25,
+      "rechargeTime": 1000,
+      "baseRechargeTime": 1000,
+      "effectArea": 1,
+      "numAllowed": 1,
+      "ignoreStrength": true,
+      "description": {
+        "short": "Self, +Res(Special)",
+        "long": "When you activate this power, you transform your body into living Electricity and become extremely resistant to all damage but Psionics.  However, expending all this energy will leave you exhausted, and drained of all endurance.  You must be level 41 and have Static Discharge or Shocking Bolt before selecting this power. Recharge: Very Long"
+      },
+      "setTypes": [
+        8,
+        22
+      ],
+      "clickBuff": true,
+      "level": 41,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 2.112,
+      "slottable": true,
+      "aoeModifier": 1
+    },
+    {
+      "allowedEnhancements": [
+        "Accuracy",
+        "Endurance_Discount",
+        "Recharge",
+        "Endurance_Modification",
+        "Stun"
+      ],
+      "enhancementCount": 6,
+      "archetypeOrder": "epicPool",
+      "effects": [
+        {
+          "effectType": "Immobilize",
+          "values": [
+            {
+              "mag": {
+                "pve": 1,
+                "pvp": 3
+              },
+              "cancelOnMiss": true,
+              "probability": 1,
+              "duration": 17.8800011,
+              "effectType": "Mez",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "attribType": 1,
+              "powerFullName": "Epic.Electrical_Mastery.EM_Pulse",
+              "mezType": "Stun"
+            }
+          ]
+        },
+        {
+          "effectType": "EndDrain",
+          "values": [
+            {
+              "mag": {
+                "pve": -50,
+                "pvp": -16.67
+              },
+              "probability": 1,
+              "effectType": "Endurance",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Epic.Electrical_Mastery.EM_Pulse"
+            }
+          ]
+        },
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": -10
+              },
+              "probability": 1,
+              "duration": 15,
+              "effectType": "Regeneration",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Epic.Electrical_Mastery.EM_Pulse"
+            },
+            {
+              "mag": {
+                "pve": -1
+              },
+              "probability": 1,
+              "duration": 15,
+              "variableModified": true,
+              "effectType": "Recovery",
+              "stacking": 1,
+              "toWho": "Self",
+              "powerFullName": "Epic.Electrical_Mastery.EM_Pulse"
+            }
+          ]
+        },
+        {
+          "effectType": "Res_Boolean",
+          "values": [
+            {
+              "mag": {
+                "pvp": -7.26600027
+              },
+              "probability": 1,
+              "duration": 15,
+              "effectType": "Regeneration",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Epic.Electrical_Mastery.EM_Pulse"
+            }
+          ]
+        },
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 102.600861
+              },
+              "probability": 1,
+              "effectType": "Damage",
+              "stacking": 1,
+              "resistible": true,
+              "specialCase": 8,
+              "toWho": "Target",
+              "powerFullName": "Epic.Electrical_Mastery.EM_Pulse",
+              "damageType": "Energy"
+            }
+          ]
+        }
+      ],
+      "powerIndex": 4,
+      "castTimeReal": 2.93,
+      "toggleCost": 26,
+      "fullName": "Epic_Electrical_Mastery_EM_Pulse",
+      "displayName": "EM Pulse",
+      "requires": {
+        "powers": {
+          "Epic_Electrical_Mastery_Static_Discharge": true,
+          "Epic_Electrical_Mastery_Shocking_Bolt": true,
+          "Epic_Electrical_Mastery_Charged_Armor": true,
+          "Epic_Electrical_Mastery_Surge_of_Power": true
+        },
+        "count": 2
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "attackTypes": 132,
+      "target": 1,
+      "targetLoS": true,
+      "endCost": 26,
+      "rechargeTime": 800,
+      "baseRechargeTime": 800,
+      "effectArea": 2,
+      "radius": 40,
+      "maxTargets": 16,
+      "numAllowed": 1,
+      "description": {
+        "short": "PBAoE, Foe Disorient, -END, -Regen, Special vs. Robots; Self -Recovery",
+        "long": "You can unleash a massive pulse of electromagnetic energy. This EMP will drain the endurance and HP regeneration of all affected targets and leave them incapacitated and Disoriented for a while. Additionally, most machines and robots will take moderate high damage. However, this power uses a lot of endurance and leaves you unable to recover endurance for a while. You must be level 44 and have two other Electrical Mastery Powers before selecting this power. Recharge: Very Long"
+      },
+      "setTypes": [
+        11,
+        22
+      ],
+      "level": 44,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 3.168,
+      "slottable": true,
+      "aoeModifier": 7
+    }
+  ]
+}

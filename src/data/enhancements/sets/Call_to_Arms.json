@@ -1,1 +1,886 @@
-{"fullName":"IOSet.Call_to_Arms","enhancements":[{"type":"set","description":{"short":"+ACC, +Rech","long":"Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and reduces the attack rate by {Boost.Attrib.Recharge.Scale}%.  NOTE: This enhancement cannot be slotted into a mastermind pet, or pet that doesn't benefit from recharge enhancements."},"isUnique":false,"fullName":"Boosts.Attuned_Call_to_Arms_A.Attuned_Call_to_Arms_A","setName":"Call_to_Arms","displayName":"Accuracy/Recharge","effects":[{"mag":0.265,"effectId":"Accuracy"},{"mag":0.265,"effectId":"Recharge"}]},{"type":"set","description":{"short":"+ACC, +DMG","long":"Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and damage of a power by {Boost.Attrib.Damage.Scale}%.  NOTE: This enhancement cannot be slotted into a mastermind pet, or pet that doesn't benefit from recharge enhancements."},"isUnique":false,"fullName":"Boosts.Attuned_Call_to_Arms_B.Attuned_Call_to_Arms_B","setName":"Call_to_Arms","displayName":"Accuracy/Damage","effects":[{"mag":0.265,"effectId":"Accuracy"},{"mag":0.265,"effectId":"Damage","damageType":1},{"mag":0.265,"effectId":"Boosts_33","damageType":2},{"mag":0.265,"effectId":"Boosts_33","damageType":3},{"mag":0.265,"effectId":"Boosts_33","damageType":4},{"mag":0.265,"effectId":"Boosts_33","damageType":5},{"mag":0.265,"effectId":"Boosts_33","damageType":6},{"mag":0.265,"effectId":"Boosts_33","damageType":7},{"mag":0.265,"effectId":"Boosts_33","damageType":8}]},{"type":"set","description":{"short":"+DMG, -End Cost","long":"Enhances the damage of a power by {Boost.Attrib.Damage.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%.  NOTE: This enhancement cannot be slotted into a mastermind pet, or pet that doesn't benefit from recharge enhancements."},"isUnique":false,"fullName":"Boosts.Attuned_Call_to_Arms_C.Attuned_Call_to_Arms_C","setName":"Call_to_Arms","displayName":"Damage/Endurance","effects":[{"mag":0.265,"effectId":"Endurance"},{"mag":0.265,"effectId":"Damage","damageType":1},{"mag":0.265,"effectId":"Boosts_33","damageType":2},{"mag":0.265,"effectId":"Boosts_33","damageType":3},{"mag":0.265,"effectId":"Boosts_33","damageType":4},{"mag":0.265,"effectId":"Boosts_33","damageType":5},{"mag":0.265,"effectId":"Boosts_33","damageType":6},{"mag":0.265,"effectId":"Boosts_33","damageType":7},{"mag":0.265,"effectId":"Boosts_33","damageType":8}]},{"type":"set","description":{"short":"+ACC, +DMG, +Rech","long":"Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}%, enhances the damage of a power by {Boost.Attrib.Damage.Scale}% and reduces the attack rate by {Boost.Attrib.Recharge.Scale}%.  NOTE: This enhancement cannot be slotted into a mastermind pet, or pet that doesn't benefit from recharge enhancements."},"isUnique":false,"fullName":"Boosts.Attuned_Call_to_Arms_D.Attuned_Call_to_Arms_D","setName":"Call_to_Arms","displayName":"Accuracy/Damage/Recharge","effects":[{"mag":0.212,"effectId":"Damage","damageType":1},{"mag":0.212,"effectId":"Boosts_33","damageType":2},{"mag":0.212,"effectId":"Boosts_33","damageType":3},{"mag":0.212,"effectId":"Boosts_33","damageType":4},{"mag":0.212,"effectId":"Boosts_33","damageType":5},{"mag":0.212,"effectId":"Boosts_33","damageType":6},{"mag":0.212,"effectId":"Boosts_33","damageType":7},{"mag":0.212,"effectId":"Boosts_33","damageType":8},{"mag":0.212,"effectId":"Recharge"},{"mag":0.212,"effectId":"Accuracy"}]},{"type":"set","description":{"short":"-End Cost, +DMG, +Rech","long":"Reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%, enhances the damage of a power by {Boost.Attrib.Damage.Scale}% and reduces the attack rate by {Boost.Attrib.Recharge.Scale}%.  NOTE: This enhancement cannot be slotted into a mastermind pet, or pet that doesn't benefit from recharge enhancements."},"isUnique":false,"fullName":"Boosts.Attuned_Call_to_Arms_E.Attuned_Call_to_Arms_E","setName":"Call_to_Arms","displayName":"Endurance/Damage/Recharge","effects":[{"mag":0.212,"effectId":"Damage","damageType":1},{"mag":0.212,"effectId":"Boosts_33","damageType":2},{"mag":0.212,"effectId":"Boosts_33","damageType":3},{"mag":0.212,"effectId":"Boosts_33","damageType":4},{"mag":0.212,"effectId":"Boosts_33","damageType":5},{"mag":0.212,"effectId":"Boosts_33","damageType":6},{"mag":0.212,"effectId":"Boosts_33","damageType":7},{"mag":0.212,"effectId":"Boosts_33","damageType":8},{"mag":0.212,"effectId":"Recharge"},{"mag":0.212,"effectId":"Endurance"}]},{"type":"set","description":{"short":"+DEF (all) for Henchmen","long":"UNIQUE -- No more than 1 enhancement of this type may be slotted by a character.  Grants you a 20' radius aura which increases your Henchmen's Defense by 5%.  NOTE: This enhancement cannot be slotted into a mastermind pet, or pet that doesn't benefit from recharge enhancements."},"isUnique":true,"fullName":"Boosts.Attuned_Call_to_Arms_F.Attuned_Call_to_Arms_F","setName":"Call_to_Arms","displayName":" Defense Bonus Aura for Pets","effects":[{"cancelOnMiss":true,"mag":1,"variableModified":true,"effectId":"Defense","stacking":1}]}],"levels":{"min":10,"max":30},"bonuses":["Improved_Recovery_4","Increased_Health_3","Improved_Recharge_Time_4","Lethal_Smash_Mez_Res_4","Increased_AoE_Fire_Cold_Def_3"],"setType":27,"displayName":"Call to Arms","imageName":"CallToArms.png"}
+{
+  "fullName": "IOSet.Call_to_Arms",
+  "enhancements": [
+    {
+      "description": {
+        "short": "+ACC, +Rech",
+        "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and reduces the attack rate by {Boost.Attrib.Recharge.Scale}%.  NOTE: This enhancement cannot be slotted into a mastermind pet, or pet that doesn't benefit from recharge enhancements."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Accuracy",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 1,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Call_to_Arms_A.Attuned_Call_to_Arms_A"
+            }
+          ]
+        },
+        {
+          "effectType": "Recharge",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 25,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Call_to_Arms_A.Attuned_Call_to_Arms_A"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Call_to_Arms_A.Attuned_Call_to_Arms_A",
+      "setName": "Call_to_Arms",
+      "displayName": "Accuracy/Recharge"
+    },
+    {
+      "description": {
+        "short": "+ACC, +DMG",
+        "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and damage of a power by {Boost.Attrib.Damage.Scale}%.  NOTE: This enhancement cannot be slotted into a mastermind pet, or pet that doesn't benefit from recharge enhancements."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Accuracy",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 1,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Call_to_Arms_B.Attuned_Call_to_Arms_B"
+            }
+          ]
+        },
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Call_to_Arms_B.Attuned_Call_to_Arms_B",
+              "damageType": "Smashing"
+            }
+          ]
+        },
+        {
+          "effectType": "Boosts_33",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Call_to_Arms_B.Attuned_Call_to_Arms_B",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Call_to_Arms_B.Attuned_Call_to_Arms_B",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Call_to_Arms_B.Attuned_Call_to_Arms_B",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Call_to_Arms_B.Attuned_Call_to_Arms_B",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Call_to_Arms_B.Attuned_Call_to_Arms_B",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Call_to_Arms_B.Attuned_Call_to_Arms_B",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Call_to_Arms_B.Attuned_Call_to_Arms_B",
+              "damageType": "Psionic"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Call_to_Arms_B.Attuned_Call_to_Arms_B",
+      "setName": "Call_to_Arms",
+      "displayName": "Accuracy/Damage"
+    },
+    {
+      "description": {
+        "short": "+DMG, -End Cost",
+        "long": "Enhances the damage of a power by {Boost.Attrib.Damage.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%.  NOTE: This enhancement cannot be slotted into a mastermind pet, or pet that doesn't benefit from recharge enhancements."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Endurance",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 8,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Call_to_Arms_C.Attuned_Call_to_Arms_C"
+            }
+          ]
+        },
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Call_to_Arms_C.Attuned_Call_to_Arms_C",
+              "damageType": "Smashing"
+            }
+          ]
+        },
+        {
+          "effectType": "Boosts_33",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Call_to_Arms_C.Attuned_Call_to_Arms_C",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Call_to_Arms_C.Attuned_Call_to_Arms_C",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Call_to_Arms_C.Attuned_Call_to_Arms_C",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Call_to_Arms_C.Attuned_Call_to_Arms_C",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Call_to_Arms_C.Attuned_Call_to_Arms_C",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Call_to_Arms_C.Attuned_Call_to_Arms_C",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Call_to_Arms_C.Attuned_Call_to_Arms_C",
+              "damageType": "Psionic"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Call_to_Arms_C.Attuned_Call_to_Arms_C",
+      "setName": "Call_to_Arms",
+      "displayName": "Damage/Endurance"
+    },
+    {
+      "description": {
+        "short": "+ACC, +DMG, +Rech",
+        "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}%, enhances the damage of a power by {Boost.Attrib.Damage.Scale}% and reduces the attack rate by {Boost.Attrib.Recharge.Scale}%.  NOTE: This enhancement cannot be slotted into a mastermind pet, or pet that doesn't benefit from recharge enhancements."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Call_to_Arms_D.Attuned_Call_to_Arms_D",
+              "damageType": "Smashing"
+            }
+          ]
+        },
+        {
+          "effectType": "Boosts_33",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Call_to_Arms_D.Attuned_Call_to_Arms_D",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Call_to_Arms_D.Attuned_Call_to_Arms_D",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Call_to_Arms_D.Attuned_Call_to_Arms_D",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Call_to_Arms_D.Attuned_Call_to_Arms_D",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Call_to_Arms_D.Attuned_Call_to_Arms_D",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Call_to_Arms_D.Attuned_Call_to_Arms_D",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Call_to_Arms_D.Attuned_Call_to_Arms_D",
+              "damageType": "Psionic"
+            }
+          ]
+        },
+        {
+          "effectType": "Recharge",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 25,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Call_to_Arms_D.Attuned_Call_to_Arms_D"
+            }
+          ]
+        },
+        {
+          "effectType": "Accuracy",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 1,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Call_to_Arms_D.Attuned_Call_to_Arms_D"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Call_to_Arms_D.Attuned_Call_to_Arms_D",
+      "setName": "Call_to_Arms",
+      "displayName": "Accuracy/Damage/Recharge"
+    },
+    {
+      "description": {
+        "short": "-End Cost, +DMG, +Rech",
+        "long": "Reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%, enhances the damage of a power by {Boost.Attrib.Damage.Scale}% and reduces the attack rate by {Boost.Attrib.Recharge.Scale}%.  NOTE: This enhancement cannot be slotted into a mastermind pet, or pet that doesn't benefit from recharge enhancements."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Call_to_Arms_E.Attuned_Call_to_Arms_E",
+              "damageType": "Smashing"
+            }
+          ]
+        },
+        {
+          "effectType": "Boosts_33",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Call_to_Arms_E.Attuned_Call_to_Arms_E",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Call_to_Arms_E.Attuned_Call_to_Arms_E",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Call_to_Arms_E.Attuned_Call_to_Arms_E",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Call_to_Arms_E.Attuned_Call_to_Arms_E",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Call_to_Arms_E.Attuned_Call_to_Arms_E",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Call_to_Arms_E.Attuned_Call_to_Arms_E",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Call_to_Arms_E.Attuned_Call_to_Arms_E",
+              "damageType": "Psionic"
+            }
+          ]
+        },
+        {
+          "effectType": "Recharge",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 25,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Call_to_Arms_E.Attuned_Call_to_Arms_E"
+            }
+          ]
+        },
+        {
+          "effectType": "Endurance",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 8,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Call_to_Arms_E.Attuned_Call_to_Arms_E"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Call_to_Arms_E.Attuned_Call_to_Arms_E",
+      "setName": "Call_to_Arms",
+      "displayName": "Endurance/Damage/Recharge"
+    },
+    {
+      "description": {
+        "short": "+DEF (all) for Henchmen",
+        "long": "UNIQUE -- No more than 1 enhancement of this type may be slotted by a character.  Grants you a 20' radius aura which increases your Henchmen's Defense by 5%.  NOTE: This enhancement cannot be slotted into a mastermind pet, or pet that doesn't benefit from recharge enhancements."
+      },
+      "isUnique": true,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Defense",
+          "values": [
+            {
+              "mag": {
+                "pve": 1
+              },
+              "cancelOnMiss": true,
+              "probability": 1,
+              "variableModified": true,
+              "effectType": "Null",
+              "stacking": 1,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Call_to_Arms_F.Attuned_Call_to_Arms_F"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Call_to_Arms_F.Attuned_Call_to_Arms_F",
+      "setName": "Call_to_Arms",
+      "displayName": " Defense Bonus Aura for Pets"
+    }
+  ],
+  "levels": {
+    "min": 10,
+    "max": 30
+  },
+  "bonuses": [
+    {
+      "description": {
+        "short": "+Recovery",
+        "long": "Improves your Recovery by 2.5%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 2,
+      "powerSetIndex": 147,
+      "fullName": "Set_Bonus.Set_Bonus.Improved_Recovery_4",
+      "setName": "Set_Bonus",
+      "displayName": "Large Improved Recovery Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.025
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Recovery",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Improved_Recovery_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+Max HP",
+        "long": "Increases maximum health by 1.5%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 3,
+      "powerSetIndex": 286,
+      "fullName": "Set_Bonus.Set_Bonus.Increased_Health_3",
+      "setName": "Set_Bonus",
+      "displayName": "Moderate Increased Health Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "HealSelf",
+          "values": [
+            {
+              "mag": {
+                "pve": 18.0713863
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "HitPoints",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Health_3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+Recharge Time",
+        "long": "Improves the Recharge Time of all of your powers by 6.25%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 4,
+      "powerSetIndex": 140,
+      "fullName": "Set_Bonus.Set_Bonus.Improved_Recharge_Time_4",
+      "setName": "Set_Bonus",
+      "displayName": "Large Improved Recharge Time Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.0625
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 25,
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Improved_Recharge_Time_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+Res (Lethal, Smash, Mez)",
+        "long": "Increases Lethal and Smashing resistance by 3.75% and Mez Resistance by 6.25%"
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 5,
+      "powerSetIndex": 449,
+      "fullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_4",
+      "setName": "Set_Bonus",
+      "displayName": "Large Lethal, Smash and Mez Resistance",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_4",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.0375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_4",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 0.0625
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_4",
+              "mezType": "Immobilization"
+            },
+            {
+              "mag": {
+                "pve": 0.0625
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_4",
+              "mezType": "Hold"
+            },
+            {
+              "mag": {
+                "pve": 0.0625
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_4",
+              "mezType": "Stun"
+            },
+            {
+              "mag": {
+                "pve": 0.0625
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_4",
+              "mezType": "Sleep"
+            },
+            {
+              "mag": {
+                "pve": 0.0625
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_4",
+              "mezType": "Terrorize"
+            },
+            {
+              "mag": {
+                "pve": 0.0625
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_4",
+              "mezType": "Confuse"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+DEF",
+        "long": "Increases area effect defense by 2.5% and fire and cold defense by 1.25%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 6,
+      "powerSetIndex": 195,
+      "fullName": "Set_Bonus.Set_Bonus.Increased_AoE_Fire_Cold_Def_3",
+      "setName": "Set_Bonus",
+      "displayName": "Moderate Increased AoE/Fire/Cold Def Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.025
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_AoE_Fire_Cold_Def_3",
+              "damageType": "AoE"
+            },
+            {
+              "mag": {
+                "pve": 0.0125
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_AoE_Fire_Cold_Def_3",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.0125
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_AoE_Fire_Cold_Def_3",
+              "damageType": "Cold"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "setType": 27,
+  "displayName": "Call to Arms",
+  "imageName": "CallToArms.png"
+}

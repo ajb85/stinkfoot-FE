@@ -1,1 +1,625 @@
-{"fullName":"IOSet.Curtail_Speed","enhancements":[{"type":"set","description":{"short":"+ACC, +Slow","long":"Enhances the accuracy by {Boost.Attrib.Accuracy.Scale}% and slowing ability of a power by {Boost.Attrib.Slow.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Curtail_Speed_A.Attuned_Curtail_Speed_A","setName":"Curtail_Speed","displayName":"Accuracy/Slow","effects":[{"mag":0.265,"effectId":"Accuracy"},{"mag":0.265,"effectId":"Slow"},{"mag":0.265,"effectId":"Boosts_33"},{"mag":0.265,"effectId":"Boosts_33"}]},{"type":"set","description":{"short":"+DMG, +Slow","long":"Enhances the damage by {Boost.Attrib.Damage.Scale}% and slowing ability of a power by {Boost.Attrib.Slow.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Curtail_Speed_B.Attuned_Curtail_Speed_B","setName":"Curtail_Speed","displayName":"Damage/Slow","effects":[{"mag":0.265,"effectId":"Damage","damageType":1},{"mag":0.265,"effectId":"Boosts_33","damageType":2},{"mag":0.265,"effectId":"Boosts_33","damageType":3},{"mag":0.265,"effectId":"Boosts_33","damageType":4},{"mag":0.265,"effectId":"Boosts_33","damageType":5},{"mag":0.265,"effectId":"Boosts_33","damageType":6},{"mag":0.265,"effectId":"Boosts_33","damageType":7},{"mag":0.265,"effectId":"Boosts_33","damageType":8},{"mag":0.265,"effectId":"Slow"},{"mag":0.265,"effectId":"Boosts_33"},{"mag":0.265,"effectId":"Boosts_33"}]},{"type":"set","description":{"short":"+ACC, -End Cost","long":"Enhances the accuracy by {Boost.Attrib.Accuracy.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Curtail_Speed_C.Attuned_Curtail_Speed_C","setName":"Curtail_Speed","displayName":"Accuracy/Endurance","effects":[{"mag":0.265,"effectId":"Accuracy"},{"mag":0.265,"effectId":"Endurance"}]},{"type":"set","description":{"short":"+Range, +Slow","long":"Enhances the range by {Boost.Attrib.Range.Scale}% and slowing ability of a power by {Boost.Attrib.Slow.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Curtail_Speed_D.Attuned_Curtail_Speed_D","setName":"Curtail_Speed","displayName":"Range/Slow","effects":[{"mag":0.159375,"effectId":"Range"},{"mag":0.265,"effectId":"Slow"},{"mag":0.265,"effectId":"Boosts_33"},{"mag":0.265,"effectId":"Boosts_33"}]},{"type":"set","description":{"short":"+Slow, +Rech, -End Cost","long":"Enhances the slowing ability of a power by {Boost.Attrib.Slow.Scale}%, reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}% and reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Curtail_Speed_E.Attuned_Curtail_Speed_E","setName":"Curtail_Speed","displayName":"Endurance/Recharge/Slow","effects":[{"mag":0.212,"effectId":"Endurance"},{"mag":0.212,"effectId":"Recharge"},{"mag":0.212,"effectId":"Slow"},{"mag":0.212,"effectId":"Boosts_33"},{"mag":0.212,"effectId":"Boosts_33"}]}],"levels":{"min":10,"max":30},"bonuses":["Lethal_Smash_Mez_Res_1","Improved_Slow_3","Increased_Lethal_Smash_Melee_Def_1","Improved_Recharge_Time_1"],"setType":13,"displayName":"Curtail Speed","imageName":"sCurtailSpeed.png"}
+{
+  "fullName": "IOSet.Curtail_Speed",
+  "enhancements": [
+    {
+      "description": {
+        "short": "+ACC, +Slow",
+        "long": "Enhances the accuracy by {Boost.Attrib.Accuracy.Scale}% and slowing ability of a power by {Boost.Attrib.Slow.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Accuracy",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 1,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Curtail_Speed_A.Attuned_Curtail_Speed_A"
+            }
+          ]
+        },
+        {
+          "effectType": "Slow",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 32,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Curtail_Speed_A.Attuned_Curtail_Speed_A"
+            }
+          ]
+        },
+        {
+          "effectType": "Boosts_33",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 17,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Curtail_Speed_A.Attuned_Curtail_Speed_A"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Curtail_Speed_A.Attuned_Curtail_Speed_A",
+      "setName": "Curtail_Speed",
+      "displayName": "Accuracy/Slow"
+    },
+    {
+      "description": {
+        "short": "+DMG, +Slow",
+        "long": "Enhances the damage by {Boost.Attrib.Damage.Scale}% and slowing ability of a power by {Boost.Attrib.Slow.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Curtail_Speed_B.Attuned_Curtail_Speed_B",
+              "damageType": "Smashing"
+            }
+          ]
+        },
+        {
+          "effectType": "Boosts_33",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Curtail_Speed_B.Attuned_Curtail_Speed_B",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Curtail_Speed_B.Attuned_Curtail_Speed_B",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Curtail_Speed_B.Attuned_Curtail_Speed_B",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Curtail_Speed_B.Attuned_Curtail_Speed_B",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Curtail_Speed_B.Attuned_Curtail_Speed_B",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Curtail_Speed_B.Attuned_Curtail_Speed_B",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "DamageBuff",
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Curtail_Speed_B.Attuned_Curtail_Speed_B",
+              "damageType": "Psionic"
+            },
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 17,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Curtail_Speed_B.Attuned_Curtail_Speed_B"
+            }
+          ]
+        },
+        {
+          "effectType": "Slow",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 32,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Curtail_Speed_B.Attuned_Curtail_Speed_B"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Curtail_Speed_B.Attuned_Curtail_Speed_B",
+      "setName": "Curtail_Speed",
+      "displayName": "Damage/Slow"
+    },
+    {
+      "description": {
+        "short": "+ACC, -End Cost",
+        "long": "Enhances the accuracy by {Boost.Attrib.Accuracy.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Accuracy",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 1,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Curtail_Speed_C.Attuned_Curtail_Speed_C"
+            }
+          ]
+        },
+        {
+          "effectType": "Endurance",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 8,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Curtail_Speed_C.Attuned_Curtail_Speed_C"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Curtail_Speed_C.Attuned_Curtail_Speed_C",
+      "setName": "Curtail_Speed",
+      "displayName": "Accuracy/Endurance"
+    },
+    {
+      "description": {
+        "short": "+Range, +Slow",
+        "long": "Enhances the range by {Boost.Attrib.Range.Scale}% and slowing ability of a power by {Boost.Attrib.Slow.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Range",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.159375
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 24,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Curtail_Speed_D.Attuned_Curtail_Speed_D"
+            }
+          ]
+        },
+        {
+          "effectType": "Slow",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 32,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Curtail_Speed_D.Attuned_Curtail_Speed_D"
+            }
+          ]
+        },
+        {
+          "effectType": "Boosts_33",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 17,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Curtail_Speed_D.Attuned_Curtail_Speed_D"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Curtail_Speed_D.Attuned_Curtail_Speed_D",
+      "setName": "Curtail_Speed",
+      "displayName": "Range/Slow"
+    },
+    {
+      "description": {
+        "short": "+Slow, +Rech, -End Cost",
+        "long": "Enhances the slowing ability of a power by {Boost.Attrib.Slow.Scale}%, reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}% and reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Endurance",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 8,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Curtail_Speed_E.Attuned_Curtail_Speed_E"
+            }
+          ]
+        },
+        {
+          "effectType": "Recharge",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 25,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Curtail_Speed_E.Attuned_Curtail_Speed_E"
+            }
+          ]
+        },
+        {
+          "effectType": "Slow",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 32,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Curtail_Speed_E.Attuned_Curtail_Speed_E"
+            }
+          ]
+        },
+        {
+          "effectType": "Boosts_33",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 17,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Curtail_Speed_E.Attuned_Curtail_Speed_E"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Curtail_Speed_E.Attuned_Curtail_Speed_E",
+      "setName": "Curtail_Speed",
+      "displayName": "Endurance/Recharge/Slow"
+    }
+  ],
+  "levels": {
+    "min": 10,
+    "max": 30
+  },
+  "bonuses": [
+    {
+      "description": {
+        "short": "+Res (Lethal, Smash, Mez)",
+        "long": "Increases Lethal and Smashing resistance by 1.5% and Mez Resistance by 2.5%"
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 2,
+      "powerSetIndex": 446,
+      "fullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_1",
+      "setName": "Set_Bonus",
+      "displayName": "Tiny Lethal, Smash and Mez Resistance",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.015
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_1",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.015
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Resistance",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_1",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 0.025
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_1",
+              "mezType": "Immobilization"
+            },
+            {
+              "mag": {
+                "pve": 0.025
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_1",
+              "mezType": "Hold"
+            },
+            {
+              "mag": {
+                "pve": 0.025
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_1",
+              "mezType": "Stun"
+            },
+            {
+              "mag": {
+                "pve": 0.025
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_1",
+              "mezType": "Sleep"
+            },
+            {
+              "mag": {
+                "pve": 0.025
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_1",
+              "mezType": "Terrorize"
+            },
+            {
+              "mag": {
+                "pve": 0.025
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "MezResist",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_1",
+              "mezType": "Confuse"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+Slow",
+        "long": "Improves all of your Slow powers by 2%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 3,
+      "powerSetIndex": 167,
+      "fullName": "Set_Bonus.Set_Bonus.Improved_Slow_3",
+      "setName": "Set_Bonus",
+      "displayName": "Moderate Improved Slow Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "buffMode": 2,
+              "mag": {
+                "pve": 0.02
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 17,
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Improved_Slow_3"
+            }
+          ]
+        }
+      ],
+      "buffMode": 2
+    },
+    {
+      "description": {
+        "short": "+DEF",
+        "long": "Increases lethal and smashing defense by 1.25% and melee defense by 0.625%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 4,
+      "powerSetIndex": 305,
+      "fullName": "Set_Bonus.Set_Bonus.Increased_Lethal_Smash_Melee_Def_1",
+      "setName": "Set_Bonus",
+      "displayName": "Tiny Increased Lethal/Smashing/Melee Def Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.0125
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Lethal_Smash_Melee_Def_1",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.0125
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Lethal_Smash_Melee_Def_1",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 0.00625
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Lethal_Smash_Melee_Def_1",
+              "damageType": "Melee"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+Recharge Time",
+        "long": "Improves the Recharge Time of all of your powers by 2.5%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 5,
+      "powerSetIndex": 137,
+      "fullName": "Set_Bonus.Set_Bonus.Improved_Recharge_Time_1",
+      "setName": "Set_Bonus",
+      "displayName": "Tiny Improved Recharge Time Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.025
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 25,
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Improved_Recharge_Time_1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "setType": 13,
+  "displayName": "Curtail Speed",
+  "imageName": "sCurtailSpeed.png"
+}

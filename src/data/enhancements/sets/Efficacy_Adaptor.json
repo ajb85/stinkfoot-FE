@@ -1,1 +1,582 @@
-{"fullName":"IOSet.Efficacy_Adaptor","enhancements":[{"type":"set","description":{"short":"+EndMod","long":"Enhances the Endurance Modification potential of a power by {Boost.Attrib.EndMod.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Efficacy_Adaptor_A.Attuned_Efficacy_Adaptor_A","setName":"Efficacy_Adaptor","displayName":"Endurance Modification","effects":[{"mag":0.424,"effectId":"EndMod"},{"mag":0.424,"effectId":"Endurance"}]},{"type":"set","description":{"short":"+EndMod, +Rech","long":"Enhances the Endurance Modification potential of a power by {Boost.Attrib.EndMod.Scale}% and reduces the recharge time by {Boost.Attrib.Recharge.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Efficacy_Adaptor_B.Attuned_Efficacy_Adaptor_B","setName":"Efficacy_Adaptor","displayName":"Endurance Modification/Recharge","effects":[{"mag":0.265,"effectId":"Recharge"},{"mag":0.265,"effectId":"EndMod"},{"mag":0.265,"effectId":"Endurance"}]},{"type":"set","description":{"short":"+EndMod, +Rech, +ACC","long":"Enhances the Endurance Modification potential of a power by {Boost.Attrib.EndMod.Scale}%, the accuracy by {Boost.Attrib.Accuracy.Scale}% and reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Efficacy_Adaptor_C.Attuned_Efficacy_Adaptor_C","setName":"Efficacy_Adaptor","displayName":"Endurance Modification/Recharge/Accuracy","effects":[{"mag":0.212,"effectId":"Recharge"},{"mag":0.212,"effectId":"Accuracy"},{"mag":0.212,"effectId":"EndMod"},{"mag":0.212,"effectId":"Endurance"}]},{"type":"set","description":{"short":"+Rech, +Acc","long":"Reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}% and increases the accuracy  of a power by {Boost.Attrib.Accuracy.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Efficacy_Adaptor_D.Attuned_Efficacy_Adaptor_D","setName":"Efficacy_Adaptor","displayName":" Recharge/Accuracy","effects":[{"mag":0.265,"effectId":"Recharge"},{"mag":0.265,"effectId":"Accuracy"}]},{"type":"set","description":{"short":"+EndMod, +ACC","long":"Enhances the Endurance Modification potential of a power by {Boost.Attrib.EndMod.Scale}% and the accuracy by {Boost.Attrib.Accuracy.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Efficacy_Adaptor_E.Attuned_Efficacy_Adaptor_E","setName":"Efficacy_Adaptor","displayName":" Endurance Modification/Accuracy","effects":[{"mag":0.265,"effectId":"EndMod"},{"mag":0.265,"effectId":"Accuracy"},{"mag":0.265,"effectId":"Endurance"}]},{"type":"set","description":{"short":"+EndMod, +END","long":"Enhances the Endurance Modification potential of a power by {Boost.Attrib.EndMod.Scale}%, and reduces the endurance cost by {Boost.Attrib.Endurance.Scale}%."},"isUnique":false,"fullName":"Boosts.Attuned_Efficacy_Adaptor_F.Attuned_Efficacy_Adaptor_F","setName":"Efficacy_Adaptor","displayName":" Endurance Modification/Endurance Reduction","effects":[{"mag":0.265,"effectId":"EndMod"},{"mag":0.265,"effectId":"Endurance"},{"mag":0.265,"effectId":"Endurance"}]}],"levels":{"min":21,"max":50},"bonuses":["Increased_Health_2","Improved_Recovery_2","Improved_Regeneration_4","Increased_Damage_4","Improved_Recharge_Time_3"],"setType":22,"displayName":"Efficacy Adaptor","imageName":"sEfficiencyAdaptor.png"}
+{
+  "fullName": "IOSet.Efficacy_Adaptor",
+  "enhancements": [
+    {
+      "description": {
+        "short": "+EndMod",
+        "long": "Enhances the Endurance Modification potential of a power by {Boost.Attrib.EndMod.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "EndMod",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.424
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 26,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Efficacy_Adaptor_A.Attuned_Efficacy_Adaptor_A"
+            }
+          ]
+        },
+        {
+          "effectType": "Endurance",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.424
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 7,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Efficacy_Adaptor_A.Attuned_Efficacy_Adaptor_A"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Efficacy_Adaptor_A.Attuned_Efficacy_Adaptor_A",
+      "setName": "Efficacy_Adaptor",
+      "displayName": "Endurance Modification"
+    },
+    {
+      "description": {
+        "short": "+EndMod, +Rech",
+        "long": "Enhances the Endurance Modification potential of a power by {Boost.Attrib.EndMod.Scale}% and reduces the recharge time by {Boost.Attrib.Recharge.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Recharge",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 25,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Efficacy_Adaptor_B.Attuned_Efficacy_Adaptor_B"
+            }
+          ]
+        },
+        {
+          "effectType": "EndMod",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 26,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Efficacy_Adaptor_B.Attuned_Efficacy_Adaptor_B"
+            }
+          ]
+        },
+        {
+          "effectType": "Endurance",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 7,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Efficacy_Adaptor_B.Attuned_Efficacy_Adaptor_B"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Efficacy_Adaptor_B.Attuned_Efficacy_Adaptor_B",
+      "setName": "Efficacy_Adaptor",
+      "displayName": "Endurance Modification/Recharge"
+    },
+    {
+      "description": {
+        "short": "+EndMod, +Rech, +ACC",
+        "long": "Enhances the Endurance Modification potential of a power by {Boost.Attrib.EndMod.Scale}%, the accuracy by {Boost.Attrib.Accuracy.Scale}% and reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Recharge",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 25,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Efficacy_Adaptor_C.Attuned_Efficacy_Adaptor_C"
+            }
+          ]
+        },
+        {
+          "effectType": "Accuracy",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 1,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Efficacy_Adaptor_C.Attuned_Efficacy_Adaptor_C"
+            }
+          ]
+        },
+        {
+          "effectType": "EndMod",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 26,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Efficacy_Adaptor_C.Attuned_Efficacy_Adaptor_C"
+            }
+          ]
+        },
+        {
+          "effectType": "Endurance",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.212
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 7,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Efficacy_Adaptor_C.Attuned_Efficacy_Adaptor_C"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Efficacy_Adaptor_C.Attuned_Efficacy_Adaptor_C",
+      "setName": "Efficacy_Adaptor",
+      "displayName": "Endurance Modification/Recharge/Accuracy"
+    },
+    {
+      "description": {
+        "short": "+Rech, +Acc",
+        "long": "Reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}% and increases the accuracy  of a power by {Boost.Attrib.Accuracy.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "Recharge",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 25,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Efficacy_Adaptor_D.Attuned_Efficacy_Adaptor_D"
+            }
+          ]
+        },
+        {
+          "effectType": "Accuracy",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 1,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Efficacy_Adaptor_D.Attuned_Efficacy_Adaptor_D"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Efficacy_Adaptor_D.Attuned_Efficacy_Adaptor_D",
+      "setName": "Efficacy_Adaptor",
+      "displayName": " Recharge/Accuracy"
+    },
+    {
+      "description": {
+        "short": "+EndMod, +ACC",
+        "long": "Enhances the Endurance Modification potential of a power by {Boost.Attrib.EndMod.Scale}% and the accuracy by {Boost.Attrib.Accuracy.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "EndMod",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 26,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Efficacy_Adaptor_E.Attuned_Efficacy_Adaptor_E"
+            }
+          ]
+        },
+        {
+          "effectType": "Accuracy",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 1,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Efficacy_Adaptor_E.Attuned_Efficacy_Adaptor_E"
+            }
+          ]
+        },
+        {
+          "effectType": "Endurance",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 7,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Efficacy_Adaptor_E.Attuned_Efficacy_Adaptor_E"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Efficacy_Adaptor_E.Attuned_Efficacy_Adaptor_E",
+      "setName": "Efficacy_Adaptor",
+      "displayName": " Endurance Modification/Accuracy"
+    },
+    {
+      "description": {
+        "short": "+EndMod, +END",
+        "long": "Enhances the Endurance Modification potential of a power by {Boost.Attrib.EndMod.Scale}%, and reduces the endurance cost by {Boost.Attrib.Endurance.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
+      "effects": [
+        {
+          "effectType": "EndMod",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 26,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Efficacy_Adaptor_F.Attuned_Efficacy_Adaptor_F"
+            }
+          ]
+        },
+        {
+          "effectType": "Endurance",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 8,
+              "toWho": "Self",
+              "powerFullName": "Boosts.Attuned_Efficacy_Adaptor_F.Attuned_Efficacy_Adaptor_F"
+            }
+          ]
+        }
+      ],
+      "fullName": "Boosts.Attuned_Efficacy_Adaptor_F.Attuned_Efficacy_Adaptor_F",
+      "setName": "Efficacy_Adaptor",
+      "displayName": " Endurance Modification/Endurance Reduction"
+    }
+  ],
+  "levels": {
+    "min": 21,
+    "max": 50
+  },
+  "bonuses": [
+    {
+      "description": {
+        "short": "+Max HP",
+        "long": "Increases maximum health by 1.13%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 2,
+      "powerSetIndex": 285,
+      "fullName": "Set_Bonus.Set_Bonus.Increased_Health_2",
+      "setName": "Set_Bonus",
+      "displayName": "Small Increased Health Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "HealSelf",
+          "values": [
+            {
+              "mag": {
+                "pve": 13.5535383
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "HitPoints",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Health_2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+Recovery",
+        "long": "Improves your Recovery by 1.5%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 3,
+      "powerSetIndex": 145,
+      "fullName": "Set_Bonus.Set_Bonus.Improved_Recovery_2",
+      "setName": "Set_Bonus",
+      "displayName": "Small Improved Recovery Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.015
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Recovery",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Improved_Recovery_2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+Regeneration",
+        "long": "Improves your Regeneration by 10%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 4,
+      "powerSetIndex": 154,
+      "fullName": "Set_Bonus.Set_Bonus.Improved_Regeneration_4",
+      "setName": "Set_Bonus",
+      "displayName": "Large Improved Regeneration Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.1
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Regeneration",
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Improved_Regeneration_4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+DMG",
+        "long": "Increases damage by 2.5%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 5,
+      "powerSetIndex": 217,
+      "fullName": "Set_Bonus.Set_Bonus.Increased_Damage_4",
+      "setName": "Set_Bonus",
+      "displayName": "Large Increased Damage Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.025
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "DamageBuff",
+              "toWho": "All",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Damage_4",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 0.025
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "DamageBuff",
+              "toWho": "All",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Damage_4",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.025
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "DamageBuff",
+              "toWho": "All",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Damage_4",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.025
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "DamageBuff",
+              "toWho": "All",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Damage_4",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 0.025
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "DamageBuff",
+              "toWho": "All",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Damage_4",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.025
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "DamageBuff",
+              "toWho": "All",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Damage_4",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.025
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "DamageBuff",
+              "toWho": "All",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Damage_4",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pve": 0.025
+              },
+              "probability": 1,
+              "duration": 10.75,
+              "effectType": "DamageBuff",
+              "toWho": "All",
+              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Damage_4",
+              "damageType": "Psionic"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": {
+        "short": "+Recharge Time",
+        "long": "Improves the Recharge Time of all of your powers by 5%."
+      },
+      "isUnique": false,
+      "isPvP": false,
+      "unlocked": 6,
+      "powerSetIndex": 139,
+      "fullName": "Set_Bonus.Set_Bonus.Improved_Recharge_Time_3",
+      "setName": "Set_Bonus",
+      "displayName": "Moderate Improved Recharge Time Bonus",
+      "ignoreStrength": true,
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.05
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "eTModifies": 25,
+              "toWho": "Self",
+              "powerFullName": "Set_Bonus.Set_Bonus.Improved_Recharge_Time_3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "setType": 22,
+  "displayName": "Efficacy Adaptor",
+  "imageName": "sEfficiencyAdaptor.png"
+}
