@@ -48,30 +48,31 @@ function BadgeList({ section, filters }) {
         </div>
         {!badgeList.length && (
           <p style={{ textAlign: 'center', padding: 18 }}>
-            Oops! No badges match that criteria!
+            {filters.search
+              ? 'Oops! No badges match that criteria!'
+              : 'Oh dang, you completed this section.  May I suggest conquering going outside next?'}
           </p>
         )}
-        {badgeList.map(
-          mapBadges(character.toggleBadge.bind(this, badges.active, section))
-        )}
+        {badgeList.map(mapBadges(character.toggleBadge))}
       </div>
     </div>
   );
 }
 
-const mapBadges = (complete) => (b, i) => {
+const mapBadges = (complete) => (b) => {
   const { hero, villain, praetorian } = b;
   const { name, notes, completed } = b;
   const { bonusNotes, location, zone } = b;
+
   return (
     <div
-      key={i}
+      key={b.badgeIndex}
       className={styles.row}
       style={{
         textDecoration: completed ? 'line-through' : null,
         opacity: completed ? 0.5 : null,
       }}
-      onClick={complete.bind(this, i)}
+      onClick={complete.bind(this, b)}
     >
       <div className={joinClass('cell', 'avail')}>
         <p>
@@ -81,7 +82,7 @@ const mapBadges = (complete) => (b, i) => {
         </p>
       </div>
       <div className={joinClass('cell', 'names')}>
-        {name.split(' / ').map((n, i, arr) => (
+        {name.split(' / ').map((n, i) => (
           <p
             key={n}
             style={{ color: getNameColor(b, i) }}

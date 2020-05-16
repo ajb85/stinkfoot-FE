@@ -1,23 +1,20 @@
 import React from 'react';
 
-import { useBadges } from 'Providers/Badges.js';
 import { badgeTypes } from '../data/';
 
 function Selection({ section, updateSection, filterState }) {
-  const { badges } = useBadges();
   const [filters] = filterState;
 
   return (
     <div>
-      {badges.active && Object.keys(badges.characters).length > 0 && (
-        <select value={section} onChange={updateSection}>
-          {badgeTypes.map(({ display, code }) => (
-            <option key={code} value={code}>
-              {display}
-            </option>
-          ))}
-        </select>
-      )}
+      <select value={section} onChange={updateSection}>
+        {badgeTypes.map(({ display, code }) => (
+          <option key={code} value={code}>
+            {display}
+          </option>
+        ))}
+      </select>
+
       <input
         type="text"
         value={filters.search}

@@ -75,8 +75,13 @@ const setActiveCharacter = ([badges, setBadges]) => (e) => {
   }
 };
 
-const toggleComplete = ([badges, setBadges]) => (char, section, badgeIndex) => {
-  const newFlag = !badges.characters[char][section][badgeIndex].completed;
+const toggleComplete = ([badges, setBadges]) => ({
+  badgeSection,
+  badgeIndex,
+}) => {
+  const char = badges.active;
+  console.log(`TOGGLING ${badgeIndex} in ${badgeSection}`);
+  const newFlag = !badges.characters[char][badgeSection][badgeIndex].completed;
 
   const newState = {
     ...badges,
@@ -84,7 +89,7 @@ const toggleComplete = ([badges, setBadges]) => (char, section, badgeIndex) => {
       ...badges.characters,
       [char]: {
         ...badges.characters[char],
-        [section]: badges.characters[char][section].map((b, i) => {
+        [badgeSection]: badges.characters[char][badgeSection].map((b, i) => {
           if (i === badgeIndex) {
             return { ...b, completed: newFlag };
           }

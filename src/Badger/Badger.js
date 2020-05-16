@@ -4,6 +4,8 @@ import ManageCharacter from './ManageCharacter/';
 import Selection from './Selection/';
 import BadgeList from './BadgeList/';
 
+import { useBadges } from 'Providers/Badges.js';
+
 import { badgeTypes } from './data/';
 
 import styles from './styles.module.scss';
@@ -16,6 +18,8 @@ function Badger(props) {
 
   const filterState = useState({ search: '', showCompleted: false });
 
+  const { badges } = useBadges();
+
   React.useEffect(() => {
     if (!section) {
       setSection(badgeTypes[0].code);
@@ -23,15 +27,20 @@ function Badger(props) {
     }
   }, [section]);
 
+  const charCount = Object.keys(badges.characters).length;
   return (
     <div className={styles.Badger}>
       <ManageCharacter />
-      <Selection
-        section={section}
-        updateSection={saveActiveSection(setSection)}
-        filterState={filterState}
-      />
-      <BadgeList section={section} filters={filterState[0]} />
+      {charCount > 0 && (
+        <Selection
+          section={section}
+          updateSection={saveActiveSection(setSection)}
+          filterState={filterState}
+        />
+      )}
+      {charCount > 0 && (
+        <BadgeList section={section} filters={filterState[0]} />
+      )}
     </div>
   );
 }
@@ -43,4 +52,5 @@ const saveActiveSection = (setSection) => (e) => {
 
 const saveLocal = (data) =>
   localStorage.setItem('activeBadgeSection', JSON.stringify(data));
+
 export default Badger;

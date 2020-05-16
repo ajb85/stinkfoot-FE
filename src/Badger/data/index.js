@@ -17,8 +17,10 @@ const badges = {
 };
 
 for (let key in badges) {
-  badges[key].forEach((b) => {
+  badges[key].forEach((b, i) => {
     b.completed = false;
+    b.badgeIndex = i;
+    b.badgeSection = key;
   });
 }
 
