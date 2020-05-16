@@ -19,35 +19,37 @@ function BadgeList({ section, search }) {
 
   return (
     <div className={styles.BadgeList}>
-      <div className={styles.row}>
-        <div className={joinClass('cell', 'avail')}>
-          <h3>Availability</h3>
-        </div>
-        <div className={joinClass('cell', 'names')}>
-          <h3 className={styles.name}>Name</h3>
-        </div>
-        {zone && (
-          <div className={joinClass('cell', 'zone')}>
-            <h3 className={styles.zone}>Zone</h3>
+      <div className={styles.table}>
+        <div className={styles.row}>
+          <div className={joinClass('cell', 'avail')}>
+            <h3>Availability</h3>
           </div>
-        )}
-        {location && (
-          <div className={joinClass('cell', 'location')}>
-            <h3 className={styles.location}>Location</h3>
+          <div className={joinClass('cell', 'names')}>
+            <h3 className={styles.name}>Name</h3>
           </div>
-        )}
-        {bonusNotes && (
-          <div className={joinClass('cell', 'bonusNotes')}>
-            <h3 className={styles.bonusNotes}>Receive</h3>
+          {zone && (
+            <div className={joinClass('cell', 'zone')}>
+              <h3 className={styles.zone}>Zone</h3>
+            </div>
+          )}
+          {location && (
+            <div className={joinClass('cell', 'location')}>
+              <h3 className={styles.location}>Location</h3>
+            </div>
+          )}
+          {bonusNotes && (
+            <div className={joinClass('cell', 'bonusNotes')}>
+              <h3 className={styles.bonusNotes}>Receive</h3>
+            </div>
+          )}
+          <div className={joinClass('cell', 'notes')}>
+            <h3>Notes</h3>
           </div>
-        )}
-        <div className={joinClass('cell', 'notes')}>
-          <h3>Notes</h3>
         </div>
+        {badgeList.map(
+          mapBadges(character.toggleBadge.bind(this, badges.active, section))
+        )}
       </div>
-      {badgeList.map(
-        mapBadges(character.toggleBadge.bind(this, badges.active, section))
-      )}
     </div>
   );
 }
@@ -74,8 +76,12 @@ const mapBadges = (complete) => (b, i) => {
         </p>
       </div>
       <div className={joinClass('cell', 'names')}>
-        {name.split(' / ').map((n) => (
-          <p key={n} className={styles.name}>
+        {name.split(' / ').map((n, i, arr) => (
+          <p
+            key={n}
+            style={{ color: getNameColor(b, i) }}
+            className={styles.name}
+          >
             {n}
           </p>
         ))}
@@ -135,5 +141,23 @@ const filterSearch = (search) => (b) => {
 };
 
 const joinClass = (c1, c2) => styles[c1] + ' ' + styles[c2];
+
+const getNameColor = (badge, i) => {
+  const { hero, villain, name } = badge;
+
+  const split = name.split(' / ');
+
+  const colors = ['lightBlue', '#9a3d3f', 'gold'];
+
+  if (split.length > 1) {
+    return colors[i];
+  } else if (hero) {
+    return colors[0];
+  } else if (villain) {
+    return colors[1];
+  } else {
+    return colors[2];
+  }
+};
 
 export default BadgeList;

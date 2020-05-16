@@ -2,10 +2,16 @@
 
 .BadgeList {
   margin-top: $lh * 3;
+
+  .table {
+    width: fit-content;
+    margin: 0 auto;
+  }
+
   .row {
     display: flex;
-    // align-items: center;
     cursor: pointer;
+    width: fit-content;
   }
 
   .cell {
@@ -13,6 +19,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: $dark;
 
     h3 {
       padding: $lh/2;
@@ -79,6 +86,7 @@
       h3,
       p {
         text-align: left;
+        width: 100%;
       }
     }
   }
