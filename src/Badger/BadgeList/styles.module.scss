@@ -1,0 +1,93 @@
+@import 'styles/variables.scss';
+
+.BadgeList {
+  margin-top: $lh * 3;
+
+  .table {
+    width: fit-content;
+    margin: 0 auto;
+  }
+
+  .row {
+    display: flex;
+    cursor: pointer;
+    width: fit-content;
+  }
+
+  .cell {
+    border: 1px solid $secondary;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $dark;
+
+    h3 {
+      padding: $lh/2;
+      line-height: $lh;
+    }
+
+    p {
+      font-size: 12px;
+      line-height: $lh;
+      padding: $lh/4 $lh/2;
+    }
+
+    &.avail {
+      width: 100px;
+
+      h3,
+      p {
+        text-align: center;
+      }
+    }
+
+    &.names {
+      flex-direction: column;
+      width: 200px;
+      padding: $lh/2;
+
+      h3,
+      p {
+        text-align: center;
+        padding: 0;
+      }
+    }
+
+    &.zone {
+      width: 150px;
+
+      h3,
+      p {
+        text-align: center;
+      }
+    }
+
+    &.location {
+      width: 150px;
+
+      h3,
+      p {
+        text-align: center;
+      }
+    }
+
+    &.bonusNotes {
+      width: 200px;
+
+      h3,
+      p {
+        text-align: center;
+      }
+    }
+
+    &.notes {
+      width: 300px;
+
+      h3,
+      p {
+        text-align: left;
+        width: 100%;
+      }
+    }
+  }
+}

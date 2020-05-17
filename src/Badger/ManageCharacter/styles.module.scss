@@ -1,0 +1,23 @@
+@import 'styles/variables.scss';
+
+.ManageCharacter {
+  display: flex;
+  justify-content: space-between;
+  padding: $lh 0;
+
+  & > div {
+    display: flex;
+    align-items: center;
+
+    select {
+      max-width: 150px;
+      min-width: 150px;
+
+      overflow: hidden;
+    }
+
+    p {
+      margin-left: $lh/2;
+    }
+  }
+}
