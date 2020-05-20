@@ -13,14 +13,14 @@
           "effectType": "Range",
           "values": [
             {
+              "etModifies": "Range",
               "mag": {
                 "pve": 0.255
               },
               "probability": 1,
               "duration": 10.25,
               "effectType": "Enhancement",
-              "eTModifies": 24,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Boosts.Attuned_Jaunt_A.Attuned_Jaunt_A"
             }
           ]
@@ -42,14 +42,14 @@
           "effectType": "Endurance",
           "values": [
             {
+              "etModifies": "EnduranceDiscount",
               "mag": {
                 "pve": 0.424
               },
               "probability": 1,
               "duration": 10.25,
               "effectType": "Enhancement",
-              "eTModifies": 8,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Boosts.Attuned_Jaunt_B.Attuned_Jaunt_B"
             }
           ]
@@ -71,14 +71,14 @@
           "effectType": "Endurance",
           "values": [
             {
+              "etModifies": "EnduranceDiscount",
               "mag": {
                 "pve": 0.265
               },
               "probability": 1,
               "duration": 10.25,
               "effectType": "Enhancement",
-              "eTModifies": 8,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Boosts.Attuned_Jaunt_C.Attuned_Jaunt_C"
             }
           ]
@@ -87,14 +87,14 @@
           "effectType": "Range",
           "values": [
             {
+              "etModifies": "Range",
               "mag": {
                 "pve": 0.159375
               },
               "probability": 1,
               "duration": 10.25,
               "effectType": "Enhancement",
-              "eTModifies": 24,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Boosts.Attuned_Jaunt_C.Attuned_Jaunt_C"
             }
           ]
@@ -116,14 +116,14 @@
           "effectType": "Endurance",
           "values": [
             {
+              "etModifies": "EnduranceDiscount",
               "mag": {
                 "pve": 0.424
               },
               "probability": 1,
               "duration": 10.25,
               "effectType": "Enhancement",
-              "eTModifies": 8,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Boosts.Attuned_TimeSpace_Manipulation_A.Attuned_TimeSpace_Manipulation_A"
             }
           ]
@@ -145,14 +145,14 @@
           "effectType": "Range",
           "values": [
             {
+              "etModifies": "Range",
               "mag": {
                 "pve": 0.255
               },
               "probability": 1,
               "duration": 10.25,
               "effectType": "Enhancement",
-              "eTModifies": 24,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Boosts.Attuned_TimeSpace_Manipulation_B.Attuned_TimeSpace_Manipulation_B"
             }
           ]
@@ -181,7 +181,7 @@
               "probability": 1,
               "duration": 120,
               "effectType": "StealthRadius",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Boosts.Attuned_TimeSpace_Manipulation_C.Attuned_TimeSpace_Manipulation_C"
             }
           ]
@@ -197,7 +197,7 @@
               "probability": 1,
               "duration": 120,
               "effectType": "StealthRadiusPlayer",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Boosts.Attuned_TimeSpace_Manipulation_C.Attuned_TimeSpace_Manipulation_C"
             },
             {
@@ -208,7 +208,7 @@
               "probability": 1,
               "duration": 120,
               "effectType": "Translucency",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Boosts.Attuned_TimeSpace_Manipulation_C.Attuned_TimeSpace_Manipulation_C"
             }
           ]
@@ -225,69 +225,42 @@
   },
   "bonuses": [
     {
-      "description": {
-        "short": "+Regeneration",
-        "long": "Improves your Regeneration by 4%."
-      },
-      "isUnique": false,
-      "isPvP": false,
-      "unlocked": 2,
-      "powerSetIndex": 151,
-      "fullName": "Set_Bonus.Set_Bonus.Improved_Regeneration_1",
-      "setName": "Set_Bonus",
-      "displayName": "Tiny Improved Regeneration Bonus",
-      "ignoreStrength": true,
-      "effects": [
-        {
-          "effectType": "Ones",
-          "values": [
-            {
-              "mag": {
-                "pve": 0.04
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Regeneration",
-              "toWho": "Self",
-              "powerFullName": "Set_Bonus.Set_Bonus.Improved_Regeneration_1"
+      "pve": {
+        "self": {
+          "Regeneration": {
+            "4": {
+              "aggregates": [
+                true
+              ],
+              "hasAggregates": false,
+              "unlocked": 2,
+              "display": "4% Regen"
             }
-          ]
+          }
         }
-      ]
+      },
+      "pvp": {}
     },
     {
-      "description": {
-        "short": "+Max HP",
-        "long": "Increases maximum health by 0.75%."
-      },
-      "isUnique": false,
-      "isPvP": false,
-      "unlocked": 3,
-      "powerSetIndex": 284,
-      "fullName": "Set_Bonus.Set_Bonus.Increased_Health_1",
-      "setName": "Set_Bonus",
-      "displayName": "Tiny Increased Health Bonus",
-      "ignoreStrength": true,
-      "effects": [
-        {
-          "effectType": "HealSelf",
-          "values": [
-            {
-              "mag": {
-                "pve": 9.035693
-              },
-              "probability": 1,
-              "duration": 10.75,
-              "effectType": "HitPoints",
-              "toWho": "Self",
-              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Health_1"
+      "pve": {
+        "self": {
+          "HitPoints": {
+            "903.57": {
+              "aggregates": [
+                true
+              ],
+              "hasAggregates": false,
+              "unlocked": 3,
+              "display": "903.57% Max HP"
             }
-          ]
+          }
         }
-      ]
+      },
+      "pvp": {}
     }
   ],
   "setType": 20,
+  "setTypeName": "Teleport",
   "displayName": "Jaunt",
   "imageName": "sJaunt.png"
 }

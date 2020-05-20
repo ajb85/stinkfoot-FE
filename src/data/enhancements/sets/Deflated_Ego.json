@@ -13,14 +13,14 @@
           "effectType": "ToHitDebuff",
           "values": [
             {
+              "etModifies": "ToHit",
               "mag": {
                 "pve": 0.255
               },
               "probability": 1,
               "duration": 10.25,
               "effectType": "Enhancement",
-              "eTModifies": 40,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Boosts.Attuned_Deflated_Ego_A.Attuned_Deflated_Ego_A"
             }
           ]
@@ -42,14 +42,14 @@
           "effectType": "Recharge",
           "values": [
             {
+              "etModifies": "RechargeTime",
               "mag": {
                 "pve": 0.265
               },
               "probability": 1,
               "duration": 10.25,
               "effectType": "Enhancement",
-              "eTModifies": 25,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Boosts.Attuned_Deflated_Ego_B.Attuned_Deflated_Ego_B"
             }
           ]
@@ -58,14 +58,14 @@
           "effectType": "ToHitDebuff",
           "values": [
             {
+              "etModifies": "ToHit",
               "mag": {
                 "pve": 0.159375
               },
               "probability": 1,
               "duration": 10.25,
               "effectType": "Enhancement",
-              "eTModifies": 40,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Boosts.Attuned_Deflated_Ego_B.Attuned_Deflated_Ego_B"
             }
           ]
@@ -95,7 +95,7 @@
               "duration": 10.25,
               "effectType": "Recovery",
               "resistible": true,
-              "toWho": "All",
+              "toWho": "all",
               "powerFullName": "Boosts.Attuned_Deflated_Ego_C.Attuned_Deflated_Ego_C"
             }
           ]
@@ -112,148 +112,49 @@
   },
   "bonuses": [
     {
-      "description": {
-        "short": "+Accuracy",
-        "long": "Improves the accuracy of all of your powers by 3%."
-      },
-      "isUnique": false,
-      "isPvP": false,
-      "unlocked": 2,
-      "powerSetIndex": 1,
-      "fullName": "Set_Bonus.Set_Bonus.Accuracy_1",
-      "setName": "Set_Bonus",
-      "displayName": "Tiny Accuracy Bonus",
-      "ignoreStrength": true,
-      "effects": [
-        {
-          "effectType": "Ones",
-          "values": [
-            {
-              "mag": {
-                "pve": 0.03
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "eTModifies": 1,
-              "toWho": "Self",
-              "powerFullName": "Set_Bonus.Set_Bonus.Accuracy_1"
+      "pve": {
+        "self": {
+          "Enhancement": {
+            "3": {
+              "aggregates": [
+                true
+              ],
+              "hasAggregates": false,
+              "unlocked": 2,
+              "display": "3% Recharge Speed"
             }
-          ]
+          }
         }
-      ]
+      },
+      "pvp": {}
     },
     {
-      "description": {
-        "short": "+DMG",
-        "long": "Increases damage by 1.5%."
-      },
-      "isUnique": false,
-      "isPvP": false,
-      "unlocked": 3,
-      "powerSetIndex": 215,
-      "fullName": "Set_Bonus.Set_Bonus.Increased_Damage_2",
-      "setName": "Set_Bonus",
-      "displayName": "Small Increased Damage Bonus",
-      "ignoreStrength": true,
-      "effects": [
-        {
-          "effectType": "Ones",
-          "values": [
-            {
-              "mag": {
-                "pve": 0.015
-              },
-              "probability": 1,
-              "duration": 10.75,
-              "effectType": "DamageBuff",
-              "toWho": "All",
-              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Damage_2",
-              "damageType": "Smashing"
-            },
-            {
-              "mag": {
-                "pve": 0.015
-              },
-              "probability": 1,
-              "duration": 10.75,
-              "effectType": "DamageBuff",
-              "toWho": "All",
-              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Damage_2",
-              "damageType": "Lethal"
-            },
-            {
-              "mag": {
-                "pve": 0.015
-              },
-              "probability": 1,
-              "duration": 10.75,
-              "effectType": "DamageBuff",
-              "toWho": "All",
-              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Damage_2",
-              "damageType": "Fire"
-            },
-            {
-              "mag": {
-                "pve": 0.015
-              },
-              "probability": 1,
-              "duration": 10.75,
-              "effectType": "DamageBuff",
-              "toWho": "All",
-              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Damage_2",
-              "damageType": "Cold"
-            },
-            {
-              "mag": {
-                "pve": 0.015
-              },
-              "probability": 1,
-              "duration": 10.75,
-              "effectType": "DamageBuff",
-              "toWho": "All",
-              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Damage_2",
-              "damageType": "Energy"
-            },
-            {
-              "mag": {
-                "pve": 0.015
-              },
-              "probability": 1,
-              "duration": 10.75,
-              "effectType": "DamageBuff",
-              "toWho": "All",
-              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Damage_2",
-              "damageType": "Negative"
-            },
-            {
-              "mag": {
-                "pve": 0.015
-              },
-              "probability": 1,
-              "duration": 10.75,
-              "effectType": "DamageBuff",
-              "toWho": "All",
-              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Damage_2",
-              "damageType": "Toxic"
-            },
-            {
-              "mag": {
-                "pve": 0.015
-              },
-              "probability": 1,
-              "duration": 10.75,
-              "effectType": "DamageBuff",
-              "toWho": "All",
-              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Damage_2",
-              "damageType": "Psionic"
+      "pve": {
+        "all": {
+          "DamageBuff": {
+            "1.5": {
+              "aggregates": [
+                "Smashing",
+                "Lethal",
+                "Fire",
+                "Cold",
+                "Energy",
+                "Negative",
+                "Toxic",
+                "Psionic"
+              ],
+              "hasAggregates": true,
+              "unlocked": 3,
+              "display": "1.5% Damage(Smashing, Lethal, Fire, Cold, Energy, Negative, Toxic, Psionic)"
             }
-          ]
+          }
         }
-      ]
+      },
+      "pvp": {}
     }
   ],
   "setType": 26,
+  "setTypeName": "To Hit Debuff",
   "displayName": "Deflated Ego",
   "imageName": "sDeflatedEgo.png"
 }

@@ -13,14 +13,14 @@
           "effectType": "ToHitDebuff",
           "values": [
             {
+              "etModifies": "ToHit",
               "mag": {
                 "pve": 0.255
               },
               "probability": 1,
               "duration": 10.25,
               "effectType": "Enhancement",
-              "eTModifies": 40,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Boosts.Attuned_Discouraging_Words_A.Attuned_Discouraging_Words_A"
             }
           ]
@@ -42,14 +42,14 @@
           "effectType": "Recharge",
           "values": [
             {
+              "etModifies": "RechargeTime",
               "mag": {
                 "pve": 0.265
               },
               "probability": 1,
               "duration": 10.25,
               "effectType": "Enhancement",
-              "eTModifies": 25,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Boosts.Attuned_Discouraging_Words_B.Attuned_Discouraging_Words_B"
             }
           ]
@@ -58,14 +58,14 @@
           "effectType": "ToHitDebuff",
           "values": [
             {
+              "etModifies": "ToHit",
               "mag": {
                 "pve": 0.159375
               },
               "probability": 1,
               "duration": 10.25,
               "effectType": "Enhancement",
-              "eTModifies": 40,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Boosts.Attuned_Discouraging_Words_B.Attuned_Discouraging_Words_B"
             }
           ]
@@ -87,14 +87,14 @@
           "effectType": "Recharge",
           "values": [
             {
+              "etModifies": "RechargeTime",
               "mag": {
                 "pve": 0.212
               },
               "probability": 1,
               "duration": 10.25,
               "effectType": "Enhancement",
-              "eTModifies": 25,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Boosts.Attuned_Discouraging_Words_C.Attuned_Discouraging_Words_C"
             }
           ]
@@ -103,14 +103,14 @@
           "effectType": "Endurance",
           "values": [
             {
+              "etModifies": "EnduranceDiscount",
               "mag": {
                 "pve": 0.212
               },
               "probability": 1,
               "duration": 10.25,
               "effectType": "Enhancement",
-              "eTModifies": 8,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Boosts.Attuned_Discouraging_Words_C.Attuned_Discouraging_Words_C"
             }
           ]
@@ -119,14 +119,14 @@
           "effectType": "ToHitDebuff",
           "values": [
             {
+              "etModifies": "ToHit",
               "mag": {
                 "pve": 0.1275
               },
               "probability": 1,
               "duration": 10.25,
               "effectType": "Enhancement",
-              "eTModifies": 40,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Boosts.Attuned_Discouraging_Words_C.Attuned_Discouraging_Words_C"
             }
           ]
@@ -143,170 +143,67 @@
   },
   "bonuses": [
     {
-      "description": {
-        "short": "+Res (Toxic, Psionic, Mez)",
-        "long": "Increases Toxic and Psionic resistance by 1.5% and Mez Resistance by 2.5%"
-      },
-      "isUnique": false,
-      "isPvP": false,
-      "unlocked": 2,
-      "powerSetIndex": 521,
-      "fullName": "Set_Bonus.Set_Bonus.Toxic_Psi_Mez_Res_1",
-      "setName": "Set_Bonus",
-      "displayName": "Tiny Toxic, Psionic and Mez Resistance",
-      "ignoreStrength": true,
-      "effects": [
-        {
-          "effectType": "Ones",
-          "values": [
-            {
-              "mag": {
-                "pve": 0.015
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Resistance",
-              "toWho": "Self",
-              "powerFullName": "Set_Bonus.Set_Bonus.Toxic_Psi_Mez_Res_1",
-              "damageType": "Toxic"
-            },
-            {
-              "mag": {
-                "pve": 0.015
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Resistance",
-              "toWho": "Self",
-              "powerFullName": "Set_Bonus.Set_Bonus.Toxic_Psi_Mez_Res_1",
-              "damageType": "Psionic"
-            },
-            {
-              "mag": {
-                "pve": 0.025
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "MezResist",
-              "toWho": "Self",
-              "powerFullName": "Set_Bonus.Set_Bonus.Toxic_Psi_Mez_Res_1",
-              "mezType": "Immobilization"
-            },
-            {
-              "mag": {
-                "pve": 0.025
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "MezResist",
-              "toWho": "Self",
-              "powerFullName": "Set_Bonus.Set_Bonus.Toxic_Psi_Mez_Res_1",
-              "mezType": "Hold"
-            },
-            {
-              "mag": {
-                "pve": 0.025
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "MezResist",
-              "toWho": "Self",
-              "powerFullName": "Set_Bonus.Set_Bonus.Toxic_Psi_Mez_Res_1",
-              "mezType": "Stun"
-            },
-            {
-              "mag": {
-                "pve": 0.025
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "MezResist",
-              "toWho": "Self",
-              "powerFullName": "Set_Bonus.Set_Bonus.Toxic_Psi_Mez_Res_1",
-              "mezType": "Sleep"
-            },
-            {
-              "mag": {
-                "pve": 0.025
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "MezResist",
-              "toWho": "Self",
-              "powerFullName": "Set_Bonus.Set_Bonus.Toxic_Psi_Mez_Res_1",
-              "mezType": "Terrorize"
-            },
-            {
-              "mag": {
-                "pve": 0.025
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "MezResist",
-              "toWho": "Self",
-              "powerFullName": "Set_Bonus.Set_Bonus.Toxic_Psi_Mez_Res_1",
-              "mezType": "Confuse"
+      "pve": {
+        "self": {
+          "Resistance": {
+            "1.5": {
+              "aggregates": [
+                "Toxic",
+                "Psionic"
+              ],
+              "hasAggregates": true,
+              "unlocked": 2,
+              "display": "1.5% Res(Toxic, Psionic)"
             }
-          ]
+          },
+          "MezResist": {
+            "2.5": {
+              "aggregates": [
+                "Immob",
+                "Hold",
+                "Stun",
+                "Sleep",
+                "Terror",
+                "Confuse"
+              ],
+              "hasAggregates": true,
+              "unlocked": 2,
+              "display": "2.5% Res(Immob, Hold, Stun, Sleep, Terror, Confuse)"
+            }
+          }
         }
-      ]
+      },
+      "pvp": {}
     },
     {
-      "description": {
-        "short": "+DEF",
-        "long": "Increases lethal and smashing defense by 1.25% and melee defense by 0.625%."
-      },
-      "isUnique": false,
-      "isPvP": false,
-      "unlocked": 3,
-      "powerSetIndex": 305,
-      "fullName": "Set_Bonus.Set_Bonus.Increased_Lethal_Smash_Melee_Def_1",
-      "setName": "Set_Bonus",
-      "displayName": "Tiny Increased Lethal/Smashing/Melee Def Bonus",
-      "ignoreStrength": true,
-      "effects": [
-        {
-          "effectType": "Ones",
-          "values": [
-            {
-              "mag": {
-                "pve": 0.0125
-              },
-              "probability": 1,
-              "duration": 10.75,
-              "effectType": "Defense",
-              "toWho": "Self",
-              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Lethal_Smash_Melee_Def_1",
-              "damageType": "Lethal"
+      "pve": {
+        "self": {
+          "Defense": {
+            "1.25": {
+              "aggregates": [
+                "Lethal",
+                "Smashing"
+              ],
+              "hasAggregates": true,
+              "unlocked": 3,
+              "display": "1.25% Defense(Lethal, Smashing)"
             },
-            {
-              "mag": {
-                "pve": 0.0125
-              },
-              "probability": 1,
-              "duration": 10.75,
-              "effectType": "Defense",
-              "toWho": "Self",
-              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Lethal_Smash_Melee_Def_1",
-              "damageType": "Smashing"
-            },
-            {
-              "mag": {
-                "pve": 0.00625
-              },
-              "probability": 1,
-              "duration": 10.75,
-              "effectType": "Defense",
-              "toWho": "Self",
-              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Lethal_Smash_Melee_Def_1",
-              "damageType": "Melee"
+            "0.63": {
+              "aggregates": [
+                "Melee"
+              ],
+              "hasAggregates": true,
+              "unlocked": 3,
+              "display": "0.63% Defense(Melee)"
             }
-          ]
+          }
         }
-      ]
+      },
+      "pvp": {}
     }
   ],
   "setType": 26,
+  "setTypeName": "To Hit Debuff",
   "displayName": "Discouraging Words",
   "imageName": "sDiscouragingWords.png"
 }

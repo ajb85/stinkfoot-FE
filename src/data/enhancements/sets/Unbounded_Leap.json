@@ -13,14 +13,14 @@
           "effectType": "Endurance",
           "values": [
             {
+              "etModifies": "EnduranceDiscount",
               "mag": {
                 "pve": 0.424
               },
               "probability": 1,
               "duration": 10.25,
               "effectType": "Enhancement",
-              "eTModifies": 8,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Boosts.Attuned_Unbounded_Leap_A.Attuned_Unbounded_Leap_A"
             }
           ]
@@ -42,14 +42,14 @@
           "effectType": "Jump",
           "values": [
             {
+              "etModifies": "SpeedJumping",
               "mag": {
                 "pve": 0.424
               },
               "probability": 1,
               "duration": 10.25,
               "effectType": "Enhancement",
-              "eTModifies": 17,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Boosts.Attuned_Unbounded_Leap_B.Attuned_Unbounded_Leap_B"
             }
           ]
@@ -58,14 +58,14 @@
           "effectType": "Boosts_33",
           "values": [
             {
+              "etModifies": "JumpHeight",
               "mag": {
                 "pve": 0.424
               },
               "probability": 1,
               "duration": 10.25,
               "effectType": "Enhancement",
-              "eTModifies": 16,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Boosts.Attuned_Unbounded_Leap_B.Attuned_Unbounded_Leap_B"
             }
           ]
@@ -94,7 +94,7 @@
               "probability": 1,
               "duration": 120,
               "effectType": "StealthRadius",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Boosts.Attuned_Unbounded_Leap_C.Attuned_Unbounded_Leap_C"
             }
           ]
@@ -110,7 +110,7 @@
               "probability": 1,
               "duration": 120,
               "effectType": "StealthRadiusPlayer",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Boosts.Attuned_Unbounded_Leap_C.Attuned_Unbounded_Leap_C"
             },
             {
@@ -121,7 +121,7 @@
               "probability": 1,
               "duration": 120,
               "effectType": "Translucency",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Boosts.Attuned_Unbounded_Leap_C.Attuned_Unbounded_Leap_C"
             }
           ]
@@ -138,99 +138,72 @@
   },
   "bonuses": [
     {
-      "description": {
-        "short": "+Move",
-        "long": "Improves all of your Movement speeds by 6%."
-      },
-      "isUnique": false,
-      "isPvP": false,
-      "unlocked": 2,
-      "powerSetIndex": 328,
-      "fullName": "Set_Bonus.Set_Bonus.Increased_Move_3",
-      "setName": "Set_Bonus",
-      "displayName": "Moderate Improved Movement Bonus",
-      "ignoreStrength": true,
-      "effects": [
-        {
-          "effectType": "Ones",
-          "values": [
-            {
-              "mag": {
-                "pve": 0.06
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "SpeedJumping",
-              "toWho": "Self",
-              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Move_3"
-            },
-            {
-              "mag": {
-                "pve": 0.06
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "JumpHeight",
-              "toWho": "Self",
-              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Move_3"
-            },
-            {
-              "mag": {
-                "pve": 0.06
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "SpeedFlying",
-              "toWho": "Self",
-              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Move_3"
-            },
-            {
-              "mag": {
-                "pve": 0.06
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "SpeedRunning",
-              "toWho": "Self",
-              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Move_3"
+      "pve": {
+        "self": {
+          "SpeedJumping": {
+            "6": {
+              "aggregates": [
+                true
+              ],
+              "hasAggregates": false,
+              "unlocked": 2,
+              "display": "6% Jump Speed"
             }
-          ]
+          },
+          "JumpHeight": {
+            "6": {
+              "aggregates": [
+                true
+              ],
+              "hasAggregates": false,
+              "unlocked": 2,
+              "display": "6% Jump Height"
+            }
+          },
+          "SpeedFlying": {
+            "6": {
+              "aggregates": [
+                true
+              ],
+              "hasAggregates": false,
+              "unlocked": 2,
+              "display": "6% Flight Speed"
+            }
+          },
+          "SpeedRunning": {
+            "6": {
+              "aggregates": [
+                true
+              ],
+              "hasAggregates": false,
+              "unlocked": 2,
+              "display": "6% Run Speed"
+            }
+          }
         }
-      ]
+      },
+      "pvp": {}
     },
     {
-      "description": {
-        "short": "+Max HP",
-        "long": "Increases maximum health by 1.5%."
-      },
-      "isUnique": false,
-      "isPvP": false,
-      "unlocked": 3,
-      "powerSetIndex": 286,
-      "fullName": "Set_Bonus.Set_Bonus.Increased_Health_3",
-      "setName": "Set_Bonus",
-      "displayName": "Moderate Increased Health Bonus",
-      "ignoreStrength": true,
-      "effects": [
-        {
-          "effectType": "HealSelf",
-          "values": [
-            {
-              "mag": {
-                "pve": 18.0713863
-              },
-              "probability": 1,
-              "duration": 10.75,
-              "effectType": "HitPoints",
-              "toWho": "Self",
-              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Health_3"
+      "pve": {
+        "self": {
+          "HitPoints": {
+            "1807.14": {
+              "aggregates": [
+                true
+              ],
+              "hasAggregates": false,
+              "unlocked": 3,
+              "display": "1807.14% Max HP"
             }
-          ]
+          }
         }
-      ]
+      },
+      "pvp": {}
     }
   ],
   "setType": 18,
+  "setTypeName": "Leaping",
   "displayName": "Unbounded Leap",
   "imageName": "sUnboundedLeap.png"
 }
