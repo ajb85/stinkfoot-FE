@@ -174,21 +174,91 @@ section.PowerSlots {
     left: -2 * $lh;
     top: $lh;
 
-    height: 100px;
+    // height: 100px;
 
-    width: 250px;
+    width: 400px;
     background-color: $accent2;
-
     border: 1px solid white;
-    padding: $lh/2;
+    // padding: $lh/2;
+
+    $textColor: $secondary;
 
     h2 {
       font-size: 12px;
       text-align: left;
+      color: $textColor;
+      line-height: $lh;
+      padding-left: $lh/2;
+      padding-right: $lh/2;
+      width: fit-content;
     }
 
     h3 {
       font-size: 10px;
+      color: $textColor;
+      line-height: $lh;
+      padding-left: $lh/2;
+      padding-right: $lh/2;
+    }
+
+    .titles {
+      display: flex;
+      justify-content: space-between;
+      margin-top: $lh/2;
+    }
+
+    .hoverContainer {
+      margin: $lh/2 $lh/2 0;
+
+      & > div > p {
+        margin-left: 7px;
+      }
+
+      h3 {
+        font-size: 10px;
+        color: $textColor;
+        line-height: $lh;
+      }
+
+      p {
+        font-size: 10px;
+        line-height: $lh;
+        color: $textColor;
+      }
+
+      .enhancementContainer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+      }
+
+      .enhancementPill {
+        border: 1px solid $secondary;
+        border-radius: 20px;
+        padding-left: $lh/2;
+        padding-right: $lh/2;
+        margin: 0 1px $lh/2;
+      }
+
+      .bonusContainer {
+        display: flex;
+        padding-left: $lh/2;
+
+        & > p {
+          margin-right: 5px;
+          color: $textColor;
+        }
+
+        .bonusText {
+          display: flex;
+          flex-direction: column;
+          color: $textColor;
+
+          span {
+            color: $textColor;
+          }
+        }
+      }
     }
   }
 }

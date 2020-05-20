@@ -407,21 +407,66 @@ function EnhancementPreviewMenu(props) {
 }
 
 function SetPreviewMenu(props) {
-  // const stateManager = React.useContext(PlannerContext);
-  const { displayName } = props.set;
+  const stateManager = React.useContext(PlannerContext);
+  const { displayName, bonuses, enhancements, setTypeName, levels } = props.set;
+  const setBonuses = stateManager.convertSetBonuses(bonuses);
+
   // console.log('SET: ', props.set);
 
   return (
     <div className={styles.EnhHoverMenu}>
       <div className={styles.menu}>
-        <h2>{displayName}</h2>
+        <div className={styles.titles}>
+          <h2>
+            {displayName}, {setTypeName}
+          </h2>
+          {/* <h3>Set Type: {setTypeName}</h3> */}
+          <h3>{parseLevels(levels)}</h3>
+        </div>
+        <div className={styles.hoverContainer}>
+          {/* <h3>Enhancements</h3> */}
+          <div className={styles.enhancementContainer}>
+            {enhancements.map(({ displayName }) => (
+              <p className={styles.enhancementPill}>{displayName}</p>
+            ))}
+          </div>
+        </div>
+        <div className={styles.hoverContainer}>
+          <h3>Set Bonuses</h3>
+          {setBonuses.reduce((acc, { pve, pvp }) => {
+            // { display, effectName, path, unlocked, color? } = pve[i]/pvp[i]
+            for (let i = 0; i < pve.length; i++) {
+              acc.push(
+                <div className={styles.bonusContainer}>
+                  <p>({pve[i][0].unlocked})</p>
+                  <div className={styles.bonusText}>
+                    {pve[i].map((item) => (
+                      <p>
+                        {/* {stateManager
+                          .getBonusText(item.display, item.color)
+                          .map(({ text, color }) => (
+                            <span style={{ color }}>{text}</span>
+                          ))} */}
+                        {item.display}
+                      </p>
+                    ))}
+                  </div>
+                </div>
+              );
+              if (stateManager.getSetting('pvp') && pvp[i]) {
+                acc.push(<p>{pvp[i].display}</p>);
+              }
+            }
+            return acc;
+          }, [])}
+        </div>
       </div>
     </div>
   );
 }
 
-// function SlottedEnhancementMenu(props) {
-//   return <div>Hello World</div>;
-// }
+const parseLevels = ({ min, max }) => {
+  return min === max ? `Level ${min}` : `Levels: ${min} - ${max}`;
+};
 
 export default PowerSlots;
