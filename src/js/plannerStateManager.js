@@ -198,21 +198,9 @@ export default class BuildManager {
         }
       }, []);
     } else if (section === 'sets') {
-      const mapOver =
-        ioSetIndex === null
-          ? ioSets[tier]
-          : ioSets[tier][ioSetIndex].enhancements;
-
-      const ioSetImage =
-        ioSetIndex !== null ? ioSets[tier][ioSetIndex].imageName : null;
-      const { isAttuned } = ioSetIndex !== null ? ioSets[tier][ioSetIndex] : {};
-
-      const mapped = mapOver.map((enh) => {
+      const mapped = ioSets[tier].map((enh) => {
         let { imageName } = enh;
-        if (!imageName && ioSetImage) {
-          imageName = ioSetImage;
-          enh.isAttuned = isAttuned;
-        } else if (!imageName) {
+        if (!imageName) {
           throw new Error('No image found for: ', enh.displayName);
         }
         // Superior enhancements have an "S" in front of them.  The regular attuned
@@ -224,9 +212,7 @@ export default class BuildManager {
         enh.imageName = correctedImgName;
         return enh;
       });
-      return ioSetIndex === null
-        ? mapped
-        : { ...ioSets[tier][ioSets], enhancements: mapped };
+      return mapped;
     } else return [];
   };
 
