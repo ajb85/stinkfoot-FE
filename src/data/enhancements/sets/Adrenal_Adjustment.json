@@ -13,14 +13,14 @@
           "effectType": "EndMod",
           "values": [
             {
+              "etModifies": "Recovery",
               "mag": {
                 "pve": 0.424
               },
               "probability": 1,
               "duration": 10.25,
               "effectType": "Enhancement",
-              "eTModifies": 26,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Boosts.Attuned_Adrenal_Adjustment_A.Attuned_Adrenal_Adjustment_A"
             }
           ]
@@ -29,14 +29,14 @@
           "effectType": "Endurance",
           "values": [
             {
+              "etModifies": "Endurance",
               "mag": {
                 "pve": 0.424
               },
               "probability": 1,
               "duration": 10.25,
               "effectType": "Enhancement",
-              "eTModifies": 7,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Boosts.Attuned_Adrenal_Adjustment_A.Attuned_Adrenal_Adjustment_A"
             }
           ]
@@ -58,14 +58,14 @@
           "effectType": "Recharge",
           "values": [
             {
+              "etModifies": "RechargeTime",
               "mag": {
                 "pve": 0.265
               },
               "probability": 1,
               "duration": 10.25,
               "effectType": "Enhancement",
-              "eTModifies": 25,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Boosts.Attuned_Adrenal_Adjustment_B.Attuned_Adrenal_Adjustment_B"
             }
           ]
@@ -74,14 +74,14 @@
           "effectType": "EndMod",
           "values": [
             {
+              "etModifies": "Recovery",
               "mag": {
                 "pve": 0.265
               },
               "probability": 1,
               "duration": 10.25,
               "effectType": "Enhancement",
-              "eTModifies": 26,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Boosts.Attuned_Adrenal_Adjustment_B.Attuned_Adrenal_Adjustment_B"
             }
           ]
@@ -90,14 +90,14 @@
           "effectType": "Endurance",
           "values": [
             {
+              "etModifies": "Endurance",
               "mag": {
                 "pve": 0.265
               },
               "probability": 1,
               "duration": 10.25,
               "effectType": "Enhancement",
-              "eTModifies": 7,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Boosts.Attuned_Adrenal_Adjustment_B.Attuned_Adrenal_Adjustment_B"
             }
           ]
@@ -119,14 +119,14 @@
           "effectType": "Recharge",
           "values": [
             {
+              "etModifies": "RechargeTime",
               "mag": {
                 "pve": 0.212
               },
               "probability": 1,
               "duration": 10.25,
               "effectType": "Enhancement",
-              "eTModifies": 25,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Boosts.Attuned_Adrenal_Adjustment_C.Attuned_Adrenal_Adjustment_C"
             }
           ]
@@ -135,14 +135,14 @@
           "effectType": "Accuracy",
           "values": [
             {
+              "etModifies": "Accuracy",
               "mag": {
                 "pve": 0.212
               },
               "probability": 1,
               "duration": 10.25,
               "effectType": "Enhancement",
-              "eTModifies": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Boosts.Attuned_Adrenal_Adjustment_C.Attuned_Adrenal_Adjustment_C"
             }
           ]
@@ -151,14 +151,14 @@
           "effectType": "EndMod",
           "values": [
             {
+              "etModifies": "Recovery",
               "mag": {
                 "pve": 0.212
               },
               "probability": 1,
               "duration": 10.25,
               "effectType": "Enhancement",
-              "eTModifies": 26,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Boosts.Attuned_Adrenal_Adjustment_C.Attuned_Adrenal_Adjustment_C"
             }
           ]
@@ -167,14 +167,14 @@
           "effectType": "Endurance",
           "values": [
             {
+              "etModifies": "Endurance",
               "mag": {
                 "pve": 0.212
               },
               "probability": 1,
               "duration": 10.25,
               "effectType": "Enhancement",
-              "eTModifies": 7,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Boosts.Attuned_Adrenal_Adjustment_C.Attuned_Adrenal_Adjustment_C"
             }
           ]
@@ -191,69 +191,42 @@
   },
   "bonuses": [
     {
-      "description": {
-        "short": "+Recovery",
-        "long": "Improves your Recovery by 1%."
-      },
-      "isUnique": false,
-      "isPvP": false,
-      "unlocked": 2,
-      "powerSetIndex": 144,
-      "fullName": "Set_Bonus.Set_Bonus.Improved_Recovery_1",
-      "setName": "Set_Bonus",
-      "displayName": "Tiny Improved Recovery Bonus",
-      "ignoreStrength": true,
-      "effects": [
-        {
-          "effectType": "Ones",
-          "values": [
-            {
-              "mag": {
-                "pve": 0.01
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Recovery",
-              "toWho": "Self",
-              "powerFullName": "Set_Bonus.Set_Bonus.Improved_Recovery_1"
+      "pve": {
+        "self": {
+          "Recovery": {
+            "1": {
+              "aggregates": [
+                true
+              ],
+              "hasAggregates": false,
+              "unlocked": 2,
+              "display": "1% End Recovery"
             }
-          ]
+          }
         }
-      ]
+      },
+      "pvp": {}
     },
     {
-      "description": {
-        "short": "+Max HP",
-        "long": "Increases maximum health by 1.13%."
-      },
-      "isUnique": false,
-      "isPvP": false,
-      "unlocked": 3,
-      "powerSetIndex": 285,
-      "fullName": "Set_Bonus.Set_Bonus.Increased_Health_2",
-      "setName": "Set_Bonus",
-      "displayName": "Small Increased Health Bonus",
-      "ignoreStrength": true,
-      "effects": [
-        {
-          "effectType": "HealSelf",
-          "values": [
-            {
-              "mag": {
-                "pve": 13.5535383
-              },
-              "probability": 1,
-              "duration": 10.75,
-              "effectType": "HitPoints",
-              "toWho": "Self",
-              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Health_2"
+      "pve": {
+        "self": {
+          "HitPoints": {
+            "1355.35": {
+              "aggregates": [
+                true
+              ],
+              "hasAggregates": false,
+              "unlocked": 3,
+              "display": "1355.35% Max HP"
             }
-          ]
+          }
         }
-      ]
+      },
+      "pvp": {}
     }
   ],
   "setType": 22,
+  "setTypeName": "Endurance Modification",
   "displayName": "Adrenal Adjustment",
   "imageName": "sAdrenalAdj.png"
 }

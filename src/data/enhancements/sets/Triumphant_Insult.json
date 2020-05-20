@@ -13,14 +13,14 @@
           "effectType": "Taunt",
           "values": [
             {
+              "etModifies": "Mez",
               "mag": {
                 "pve": 0.424
               },
               "probability": 1,
               "duration": 10.25,
               "effectType": "Enhancement",
-              "eTModifies": 19,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Boosts.Attuned_Triumphant_Insult_A.Attuned_Triumphant_Insult_A",
               "mezType": "Taunt"
             }
@@ -43,14 +43,14 @@
           "effectType": "Recharge",
           "values": [
             {
+              "etModifies": "RechargeTime",
               "mag": {
                 "pve": 0.265
               },
               "probability": 1,
               "duration": 10.25,
               "effectType": "Enhancement",
-              "eTModifies": 25,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Boosts.Attuned_Triumphant_Insult_B.Attuned_Triumphant_Insult_B"
             }
           ]
@@ -59,14 +59,14 @@
           "effectType": "Taunt",
           "values": [
             {
+              "etModifies": "Mez",
               "mag": {
                 "pve": 0.265
               },
               "probability": 1,
               "duration": 10.25,
               "effectType": "Enhancement",
-              "eTModifies": 19,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Boosts.Attuned_Triumphant_Insult_B.Attuned_Triumphant_Insult_B",
               "mezType": "Taunt"
             }
@@ -98,7 +98,7 @@
               "effectType": "Mez",
               "stacking": 1,
               "resistible": true,
-              "toWho": "All",
+              "toWho": "all",
               "attribType": 1,
               "powerFullName": "Boosts.Attuned_Triumphant_Insult_C.Attuned_Triumphant_Insult_C",
               "mezType": "Stun"
@@ -118,7 +118,7 @@
               "effectType": "Mez",
               "stacking": 1,
               "resistible": true,
-              "toWho": "All",
+              "toWho": "all",
               "attribType": 1,
               "powerFullName": "Boosts.Attuned_Triumphant_Insult_C.Attuned_Triumphant_Insult_C",
               "mezType": "Stun"
@@ -137,92 +137,51 @@
   },
   "bonuses": [
     {
-      "description": {
-        "short": "+Recovery",
-        "long": "Improves your Recovery by 1%."
-      },
-      "isUnique": false,
-      "isPvP": false,
-      "unlocked": 2,
-      "powerSetIndex": 144,
-      "fullName": "Set_Bonus.Set_Bonus.Improved_Recovery_1",
-      "setName": "Set_Bonus",
-      "displayName": "Tiny Improved Recovery Bonus",
-      "ignoreStrength": true,
-      "effects": [
-        {
-          "effectType": "Ones",
-          "values": [
-            {
-              "mag": {
-                "pve": 0.01
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Recovery",
-              "toWho": "Self",
-              "powerFullName": "Set_Bonus.Set_Bonus.Improved_Recovery_1"
+      "pve": {
+        "self": {
+          "Recovery": {
+            "1": {
+              "aggregates": [
+                true
+              ],
+              "hasAggregates": false,
+              "unlocked": 2,
+              "display": "1% End Recovery"
             }
-          ]
+          }
         }
-      ]
+      },
+      "pvp": {}
     },
     {
-      "description": {
-        "short": "+DEF",
-        "long": "Increases lethal and smashing defense by 1.88% and melee defense by 0.94%."
-      },
-      "isUnique": false,
-      "isPvP": false,
-      "unlocked": 3,
-      "powerSetIndex": 306,
-      "fullName": "Set_Bonus.Set_Bonus.Increased_Lethal_Smash_Melee_Def_2",
-      "setName": "Set_Bonus",
-      "displayName": "Small Increased Lethal/Smashing/Melee Def Bonus",
-      "ignoreStrength": true,
-      "effects": [
-        {
-          "effectType": "Ones",
-          "values": [
-            {
-              "mag": {
-                "pve": 0.01875
-              },
-              "probability": 1,
-              "duration": 10.75,
-              "effectType": "Defense",
-              "toWho": "Self",
-              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Lethal_Smash_Melee_Def_2",
-              "damageType": "Lethal"
+      "pve": {
+        "self": {
+          "Defense": {
+            "1.88": {
+              "aggregates": [
+                "Lethal",
+                "Smashing"
+              ],
+              "hasAggregates": true,
+              "unlocked": 3,
+              "display": "1.88% Defense(Lethal, Smashing)"
             },
-            {
-              "mag": {
-                "pve": 0.01875
-              },
-              "probability": 1,
-              "duration": 10.75,
-              "effectType": "Defense",
-              "toWho": "Self",
-              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Lethal_Smash_Melee_Def_2",
-              "damageType": "Smashing"
-            },
-            {
-              "mag": {
-                "pve": 0.00938
-              },
-              "probability": 1,
-              "duration": 10.75,
-              "effectType": "Defense",
-              "toWho": "Self",
-              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Lethal_Smash_Melee_Def_2",
-              "damageType": "Melee"
+            "0.94": {
+              "aggregates": [
+                "Melee"
+              ],
+              "hasAggregates": true,
+              "unlocked": 3,
+              "display": "0.94% Defense(Melee)"
             }
-          ]
+          }
         }
-      ]
+      },
+      "pvp": {}
     }
   ],
   "setType": 24,
+  "setTypeName": "Taunt",
   "displayName": "Triumphant Insult",
   "imageName": "sTriumphantInsult.png"
 }

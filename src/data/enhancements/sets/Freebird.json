@@ -13,14 +13,14 @@
           "effectType": "Endurance",
           "values": [
             {
+              "etModifies": "EnduranceDiscount",
               "mag": {
                 "pve": 0.424
               },
               "probability": 1,
               "duration": 10.25,
               "effectType": "Enhancement",
-              "eTModifies": 8,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Boosts.Attuned_Freebird_A.Attuned_Freebird_A"
             }
           ]
@@ -42,14 +42,14 @@
           "effectType": "Fly",
           "values": [
             {
+              "etModifies": "SpeedFlying",
               "mag": {
                 "pve": 0.424
               },
               "probability": 1,
               "duration": 10.25,
               "effectType": "Enhancement",
-              "eTModifies": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Boosts.Attuned_Freebird_B.Attuned_Freebird_B"
             }
           ]
@@ -78,7 +78,7 @@
               "probability": 1,
               "duration": 120,
               "effectType": "StealthRadius",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Boosts.Attuned_Freebird_C.Attuned_Freebird_C"
             }
           ]
@@ -94,7 +94,7 @@
               "probability": 1,
               "duration": 120,
               "effectType": "StealthRadiusPlayer",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Boosts.Attuned_Freebird_C.Attuned_Freebird_C"
             },
             {
@@ -105,7 +105,7 @@
               "probability": 1,
               "duration": 120,
               "effectType": "Translucency",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Boosts.Attuned_Freebird_C.Attuned_Freebird_C"
             }
           ]
@@ -122,69 +122,42 @@
   },
   "bonuses": [
     {
-      "description": {
-        "short": "+Regeneration",
-        "long": "Improves your Regeneration by 8%."
-      },
-      "isUnique": false,
-      "isPvP": false,
-      "unlocked": 2,
-      "powerSetIndex": 153,
-      "fullName": "Set_Bonus.Set_Bonus.Improved_Regeneration_3",
-      "setName": "Set_Bonus",
-      "displayName": "Moderate Improved Regeneration Bonus",
-      "ignoreStrength": true,
-      "effects": [
-        {
-          "effectType": "Ones",
-          "values": [
-            {
-              "mag": {
-                "pve": 0.08
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Regeneration",
-              "toWho": "Self",
-              "powerFullName": "Set_Bonus.Set_Bonus.Improved_Regeneration_3"
+      "pve": {
+        "self": {
+          "Regeneration": {
+            "8": {
+              "aggregates": [
+                true
+              ],
+              "hasAggregates": false,
+              "unlocked": 2,
+              "display": "8% Regen"
             }
-          ]
+          }
         }
-      ]
+      },
+      "pvp": {}
     },
     {
-      "description": {
-        "short": "+Max HP",
-        "long": "Increases maximum health by 1.5%."
-      },
-      "isUnique": false,
-      "isPvP": false,
-      "unlocked": 3,
-      "powerSetIndex": 286,
-      "fullName": "Set_Bonus.Set_Bonus.Increased_Health_3",
-      "setName": "Set_Bonus",
-      "displayName": "Moderate Increased Health Bonus",
-      "ignoreStrength": true,
-      "effects": [
-        {
-          "effectType": "HealSelf",
-          "values": [
-            {
-              "mag": {
-                "pve": 18.0713863
-              },
-              "probability": 1,
-              "duration": 10.75,
-              "effectType": "HitPoints",
-              "toWho": "Self",
-              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Health_3"
+      "pve": {
+        "self": {
+          "HitPoints": {
+            "1807.14": {
+              "aggregates": [
+                true
+              ],
+              "hasAggregates": false,
+              "unlocked": 3,
+              "display": "1807.14% Max HP"
             }
-          ]
+          }
         }
-      ]
+      },
+      "pvp": {}
     }
   ],
   "setType": 17,
+  "setTypeName": "Flight",
   "displayName": "Freebird",
   "imageName": "sFreeBird.png"
 }

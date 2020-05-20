@@ -13,14 +13,14 @@
           "effectType": "Fly",
           "values": [
             {
+              "etModifies": "SpeedFlying",
               "mag": {
                 "pve": 0.424
               },
               "probability": 1,
               "duration": 10.25,
               "effectType": "Enhancement",
-              "eTModifies": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Boosts.Attuned_Soaring_A.Attuned_Soaring_A"
             }
           ]
@@ -42,14 +42,14 @@
           "effectType": "Endurance",
           "values": [
             {
+              "etModifies": "EnduranceDiscount",
               "mag": {
                 "pve": 0.424
               },
               "probability": 1,
               "duration": 10.25,
               "effectType": "Enhancement",
-              "eTModifies": 8,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Boosts.Attuned_Soaring_B.Attuned_Soaring_B"
             }
           ]
@@ -71,14 +71,14 @@
           "effectType": "Endurance",
           "values": [
             {
+              "etModifies": "EnduranceDiscount",
               "mag": {
                 "pve": 0.265
               },
               "probability": 1,
               "duration": 10.25,
               "effectType": "Enhancement",
-              "eTModifies": 8,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Boosts.Attuned_Soaring_C.Attuned_Soaring_C"
             }
           ]
@@ -87,14 +87,14 @@
           "effectType": "Fly",
           "values": [
             {
+              "etModifies": "SpeedFlying",
               "mag": {
                 "pve": 0.265
               },
               "probability": 1,
               "duration": 10.25,
               "effectType": "Enhancement",
-              "eTModifies": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Boosts.Attuned_Soaring_C.Attuned_Soaring_C"
             }
           ]
@@ -111,69 +111,42 @@
   },
   "bonuses": [
     {
-      "description": {
-        "short": "+Recovery",
-        "long": "Improves your Recovery by 1%."
-      },
-      "isUnique": false,
-      "isPvP": false,
-      "unlocked": 2,
-      "powerSetIndex": 144,
-      "fullName": "Set_Bonus.Set_Bonus.Improved_Recovery_1",
-      "setName": "Set_Bonus",
-      "displayName": "Tiny Improved Recovery Bonus",
-      "ignoreStrength": true,
-      "effects": [
-        {
-          "effectType": "Ones",
-          "values": [
-            {
-              "mag": {
-                "pve": 0.01
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Recovery",
-              "toWho": "Self",
-              "powerFullName": "Set_Bonus.Set_Bonus.Improved_Recovery_1"
+      "pve": {
+        "self": {
+          "Recovery": {
+            "1": {
+              "aggregates": [
+                true
+              ],
+              "hasAggregates": false,
+              "unlocked": 2,
+              "display": "1% End Recovery"
             }
-          ]
+          }
         }
-      ]
+      },
+      "pvp": {}
     },
     {
-      "description": {
-        "short": "+Max HP",
-        "long": "Increases maximum health by 0.75%."
-      },
-      "isUnique": false,
-      "isPvP": false,
-      "unlocked": 3,
-      "powerSetIndex": 284,
-      "fullName": "Set_Bonus.Set_Bonus.Increased_Health_1",
-      "setName": "Set_Bonus",
-      "displayName": "Tiny Increased Health Bonus",
-      "ignoreStrength": true,
-      "effects": [
-        {
-          "effectType": "HealSelf",
-          "values": [
-            {
-              "mag": {
-                "pve": 9.035693
-              },
-              "probability": 1,
-              "duration": 10.75,
-              "effectType": "HitPoints",
-              "toWho": "Self",
-              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Health_1"
+      "pve": {
+        "self": {
+          "HitPoints": {
+            "903.57": {
+              "aggregates": [
+                true
+              ],
+              "hasAggregates": false,
+              "unlocked": 3,
+              "display": "903.57% Max HP"
             }
-          ]
+          }
         }
-      ]
+      },
+      "pvp": {}
     }
   ],
   "setType": 17,
+  "setTypeName": "Flight",
   "displayName": "Soaring",
   "imageName": "sSoaring.png"
 }

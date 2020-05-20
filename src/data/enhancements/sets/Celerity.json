@@ -13,14 +13,14 @@
           "effectType": "Endurance",
           "values": [
             {
+              "etModifies": "EnduranceDiscount",
               "mag": {
                 "pve": 0.424
               },
               "probability": 1,
               "duration": 10.25,
               "effectType": "Enhancement",
-              "eTModifies": 8,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Boosts.Attuned_Celerity_A.Attuned_Celerity_A"
             }
           ]
@@ -42,14 +42,14 @@
           "effectType": "Run",
           "values": [
             {
+              "etModifies": "SpeedRunning",
               "mag": {
                 "pve": 0.424
               },
               "probability": 1,
               "duration": 10.25,
               "effectType": "Enhancement",
-              "eTModifies": 32,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Boosts.Attuned_Celerity_B.Attuned_Celerity_B"
             }
           ]
@@ -78,7 +78,7 @@
               "probability": 1,
               "duration": 120,
               "effectType": "StealthRadius",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Boosts.Attuned_Celerity_C.Attuned_Celerity_C"
             }
           ]
@@ -94,7 +94,7 @@
               "probability": 1,
               "duration": 120,
               "effectType": "StealthRadiusPlayer",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Boosts.Attuned_Celerity_C.Attuned_Celerity_C"
             },
             {
@@ -105,7 +105,7 @@
               "probability": 1,
               "duration": 120,
               "effectType": "Translucency",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Boosts.Attuned_Celerity_C.Attuned_Celerity_C"
             }
           ]
@@ -122,147 +122,58 @@
   },
   "bonuses": [
     {
-      "description": {
-        "short": "+Res (Lethal, Smash, Mez)",
-        "long": "Increases Lethal and Smashing resistance by 2.25% and Mez Resistance by 3.75%"
-      },
-      "isUnique": false,
-      "isPvP": false,
-      "unlocked": 2,
-      "powerSetIndex": 447,
-      "fullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_2",
-      "setName": "Set_Bonus",
-      "displayName": "Small Lethal, Smash and Mez Resistance",
-      "ignoreStrength": true,
-      "effects": [
-        {
-          "effectType": "Ones",
-          "values": [
-            {
-              "mag": {
-                "pve": 0.0225
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Resistance",
-              "toWho": "Self",
-              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_2",
-              "damageType": "Lethal"
-            },
-            {
-              "mag": {
-                "pve": 0.0225
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Resistance",
-              "toWho": "Self",
-              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_2",
-              "damageType": "Smashing"
-            },
-            {
-              "mag": {
-                "pve": 0.0375
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "MezResist",
-              "toWho": "Self",
-              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_2",
-              "mezType": "Immobilization"
-            },
-            {
-              "mag": {
-                "pve": 0.0375
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "MezResist",
-              "toWho": "Self",
-              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_2",
-              "mezType": "Hold"
-            },
-            {
-              "mag": {
-                "pve": 0.0375
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "MezResist",
-              "toWho": "Self",
-              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_2",
-              "mezType": "Stun"
-            },
-            {
-              "mag": {
-                "pve": 0.0375
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "MezResist",
-              "toWho": "Self",
-              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_2",
-              "mezType": "Sleep"
-            },
-            {
-              "mag": {
-                "pve": 0.0375
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "MezResist",
-              "toWho": "Self",
-              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_2",
-              "mezType": "Terrorize"
-            },
-            {
-              "mag": {
-                "pve": 0.0375
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "MezResist",
-              "toWho": "Self",
-              "powerFullName": "Set_Bonus.Set_Bonus.Lethal_Smash_Mez_Res_2",
-              "mezType": "Confuse"
+      "pve": {
+        "self": {
+          "Resistance": {
+            "2.25": {
+              "aggregates": [
+                "Lethal",
+                "Smashing"
+              ],
+              "hasAggregates": true,
+              "unlocked": 2,
+              "display": "2.25% Res(Lethal, Smashing)"
             }
-          ]
+          },
+          "MezResist": {
+            "3.75": {
+              "aggregates": [
+                "Immob",
+                "Hold",
+                "Stun",
+                "Sleep",
+                "Terror",
+                "Confuse"
+              ],
+              "hasAggregates": true,
+              "unlocked": 2,
+              "display": "3.75% Res(Immob, Hold, Stun, Sleep, Terror, Confuse)"
+            }
+          }
         }
-      ]
+      },
+      "pvp": {}
     },
     {
-      "description": {
-        "short": "+Max HP",
-        "long": "Increases maximum health by 1.5%."
-      },
-      "isUnique": false,
-      "isPvP": false,
-      "unlocked": 3,
-      "powerSetIndex": 286,
-      "fullName": "Set_Bonus.Set_Bonus.Increased_Health_3",
-      "setName": "Set_Bonus",
-      "displayName": "Moderate Increased Health Bonus",
-      "ignoreStrength": true,
-      "effects": [
-        {
-          "effectType": "HealSelf",
-          "values": [
-            {
-              "mag": {
-                "pve": 18.0713863
-              },
-              "probability": 1,
-              "duration": 10.75,
-              "effectType": "HitPoints",
-              "toWho": "Self",
-              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Health_3"
+      "pve": {
+        "self": {
+          "HitPoints": {
+            "1807.14": {
+              "aggregates": [
+                true
+              ],
+              "hasAggregates": false,
+              "unlocked": 3,
+              "display": "1807.14% Max HP"
             }
-          ]
+          }
         }
-      ]
+      },
+      "pvp": {}
     }
   ],
   "setType": 19,
+  "setTypeName": "Running",
   "displayName": "Celerity",
   "imageName": "sCelerity.png"
 }

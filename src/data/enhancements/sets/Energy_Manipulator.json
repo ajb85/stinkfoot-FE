@@ -13,14 +13,14 @@
           "effectType": "EndMod",
           "values": [
             {
+              "etModifies": "Recovery",
               "mag": {
                 "pve": 0.424
               },
               "probability": 1,
               "duration": 10.25,
               "effectType": "Enhancement",
-              "eTModifies": 26,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Boosts.Attuned_Energy_Manipulator_A.Attuned_Energy_Manipulator_A"
             }
           ]
@@ -29,14 +29,14 @@
           "effectType": "Endurance",
           "values": [
             {
+              "etModifies": "Endurance",
               "mag": {
                 "pve": 0.424
               },
               "probability": 1,
               "duration": 10.25,
               "effectType": "Enhancement",
-              "eTModifies": 7,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Boosts.Attuned_Energy_Manipulator_A.Attuned_Energy_Manipulator_A"
             }
           ]
@@ -58,14 +58,14 @@
           "effectType": "Recharge",
           "values": [
             {
+              "etModifies": "RechargeTime",
               "mag": {
                 "pve": 0.265
               },
               "probability": 1,
               "duration": 10.25,
               "effectType": "Enhancement",
-              "eTModifies": 25,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Boosts.Attuned_Energy_Manipulator_B.Attuned_Energy_Manipulator_B"
             }
           ]
@@ -74,14 +74,14 @@
           "effectType": "EndMod",
           "values": [
             {
+              "etModifies": "Recovery",
               "mag": {
                 "pve": 0.265
               },
               "probability": 1,
               "duration": 10.25,
               "effectType": "Enhancement",
-              "eTModifies": 26,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Boosts.Attuned_Energy_Manipulator_B.Attuned_Energy_Manipulator_B"
             }
           ]
@@ -90,14 +90,14 @@
           "effectType": "Endurance",
           "values": [
             {
+              "etModifies": "Endurance",
               "mag": {
                 "pve": 0.265
               },
               "probability": 1,
               "duration": 10.25,
               "effectType": "Enhancement",
-              "eTModifies": 7,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Boosts.Attuned_Energy_Manipulator_B.Attuned_Energy_Manipulator_B"
             }
           ]
@@ -128,7 +128,7 @@
               "effectType": "Mez",
               "stacking": 1,
               "resistible": true,
-              "toWho": "All",
+              "toWho": "all",
               "attribType": 1,
               "powerFullName": "Boosts.Attuned_Energy_Manipulator_C.Attuned_Energy_Manipulator_C",
               "mezType": "Stun"
@@ -147,69 +147,42 @@
   },
   "bonuses": [
     {
-      "description": {
-        "short": "+Recovery",
-        "long": "Improves your Recovery by 1.5%."
-      },
-      "isUnique": false,
-      "isPvP": false,
-      "unlocked": 2,
-      "powerSetIndex": 145,
-      "fullName": "Set_Bonus.Set_Bonus.Improved_Recovery_2",
-      "setName": "Set_Bonus",
-      "displayName": "Small Improved Recovery Bonus",
-      "ignoreStrength": true,
-      "effects": [
-        {
-          "effectType": "Ones",
-          "values": [
-            {
-              "mag": {
-                "pve": 0.015
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Recovery",
-              "toWho": "Self",
-              "powerFullName": "Set_Bonus.Set_Bonus.Improved_Recovery_2"
+      "pve": {
+        "self": {
+          "Recovery": {
+            "1.5": {
+              "aggregates": [
+                true
+              ],
+              "hasAggregates": false,
+              "unlocked": 2,
+              "display": "1.5% End Recovery"
             }
-          ]
+          }
         }
-      ]
+      },
+      "pvp": {}
     },
     {
-      "description": {
-        "short": "+Regeneration",
-        "long": "Improves your Regeneration by 6%."
-      },
-      "isUnique": false,
-      "isPvP": false,
-      "unlocked": 3,
-      "powerSetIndex": 152,
-      "fullName": "Set_Bonus.Set_Bonus.Improved_Regeneration_2",
-      "setName": "Set_Bonus",
-      "displayName": "Small Improved Regeneration Bonus",
-      "ignoreStrength": true,
-      "effects": [
-        {
-          "effectType": "Ones",
-          "values": [
-            {
-              "mag": {
-                "pve": 0.06
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Regeneration",
-              "toWho": "Self",
-              "powerFullName": "Set_Bonus.Set_Bonus.Improved_Regeneration_2"
+      "pve": {
+        "self": {
+          "Regeneration": {
+            "6": {
+              "aggregates": [
+                true
+              ],
+              "hasAggregates": false,
+              "unlocked": 3,
+              "display": "6% Regen"
             }
-          ]
+          }
         }
-      ]
+      },
+      "pvp": {}
     }
   ],
   "setType": 22,
+  "setTypeName": "Endurance Modification",
   "displayName": "Energy Manipulator",
   "imageName": "sEnergyManip.png"
 }

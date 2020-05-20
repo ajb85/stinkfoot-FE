@@ -13,14 +13,14 @@
           "effectType": "Jump",
           "values": [
             {
+              "etModifies": "SpeedJumping",
               "mag": {
                 "pve": 0.424
               },
               "probability": 1,
               "duration": 10.25,
               "effectType": "Enhancement",
-              "eTModifies": 17,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Boosts.Attuned_Springfoot_A.Attuned_Springfoot_A"
             }
           ]
@@ -29,14 +29,14 @@
           "effectType": "Boosts_33",
           "values": [
             {
+              "etModifies": "JumpHeight",
               "mag": {
                 "pve": 0.424
               },
               "probability": 1,
               "duration": 10.25,
               "effectType": "Enhancement",
-              "eTModifies": 16,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Boosts.Attuned_Springfoot_A.Attuned_Springfoot_A"
             }
           ]
@@ -58,14 +58,14 @@
           "effectType": "Endurance",
           "values": [
             {
+              "etModifies": "EnduranceDiscount",
               "mag": {
                 "pve": 0.424
               },
               "probability": 1,
               "duration": 10.25,
               "effectType": "Enhancement",
-              "eTModifies": 8,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Boosts.Attuned_Springfoot_B.Attuned_Springfoot_B"
             }
           ]
@@ -87,14 +87,14 @@
           "effectType": "Endurance",
           "values": [
             {
+              "etModifies": "EnduranceDiscount",
               "mag": {
                 "pve": 0.265
               },
               "probability": 1,
               "duration": 10.25,
               "effectType": "Enhancement",
-              "eTModifies": 8,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Boosts.Attuned_Springfoot_C.Attuned_Springfoot_C"
             }
           ]
@@ -103,14 +103,14 @@
           "effectType": "Jump",
           "values": [
             {
+              "etModifies": "SpeedJumping",
               "mag": {
                 "pve": 0.265
               },
               "probability": 1,
               "duration": 10.25,
               "effectType": "Enhancement",
-              "eTModifies": 17,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Boosts.Attuned_Springfoot_C.Attuned_Springfoot_C"
             }
           ]
@@ -119,14 +119,14 @@
           "effectType": "Boosts_33",
           "values": [
             {
+              "etModifies": "JumpHeight",
               "mag": {
                 "pve": 0.265
               },
               "probability": 1,
               "duration": 10.25,
               "effectType": "Enhancement",
-              "eTModifies": 16,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Boosts.Attuned_Springfoot_C.Attuned_Springfoot_C"
             }
           ]
@@ -143,99 +143,72 @@
   },
   "bonuses": [
     {
-      "description": {
-        "short": "+Move",
-        "long": "Improves all of your Movement speeds by 3%."
-      },
-      "isUnique": false,
-      "isPvP": false,
-      "unlocked": 2,
-      "powerSetIndex": 326,
-      "fullName": "Set_Bonus.Set_Bonus.Increased_Move_1",
-      "setName": "Set_Bonus",
-      "displayName": "Tiny Improved Movement Bonus",
-      "ignoreStrength": true,
-      "effects": [
-        {
-          "effectType": "Ones",
-          "values": [
-            {
-              "mag": {
-                "pve": 0.03
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "SpeedJumping",
-              "toWho": "Self",
-              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Move_1"
-            },
-            {
-              "mag": {
-                "pve": 0.03
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "JumpHeight",
-              "toWho": "Self",
-              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Move_1"
-            },
-            {
-              "mag": {
-                "pve": 0.03
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "SpeedFlying",
-              "toWho": "Self",
-              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Move_1"
-            },
-            {
-              "mag": {
-                "pve": 0.03
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "SpeedRunning",
-              "toWho": "Self",
-              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Move_1"
+      "pve": {
+        "self": {
+          "SpeedJumping": {
+            "3": {
+              "aggregates": [
+                true
+              ],
+              "hasAggregates": false,
+              "unlocked": 2,
+              "display": "3% Jump Speed"
             }
-          ]
+          },
+          "JumpHeight": {
+            "3": {
+              "aggregates": [
+                true
+              ],
+              "hasAggregates": false,
+              "unlocked": 2,
+              "display": "3% Jump Height"
+            }
+          },
+          "SpeedFlying": {
+            "3": {
+              "aggregates": [
+                true
+              ],
+              "hasAggregates": false,
+              "unlocked": 2,
+              "display": "3% Flight Speed"
+            }
+          },
+          "SpeedRunning": {
+            "3": {
+              "aggregates": [
+                true
+              ],
+              "hasAggregates": false,
+              "unlocked": 2,
+              "display": "3% Run Speed"
+            }
+          }
         }
-      ]
+      },
+      "pvp": {}
     },
     {
-      "description": {
-        "short": "+Max HP",
-        "long": "Increases maximum health by 0.75%."
-      },
-      "isUnique": false,
-      "isPvP": false,
-      "unlocked": 3,
-      "powerSetIndex": 284,
-      "fullName": "Set_Bonus.Set_Bonus.Increased_Health_1",
-      "setName": "Set_Bonus",
-      "displayName": "Tiny Increased Health Bonus",
-      "ignoreStrength": true,
-      "effects": [
-        {
-          "effectType": "HealSelf",
-          "values": [
-            {
-              "mag": {
-                "pve": 9.035693
-              },
-              "probability": 1,
-              "duration": 10.75,
-              "effectType": "HitPoints",
-              "toWho": "Self",
-              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Health_1"
+      "pve": {
+        "self": {
+          "HitPoints": {
+            "903.57": {
+              "aggregates": [
+                true
+              ],
+              "hasAggregates": false,
+              "unlocked": 3,
+              "display": "903.57% Max HP"
             }
-          ]
+          }
         }
-      ]
+      },
+      "pvp": {}
     }
   ],
   "setType": 18,
+  "setTypeName": "Leaping",
   "displayName": "Springfoot",
   "imageName": "sSpringfoot.png"
 }

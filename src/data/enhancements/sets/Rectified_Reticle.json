@@ -13,14 +13,14 @@
           "effectType": "ToHitBuff",
           "values": [
             {
+              "etModifies": "ToHit",
               "mag": {
                 "pve": 0.255
               },
               "probability": 1,
               "duration": 10.25,
               "effectType": "Enhancement",
-              "eTModifies": 40,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Boosts.Attuned_Rectified_Reticle_A.Attuned_Rectified_Reticle_A"
             }
           ]
@@ -42,14 +42,14 @@
           "effectType": "Recharge",
           "values": [
             {
+              "etModifies": "RechargeTime",
               "mag": {
                 "pve": 0.265
               },
               "probability": 1,
               "duration": 10.25,
               "effectType": "Enhancement",
-              "eTModifies": 25,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Boosts.Attuned_Rectified_Reticle_B.Attuned_Rectified_Reticle_B"
             }
           ]
@@ -58,14 +58,14 @@
           "effectType": "ToHitBuff",
           "values": [
             {
+              "etModifies": "ToHit",
               "mag": {
                 "pve": 0.159375
               },
               "probability": 1,
               "duration": 10.25,
               "effectType": "Enhancement",
-              "eTModifies": 40,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Boosts.Attuned_Rectified_Reticle_B.Attuned_Rectified_Reticle_B"
             }
           ]
@@ -94,7 +94,7 @@
               "probability": 1,
               "duration": 10.25,
               "effectType": "Null",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Boosts.Attuned_Rectified_Reticle_C.Attuned_Rectified_Reticle_C"
             }
           ]
@@ -111,92 +111,51 @@
   },
   "bonuses": [
     {
-      "description": {
-        "short": "+DEF",
-        "long": "Increases lethal and smashing defense by 1.88% and melee defense by 0.94%."
-      },
-      "isUnique": false,
-      "isPvP": false,
-      "unlocked": 2,
-      "powerSetIndex": 306,
-      "fullName": "Set_Bonus.Set_Bonus.Increased_Lethal_Smash_Melee_Def_2",
-      "setName": "Set_Bonus",
-      "displayName": "Small Increased Lethal/Smashing/Melee Def Bonus",
-      "ignoreStrength": true,
-      "effects": [
-        {
-          "effectType": "Ones",
-          "values": [
-            {
-              "mag": {
-                "pve": 0.01875
-              },
-              "probability": 1,
-              "duration": 10.75,
-              "effectType": "Defense",
-              "toWho": "Self",
-              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Lethal_Smash_Melee_Def_2",
-              "damageType": "Lethal"
+      "pve": {
+        "self": {
+          "Defense": {
+            "1.88": {
+              "aggregates": [
+                "Lethal",
+                "Smashing"
+              ],
+              "hasAggregates": true,
+              "unlocked": 2,
+              "display": "1.88% Defense(Lethal, Smashing)"
             },
-            {
-              "mag": {
-                "pve": 0.01875
-              },
-              "probability": 1,
-              "duration": 10.75,
-              "effectType": "Defense",
-              "toWho": "Self",
-              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Lethal_Smash_Melee_Def_2",
-              "damageType": "Smashing"
-            },
-            {
-              "mag": {
-                "pve": 0.00938
-              },
-              "probability": 1,
-              "duration": 10.75,
-              "effectType": "Defense",
-              "toWho": "Self",
-              "powerFullName": "Set_Bonus.Set_Bonus.Increased_Lethal_Smash_Melee_Def_2",
-              "damageType": "Melee"
+            "0.94": {
+              "aggregates": [
+                "Melee"
+              ],
+              "hasAggregates": true,
+              "unlocked": 2,
+              "display": "0.94% Defense(Melee)"
             }
-          ]
+          }
         }
-      ]
+      },
+      "pvp": {}
     },
     {
-      "description": {
-        "short": "+Regeneration",
-        "long": "Improves your Regeneration by 6%."
-      },
-      "isUnique": false,
-      "isPvP": false,
-      "unlocked": 3,
-      "powerSetIndex": 152,
-      "fullName": "Set_Bonus.Set_Bonus.Improved_Regeneration_2",
-      "setName": "Set_Bonus",
-      "displayName": "Small Improved Regeneration Bonus",
-      "ignoreStrength": true,
-      "effects": [
-        {
-          "effectType": "Ones",
-          "values": [
-            {
-              "mag": {
-                "pve": 0.06
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Regeneration",
-              "toWho": "Self",
-              "powerFullName": "Set_Bonus.Set_Bonus.Improved_Regeneration_2"
+      "pve": {
+        "self": {
+          "Regeneration": {
+            "6": {
+              "aggregates": [
+                true
+              ],
+              "hasAggregates": false,
+              "unlocked": 3,
+              "display": "6% Regen"
             }
-          ]
+          }
         }
-      ]
+      },
+      "pvp": {}
     }
   ],
   "setType": 25,
+  "setTypeName": "To Hit Buff",
   "displayName": "Rectified Reticle",
   "imageName": "sRectifiedReticle.png"
 }
