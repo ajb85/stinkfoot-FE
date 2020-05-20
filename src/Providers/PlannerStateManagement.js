@@ -9,7 +9,6 @@ let prevInstanceFunction;
 function PlannerProvider(props) {
   const [state, setState] = useState(stateMgmt.initialState());
   const stateManager = new stateMgmt(state, setState);
-  console.log('STATE: ', stateManager.state);
 
   useEffect(() => {
     const clearActivePills = (e) => {
