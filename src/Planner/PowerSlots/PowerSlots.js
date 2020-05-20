@@ -318,10 +318,8 @@ function IOSetEnhancements(props) {
   const overlayImg = stateManager.getEnhancementOverlay('IO');
 
   const updateNavigation = (i) => {
-    setEnhNavigation({
-      ...enhNavigation,
-      ioSetIndex: i,
-    });
+    const ioSetIndex = i === enhNavigation.ioSetIndex ? null : i;
+    setEnhNavigation({ ...enhNavigation, ioSetIndex });
   };
 
   // const addEnhancement = (enh) => {
@@ -342,10 +340,18 @@ function IOSetEnhancements(props) {
               className={styles.enhancementImage}
               onClick={updateNavigation.bind(this, i)}
             >
-              {/* {console.log('IO: ', enh)} */}
               {!enh.isAttuned && <img src={overlayImg} alt={enh.fullName} />}
               <img src={enh.image} alt={enh.fullName} />
-              <SetPreviewMenu set={enh} />
+              <SetPreviewMenu
+                set={enh}
+                display={
+                  enhNavigation.ioSetIndex !== null
+                    ? i === enhNavigation.ioSetIndex
+                      ? 'initial'
+                      : 'none'
+                    : null
+                }
+              />
             </div>
           </div>
         ))}
@@ -394,14 +400,18 @@ function EnhancementPreviewMenu(props) {
 
 function SetPreviewMenu(props) {
   const stateManager = React.useContext(PlannerContext);
+  const { display } = props;
   const { displayName, bonuses, enhancements, setTypeName, levels } = props.set;
   const setBonuses = stateManager.convertSetBonuses(bonuses);
 
-  // console.log('SET: ', props.set);
-
   return (
-    <div className={styles.EnhHoverMenu}>
-      <div className={styles.menu}>
+    <div className={styles.EnhHoverMenu} style={{ display }}>
+      <div
+        className={styles.menu}
+        style={{
+          border: display && display !== 'null' ? '1px solid red' : null,
+        }}
+      >
         <div className={styles.titles}>
           <h2>
             {displayName}, {setTypeName}
@@ -413,21 +423,26 @@ function SetPreviewMenu(props) {
           {/* <h3>Enhancements</h3> */}
           <div className={styles.enhancementContainer}>
             {enhancements.map(({ displayName }) => (
-              <p className={styles.enhancementPill}>{displayName}</p>
+              <p key={displayName} className={styles.enhancementPill}>
+                {displayName}
+              </p>
             ))}
           </div>
         </div>
         <div className={styles.hoverContainer}>
           <h3>Set Bonuses</h3>
-          {setBonuses.reduce((acc, { pve, pvp }) => {
+          {setBonuses.reduce((acc, { pve, pvp }, bonusIndex) => {
             // { display, effectName, path, unlocked, color? } = pve[i]/pvp[i]
             for (let i = 0; i < pve.length; i++) {
               acc.push(
-                <div className={styles.bonusContainer}>
+                <div
+                  key={'pve ' + bonusIndex}
+                  className={styles.bonusContainer}
+                >
                   <p>({pve[i][0].unlocked})</p>
                   <div className={styles.bonusText}>
                     {pve[i].map((item) => (
-                      <p>
+                      <p key={item.display}>
                         {/* {stateManager
                           .getBonusText(item.display, item.color)
                           .map(({ text, color }) => (
