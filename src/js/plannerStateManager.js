@@ -12,6 +12,7 @@ export default class BuildManager {
   constructor(state, setState) {
     this.state = state;
     this.setState = setState;
+    // console.log('STATE: ', this.state);
 
     // State to be mutated and eventually set as new state
     this.nextState = this._deepCloneState();
@@ -42,6 +43,7 @@ export default class BuildManager {
         uniqueEnhancements: {},
       },
       reference: { enhancementSlots },
+      settings: { pvp: false },
     };
   }
 
@@ -142,6 +144,10 @@ export default class BuildManager {
 
   get toggledPowerSlotIndex() {
     return this.state.tracking.powerSlotIndex;
+  }
+
+  getSetting(name) {
+    return this.state.settings[name];
   }
 
   getPower = (power) => {
@@ -428,7 +434,7 @@ export default class BuildManager {
       (index) => index !== poolIndexToRemove
     );
 
-    this.__removePoolPreventsFromExclusion(
+    this._removePoolPreventsFromExclusion(
       poolPowers[poolIndexToRemove].prevents
     );
     this._setState();
@@ -469,6 +475,103 @@ export default class BuildManager {
     // const { type, displayName, level, tier } = enhInSlot;
     // const tierValue = enhancements[type][displayName].effects.magnitudes[tier];
     // return tier === 'IO' ? tierValue[level] : tierValue;
+  };
+
+  convertSetBonuses = (bonuses) => {
+    return bonuses.map(({ pve, pvp }) => ({
+      pve: this._compressAggData(pve),
+      pvp: this._compressAggData(pvp),
+    }));
+  };
+
+  // getBonusText(text, color) {
+  //   const startIndices = this._indexOfAll(text, '{');
+  //   const endIndices = this._indexOfAll(text, '}');
+
+  //   if ((!startIndices && !endIndices) || !color) {
+  //     return [{ text }];
+  //   }
+
+  //   if (
+  //     startIndices &&
+  //     endIndices &&
+  //     startIndices.length === endIndices.length
+  //   ) {
+  //     const textWithColor = [];
+  //     for (let i = 0; i < startIndices.length; i++) {
+  //       const colorStart = startIndices[i] + 1;
+  //       const colorEnd = endIndices[i];
+  //       const noColorStart = i === 0 ? 0 : endIndices[i - 1] + 1;
+
+  //       // First push text between colors
+  //       textWithColor.push({
+  //         text: text.substring(noColorStart, colorStart - 1),
+  //       });
+  //       // Then push the text with color
+  //       textWithColor.push({
+  //         color,
+  //         text: text.substring(colorStart, colorEnd),
+  //       });
+  //     }
+
+  //     // Once loop has ended, add any remaining text
+  //     const endText = {
+  //       text: text.substring(endIndices[endIndices.length - 1] + 1),
+  //     };
+  //     if (endText) {
+  //       textWithColor.push(endText);
+  //     }
+
+  //     return textWithColor;
+  //   } else {
+  //     throw new Error('Mismatched brackets in bonus color text');
+  //   }
+  // }
+
+  _indexOfAll(text, target) {
+    const indices = [];
+
+    for (let i = 0; i < text.length; i++) {
+      const char = text[i];
+      if (char === target) {
+        indices.push(i);
+      }
+    }
+
+    return indices.length ? indices : null;
+  }
+
+  _compressAggData = (pvx) => {
+    const compressed = [];
+    let lastUnlocked;
+    for (let toWho in pvx) {
+      const toWhoPath = [toWho];
+      const affectedBy = pvx[toWho];
+
+      for (let effectName in affectedBy) {
+        const effectPath = [...toWhoPath, effectName];
+        const effects = affectedBy[effectName];
+
+        for (let mag in effects) {
+          const path = [...effectPath, mag];
+          const { display, unlocked /*, color */ } = effects[mag];
+
+          const newItem = { path, display, effectName, unlocked };
+          // if (color) {
+          //   newItem.color = color;
+          // }
+
+          if (lastUnlocked === unlocked) {
+            compressed[compressed.length - 1].push(newItem);
+          } else {
+            lastUnlocked = unlocked;
+            compressed.push([newItem]);
+          }
+        }
+      }
+    }
+
+    return compressed;
   };
 
   _setState = () => {
@@ -745,7 +848,7 @@ export default class BuildManager {
     });
   };
 
-  __removePoolPreventsFromExclusion(prevents) {
+  _removePoolPreventsFromExclusion(prevents) {
     if (!prevents || !prevents.length) {
       return;
     }
