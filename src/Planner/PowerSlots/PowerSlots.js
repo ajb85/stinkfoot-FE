@@ -171,7 +171,7 @@ function PowerSlot({ render, selectionState }) {
               Sets
             </p>
           </div>
-          {enhNavigation.ioSetIndex !== null && (
+          {/* {enhNavigation.ioSetIndex !== null && (
             <p
               style={{
                 cursor: 'pointer',
@@ -186,7 +186,7 @@ function PowerSlot({ render, selectionState }) {
             >
               Add Full Set
             </p>
-          )}
+          )} */}
           {enhNavigation.section === 'standard' ? (
             <StandardEnhancements
               selectionState={selectionState}
@@ -317,8 +317,6 @@ function IOSetEnhancements(props) {
 
   const overlayImg = stateManager.getEnhancementOverlay('IO');
 
-  const isViewingEnhancement = enhNavigation.ioSetIndex !== null;
-
   const updateNavigation = (i) => {
     setEnhNavigation({
       ...enhNavigation,
@@ -326,40 +324,28 @@ function IOSetEnhancements(props) {
     });
   };
 
-  const addEnhancement = (enh) => {
-    stateManager.addEnhancement(originalIndex, enh, enhNavigation, 50);
-  };
+  // const addEnhancement = (enh) => {
+  //   stateManager.addEnhancement(originalIndex, enh, enhNavigation, 50);
+  // };
 
   const enhancementsData = stateManager.getEnhancementSectionForPower(
     p,
     enhNavigation
   );
 
-  const mapOver = Array.isArray(enhancementsData)
-    ? enhancementsData
-    : enhancementsData.enhancements;
-
   return (
     <div className={styles.enhPreviewContainer}>
       <div className={styles.enhPreviewList}>
-        {mapOver.map((enh, i) => (
+        {enhancementsData.map((enh, i) => (
           <div className={styles.enhPreview} key={`${enh.fullName} @ ${i}`}>
             <div
               className={styles.enhancementImage}
-              onClick={
-                enhNavigation.ioSetIndex === null
-                  ? updateNavigation.bind(this, i)
-                  : addEnhancement.bind(this, enh)
-              }
+              onClick={updateNavigation.bind(this, i)}
             >
               {/* {console.log('IO: ', enh)} */}
               {!enh.isAttuned && <img src={overlayImg} alt={enh.fullName} />}
               <img src={enh.image} alt={enh.fullName} />
-              {isViewingEnhancement ? (
-                <EnhancementPreviewMenu enhancement={enh} />
-              ) : (
-                <SetPreviewMenu set={enh} />
-              )}
+              <SetPreviewMenu set={enh} />
             </div>
           </div>
         ))}
