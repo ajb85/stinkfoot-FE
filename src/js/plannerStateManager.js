@@ -434,13 +434,6 @@ export default class BuildManager {
 
   addEnhancement = (powerSlotIndex, enhancement, enhNavigation, level = 50) => {
     const { tier, showSuperior } = enhNavigation;
-    console.log(
-      'ADDING 1: ',
-      powerSlotIndex,
-      enhancement,
-      enhNavigation,
-      level
-    );
     const enhCopy =
       enhancement.type === 'set' || enhancement.type === 'attuned'
         ? this._addImageToSetEnhancement(enhancement, tier, showSuperior)
@@ -449,32 +442,6 @@ export default class BuildManager {
     this._addEnhancements(powerSlotIndex, enhCopy, level, tier);
     this._setState();
   };
-
-  _addImageToSetEnhancement(enhancement, tier, showSuperior) {
-    const enhImages = require.context('./images/enhancements/', true);
-    console.log('ADDING: ', enhancement, tier, showSuperior);
-    const ioSetIndex = enhancement.setIndex;
-    const ioSetImage = ioSets[tier][ioSetIndex].imageName;
-    const { isAttuned } = ioSets[tier][ioSetIndex];
-
-    let { imageName } = enhancement;
-    if (!imageName && ioSetImage) {
-      imageName = ioSetImage;
-      enhancement.isAttuned = isAttuned;
-    } else if (!imageName) {
-      throw new Error('No image found for: ', enhancement.displayName);
-    }
-    // Superior enhancements have an "S" in front of them.  The regular attuned
-    // version drops the first letter
-    const correctedImgName =
-      !enhancement.isAttuned || !showSuperior ? imageName : 'S' + imageName;
-
-    const enhCopy = { ...enhancement };
-    enhCopy.image = enhImages(`./${correctedImgName}`);
-    enhCopy.imageName = correctedImgName;
-
-    return enhCopy;
-  }
 
   addFullEnhancementSet = (
     powerSlotIndex,
@@ -575,50 +542,6 @@ export default class BuildManager {
     }, {});
   }
 
-  // getBonusText(text, color) {
-  //   const startIndices = this._indexOfAll(text, '{');
-  //   const endIndices = this._indexOfAll(text, '}');
-
-  //   if ((!startIndices && !endIndices) || !color) {
-  //     return [{ text }];
-  //   }
-
-  //   if (
-  //     startIndices &&
-  //     endIndices &&
-  //     startIndices.length === endIndices.length
-  //   ) {
-  //     const textWithColor = [];
-  //     for (let i = 0; i < startIndices.length; i++) {
-  //       const colorStart = startIndices[i] + 1;
-  //       const colorEnd = endIndices[i];
-  //       const noColorStart = i === 0 ? 0 : endIndices[i - 1] + 1;
-
-  //       // First push text between colors
-  //       textWithColor.push({
-  //         text: text.substring(noColorStart, colorStart - 1),
-  //       });
-  //       // Then push the text with color
-  //       textWithColor.push({
-  //         color,
-  //         text: text.substring(colorStart, colorEnd),
-  //       });
-  //     }
-
-  //     // Once loop has ended, add any remaining text
-  //     const endText = {
-  //       text: text.substring(endIndices[endIndices.length - 1] + 1),
-  //     };
-  //     if (endText) {
-  //       textWithColor.push(endText);
-  //     }
-
-  //     return textWithColor;
-  //   } else {
-  //     throw new Error('Mismatched brackets in bonus color text');
-  //   }
-  // }
-
   _indexOfAll(text, target) {
     const indices = [];
 
@@ -630,6 +553,31 @@ export default class BuildManager {
     }
 
     return indices.length ? indices : null;
+  }
+
+  _addImageToSetEnhancement(enhancement, tier, showSuperior) {
+    const enhImages = require.context('./images/enhancements/', true);
+    const ioSetIndex = enhancement.setIndex;
+    const ioSetImage = ioSets[tier][ioSetIndex].imageName;
+    const { isAttuned } = ioSets[tier][ioSetIndex];
+
+    let { imageName } = enhancement;
+    if (!imageName && ioSetImage) {
+      imageName = ioSetImage;
+      enhancement.isAttuned = isAttuned;
+    } else if (!imageName) {
+      throw new Error('No image found for: ', enhancement.displayName);
+    }
+    // Superior enhancements have an "S" in front of them.  The regular attuned
+    // version drops the first letter
+    const correctedImgName =
+      !enhancement.isAttuned || !showSuperior ? imageName : 'S' + imageName;
+
+    const enhCopy = { ...enhancement };
+    enhCopy.image = enhImages(`./${correctedImgName}`);
+    enhCopy.imageName = correctedImgName;
+
+    return enhCopy;
   }
 
   _compressAggData = (pvx) => {
