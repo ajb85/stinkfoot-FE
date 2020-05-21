@@ -7,6 +7,7 @@ import powerSlotsTemplate from 'data/powerSlotsTemplate.js';
 import enhancementSlots from 'data/enhancementSlots.js';
 import enhancements from 'data/enhancements.js';
 import ioSets, { setTypeConversion } from 'data/ioSets.js';
+import IOSets from 'Planner/PowerSlots/Enhancements/IOSets';
 
 export default class BuildManager {
   constructor(state, setState) {
@@ -27,6 +28,7 @@ export default class BuildManager {
         alignment: 'Hero',
         powerSlots: powerSlotsTemplate,
         poolPowers: [],
+        setBonuses: {},
       },
       tracking: {
         primaryIndex: 0,
@@ -432,14 +434,20 @@ export default class BuildManager {
     this._setState();
   };
 
-  addEnhancement = (powerSlotIndex, enhancement, enhNavigation, level = 50) => {
+  addEnhancement = (
+    powerSlotIndex,
+    enhancement,
+    enhNavigation,
+    level = 50,
+    bonuses
+  ) => {
     const { tier, showSuperior } = enhNavigation;
     const enhCopy =
       enhancement.type === 'set' || enhancement.type === 'attuned'
         ? this._addImageToSetEnhancement(enhancement, tier, showSuperior)
         : { ...enhancement };
 
-    this._addEnhancements(powerSlotIndex, enhCopy, level, tier);
+    this._addEnhancements(powerSlotIndex, enhCopy, level, tier, bonuses);
     this._setState();
   };
 
@@ -580,13 +588,13 @@ export default class BuildManager {
     return enhCopy;
   }
 
-  _compressAggData = (pvx) => {
+  _compressAggData = (bonusAndPvX) => {
     const compressed = [];
     let lastUnlocked;
+    const { bonusName, ...pvx } = bonusAndPvX;
     for (let toWho in pvx) {
       const toWhoPath = [toWho];
       const affectedBy = pvx[toWho];
-
       for (let effectName in affectedBy) {
         const effectPath = [...toWhoPath, effectName];
         const effects = affectedBy[effectName];
@@ -595,10 +603,7 @@ export default class BuildManager {
           const path = [...effectPath, mag];
           const { display, unlocked /*, color */ } = effects[mag];
 
-          const newItem = { path, display, effectName, unlocked };
-          // if (color) {
-          //   newItem.color = color;
-          // }
+          const newItem = { path, display, effectName, unlocked, bonusName };
 
           if (lastUnlocked === unlocked) {
             compressed[compressed.length - 1].push(newItem);
@@ -647,7 +652,7 @@ export default class BuildManager {
     return emptySlotIndex > -1 ? emptySlotIndex : null;
   };
 
-  _addEnhancements = (powerSlotIndex, enhancements, level, tier) => {
+  _addEnhancements = (powerSlotIndex, enhancements, level, tier, bonuses) => {
     if (!Array.isArray(enhancements)) {
       enhancements = [enhancements];
     }
@@ -661,7 +666,8 @@ export default class BuildManager {
         isUnique,
         setIndex,
       } = enhancement;
-      const isUniqueInPower = type === 'set' || type === 'attuned';
+
+      const isSet = type === 'set' || type === 'attuned';
 
       const enhancementLookup = this.nextState.lookup.enhancements;
 
@@ -669,16 +675,13 @@ export default class BuildManager {
       const powerInSlot = this.getPower(power);
 
       const isAlreadyUsed = enhancementLookup.hasOwnProperty(fullName);
-      const isAlreadyInPower =
+      const enhLog =
         isAlreadyUsed &&
         enhancementLookup[fullName].find(
           ({ powerName }) => powerName === powerInSlot.displayName
         );
 
-      if (
-        (isUnique && isAlreadyUsed) ||
-        (isUniqueInPower && isAlreadyInPower)
-      ) {
+      if ((isUnique && isAlreadyUsed) || (isSet && enhLog)) {
         console.log('UNIQUE ISSUE');
         return;
       }
@@ -711,10 +714,8 @@ export default class BuildManager {
         setIndex,
       };
 
-      if (isAlreadyInPower) {
-        // isAlreadyInPower is actually the enhancement inside of lookup,
-        // it's just truthy if it exists
-        isAlreadyInPower.count++;
+      if (enhLog) {
+        enhLog.count++;
       } else if (isAlreadyUsed) {
         enhancementLookup[fullName].push({
           powerName: powerInSlot.displayName,
@@ -724,6 +725,10 @@ export default class BuildManager {
         enhancementLookup[fullName] = [
           { powerName: powerInSlot.displayName, count: 1 },
         ];
+      }
+
+      if (isSet) {
+        this._addSetBonuses(powerSlotIndex, tier, setIndex, bonuses);
       }
     });
   };
@@ -736,6 +741,37 @@ export default class BuildManager {
       ({ enhancement }) => enhancement && enhancement.fullName === fullName
     );
   }
+
+  bonusCanBeAdded = (bonusName) => {
+    return (
+      !this.state.build.setBonuses.hasOwnProperty(bonusName) ||
+      this.state.build.setBonuses[bonusName] < 5
+    );
+  };
+
+  _addSetBonuses = (powerSlotIndex, tier, setIndex, bonuses) => {
+    const { setBonuses } = this.nextState.build;
+    const setCount = this.nextState.build.powerSlots[
+      powerSlotIndex
+    ].enhSlots.reduce(
+      (acc, { enhancement }) =>
+        enhancement.setIndex === setIndex ? ++acc : acc,
+      0
+    );
+
+    const bonusAtCount = bonuses.find(({ pve }) =>
+      pve[0].find(({ unlocked }) => unlocked === setCount)
+    );
+
+    if (bonusAtCount) {
+      const bn = bonusAtCount.pve[0][0].bonusName;
+      if (setBonuses[bn] && setBonuses[bn] < 5) {
+        setBonuses[bn] = ++setBonuses[bn];
+      } else {
+        setBonuses[bn] = 1;
+      }
+    }
+  };
 
   _removeSlotsFromPower(powerSlotIndex, slotIndices) {
     slotIndices = Array.isArray(slotIndices) ? slotIndices : [slotIndices];
