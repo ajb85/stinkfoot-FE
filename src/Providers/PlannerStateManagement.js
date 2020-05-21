@@ -1,9 +1,9 @@
-import React, { useState, createContext, useEffect } from 'react';
+import React, { useState, createContext, useEffect, useContext } from 'react';
 import stateMgmt from 'js/plannerStateManager.js';
 
 import styles from 'Planner/PowerSlots/styles.module.scss';
 
-export const PlannerContext = createContext();
+const PlannerContext = createContext();
 
 let prevInstanceFunction;
 function PlannerProvider(props) {
@@ -32,6 +32,10 @@ function PlannerProvider(props) {
   }, [state]);
   const { Provider } = PlannerContext;
   return <Provider value={stateManager}>{props.children}</Provider>;
+}
+
+export function usePlannerState() {
+  return useContext(PlannerContext);
 }
 
 export default PlannerProvider;
