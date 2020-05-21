@@ -2,11 +2,11 @@ import React from 'react';
 
 import Dropdown from 'Planner/UI/Dropdown/';
 
-import { PlannerContext } from 'Providers/PlannerStateManagement.js';
+import { usePlannerState } from 'Providers/PlannerStateManagement.js';
 import styles from './styles.module.scss';
 
 function CharacterInfo(props) {
-  const stateManager = React.useContext(PlannerContext);
+  const stateManager = usePlannerState();
 
   const { updateBuild, archetypes } = stateManager;
   const atOptions = archetypes.map((a) => ({

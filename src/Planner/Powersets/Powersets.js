@@ -3,12 +3,12 @@ import React from 'react';
 import Powerset from './Powerset.js';
 import PoolPowers from './PoolPowers.js';
 
-import { PlannerContext } from 'Providers/PlannerStateManagement.js';
+import { usePlannerState } from 'Providers/PlannerStateManagement.js';
 
 import styles from './styles.module.scss';
 
 function Powersets(props) {
-  const stateManager = React.useContext(PlannerContext);
+  const stateManager = usePlannerState();
   return (
     <section className={styles.Powersets}>
       <div className={styles.powersetContainer}>
