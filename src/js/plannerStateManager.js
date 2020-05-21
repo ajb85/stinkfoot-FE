@@ -434,8 +434,15 @@ export default class BuildManager {
 
   addEnhancement = (powerSlotIndex, enhancement, enhNavigation, level = 50) => {
     const { tier, showSuperior } = enhNavigation;
+    console.log(
+      'ADDING 1: ',
+      powerSlotIndex,
+      enhancement,
+      enhNavigation,
+      level
+    );
     const enhCopy =
-      enhancement.type === 'set'
+      enhancement.type === 'set' || enhancement.type === 'attuned'
         ? this._addImageToSetEnhancement(enhancement, tier, showSuperior)
         : { ...enhancement };
 
@@ -445,7 +452,7 @@ export default class BuildManager {
 
   _addImageToSetEnhancement(enhancement, tier, showSuperior) {
     const enhImages = require.context('./images/enhancements/', true);
-
+    console.log('ADDING: ', enhancement, tier, showSuperior);
     const ioSetIndex = enhancement.setIndex;
     const ioSetImage = ioSets[tier][ioSetIndex].imageName;
     const { isAttuned } = ioSets[tier][ioSetIndex];
