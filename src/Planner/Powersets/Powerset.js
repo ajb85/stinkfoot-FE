@@ -2,12 +2,12 @@ import React from 'react';
 
 import arePowerRequirementsMet from 'js/arePowerRequirementsMet.js';
 import Dropdown from 'Planner/UI/Dropdown/';
-import { PlannerContext } from 'Providers/PlannerStateManagement.js';
+import { usePlannerState } from 'Providers/PlannerStateManagement.js';
 
 import styles from './styles.module.scss';
 
 function Powerset(props) {
-  const stateManager = React.useContext(PlannerContext);
+  const stateManager = usePlannerState();
 
   const { header, dropdown, powerList, poolIndex, compact } = props;
 

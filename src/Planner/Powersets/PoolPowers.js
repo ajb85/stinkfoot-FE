@@ -1,12 +1,12 @@
 import React from 'react';
 
 import Powerset from './Powerset.js';
-import { PlannerContext } from 'Providers/PlannerStateManagement.js';
+import { usePlannerState } from 'Providers/PlannerStateManagement.js';
 
 import styles from './styles.module.scss';
 
 function PoolPowers(props) {
-  const stateManager = React.useContext(PlannerContext);
+  const stateManager = usePlannerState();
 
   const renderEmptyBoxes = () => {
     const emptyBoxes = [];
