@@ -70,14 +70,14 @@ export default function SetPreviewMenu(props) {
                   onClick={
                     !isAdded && canBeAdded
                       ? stateManager.addEnhancement.bind(
-                          stateManager,
+                          this,
                           powerSlotIndex,
                           enh,
                           enhNavigation,
                           50
                         )
                       : stateManager.removeSlots.bind(
-                          stateManager,
+                          this,
                           powerSlotIndex,
                           enhancementIndex
                         )
