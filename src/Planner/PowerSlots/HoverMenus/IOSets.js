@@ -74,7 +74,8 @@ export default function SetPreviewMenu(props) {
                           powerSlotIndex,
                           enh,
                           enhNavigation,
-                          50
+                          50,
+                          setBonuses
                         )
                       : stateManager.removeSlots.bind(
                           this,
@@ -95,8 +96,16 @@ export default function SetPreviewMenu(props) {
           {setBonuses.reduce((acc, { pve, pvp }, bonusIndex) => {
             // { display, effectName, path, unlocked, color? } = pve[i]/pvp[i]
             for (let i = 0; i < pve.length; i++) {
+              const goodBonus = stateManager.bonusCanBeAdded(
+                pve[i][0].bonusName
+              );
               const bonusColor = {
-                color: pve[i][0].unlocked <= bonusTier ? 'gold' : null,
+                color: goodBonus
+                  ? pve[i][0].unlocked <= bonusTier
+                    ? 'gold'
+                    : null
+                  : 'grey',
+                textDecoration: goodBonus ? null : 'line-through',
               };
               acc.push(
                 <div
