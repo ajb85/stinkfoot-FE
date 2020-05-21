@@ -10,7 +10,6 @@ export default function StandardEnhancements(props) {
   const { selectionState, powerSlotIndex, power: p } = props;
   const [enhNavigation, setEnhNavigation] = selectionState;
   const stateManager = usePlannerState();
-
   const overlayImg = stateManager.getEnhancementOverlay(enhNavigation.tier);
 
   return (
@@ -23,7 +22,7 @@ export default function StandardEnhancements(props) {
               <div
                 className={styles.enhancementImage}
                 onClick={stateManager.addEnhancement.bind(
-                  stateManager,
+                  this,
                   powerSlotIndex,
                   enh,
                   enhNavigation,
