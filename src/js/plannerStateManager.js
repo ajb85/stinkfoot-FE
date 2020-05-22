@@ -455,7 +455,8 @@ export default class BuildManager {
     powerSlotIndex,
     { tier, showSuperior },
     ioSetIndex,
-    level
+    level,
+    bonuses
   ) => {
     const ps = this.nextState.build.powerSlots[powerSlotIndex];
 
@@ -472,7 +473,8 @@ export default class BuildManager {
         this._addImageToSetEnhancement(e, tier, showSuperior)
       ),
       level ? level : ioSets[tier][ioSetIndex].levels.max,
-      tier
+      tier,
+      bonuses
     );
 
     this._setState();
@@ -728,7 +730,7 @@ export default class BuildManager {
       }
 
       if (isSet) {
-        this._addSetBonuses(powerSlotIndex, tier, setIndex, bonuses);
+        this._addSetBonuses(powerSlotIndex, setIndex, bonuses);
       }
     });
   };
@@ -749,7 +751,7 @@ export default class BuildManager {
     );
   };
 
-  _addSetBonuses = (powerSlotIndex, tier, setIndex, bonuses) => {
+  _addSetBonuses = (powerSlotIndex, setIndex, bonuses) => {
     const { setBonuses } = this.nextState.build;
     const setCount = this.nextState.build.powerSlots[
       powerSlotIndex
@@ -758,7 +760,7 @@ export default class BuildManager {
         enhancement.setIndex === setIndex ? ++acc : acc,
       0
     );
-
+    console.log('LOOPING: ', bonuses);
     const bonusAtCount = bonuses.find(({ pve }) =>
       pve[0].find(({ unlocked }) => unlocked === setCount)
     );

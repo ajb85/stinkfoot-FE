@@ -38,7 +38,8 @@ export default function SetPreviewMenu(props) {
               powerSlotIndex,
               enhNavigation,
               enhancements[0].setIndex,
-              50
+              50,
+              setBonuses
             )}
           >
             Add Full Set
