@@ -2,12 +2,6 @@
   "fullName": "IOSet.Shield_Breaker",
   "enhancements": [
     {
-      "description": {
-        "short": "+Defense Debuff",
-        "long": "Enhances the defense debuff potential of a power by {Boost.Attrib.DefenseDebuff.Scale}%.  NOTE: This enhancement can only be slotted into defense debuff powers that require a To Hit check."
-      },
-      "isUnique": false,
-      "type": "set",
       "effects": [
         {
           "effectType": "DefenseDebuff",
@@ -26,18 +20,79 @@
           ]
         }
       ],
+      "description": {
+        "short": "+Defense Debuff",
+        "long": "Enhances the defense debuff potential of a power by {Boost.Attrib.DefenseDebuff.Scale}%.  NOTE: This enhancement can only be slotted into defense debuff powers that require a To Hit check."
+      },
+      "isUnique": false,
+      "type": "set",
       "fullName": "Boosts.Attuned_Shield_Breaker_A.Attuned_Shield_Breaker_A",
       "setName": "Shield_Breaker",
       "displayName": "Defense Debuff"
     },
     {
+      "effects": [
+        {
+          "effectType": "Accuracy",
+          "values": [
+            {
+              "etModifies": "Accuracy",
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "toWho": "self",
+              "powerFullName": "Boosts.Attuned_Shield_Breaker_B.Attuned_Shield_Breaker_B"
+            }
+          ]
+        },
+        {
+          "effectType": "DefenseDebuff",
+          "values": [
+            {
+              "etModifies": "Defense",
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "toWho": "self",
+              "powerFullName": "Boosts.Attuned_Shield_Breaker_B.Attuned_Shield_Breaker_B"
+            }
+          ]
+        }
+      ],
       "description": {
         "short": "+ACC, +Defense Debuff",
         "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and defense debuff potential of a power by {Boost.Attrib.DefenseDebuff.Scale}%.  NOTE: This enhancement can only be slotted into defense debuff powers that require a To Hit check."
       },
       "isUnique": false,
       "type": "set",
+      "fullName": "Boosts.Attuned_Shield_Breaker_B.Attuned_Shield_Breaker_B",
+      "setName": "Shield_Breaker",
+      "displayName": "Accuracy/Defense Debuff"
+    },
+    {
       "effects": [
+        {
+          "effectType": "Recharge",
+          "values": [
+            {
+              "etModifies": "RechargeTime",
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "toWho": "self",
+              "powerFullName": "Boosts.Attuned_Shield_Breaker_C.Attuned_Shield_Breaker_C"
+            }
+          ]
+        },
         {
           "effectType": "Accuracy",
           "values": [
@@ -50,83 +105,22 @@
               "duration": 10.25,
               "effectType": "Enhancement",
               "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Shield_Breaker_B.Attuned_Shield_Breaker_B"
-            }
-          ]
-        },
-        {
-          "effectType": "DefenseDebuff",
-          "values": [
-            {
-              "etModifies": "Defense",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Shield_Breaker_B.Attuned_Shield_Breaker_B"
+              "powerFullName": "Boosts.Attuned_Shield_Breaker_C.Attuned_Shield_Breaker_C"
             }
           ]
         }
       ],
-      "fullName": "Boosts.Attuned_Shield_Breaker_B.Attuned_Shield_Breaker_B",
-      "setName": "Shield_Breaker",
-      "displayName": "Accuracy/Defense Debuff"
-    },
-    {
       "description": {
         "short": "+ACC, +Rech",
         "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and and reduces recharge time by {Boost.Attrib.Recharge.Scale}%.  NOTE: This enhancement can only be slotted into defense debuff powers that require a To Hit check."
       },
       "isUnique": false,
       "type": "set",
-      "effects": [
-        {
-          "effectType": "Recharge",
-          "values": [
-            {
-              "etModifies": "RechargeTime",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Shield_Breaker_C.Attuned_Shield_Breaker_C"
-            }
-          ]
-        },
-        {
-          "effectType": "Accuracy",
-          "values": [
-            {
-              "etModifies": "Accuracy",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Shield_Breaker_C.Attuned_Shield_Breaker_C"
-            }
-          ]
-        }
-      ],
       "fullName": "Boosts.Attuned_Shield_Breaker_C.Attuned_Shield_Breaker_C",
       "setName": "Shield_Breaker",
       "displayName": "Accuracy/Recharge"
     },
     {
-      "description": {
-        "short": "+Defense Debuff, -End Cost, +Rech",
-        "long": "Enhances the defense debuff potential of a power by {Boost.Attrib.DefenseDebuff.Scale}%, reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}% and reduces recharge time by {Boost.Attrib.Recharge.Scale}%.  NOTE: This enhancement can only be slotted into defense debuff powers that require a To Hit check."
-      },
-      "isUnique": false,
-      "type": "set",
       "effects": [
         {
           "effectType": "Recharge",
@@ -177,17 +171,17 @@
           ]
         }
       ],
+      "description": {
+        "short": "+Defense Debuff, -End Cost, +Rech",
+        "long": "Enhances the defense debuff potential of a power by {Boost.Attrib.DefenseDebuff.Scale}%, reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}% and reduces recharge time by {Boost.Attrib.Recharge.Scale}%.  NOTE: This enhancement can only be slotted into defense debuff powers that require a To Hit check."
+      },
+      "isUnique": false,
+      "type": "set",
       "fullName": "Boosts.Attuned_Shield_Breaker_D.Attuned_Shield_Breaker_D",
       "setName": "Shield_Breaker",
       "displayName": "Defense Debuff/Endurance/Recharge"
     },
     {
-      "description": {
-        "short": "+ACC, -End Cost, +Rech",
-        "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}%, reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}% and reduces recharge time by {Boost.Attrib.Recharge.Scale}%.  NOTE: This enhancement can only be slotted into defense debuff powers that require a To Hit check."
-      },
-      "isUnique": false,
-      "type": "set",
       "effects": [
         {
           "effectType": "Recharge",
@@ -238,17 +232,17 @@
           ]
         }
       ],
+      "description": {
+        "short": "+ACC, -End Cost, +Rech",
+        "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}%, reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}% and reduces recharge time by {Boost.Attrib.Recharge.Scale}%.  NOTE: This enhancement can only be slotted into defense debuff powers that require a To Hit check."
+      },
+      "isUnique": false,
+      "type": "set",
       "fullName": "Boosts.Attuned_Shield_Breaker_E.Attuned_Shield_Breaker_E",
       "setName": "Shield_Breaker",
       "displayName": "Accuracy/Endurance/Recharge"
     },
     {
-      "description": {
-        "short": "Chance for Minor DMG (Lethal)",
-        "long": "Provides a chance to cause minor lethal damage to your targets.  This effect will trigger roughly 3.5 times per minute."
-      },
-      "isUnique": false,
-      "type": "set",
       "effects": [
         {
           "effectType": "Damage",
@@ -286,6 +280,12 @@
           ]
         }
       ],
+      "description": {
+        "short": "Chance for Minor DMG (Lethal)",
+        "long": "Provides a chance to cause minor lethal damage to your targets.  This effect will trigger roughly 3.5 times per minute."
+      },
+      "isUnique": false,
+      "type": "set",
       "fullName": "Boosts.Attuned_Shield_Breaker_F.Attuned_Shield_Breaker_F",
       "setName": "Shield_Breaker",
       "displayName": "Chance for Lethal Damage"
@@ -295,132 +295,6 @@
     "min": 10,
     "max": 30
   },
-  "bonuses": [
-    {
-      "pve": {
-        "bonusName": "Improved_Recovery_4",
-        "self": {
-          "Recovery": {
-            "2.5": {
-              "aggregates": [
-                true
-              ],
-              "hasAggregates": false,
-              "unlocked": 2,
-              "display": "2.5% End Recovery"
-            }
-          }
-        }
-      },
-      "pvp": {}
-    },
-    {
-      "pve": {
-        "bonusName": "Lethal_Smash_Mez_Res_2",
-        "self": {
-          "Resistance": {
-            "2.25": {
-              "aggregates": [
-                "Lethal",
-                "Smashing"
-              ],
-              "hasAggregates": true,
-              "unlocked": 3,
-              "display": "2.25% Res(Lethal, Smashing)"
-            }
-          },
-          "MezResist": {
-            "3.75": {
-              "aggregates": [
-                "Immob",
-                "Hold",
-                "Stun",
-                "Sleep",
-                "Terror",
-                "Confuse"
-              ],
-              "hasAggregates": true,
-              "unlocked": 3,
-              "display": "3.75% Res(Immob, Hold, Stun, Sleep, Terror, Confuse)"
-            }
-          }
-        }
-      },
-      "pvp": {}
-    },
-    {
-      "pve": {
-        "bonusName": "Increased_AoE_Fire_Cold_Def_3",
-        "self": {
-          "Defense": {
-            "2.5": {
-              "aggregates": [
-                "AoE"
-              ],
-              "hasAggregates": true,
-              "unlocked": 4,
-              "display": "2.5% Defense(AoE)"
-            },
-            "1.25": {
-              "aggregates": [
-                "Fire",
-                "Cold"
-              ],
-              "hasAggregates": true,
-              "unlocked": 4,
-              "display": "1.25% Defense(Fire, Cold)"
-            }
-          }
-        }
-      },
-      "pvp": {}
-    },
-    {
-      "pve": {
-        "bonusName": "Accuracy_5",
-        "self": {
-          "Enhancement": {
-            "11": {
-              "aggregates": [
-                true
-              ],
-              "hasAggregates": false,
-              "unlocked": 5,
-              "display": "11% Recharge Speed"
-            }
-          }
-        }
-      },
-      "pvp": {}
-    },
-    {
-      "pve": {
-        "bonusName": "Increased_Melee_Lethal_Smash_Def_4",
-        "self": {
-          "Defense": {
-            "3.13": {
-              "aggregates": [
-                "Melee"
-              ],
-              "hasAggregates": true,
-              "unlocked": 6,
-              "display": "3.13% Defense(Melee)"
-            },
-            "1.56": {
-              "aggregates": [
-                "Lethal",
-                "Smashing"
-              ],
-              "hasAggregates": true,
-              "unlocked": 6,
-              "display": "1.56% Defense(Lethal, Smashing)"
-            }
-          }
-        }
-      },
-      "pvp": {}
-    }
-  ],
   "setType": 30,
   "setTypeName": "Accurate Defense Debuff",
   "displayName": "Shield Breaker",

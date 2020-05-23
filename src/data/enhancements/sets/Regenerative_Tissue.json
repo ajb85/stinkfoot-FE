@@ -2,56 +2,95 @@
   "fullName": "IOSet.Regenerative_Tissue",
   "enhancements": [
     {
+      "effects": [
+        {
+          "effectType": "Heal",
+          "values": [
+            {
+              "etModifies": "Heal",
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "toWho": "self",
+              "powerFullName": "Boosts.Attuned_Regenerative_Tissue_A.Attuned_Regenerative_Tissue_A"
+            }
+          ]
+        },
+        {
+          "effectType": "Boosts_33",
+          "values": [
+            {
+              "etModifies": "Regeneration",
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "toWho": "self",
+              "powerFullName": "Boosts.Attuned_Regenerative_Tissue_A.Attuned_Regenerative_Tissue_A"
+            },
+            {
+              "etModifies": "HitPoints",
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "toWho": "self",
+              "powerFullName": "Boosts.Attuned_Regenerative_Tissue_A.Attuned_Regenerative_Tissue_A"
+            }
+          ]
+        },
+        {
+          "effectType": "Endurance",
+          "values": [
+            {
+              "etModifies": "EnduranceDiscount",
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "toWho": "self",
+              "powerFullName": "Boosts.Attuned_Regenerative_Tissue_A.Attuned_Regenerative_Tissue_A"
+            }
+          ]
+        },
+        {
+          "effectType": "Absorb",
+          "values": [
+            {
+              "etModifies": "Absorb",
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "toWho": "self",
+              "powerFullName": "Boosts.Attuned_Regenerative_Tissue_A.Attuned_Regenerative_Tissue_A"
+            }
+          ]
+        }
+      ],
       "description": {
         "short": "+Heal, -End Cost, +Absorb",
         "long": "Enhances the healing potential and damage absorption of a power by {Boost.Attrib.Heal.Scale}% and reduces endurance cost by {Boost.Attrib.Endurance.Scale}%"
       },
       "isUnique": false,
       "type": "set",
+      "fullName": "Boosts.Attuned_Regenerative_Tissue_A.Attuned_Regenerative_Tissue_A",
+      "setName": "Regenerative_Tissue",
+      "displayName": "Healing/Absorb/Endurance"
+    },
+    {
       "effects": [
-        {
-          "effectType": "Heal",
-          "values": [
-            {
-              "etModifies": "Heal",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Regenerative_Tissue_A.Attuned_Regenerative_Tissue_A"
-            }
-          ]
-        },
-        {
-          "effectType": "Boosts_33",
-          "values": [
-            {
-              "etModifies": "Regeneration",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Regenerative_Tissue_A.Attuned_Regenerative_Tissue_A"
-            },
-            {
-              "etModifies": "HitPoints",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Regenerative_Tissue_A.Attuned_Regenerative_Tissue_A"
-            }
-          ]
-        },
         {
           "effectType": "Endurance",
           "values": [
@@ -64,15 +103,15 @@
               "duration": 10.25,
               "effectType": "Enhancement",
               "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Regenerative_Tissue_A.Attuned_Regenerative_Tissue_A"
+              "powerFullName": "Boosts.Attuned_Regenerative_Tissue_B.Attuned_Regenerative_Tissue_B"
             }
           ]
         },
         {
-          "effectType": "Absorb",
+          "effectType": "Recharge",
           "values": [
             {
-              "etModifies": "Absorb",
+              "etModifies": "RechargeTime",
               "mag": {
                 "pve": 0.265
               },
@@ -80,28 +119,28 @@
               "duration": 10.25,
               "effectType": "Enhancement",
               "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Regenerative_Tissue_A.Attuned_Regenerative_Tissue_A"
+              "powerFullName": "Boosts.Attuned_Regenerative_Tissue_B.Attuned_Regenerative_Tissue_B"
             }
           ]
         }
       ],
-      "fullName": "Boosts.Attuned_Regenerative_Tissue_A.Attuned_Regenerative_Tissue_A",
-      "setName": "Regenerative_Tissue",
-      "displayName": "Healing/Absorb/Endurance"
-    },
-    {
       "description": {
         "short": "-End Cost, +Rech",
         "long": "Reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}% and recharge time by {Boost.Attrib.Recharge.Scale}%"
       },
       "isUnique": false,
       "type": "set",
+      "fullName": "Boosts.Attuned_Regenerative_Tissue_B.Attuned_Regenerative_Tissue_B",
+      "setName": "Regenerative_Tissue",
+      "displayName": "Endurance/Recharge"
+    },
+    {
       "effects": [
         {
-          "effectType": "Endurance",
+          "effectType": "Heal",
           "values": [
             {
-              "etModifies": "EnduranceDiscount",
+              "etModifies": "Heal",
               "mag": {
                 "pve": 0.265
               },
@@ -109,7 +148,34 @@
               "duration": 10.25,
               "effectType": "Enhancement",
               "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Regenerative_Tissue_B.Attuned_Regenerative_Tissue_B"
+              "powerFullName": "Boosts.Attuned_Regenerative_Tissue_C.Attuned_Regenerative_Tissue_C"
+            }
+          ]
+        },
+        {
+          "effectType": "Boosts_33",
+          "values": [
+            {
+              "etModifies": "Regeneration",
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "toWho": "self",
+              "powerFullName": "Boosts.Attuned_Regenerative_Tissue_C.Attuned_Regenerative_Tissue_C"
+            },
+            {
+              "etModifies": "HitPoints",
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "toWho": "self",
+              "powerFullName": "Boosts.Attuned_Regenerative_Tissue_C.Attuned_Regenerative_Tissue_C"
             }
           ]
         },
@@ -125,110 +191,38 @@
               "duration": 10.25,
               "effectType": "Enhancement",
               "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Regenerative_Tissue_B.Attuned_Regenerative_Tissue_B"
+              "powerFullName": "Boosts.Attuned_Regenerative_Tissue_C.Attuned_Regenerative_Tissue_C"
+            }
+          ]
+        },
+        {
+          "effectType": "Absorb",
+          "values": [
+            {
+              "etModifies": "Absorb",
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "toWho": "self",
+              "powerFullName": "Boosts.Attuned_Regenerative_Tissue_C.Attuned_Regenerative_Tissue_C"
             }
           ]
         }
       ],
-      "fullName": "Boosts.Attuned_Regenerative_Tissue_B.Attuned_Regenerative_Tissue_B",
-      "setName": "Regenerative_Tissue",
-      "displayName": "Endurance/Recharge"
-    },
-    {
       "description": {
         "short": "+Heal, +Rech, +Absorb",
         "long": "Enhances the healing potential and damage absorption of a power by {Boost.Attrib.Heal.Scale}% and reduces recharge time by  {Boost.Attrib.Recharge.Scale}%"
       },
       "isUnique": false,
       "type": "set",
-      "effects": [
-        {
-          "effectType": "Heal",
-          "values": [
-            {
-              "etModifies": "Heal",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Regenerative_Tissue_C.Attuned_Regenerative_Tissue_C"
-            }
-          ]
-        },
-        {
-          "effectType": "Boosts_33",
-          "values": [
-            {
-              "etModifies": "Regeneration",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Regenerative_Tissue_C.Attuned_Regenerative_Tissue_C"
-            },
-            {
-              "etModifies": "HitPoints",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Regenerative_Tissue_C.Attuned_Regenerative_Tissue_C"
-            }
-          ]
-        },
-        {
-          "effectType": "Recharge",
-          "values": [
-            {
-              "etModifies": "RechargeTime",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Regenerative_Tissue_C.Attuned_Regenerative_Tissue_C"
-            }
-          ]
-        },
-        {
-          "effectType": "Absorb",
-          "values": [
-            {
-              "etModifies": "Absorb",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Regenerative_Tissue_C.Attuned_Regenerative_Tissue_C"
-            }
-          ]
-        }
-      ],
       "fullName": "Boosts.Attuned_Regenerative_Tissue_C.Attuned_Regenerative_Tissue_C",
       "setName": "Regenerative_Tissue",
       "displayName": "Healing/Absorb/Recharge"
     },
     {
-      "description": {
-        "short": "+Heal, -End Cost, +Rech, +Absorb",
-        "long": "Enhances the healing potential and damage absorption of a power by {Boost.Attrib.Heal.Scale}%, reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}% and recharge time by  {Boost.Attrib.Recharge.Scale}%"
-      },
-      "isUnique": false,
-      "type": "set",
       "effects": [
         {
           "effectType": "Heal",
@@ -322,17 +316,17 @@
           ]
         }
       ],
+      "description": {
+        "short": "+Heal, -End Cost, +Rech, +Absorb",
+        "long": "Enhances the healing potential and damage absorption of a power by {Boost.Attrib.Heal.Scale}%, reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}% and recharge time by  {Boost.Attrib.Recharge.Scale}%"
+      },
+      "isUnique": false,
+      "type": "set",
       "fullName": "Boosts.Attuned_Regenerative_Tissue_D.Attuned_Regenerative_Tissue_D",
       "setName": "Regenerative_Tissue",
       "displayName": "Healing/Absorb/Endurance/Recharge"
     },
     {
-      "description": {
-        "short": "+Regeneration",
-        "long": "UNIQUE -- No more than 1 enhancement of this type may be slotted by a character.  Adds a {Boost.Attrib.Heal.Scale}% bonus to regeneration rate for 120 seconds."
-      },
-      "isUnique": true,
-      "type": "set",
       "effects": [
         {
           "effectType": "Heal",
@@ -351,6 +345,12 @@
           ]
         }
       ],
+      "description": {
+        "short": "+Regeneration",
+        "long": "UNIQUE -- No more than 1 enhancement of this type may be slotted by a character.  Adds a {Boost.Attrib.Heal.Scale}% bonus to regeneration rate for 120 seconds."
+      },
+      "isUnique": true,
+      "type": "set",
       "fullName": "Boosts.Attuned_Regenerative_Tissue_E.Attuned_Regenerative_Tissue_E",
       "setName": "Regenerative_Tissue",
       "displayName": "Regeneration"
@@ -360,110 +360,6 @@
     "min": 10,
     "max": 30
   },
-  "bonuses": [
-    {
-      "pve": {
-        "bonusName": "Increased_Move_3",
-        "self": {
-          "SpeedJumping": {
-            "6": {
-              "aggregates": [
-                true
-              ],
-              "hasAggregates": false,
-              "unlocked": 2,
-              "display": "6% Jump Speed"
-            }
-          },
-          "JumpHeight": {
-            "6": {
-              "aggregates": [
-                true
-              ],
-              "hasAggregates": false,
-              "unlocked": 2,
-              "display": "6% Jump Height"
-            }
-          },
-          "SpeedFlying": {
-            "6": {
-              "aggregates": [
-                true
-              ],
-              "hasAggregates": false,
-              "unlocked": 2,
-              "display": "6% Flight Speed"
-            }
-          },
-          "SpeedRunning": {
-            "6": {
-              "aggregates": [
-                true
-              ],
-              "hasAggregates": false,
-              "unlocked": 2,
-              "display": "6% Run Speed"
-            }
-          }
-        }
-      },
-      "pvp": {}
-    },
-    {
-      "pve": {
-        "bonusName": "Increased_Health_3",
-        "self": {
-          "HitPoints": {
-            "1807.14": {
-              "aggregates": [
-                true
-              ],
-              "hasAggregates": false,
-              "unlocked": 3,
-              "display": "1807.14% Max HP"
-            }
-          }
-        }
-      },
-      "pvp": {}
-    },
-    {
-      "pve": {
-        "bonusName": "Improved_Heal_3",
-        "self": {
-          "Enhancement": {
-            "4": {
-              "aggregates": [
-                true
-              ],
-              "hasAggregates": false,
-              "unlocked": 4,
-              "display": "4% Recharge Speed"
-            }
-          }
-        }
-      },
-      "pvp": {}
-    },
-    {
-      "pve": {
-        "bonusName": "Improved_Recharge_Time_3",
-        "self": {
-          "Enhancement": {
-            "5": {
-              "aggregates": [
-                true
-              ],
-              "hasAggregates": false,
-              "unlocked": 5,
-              "display": "5% Recharge Speed"
-            }
-          }
-        }
-      },
-      "pvp": {}
-    }
-  ],
   "setType": 9,
   "setTypeName": "Healing",
   "displayName": "Regenerative Tissue",

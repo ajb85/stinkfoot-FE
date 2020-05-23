@@ -2,12 +2,6 @@
   "fullName": "IOSet.Tempest",
   "enhancements": [
     {
-      "description": {
-        "short": "Enhances Accuracy and Damage",
-        "long": "Enhances the damage of a power by {Boost.Attrib.Damage.Scale}% and accuracy by {Boost.Attrib.Accuracy.Scale}%."
-      },
-      "isUnique": false,
-      "type": "set",
       "effects": [
         {
           "effectType": "Damage",
@@ -124,17 +118,17 @@
           ]
         }
       ],
+      "description": {
+        "short": "Enhances Accuracy and Damage",
+        "long": "Enhances the damage of a power by {Boost.Attrib.Damage.Scale}% and accuracy by {Boost.Attrib.Accuracy.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
       "fullName": "Boosts.Attuned_Tempest_A.Attuned_Tempest_A",
       "setName": "Tempest",
       "displayName": "Accuracy/Damage"
     },
     {
-      "description": {
-        "short": "Enhances Damage and Reduces Endurance Cost",
-        "long": "Enhances the damage of a power by {Boost.Attrib.Damage.Scale}% and reduces endurance cost by {Boost.Attrib.Endurance.Scale}%"
-      },
-      "isUnique": false,
-      "type": "set",
       "effects": [
         {
           "effectType": "Damage",
@@ -251,17 +245,17 @@
           ]
         }
       ],
+      "description": {
+        "short": "Enhances Damage and Reduces Endurance Cost",
+        "long": "Enhances the damage of a power by {Boost.Attrib.Damage.Scale}% and reduces endurance cost by {Boost.Attrib.Endurance.Scale}%"
+      },
+      "isUnique": false,
+      "type": "set",
       "fullName": "Boosts.Attuned_Tempest_B.Attuned_Tempest_B",
       "setName": "Tempest",
       "displayName": "Damage/Endurance"
     },
     {
-      "description": {
-        "short": "Enhances Damage and Recharge",
-        "long": "Enhances the damage of a power by {Boost.Attrib.Damage.Scale}% and reduces recharge time by {Boost.Attrib.Recharge.Scale}%"
-      },
-      "isUnique": false,
-      "type": "set",
       "effects": [
         {
           "effectType": "Damage",
@@ -378,17 +372,17 @@
           ]
         }
       ],
+      "description": {
+        "short": "Enhances Damage and Recharge",
+        "long": "Enhances the damage of a power by {Boost.Attrib.Damage.Scale}% and reduces recharge time by {Boost.Attrib.Recharge.Scale}%"
+      },
+      "isUnique": false,
+      "type": "set",
       "fullName": "Boosts.Attuned_Tempest_C.Attuned_Tempest_C",
       "setName": "Tempest",
       "displayName": "Damage/Recharge"
     },
     {
-      "description": {
-        "short": "Chance for Endurance Drain",
-        "long": "Gives a chance to drain some of your opponents endurance.  This effect will trigger roughly 3.5 times per minute."
-      },
-      "isUnique": false,
-      "type": "set",
       "effects": [
         {
           "effectType": "Endurance",
@@ -425,6 +419,12 @@
           ]
         }
       ],
+      "description": {
+        "short": "Chance for Endurance Drain",
+        "long": "Gives a chance to drain some of your opponents endurance.  This effect will trigger roughly 3.5 times per minute."
+      },
+      "isUnique": false,
+      "type": "set",
       "fullName": "Boosts.Attuned_Tempest_D.Attuned_Tempest_D",
       "setName": "Tempest",
       "displayName": "Chance for Endurance Drain"
@@ -434,101 +434,6 @@
     "min": 15,
     "max": 30
   },
-  "bonuses": [
-    {
-      "pve": {
-        "bonusName": "Energy_Neg_Mez_Res_1",
-        "self": {
-          "Resistance": {
-            "1.5": {
-              "aggregates": [
-                "Energy",
-                "Negative"
-              ],
-              "hasAggregates": true,
-              "unlocked": 2,
-              "display": "1.5% Res(Energy, Negative)"
-            }
-          },
-          "MezResist": {
-            "2.5": {
-              "aggregates": [
-                "Immob",
-                "Hold",
-                "Stun",
-                "Sleep",
-                "Terror",
-                "Confuse"
-              ],
-              "hasAggregates": true,
-              "unlocked": 2,
-              "display": "2.5% Res(Immob, Hold, Stun, Sleep, Terror, Confuse)"
-            }
-          }
-        }
-      },
-      "pvp": {}
-    },
-    {
-      "pve": {
-        "bonusName": "Lethal_Smash_Mez_Res_1",
-        "self": {
-          "Resistance": {
-            "1.5": {
-              "aggregates": [
-                "Lethal",
-                "Smashing"
-              ],
-              "hasAggregates": true,
-              "unlocked": 3,
-              "display": "1.5% Res(Lethal, Smashing)"
-            }
-          },
-          "MezResist": {
-            "2.5": {
-              "aggregates": [
-                "Immob",
-                "Hold",
-                "Stun",
-                "Sleep",
-                "Terror",
-                "Confuse"
-              ],
-              "hasAggregates": true,
-              "unlocked": 3,
-              "display": "2.5% Res(Immob, Hold, Stun, Sleep, Terror, Confuse)"
-            }
-          }
-        }
-      },
-      "pvp": {}
-    },
-    {
-      "pve": {
-        "bonusName": "Increased_Damage_3",
-        "all": {
-          "DamageBuff": {
-            "2": {
-              "aggregates": [
-                "Smashing",
-                "Lethal",
-                "Fire",
-                "Cold",
-                "Energy",
-                "Negative",
-                "Toxic",
-                "Psionic"
-              ],
-              "hasAggregates": true,
-              "unlocked": 4,
-              "display": "2% Damage(Smashing, Lethal, Fire, Cold, Energy, Negative, Toxic, Psionic)"
-            }
-          }
-        }
-      },
-      "pvp": {}
-    }
-  ],
   "setType": 2,
   "setTypeName": "Ranged Damage",
   "displayName": "Tempest",

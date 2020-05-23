@@ -2,12 +2,6 @@
   "fullName": "IOSet.Stupefy",
   "enhancements": [
     {
-      "description": {
-        "short": "+ACC, +Rech",
-        "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}%."
-      },
-      "isUnique": false,
-      "type": "set",
       "effects": [
         {
           "effectType": "Recharge",
@@ -42,17 +36,17 @@
           ]
         }
       ],
+      "description": {
+        "short": "+ACC, +Rech",
+        "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
       "fullName": "Boosts.Attuned_Stupefy_A.Attuned_Stupefy_A",
       "setName": "Stupefy",
       "displayName": "Accuracy/Recharge"
     },
     {
-      "description": {
-        "short": "+End, +Stun",
-        "long": "Enhances the Stun duration of a power by {Boost.Attrib.Stun.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."
-      },
-      "isUnique": false,
-      "type": "set",
       "effects": [
         {
           "effectType": "Endurance",
@@ -88,17 +82,17 @@
           ]
         }
       ],
+      "description": {
+        "short": "+End, +Stun",
+        "long": "Enhances the Stun duration of a power by {Boost.Attrib.Stun.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
       "fullName": "Boosts.Attuned_Stupefy_B.Attuned_Stupefy_B",
       "setName": "Stupefy",
       "displayName": "Endurance/Stun"
     },
     {
-      "description": {
-        "short": "+ACC, -End Cost",
-        "long": "Enhances the accuracy by {Boost.Attrib.Accuracy.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."
-      },
-      "isUnique": false,
-      "type": "set",
       "effects": [
         {
           "effectType": "Accuracy",
@@ -133,17 +127,17 @@
           ]
         }
       ],
+      "description": {
+        "short": "+ACC, -End Cost",
+        "long": "Enhances the accuracy by {Boost.Attrib.Accuracy.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
       "fullName": "Boosts.Attuned_Stupefy_C.Attuned_Stupefy_C",
       "setName": "Stupefy",
       "displayName": "Accuracy/Endurance"
     },
     {
-      "description": {
-        "short": "+Range, +Stun",
-        "long": "Enhances the range of a power by {Boost.Attrib.Range.Scale}% and stun duration by {Boost.Attrib.Stun.Scale}%."
-      },
-      "isUnique": false,
-      "type": "set",
       "effects": [
         {
           "effectType": "Stun",
@@ -179,17 +173,17 @@
           ]
         }
       ],
+      "description": {
+        "short": "+Range, +Stun",
+        "long": "Enhances the range of a power by {Boost.Attrib.Range.Scale}% and stun duration by {Boost.Attrib.Stun.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
       "fullName": "Boosts.Attuned_Stupefy_D.Attuned_Stupefy_D",
       "setName": "Stupefy",
       "displayName": "Stun/Range"
     },
     {
-      "description": {
-        "short": "+ACC, +Rech, +Stun",
-        "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}%, stun duration by {Boost.Attrib.Stun.Scale}% and reduces the attack rate by {Boost.Attrib.Recharge.Scale}%."
-      },
-      "isUnique": false,
-      "type": "set",
       "effects": [
         {
           "effectType": "Accuracy",
@@ -241,17 +235,17 @@
           ]
         }
       ],
+      "description": {
+        "short": "+ACC, +Rech, +Stun",
+        "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}%, stun duration by {Boost.Attrib.Stun.Scale}% and reduces the attack rate by {Boost.Attrib.Recharge.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
       "fullName": "Boosts.Attuned_Stupefy_E.Attuned_Stupefy_E",
       "setName": "Stupefy",
       "displayName": "Accuracy/Stun/Recharge"
     },
     {
-      "description": {
-        "short": "Adds Knockback",
-        "long": "Adds a chance to knock your foe back.  This effect will trigger roughly 3.5 times per minute."
-      },
-      "isUnique": false,
-      "type": "set",
       "effects": [
         {
           "effectType": "Knockback",
@@ -272,6 +266,12 @@
           ]
         }
       ],
+      "description": {
+        "short": "Adds Knockback",
+        "long": "Adds a chance to knock your foe back.  This effect will trigger roughly 3.5 times per minute."
+      },
+      "isUnique": false,
+      "type": "set",
       "fullName": "Boosts.Attuned_Stupefy_F.Attuned_Stupefy_F",
       "setName": "Stupefy",
       "displayName": "Chance for Knockback"
@@ -281,107 +281,6 @@
     "min": 20,
     "max": 50
   },
-  "bonuses": [
-    {
-      "pve": {
-        "bonusName": "Improved_Recovery_4",
-        "self": {
-          "Recovery": {
-            "2.5": {
-              "aggregates": [
-                true
-              ],
-              "hasAggregates": false,
-              "unlocked": 2,
-              "display": "2.5% End Recovery"
-            }
-          }
-        }
-      },
-      "pvp": {}
-    },
-    {
-      "pve": {
-        "bonusName": "Increased_Health_4",
-        "self": {
-          "HitPoints": {
-            "2258.92": {
-              "aggregates": [
-                true
-              ],
-              "hasAggregates": false,
-              "unlocked": 3,
-              "display": "2258.92% Max HP"
-            }
-          }
-        }
-      },
-      "pvp": {}
-    },
-    {
-      "pve": {
-        "bonusName": "Stun_Dur_5",
-        "self": {
-          "Enhancement": {
-            "3": {
-              "aggregates": [
-                true
-              ],
-              "hasAggregates": false,
-              "unlocked": 4,
-              "display": "3% Recharge Speed"
-            }
-          }
-        }
-      },
-      "pvp": {}
-    },
-    {
-      "pve": {
-        "bonusName": "Improved_Recharge_Time_4",
-        "self": {
-          "Enhancement": {
-            "6.25": {
-              "aggregates": [
-                true
-              ],
-              "hasAggregates": false,
-              "unlocked": 5,
-              "display": "6.25% Recharge Speed"
-            }
-          }
-        }
-      },
-      "pvp": {}
-    },
-    {
-      "pve": {
-        "bonusName": "Increased_Ranged_Energy_Neg_Def_4",
-        "self": {
-          "Defense": {
-            "3.13": {
-              "aggregates": [
-                "Ranged"
-              ],
-              "hasAggregates": true,
-              "unlocked": 6,
-              "display": "3.13% Defense(Ranged)"
-            },
-            "1.56": {
-              "aggregates": [
-                "Energy",
-                "Negative"
-              ],
-              "hasAggregates": true,
-              "unlocked": 6,
-              "display": "1.56% Defense(Energy, Negative)"
-            }
-          }
-        }
-      },
-      "pvp": {}
-    }
-  ],
   "setType": 11,
   "setTypeName": "Stuns",
   "displayName": "Stupefy",

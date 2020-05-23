@@ -2,12 +2,6 @@
   "fullName": "IOSet.Cacophony",
   "enhancements": [
     {
-      "description": {
-        "short": "+ACC, +Rech",
-        "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}%."
-      },
-      "isUnique": false,
-      "type": "set",
       "effects": [
         {
           "effectType": "Recharge",
@@ -42,17 +36,17 @@
           ]
         }
       ],
+      "description": {
+        "short": "+ACC, +Rech",
+        "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
       "fullName": "Boosts.Attuned_Cacophany_A.Attuned_Cacophany_A",
       "setName": "Cacophony",
       "displayName": "Accuracy/Recharge"
     },
     {
-      "description": {
-        "short": "-End Cost, +Confuse",
-        "long": "Enhances the confuse duration of a power by {Boost.Attrib.Confused.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."
-      },
-      "isUnique": false,
-      "type": "set",
       "effects": [
         {
           "effectType": "Endurance",
@@ -88,17 +82,17 @@
           ]
         }
       ],
+      "description": {
+        "short": "-End Cost, +Confuse",
+        "long": "Enhances the confuse duration of a power by {Boost.Attrib.Confused.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
       "fullName": "Boosts.Attuned_Cacophany_B.Attuned_Cacophany_B",
       "setName": "Cacophony",
       "displayName": "Endurance/Confuse"
     },
     {
-      "description": {
-        "short": "+ACC, -End Cost",
-        "long": "Enhances the accuracy by {Boost.Attrib.Accuracy.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."
-      },
-      "isUnique": false,
-      "type": "set",
       "effects": [
         {
           "effectType": "Accuracy",
@@ -133,17 +127,17 @@
           ]
         }
       ],
+      "description": {
+        "short": "+ACC, -End Cost",
+        "long": "Enhances the accuracy by {Boost.Attrib.Accuracy.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
       "fullName": "Boosts.Attuned_Cacophany_C.Attuned_Cacophany_C",
       "setName": "Cacophony",
       "displayName": "Accuracy/Endurance"
     },
     {
-      "description": {
-        "short": "+Range, +Confuse",
-        "long": "Enhances the range of a power by {Boost.Attrib.Range.Scale}% and confuse duration by {Boost.Attrib.confuse.Scale}%."
-      },
-      "isUnique": false,
-      "type": "set",
       "effects": [
         {
           "effectType": "Confuse",
@@ -179,17 +173,17 @@
           ]
         }
       ],
+      "description": {
+        "short": "+Range, +Confuse",
+        "long": "Enhances the range of a power by {Boost.Attrib.Range.Scale}% and confuse duration by {Boost.Attrib.confuse.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
       "fullName": "Boosts.Attuned_Cacophany_D.Attuned_Cacophany_D",
       "setName": "Cacophony",
       "displayName": "Confuse/Range"
     },
     {
-      "description": {
-        "short": "+ACC, +Rech, +Confuse",
-        "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}%, Confuse duration by {Boost.Attrib.Confuse.Scale}% and reduces the attack rate by {Boost.Attrib.Recharge.Scale}%."
-      },
-      "isUnique": false,
-      "type": "set",
       "effects": [
         {
           "effectType": "Confuse",
@@ -241,17 +235,17 @@
           ]
         }
       ],
+      "description": {
+        "short": "+ACC, +Rech, +Confuse",
+        "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}%, Confuse duration by {Boost.Attrib.Confuse.Scale}% and reduces the attack rate by {Boost.Attrib.Recharge.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
       "fullName": "Boosts.Attuned_Cacophany_E.Attuned_Cacophany_E",
       "setName": "Cacophony",
       "displayName": "Accuracy/Confuse/Recharge"
     },
     {
-      "description": {
-        "short": "Chance for Energy DMG",
-        "long": "Provides a chance to cause minor energy damage to your targets.  This effect will trigger roughly 3.5 times per minute."
-      },
-      "isUnique": false,
-      "type": "set",
       "effects": [
         {
           "effectType": "Damage",
@@ -289,6 +283,12 @@
           ]
         }
       ],
+      "description": {
+        "short": "Chance for Energy DMG",
+        "long": "Provides a chance to cause minor energy damage to your targets.  This effect will trigger roughly 3.5 times per minute."
+      },
+      "isUnique": false,
+      "type": "set",
       "fullName": "Boosts.Attuned_Cacophany_F.Attuned_Cacophany_F",
       "setName": "Cacophony",
       "displayName": "Chance for Energy Damage"
@@ -298,132 +298,6 @@
     "min": 10,
     "max": 30
   },
-  "bonuses": [
-    {
-      "pve": {
-        "bonusName": "Improved_Recovery_1",
-        "self": {
-          "Recovery": {
-            "1": {
-              "aggregates": [
-                true
-              ],
-              "hasAggregates": false,
-              "unlocked": 2,
-              "display": "1% End Recovery"
-            }
-          }
-        }
-      },
-      "pvp": {}
-    },
-    {
-      "pve": {
-        "bonusName": "Confuse_Dur_2",
-        "self": {
-          "Enhancement": {
-            "1.5": {
-              "aggregates": [
-                true
-              ],
-              "hasAggregates": false,
-              "unlocked": 3,
-              "display": "1.5% Recharge Speed"
-            }
-          }
-        }
-      },
-      "pvp": {}
-    },
-    {
-      "pve": {
-        "bonusName": "Toxic_Psi_Mez_Res_3",
-        "self": {
-          "Resistance": {
-            "3": {
-              "aggregates": [
-                "Toxic",
-                "Psionic"
-              ],
-              "hasAggregates": true,
-              "unlocked": 4,
-              "display": "3% Res(Toxic, Psionic)"
-            }
-          },
-          "MezResist": {
-            "5": {
-              "aggregates": [
-                "Immob",
-                "Hold",
-                "Stun",
-                "Sleep",
-                "Terror",
-                "Confuse"
-              ],
-              "hasAggregates": true,
-              "unlocked": 4,
-              "display": "5% Res(Immob, Hold, Stun, Sleep, Terror, Confuse)"
-            }
-          }
-        }
-      },
-      "pvp": {}
-    },
-    {
-      "pve": {
-        "bonusName": "Increased_AoE_Fire_Cold_Def_3",
-        "self": {
-          "Defense": {
-            "2.5": {
-              "aggregates": [
-                "AoE"
-              ],
-              "hasAggregates": true,
-              "unlocked": 5,
-              "display": "2.5% Defense(AoE)"
-            },
-            "1.25": {
-              "aggregates": [
-                "Fire",
-                "Cold"
-              ],
-              "hasAggregates": true,
-              "unlocked": 5,
-              "display": "1.25% Defense(Fire, Cold)"
-            }
-          }
-        }
-      },
-      "pvp": {}
-    },
-    {
-      "pve": {
-        "bonusName": "Increased_Ranged_Energy_Neg_Def_3",
-        "self": {
-          "Defense": {
-            "2.5": {
-              "aggregates": [
-                "Ranged"
-              ],
-              "hasAggregates": true,
-              "unlocked": 6,
-              "display": "2.5% Defense(Ranged)"
-            },
-            "1.25": {
-              "aggregates": [
-                "Energy",
-                "Negative"
-              ],
-              "hasAggregates": true,
-              "unlocked": 6,
-              "display": "1.25% Defense(Energy, Negative)"
-            }
-          }
-        }
-      },
-      "pvp": {}
-    }
-  ],
   "setType": 16,
   "setTypeName": "Confuse",
   "displayName": "Cacophony",

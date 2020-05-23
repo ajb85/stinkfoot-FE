@@ -2,12 +2,6 @@
   "fullName": "IOSet.Steadfast_Protection",
   "enhancements": [
     {
-      "description": {
-        "short": "+RES (all), Reduces End cost",
-        "long": "Enhances the damage resistance of a power by {Boost.Attrib.Resist.Scale}% and reduces endurance cost by {Boost.Attrib.Endurance.Scale}%"
-      },
-      "isUnique": false,
-      "type": "set",
       "effects": [
         {
           "effectType": "Resist",
@@ -124,17 +118,17 @@
           ]
         }
       ],
+      "description": {
+        "short": "+RES (all), Reduces End cost",
+        "long": "Enhances the damage resistance of a power by {Boost.Attrib.Resist.Scale}% and reduces endurance cost by {Boost.Attrib.Endurance.Scale}%"
+      },
+      "isUnique": false,
+      "type": "set",
       "fullName": "Boosts.Attuned_Steadfast_Protection_A.Attuned_Steadfast_Protection_A",
       "setName": "Steadfast_Protection",
       "displayName": "Resistance/Endurance"
     },
     {
-      "description": {
-        "short": "+Res (all) +Def (All)",
-        "long": "UNIQUE -- No more than 1 enhancement of this type may be slotted by a character.  Enhances the damage resistance of a power by {Boost.Attrib.Resist.Scale}% and increases overall defense by {Boost.Attrib.Defense.Scale}%."
-      },
-      "isUnique": true,
-      "type": "set",
       "effects": [
         {
           "effectType": "Resist",
@@ -250,17 +244,17 @@
           ]
         }
       ],
+      "description": {
+        "short": "+Res (all) +Def (All)",
+        "long": "UNIQUE -- No more than 1 enhancement of this type may be slotted by a character.  Enhances the damage resistance of a power by {Boost.Attrib.Resist.Scale}% and increases overall defense by {Boost.Attrib.Defense.Scale}%."
+      },
+      "isUnique": true,
+      "type": "set",
       "fullName": "Boosts.Attuned_Steadfast_Protection_B.Attuned_Steadfast_Protection_B",
       "setName": "Steadfast_Protection",
       "displayName": "Resistance/Defense"
     },
     {
-      "description": {
-        "short": "-KB",
-        "long": "Reduces Knockback effects by -4."
-      },
-      "isUnique": false,
-      "type": "set",
       "effects": [
         {
           "effectType": "Knockback",
@@ -279,6 +273,12 @@
           ]
         }
       ],
+      "description": {
+        "short": "-KB",
+        "long": "Reduces Knockback effects by -4."
+      },
+      "isUnique": false,
+      "type": "set",
       "fullName": "Boosts.Attuned_Steadfast_Protection_C.Attuned_Steadfast_Protection_C",
       "setName": "Steadfast_Protection",
       "displayName": "Knockback Protection"
@@ -288,44 +288,6 @@
     "min": 10,
     "max": 30
   },
-  "bonuses": [
-    {
-      "pve": {
-        "bonusName": "Improved_Recovery_2",
-        "self": {
-          "Recovery": {
-            "1.5": {
-              "aggregates": [
-                true
-              ],
-              "hasAggregates": false,
-              "unlocked": 2,
-              "display": "1.5% End Recovery"
-            }
-          }
-        }
-      },
-      "pvp": {}
-    },
-    {
-      "pve": {
-        "bonusName": "Increased_Health_3",
-        "self": {
-          "HitPoints": {
-            "1807.14": {
-              "aggregates": [
-                true
-              ],
-              "hasAggregates": false,
-              "unlocked": 3,
-              "display": "1807.14% Max HP"
-            }
-          }
-        }
-      },
-      "pvp": {}
-    }
-  ],
   "setType": 8,
   "setTypeName": "Resist Damage",
   "displayName": "Steadfast Protection",

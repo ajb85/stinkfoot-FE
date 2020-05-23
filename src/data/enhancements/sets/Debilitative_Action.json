@@ -2,12 +2,6 @@
   "fullName": "IOSet.Debilitative_Action",
   "enhancements": [
     {
-      "description": {
-        "short": "+ACC, +Rech",
-        "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}%."
-      },
-      "isUnique": false,
-      "type": "set",
       "effects": [
         {
           "effectType": "Recharge",
@@ -42,17 +36,17 @@
           ]
         }
       ],
+      "description": {
+        "short": "+ACC, +Rech",
+        "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
       "fullName": "Boosts.Attuned_Debiliative_Action_A.Attuned_Debiliative_Action_A",
       "setName": "Debilitative_Action",
       "displayName": "Accuracy/Recharge"
     },
     {
-      "description": {
-        "short": "+End, +Immobilize",
-        "long": "Enhances the Immobilize duration of a power by {Boost.Attrib.Immobilize.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."
-      },
-      "isUnique": false,
-      "type": "set",
       "effects": [
         {
           "effectType": "Endurance",
@@ -88,17 +82,17 @@
           ]
         }
       ],
+      "description": {
+        "short": "+End, +Immobilize",
+        "long": "Enhances the Immobilize duration of a power by {Boost.Attrib.Immobilize.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
       "fullName": "Boosts.Attuned_Debiliative_Action_B.Attuned_Debiliative_Action_B",
       "setName": "Debilitative_Action",
       "displayName": "Immobilize/Endurance Reduction"
     },
     {
-      "description": {
-        "short": "+ACC, -End Cost",
-        "long": "Enhances the accuracy by {Boost.Attrib.Accuracy.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."
-      },
-      "isUnique": false,
-      "type": "set",
       "effects": [
         {
           "effectType": "Accuracy",
@@ -133,17 +127,17 @@
           ]
         }
       ],
+      "description": {
+        "short": "+ACC, -End Cost",
+        "long": "Enhances the accuracy by {Boost.Attrib.Accuracy.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
       "fullName": "Boosts.Attuned_Debiliative_Action_C.Attuned_Debiliative_Action_C",
       "setName": "Debilitative_Action",
       "displayName": "Accuracy/Endurance"
     },
     {
-      "description": {
-        "short": "+Range, +Immobilize",
-        "long": "Enhances the range of a power by {Boost.Attrib.Range.Scale}% and immobilize duration by {Boost.Attrib.immobilize.Scale}%."
-      },
-      "isUnique": false,
-      "type": "set",
       "effects": [
         {
           "effectType": "Immobilize",
@@ -179,17 +173,17 @@
           ]
         }
       ],
+      "description": {
+        "short": "+Range, +Immobilize",
+        "long": "Enhances the range of a power by {Boost.Attrib.Range.Scale}% and immobilize duration by {Boost.Attrib.immobilize.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
       "fullName": "Boosts.Attuned_Debiliative_Action_D.Attuned_Debiliative_Action_D",
       "setName": "Debilitative_Action",
       "displayName": "Immobilize/Range"
     },
     {
-      "description": {
-        "short": "+ACC, +Rech, +Immob",
-        "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}%, immobilize duration by {Boost.Attrib.Immobilize.Scale}% and reduces the attack rate by {Boost.Attrib.Recharge.Scale}%."
-      },
-      "isUnique": false,
-      "type": "set",
       "effects": [
         {
           "effectType": "Immobilize",
@@ -241,17 +235,17 @@
           ]
         }
       ],
+      "description": {
+        "short": "+ACC, +Rech, +Immob",
+        "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}%, immobilize duration by {Boost.Attrib.Immobilize.Scale}% and reduces the attack rate by {Boost.Attrib.Recharge.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
       "fullName": "Boosts.Attuned_Debiliative_Action_E.Attuned_Debiliative_Action_E",
       "setName": "Debilitative_Action",
       "displayName": "Accuracy/Immob/Recharge"
     },
     {
-      "description": {
-        "short": "Adds Disorient Chance",
-        "long": "Adds a chance to Disorient your foe.  This effect will trigger roughly 3 times per minute."
-      },
-      "isUnique": false,
-      "type": "set",
       "effects": [
         {
           "effectType": "Stun",
@@ -294,6 +288,12 @@
           ]
         }
       ],
+      "description": {
+        "short": "Adds Disorient Chance",
+        "long": "Adds a chance to Disorient your foe.  This effect will trigger roughly 3 times per minute."
+      },
+      "isUnique": false,
+      "type": "set",
       "fullName": "Boosts.Attuned_Debiliative_Action_F.Attuned_Debiliative_Action_F",
       "setName": "Debilitative_Action",
       "displayName": "Disorient Bonus"
@@ -303,139 +303,6 @@
     "min": 10,
     "max": 30
   },
-  "bonuses": [
-    {
-      "pve": {
-        "bonusName": "Immob_Dur_3",
-        "self": {
-          "Enhancement": {
-            "4": {
-              "aggregates": [
-                true
-              ],
-              "hasAggregates": false,
-              "unlocked": 2,
-              "display": "4% Recharge Speed"
-            }
-          }
-        }
-      },
-      "pvp": {}
-    },
-    {
-      "pve": {
-        "bonusName": "Fire_Cold_Mez_Res_2",
-        "self": {
-          "Resistance": {
-            "2.25": {
-              "aggregates": [
-                "Fire",
-                "Cold"
-              ],
-              "hasAggregates": true,
-              "unlocked": 3,
-              "display": "2.25% Res(Fire, Cold)"
-            }
-          },
-          "MezResist": {
-            "3.75": {
-              "aggregates": [
-                "Immob",
-                "Hold",
-                "Stun",
-                "Sleep",
-                "Terror",
-                "Confuse"
-              ],
-              "hasAggregates": true,
-              "unlocked": 3,
-              "display": "3.75% Res(Immob, Hold, Stun, Sleep, Terror, Confuse)"
-            }
-          }
-        }
-      },
-      "pvp": {}
-    },
-    {
-      "pve": {
-        "bonusName": "Improved_Regeneration_3",
-        "self": {
-          "Regeneration": {
-            "8": {
-              "aggregates": [
-                true
-              ],
-              "hasAggregates": false,
-              "unlocked": 4,
-              "display": "8% Regen"
-            }
-          }
-        }
-      },
-      "pvp": {}
-    },
-    {
-      "pve": {
-        "bonusName": "Increased_AoE_Fire_Cold_Def_3",
-        "self": {
-          "Defense": {
-            "2.5": {
-              "aggregates": [
-                "AoE"
-              ],
-              "hasAggregates": true,
-              "unlocked": 5,
-              "display": "2.5% Defense(AoE)"
-            },
-            "1.25": {
-              "aggregates": [
-                "Fire",
-                "Cold"
-              ],
-              "hasAggregates": true,
-              "unlocked": 5,
-              "display": "1.25% Defense(Fire, Cold)"
-            }
-          }
-        }
-      },
-      "pvp": {}
-    },
-    {
-      "pve": {
-        "bonusName": "Toxic_Psi_Mez_Res_5",
-        "self": {
-          "Resistance": {
-            "4.5": {
-              "aggregates": [
-                "Toxic",
-                "Psionic"
-              ],
-              "hasAggregates": true,
-              "unlocked": 6,
-              "display": "4.5% Res(Toxic, Psionic)"
-            }
-          },
-          "MezResist": {
-            "7.5": {
-              "aggregates": [
-                "Immob",
-                "Hold",
-                "Stun",
-                "Sleep",
-                "Terror",
-                "Confuse"
-              ],
-              "hasAggregates": true,
-              "unlocked": 6,
-              "display": "7.5% Res(Immob, Hold, Stun, Sleep, Terror, Confuse)"
-            }
-          }
-        }
-      },
-      "pvp": {}
-    }
-  ],
   "setType": 12,
   "setTypeName": "Immobilize",
   "displayName": "Debilitative Action",

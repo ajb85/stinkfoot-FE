@@ -2,56 +2,95 @@
   "fullName": "IOSet.Miracle",
   "enhancements": [
     {
+      "effects": [
+        {
+          "effectType": "Heal",
+          "values": [
+            {
+              "etModifies": "Heal",
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "toWho": "self",
+              "powerFullName": "Boosts.Attuned_Miracle_A.Attuned_Miracle_A"
+            }
+          ]
+        },
+        {
+          "effectType": "Boosts_33",
+          "values": [
+            {
+              "etModifies": "Regeneration",
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "toWho": "self",
+              "powerFullName": "Boosts.Attuned_Miracle_A.Attuned_Miracle_A"
+            },
+            {
+              "etModifies": "HitPoints",
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "toWho": "self",
+              "powerFullName": "Boosts.Attuned_Miracle_A.Attuned_Miracle_A"
+            }
+          ]
+        },
+        {
+          "effectType": "Endurance",
+          "values": [
+            {
+              "etModifies": "EnduranceDiscount",
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "toWho": "self",
+              "powerFullName": "Boosts.Attuned_Miracle_A.Attuned_Miracle_A"
+            }
+          ]
+        },
+        {
+          "effectType": "Absorb",
+          "values": [
+            {
+              "etModifies": "Absorb",
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "toWho": "self",
+              "powerFullName": "Boosts.Attuned_Miracle_A.Attuned_Miracle_A"
+            }
+          ]
+        }
+      ],
       "description": {
         "short": "+Heal, -End Cost, +Absorb",
         "long": "Enhances the healing potential and damage absorption of a power by {Boost.Attrib.Heal.Scale}% and reduces endurance cost by {Boost.Attrib.Endurance.Scale}%"
       },
       "isUnique": false,
       "type": "set",
+      "fullName": "Boosts.Attuned_Miracle_A.Attuned_Miracle_A",
+      "setName": "Miracle",
+      "displayName": "Healing/Absorb/Endurance"
+    },
+    {
       "effects": [
-        {
-          "effectType": "Heal",
-          "values": [
-            {
-              "etModifies": "Heal",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Miracle_A.Attuned_Miracle_A"
-            }
-          ]
-        },
-        {
-          "effectType": "Boosts_33",
-          "values": [
-            {
-              "etModifies": "Regeneration",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Miracle_A.Attuned_Miracle_A"
-            },
-            {
-              "etModifies": "HitPoints",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Miracle_A.Attuned_Miracle_A"
-            }
-          ]
-        },
         {
           "effectType": "Endurance",
           "values": [
@@ -64,15 +103,15 @@
               "duration": 10.25,
               "effectType": "Enhancement",
               "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Miracle_A.Attuned_Miracle_A"
+              "powerFullName": "Boosts.Attuned_Miracle_B.Attuned_Miracle_B"
             }
           ]
         },
         {
-          "effectType": "Absorb",
+          "effectType": "Recharge",
           "values": [
             {
-              "etModifies": "Absorb",
+              "etModifies": "RechargeTime",
               "mag": {
                 "pve": 0.265
               },
@@ -80,28 +119,28 @@
               "duration": 10.25,
               "effectType": "Enhancement",
               "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Miracle_A.Attuned_Miracle_A"
+              "powerFullName": "Boosts.Attuned_Miracle_B.Attuned_Miracle_B"
             }
           ]
         }
       ],
-      "fullName": "Boosts.Attuned_Miracle_A.Attuned_Miracle_A",
-      "setName": "Miracle",
-      "displayName": "Healing/Absorb/Endurance"
-    },
-    {
       "description": {
         "short": "-End Cost, +Rech",
         "long": "Reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}% and recharge time by {Boost.Attrib.Recharge.Scale}%"
       },
       "isUnique": false,
       "type": "set",
+      "fullName": "Boosts.Attuned_Miracle_B.Attuned_Miracle_B",
+      "setName": "Miracle",
+      "displayName": "Endurance/Recharge"
+    },
+    {
       "effects": [
         {
-          "effectType": "Endurance",
+          "effectType": "Heal",
           "values": [
             {
-              "etModifies": "EnduranceDiscount",
+              "etModifies": "Heal",
               "mag": {
                 "pve": 0.265
               },
@@ -109,7 +148,34 @@
               "duration": 10.25,
               "effectType": "Enhancement",
               "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Miracle_B.Attuned_Miracle_B"
+              "powerFullName": "Boosts.Attuned_Miracle_C.Attuned_Miracle_C"
+            }
+          ]
+        },
+        {
+          "effectType": "Boosts_33",
+          "values": [
+            {
+              "etModifies": "Regeneration",
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "toWho": "self",
+              "powerFullName": "Boosts.Attuned_Miracle_C.Attuned_Miracle_C"
+            },
+            {
+              "etModifies": "HitPoints",
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "toWho": "self",
+              "powerFullName": "Boosts.Attuned_Miracle_C.Attuned_Miracle_C"
             }
           ]
         },
@@ -125,110 +191,38 @@
               "duration": 10.25,
               "effectType": "Enhancement",
               "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Miracle_B.Attuned_Miracle_B"
+              "powerFullName": "Boosts.Attuned_Miracle_C.Attuned_Miracle_C"
+            }
+          ]
+        },
+        {
+          "effectType": "Absorb",
+          "values": [
+            {
+              "etModifies": "Absorb",
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "toWho": "self",
+              "powerFullName": "Boosts.Attuned_Miracle_C.Attuned_Miracle_C"
             }
           ]
         }
       ],
-      "fullName": "Boosts.Attuned_Miracle_B.Attuned_Miracle_B",
-      "setName": "Miracle",
-      "displayName": "Endurance/Recharge"
-    },
-    {
       "description": {
         "short": "+Heal, +Rech, +Absorb",
         "long": "Enhances the healing potential and damage absorption of a power by {Boost.Attrib.Heal.Scale}% and reduces recharge time by  {Boost.Attrib.Recharge.Scale}%"
       },
       "isUnique": false,
       "type": "set",
-      "effects": [
-        {
-          "effectType": "Heal",
-          "values": [
-            {
-              "etModifies": "Heal",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Miracle_C.Attuned_Miracle_C"
-            }
-          ]
-        },
-        {
-          "effectType": "Boosts_33",
-          "values": [
-            {
-              "etModifies": "Regeneration",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Miracle_C.Attuned_Miracle_C"
-            },
-            {
-              "etModifies": "HitPoints",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Miracle_C.Attuned_Miracle_C"
-            }
-          ]
-        },
-        {
-          "effectType": "Recharge",
-          "values": [
-            {
-              "etModifies": "RechargeTime",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Miracle_C.Attuned_Miracle_C"
-            }
-          ]
-        },
-        {
-          "effectType": "Absorb",
-          "values": [
-            {
-              "etModifies": "Absorb",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Miracle_C.Attuned_Miracle_C"
-            }
-          ]
-        }
-      ],
       "fullName": "Boosts.Attuned_Miracle_C.Attuned_Miracle_C",
       "setName": "Miracle",
       "displayName": "Healing/Absorb/Recharge"
     },
     {
-      "description": {
-        "short": "+Heal, -End Cost, +Rech, +Absorb",
-        "long": "Enhances the healing potential and damage absorption of a power by {Boost.Attrib.Heal.Scale}%, reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}% and recharge time by  {Boost.Attrib.Recharge.Scale}%"
-      },
-      "isUnique": false,
-      "type": "set",
       "effects": [
         {
           "effectType": "Heal",
@@ -322,17 +316,17 @@
           ]
         }
       ],
+      "description": {
+        "short": "+Heal, -End Cost, +Rech, +Absorb",
+        "long": "Enhances the healing potential and damage absorption of a power by {Boost.Attrib.Heal.Scale}%, reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}% and recharge time by  {Boost.Attrib.Recharge.Scale}%"
+      },
+      "isUnique": false,
+      "type": "set",
       "fullName": "Boosts.Attuned_Miracle_D.Attuned_Miracle_D",
       "setName": "Miracle",
       "displayName": "Healing/Absorb/Endurance/Recharge"
     },
     {
-      "description": {
-        "short": "+Heal, +Absorb",
-        "long": "Enhances the healing potential and damage absorption of a power by {Boost.Attrib.Heal.Scale}%."
-      },
-      "isUnique": false,
-      "type": "set",
       "effects": [
         {
           "effectType": "Heal",
@@ -394,17 +388,17 @@
           ]
         }
       ],
+      "description": {
+        "short": "+Heal, +Absorb",
+        "long": "Enhances the healing potential and damage absorption of a power by {Boost.Attrib.Heal.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
       "fullName": "Boosts.Attuned_Miracle_E.Attuned_Miracle_E",
       "setName": "Miracle",
       "displayName": "Healing/Absorb"
     },
     {
-      "description": {
-        "short": "+Recovery",
-        "long": "UNIQUE -- No more than 1 enhancement of this type may be slotted by a character.  Adds a {Boost.Attrib.Recovery.Scale}% bonus to endurance recovery rate for 120 seconds."
-      },
-      "isUnique": true,
-      "type": "set",
       "effects": [
         {
           "effectType": "Recovery",
@@ -423,6 +417,12 @@
           ]
         }
       ],
+      "description": {
+        "short": "+Recovery",
+        "long": "UNIQUE -- No more than 1 enhancement of this type may be slotted by a character.  Adds a {Boost.Attrib.Recovery.Scale}% bonus to endurance recovery rate for 120 seconds."
+      },
+      "isUnique": true,
+      "type": "set",
       "fullName": "Boosts.Attuned_Miracle_F.Attuned_Miracle_F",
       "setName": "Miracle",
       "displayName": "+Recovery"
@@ -432,107 +432,6 @@
     "min": 20,
     "max": 40
   },
-  "bonuses": [
-    {
-      "pve": {
-        "bonusName": "Improved_Recovery_4",
-        "self": {
-          "Recovery": {
-            "2.5": {
-              "aggregates": [
-                true
-              ],
-              "hasAggregates": false,
-              "unlocked": 2,
-              "display": "2.5% End Recovery"
-            }
-          }
-        }
-      },
-      "pvp": {}
-    },
-    {
-      "pve": {
-        "bonusName": "Increased_Health_4",
-        "self": {
-          "HitPoints": {
-            "2258.92": {
-              "aggregates": [
-                true
-              ],
-              "hasAggregates": false,
-              "unlocked": 3,
-              "display": "2258.92% Max HP"
-            }
-          }
-        }
-      },
-      "pvp": {}
-    },
-    {
-      "pve": {
-        "bonusName": "Improved_Heal_4",
-        "self": {
-          "Enhancement": {
-            "5": {
-              "aggregates": [
-                true
-              ],
-              "hasAggregates": false,
-              "unlocked": 4,
-              "display": "5% Recharge Speed"
-            }
-          }
-        }
-      },
-      "pvp": {}
-    },
-    {
-      "pve": {
-        "bonusName": "Increased_AoE_Fire_Cold_Def_2",
-        "self": {
-          "Defense": {
-            "1.88": {
-              "aggregates": [
-                "AoE"
-              ],
-              "hasAggregates": true,
-              "unlocked": 5,
-              "display": "1.88% Defense(AoE)"
-            },
-            "0.94": {
-              "aggregates": [
-                "Fire",
-                "Cold"
-              ],
-              "hasAggregates": true,
-              "unlocked": 5,
-              "display": "0.94% Defense(Fire, Cold)"
-            }
-          }
-        }
-      },
-      "pvp": {}
-    },
-    {
-      "pve": {
-        "bonusName": "Increased_Psionic_Def_2",
-        "self": {
-          "Defense": {
-            "1.88": {
-              "aggregates": [
-                "Psionic"
-              ],
-              "hasAggregates": true,
-              "unlocked": 6,
-              "display": "1.88% Defense(Psionic)"
-            }
-          }
-        }
-      },
-      "pvp": {}
-    }
-  ],
   "setType": 9,
   "setTypeName": "Healing",
   "displayName": "Miracle",

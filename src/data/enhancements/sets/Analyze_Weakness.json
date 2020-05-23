@@ -2,12 +2,6 @@
   "fullName": "IOSet.Analyze_Weakness",
   "enhancements": [
     {
-      "description": {
-        "short": "+Defense Debuff",
-        "long": "Enhances the defense debuff potential of a power by {Boost.Attrib.DefenseDebuff.Scale}%.  NOTE: This enhancement can only be slotted into defense debuff powers that require a To Hit check."
-      },
-      "isUnique": false,
-      "type": "set",
       "effects": [
         {
           "effectType": "DefenseDebuff",
@@ -26,18 +20,79 @@
           ]
         }
       ],
+      "description": {
+        "short": "+Defense Debuff",
+        "long": "Enhances the defense debuff potential of a power by {Boost.Attrib.DefenseDebuff.Scale}%.  NOTE: This enhancement can only be slotted into defense debuff powers that require a To Hit check."
+      },
+      "isUnique": false,
+      "type": "set",
       "fullName": "Boosts.Attuned_Analyze_Weakness_A.Attuned_Analyze_Weakness_A",
       "setName": "Analyze_Weakness",
       "displayName": "Defense Debuff"
     },
     {
+      "effects": [
+        {
+          "effectType": "Accuracy",
+          "values": [
+            {
+              "etModifies": "Accuracy",
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "toWho": "self",
+              "powerFullName": "Boosts.Attuned_Analyze_Weakness_B.Attuned_Analyze_Weakness_B"
+            }
+          ]
+        },
+        {
+          "effectType": "DefenseDebuff",
+          "values": [
+            {
+              "etModifies": "Defense",
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "toWho": "self",
+              "powerFullName": "Boosts.Attuned_Analyze_Weakness_B.Attuned_Analyze_Weakness_B"
+            }
+          ]
+        }
+      ],
       "description": {
         "short": "+ACC, +Defense Debuff",
         "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and defense debuff potential of a power by {Boost.Attrib.DefenseDebuff.Scale}%.  NOTE: This enhancement can only be slotted into defense debuff powers that require a To Hit check."
       },
       "isUnique": false,
       "type": "set",
+      "fullName": "Boosts.Attuned_Analyze_Weakness_B.Attuned_Analyze_Weakness_B",
+      "setName": "Analyze_Weakness",
+      "displayName": "Accuracy/Defense Debuff"
+    },
+    {
       "effects": [
+        {
+          "effectType": "Recharge",
+          "values": [
+            {
+              "etModifies": "RechargeTime",
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "toWho": "self",
+              "powerFullName": "Boosts.Attuned_Analyze_Weakness_C.Attuned_Analyze_Weakness_C"
+            }
+          ]
+        },
         {
           "effectType": "Accuracy",
           "values": [
@@ -50,83 +105,22 @@
               "duration": 10.25,
               "effectType": "Enhancement",
               "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Analyze_Weakness_B.Attuned_Analyze_Weakness_B"
-            }
-          ]
-        },
-        {
-          "effectType": "DefenseDebuff",
-          "values": [
-            {
-              "etModifies": "Defense",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Analyze_Weakness_B.Attuned_Analyze_Weakness_B"
+              "powerFullName": "Boosts.Attuned_Analyze_Weakness_C.Attuned_Analyze_Weakness_C"
             }
           ]
         }
       ],
-      "fullName": "Boosts.Attuned_Analyze_Weakness_B.Attuned_Analyze_Weakness_B",
-      "setName": "Analyze_Weakness",
-      "displayName": "Accuracy/Defense Debuff"
-    },
-    {
       "description": {
         "short": "+ACC, +Rech",
         "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and and reduces recharge time by {Boost.Attrib.Recharge.Scale}%.  NOTE: This enhancement can only be slotted into defense debuff powers that require a To Hit check."
       },
       "isUnique": false,
       "type": "set",
-      "effects": [
-        {
-          "effectType": "Recharge",
-          "values": [
-            {
-              "etModifies": "RechargeTime",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Analyze_Weakness_C.Attuned_Analyze_Weakness_C"
-            }
-          ]
-        },
-        {
-          "effectType": "Accuracy",
-          "values": [
-            {
-              "etModifies": "Accuracy",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Analyze_Weakness_C.Attuned_Analyze_Weakness_C"
-            }
-          ]
-        }
-      ],
       "fullName": "Boosts.Attuned_Analyze_Weakness_C.Attuned_Analyze_Weakness_C",
       "setName": "Analyze_Weakness",
       "displayName": "Accuracy/Recharge"
     },
     {
-      "description": {
-        "short": "+Defense Debuff, -End Cost, +Rech",
-        "long": "Enhances the defense debuff potential of a power by {Boost.Attrib.DefenseDebuff.Scale}%, reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}% and reduces recharge time by {Boost.Attrib.Recharge.Scale}%  NOTE: This enhancement can only be slotted into defense debuff powers that require a To Hit check."
-      },
-      "isUnique": false,
-      "type": "set",
       "effects": [
         {
           "effectType": "Recharge",
@@ -177,17 +171,17 @@
           ]
         }
       ],
+      "description": {
+        "short": "+Defense Debuff, -End Cost, +Rech",
+        "long": "Enhances the defense debuff potential of a power by {Boost.Attrib.DefenseDebuff.Scale}%, reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}% and reduces recharge time by {Boost.Attrib.Recharge.Scale}%  NOTE: This enhancement can only be slotted into defense debuff powers that require a To Hit check."
+      },
+      "isUnique": false,
+      "type": "set",
       "fullName": "Boosts.Attuned_Analyze_Weakness_D.Attuned_Analyze_Weakness_D",
       "setName": "Analyze_Weakness",
       "displayName": "Defense Debuff/Endurance/Recharge"
     },
     {
-      "description": {
-        "short": "+ACC, -End Cost, +Rech",
-        "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}%, reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}% and reduces recharge time by {Boost.Attrib.Recharge.Scale}%.  NOTE: This enhancement can only be slotted into defense debuff powers that require a To Hit check."
-      },
-      "isUnique": false,
-      "type": "set",
       "effects": [
         {
           "effectType": "Recharge",
@@ -238,17 +232,17 @@
           ]
         }
       ],
+      "description": {
+        "short": "+ACC, -End Cost, +Rech",
+        "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}%, reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}% and reduces recharge time by {Boost.Attrib.Recharge.Scale}%.  NOTE: This enhancement can only be slotted into defense debuff powers that require a To Hit check."
+      },
+      "isUnique": false,
+      "type": "set",
       "fullName": "Boosts.Attuned_Analyze_Weakness_E.Attuned_Analyze_Weakness_E",
       "setName": "Analyze_Weakness",
       "displayName": "Accuracy/Endurance/Recharge"
     },
     {
-      "description": {
-        "short": "Chance for +To Hit",
-        "long": "Gives a chance to boost the user's chance to hit.  This effect will trigger roughly 2times per minute.  NOTE: This enhancement can only be slotted into defense debuff powers that require a to hit check."
-      },
-      "isUnique": false,
-      "type": "set",
       "effects": [
         {
           "effectType": "Boost",
@@ -268,6 +262,12 @@
           ]
         }
       ],
+      "description": {
+        "short": "Chance for +To Hit",
+        "long": "Gives a chance to boost the user's chance to hit.  This effect will trigger roughly 2times per minute.  NOTE: This enhancement can only be slotted into defense debuff powers that require a to hit check."
+      },
+      "isUnique": false,
+      "type": "set",
       "fullName": "Boosts.Attuned_Analyze_Weakness_F.Attuned_Analyze_Weakness_F",
       "setName": "Analyze_Weakness",
       "displayName": "Chance for +To Hit",
@@ -278,137 +278,6 @@
     "min": 30,
     "max": 50
   },
-  "bonuses": [
-    {
-      "pve": {
-        "bonusName": "Improved_Regeneration_4",
-        "self": {
-          "Regeneration": {
-            "10": {
-              "aggregates": [
-                true
-              ],
-              "hasAggregates": false,
-              "unlocked": 2,
-              "display": "10% Regen"
-            }
-          }
-        }
-      },
-      "pvp": {}
-    },
-    {
-      "pve": {
-        "bonusName": "Energy_Neg_Mez_Res_2",
-        "self": {
-          "Resistance": {
-            "2.25": {
-              "aggregates": [
-                "Energy",
-                "Negative"
-              ],
-              "hasAggregates": true,
-              "unlocked": 3,
-              "display": "2.25% Res(Energy, Negative)"
-            }
-          },
-          "MezResist": {
-            "3.75": {
-              "aggregates": [
-                "Immob",
-                "Hold",
-                "Stun",
-                "Sleep",
-                "Terror",
-                "Confuse"
-              ],
-              "hasAggregates": true,
-              "unlocked": 3,
-              "display": "3.75% Res(Immob, Hold, Stun, Sleep, Terror, Confuse)"
-            }
-          }
-        }
-      },
-      "pvp": {}
-    },
-    {
-      "pve": {
-        "bonusName": "Increased_Damage_5",
-        "all": {
-          "DamageBuff": {
-            "3": {
-              "aggregates": [
-                "Smashing",
-                "Lethal",
-                "Fire",
-                "Cold",
-                "Energy",
-                "Negative",
-                "Toxic",
-                "Psionic"
-              ],
-              "hasAggregates": true,
-              "unlocked": 4,
-              "display": "3% Damage(Smashing, Lethal, Fire, Cold, Energy, Negative, Toxic, Psionic)"
-            }
-          }
-        }
-      },
-      "pvp": {}
-    },
-    {
-      "pve": {
-        "bonusName": "Accuracy_5",
-        "self": {
-          "Enhancement": {
-            "11": {
-              "aggregates": [
-                true
-              ],
-              "hasAggregates": false,
-              "unlocked": 5,
-              "display": "11% Recharge Speed"
-            }
-          }
-        }
-      },
-      "pvp": {}
-    },
-    {
-      "pve": {
-        "bonusName": "Lethal_Smash_Mez_Res_5",
-        "self": {
-          "Resistance": {
-            "4.5": {
-              "aggregates": [
-                "Lethal",
-                "Smashing"
-              ],
-              "hasAggregates": true,
-              "unlocked": 6,
-              "display": "4.5% Res(Lethal, Smashing)"
-            }
-          },
-          "MezResist": {
-            "7.5": {
-              "aggregates": [
-                "Immob",
-                "Hold",
-                "Stun",
-                "Sleep",
-                "Terror",
-                "Confuse"
-              ],
-              "hasAggregates": true,
-              "unlocked": 6,
-              "display": "7.5% Res(Immob, Hold, Stun, Sleep, Terror, Confuse)"
-            }
-          }
-        }
-      },
-      "pvp": {}
-    }
-  ],
   "setType": 30,
   "setTypeName": "Accurate Defense Debuff",
   "displayName": "Analyze Weakness",

@@ -2,12 +2,78 @@
   "fullName": "IOSet.Theft_of_Essence",
   "enhancements": [
     {
+      "effects": [
+        {
+          "effectType": "Heal",
+          "values": [
+            {
+              "etModifies": "Heal",
+              "mag": {
+                "pve": 0.424
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "toWho": "self",
+              "powerFullName": "Boosts.Attuned_Theft_of_Essence_A.Attuned_Theft_of_Essence_A"
+            }
+          ]
+        },
+        {
+          "effectType": "Boosts_33",
+          "values": [
+            {
+              "etModifies": "Regeneration",
+              "mag": {
+                "pve": 0.424
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "toWho": "self",
+              "powerFullName": "Boosts.Attuned_Theft_of_Essence_A.Attuned_Theft_of_Essence_A"
+            },
+            {
+              "etModifies": "HitPoints",
+              "mag": {
+                "pve": 0.424
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "toWho": "self",
+              "powerFullName": "Boosts.Attuned_Theft_of_Essence_A.Attuned_Theft_of_Essence_A"
+            }
+          ]
+        },
+        {
+          "effectType": "Absorb",
+          "values": [
+            {
+              "etModifies": "Absorb",
+              "mag": {
+                "pve": 0.424
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "toWho": "self",
+              "powerFullName": "Boosts.Attuned_Theft_of_Essence_A.Attuned_Theft_of_Essence_A"
+            }
+          ]
+        }
+      ],
       "description": {
         "short": "+Heal, +Absorb",
         "long": "Enhances the healing potential and damage absorption of a power by {Boost.Attrib.Heal.Scale}%.  NOTE: This enhancement can only be slotted into healing powers that require a To Hit check."
       },
       "isUnique": false,
       "type": "set",
+      "fullName": "Boosts.Attuned_Theft_of_Essence_A.Attuned_Theft_of_Essence_A",
+      "setName": "Theft_of_Essence",
+      "displayName": "Healing/Absorb"
+    },
+    {
       "effects": [
         {
           "effectType": "Heal",
@@ -15,13 +81,13 @@
             {
               "etModifies": "Heal",
               "mag": {
-                "pve": 0.424
+                "pve": 0.265
               },
               "probability": 1,
               "duration": 10.25,
               "effectType": "Enhancement",
               "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Theft_of_Essence_A.Attuned_Theft_of_Essence_A"
+              "powerFullName": "Boosts.Attuned_Theft_of_Essence_B.Attuned_Theft_of_Essence_B"
             }
           ]
         },
@@ -31,24 +97,40 @@
             {
               "etModifies": "Regeneration",
               "mag": {
-                "pve": 0.424
+                "pve": 0.265
               },
               "probability": 1,
               "duration": 10.25,
               "effectType": "Enhancement",
               "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Theft_of_Essence_A.Attuned_Theft_of_Essence_A"
+              "powerFullName": "Boosts.Attuned_Theft_of_Essence_B.Attuned_Theft_of_Essence_B"
             },
             {
               "etModifies": "HitPoints",
               "mag": {
-                "pve": 0.424
+                "pve": 0.265
               },
               "probability": 1,
               "duration": 10.25,
               "effectType": "Enhancement",
               "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Theft_of_Essence_A.Attuned_Theft_of_Essence_A"
+              "powerFullName": "Boosts.Attuned_Theft_of_Essence_B.Attuned_Theft_of_Essence_B"
+            }
+          ]
+        },
+        {
+          "effectType": "Recharge",
+          "values": [
+            {
+              "etModifies": "RechargeTime",
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "toWho": "self",
+              "powerFullName": "Boosts.Attuned_Theft_of_Essence_B.Attuned_Theft_of_Essence_B"
             }
           ]
         },
@@ -58,28 +140,28 @@
             {
               "etModifies": "Absorb",
               "mag": {
-                "pve": 0.424
+                "pve": 0.265
               },
               "probability": 1,
               "duration": 10.25,
               "effectType": "Enhancement",
               "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Theft_of_Essence_A.Attuned_Theft_of_Essence_A"
+              "powerFullName": "Boosts.Attuned_Theft_of_Essence_B.Attuned_Theft_of_Essence_B"
             }
           ]
         }
       ],
-      "fullName": "Boosts.Attuned_Theft_of_Essence_A.Attuned_Theft_of_Essence_A",
-      "setName": "Theft_of_Essence",
-      "displayName": "Healing/Absorb"
-    },
-    {
       "description": {
         "short": "+Heal, +Rech, +Absorb",
         "long": "Enhances the healing potential and damage absorption of a power by {Boost.Attrib.Heal.Scale}% and reduces recharge time by {Boost.Attrib.Recharge.Scale}%.  NOTE: This enhancement can only be slotted into healing powers that require a To Hit check."
       },
       "isUnique": false,
       "type": "set",
+      "fullName": "Boosts.Attuned_Theft_of_Essence_B.Attuned_Theft_of_Essence_B",
+      "setName": "Theft_of_Essence",
+      "displayName": "Healing/Absorb/Recharge"
+    },
+    {
       "effects": [
         {
           "effectType": "Heal",
@@ -93,7 +175,7 @@
               "duration": 10.25,
               "effectType": "Enhancement",
               "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Theft_of_Essence_B.Attuned_Theft_of_Essence_B"
+              "powerFullName": "Boosts.Attuned_Theft_of_Essence_C.Attuned_Theft_of_Essence_C"
             }
           ]
         },
@@ -109,7 +191,7 @@
               "duration": 10.25,
               "effectType": "Enhancement",
               "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Theft_of_Essence_B.Attuned_Theft_of_Essence_B"
+              "powerFullName": "Boosts.Attuned_Theft_of_Essence_C.Attuned_Theft_of_Essence_C"
             },
             {
               "etModifies": "HitPoints",
@@ -120,15 +202,15 @@
               "duration": 10.25,
               "effectType": "Enhancement",
               "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Theft_of_Essence_B.Attuned_Theft_of_Essence_B"
+              "powerFullName": "Boosts.Attuned_Theft_of_Essence_C.Attuned_Theft_of_Essence_C"
             }
           ]
         },
         {
-          "effectType": "Recharge",
+          "effectType": "Accuracy",
           "values": [
             {
-              "etModifies": "RechargeTime",
+              "etModifies": "Accuracy",
               "mag": {
                 "pve": 0.265
               },
@@ -136,7 +218,7 @@
               "duration": 10.25,
               "effectType": "Enhancement",
               "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Theft_of_Essence_B.Attuned_Theft_of_Essence_B"
+              "powerFullName": "Boosts.Attuned_Theft_of_Essence_C.Attuned_Theft_of_Essence_C"
             }
           ]
         },
@@ -152,110 +234,22 @@
               "duration": 10.25,
               "effectType": "Enhancement",
               "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Theft_of_Essence_B.Attuned_Theft_of_Essence_B"
+              "powerFullName": "Boosts.Attuned_Theft_of_Essence_C.Attuned_Theft_of_Essence_C"
             }
           ]
         }
       ],
-      "fullName": "Boosts.Attuned_Theft_of_Essence_B.Attuned_Theft_of_Essence_B",
-      "setName": "Theft_of_Essence",
-      "displayName": "Healing/Absorb/Recharge"
-    },
-    {
       "description": {
         "short": "+Acc, +Heal, +Absorb",
         "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}%, the healing potential and damage absorption of a power by {Boost.Attrib.Heal.Scale}%.  NOTE: This enhancement can only be slotted into healing powers that require a To Hit check."
       },
       "isUnique": false,
       "type": "set",
-      "effects": [
-        {
-          "effectType": "Heal",
-          "values": [
-            {
-              "etModifies": "Heal",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Theft_of_Essence_C.Attuned_Theft_of_Essence_C"
-            }
-          ]
-        },
-        {
-          "effectType": "Boosts_33",
-          "values": [
-            {
-              "etModifies": "Regeneration",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Theft_of_Essence_C.Attuned_Theft_of_Essence_C"
-            },
-            {
-              "etModifies": "HitPoints",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Theft_of_Essence_C.Attuned_Theft_of_Essence_C"
-            }
-          ]
-        },
-        {
-          "effectType": "Accuracy",
-          "values": [
-            {
-              "etModifies": "Accuracy",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Theft_of_Essence_C.Attuned_Theft_of_Essence_C"
-            }
-          ]
-        },
-        {
-          "effectType": "Absorb",
-          "values": [
-            {
-              "etModifies": "Absorb",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Theft_of_Essence_C.Attuned_Theft_of_Essence_C"
-            }
-          ]
-        }
-      ],
       "fullName": "Boosts.Attuned_Theft_of_Essence_C.Attuned_Theft_of_Essence_C",
       "setName": "Theft_of_Essence",
       "displayName": "Accuracy/Healing/Absorb"
     },
     {
-      "description": {
-        "short": "+Acc, -End Cost, +Heal, +Absorb",
-        "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}%, reduces the endurance cost by {Boost.Attrib.Endurance.Scale}%, Enhances the healing potential and damage absorption of a power by {Boost.Attrib.Heal.Scale}%.  NOTE: This enhancement can only be slotted into healing powers that require a To Hit check."
-      },
-      "isUnique": false,
-      "type": "set",
       "effects": [
         {
           "effectType": "Heal",
@@ -349,17 +343,17 @@
           ]
         }
       ],
+      "description": {
+        "short": "+Acc, -End Cost, +Heal, +Absorb",
+        "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}%, reduces the endurance cost by {Boost.Attrib.Endurance.Scale}%, Enhances the healing potential and damage absorption of a power by {Boost.Attrib.Heal.Scale}%.  NOTE: This enhancement can only be slotted into healing powers that require a To Hit check."
+      },
+      "isUnique": false,
+      "type": "set",
       "fullName": "Boosts.Attuned_Theft_of_Essence_D.Attuned_Theft_of_Essence_D",
       "setName": "Theft_of_Essence",
       "displayName": "Accuracy/Endurance/Healing/Absorb"
     },
     {
-      "description": {
-        "short": "+Acc, -End Cost, +Rech",
-        "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}%, reduces the endurance cost by {Boost.Attrib.Endurance.Scale}% and reduces recharge time by {Boost.Attrib.Recharge.Scale}%.   NOTE: This enhancement can only be slotted into healing powers that require a To Hit check."
-      },
-      "isUnique": false,
-      "type": "set",
       "effects": [
         {
           "effectType": "Accuracy",
@@ -410,17 +404,17 @@
           ]
         }
       ],
+      "description": {
+        "short": "+Acc, -End Cost, +Rech",
+        "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}%, reduces the endurance cost by {Boost.Attrib.Endurance.Scale}% and reduces recharge time by {Boost.Attrib.Recharge.Scale}%.   NOTE: This enhancement can only be slotted into healing powers that require a To Hit check."
+      },
+      "isUnique": false,
+      "type": "set",
       "fullName": "Boosts.Attuned_Theft_of_Essence_E.Attuned_Theft_of_Essence_E",
       "setName": "Theft_of_Essence",
       "displayName": "Accuracy/Endurance/Recharge"
     },
     {
-      "description": {
-        "short": "Chance for +Endurance",
-        "long": "Gives a chance of granting the powers target a small infusion of endurance.  This effect will trigger roughly 3.5 times per minute.  NOTE: This enhancement can only be slotted into healing powers that require a To Hit check."
-      },
-      "isUnique": false,
-      "type": "set",
       "effects": [
         {
           "effectType": "Damage",
@@ -440,6 +434,12 @@
           ]
         }
       ],
+      "description": {
+        "short": "Chance for +Endurance",
+        "long": "Gives a chance of granting the powers target a small infusion of endurance.  This effect will trigger roughly 3.5 times per minute.  NOTE: This enhancement can only be slotted into healing powers that require a To Hit check."
+      },
+      "isUnique": false,
+      "type": "set",
       "fullName": "Boosts.Attuned_Theft_of_Essence_F.Attuned_Theft_of_Essence_F",
       "setName": "Theft_of_Essence",
       "displayName": "Chance for +Endurance"
@@ -449,121 +449,6 @@
     "min": 10,
     "max": 30
   },
-  "bonuses": [
-    {
-      "pve": {
-        "bonusName": "Improved_Regeneration_4",
-        "self": {
-          "Regeneration": {
-            "10": {
-              "aggregates": [
-                true
-              ],
-              "hasAggregates": false,
-              "unlocked": 2,
-              "display": "10% Regen"
-            }
-          }
-        }
-      },
-      "pvp": {}
-    },
-    {
-      "pve": {
-        "bonusName": "Increased_Endurance_3",
-        "self": {
-          "Endurance": {
-            "180": {
-              "aggregates": [
-                true
-              ],
-              "hasAggregates": false,
-              "unlocked": 3,
-              "display": "180% Max End"
-            }
-          }
-        }
-      },
-      "pvp": {}
-    },
-    {
-      "pve": {
-        "bonusName": "Improved_Heal_4",
-        "self": {
-          "Enhancement": {
-            "5": {
-              "aggregates": [
-                true
-              ],
-              "hasAggregates": false,
-              "unlocked": 4,
-              "display": "5% Recharge Speed"
-            }
-          }
-        }
-      },
-      "pvp": {}
-    },
-    {
-      "pve": {
-        "bonusName": "Increased_Damage_5",
-        "all": {
-          "DamageBuff": {
-            "3": {
-              "aggregates": [
-                "Smashing",
-                "Lethal",
-                "Fire",
-                "Cold",
-                "Energy",
-                "Negative",
-                "Toxic",
-                "Psionic"
-              ],
-              "hasAggregates": true,
-              "unlocked": 5,
-              "display": "3% Damage(Smashing, Lethal, Fire, Cold, Energy, Negative, Toxic, Psionic)"
-            }
-          }
-        }
-      },
-      "pvp": {}
-    },
-    {
-      "pve": {
-        "bonusName": "Energy_Neg_Mez_Res_5",
-        "self": {
-          "Resistance": {
-            "4.5": {
-              "aggregates": [
-                "Energy",
-                "Negative"
-              ],
-              "hasAggregates": true,
-              "unlocked": 6,
-              "display": "4.5% Res(Energy, Negative)"
-            }
-          },
-          "MezResist": {
-            "7.5": {
-              "aggregates": [
-                "Immob",
-                "Hold",
-                "Stun",
-                "Sleep",
-                "Terror",
-                "Confuse"
-              ],
-              "hasAggregates": true,
-              "unlocked": 6,
-              "display": "7.5% Res(Immob, Hold, Stun, Sleep, Terror, Confuse)"
-            }
-          }
-        }
-      },
-      "pvp": {}
-    }
-  ],
   "setType": 29,
   "setTypeName": "Accurate Healing",
   "displayName": "Theft of Essence",
