@@ -2,56 +2,95 @@
   "fullName": "IOSet.Panacea",
   "enhancements": [
     {
+      "effects": [
+        {
+          "effectType": "Heal",
+          "values": [
+            {
+              "etModifies": "Heal",
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "toWho": "self",
+              "powerFullName": "Boosts.Attuned_Panacea_A.Attuned_Panacea_A"
+            }
+          ]
+        },
+        {
+          "effectType": "Boosts_33",
+          "values": [
+            {
+              "etModifies": "Regeneration",
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "toWho": "self",
+              "powerFullName": "Boosts.Attuned_Panacea_A.Attuned_Panacea_A"
+            },
+            {
+              "etModifies": "HitPoints",
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "toWho": "self",
+              "powerFullName": "Boosts.Attuned_Panacea_A.Attuned_Panacea_A"
+            }
+          ]
+        },
+        {
+          "effectType": "Endurance",
+          "values": [
+            {
+              "etModifies": "EnduranceDiscount",
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "toWho": "self",
+              "powerFullName": "Boosts.Attuned_Panacea_A.Attuned_Panacea_A"
+            }
+          ]
+        },
+        {
+          "effectType": "Absorb",
+          "values": [
+            {
+              "etModifies": "Absorb",
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "toWho": "self",
+              "powerFullName": "Boosts.Attuned_Panacea_A.Attuned_Panacea_A"
+            }
+          ]
+        }
+      ],
       "description": {
         "short": "+Heal, -End Cost, +Absorb",
         "long": "Enhances the healing potential and damage absorption of a power by {Boost.Attrib.Heal.Scale}% and reduces endurance cost by {Boost.Attrib.Endurance.Scale}%. NOTE: This is a PvP enhancement, this type of enhancement has two groups of set bonuses.  You get the set bonuses not marked \"\"(PvP)\"\" while experiencing PvE content, but you get both the PvP set bonuses and the PvE set bonuses when fighting players."
       },
       "isUnique": false,
       "type": "set",
+      "fullName": "Boosts.Attuned_Panacea_A.Attuned_Panacea_A",
+      "setName": "Panacea",
+      "displayName": "Healing/Absorb/Endurance"
+    },
+    {
       "effects": [
-        {
-          "effectType": "Heal",
-          "values": [
-            {
-              "etModifies": "Heal",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Panacea_A.Attuned_Panacea_A"
-            }
-          ]
-        },
-        {
-          "effectType": "Boosts_33",
-          "values": [
-            {
-              "etModifies": "Regeneration",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Panacea_A.Attuned_Panacea_A"
-            },
-            {
-              "etModifies": "HitPoints",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Panacea_A.Attuned_Panacea_A"
-            }
-          ]
-        },
         {
           "effectType": "Endurance",
           "values": [
@@ -64,15 +103,15 @@
               "duration": 10.25,
               "effectType": "Enhancement",
               "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Panacea_A.Attuned_Panacea_A"
+              "powerFullName": "Boosts.Attuned_Panacea_B.Attuned_Panacea_B"
             }
           ]
         },
         {
-          "effectType": "Absorb",
+          "effectType": "Recharge",
           "values": [
             {
-              "etModifies": "Absorb",
+              "etModifies": "RechargeTime",
               "mag": {
                 "pve": 0.265
               },
@@ -80,28 +119,28 @@
               "duration": 10.25,
               "effectType": "Enhancement",
               "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Panacea_A.Attuned_Panacea_A"
+              "powerFullName": "Boosts.Attuned_Panacea_B.Attuned_Panacea_B"
             }
           ]
         }
       ],
-      "fullName": "Boosts.Attuned_Panacea_A.Attuned_Panacea_A",
-      "setName": "Panacea",
-      "displayName": "Healing/Absorb/Endurance"
-    },
-    {
       "description": {
         "short": "-End Cost, +Rech",
         "long": "Reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}% and recharge time by {Boost.Attrib.Recharge.Scale}%. NOTE: This is a PvP enhancement, this type of enhancement has two groups of set bonuses.  You get the set bonuses not marked \"\"(PvP)\"\" while experiencing PvE content, but you get both the PvP set bonuses and the PvE set bonuses when fighting players."
       },
       "isUnique": false,
       "type": "set",
+      "fullName": "Boosts.Attuned_Panacea_B.Attuned_Panacea_B",
+      "setName": "Panacea",
+      "displayName": "Endurance/Recharge"
+    },
+    {
       "effects": [
         {
-          "effectType": "Endurance",
+          "effectType": "Heal",
           "values": [
             {
-              "etModifies": "EnduranceDiscount",
+              "etModifies": "Heal",
               "mag": {
                 "pve": 0.265
               },
@@ -109,7 +148,34 @@
               "duration": 10.25,
               "effectType": "Enhancement",
               "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Panacea_B.Attuned_Panacea_B"
+              "powerFullName": "Boosts.Attuned_Panacea_C.Attuned_Panacea_C"
+            }
+          ]
+        },
+        {
+          "effectType": "Boosts_33",
+          "values": [
+            {
+              "etModifies": "Regeneration",
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "toWho": "self",
+              "powerFullName": "Boosts.Attuned_Panacea_C.Attuned_Panacea_C"
+            },
+            {
+              "etModifies": "HitPoints",
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "toWho": "self",
+              "powerFullName": "Boosts.Attuned_Panacea_C.Attuned_Panacea_C"
             }
           ]
         },
@@ -125,110 +191,38 @@
               "duration": 10.25,
               "effectType": "Enhancement",
               "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Panacea_B.Attuned_Panacea_B"
+              "powerFullName": "Boosts.Attuned_Panacea_C.Attuned_Panacea_C"
+            }
+          ]
+        },
+        {
+          "effectType": "Absorb",
+          "values": [
+            {
+              "etModifies": "Absorb",
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "toWho": "self",
+              "powerFullName": "Boosts.Attuned_Panacea_C.Attuned_Panacea_C"
             }
           ]
         }
       ],
-      "fullName": "Boosts.Attuned_Panacea_B.Attuned_Panacea_B",
-      "setName": "Panacea",
-      "displayName": "Endurance/Recharge"
-    },
-    {
       "description": {
         "short": "+Heal, +Rech, +Absorb",
         "long": "Enhances the healing potential and damage absorption of a power by {Boost.Attrib.Heal.Scale}% and reduces recharge time by  {Boost.Attrib.Recharge.Scale}%. NOTE: This is a PvP enhancement, this type of enhancement has two groups of set bonuses.  You get the set bonuses not marked \"\"(PvP)\"\" while experiencing PvE content, but you get both the PvP set bonuses and the PvE set bonuses when fighting players."
       },
       "isUnique": false,
       "type": "set",
-      "effects": [
-        {
-          "effectType": "Heal",
-          "values": [
-            {
-              "etModifies": "Heal",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Panacea_C.Attuned_Panacea_C"
-            }
-          ]
-        },
-        {
-          "effectType": "Boosts_33",
-          "values": [
-            {
-              "etModifies": "Regeneration",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Panacea_C.Attuned_Panacea_C"
-            },
-            {
-              "etModifies": "HitPoints",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Panacea_C.Attuned_Panacea_C"
-            }
-          ]
-        },
-        {
-          "effectType": "Recharge",
-          "values": [
-            {
-              "etModifies": "RechargeTime",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Panacea_C.Attuned_Panacea_C"
-            }
-          ]
-        },
-        {
-          "effectType": "Absorb",
-          "values": [
-            {
-              "etModifies": "Absorb",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Panacea_C.Attuned_Panacea_C"
-            }
-          ]
-        }
-      ],
       "fullName": "Boosts.Attuned_Panacea_C.Attuned_Panacea_C",
       "setName": "Panacea",
       "displayName": "Healing/Absorb/Recharge"
     },
     {
-      "description": {
-        "short": "+Heal, -End Cost, +Rech, +Absorb",
-        "long": "Enhances the healing potential and damage absorption of a power by {Boost.Attrib.Heal.Scale}%, reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}% and recharge time by  {Boost.Attrib.Recharge.Scale}%. NOTE: This is a PvP enhancement, this type of enhancement has two groups of set bonuses.  You get the set bonuses not marked \"\"(PvP)\"\" while experiencing PvE content, but you get both the PvP set bonuses and the PvE set bonuses when fighting players."
-      },
-      "isUnique": false,
-      "type": "set",
       "effects": [
         {
           "effectType": "Heal",
@@ -322,17 +316,17 @@
           ]
         }
       ],
+      "description": {
+        "short": "+Heal, -End Cost, +Rech, +Absorb",
+        "long": "Enhances the healing potential and damage absorption of a power by {Boost.Attrib.Heal.Scale}%, reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}% and recharge time by  {Boost.Attrib.Recharge.Scale}%. NOTE: This is a PvP enhancement, this type of enhancement has two groups of set bonuses.  You get the set bonuses not marked \"\"(PvP)\"\" while experiencing PvE content, but you get both the PvP set bonuses and the PvE set bonuses when fighting players."
+      },
+      "isUnique": false,
+      "type": "set",
       "fullName": "Boosts.Attuned_Panacea_D.Attuned_Panacea_D",
       "setName": "Panacea",
       "displayName": "Healing/Absorb/Endurance/Recharge"
     },
     {
-      "description": {
-        "short": "+Heal, +Absorb",
-        "long": "Enhances the healing potential and damage absorption of a power by {Boost.Attrib.Heal.Scale}%. NOTE: This is a PvP enhancement, this type of enhancement has two groups of set bonuses.  You get the set bonuses not marked \"\"(PvP)\"\" while experiencing PvE content, but you get both the PvP set bonuses and the PvE set bonuses when fighting players."
-      },
-      "isUnique": false,
-      "type": "set",
       "effects": [
         {
           "effectType": "Heal",
@@ -394,17 +388,17 @@
           ]
         }
       ],
+      "description": {
+        "short": "+Heal, +Absorb",
+        "long": "Enhances the healing potential and damage absorption of a power by {Boost.Attrib.Heal.Scale}%. NOTE: This is a PvP enhancement, this type of enhancement has two groups of set bonuses.  You get the set bonuses not marked \"\"(PvP)\"\" while experiencing PvE content, but you get both the PvP set bonuses and the PvE set bonuses when fighting players."
+      },
+      "isUnique": false,
+      "type": "set",
       "fullName": "Boosts.Attuned_Panacea_E.Attuned_Panacea_E",
       "setName": "Panacea",
       "displayName": "Healing/Absorb"
     },
     {
-      "description": {
-        "short": "Chance for +Hit Points/Endurance",
-        "long": "UNIQUE -- No more than 1 enhancement of this type may be slotted by a character.  Adds a chance for a healing power to heal the target of the power for a small bonus amount in a PvE zone, or will increase the regeneration rate of a target slightly in a PvP zone and also has a chance to infuse the target with a small amount of endurance. This effect will trigger roughly 3 times per minute.  NOTE: This is a PvP enhancement, this type of enhancement has two groups of set bonuses.  You get the set bonuses not marked \"\"(PvP)\"\" while experiencing PvE content, but you get both the PvP set bonuses and the PvE set bonuses when fighting players."
-      },
-      "isUnique": true,
-      "type": "set",
       "effects": [
         {
           "effectType": "Heal",
@@ -457,6 +451,12 @@
           ]
         }
       ],
+      "description": {
+        "short": "Chance for +Hit Points/Endurance",
+        "long": "UNIQUE -- No more than 1 enhancement of this type may be slotted by a character.  Adds a chance for a healing power to heal the target of the power for a small bonus amount in a PvE zone, or will increase the regeneration rate of a target slightly in a PvP zone and also has a chance to infuse the target with a small amount of endurance. This effect will trigger roughly 3 times per minute.  NOTE: This is a PvP enhancement, this type of enhancement has two groups of set bonuses.  You get the set bonuses not marked \"\"(PvP)\"\" while experiencing PvE content, but you get both the PvP set bonuses and the PvE set bonuses when fighting players."
+      },
+      "isUnique": true,
+      "type": "set",
       "fullName": "Boosts.Attuned_Panacea_F.Attuned_Panacea_F",
       "setName": "Panacea",
       "displayName": "Chance for +Hit Points/Endurance"
@@ -466,229 +466,6 @@
     "min": 10,
     "max": 50
   },
-  "bonuses": [
-    {
-      "pve": {
-        "bonusName": "Improved_Recovery_4",
-        "self": {
-          "Recovery": {
-            "2.5": {
-              "aggregates": [
-                true
-              ],
-              "hasAggregates": false,
-              "unlocked": 2,
-              "display": "2.5% End Recovery"
-            }
-          }
-        }
-      },
-      "pvp": {}
-    },
-    {
-      "pve": {
-        "bonusName": "Lethal_Smash_Mez_Res_2",
-        "self": {
-          "Resistance": {
-            "2.25": {
-              "aggregates": [
-                "Lethal",
-                "Smashing"
-              ],
-              "hasAggregates": true,
-              "unlocked": 2,
-              "display": "2.25% Res(Lethal, Smashing)"
-            }
-          },
-          "MezResist": {
-            "3.75": {
-              "aggregates": [
-                "Immob",
-                "Hold",
-                "Stun",
-                "Sleep",
-                "Terror",
-                "Confuse"
-              ],
-              "hasAggregates": true,
-              "unlocked": 2,
-              "display": "3.75% Res(Immob, Hold, Stun, Sleep, Terror, Confuse)"
-            }
-          }
-        }
-      },
-      "pvp": {}
-    },
-    {
-      "pve": {
-        "bonusName": "Improved_Regeneration_4",
-        "self": {
-          "Regeneration": {
-            "10": {
-              "aggregates": [
-                true
-              ],
-              "hasAggregates": false,
-              "unlocked": 3,
-              "display": "10% Regen"
-            }
-          }
-        }
-      },
-      "pvp": {}
-    },
-    {
-      "pve": {
-        "bonusName": "Repel_Resist_4",
-        "self": {
-          "MezResist": {
-            "1000": {
-              "aggregates": [
-                "Repel"
-              ],
-              "hasAggregates": true,
-              "unlocked": 3,
-              "display": "1000% Res(Repel)"
-            }
-          }
-        }
-      },
-      "pvp": {}
-    },
-    {
-      "pve": {
-        "bonusName": "Increased_Health_3",
-        "self": {
-          "HitPoints": {
-            "1807.14": {
-              "aggregates": [
-                true
-              ],
-              "hasAggregates": false,
-              "unlocked": 4,
-              "display": "1807.14% Max HP"
-            }
-          }
-        }
-      },
-      "pvp": {}
-    },
-    {
-      "pve": {
-        "bonusName": "Fire_Cold_Mez_Res_3",
-        "self": {
-          "Resistance": {
-            "3": {
-              "aggregates": [
-                "Fire",
-                "Cold"
-              ],
-              "hasAggregates": true,
-              "unlocked": 4,
-              "display": "3% Res(Fire, Cold)"
-            }
-          },
-          "MezResist": {
-            "5": {
-              "aggregates": [
-                "Immob",
-                "Hold",
-                "Stun",
-                "Sleep",
-                "Terror",
-                "Confuse"
-              ],
-              "hasAggregates": true,
-              "unlocked": 4,
-              "display": "5% Res(Immob, Hold, Stun, Sleep, Terror, Confuse)"
-            }
-          }
-        }
-      },
-      "pvp": {}
-    },
-    {
-      "pve": {
-        "bonusName": "Improved_Recharge_Time_5",
-        "self": {
-          "Enhancement": {
-            "7.5": {
-              "aggregates": [
-                true
-              ],
-              "hasAggregates": false,
-              "unlocked": 5,
-              "display": "7.5% Recharge Speed"
-            }
-          }
-        }
-      },
-      "pvp": {}
-    },
-    {
-      "pve": {
-        "bonusName": "Increased_Range_2",
-        "self": {
-          "Enhancement": {
-            "7.5": {
-              "aggregates": [
-                true
-              ],
-              "hasAggregates": false,
-              "unlocked": 5,
-              "display": "7.5% Recharge Speed"
-            }
-          }
-        }
-      },
-      "pvp": {}
-    },
-    {
-      "pve": {
-        "bonusName": "Improved_Heal_5",
-        "self": {
-          "Enhancement": {
-            "6": {
-              "aggregates": [
-                true
-              ],
-              "hasAggregates": false,
-              "unlocked": 6,
-              "display": "6% Recharge Speed"
-            }
-          }
-        }
-      },
-      "pvp": {}
-    },
-    {
-      "pve": {
-        "bonusName": "Increased_Melee_Lethal_Smash_Def_4",
-        "self": {
-          "Defense": {
-            "3.13": {
-              "aggregates": [
-                "Melee"
-              ],
-              "hasAggregates": true,
-              "unlocked": 6,
-              "display": "3.13% Defense(Melee)"
-            },
-            "1.56": {
-              "aggregates": [
-                "Lethal",
-                "Smashing"
-              ],
-              "hasAggregates": true,
-              "unlocked": 6,
-              "display": "1.56% Defense(Lethal, Smashing)"
-            }
-          }
-        }
-      },
-      "pvp": {}
-    }
-  ],
   "setType": 9,
   "setTypeName": "Healing",
   "displayName": "Panacea",

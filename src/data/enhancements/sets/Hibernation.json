@@ -2,12 +2,6 @@
   "fullName": "IOSet.Hibernation",
   "enhancements": [
     {
-      "description": {
-        "short": "+ACC, +Rech",
-        "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}%."
-      },
-      "isUnique": false,
-      "type": "set",
       "effects": [
         {
           "effectType": "Recharge",
@@ -42,17 +36,17 @@
           ]
         }
       ],
+      "description": {
+        "short": "+ACC, +Rech",
+        "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
       "fullName": "Boosts.Attuned_Hibernation_A.Attuned_Hibernation_A",
       "setName": "Hibernation",
       "displayName": "Accuracy/Recharge"
     },
     {
-      "description": {
-        "short": "-End Cost, +Sleep",
-        "long": "Enhances the sleep duration of a power by {Boost.Attrib.Sleep.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."
-      },
-      "isUnique": false,
-      "type": "set",
       "effects": [
         {
           "effectType": "Endurance",
@@ -88,17 +82,17 @@
           ]
         }
       ],
+      "description": {
+        "short": "-End Cost, +Sleep",
+        "long": "Enhances the sleep duration of a power by {Boost.Attrib.Sleep.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
       "fullName": "Boosts.Attuned_Hibernation_B.Attuned_Hibernation_B",
       "setName": "Hibernation",
       "displayName": "Endurance/Sleep"
     },
     {
-      "description": {
-        "short": "+ACC, -End Cost",
-        "long": "Enhances the accuracy by {Boost.Attrib.Accuracy.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."
-      },
-      "isUnique": false,
-      "type": "set",
       "effects": [
         {
           "effectType": "Accuracy",
@@ -133,17 +127,17 @@
           ]
         }
       ],
+      "description": {
+        "short": "+ACC, -End Cost",
+        "long": "Enhances the accuracy by {Boost.Attrib.Accuracy.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
       "fullName": "Boosts.Attuned_Hibernation_C.Attuned_Hibernation_C",
       "setName": "Hibernation",
       "displayName": "Accuracy/Endurance"
     },
     {
-      "description": {
-        "short": "+Range, +Sleep",
-        "long": "Enhances the range of a power by {Boost.Attrib.Range.Scale}% and sleep duration by {Boost.Attrib.sleep.Scale}%."
-      },
-      "isUnique": false,
-      "type": "set",
       "effects": [
         {
           "effectType": "Sleep",
@@ -179,17 +173,17 @@
           ]
         }
       ],
+      "description": {
+        "short": "+Range, +Sleep",
+        "long": "Enhances the range of a power by {Boost.Attrib.Range.Scale}% and sleep duration by {Boost.Attrib.sleep.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
       "fullName": "Boosts.Attuned_Hibernation_D.Attuned_Hibernation_D",
       "setName": "Hibernation",
       "displayName": "Sleep/Range"
     },
     {
-      "description": {
-        "short": "+ACC, +Rech, +Sleep",
-        "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}%, sleep duration by {Boost.Attrib.Sleep.Scale}% and reduces the attack rate by {Boost.Attrib.Recharge.Scale}%."
-      },
-      "isUnique": false,
-      "type": "set",
       "effects": [
         {
           "effectType": "Sleep",
@@ -241,6 +235,12 @@
           ]
         }
       ],
+      "description": {
+        "short": "+ACC, +Rech, +Sleep",
+        "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}%, sleep duration by {Boost.Attrib.Sleep.Scale}% and reduces the attack rate by {Boost.Attrib.Recharge.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
       "fullName": "Boosts.Attuned_Hibernation_E.Attuned_Hibernation_E",
       "setName": "Hibernation",
       "displayName": "Accuracy/Sleep/Recharge"
@@ -250,96 +250,6 @@
     "min": 10,
     "max": 30
   },
-  "bonuses": [
-    {
-      "pve": {
-        "bonusName": "Sleep_Dur_3",
-        "self": {
-          "Enhancement": {
-            "4": {
-              "aggregates": [
-                true
-              ],
-              "hasAggregates": false,
-              "unlocked": 2,
-              "display": "4% Recharge Speed"
-            }
-          }
-        }
-      },
-      "pvp": {}
-    },
-    {
-      "pve": {
-        "bonusName": "Increased_Health_1",
-        "self": {
-          "HitPoints": {
-            "903.57": {
-              "aggregates": [
-                true
-              ],
-              "hasAggregates": false,
-              "unlocked": 3,
-              "display": "903.57% Max HP"
-            }
-          }
-        }
-      },
-      "pvp": {}
-    },
-    {
-      "pve": {
-        "bonusName": "Lethal_Smash_Mez_Res_2",
-        "self": {
-          "Resistance": {
-            "2.25": {
-              "aggregates": [
-                "Lethal",
-                "Smashing"
-              ],
-              "hasAggregates": true,
-              "unlocked": 4,
-              "display": "2.25% Res(Lethal, Smashing)"
-            }
-          },
-          "MezResist": {
-            "3.75": {
-              "aggregates": [
-                "Immob",
-                "Hold",
-                "Stun",
-                "Sleep",
-                "Terror",
-                "Confuse"
-              ],
-              "hasAggregates": true,
-              "unlocked": 4,
-              "display": "3.75% Res(Immob, Hold, Stun, Sleep, Terror, Confuse)"
-            }
-          }
-        }
-      },
-      "pvp": {}
-    },
-    {
-      "pve": {
-        "bonusName": "Improved_Recharge_Time_1",
-        "self": {
-          "Enhancement": {
-            "2.5": {
-              "aggregates": [
-                true
-              ],
-              "hasAggregates": false,
-              "unlocked": 5,
-              "display": "2.5% Recharge Speed"
-            }
-          }
-        }
-      },
-      "pvp": {}
-    }
-  ],
   "setType": 14,
   "setTypeName": "Sleep",
   "displayName": "Hibernation",

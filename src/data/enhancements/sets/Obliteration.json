@@ -2,12 +2,6 @@
   "fullName": "IOSet.Obliteration",
   "enhancements": [
     {
-      "description": {
-        "short": "+DMG",
-        "long": "Enhances the damage of a power by {Boost.Attrib.Damage.Scale}%."
-      },
-      "isUnique": false,
-      "type": "set",
       "effects": [
         {
           "effectType": "Damage",
@@ -108,17 +102,17 @@
           ]
         }
       ],
+      "description": {
+        "short": "+DMG",
+        "long": "Enhances the damage of a power by {Boost.Attrib.Damage.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
       "fullName": "Boosts.Attuned_Obliteration_A.Attuned_Obliteration_A",
       "setName": "Obliteration",
       "displayName": "Damage"
     },
     {
-      "description": {
-        "short": "+ACC, +Rech",
-        "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and reduces recharge time by {Boost.Attrib.Recharge.Scale}%."
-      },
-      "isUnique": false,
-      "type": "set",
       "effects": [
         {
           "effectType": "Accuracy",
@@ -153,17 +147,17 @@
           ]
         }
       ],
+      "description": {
+        "short": "+ACC, +Rech",
+        "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and reduces recharge time by {Boost.Attrib.Recharge.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
       "fullName": "Boosts.Attuned_Obliteration_B.Attuned_Obliteration_B",
       "setName": "Obliteration",
       "displayName": "Accuracy/Recharge"
     },
     {
-      "description": {
-        "short": "+DMG, +Rech",
-        "long": "Enhances the damage of a power by {Boost.Attrib.Damage.Scale}% and reduces recharge time by {Boost.Attrib.Recharge.Scale}%."
-      },
-      "isUnique": false,
-      "type": "set",
       "effects": [
         {
           "effectType": "Damage",
@@ -280,17 +274,17 @@
           ]
         }
       ],
+      "description": {
+        "short": "+DMG, +Rech",
+        "long": "Enhances the damage of a power by {Boost.Attrib.Damage.Scale}% and reduces recharge time by {Boost.Attrib.Recharge.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
       "fullName": "Boosts.Attuned_Obliteration_C.Attuned_Obliteration_C",
       "setName": "Obliteration",
       "displayName": "Damage/Recharge"
     },
     {
-      "description": {
-        "short": "+ACC, +DMG, +Rech",
-        "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and damage by {Boost.Attrib.Damage.Scale}% and reduces recharge time by {Boost.Attrib.Recharge.Scale}% ."
-      },
-      "isUnique": false,
-      "type": "set",
       "effects": [
         {
           "effectType": "Damage",
@@ -423,17 +417,17 @@
           ]
         }
       ],
+      "description": {
+        "short": "+ACC, +DMG, +Rech",
+        "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and damage by {Boost.Attrib.Damage.Scale}% and reduces recharge time by {Boost.Attrib.Recharge.Scale}% ."
+      },
+      "isUnique": false,
+      "type": "set",
       "fullName": "Boosts.Attuned_Obliteration_D.Attuned_Obliteration_D",
       "setName": "Obliteration",
       "displayName": "Accuracy/Damage/Recharge"
     },
     {
-      "description": {
-        "short": "+ACC, +DMG, -End Cost, +Rech",
-        "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}%, damage by {Boost.Attrib.Damage.Scale}%, reduces endurance cost by {Boost.Attrib.Endurance.Scale}% and reduces recharge time by {Boost.Attrib.Recharge.Scale}%."
-      },
-      "isUnique": false,
-      "type": "set",
       "effects": [
         {
           "effectType": "Damage",
@@ -582,17 +576,17 @@
           ]
         }
       ],
+      "description": {
+        "short": "+ACC, +DMG, -End Cost, +Rech",
+        "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}%, damage by {Boost.Attrib.Damage.Scale}%, reduces endurance cost by {Boost.Attrib.Endurance.Scale}% and reduces recharge time by {Boost.Attrib.Recharge.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
       "fullName": "Boosts.Attuned_Obliteration_E.Attuned_Obliteration_E",
       "setName": "Obliteration",
       "displayName": "Accuracy/Damage/Endurance/Recharge"
     },
     {
-      "description": {
-        "short": "Chance for Minor DMG (Smashing)",
-        "long": "Provides a chance to cause minor smashing damage to your targets.  This effect will trigger roughly 3.5 times per minute."
-      },
-      "isUnique": false,
-      "type": "set",
       "effects": [
         {
           "effectType": "Damage",
@@ -630,6 +624,12 @@
           ]
         }
       ],
+      "description": {
+        "short": "Chance for Minor DMG (Smashing)",
+        "long": "Provides a chance to cause minor smashing damage to your targets.  This effect will trigger roughly 3.5 times per minute."
+      },
+      "isUnique": false,
+      "type": "set",
       "fullName": "Boosts.Attuned_Obliteration_F.Attuned_Obliteration_F",
       "setName": "Obliteration",
       "displayName": "Chance for Smashing Damage"
@@ -639,130 +639,6 @@
     "min": 30,
     "max": 50
   },
-  "bonuses": [
-    {
-      "pve": {
-        "bonusName": "Lethal_Smash_Mez_Res_2",
-        "self": {
-          "Resistance": {
-            "2.25": {
-              "aggregates": [
-                "Lethal",
-                "Smashing"
-              ],
-              "hasAggregates": true,
-              "unlocked": 2,
-              "display": "2.25% Res(Lethal, Smashing)"
-            }
-          },
-          "MezResist": {
-            "3.75": {
-              "aggregates": [
-                "Immob",
-                "Hold",
-                "Stun",
-                "Sleep",
-                "Terror",
-                "Confuse"
-              ],
-              "hasAggregates": true,
-              "unlocked": 2,
-              "display": "3.75% Res(Immob, Hold, Stun, Sleep, Terror, Confuse)"
-            }
-          }
-        }
-      },
-      "pvp": {}
-    },
-    {
-      "pve": {
-        "bonusName": "Increased_Damage_5",
-        "all": {
-          "DamageBuff": {
-            "3": {
-              "aggregates": [
-                "Smashing",
-                "Lethal",
-                "Fire",
-                "Cold",
-                "Energy",
-                "Negative",
-                "Toxic",
-                "Psionic"
-              ],
-              "hasAggregates": true,
-              "unlocked": 3,
-              "display": "3% Damage(Smashing, Lethal, Fire, Cold, Energy, Negative, Toxic, Psionic)"
-            }
-          }
-        }
-      },
-      "pvp": {}
-    },
-    {
-      "pve": {
-        "bonusName": "Accuracy_4",
-        "self": {
-          "Enhancement": {
-            "9": {
-              "aggregates": [
-                true
-              ],
-              "hasAggregates": false,
-              "unlocked": 4,
-              "display": "9% Recharge Speed"
-            }
-          }
-        }
-      },
-      "pvp": {}
-    },
-    {
-      "pve": {
-        "bonusName": "Improved_Recharge_Time_3",
-        "self": {
-          "Enhancement": {
-            "5": {
-              "aggregates": [
-                true
-              ],
-              "hasAggregates": false,
-              "unlocked": 5,
-              "display": "5% Recharge Speed"
-            }
-          }
-        }
-      },
-      "pvp": {}
-    },
-    {
-      "pve": {
-        "bonusName": "Increased_Melee_Lethal_Smash_Def_5",
-        "self": {
-          "Defense": {
-            "3.75": {
-              "aggregates": [
-                "Melee"
-              ],
-              "hasAggregates": true,
-              "unlocked": 6,
-              "display": "3.75% Defense(Melee)"
-            },
-            "1.88": {
-              "aggregates": [
-                "Lethal",
-                "Smashing"
-              ],
-              "hasAggregates": true,
-              "unlocked": 6,
-              "display": "1.88% Defense(Lethal, Smashing)"
-            }
-          }
-        }
-      },
-      "pvp": {}
-    }
-  ],
   "setType": 4,
   "setTypeName": "PBAoE Damage",
   "displayName": "Obliteration",

@@ -2,12 +2,6 @@
   "fullName": "IOSet.Kinetic_Combat",
   "enhancements": [
     {
-      "description": {
-        "short": "Enhances Accuracy and Damage",
-        "long": "Enhances the damage of a power by {Boost.Attrib.Damage.Scale}% and accuracy by {Boost.Attrib.Accuracy.Scale}%."
-      },
-      "isUnique": false,
-      "type": "set",
       "effects": [
         {
           "effectType": "Damage",
@@ -124,17 +118,17 @@
           ]
         }
       ],
+      "description": {
+        "short": "Enhances Accuracy and Damage",
+        "long": "Enhances the damage of a power by {Boost.Attrib.Damage.Scale}% and accuracy by {Boost.Attrib.Accuracy.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
       "fullName": "Boosts.Attuned_Kinetic_Combat_A.Attuned_Kinetic_Combat_A",
       "setName": "Kinetic_Combat",
       "displayName": "Accuracy/Damage"
     },
     {
-      "description": {
-        "short": "Enhances Damage and Reduces Endurance Cost",
-        "long": "Enhances the damage of a power by {Boost.Attrib.Damage.Scale}% and reduces endurance cost by {Boost.Attrib.Endurance.Scale}%"
-      },
-      "isUnique": false,
-      "type": "set",
       "effects": [
         {
           "effectType": "damage",
@@ -251,17 +245,17 @@
           ]
         }
       ],
+      "description": {
+        "short": "Enhances Damage and Reduces Endurance Cost",
+        "long": "Enhances the damage of a power by {Boost.Attrib.Damage.Scale}% and reduces endurance cost by {Boost.Attrib.Endurance.Scale}%"
+      },
+      "isUnique": false,
+      "type": "set",
       "fullName": "Boosts.Attuned_Kinetic_Combat_B.Attuned_Kinetic_Combat_B",
       "setName": "Kinetic_Combat",
       "displayName": "Damage/Endurance"
     },
     {
-      "description": {
-        "short": "Enhances Damage and Recharge",
-        "long": "Enhances the damage of a power by {Boost.Attrib.Damage.Scale}% and reduces recharge time by {Boost.Attrib.Recharge.Scale}%"
-      },
-      "isUnique": false,
-      "type": "set",
       "effects": [
         {
           "effectType": "Damage",
@@ -378,17 +372,17 @@
           ]
         }
       ],
+      "description": {
+        "short": "Enhances Damage and Recharge",
+        "long": "Enhances the damage of a power by {Boost.Attrib.Damage.Scale}% and reduces recharge time by {Boost.Attrib.Recharge.Scale}%"
+      },
+      "isUnique": false,
+      "type": "set",
       "fullName": "Boosts.Attuned_Kinetic_Combat_C.Attuned_Kinetic_Combat_C",
       "setName": "Kinetic_Combat",
       "displayName": "Damage/Recharge"
     },
     {
-      "description": {
-        "short": "Enhances Damage, Reduces Endurance Cost and Increases Attack Rate",
-        "long": "Enhances the damage of a power by {Boost.Attrib.Damage.Scale}%, reduces recharge time by {Boost.Attrib.Recharge.Scale}% and endurance cost by {Boost.Attrib.Endurance.Scale}%."
-      },
-      "isUnique": false,
-      "type": "set",
       "effects": [
         {
           "effectType": "Damage",
@@ -521,17 +515,17 @@
           ]
         }
       ],
+      "description": {
+        "short": "Enhances Damage, Reduces Endurance Cost and Increases Attack Rate",
+        "long": "Enhances the damage of a power by {Boost.Attrib.Damage.Scale}%, reduces recharge time by {Boost.Attrib.Recharge.Scale}% and endurance cost by {Boost.Attrib.Endurance.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
       "fullName": "Boosts.Attuned_Kinetic_Combat_D.Attuned_Kinetic_Combat_D",
       "setName": "Kinetic_Combat",
       "displayName": "Damage/Endurance/Recharge"
     },
     {
-      "description": {
-        "short": "Adds Knockdown",
-        "long": "Adds a chance to knockdown your foe.  This effect will trigger roughly 3 times per minute."
-      },
-      "isUnique": false,
-      "type": "set",
       "effects": [
         {
           "effectType": "Knockback",
@@ -552,6 +546,12 @@
           ]
         }
       ],
+      "description": {
+        "short": "Adds Knockdown",
+        "long": "Adds a chance to knockdown your foe.  This effect will trigger roughly 3 times per minute."
+      },
+      "isUnique": false,
+      "type": "set",
       "fullName": "Boosts.Attuned_Kinetic_Combat_E.Attuned_Kinetic_Combat_E",
       "setName": "Kinetic_Combat",
       "displayName": "Knockdown Bonus"
@@ -561,135 +561,6 @@
     "min": 20,
     "max": 35
   },
-  "bonuses": [
-    {
-      "pve": {
-        "bonusName": "Fire_Cold_Mez_Res_1",
-        "self": {
-          "Resistance": {
-            "1.5": {
-              "aggregates": [
-                "Fire",
-                "Cold"
-              ],
-              "hasAggregates": true,
-              "unlocked": 2,
-              "display": "1.5% Res(Fire, Cold)"
-            }
-          },
-          "MezResist": {
-            "2.5": {
-              "aggregates": [
-                "Immob",
-                "Hold",
-                "Stun",
-                "Sleep",
-                "Terror",
-                "Confuse"
-              ],
-              "hasAggregates": true,
-              "unlocked": 2,
-              "display": "2.5% Res(Immob, Hold, Stun, Sleep, Terror, Confuse)"
-            }
-          }
-        }
-      },
-      "pvp": {}
-    },
-    {
-      "pve": {
-        "bonusName": "Increased_Health_3",
-        "self": {
-          "HitPoints": {
-            "1807.14": {
-              "aggregates": [
-                true
-              ],
-              "hasAggregates": false,
-              "unlocked": 3,
-              "display": "1807.14% Max HP"
-            }
-          }
-        }
-      },
-      "pvp": {}
-    },
-    {
-      "pve": {
-        "bonusName": "Increased_Lethal_Smash_Melee_Def_5",
-        "self": {
-          "Defense": {
-            "3.75": {
-              "aggregates": [
-                "Lethal",
-                "Smashing"
-              ],
-              "hasAggregates": true,
-              "unlocked": 4,
-              "display": "3.75% Defense(Lethal, Smashing)"
-            },
-            "1.88": {
-              "aggregates": [
-                "Melee"
-              ],
-              "hasAggregates": true,
-              "unlocked": 4,
-              "display": "1.88% Defense(Melee)"
-            }
-          }
-        }
-      },
-      "pvp": {}
-    },
-    {
-      "pve": {
-        "bonusName": "Increased_Move_4",
-        "self": {
-          "SpeedJumping": {
-            "7.5": {
-              "aggregates": [
-                true
-              ],
-              "hasAggregates": false,
-              "unlocked": 5,
-              "display": "7.5% Jump Speed"
-            }
-          },
-          "JumpHeight": {
-            "7.5": {
-              "aggregates": [
-                true
-              ],
-              "hasAggregates": false,
-              "unlocked": 5,
-              "display": "7.5% Jump Height"
-            }
-          },
-          "SpeedFlying": {
-            "7.5": {
-              "aggregates": [
-                true
-              ],
-              "hasAggregates": false,
-              "unlocked": 5,
-              "display": "7.5% Flight Speed"
-            }
-          },
-          "SpeedRunning": {
-            "7.5": {
-              "aggregates": [
-                true
-              ],
-              "hasAggregates": false,
-              "unlocked": 5,
-              "display": "7.5% Run Speed"
-            }
-          }
-        }
-      },
-      "pvp": {}
-    }
-  ],
   "setType": 1,
   "setTypeName": "Melee Damage",
   "displayName": "Kinetic Combat",

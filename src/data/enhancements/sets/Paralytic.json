@@ -2,12 +2,6 @@
   "fullName": "IOSet.Paralytic",
   "enhancements": [
     {
-      "description": {
-        "short": "+ACC, +Rech",
-        "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}%."
-      },
-      "isUnique": false,
-      "type": "set",
       "effects": [
         {
           "effectType": "Recharge",
@@ -42,17 +36,17 @@
           ]
         }
       ],
+      "description": {
+        "short": "+ACC, +Rech",
+        "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
       "fullName": "Boosts.Attuned_Paralytic_A.Attuned_Paralytic_A",
       "setName": "Paralytic",
       "displayName": "Accuracy/Recharge"
     },
     {
-      "description": {
-        "short": "+End, +Hold",
-        "long": "Enhances the hold duration of a power by {Boost.Attrib.Hold.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."
-      },
-      "isUnique": false,
-      "type": "set",
       "effects": [
         {
           "effectType": "Endurance",
@@ -88,17 +82,17 @@
           ]
         }
       ],
+      "description": {
+        "short": "+End, +Hold",
+        "long": "Enhances the hold duration of a power by {Boost.Attrib.Hold.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
       "fullName": "Boosts.Attuned_Paralytic_B.Attuned_Paralytic_B",
       "setName": "Paralytic",
       "displayName": "Endurance/Hold"
     },
     {
-      "description": {
-        "short": "+ACC, -End Cost",
-        "long": "Enhances the accuracy by {Boost.Attrib.Accuracy.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."
-      },
-      "isUnique": false,
-      "type": "set",
       "effects": [
         {
           "effectType": "Accuracy",
@@ -133,17 +127,17 @@
           ]
         }
       ],
+      "description": {
+        "short": "+ACC, -End Cost",
+        "long": "Enhances the accuracy by {Boost.Attrib.Accuracy.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
       "fullName": "Boosts.Attuned_Paralytic_C.Attuned_Paralytic_C",
       "setName": "Paralytic",
       "displayName": "Accuracy/Endurance"
     },
     {
-      "description": {
-        "short": "+Range, +Hold",
-        "long": "Enhances the range of a power by {Boost.Attrib.Range.Scale}% and hold duration by {Boost.Attrib.Hold.Scale}%."
-      },
-      "isUnique": false,
-      "type": "set",
       "effects": [
         {
           "effectType": "Hold",
@@ -179,17 +173,17 @@
           ]
         }
       ],
+      "description": {
+        "short": "+Range, +Hold",
+        "long": "Enhances the range of a power by {Boost.Attrib.Range.Scale}% and hold duration by {Boost.Attrib.Hold.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
       "fullName": "Boosts.Attuned_Paralytic_D.Attuned_Paralytic_D",
       "setName": "Paralytic",
       "displayName": "Hold/Range"
     },
     {
-      "description": {
-        "short": "+ACC, +Rech, +Hold",
-        "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}%, the hold duration of a power by {Boost.Attrib.Hold.Scale}% and reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}%."
-      },
-      "isUnique": false,
-      "type": "set",
       "effects": [
         {
           "effectType": "Accuracy",
@@ -241,6 +235,12 @@
           ]
         }
       ],
+      "description": {
+        "short": "+ACC, +Rech, +Hold",
+        "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}%, the hold duration of a power by {Boost.Attrib.Hold.Scale}% and reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
       "fullName": "Boosts.Attuned_Paralytic_E.Attuned_Paralytic_E",
       "setName": "Paralytic",
       "displayName": "Accuracy/Hold/Recharge"
@@ -250,96 +250,6 @@
     "min": 10,
     "max": 30
   },
-  "bonuses": [
-    {
-      "pve": {
-        "bonusName": "Improved_Recovery_1",
-        "self": {
-          "Recovery": {
-            "1": {
-              "aggregates": [
-                true
-              ],
-              "hasAggregates": false,
-              "unlocked": 2,
-              "display": "1% End Recovery"
-            }
-          }
-        }
-      },
-      "pvp": {}
-    },
-    {
-      "pve": {
-        "bonusName": "Energy_Neg_Mez_Res_1",
-        "self": {
-          "Resistance": {
-            "1.5": {
-              "aggregates": [
-                "Energy",
-                "Negative"
-              ],
-              "hasAggregates": true,
-              "unlocked": 3,
-              "display": "1.5% Res(Energy, Negative)"
-            }
-          },
-          "MezResist": {
-            "2.5": {
-              "aggregates": [
-                "Immob",
-                "Hold",
-                "Stun",
-                "Sleep",
-                "Terror",
-                "Confuse"
-              ],
-              "hasAggregates": true,
-              "unlocked": 3,
-              "display": "2.5% Res(Immob, Hold, Stun, Sleep, Terror, Confuse)"
-            }
-          }
-        }
-      },
-      "pvp": {}
-    },
-    {
-      "pve": {
-        "bonusName": "Increased_Endurance_1",
-        "self": {
-          "Endurance": {
-            "90": {
-              "aggregates": [
-                true
-              ],
-              "hasAggregates": false,
-              "unlocked": 4,
-              "display": "90% Max End"
-            }
-          }
-        }
-      },
-      "pvp": {}
-    },
-    {
-      "pve": {
-        "bonusName": "Hold_Dur_1",
-        "self": {
-          "Enhancement": {
-            "1": {
-              "aggregates": [
-                true
-              ],
-              "hasAggregates": false,
-              "unlocked": 5,
-              "display": "1% Recharge Speed"
-            }
-          }
-        }
-      },
-      "pvp": {}
-    }
-  ],
   "setType": 10,
   "setTypeName": "Holds",
   "displayName": "Paralytic",

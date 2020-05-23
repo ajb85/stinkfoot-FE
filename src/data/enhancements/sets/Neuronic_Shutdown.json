@@ -2,12 +2,6 @@
   "fullName": "IOSet.Neuronic_Shutdown",
   "enhancements": [
     {
-      "description": {
-        "short": "+ACC, +Rech",
-        "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}%."
-      },
-      "isUnique": false,
-      "type": "set",
       "effects": [
         {
           "effectType": "Recharge",
@@ -42,17 +36,17 @@
           ]
         }
       ],
+      "description": {
+        "short": "+ACC, +Rech",
+        "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
       "fullName": "Boosts.Attuned_Neuronic_Shutdown_A.Attuned_Neuronic_Shutdown_A",
       "setName": "Neuronic_Shutdown",
       "displayName": "Accuracy/Recharge"
     },
     {
-      "description": {
-        "short": "+End, +Hold",
-        "long": "Enhances the hold duration of a power by {Boost.Attrib.Hold.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."
-      },
-      "isUnique": false,
-      "type": "set",
       "effects": [
         {
           "effectType": "Endurance",
@@ -88,17 +82,17 @@
           ]
         }
       ],
+      "description": {
+        "short": "+End, +Hold",
+        "long": "Enhances the hold duration of a power by {Boost.Attrib.Hold.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
       "fullName": "Boosts.Attuned_Neuronic_Shutdown_B.Attuned_Neuronic_Shutdown_B",
       "setName": "Neuronic_Shutdown",
       "displayName": "Endurance/Hold"
     },
     {
-      "description": {
-        "short": "+ACC, -End Cost",
-        "long": "Enhances the accuracy by {Boost.Attrib.Accuracy.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."
-      },
-      "isUnique": false,
-      "type": "set",
       "effects": [
         {
           "effectType": "Accuracy",
@@ -133,17 +127,17 @@
           ]
         }
       ],
+      "description": {
+        "short": "+ACC, -End Cost",
+        "long": "Enhances the accuracy by {Boost.Attrib.Accuracy.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
       "fullName": "Boosts.Attuned_Neuronic_Shutdown_C.Attuned_Neuronic_Shutdown_C",
       "setName": "Neuronic_Shutdown",
       "displayName": "Accuracy/Endurance"
     },
     {
-      "description": {
-        "short": "+Range, +Hold",
-        "long": "Enhances the range of a power by {Boost.Attrib.Range.Scale}% and hold duration by {Boost.Attrib.Hold.Scale}%."
-      },
-      "isUnique": false,
-      "type": "set",
       "effects": [
         {
           "effectType": "Hold",
@@ -179,17 +173,17 @@
           ]
         }
       ],
+      "description": {
+        "short": "+Range, +Hold",
+        "long": "Enhances the range of a power by {Boost.Attrib.Range.Scale}% and hold duration by {Boost.Attrib.Hold.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
       "fullName": "Boosts.Attuned_Neuronic_Shutdown_D.Attuned_Neuronic_Shutdown_D",
       "setName": "Neuronic_Shutdown",
       "displayName": "Hold/Range"
     },
     {
-      "description": {
-        "short": "+ACC, +Rech, +Hold",
-        "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}%, the hold duration of a power by {Boost.Attrib.Hold.Scale}% and reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}%."
-      },
-      "isUnique": false,
-      "type": "set",
       "effects": [
         {
           "effectType": "Accuracy",
@@ -241,17 +235,17 @@
           ]
         }
       ],
+      "description": {
+        "short": "+ACC, +Rech, +Hold",
+        "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}%, the hold duration of a power by {Boost.Attrib.Hold.Scale}% and reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
       "fullName": "Boosts.Attuned_Neuronic_Shutdown_E.Attuned_Neuronic_Shutdown_E",
       "setName": "Neuronic_Shutdown",
       "displayName": "Accuracy/Hold/Recharge"
     },
     {
-      "description": {
-        "short": "Chance for Psionic Damage",
-        "long": "Provides a chance to cause minor psionic damage to your targets.  This effect will trigger roughly 3.5 times per minute."
-      },
-      "isUnique": false,
-      "type": "set",
       "effects": [
         {
           "effectType": "Damage",
@@ -289,6 +283,12 @@
           ]
         }
       ],
+      "description": {
+        "short": "Chance for Psionic Damage",
+        "long": "Provides a chance to cause minor psionic damage to your targets.  This effect will trigger roughly 3.5 times per minute."
+      },
+      "isUnique": false,
+      "type": "set",
       "fullName": "Boosts.Attuned_Neuronic_Shutdown_F.Attuned_Neuronic_Shutdown_F",
       "setName": "Neuronic_Shutdown",
       "displayName": "Chance for Psionic Damage"
@@ -298,123 +298,6 @@
     "min": 10,
     "max": 30
   },
-  "bonuses": [
-    {
-      "pve": {
-        "bonusName": "Lethal_Smash_Mez_Res_2",
-        "self": {
-          "Resistance": {
-            "2.25": {
-              "aggregates": [
-                "Lethal",
-                "Smashing"
-              ],
-              "hasAggregates": true,
-              "unlocked": 2,
-              "display": "2.25% Res(Lethal, Smashing)"
-            }
-          },
-          "MezResist": {
-            "3.75": {
-              "aggregates": [
-                "Immob",
-                "Hold",
-                "Stun",
-                "Sleep",
-                "Terror",
-                "Confuse"
-              ],
-              "hasAggregates": true,
-              "unlocked": 2,
-              "display": "3.75% Res(Immob, Hold, Stun, Sleep, Terror, Confuse)"
-            }
-          }
-        }
-      },
-      "pvp": {}
-    },
-    {
-      "pve": {
-        "bonusName": "Increased_Health_3",
-        "self": {
-          "HitPoints": {
-            "1807.14": {
-              "aggregates": [
-                true
-              ],
-              "hasAggregates": false,
-              "unlocked": 3,
-              "display": "1807.14% Max HP"
-            }
-          }
-        }
-      },
-      "pvp": {}
-    },
-    {
-      "pve": {
-        "bonusName": "Accuracy_3",
-        "self": {
-          "Enhancement": {
-            "7": {
-              "aggregates": [
-                true
-              ],
-              "hasAggregates": false,
-              "unlocked": 4,
-              "display": "7% Recharge Speed"
-            }
-          }
-        }
-      },
-      "pvp": {}
-    },
-    {
-      "pve": {
-        "bonusName": "Hold_Dur_3",
-        "self": {
-          "Enhancement": {
-            "2": {
-              "aggregates": [
-                true
-              ],
-              "hasAggregates": false,
-              "unlocked": 5,
-              "display": "2% Recharge Speed"
-            }
-          }
-        }
-      },
-      "pvp": {}
-    },
-    {
-      "pve": {
-        "bonusName": "Increased_Melee_Lethal_Smash_Def_3",
-        "self": {
-          "Defense": {
-            "2.5": {
-              "aggregates": [
-                "Melee"
-              ],
-              "hasAggregates": true,
-              "unlocked": 6,
-              "display": "2.5% Defense(Melee)"
-            },
-            "1.25": {
-              "aggregates": [
-                "Lethal",
-                "Smashing"
-              ],
-              "hasAggregates": true,
-              "unlocked": 6,
-              "display": "1.25% Defense(Lethal, Smashing)"
-            }
-          }
-        }
-      },
-      "pvp": {}
-    }
-  ],
   "setType": 10,
   "setTypeName": "Holds",
   "displayName": "Neuronic Shutdown",

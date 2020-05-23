@@ -2,56 +2,95 @@
   "fullName": "IOSet.Doctored_Wounds",
   "enhancements": [
     {
+      "effects": [
+        {
+          "effectType": "Heal",
+          "values": [
+            {
+              "etModifies": "Heal",
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "toWho": "self",
+              "powerFullName": "Boosts.Attuned_Doctored_Wounds_A.Attuned_Doctored_Wounds_A"
+            }
+          ]
+        },
+        {
+          "effectType": "Boosts_33",
+          "values": [
+            {
+              "etModifies": "Regeneration",
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "toWho": "self",
+              "powerFullName": "Boosts.Attuned_Doctored_Wounds_A.Attuned_Doctored_Wounds_A"
+            },
+            {
+              "etModifies": "HitPoints",
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "toWho": "self",
+              "powerFullName": "Boosts.Attuned_Doctored_Wounds_A.Attuned_Doctored_Wounds_A"
+            }
+          ]
+        },
+        {
+          "effectType": "Endurance",
+          "values": [
+            {
+              "etModifies": "EnduranceDiscount",
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "toWho": "self",
+              "powerFullName": "Boosts.Attuned_Doctored_Wounds_A.Attuned_Doctored_Wounds_A"
+            }
+          ]
+        },
+        {
+          "effectType": "Absorb",
+          "values": [
+            {
+              "etModifies": "Absorb",
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "toWho": "self",
+              "powerFullName": "Boosts.Attuned_Doctored_Wounds_A.Attuned_Doctored_Wounds_A"
+            }
+          ]
+        }
+      ],
       "description": {
         "short": "+Heal, -End Cost, +Absorb",
         "long": "Enhances the healing potential and damage absorption of a power by {Boost.Attrib.Heal.Scale}% and reduces endurance cost by {Boost.Attrib.Endurance.Scale}%"
       },
       "isUnique": false,
       "type": "set",
+      "fullName": "Boosts.Attuned_Doctored_Wounds_A.Attuned_Doctored_Wounds_A",
+      "setName": "Doctored_Wounds",
+      "displayName": "Healing/Absorb/Endurance"
+    },
+    {
       "effects": [
-        {
-          "effectType": "Heal",
-          "values": [
-            {
-              "etModifies": "Heal",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Doctored_Wounds_A.Attuned_Doctored_Wounds_A"
-            }
-          ]
-        },
-        {
-          "effectType": "Boosts_33",
-          "values": [
-            {
-              "etModifies": "Regeneration",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Doctored_Wounds_A.Attuned_Doctored_Wounds_A"
-            },
-            {
-              "etModifies": "HitPoints",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Doctored_Wounds_A.Attuned_Doctored_Wounds_A"
-            }
-          ]
-        },
         {
           "effectType": "Endurance",
           "values": [
@@ -64,15 +103,15 @@
               "duration": 10.25,
               "effectType": "Enhancement",
               "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Doctored_Wounds_A.Attuned_Doctored_Wounds_A"
+              "powerFullName": "Boosts.Attuned_Doctored_Wounds_B.Attuned_Doctored_Wounds_B"
             }
           ]
         },
         {
-          "effectType": "Absorb",
+          "effectType": "Recharge",
           "values": [
             {
-              "etModifies": "Absorb",
+              "etModifies": "RechargeTime",
               "mag": {
                 "pve": 0.265
               },
@@ -80,28 +119,28 @@
               "duration": 10.25,
               "effectType": "Enhancement",
               "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Doctored_Wounds_A.Attuned_Doctored_Wounds_A"
+              "powerFullName": "Boosts.Attuned_Doctored_Wounds_B.Attuned_Doctored_Wounds_B"
             }
           ]
         }
       ],
-      "fullName": "Boosts.Attuned_Doctored_Wounds_A.Attuned_Doctored_Wounds_A",
-      "setName": "Doctored_Wounds",
-      "displayName": "Healing/Absorb/Endurance"
-    },
-    {
       "description": {
         "short": "-End Cost, +Rech",
         "long": "Reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}% and recharge time by {Boost.Attrib.Recharge.Scale}%"
       },
       "isUnique": false,
       "type": "set",
+      "fullName": "Boosts.Attuned_Doctored_Wounds_B.Attuned_Doctored_Wounds_B",
+      "setName": "Doctored_Wounds",
+      "displayName": "Endurance/Recharge"
+    },
+    {
       "effects": [
         {
-          "effectType": "Endurance",
+          "effectType": "Heal",
           "values": [
             {
-              "etModifies": "EnduranceDiscount",
+              "etModifies": "Heal",
               "mag": {
                 "pve": 0.265
               },
@@ -109,7 +148,34 @@
               "duration": 10.25,
               "effectType": "Enhancement",
               "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Doctored_Wounds_B.Attuned_Doctored_Wounds_B"
+              "powerFullName": "Boosts.Attuned_Doctored_Wounds_C.Attuned_Doctored_Wounds_C"
+            }
+          ]
+        },
+        {
+          "effectType": "Boosts_33",
+          "values": [
+            {
+              "etModifies": "Regeneration",
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "toWho": "self",
+              "powerFullName": "Boosts.Attuned_Doctored_Wounds_C.Attuned_Doctored_Wounds_C"
+            },
+            {
+              "etModifies": "HitPoints",
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "toWho": "self",
+              "powerFullName": "Boosts.Attuned_Doctored_Wounds_C.Attuned_Doctored_Wounds_C"
             }
           ]
         },
@@ -125,110 +191,38 @@
               "duration": 10.25,
               "effectType": "Enhancement",
               "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Doctored_Wounds_B.Attuned_Doctored_Wounds_B"
+              "powerFullName": "Boosts.Attuned_Doctored_Wounds_C.Attuned_Doctored_Wounds_C"
+            }
+          ]
+        },
+        {
+          "effectType": "Absorb",
+          "values": [
+            {
+              "etModifies": "Absorb",
+              "mag": {
+                "pve": 0.265
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "toWho": "self",
+              "powerFullName": "Boosts.Attuned_Doctored_Wounds_C.Attuned_Doctored_Wounds_C"
             }
           ]
         }
       ],
-      "fullName": "Boosts.Attuned_Doctored_Wounds_B.Attuned_Doctored_Wounds_B",
-      "setName": "Doctored_Wounds",
-      "displayName": "Endurance/Recharge"
-    },
-    {
       "description": {
         "short": "+Heal, +Rech, +Absorb",
         "long": "Enhances the healing potential and damage absorption of a power by {Boost.Attrib.Heal.Scale}% and reduces recharge time by  {Boost.Attrib.Recharge.Scale}%"
       },
       "isUnique": false,
       "type": "set",
-      "effects": [
-        {
-          "effectType": "Heal",
-          "values": [
-            {
-              "etModifies": "Heal",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Doctored_Wounds_C.Attuned_Doctored_Wounds_C"
-            }
-          ]
-        },
-        {
-          "effectType": "Boosts_33",
-          "values": [
-            {
-              "etModifies": "Regeneration",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Doctored_Wounds_C.Attuned_Doctored_Wounds_C"
-            },
-            {
-              "etModifies": "HitPoints",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Doctored_Wounds_C.Attuned_Doctored_Wounds_C"
-            }
-          ]
-        },
-        {
-          "effectType": "Recharge",
-          "values": [
-            {
-              "etModifies": "RechargeTime",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Doctored_Wounds_C.Attuned_Doctored_Wounds_C"
-            }
-          ]
-        },
-        {
-          "effectType": "Absorb",
-          "values": [
-            {
-              "etModifies": "Absorb",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Doctored_Wounds_C.Attuned_Doctored_Wounds_C"
-            }
-          ]
-        }
-      ],
       "fullName": "Boosts.Attuned_Doctored_Wounds_C.Attuned_Doctored_Wounds_C",
       "setName": "Doctored_Wounds",
       "displayName": "Healing/Absorb/Recharge"
     },
     {
-      "description": {
-        "short": "+Heal, -End Cost, +Rech, +Absorb",
-        "long": "Enhances the healing potential and damage absorption of a power by {Boost.Attrib.Heal.Scale}%, reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}% and recharge time by  {Boost.Attrib.Recharge.Scale}%"
-      },
-      "isUnique": false,
-      "type": "set",
       "effects": [
         {
           "effectType": "Heal",
@@ -322,17 +316,17 @@
           ]
         }
       ],
+      "description": {
+        "short": "+Heal, -End Cost, +Rech, +Absorb",
+        "long": "Enhances the healing potential and damage absorption of a power by {Boost.Attrib.Heal.Scale}%, reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}% and recharge time by  {Boost.Attrib.Recharge.Scale}%"
+      },
+      "isUnique": false,
+      "type": "set",
       "fullName": "Boosts.Attuned_Doctored_Wounds_D.Attuned_Doctored_Wounds_D",
       "setName": "Doctored_Wounds",
       "displayName": "Healing/Absorb/Endurance/Recharge"
     },
     {
-      "description": {
-        "short": "+Heal, +Absorb",
-        "long": "Enhances the healing potential and damage absorption of a power by {Boost.Attrib.Heal.Scale}%."
-      },
-      "isUnique": false,
-      "type": "set",
       "effects": [
         {
           "effectType": "Heal",
@@ -394,17 +388,17 @@
           ]
         }
       ],
+      "description": {
+        "short": "+Heal, +Absorb",
+        "long": "Enhances the healing potential and damage absorption of a power by {Boost.Attrib.Heal.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
       "fullName": "Boosts.Attuned_Doctored_Wounds_E.Attuned_Doctored_Wounds_E",
       "setName": "Doctored_Wounds",
       "displayName": "Healing/Absorb"
     },
     {
-      "description": {
-        "short": "+Rech",
-        "long": "Reduces recharge time by {Boost.Attrib.Recharge.Scale}%"
-      },
-      "isUnique": false,
-      "type": "set",
       "effects": [
         {
           "effectType": "Recharge",
@@ -423,6 +417,12 @@
           ]
         }
       ],
+      "description": {
+        "short": "+Rech",
+        "long": "Reduces recharge time by {Boost.Attrib.Recharge.Scale}%"
+      },
+      "isUnique": false,
+      "type": "set",
       "fullName": "Boosts.Attuned_Doctored_Wounds_F.Attuned_Doctored_Wounds_F",
       "setName": "Doctored_Wounds",
       "displayName": "Recharge"
@@ -432,146 +432,6 @@
     "min": 30,
     "max": 50
   },
-  "bonuses": [
-    {
-      "pve": {
-        "bonusName": "Lethal_Smash_Mez_Res_1",
-        "self": {
-          "Resistance": {
-            "1.5": {
-              "aggregates": [
-                "Lethal",
-                "Smashing"
-              ],
-              "hasAggregates": true,
-              "unlocked": 2,
-              "display": "1.5% Res(Lethal, Smashing)"
-            }
-          },
-          "MezResist": {
-            "2.5": {
-              "aggregates": [
-                "Immob",
-                "Hold",
-                "Stun",
-                "Sleep",
-                "Terror",
-                "Confuse"
-              ],
-              "hasAggregates": true,
-              "unlocked": 2,
-              "display": "2.5% Res(Immob, Hold, Stun, Sleep, Terror, Confuse)"
-            }
-          }
-        }
-      },
-      "pvp": {}
-    },
-    {
-      "pve": {
-        "bonusName": "Fire_Cold_Mez_Res_1",
-        "self": {
-          "Resistance": {
-            "1.5": {
-              "aggregates": [
-                "Fire",
-                "Cold"
-              ],
-              "hasAggregates": true,
-              "unlocked": 3,
-              "display": "1.5% Res(Fire, Cold)"
-            }
-          },
-          "MezResist": {
-            "2.5": {
-              "aggregates": [
-                "Immob",
-                "Hold",
-                "Stun",
-                "Sleep",
-                "Terror",
-                "Confuse"
-              ],
-              "hasAggregates": true,
-              "unlocked": 3,
-              "display": "2.5% Res(Immob, Hold, Stun, Sleep, Terror, Confuse)"
-            }
-          }
-        }
-      },
-      "pvp": {}
-    },
-    {
-      "pve": {
-        "bonusName": "Improved_Heal_3",
-        "self": {
-          "Enhancement": {
-            "4": {
-              "aggregates": [
-                true
-              ],
-              "hasAggregates": false,
-              "unlocked": 4,
-              "display": "4% Recharge Speed"
-            }
-          }
-        }
-      },
-      "pvp": {}
-    },
-    {
-      "pve": {
-        "bonusName": "Improved_Recharge_Time_3",
-        "self": {
-          "Enhancement": {
-            "5": {
-              "aggregates": [
-                true
-              ],
-              "hasAggregates": false,
-              "unlocked": 5,
-              "display": "5% Recharge Speed"
-            }
-          }
-        }
-      },
-      "pvp": {}
-    },
-    {
-      "pve": {
-        "bonusName": "Toxic_Psi_Mez_Res_4",
-        "self": {
-          "Resistance": {
-            "3.75": {
-              "aggregates": [
-                "Toxic",
-                "Psionic"
-              ],
-              "hasAggregates": true,
-              "unlocked": 6,
-              "display": "3.75% Res(Toxic, Psionic)"
-            }
-          },
-          "MezResist": {
-            "6.25": {
-              "aggregates": [
-                "Immob",
-                "Hold",
-                "Stun",
-                "Sleep",
-                "Terror",
-                "Confuse"
-              ],
-              "hasAggregates": true,
-              "unlocked": 6,
-              "display": "6.25% Res(Immob, Hold, Stun, Sleep, Terror, Confuse)"
-            }
-          }
-        }
-      },
-      "pvp": {}
-    }
-  ],
   "setType": 9,
   "setTypeName": "Healing",
   "displayName": "Doctored Wounds",

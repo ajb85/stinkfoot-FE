@@ -2,12 +2,6 @@
   "fullName": "IOSet.Curtail_Speed",
   "enhancements": [
     {
-      "description": {
-        "short": "+ACC, +Slow",
-        "long": "Enhances the accuracy by {Boost.Attrib.Accuracy.Scale}% and slowing ability of a power by {Boost.Attrib.Slow.Scale}%."
-      },
-      "isUnique": false,
-      "type": "set",
       "effects": [
         {
           "effectType": "Accuracy",
@@ -69,17 +63,17 @@
           ]
         }
       ],
+      "description": {
+        "short": "+ACC, +Slow",
+        "long": "Enhances the accuracy by {Boost.Attrib.Accuracy.Scale}% and slowing ability of a power by {Boost.Attrib.Slow.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
       "fullName": "Boosts.Attuned_Curtail_Speed_A.Attuned_Curtail_Speed_A",
       "setName": "Curtail_Speed",
       "displayName": "Accuracy/Slow"
     },
     {
-      "description": {
-        "short": "+DMG, +Slow",
-        "long": "Enhances the damage by {Boost.Attrib.Damage.Scale}% and slowing ability of a power by {Boost.Attrib.Slow.Scale}%."
-      },
-      "isUnique": false,
-      "type": "set",
       "effects": [
         {
           "effectType": "Damage",
@@ -218,17 +212,17 @@
           ]
         }
       ],
+      "description": {
+        "short": "+DMG, +Slow",
+        "long": "Enhances the damage by {Boost.Attrib.Damage.Scale}% and slowing ability of a power by {Boost.Attrib.Slow.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
       "fullName": "Boosts.Attuned_Curtail_Speed_B.Attuned_Curtail_Speed_B",
       "setName": "Curtail_Speed",
       "displayName": "Damage/Slow"
     },
     {
-      "description": {
-        "short": "+ACC, -End Cost",
-        "long": "Enhances the accuracy by {Boost.Attrib.Accuracy.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."
-      },
-      "isUnique": false,
-      "type": "set",
       "effects": [
         {
           "effectType": "Accuracy",
@@ -263,17 +257,17 @@
           ]
         }
       ],
+      "description": {
+        "short": "+ACC, -End Cost",
+        "long": "Enhances the accuracy by {Boost.Attrib.Accuracy.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
       "fullName": "Boosts.Attuned_Curtail_Speed_C.Attuned_Curtail_Speed_C",
       "setName": "Curtail_Speed",
       "displayName": "Accuracy/Endurance"
     },
     {
-      "description": {
-        "short": "+Range, +Slow",
-        "long": "Enhances the range by {Boost.Attrib.Range.Scale}% and slowing ability of a power by {Boost.Attrib.Slow.Scale}%."
-      },
-      "isUnique": false,
-      "type": "set",
       "effects": [
         {
           "effectType": "Range",
@@ -335,17 +329,17 @@
           ]
         }
       ],
+      "description": {
+        "short": "+Range, +Slow",
+        "long": "Enhances the range by {Boost.Attrib.Range.Scale}% and slowing ability of a power by {Boost.Attrib.Slow.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
       "fullName": "Boosts.Attuned_Curtail_Speed_D.Attuned_Curtail_Speed_D",
       "setName": "Curtail_Speed",
       "displayName": "Range/Slow"
     },
     {
-      "description": {
-        "short": "+Slow, +Rech, -End Cost",
-        "long": "Enhances the slowing ability of a power by {Boost.Attrib.Slow.Scale}%, reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}% and reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}%."
-      },
-      "isUnique": false,
-      "type": "set",
       "effects": [
         {
           "effectType": "Endurance",
@@ -423,6 +417,12 @@
           ]
         }
       ],
+      "description": {
+        "short": "+Slow, +Rech, -End Cost",
+        "long": "Enhances the slowing ability of a power by {Boost.Attrib.Slow.Scale}%, reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}% and reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
       "fullName": "Boosts.Attuned_Curtail_Speed_E.Attuned_Curtail_Speed_E",
       "setName": "Curtail_Speed",
       "displayName": "Endurance/Recharge/Slow"
@@ -432,108 +432,6 @@
     "min": 10,
     "max": 30
   },
-  "bonuses": [
-    {
-      "pve": {
-        "bonusName": "Lethal_Smash_Mez_Res_1",
-        "self": {
-          "Resistance": {
-            "1.5": {
-              "aggregates": [
-                "Lethal",
-                "Smashing"
-              ],
-              "hasAggregates": true,
-              "unlocked": 2,
-              "display": "1.5% Res(Lethal, Smashing)"
-            }
-          },
-          "MezResist": {
-            "2.5": {
-              "aggregates": [
-                "Immob",
-                "Hold",
-                "Stun",
-                "Sleep",
-                "Terror",
-                "Confuse"
-              ],
-              "hasAggregates": true,
-              "unlocked": 2,
-              "display": "2.5% Res(Immob, Hold, Stun, Sleep, Terror, Confuse)"
-            }
-          }
-        }
-      },
-      "pvp": {}
-    },
-    {
-      "pve": {
-        "bonusName": "Improved_Slow_3",
-        "self": {
-          "Enhancement": {
-            "2": {
-              "aggregates": [
-                true,
-                true,
-                true,
-                true
-              ],
-              "hasAggregates": false,
-              "unlocked": 3,
-              "display": "2% Recharge Speed"
-            }
-          }
-        }
-      },
-      "pvp": {}
-    },
-    {
-      "pve": {
-        "bonusName": "Increased_Lethal_Smash_Melee_Def_1",
-        "self": {
-          "Defense": {
-            "1.25": {
-              "aggregates": [
-                "Lethal",
-                "Smashing"
-              ],
-              "hasAggregates": true,
-              "unlocked": 4,
-              "display": "1.25% Defense(Lethal, Smashing)"
-            },
-            "0.63": {
-              "aggregates": [
-                "Melee"
-              ],
-              "hasAggregates": true,
-              "unlocked": 4,
-              "display": "0.63% Defense(Melee)"
-            }
-          }
-        }
-      },
-      "pvp": {}
-    },
-    {
-      "pve": {
-        "bonusName": "Improved_Recharge_Time_1",
-        "self": {
-          "Enhancement": {
-            "2.5": {
-              "aggregates": [
-                true
-              ],
-              "hasAggregates": false,
-              "unlocked": 5,
-              "display": "2.5% Recharge Speed"
-            }
-          }
-        }
-      },
-      "pvp": {}
-    }
-  ],
   "setType": 13,
   "setTypeName": "Slow Movement",
   "displayName": "Curtail Speed",

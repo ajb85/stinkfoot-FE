@@ -7,7 +7,8 @@ import powerSlotsTemplate from 'data/powerSlotsTemplate.js';
 import enhancementSlots from 'data/enhancementSlots.js';
 import enhancements from 'data/enhancements.js';
 import ioSets, { setTypeConversion } from 'data/ioSets.js';
-import IOSets from 'Planner/PowerSlots/Enhancements/IOSets';
+import setBonuses from 'data/enhancements/setBonuses.json';
+import bonusLibrary from 'data/enhancements/bonusesLibrary.json';
 
 export default class BuildManager {
   constructor(state, setState) {
@@ -329,6 +330,43 @@ export default class BuildManager {
     }
   };
 
+  getEnhancementMag = (enhInSlot) => {
+    // const { type, displayName, level, tier } = enhInSlot;
+    // const tierValue = enhancements[type][displayName].effects.magnitudes[tier];
+    // return tier === 'IO' ? tierValue[level] : tierValue;
+  };
+
+  getSetDisplayName(tier, setIndex) {
+    return ioSets[tier][setIndex].displayName;
+  }
+
+  getBonuses(setName, { showSuperior }) {
+    const baseName = setName.split(' ').join('_');
+    const isAttuned =
+      setBonuses[baseName] && setBonuses['Superior_' + baseName];
+    const name = showSuperior && isAttuned ? 'Superior_' + baseName : baseName;
+
+    if (!setBonuses[name]) {
+      console.log('NO BONUSES FOR ', name);
+      return [];
+    }
+
+    const pvpEnabled = this.getSetting('pvp');
+
+    return setBonuses[name].reduce((acc, { name, unlocked, isPvP }) => {
+      if (isPvP && !pvpEnabled) {
+        return acc;
+      }
+      // const {effects, ...bonus} = bonusLibrary[name];
+      acc.push({
+        unlocked,
+        isPvP,
+        effects: this._compressBonusData(bonusLibrary[name]),
+      });
+      return acc;
+    }, []);
+  }
+
   isPowersetExcluded = (powersetFullName) => {
     return this.state.lookup.excludedPowersets.hasOwnProperty(powersetFullName);
   };
@@ -434,20 +472,14 @@ export default class BuildManager {
     this._setState();
   };
 
-  addEnhancement = (
-    powerSlotIndex,
-    enhancement,
-    enhNavigation,
-    level = 50,
-    bonuses
-  ) => {
+  addEnhancement = (powerSlotIndex, enhancement, enhNavigation, level = 50) => {
     const { tier, showSuperior } = enhNavigation;
     const enhCopy =
       enhancement.type === 'set' || enhancement.type === 'attuned'
         ? this._addImageToSetEnhancement(enhancement, tier, showSuperior)
         : { ...enhancement };
 
-    this._addEnhancements(powerSlotIndex, enhCopy, level, tier, bonuses);
+    this._addEnhancements(powerSlotIndex, enhCopy, level, tier);
     this._setState();
   };
 
@@ -455,8 +487,7 @@ export default class BuildManager {
     powerSlotIndex,
     { tier, showSuperior },
     ioSetIndex,
-    level,
-    bonuses
+    level
   ) => {
     const ps = this.nextState.build.powerSlots[powerSlotIndex];
 
@@ -473,24 +504,10 @@ export default class BuildManager {
         this._addImageToSetEnhancement(e, tier, showSuperior)
       ),
       level ? level : ioSets[tier][ioSetIndex].levels.max,
-      tier,
-      bonuses
+      tier
     );
 
     this._setState();
-  };
-
-  getEnhancementMag = (enhInSlot) => {
-    // const { type, displayName, level, tier } = enhInSlot;
-    // const tierValue = enhancements[type][displayName].effects.magnitudes[tier];
-    // return tier === 'IO' ? tierValue[level] : tierValue;
-  };
-
-  convertSetBonuses = (bonuses) => {
-    return bonuses.map(({ pve, pvp }) => ({
-      pve: this._compressAggData(pve),
-      pvp: this._compressAggData(pvp),
-    }));
   };
 
   shortenEnhName = (name) => {
@@ -590,30 +607,22 @@ export default class BuildManager {
     return enhCopy;
   }
 
-  _compressAggData = (bonusAndPvX) => {
+  _compressBonusData = (bonus) => {
     const compressed = [];
-    let lastUnlocked;
-    const { bonusName, ...pvx } = bonusAndPvX;
-    for (let toWho in pvx) {
-      const toWhoPath = [toWho];
-      const affectedBy = pvx[toWho];
-      for (let effectName in affectedBy) {
-        const effectPath = [...toWhoPath, effectName];
-        const effects = affectedBy[effectName];
 
-        for (let mag in effects) {
-          const path = [...effectPath, mag];
-          const { display, unlocked /*, color */ } = effects[mag];
+    for (let effectName in bonus.effects) {
+      const effectPath = [effectName];
+      const effect = bonus.effects[effectName];
 
-          const newItem = { path, display, effectName, unlocked, bonusName };
-
-          if (lastUnlocked === unlocked) {
-            compressed[compressed.length - 1].push(newItem);
-          } else {
-            lastUnlocked = unlocked;
-            compressed.push([newItem]);
-          }
-        }
+      for (let mag in effect) {
+        const path = [...effectPath, mag];
+        const { display } = effect[mag];
+        compressed.push({
+          path,
+          effectName,
+          display,
+          bonusName: bonus.bonusName,
+        });
       }
     }
 
@@ -654,7 +663,7 @@ export default class BuildManager {
     return emptySlotIndex > -1 ? emptySlotIndex : null;
   };
 
-  _addEnhancements = (powerSlotIndex, enhancements, level, tier, bonuses) => {
+  _addEnhancements = (powerSlotIndex, enhancements, level, tier) => {
     if (!Array.isArray(enhancements)) {
       enhancements = [enhancements];
     }
@@ -730,7 +739,7 @@ export default class BuildManager {
       }
 
       if (isSet) {
-        this._addSetBonuses(powerSlotIndex, setIndex, bonuses);
+        this._addSetBonuses(powerSlotIndex, setIndex);
       }
     });
   };

@@ -7,8 +7,8 @@ import styles from '../styles.module.scss';
 export default function SetPreviewMenu(props) {
   const stateManager = usePlannerState();
   const { display, powerSlotIndex, enhNavigation } = props;
-  const { displayName, bonuses, enhancements, setTypeName, levels } = props.set;
-  const setBonuses = stateManager.convertSetBonuses(bonuses);
+  const { displayName, enhancements, setTypeName, levels } = props.set;
+  const setBonuses = stateManager.getBonuses(displayName, enhNavigation);
 
   const bonusTier =
     stateManager.getBonusTiersForPowerSlot(powerSlotIndex)[
@@ -38,8 +38,7 @@ export default function SetPreviewMenu(props) {
               powerSlotIndex,
               enhNavigation,
               enhancements[0].setIndex,
-              50,
-              setBonuses
+              50
             )}
           >
             Add Full Set
@@ -75,8 +74,7 @@ export default function SetPreviewMenu(props) {
                           powerSlotIndex,
                           enh,
                           enhNavigation,
-                          50,
-                          setBonuses
+                          50
                         )
                       : stateManager.removeSlots.bind(
                           this,
@@ -94,39 +92,31 @@ export default function SetPreviewMenu(props) {
         </div>
         <div className={styles.hoverContainer}>
           <h3>Set Bonuses</h3>
-          {setBonuses.reduce((acc, { pve, pvp }, bonusIndex) => {
-            // { display, effectName, path, unlocked, color? } = pve[i]/pvp[i]
-            for (let i = 0; i < pve.length; i++) {
-              const goodBonus = stateManager.bonusCanBeAdded(
-                pve[i][0].bonusName
-              );
-              const bonusColor = {
-                color: goodBonus
-                  ? pve[i][0].unlocked <= bonusTier
-                    ? 'gold'
-                    : null
-                  : 'grey',
-                textDecoration: goodBonus ? null : 'line-through',
-              };
-              acc.push(
-                <div
-                  key={'pve ' + bonusIndex}
-                  className={styles.bonusContainer}
-                >
-                  <p style={bonusColor}>({pve[i][0].unlocked})</p>
-                  <div className={styles.bonusText}>
-                    {pve[i].map((item) => (
-                      <p style={bonusColor} key={item.display}>
-                        {item.display}
-                      </p>
-                    ))}
-                  </div>
+          {setBonuses.reduce((acc, b, bonusIndex) => {
+            const goodBonus = stateManager.bonusCanBeAdded(
+              b.effects[0].bonusName
+            );
+            const { unlocked } = b;
+            const bonusColor = {
+              color: goodBonus
+                ? unlocked <= bonusTier
+                  ? 'gold'
+                  : null
+                : 'grey',
+              textDecoration: goodBonus ? null : 'line-through',
+            };
+            acc.push(
+              <div key={'pve ' + bonusIndex} className={styles.bonusContainer}>
+                <p style={bonusColor}>({unlocked})</p>
+                <div className={styles.bonusText}>
+                  {b.effects.map((e) => (
+                    <p style={bonusColor} key={e.display}>
+                      {e.display}
+                    </p>
+                  ))}
                 </div>
-              );
-              if (stateManager.getSetting('pvp') && pvp[i]) {
-                acc.push(<p>{pvp[i].display}</p>);
-              }
-            }
+              </div>
+            );
             return acc;
           }, [])}
         </div>

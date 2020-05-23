@@ -2,12 +2,6 @@
   "fullName": "IOSet.Achilles'_Heel",
   "enhancements": [
     {
-      "description": {
-        "short": "+Defense Debuff",
-        "long": "Enhances the defense debuff potential of a power by {Boost.Attrib.DefenseDebuff.Scale}%."
-      },
-      "isUnique": false,
-      "type": "set",
       "effects": [
         {
           "effectType": "DefenseDebuff",
@@ -26,17 +20,17 @@
           ]
         }
       ],
+      "description": {
+        "short": "+Defense Debuff",
+        "long": "Enhances the defense debuff potential of a power by {Boost.Attrib.DefenseDebuff.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
       "fullName": "Boosts.Attuned_Achilles_Heel_A.Attuned_Achilles_Heel_A",
       "setName": "Achilles'_Heel",
       "displayName": "Defense Debuff"
     },
     {
-      "description": {
-        "short": "+Defense Debuff, +Rech",
-        "long": "Enhances the defense debuff potential of a power by {Boost.Attrib.DefenseDebuff.Scale}% and reduces the recharge time by {Boost.Attrib.Recharge.Scale}%."
-      },
-      "isUnique": false,
-      "type": "set",
       "effects": [
         {
           "effectType": "Recharge",
@@ -71,17 +65,17 @@
           ]
         }
       ],
+      "description": {
+        "short": "+Defense Debuff, +Rech",
+        "long": "Enhances the defense debuff potential of a power by {Boost.Attrib.DefenseDebuff.Scale}% and reduces the recharge time by {Boost.Attrib.Recharge.Scale}%."
+      },
+      "isUnique": false,
+      "type": "set",
       "fullName": "Boosts.Attuned_Achilles_Heel_B.Attuned_Achilles_Heel_B",
       "setName": "Achilles'_Heel",
       "displayName": "Defense Debuff/Recharge"
     },
     {
-      "description": {
-        "short": "-RES (All)",
-        "long": "Gives a chance to reduce your foes damage resistance by 20%.  This effect will trigger roughly 3.5 times per minute."
-      },
-      "isUnique": false,
-      "type": "set",
       "effects": [
         {
           "effectType": "Ones",
@@ -169,6 +163,12 @@
           ]
         }
       ],
+      "description": {
+        "short": "-RES (All)",
+        "long": "Gives a chance to reduce your foes damage resistance by 20%.  This effect will trigger roughly 3.5 times per minute."
+      },
+      "isUnique": false,
+      "type": "set",
       "fullName": "Boosts.Attuned_Achilles_Heel_C.Attuned_Achilles_Heel_C",
       "setName": "Achilles'_Heel",
       "displayName": "Chance for Resistance Debuff"
@@ -178,60 +178,6 @@
     "min": 10,
     "max": 20
   },
-  "bonuses": [
-    {
-      "pve": {
-        "bonusName": "Increased_Damage_2",
-        "all": {
-          "DamageBuff": {
-            "1.5": {
-              "aggregates": [
-                "Smashing",
-                "Lethal",
-                "Fire",
-                "Cold",
-                "Energy",
-                "Negative",
-                "Toxic",
-                "Psionic"
-              ],
-              "hasAggregates": true,
-              "unlocked": 2,
-              "display": "1.5% Damage(Smashing, Lethal, Fire, Cold, Energy, Negative, Toxic, Psionic)"
-            }
-          }
-        }
-      },
-      "pvp": {}
-    },
-    {
-      "pve": {
-        "bonusName": "Increased_AoE_Fire_Cold_Def_2",
-        "self": {
-          "Defense": {
-            "1.88": {
-              "aggregates": [
-                "AoE"
-              ],
-              "hasAggregates": true,
-              "unlocked": 3,
-              "display": "1.88% Defense(AoE)"
-            },
-            "0.94": {
-              "aggregates": [
-                "Fire",
-                "Cold"
-              ],
-              "hasAggregates": true,
-              "unlocked": 3,
-              "display": "0.94% Defense(Fire, Cold)"
-            }
-          }
-        }
-      },
-      "pvp": {}
-    }
-  ],
   "setType": 21,
   "setTypeName": "Defense Debuff",
   "displayName": "Achilles' Heel",
