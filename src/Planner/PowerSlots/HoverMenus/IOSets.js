@@ -113,9 +113,10 @@ export default function SetPreviewMenu(props) {
 
             acc.push(
               <div key={bonusIndex} className={styles.bonusContainer}>
-                <p style={bonusColor}>
-                  ({unlocked}) {`${bonusCount > 0 ? `(x${bonusCount})` : ''}`}
-                </p>
+                <p style={bonusColor}>{`${
+                  bonusCount > 0 ? `x${bonusCount}` : ''
+                }`}</p>
+                <p style={bonusColor}>({unlocked})</p>
                 <div className={styles.bonusText}>
                   {displays.map((display) => (
                     <p style={bonusColor} key={display}>
