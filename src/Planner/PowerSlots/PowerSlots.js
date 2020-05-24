@@ -38,19 +38,7 @@ function PowerSlots(props) {
     <section className={styles.PowerSlots}>
       <h2>Power Slots</h2>
       <div className={styles.slotsContainer}>
-        {selected.map((column, columnNumber) => {
-          return (
-            <div key={columnNumber} className={styles.column}>
-              {column.map((ps) => (
-                <PowerSlot
-                  key={ps.powerSlotIndex}
-                  slot={ps}
-                  selectionState={enhNavigation}
-                />
-              ))}
-            </div>
-          );
-        })}
+        {selected.map(mapSelected(enhNavigation))}
       </div>
     </section>
   );
@@ -78,6 +66,18 @@ const reducer = (view, index = 0) => (acc, cur, powerSlotIndex) => {
   }
   return acc;
 };
+
+const mapSelected = (enhNavigation) => (column, columnNumber) => {
+  return (
+    <div key={columnNumber} className={styles.column}>
+      {column.map(mapColumns(enhNavigation))}
+    </div>
+  );
+};
+
+const mapColumns = (enhNavigation) => (ps) => (
+  <PowerSlot key={ps.powerSlotIndex} slot={ps} selectionState={enhNavigation} />
+);
 
 const getInitialAcc = () => ({
   selected: [[], [], []],
