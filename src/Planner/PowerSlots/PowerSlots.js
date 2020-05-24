@@ -30,36 +30,9 @@ function PowerSlots(props) {
     // eslint-disable-next-line
   }, [stateManager.tracking.powerSlotIndex]);
 
-  let index = 0;
   const { selected /*, defaults*/ } = stateManager
     .getFromState('powerSlots')
-    .reduce(
-      (acc, cur, powerSlotIndex) => {
-        const psWithIndex = { ...cur, powerSlotIndex };
-        if (cur.type === 'default') {
-          acc.defaults.push(psWithIndex);
-        } else if (view === 'level') {
-          acc.selected[index].push(psWithIndex);
-
-          if (acc.selected[index].length >= 8) {
-            index++;
-          }
-        } else if (view === 'respec') {
-          const { power } = psWithIndex;
-          if (!power) {
-            acc.empties.push(psWithIndex);
-          } else {
-            const ato = power.archetypeOrder;
-            const atoIndex =
-              ato === 'primary' ? 0 : ato === 'secondary' ? 1 : 2;
-
-            acc.selected[atoIndex].push(psWithIndex);
-          }
-        }
-        return acc;
-      },
-      { selected: [[], [], []], defaults: [], empties: [] }
-    );
+    .reduce(reducer(view), getInitialAcc());
 
   return (
     <section className={styles.PowerSlots}>
@@ -82,5 +55,34 @@ function PowerSlots(props) {
     </section>
   );
 }
+
+const reducer = (view, index = 0) => (acc, cur, powerSlotIndex) => {
+  const psWithIndex = { ...cur, powerSlotIndex };
+  if (cur.type === 'default') {
+    acc.defaults.push(psWithIndex);
+  } else if (view === 'level') {
+    acc.selected[index].push(psWithIndex);
+    if (acc.selected[index].length >= 8) {
+      index++;
+    }
+  } else if (view === 'respec') {
+    const { power } = psWithIndex;
+    if (!power) {
+      acc.empties.push(psWithIndex);
+    } else {
+      const ato = power.archetypeOrder;
+      const atoIndex = ato === 'primary' ? 0 : ato === 'secondary' ? 1 : 2;
+
+      acc.selected[atoIndex].push(psWithIndex);
+    }
+  }
+  return acc;
+};
+
+const getInitialAcc = () => ({
+  selected: [[], [], []],
+  defaults: [],
+  empties: [],
+});
 
 export default PowerSlots;
