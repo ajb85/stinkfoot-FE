@@ -36,7 +36,7 @@ export default function SetPreviewMenu(props) {
             enhNavigation,
             enhancements[0].setIndex
           )}
-          removeEnh={removeEnh((stateManager, powerSlotIndex))}
+          removeEnh={removeEnh(stateManager, powerSlotIndex)}
         />
         <SetBonuses
           set={props.set}
