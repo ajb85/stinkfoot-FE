@@ -7,6 +7,7 @@ import { usePlannerState } from 'Providers/PlannerStateManagement.js';
 import styles from './styles.module.scss';
 
 function PowerSlots(props) {
+  const [view] = useState('level');
   const enhNavigation = useState({
     section: 'standard',
     tier: 'IO',
@@ -15,7 +16,7 @@ function PowerSlots(props) {
   });
 
   const stateManager = usePlannerState();
-  let index = 0;
+
   React.useEffect(() => {
     // Resets navigation whenever a power is opened or closed.  A more long term solution
     // would probably be to store the state for every power slot so there can be a memory of where
@@ -29,27 +30,35 @@ function PowerSlots(props) {
     // eslint-disable-next-line
   }, [stateManager.tracking.powerSlotIndex]);
 
+  let index = 0;
   const { selected /*, defaults*/ } = stateManager
     .getFromState('powerSlots')
     .reduce(
       (acc, cur, powerSlotIndex) => {
-        const withIndex = { ...cur, powerSlotIndex };
+        const psWithIndex = { ...cur, powerSlotIndex };
         if (cur.type === 'default') {
-          acc.defaults.push(withIndex);
-        } else {
-          if (!acc.selected[index]) {
-            acc.selected.push([]);
-          }
-
-          acc.selected[index].push(withIndex);
+          acc.defaults.push(psWithIndex);
+        } else if (view === 'level') {
+          acc.selected[index].push(psWithIndex);
 
           if (acc.selected[index].length >= 8) {
             index++;
           }
+        } else if (view === 'respec') {
+          const { power } = psWithIndex;
+          if (!power) {
+            acc.empties.push(psWithIndex);
+          } else {
+            const ato = power.archetypeOrder;
+            const atoIndex =
+              ato === 'primary' ? 0 : ato === 'secondary' ? 1 : 2;
+
+            acc.selected[atoIndex].push(psWithIndex);
+          }
         }
         return acc;
       },
-      { selected: [], defaults: [] }
+      { selected: [[], [], []], defaults: [], empties: [] }
     );
 
   return (
