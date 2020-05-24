@@ -8,7 +8,7 @@ export default function SetPreviewMenu(props) {
   const stateManager = usePlannerState();
   const { display, powerSlotIndex, enhNavigation } = props;
   const { displayName, enhancements, setTypeName, levels } = props.set;
-  const setBonuses = stateManager.getBonuses(displayName, enhNavigation);
+  const setBonuses = stateManager.getDisplayBonuses(displayName, enhNavigation);
 
   const bonusTier =
     stateManager.getBonusTiersForPowerSlot(powerSlotIndex)[
@@ -93,25 +93,33 @@ export default function SetPreviewMenu(props) {
         <div className={styles.hoverContainer}>
           <h3>Set Bonuses</h3>
           {setBonuses.reduce((acc, b, bonusIndex) => {
-            const goodBonus = stateManager.bonusCanBeAdded(
-              b.effects[0].bonusName
-            );
-            const { unlocked } = b;
+            const { unlocked, bonusName, displays } = b;
+            const bonusCount = stateManager.getBonusCount(bonusName);
+            const willGetBonus = bonusCount < 5;
+            const isBonusUnlocked = unlocked <= bonusTier;
             const bonusColor = {
-              color: goodBonus
-                ? unlocked <= bonusTier
-                  ? 'gold'
-                  : null
+              color: isBonusUnlocked
+                ? bonusCount === 5
+                  ? 'chartreuse'
+                  : bonusCount > 5
+                  ? 'red'
+                  : 'gold'
+                : willGetBonus
+                ? null
                 : 'grey',
-              textDecoration: goodBonus ? null : 'line-through',
+              textDecoration:
+                !isBonusUnlocked && !willGetBonus ? 'line-through' : null,
             };
+
             acc.push(
-              <div key={'pve ' + bonusIndex} className={styles.bonusContainer}>
-                <p style={bonusColor}>({unlocked})</p>
+              <div key={bonusIndex} className={styles.bonusContainer}>
+                <p style={bonusColor}>
+                  ({unlocked}) {`${bonusCount > 0 ? `(x${bonusCount})` : ''}`}
+                </p>
                 <div className={styles.bonusText}>
-                  {b.effects.map((e) => (
-                    <p style={bonusColor} key={e.display}>
-                      {e.display}
+                  {displays.map((display) => (
+                    <p style={bonusColor} key={display}>
+                      {display}
                     </p>
                   ))}
                 </div>

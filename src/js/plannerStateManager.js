@@ -29,7 +29,6 @@ export default class BuildManager {
         alignment: 'Hero',
         powerSlots: powerSlotsTemplate,
         poolPowers: [],
-        setBonuses: {},
       },
       tracking: {
         primaryIndex: 0,
@@ -330,41 +329,40 @@ export default class BuildManager {
     }
   };
 
-  getEnhancementMag = (enhInSlot) => {
-    // const { type, displayName, level, tier } = enhInSlot;
-    // const tierValue = enhancements[type][displayName].effects.magnitudes[tier];
-    // return tier === 'IO' ? tierValue[level] : tierValue;
-  };
-
   getSetDisplayName(tier, setIndex) {
     return ioSets[tier][setIndex].displayName;
   }
 
-  getBonuses(setName, { showSuperior }) {
+  getDisplayBonuses(setName, { showSuperior }) {
     const baseName = setName.split(' ').join('_');
     const isAttuned =
       setBonuses[baseName] && setBonuses['Superior_' + baseName];
-    const name = showSuperior && isAttuned ? 'Superior_' + baseName : baseName;
+    const correctedSetName =
+      showSuperior && isAttuned ? 'Superior_' + baseName : baseName;
 
-    if (!setBonuses[name]) {
-      console.log('NO BONUSES FOR ', name);
+    if (!setBonuses[correctedSetName]) {
+      console.log('NO BONUSES FOR ', correctedSetName);
       return [];
     }
 
     const pvpEnabled = this.getSetting('pvp');
 
-    return setBonuses[name].reduce((acc, { name, unlocked, isPvP }) => {
-      if (isPvP && !pvpEnabled) {
+    return setBonuses[correctedSetName].reduce(
+      (acc, { name, unlocked, isPvP }) => {
+        if (isPvP && !pvpEnabled) {
+          return acc;
+        }
+        // const {effects, ...bonus} = bonusLibrary[name];
+        acc.push({
+          unlocked,
+          isPvP,
+          displays: bonusLibrary[name].displays,
+          bonusName: name,
+        });
         return acc;
-      }
-      // const {effects, ...bonus} = bonusLibrary[name];
-      acc.push({
-        unlocked,
-        isPvP,
-        effects: this._compressBonusData(bonusLibrary[name]),
-      });
-      return acc;
-    }, []);
+      },
+      []
+    );
   }
 
   isPowersetExcluded = (powersetFullName) => {
@@ -569,6 +567,57 @@ export default class BuildManager {
     }, {});
   }
 
+  findEnhancementIndex(enhancement, powerSlotIndex) {
+    const powerSlot = this.nextState.build.powerSlots[powerSlotIndex];
+
+    const { fullName } = enhancement;
+    return powerSlot.enhSlots.findIndex(
+      ({ enhancement }) => enhancement && enhancement.fullName === fullName
+    );
+  }
+
+  getBonusCount = (bonusName) => {
+    let bonusCount = 0;
+    const { powerSlots } = this.state.build;
+    const psLength = powerSlots.length;
+    for (let i = 0; i < psLength; i++) {
+      const ps = powerSlots[i];
+      if (!ps.enhSlots) {
+        continue;
+      }
+      const enhLength = ps.enhSlots.length;
+
+      let enhCount = {};
+      for (let j = 0; j < enhLength; j++) {
+        const enh = ps.enhSlots[j].enhancement;
+        if (!enh || (enh.type !== 'set' && enh.type !== 'attuned')) {
+          continue;
+        }
+        const key = `${enh.tier},${enh.setIndex}`;
+        enhCount[key] = enhCount[key] ? ++enhCount[key] : 1;
+      }
+
+      for (let enh in enhCount) {
+        const bonusTier = enhCount[enh];
+        const [tier, setIndex] = enh.split(',');
+        const bonuses = this._getBonuses(tier, setIndex);
+        const bonusLength = bonuses.length;
+
+        for (let k = 0; k < bonusLength; k++) {
+          const b = bonuses[k];
+
+          if (b.unlocked > bonusTier) {
+            break;
+          }
+          if (b.name === bonusName) {
+            bonusCount++;
+          }
+        }
+      }
+    }
+    return bonusCount;
+  };
+
   _indexOfAll(text, target) {
     const indices = [];
 
@@ -591,20 +640,24 @@ export default class BuildManager {
     let { imageName } = enhancement;
     if (!imageName && ioSetImage) {
       imageName = ioSetImage;
-      enhancement.isAttuned = isAttuned;
     } else if (!imageName) {
       throw new Error('No image found for: ', enhancement.displayName);
     }
     // Superior enhancements have an "S" in front of them.  The regular attuned
     // version drops the first letter
     const correctedImgName =
-      !enhancement.isAttuned || !showSuperior ? imageName : 'S' + imageName;
+      isAttuned && showSuperior ? 'S' + imageName : imageName;
 
     const enhCopy = { ...enhancement };
     enhCopy.image = enhImages(`./${correctedImgName}`);
     enhCopy.imageName = correctedImgName;
 
     return enhCopy;
+  }
+
+  _getBonuses(tier, setIndex) {
+    const setName = ioSets[tier][setIndex].displayName.split(' ').join('_');
+    return setBonuses[setName];
   }
 
   _compressBonusData = (bonus) => {
@@ -616,11 +669,9 @@ export default class BuildManager {
 
       for (let mag in effect) {
         const path = [...effectPath, mag];
-        const { display } = effect[mag];
         compressed.push({
           path,
           effectName,
-          display,
           bonusName: bonus.bonusName,
         });
       }
@@ -668,15 +719,9 @@ export default class BuildManager {
       enhancements = [enhancements];
     }
 
-    enhancements.forEach((enhancement) => {
-      const {
-        type,
-        displayName,
-        fullName,
-        imageName,
-        isUnique,
-        setIndex,
-      } = enhancement;
+    enhancements.forEach((e) => {
+      const { type, displayName, fullName } = e;
+      const { imageName, isUnique, setIndex } = e;
 
       const isSet = type === 'set' || type === 'attuned';
 
@@ -737,51 +782,7 @@ export default class BuildManager {
           { powerName: powerInSlot.displayName, count: 1 },
         ];
       }
-
-      if (isSet) {
-        this._addSetBonuses(powerSlotIndex, setIndex);
-      }
     });
-  };
-
-  findEnhancementIndex(enhancement, powerSlotIndex) {
-    const powerSlot = this.nextState.build.powerSlots[powerSlotIndex];
-
-    const { fullName } = enhancement;
-    return powerSlot.enhSlots.findIndex(
-      ({ enhancement }) => enhancement && enhancement.fullName === fullName
-    );
-  }
-
-  bonusCanBeAdded = (bonusName) => {
-    return (
-      !this.state.build.setBonuses.hasOwnProperty(bonusName) ||
-      this.state.build.setBonuses[bonusName] < 5
-    );
-  };
-
-  _addSetBonuses = (powerSlotIndex, setIndex, bonuses) => {
-    const { setBonuses } = this.nextState.build;
-    const setCount = this.nextState.build.powerSlots[
-      powerSlotIndex
-    ].enhSlots.reduce(
-      (acc, { enhancement }) =>
-        enhancement.setIndex === setIndex ? ++acc : acc,
-      0
-    );
-    console.log('LOOPING: ', bonuses);
-    const bonusAtCount = bonuses.find(({ pve }) =>
-      pve[0].find(({ unlocked }) => unlocked === setCount)
-    );
-
-    if (bonusAtCount) {
-      const bn = bonusAtCount.pve[0][0].bonusName;
-      if (setBonuses[bn] && setBonuses[bn] < 5) {
-        setBonuses[bn] = ++setBonuses[bn];
-      } else {
-        setBonuses[bn] = 1;
-      }
-    }
   };
 
   _removeSlotsFromPower(powerSlotIndex, slotIndices) {
