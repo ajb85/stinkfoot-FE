@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 
 import { usePlannerState } from 'Providers/PlannerStateManagement.js';
 import HoverMenu from '../HoverMenus/IOSets.js';
@@ -6,21 +6,23 @@ import HoverMenu from '../HoverMenus/IOSets.js';
 import styles from '../styles.module.scss';
 
 export default function IOSets(props) {
+  const enhRefs = useRef([]);
   const { selectionState, powerSlotIndex, power: p } = props;
   const [enhNavigation, setEnhNavigation] = selectionState;
   const stateManager = usePlannerState();
-
-  const overlayImg = stateManager.getEnhancementOverlay('IO');
-
-  const updateNavigation = (i) => {
-    const ioSetIndex = i === enhNavigation.ioSetIndex ? null : i;
-    setEnhNavigation({ ...enhNavigation, ioSetIndex });
-  };
 
   const enhancementsData = stateManager.getEnhancementSectionForPower(
     p,
     enhNavigation
   );
+
+  const overlayImg = stateManager.getEnhancementOverlay('IO');
+
+  useEffect(() => {
+    if (enhancementsData.length !== enhRefs.current.length) {
+      enhRefs.current = enhRefs.current.slice(0, enhancementsData.length);
+    }
+  }, [enhancementsData.length, enhRefs]);
 
   return (
     <div className={styles.enhPreviewContainer}>
@@ -30,9 +32,13 @@ export default function IOSets(props) {
             <div className={styles.enhancementImage}>
               {!enh.isAttuned && <img src={overlayImg} alt={enh.fullName} />}
               <img
+                ref={(ele) => (enhRefs.current[i] = ele)}
                 src={enh.image}
                 alt={enh.fullName}
-                onClick={updateNavigation.bind(this, i)}
+                onClick={updateNavigation(selectionState, enhRefs).bind(
+                  this,
+                  i
+                )}
               />
               <HoverMenu
                 powerSlotIndex={powerSlotIndex}
@@ -77,3 +83,11 @@ export default function IOSets(props) {
     </div>
   );
 }
+
+const updateNavigation = ([enhNavigation, setEnhNavigation], enhRefs) => (
+  i
+) => {
+  console.log('REF: ', enhRefs.current[i].getBoundingClientRect());
+  const ioSetIndex = i === enhNavigation.ioSetIndex ? null : i;
+  setEnhNavigation({ ...enhNavigation, ioSetIndex });
+};
