@@ -3,7 +3,7 @@ import stateMgmt from 'js/plannerStateManager.js';
 
 import styles from 'Planner/PowerSlots/styles.module.scss';
 
-const PlannerContext = createContext();
+const plannerContext = createContext();
 
 let prevInstanceFunction;
 function PlannerProvider(props) {
@@ -23,19 +23,22 @@ function PlannerProvider(props) {
         }
       }
     };
+
     if (prevInstanceFunction) {
       window.removeEventListener('click', prevInstanceFunction);
     }
+
     prevInstanceFunction = clearActivePills;
     window.addEventListener('click', clearActivePills);
     return window.removeEventListener.bind(this, 'click', clearActivePills);
   }, [state]);
-  const { Provider } = PlannerContext;
+
+  const { Provider } = plannerContext;
   return <Provider value={stateManager}>{props.children}</Provider>;
 }
 
 export function usePlannerState() {
-  return useContext(PlannerContext);
+  return useContext(plannerContext);
 }
 
 export default PlannerProvider;
