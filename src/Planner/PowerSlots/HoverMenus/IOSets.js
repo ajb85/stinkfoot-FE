@@ -11,12 +11,13 @@ export default function SetPreviewMenu(props) {
   const { display, powerSlotIndex, enhNavigation } = props;
   const { displayName, enhancements, setTypeName, levels } = props.set;
 
+  const border = display && display !== 'null' ? '1px solid red' : null;
   return (
     <div className={styles.EnhHoverMenu} style={{ display }}>
       <div
         className={styles.menu}
         style={{
-          border: display && display !== 'null' ? '1px solid red' : null,
+          border,
         }}
       >
         <div className={styles.titles}>
@@ -25,7 +26,6 @@ export default function SetPreviewMenu(props) {
           </h2>
           <h3>{parseLevels(levels)}</h3>
         </div>
-
         <EnhancementList
           enhancements={enhancements}
           powerSlotIndex={powerSlotIndex}
