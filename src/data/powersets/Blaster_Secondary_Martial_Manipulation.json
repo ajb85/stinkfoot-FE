@@ -6,15 +6,6 @@
   "displayName": "Martial Combat",
   "powers": [
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Knockback",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Damage",
@@ -27,8 +18,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Martial_Manipulation.Ki_Push",
               "damageType": "Smashing"
             }
@@ -46,8 +38,9 @@
               "probability": 1,
               "duration": 2,
               "effectType": "Mez",
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Martial_Manipulation.Ki_Push",
               "mezType": "Repel"
             },
@@ -61,7 +54,7 @@
               "duration": 2,
               "effectType": "Mez",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Martial_Manipulation.Ki_Push",
               "mezType": "Hold"
             },
@@ -75,7 +68,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Martial_Manipulation.Ki_Push",
               "damageType": "Smashing"
             },
@@ -89,7 +82,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Martial_Manipulation.Ki_Push",
               "damageType": "Lethal"
             },
@@ -103,7 +96,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Martial_Manipulation.Ki_Push",
               "damageType": "Fire"
             },
@@ -117,7 +110,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Martial_Manipulation.Ki_Push",
               "damageType": "Cold"
             },
@@ -131,7 +124,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Martial_Manipulation.Ki_Push",
               "damageType": "Energy"
             },
@@ -145,7 +138,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Martial_Manipulation.Ki_Push",
               "damageType": "Negative"
             },
@@ -159,7 +152,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Martial_Manipulation.Ki_Push",
               "damageType": "Toxic"
             },
@@ -173,7 +166,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Martial_Manipulation.Ki_Push",
               "damageType": "Psionic"
             }
@@ -192,14 +185,25 @@
               "effectType": "Mez",
               "delayedTime": 2.05,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Martial_Manipulation.Ki_Push",
               "mezType": "Knockback"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Knockback",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Support.Martial_Manipulation.Ki_Push",
+      "archetypeOrder": "secondary",
       "powerIndex": 0,
       "castTimeReal": 0.83,
       "toggleCost": 5.2,
@@ -239,15 +243,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Knockback",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Damage",
@@ -260,8 +255,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Martial_Manipulation.Storm_Kick",
               "damageType": "Smashing"
             },
@@ -275,8 +271,9 @@
               "effectType": "Damage",
               "ticks": 4,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Martial_Manipulation.Storm_Kick",
               "damageType": "Lethal"
             }
@@ -294,8 +291,9 @@
               "probability": 1,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Martial_Manipulation.Storm_Kick",
               "mezType": "Knockback"
             },
@@ -309,7 +307,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Martial_Manipulation.Storm_Kick",
               "damageType": "Smashing"
             },
@@ -323,7 +321,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Martial_Manipulation.Storm_Kick",
               "damageType": "Lethal"
             },
@@ -337,7 +335,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Martial_Manipulation.Storm_Kick",
               "damageType": "Fire"
             },
@@ -351,7 +349,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Martial_Manipulation.Storm_Kick",
               "damageType": "Cold"
             },
@@ -365,7 +363,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Martial_Manipulation.Storm_Kick",
               "damageType": "Energy"
             },
@@ -379,7 +377,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Martial_Manipulation.Storm_Kick",
               "damageType": "Negative"
             },
@@ -393,7 +391,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Martial_Manipulation.Storm_Kick",
               "damageType": "Toxic"
             },
@@ -407,13 +405,23 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Martial_Manipulation.Storm_Kick",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Knockback",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Support.Martial_Manipulation.Storm_Kick",
+      "archetypeOrder": "secondary",
       "powerIndex": 1,
       "castTimeReal": 1.07,
       "toggleCost": 6.864,
@@ -454,9 +462,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [],
-      "enhancementCount": 0,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Ones",
@@ -468,12 +473,16 @@
               "probability": 1,
               "duration": 10.25,
               "effectType": "Null",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Martial_Manipulation.Reach_for_the_Limit"
             }
           ]
         }
       ],
+      "allowedEnhancements": [],
+      "enhancementCount": 0,
+      "ogFullName": "Blaster_Support.Martial_Manipulation.Reach_for_the_Limit",
+      "archetypeOrder": "secondary",
       "powerIndex": 2,
       "fullName": "Blaster_Secondary_Martial_Combat_Reach_for_the_Limit",
       "displayName": "Reach for the Limit",
@@ -501,15 +510,6 @@
       "powerType": "Auto"
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Range",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Ones",
@@ -523,7 +523,8 @@
               "effectType": "Mez",
               "delayedTime": -0.3,
               "stacking": 1,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Martial_Manipulation.Burst_of_Speed",
               "mezType": "Teleport"
             },
@@ -535,7 +536,7 @@
               "duration": 2,
               "effectType": "EntCreate",
               "delayedTime": -0.2,
-              "toWho": "All",
+              "toWho": "all",
               "powerFullName": "Blaster_Support.Martial_Manipulation.Burst_of_Speed"
             },
             {
@@ -545,7 +546,7 @@
               "effectType": "GlobalChanceMod",
               "delayedTime": 1,
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "attribType": 2,
               "powerFullName": "Blaster_Support.Martial_Manipulation.Burst_of_Speed"
             },
@@ -559,7 +560,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Martial_Manipulation.Burst_of_Speed",
               "damageType": "Smashing"
             },
@@ -573,7 +574,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Martial_Manipulation.Burst_of_Speed",
               "damageType": "Lethal"
             },
@@ -587,7 +588,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Martial_Manipulation.Burst_of_Speed",
               "damageType": "Fire"
             },
@@ -601,7 +602,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Martial_Manipulation.Burst_of_Speed",
               "damageType": "Cold"
             },
@@ -615,7 +616,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Martial_Manipulation.Burst_of_Speed",
               "damageType": "Energy"
             },
@@ -629,7 +630,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Martial_Manipulation.Burst_of_Speed",
               "damageType": "Negative"
             },
@@ -643,7 +644,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Martial_Manipulation.Burst_of_Speed",
               "damageType": "Toxic"
             },
@@ -657,7 +658,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Martial_Manipulation.Burst_of_Speed",
               "damageType": "Psionic"
             }
@@ -675,12 +676,22 @@
               "effectType": "RechargePower",
               "delayedTime": 1,
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Martial_Manipulation.Burst_of_Speed"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Support.Martial_Manipulation.Burst_of_Speed",
+      "archetypeOrder": "secondary",
       "powerIndex": 3,
       "castTimeReal": 1,
       "toggleCost": 13.52,
@@ -719,15 +730,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Knockback",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Damage",
@@ -740,8 +742,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Martial_Manipulation.Dragons_Tail",
               "damageType": "Smashing"
             }
@@ -758,8 +761,9 @@
               "probability": 0.75,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Martial_Manipulation.Dragons_Tail",
               "nearGround": true,
               "mezType": "Knockback"
@@ -772,7 +776,7 @@
               "duration": 9,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Martial_Manipulation.Dragons_Tail",
               "damageType": "Smashing"
             },
@@ -784,7 +788,7 @@
               "duration": 9,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Martial_Manipulation.Dragons_Tail",
               "damageType": "Lethal"
             },
@@ -796,7 +800,7 @@
               "duration": 9,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Martial_Manipulation.Dragons_Tail",
               "damageType": "Fire"
             },
@@ -808,7 +812,7 @@
               "duration": 9,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Martial_Manipulation.Dragons_Tail",
               "damageType": "Cold"
             },
@@ -820,7 +824,7 @@
               "duration": 9,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Martial_Manipulation.Dragons_Tail",
               "damageType": "Energy"
             },
@@ -832,7 +836,7 @@
               "duration": 9,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Martial_Manipulation.Dragons_Tail",
               "damageType": "Negative"
             },
@@ -844,7 +848,7 @@
               "duration": 9,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Martial_Manipulation.Dragons_Tail",
               "damageType": "Toxic"
             },
@@ -856,13 +860,23 @@
               "duration": 9,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Martial_Manipulation.Dragons_Tail",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Knockback",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Support.Martial_Manipulation.Dragons_Tail",
+      "archetypeOrder": "secondary",
       "powerIndex": 4,
       "castTimeReal": 1.5,
       "toggleCost": 13.52,
@@ -904,14 +918,6 @@
       "aoeModifier": 2.2
     },
     {
-      "allowedEnhancements": [
-        "Heal",
-        "Recharge",
-        "Endurance_Modification",
-        "Slow"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Slow",
@@ -923,20 +929,21 @@
               "probability": 1,
               "duration": 5,
               "effectType": "SpeedRunning",
+              "buffable": true,
               "resistible": true,
-              "toWho": "All",
+              "toWho": "all",
               "powerFullName": "Blaster_Support.Martial_Manipulation.Reaction_Time"
             },
             {
+              "etModifies": "RechargeTime",
               "mag": {
-                "pve": -0.7
+                "pve": -0.4
               },
               "probability": 1,
               "duration": 5,
               "effectType": "Enhancement",
-              "eTModifies": 25,
               "resistible": true,
-              "toWho": "All",
+              "toWho": "all",
               "powerFullName": "Blaster_Support.Martial_Manipulation.Reaction_Time"
             },
             {
@@ -946,8 +953,21 @@
               "probability": 1,
               "duration": 5,
               "effectType": "SpeedFlying",
+              "buffable": true,
               "resistible": true,
-              "toWho": "All",
+              "toWho": "all",
+              "powerFullName": "Blaster_Support.Martial_Manipulation.Reaction_Time"
+            },
+            {
+              "etModifies": "JumpHeight",
+              "mag": {
+                "pve": -0.7
+              },
+              "probability": 1,
+              "duration": 5,
+              "effectType": "Enhancement",
+              "resistible": true,
+              "toWho": "all",
               "powerFullName": "Blaster_Support.Martial_Manipulation.Reaction_Time"
             },
             {
@@ -957,8 +977,9 @@
               "probability": 1,
               "duration": 5,
               "effectType": "SpeedJumping",
+              "buffable": true,
               "resistible": true,
-              "toWho": "All",
+              "toWho": "all",
               "powerFullName": "Blaster_Support.Martial_Manipulation.Reaction_Time"
             },
             {
@@ -969,19 +990,19 @@
               "duration": 10,
               "effectType": "SpeedRunning",
               "resistible": true,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Martial_Manipulation.Reaction_Time"
             },
             {
+              "etModifies": "RechargeTime",
               "mag": {
-                "pve": 0.7
+                "pve": 0.4
               },
               "probability": 1,
               "duration": 10,
               "effectType": "Enhancement",
-              "eTModifies": 25,
               "resistible": true,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Martial_Manipulation.Reaction_Time"
             },
             {
@@ -992,7 +1013,19 @@
               "duration": 10,
               "effectType": "SpeedFlying",
               "resistible": true,
-              "toWho": "Self",
+              "toWho": "self",
+              "powerFullName": "Blaster_Support.Martial_Manipulation.Reaction_Time"
+            },
+            {
+              "etModifies": "JumpHeight",
+              "mag": {
+                "pve": 0.7
+              },
+              "probability": 1,
+              "duration": 10,
+              "effectType": "Enhancement",
+              "resistible": true,
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Martial_Manipulation.Reaction_Time"
             },
             {
@@ -1003,7 +1036,7 @@
               "duration": 10,
               "effectType": "SpeedJumping",
               "resistible": true,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Martial_Manipulation.Reaction_Time"
             }
           ]
@@ -1019,7 +1052,7 @@
               "duration": 5,
               "effectType": "SpeedRunning",
               "resistible": true,
-              "toWho": "All",
+              "toWho": "all",
               "powerFullName": "Blaster_Support.Martial_Manipulation.Reaction_Time"
             },
             {
@@ -1030,7 +1063,7 @@
               "duration": 10,
               "effectType": "SpeedRunning",
               "resistible": true,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Martial_Manipulation.Reaction_Time"
             }
           ]
@@ -1045,7 +1078,8 @@
               "probability": 1,
               "duration": 3,
               "effectType": "Absorb",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Martial_Manipulation.Reaction_Time"
             }
           ]
@@ -1060,12 +1094,22 @@
               "probability": 1,
               "duration": 3,
               "effectType": "Recovery",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Martial_Manipulation.Reaction_Time"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Heal",
+        "Recharge",
+        "Endurance_Modification",
+        "Slow"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Support.Martial_Manipulation.Reaction_Time",
+      "archetypeOrder": "secondary",
       "powerIndex": 5,
       "castTimeReal": 1.83,
       "fullName": "Blaster_Secondary_Martial_Combat_Reaction_Time",
@@ -1108,12 +1152,6 @@
       "powerType": "Toggle"
     },
     {
-      "allowedEnhancements": [
-        "Heal",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Ones",
@@ -1124,7 +1162,7 @@
               "variableModified": true,
               "effectType": "Mez",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "attribType": 2,
               "powerFullName": "Blaster_Support.Martial_Manipulation.Inner_Will",
               "mezType": "Stun"
@@ -1135,7 +1173,7 @@
               "variableModified": true,
               "effectType": "Mez",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "attribType": 2,
               "powerFullName": "Blaster_Support.Martial_Manipulation.Inner_Will",
               "mezType": "Sleep"
@@ -1146,10 +1184,10 @@
               "variableModified": true,
               "effectType": "Mez",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "attribType": 2,
               "powerFullName": "Blaster_Support.Martial_Manipulation.Inner_Will",
-              "mezType": "Immobilization"
+              "mezType": "Immob"
             },
             {
               "mag": {},
@@ -1157,7 +1195,7 @@
               "variableModified": true,
               "effectType": "Mez",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "attribType": 2,
               "powerFullName": "Blaster_Support.Martial_Manipulation.Inner_Will",
               "mezType": "Hold"
@@ -1168,7 +1206,7 @@
               "variableModified": true,
               "effectType": "Mez",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "attribType": 2,
               "powerFullName": "Blaster_Support.Martial_Manipulation.Inner_Will",
               "mezType": "Confuse"
@@ -1179,10 +1217,10 @@
               "variableModified": true,
               "effectType": "Mez",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "attribType": 2,
               "powerFullName": "Blaster_Support.Martial_Manipulation.Inner_Will",
-              "mezType": "Terrorize"
+              "mezType": "Terror"
             },
             {
               "mag": {
@@ -1193,7 +1231,7 @@
               "variableModified": true,
               "effectType": "MezResist",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Martial_Manipulation.Inner_Will",
               "mezType": "Stun"
             },
@@ -1206,7 +1244,7 @@
               "variableModified": true,
               "effectType": "MezResist",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Martial_Manipulation.Inner_Will",
               "mezType": "Sleep"
             },
@@ -1219,9 +1257,9 @@
               "variableModified": true,
               "effectType": "MezResist",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Martial_Manipulation.Inner_Will",
-              "mezType": "Immobilization"
+              "mezType": "Immob"
             },
             {
               "mag": {
@@ -1232,7 +1270,7 @@
               "variableModified": true,
               "effectType": "MezResist",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Martial_Manipulation.Inner_Will",
               "mezType": "Hold"
             },
@@ -1245,7 +1283,7 @@
               "variableModified": true,
               "effectType": "MezResist",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Martial_Manipulation.Inner_Will",
               "mezType": "Confuse"
             },
@@ -1258,11 +1296,12 @@
               "variableModified": true,
               "effectType": "MezResist",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Martial_Manipulation.Inner_Will",
-              "mezType": "Terrorize"
+              "mezType": "Terror"
             },
             {
+              "etModifies": "Mez",
               "mag": {
                 "pve": 0.5
               },
@@ -1270,13 +1309,13 @@
               "duration": 30,
               "variableModified": true,
               "effectType": "Enhancement",
-              "eTModifies": 19,
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Martial_Manipulation.Inner_Will",
               "mezType": "Stun"
             },
             {
+              "etModifies": "Mez",
               "mag": {
                 "pve": 0.5
               },
@@ -1284,13 +1323,13 @@
               "duration": 30,
               "variableModified": true,
               "effectType": "Enhancement",
-              "eTModifies": 19,
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Martial_Manipulation.Inner_Will",
               "mezType": "Sleep"
             },
             {
+              "etModifies": "Mez",
               "mag": {
                 "pve": 0.5
               },
@@ -1298,13 +1337,13 @@
               "duration": 30,
               "variableModified": true,
               "effectType": "Enhancement",
-              "eTModifies": 19,
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Martial_Manipulation.Inner_Will",
-              "mezType": "Immobilization"
+              "mezType": "Immob"
             },
             {
+              "etModifies": "Mez",
               "mag": {
                 "pve": 0.5
               },
@@ -1312,13 +1351,13 @@
               "duration": 30,
               "variableModified": true,
               "effectType": "Enhancement",
-              "eTModifies": 19,
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Martial_Manipulation.Inner_Will",
               "mezType": "Hold"
             },
             {
+              "etModifies": "Mez",
               "mag": {
                 "pve": 0.5
               },
@@ -1326,13 +1365,13 @@
               "duration": 30,
               "variableModified": true,
               "effectType": "Enhancement",
-              "eTModifies": 19,
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Martial_Manipulation.Inner_Will",
               "mezType": "Confuse"
             },
             {
+              "etModifies": "Mez",
               "mag": {
                 "pve": 0.5
               },
@@ -1340,11 +1379,10 @@
               "duration": 30,
               "variableModified": true,
               "effectType": "Enhancement",
-              "eTModifies": 19,
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Martial_Manipulation.Inner_Will",
-              "mezType": "Terrorize"
+              "mezType": "Terror"
             },
             {
               "mag": {
@@ -1354,12 +1392,19 @@
               "variableModified": true,
               "effectType": "Heal",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Martial_Manipulation.Inner_Will"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Heal",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Support.Martial_Manipulation.Inner_Will",
+      "archetypeOrder": "secondary",
       "powerIndex": 6,
       "castTimeReal": 1.03,
       "fullName": "Blaster_Secondary_Martial_Combat_Inner_Will",
@@ -1394,16 +1439,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "ToHit_Debuff",
-        "Endurance_Discount",
-        "Range",
-        "Recharge",
-        "Stun"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Sleep",
@@ -1417,8 +1452,9 @@
               "effectType": "Mez",
               "delayedTime": 0.25,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Blaster_Support.Martial_Manipulation.Throw_Sand",
               "mezType": "Stun"
@@ -1437,8 +1473,9 @@
               "effectType": "Mez",
               "delayedTime": 0.25,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Blaster_Support.Martial_Manipulation.Throw_Sand",
               "mezType": "Stun"
@@ -1451,8 +1488,9 @@
               "probability": 1,
               "duration": 20,
               "effectType": "PerceptionRadius",
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Martial_Manipulation.Throw_Sand"
             },
             {
@@ -1463,7 +1501,7 @@
               "duration": 8.57,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Martial_Manipulation.Throw_Sand",
               "damageType": "Smashing"
             },
@@ -1475,7 +1513,7 @@
               "duration": 8.57,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Martial_Manipulation.Throw_Sand",
               "damageType": "Lethal"
             },
@@ -1487,7 +1525,7 @@
               "duration": 8.57,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Martial_Manipulation.Throw_Sand",
               "damageType": "Fire"
             },
@@ -1499,7 +1537,7 @@
               "duration": 8.57,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Martial_Manipulation.Throw_Sand",
               "damageType": "Cold"
             },
@@ -1511,7 +1549,7 @@
               "duration": 8.57,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Martial_Manipulation.Throw_Sand",
               "damageType": "Energy"
             },
@@ -1523,7 +1561,7 @@
               "duration": 8.57,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Martial_Manipulation.Throw_Sand",
               "damageType": "Negative"
             },
@@ -1535,7 +1573,7 @@
               "duration": 8.57,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Martial_Manipulation.Throw_Sand",
               "damageType": "Toxic"
             },
@@ -1547,13 +1585,24 @@
               "duration": 8.57,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Martial_Manipulation.Throw_Sand",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "ToHit_Debuff",
+        "Endurance_Discount",
+        "Range",
+        "Recharge",
+        "Stun"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Support.Martial_Manipulation.Throw_Sand",
+      "archetypeOrder": "secondary",
       "powerIndex": 7,
       "castTimeReal": 1.07,
       "toggleCost": 20.18,
@@ -1594,15 +1643,6 @@
       "aoeModifier": 2.37995839
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Recharge",
-        "Stun"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Damage",
@@ -1615,8 +1655,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Martial_Manipulation.Eagles_Claw",
               "damageType": "Smashing"
             }
@@ -1633,8 +1674,9 @@
               "duration": 4.768,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Blaster_Support.Martial_Manipulation.Eagles_Claw",
               "mezType": "Stun"
@@ -1651,23 +1693,37 @@
               "probability": 1,
               "duration": 2,
               "effectType": "Mez",
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Blaster_Support.Martial_Manipulation.Eagles_Claw",
               "mezType": "Stun"
             },
             {
+              "etModifies": "RechargeTime",
               "mag": {
                 "pve": -0.25
               },
               "probability": 1,
               "duration": 10,
               "effectType": "Enhancement",
-              "eTModifies": 25,
               "stacking": 1,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
+              "powerFullName": "Blaster_Support.Martial_Manipulation.Eagles_Claw"
+            },
+            {
+              "etModifies": "Range",
+              "mag": {
+                "pve": -0.25
+              },
+              "probability": 1,
+              "duration": 10,
+              "effectType": "Enhancement",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Martial_Manipulation.Eagles_Claw"
             },
             {
@@ -1680,7 +1736,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Martial_Manipulation.Eagles_Claw",
               "damageType": "Smashing"
             },
@@ -1694,7 +1750,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Martial_Manipulation.Eagles_Claw",
               "damageType": "Lethal"
             },
@@ -1708,7 +1764,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Martial_Manipulation.Eagles_Claw",
               "damageType": "Fire"
             },
@@ -1722,7 +1778,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Martial_Manipulation.Eagles_Claw",
               "damageType": "Cold"
             },
@@ -1736,7 +1792,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Martial_Manipulation.Eagles_Claw",
               "damageType": "Energy"
             },
@@ -1750,7 +1806,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Martial_Manipulation.Eagles_Claw",
               "damageType": "Negative"
             },
@@ -1764,7 +1820,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Martial_Manipulation.Eagles_Claw",
               "damageType": "Toxic"
             },
@@ -1778,13 +1834,23 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Martial_Manipulation.Eagles_Claw",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Recharge",
+        "Stun"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Support.Martial_Manipulation.Eagles_Claw",
+      "archetypeOrder": "secondary",
       "powerIndex": 8,
       "castTimeReal": 2.53,
       "toggleCost": 11.856,

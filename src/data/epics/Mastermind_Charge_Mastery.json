@@ -6,16 +6,6 @@
   "displayName": "Charge Mastery",
   "powers": [
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Range",
-        "Recharge",
-        "Endurance_Modification"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Damage",
@@ -28,8 +18,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Charge_Mastery.Static_Discharge",
               "damageType": "Energy"
             }
@@ -46,13 +37,25 @@
               "probability": 1,
               "effectType": "Endurance",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Charge_Mastery.Static_Discharge"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Range",
+        "Recharge",
+        "Endurance_Modification"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Charge_Mastery.Static_Discharge",
+      "archetypeOrder": "epicPool",
       "powerIndex": 0,
       "castTimeReal": 2.17,
       "toggleCost": 14.82,
@@ -93,17 +96,6 @@
       "aoeModifier": 2.37995839
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Hold",
-        "Range",
-        "Recharge",
-        "Endurance_Modification"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Ones",
@@ -117,8 +109,9 @@
               "duration": 8,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.Charge_Mastery.Electric_Shackles",
               "mezType": "Hold"
@@ -130,8 +123,9 @@
               "probability": 1,
               "effectType": "Endurance",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Charge_Mastery.Electric_Shackles"
             },
             {
@@ -142,8 +136,9 @@
               "duration": 8,
               "effectType": "Recovery",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Charge_Mastery.Electric_Shackles"
             },
             {
@@ -154,7 +149,8 @@
               "variableModified": true,
               "effectType": "Endurance",
               "stacking": 1,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Charge_Mastery.Electric_Shackles"
             }
           ]
@@ -172,8 +168,9 @@
               "effectType": "Damage",
               "ticks": 7,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Charge_Mastery.Electric_Shackles",
               "damageType": "Energy"
             }
@@ -189,13 +186,26 @@
               "probability": 1,
               "effectType": "Endurance",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Charge_Mastery.Electric_Shackles"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Hold",
+        "Range",
+        "Recharge",
+        "Endurance_Modification"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Charge_Mastery.Electric_Shackles",
+      "archetypeOrder": "epicPool",
       "powerIndex": 1,
       "castTimeReal": 2.17,
       "toggleCost": 8.58,
@@ -234,14 +244,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Endurance_Discount",
-        "Recharge",
-        "Endurance_Modification",
-        "Res_Damage"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Res_Dmg",
@@ -253,7 +255,8 @@
               "probability": 1,
               "duration": 120,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Charge_Mastery.Surge_of_Power",
               "damageType": "Smashing"
             },
@@ -264,7 +267,8 @@
               "probability": 1,
               "duration": 120,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Charge_Mastery.Surge_of_Power",
               "damageType": "Lethal"
             },
@@ -275,7 +279,8 @@
               "probability": 1,
               "duration": 120,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Charge_Mastery.Surge_of_Power",
               "damageType": "Fire"
             },
@@ -286,7 +291,8 @@
               "probability": 1,
               "duration": 120,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Charge_Mastery.Surge_of_Power",
               "damageType": "Cold"
             },
@@ -297,7 +303,8 @@
               "probability": 1,
               "duration": 120,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Charge_Mastery.Surge_of_Power",
               "damageType": "Energy"
             },
@@ -308,7 +315,8 @@
               "probability": 1,
               "duration": 120,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Charge_Mastery.Surge_of_Power",
               "damageType": "Negative"
             },
@@ -319,7 +327,8 @@
               "probability": 1,
               "duration": 120,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Charge_Mastery.Surge_of_Power",
               "damageType": "Toxic"
             }
@@ -335,7 +344,7 @@
               "probability": 1,
               "duration": 120,
               "effectType": "Recovery",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Epic.Charge_Mastery.Surge_of_Power"
             },
             {
@@ -343,7 +352,7 @@
               "probability": 1,
               "duration": 120,
               "effectType": "Translucency",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Epic.Charge_Mastery.Surge_of_Power"
             },
             {
@@ -354,7 +363,7 @@
               "duration": 5,
               "effectType": "Null",
               "delayedTime": 120,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Epic.Charge_Mastery.Surge_of_Power"
             },
             {
@@ -364,7 +373,7 @@
               "probability": 1,
               "duration": 30,
               "effectType": "GlobalChanceMod",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Epic.Charge_Mastery.Surge_of_Power"
             }
           ]
@@ -379,7 +388,7 @@
               "probability": 1,
               "effectType": "Endurance",
               "delayedTime": 120,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Epic.Charge_Mastery.Surge_of_Power"
             },
             {
@@ -390,21 +399,30 @@
               "duration": 15,
               "effectType": "Recovery",
               "delayedTime": 120,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Epic.Charge_Mastery.Surge_of_Power"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Endurance_Discount",
+        "Recharge",
+        "Endurance_Modification",
+        "Res_Damage"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Charge_Mastery.Surge_of_Power",
+      "archetypeOrder": "epicPool",
       "powerIndex": 2,
       "castTimeReal": 1.96,
       "toggleCost": 3.25,
+      "isEpic": true,
       "fullName": "Epic_Charge_Mastery_Surge_of_Power",
       "displayName": "Surge of Power",
       "requires": {
         "powers": {
-          "Epic_Charge_Mastery_Static_Discharge": true,
-          "Epic_Charge_Mastery_Electric_Shackles": true
+          "Epic.Charge_Mastery.Surge_of_Power": true
         },
         "count": 1
       },
@@ -435,17 +453,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Knockback",
-        "Recharge",
-        "Stun",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Damage",
@@ -458,8 +465,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Charge_Mastery.Thunder_Strike",
               "damageType": "Smashing"
             },
@@ -471,8 +479,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Charge_Mastery.Thunder_Strike",
               "damageType": "Energy"
             }
@@ -489,8 +498,9 @@
               "duration": 5.96,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.Charge_Mastery.Thunder_Strike",
               "mezType": "Stun"
@@ -508,8 +518,9 @@
               "duration": 2,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.Charge_Mastery.Thunder_Strike",
               "mezType": "Stun"
@@ -521,8 +532,9 @@
               "probability": 1,
               "effectType": "Endurance",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Charge_Mastery.Thunder_Strike"
             },
             {
@@ -533,8 +545,9 @@
               "duration": 4,
               "effectType": "Recovery",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Charge_Mastery.Thunder_Strike"
             },
             {
@@ -545,8 +558,9 @@
               "probability": 0.8,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Charge_Mastery.Thunder_Strike",
               "mezType": "Knockback"
             }
@@ -562,22 +576,35 @@
               "probability": 1,
               "effectType": "Endurance",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Charge_Mastery.Thunder_Strike"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Knockback",
+        "Recharge",
+        "Stun",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Charge_Mastery.Thunder_Strike",
+      "archetypeOrder": "epicPool",
       "powerIndex": 3,
       "castTimeReal": 3.3,
       "toggleCost": 12.74,
+      "isEpic": true,
       "fullName": "Epic_Charge_Mastery_Thunder_Strike",
       "displayName": "Thunder Strike",
       "requires": {
         "powers": {
-          "Epic_Charge_Mastery_Static_Discharge": true,
-          "Epic_Charge_Mastery_Electric_Shackles": true
+          "Epic.Charge_Mastery.Thunder_Strike": true
         },
         "count": 1
       },
@@ -614,15 +641,6 @@
       "aoeModifier": 2.05
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Endurance_Discount",
-        "Recharge",
-        "Endurance_Modification",
-        "Stun"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Immobilize",
@@ -637,8 +655,9 @@
               "duration": 17.8800011,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.Charge_Mastery.EM_Pulse",
               "mezType": "Stun"
@@ -656,8 +675,9 @@
               "probability": 1,
               "effectType": "Endurance",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Charge_Mastery.EM_Pulse"
             }
           ]
@@ -674,7 +694,7 @@
               "effectType": "Regeneration",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Charge_Mastery.EM_Pulse"
             },
             {
@@ -686,7 +706,7 @@
               "variableModified": true,
               "effectType": "Recovery",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Epic.Charge_Mastery.EM_Pulse"
             }
           ]
@@ -703,7 +723,7 @@
               "effectType": "Regeneration",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Charge_Mastery.EM_Pulse"
             }
           ]
@@ -718,26 +738,35 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 8,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Charge_Mastery.EM_Pulse",
               "damageType": "Energy"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Endurance_Discount",
+        "Recharge",
+        "Endurance_Modification",
+        "Stun"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Charge_Mastery.EM_Pulse",
+      "archetypeOrder": "epicPool",
       "powerIndex": 4,
       "castTimeReal": 2.93,
       "toggleCost": 26,
+      "isEpic": true,
       "fullName": "Epic_Charge_Mastery_EM_Pulse",
       "displayName": "EM Pulse",
       "requires": {
         "powers": {
-          "Epic_Charge_Mastery_Static_Discharge": true,
-          "Epic_Charge_Mastery_Electric_Shackles": true,
-          "Epic_Charge_Mastery_Surge_of_Power": true,
-          "Epic_Charge_Mastery_Thunder_Strike": true
+          "Epic.Charge_Mastery.EM_Pulse": true
         },
         "count": 2
       },

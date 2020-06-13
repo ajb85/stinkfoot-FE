@@ -2,334 +2,209 @@
   "fullName": "IOSet.Lockdown",
   "enhancements": [
     {
-      "effects": [
-        {
-          "effectType": "Hold",
-          "values": [
-            {
-              "etModifies": "Mez",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Lockdown_A.Attuned_Lockdown_A",
-              "mezType": "Hold"
-            }
-          ]
-        },
-        {
-          "effectType": "Accuracy",
-          "values": [
-            {
-              "etModifies": "Accuracy",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Lockdown_A.Attuned_Lockdown_A"
-            }
-          ]
-        }
-      ],
+      "type": "set",
+      "fullName": "Boosts.Attuned_Lockdown_A.Attuned_Lockdown_A",
+      "displayName": "Accuracy/Hold",
       "description": {
         "short": "+ACC, +Hold",
         "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and hold duration of a power by {Boost.Attrib.Hold.Scale}%."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Lockdown_A.Attuned_Lockdown_A",
-      "setName": "Lockdown",
-      "displayName": "Accuracy/Hold"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Accuracy",
-          "values": [
-            {
-              "etModifies": "Accuracy",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Lockdown_B.Attuned_Lockdown_B"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
+          },
+          "stat": "Accuracy",
+          "toWho": "self"
         },
         {
-          "effectType": "Recharge",
-          "values": [
-            {
-              "etModifies": "RechargeTime",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Lockdown_B.Attuned_Lockdown_B"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
+          },
+          "mezType": 2,
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Lockdown_B.Attuned_Lockdown_B",
+      "displayName": "Accuracy/Recharge",
       "description": {
         "short": "+ACC, +Rech",
         "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and reduces the attack rate by {Boost.Attrib.Recharge.Scale}%."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Lockdown_B.Attuned_Lockdown_B",
-      "setName": "Lockdown",
-      "displayName": "Accuracy/Recharge"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Hold",
-          "values": [
-            {
-              "etModifies": "Mez",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Lockdown_C.Attuned_Lockdown_C",
-              "mezType": "Hold"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
+          },
+          "stat": "Accuracy",
+          "toWho": "self"
         },
         {
-          "effectType": "Recharge",
-          "values": [
-            {
-              "etModifies": "RechargeTime",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Lockdown_C.Attuned_Lockdown_C"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
+          },
+          "stat": "Recharge",
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Lockdown_C.Attuned_Lockdown_C",
+      "displayName": "Recharge/Hold",
       "description": {
         "short": "+Rech, +Hold",
         "long": "Reduces the attack rate by {Boost.Attrib.Recharge.Scale}% and hold duration of a power by {Boost.Attrib.Hold.Scale}%."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Lockdown_C.Attuned_Lockdown_C",
-      "setName": "Lockdown",
-      "displayName": "Recharge/Hold"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Hold",
-          "values": [
-            {
-              "etModifies": "Mez",
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Lockdown_D.Attuned_Lockdown_D",
-              "mezType": "Hold"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
+          },
+          "stat": "Recharge",
+          "toWho": "self"
         },
         {
-          "effectType": "Endurance",
-          "values": [
-            {
-              "etModifies": "EnduranceDiscount",
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Lockdown_D.Attuned_Lockdown_D"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
-        },
-        {
-          "effectType": "Recharge",
-          "values": [
-            {
-              "etModifies": "RechargeTime",
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Lockdown_D.Attuned_Lockdown_D"
-            }
-          ]
+          },
+          "mezType": 2,
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Lockdown_D.Attuned_Lockdown_D",
+      "displayName": "Endurance Reduction/Recharge/Hold",
       "description": {
         "short": "-End Cost, +Rech, +Hold",
         "long": "Reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%, reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}% and increases the hold duration of a power by {Boost.Attrib.Hold.Scale}%."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Lockdown_D.Attuned_Lockdown_D",
-      "setName": "Lockdown",
-      "displayName": "Endurance Reduction/Recharge/Hold"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Accuracy",
-          "values": [
-            {
-              "etModifies": "Accuracy",
-              "mag": {
-                "pve": 0.1855
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Lockdown_E.Attuned_Lockdown_E"
+          "mag": {
+            "IO": {
+              "cap": 0.212
             }
-          ]
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self"
         },
         {
-          "effectType": "Hold",
-          "values": [
-            {
-              "etModifies": "Mez",
-              "mag": {
-                "pve": 0.1855
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Lockdown_E.Attuned_Lockdown_E",
-              "mezType": "Hold"
+          "mag": {
+            "IO": {
+              "cap": 0.212
             }
-          ]
+          },
+          "stat": "Recharge",
+          "toWho": "self"
         },
         {
-          "effectType": "Endurance",
-          "values": [
-            {
-              "etModifies": "EnduranceDiscount",
-              "mag": {
-                "pve": 0.1855
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Lockdown_E.Attuned_Lockdown_E"
+          "mag": {
+            "IO": {
+              "cap": 0.212
             }
-          ]
-        },
-        {
-          "effectType": "Recharge",
-          "values": [
-            {
-              "etModifies": "RechargeTime",
-              "mag": {
-                "pve": 0.1855
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Lockdown_E.Attuned_Lockdown_E"
-            }
-          ]
+          },
+          "mezType": 2,
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Lockdown_E.Attuned_Lockdown_E",
+      "displayName": "Accuracy/Endurance Reduction/Recharge/Hold",
       "description": {
         "short": "+Acc, -End Cost, +Rech, +Hold",
         "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}%, reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%, reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}% and increases the hold duration of a power by {Boost.Attrib.Hold.Scale}%."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Lockdown_E.Attuned_Lockdown_E",
-      "setName": "Lockdown",
-      "displayName": "Accuracy/Endurance Reduction/Recharge/Hold"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Hold",
-          "values": [
-            {
-              "mag": {
-                "pve": 2
-              },
-              "procsPerMinute": 2.5,
-              "cancelOnMiss": true,
-              "duration": 8,
-              "effectType": "Mez",
-              "stacking": 1,
-              "resistible": true,
-              "toWho": "all",
-              "attribType": 1,
-              "powerFullName": "Boosts.Attuned_Lockdown_F.Attuned_Lockdown_F",
-              "mezType": "Hold"
+          "mag": {
+            "IO": {
+              "cap": 0.1855
             }
-          ]
+          },
+          "stat": "Accuracy",
+          "toWho": "self"
         },
         {
-          "effectType": "Ones",
-          "values": [
-            {
-              "mag": {
-                "pvp": 2
-              },
-              "procsPerMinute": 2.5,
-              "cancelOnMiss": true,
-              "duration": 6,
-              "effectType": "Mez",
-              "stacking": 1,
-              "resistible": true,
-              "toWho": "all",
-              "attribType": 1,
-              "powerFullName": "Boosts.Attuned_Lockdown_F.Attuned_Lockdown_F",
-              "mezType": "Hold"
+          "mag": {
+            "IO": {
+              "cap": 0.1855
             }
-          ]
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.1855
+            }
+          },
+          "stat": "Recharge",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.1855
+            }
+          },
+          "mezType": 2,
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Lockdown_F.Attuned_Lockdown_F",
+      "displayName": "Chance for +2 Mag Hold",
       "description": {
         "short": "Chance for +2 Mag Hold",
         "long": "Gives a chance to hold your target.  This effect will trigger roughly 2.5 times per minute."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Lockdown_F.Attuned_Lockdown_F",
-      "setName": "Lockdown",
-      "displayName": "Chance for +2 Mag Hold"
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 2
+            }
+          },
+          "stat": "Chance for +2 Mag Hold",
+          "procsPerMinute": 2.5,
+          "cancelOnMiss": true,
+          "mezType": 2,
+          "stacking": 1,
+          "resistible": true,
+          "pvMode": 1,
+          "toWho": "all",
+          "attribType": 1
+        }
+      ]
     }
   ],
   "levels": {

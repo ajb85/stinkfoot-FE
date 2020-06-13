@@ -6,11 +6,6 @@
   "displayName": "Munitions Mastery",
   "powers": [
     {
-      "allowedEnhancements": [
-        "Res_Damage"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Res_Dmg",
@@ -23,7 +18,8 @@
               "probability": 1,
               "duration": 10.25,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Munitions_Mastery.Body_Armor",
               "damageType": "Smashing"
             },
@@ -35,7 +31,8 @@
               "probability": 1,
               "duration": 10.25,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Munitions_Mastery.Body_Armor",
               "damageType": "Lethal"
             },
@@ -46,7 +43,8 @@
               "probability": 1,
               "duration": 10.25,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Munitions_Mastery.Body_Armor",
               "damageType": "Fire"
             },
@@ -57,7 +55,8 @@
               "probability": 1,
               "duration": 10.25,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Munitions_Mastery.Body_Armor",
               "damageType": "Cold"
             },
@@ -68,7 +67,8 @@
               "probability": 1,
               "duration": 10.25,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Munitions_Mastery.Body_Armor",
               "damageType": "Energy"
             },
@@ -79,7 +79,8 @@
               "probability": 1,
               "duration": 10.25,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Munitions_Mastery.Body_Armor",
               "damageType": "Negative"
             },
@@ -90,7 +91,8 @@
               "probability": 1,
               "duration": 10.25,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Munitions_Mastery.Body_Armor",
               "damageType": "Toxic"
             },
@@ -101,13 +103,20 @@
               "probability": 1,
               "duration": 10.25,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Munitions_Mastery.Body_Armor",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Res_Damage"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Munitions_Mastery.Body_Armor",
+      "archetypeOrder": "epicPool",
       "powerIndex": 0,
       "fullName": "Epic_Munitions_Mastery_Body_Armor",
       "displayName": "Body Armor",
@@ -139,16 +148,6 @@
       "powerType": "Auto"
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Hold",
-        "Range",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Damage",
@@ -160,8 +159,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Munitions_Mastery.Cryo_Freeze_Ray",
               "damageType": "Cold"
             }
@@ -179,8 +179,9 @@
               "duration": 11.92,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.Munitions_Mastery.Cryo_Freeze_Ray",
               "mezType": "Hold"
@@ -198,7 +199,7 @@
               "duration": 10,
               "effectType": "MezResist",
               "stacking": 1,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Munitions_Mastery.Cryo_Freeze_Ray",
               "mezType": "Knockback"
             },
@@ -210,7 +211,7 @@
               "duration": 10,
               "effectType": "MezResist",
               "stacking": 1,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Munitions_Mastery.Cryo_Freeze_Ray",
               "mezType": "Knockup"
             },
@@ -222,7 +223,8 @@
               "duration": 10,
               "effectType": "Mez",
               "stacking": 1,
-              "toWho": "Target",
+              "buffable": true,
+              "toWho": "target",
               "powerFullName": "Epic.Munitions_Mastery.Cryo_Freeze_Ray",
               "mezType": "Knockback"
             },
@@ -234,13 +236,25 @@
               "duration": 10,
               "effectType": "Mez",
               "stacking": 1,
-              "toWho": "Target",
+              "buffable": true,
+              "toWho": "target",
               "powerFullName": "Epic.Munitions_Mastery.Cryo_Freeze_Ray",
               "mezType": "Knockup"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Hold",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Munitions_Mastery.Cryo_Freeze_Ray",
+      "archetypeOrder": "epicPool",
       "powerIndex": 1,
       "castTimeReal": 1.87,
       "toggleCost": 8.58,
@@ -278,16 +292,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Range",
-        "Recharge",
-        "Sleep"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Damage",
@@ -299,8 +303,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Munitions_Mastery.Sleep_Grenade",
               "damageType": "Smashing"
             }
@@ -319,8 +324,9 @@
               "effectType": "Mez",
               "delayedTime": 0.26,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.Munitions_Mastery.Sleep_Grenade",
               "mezType": "Sleep"
@@ -328,15 +334,26 @@
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Range",
+        "Recharge",
+        "Sleep"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Munitions_Mastery.Sleep_Grenade",
+      "archetypeOrder": "epicPool",
       "powerIndex": 2,
       "castTimeReal": 1.87,
       "toggleCost": 19.5,
+      "isEpic": true,
       "fullName": "Epic_Munitions_Mastery_Sleep_Grenade",
       "displayName": "Sleep Grenade",
       "requires": {
         "powers": {
-          "Epic_Munitions_Mastery_Body_Armor": true,
-          "Epic_Munitions_Mastery_Cryo_Freeze_Ray": true
+          "Epic.Munitions_Mastery.Sleep_Grenade": true
         },
         "count": 1
       },
@@ -370,14 +387,6 @@
       "aoeModifier": 3.25
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Defense_Debuff",
-        "Endurance_Discount",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Ones",
@@ -390,7 +399,7 @@
               "probability": 1,
               "effectType": "ViewAttrib",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Munitions_Mastery.Surveillance"
             }
           ]
@@ -406,7 +415,7 @@
               "duration": 20,
               "effectType": "Resistance",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Munitions_Mastery.Surveillance",
               "damageType": "Smashing"
             },
@@ -418,7 +427,7 @@
               "duration": 20,
               "effectType": "Resistance",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Munitions_Mastery.Surveillance",
               "damageType": "Lethal"
             },
@@ -430,7 +439,7 @@
               "duration": 20,
               "effectType": "Resistance",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Munitions_Mastery.Surveillance",
               "damageType": "Fire"
             },
@@ -442,7 +451,7 @@
               "duration": 20,
               "effectType": "Resistance",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Munitions_Mastery.Surveillance",
               "damageType": "Cold"
             },
@@ -454,7 +463,7 @@
               "duration": 20,
               "effectType": "Resistance",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Munitions_Mastery.Surveillance",
               "damageType": "Energy"
             },
@@ -466,7 +475,7 @@
               "duration": 20,
               "effectType": "Resistance",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Munitions_Mastery.Surveillance",
               "damageType": "Negative"
             },
@@ -478,7 +487,7 @@
               "duration": 20,
               "effectType": "Resistance",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Munitions_Mastery.Surveillance",
               "damageType": "Psionic"
             },
@@ -490,7 +499,7 @@
               "duration": 20,
               "effectType": "Resistance",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Munitions_Mastery.Surveillance",
               "damageType": "Toxic"
             }
@@ -506,22 +515,32 @@
               "probability": 1,
               "duration": 20,
               "effectType": "Defense",
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Munitions_Mastery.Surveillance"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Defense_Debuff",
+        "Endurance_Discount",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Munitions_Mastery.Surveillance",
+      "archetypeOrder": "epicPool",
       "powerIndex": 3,
       "castTimeReal": 1.5,
       "toggleCost": 10.66,
+      "isEpic": true,
       "fullName": "Epic_Munitions_Mastery_Surveillance",
       "displayName": "Surveillance",
       "requires": {
         "powers": {
-          "Epic_Munitions_Mastery_Body_Armor": true,
-          "Epic_Munitions_Mastery_Cryo_Freeze_Ray": true
+          "Epic.Munitions_Mastery.Surveillance": true
         },
         "count": 1
       },
@@ -552,17 +571,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Interrupt",
-        "Knockback",
-        "Range",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Damage",
@@ -575,8 +583,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Munitions_Mastery.LRM_Rocket",
               "damageType": "Lethal"
             },
@@ -587,8 +596,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Munitions_Mastery.LRM_Rocket",
               "damageType": "Smashing"
             }
@@ -605,25 +615,36 @@
               "probability": 0.5,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Munitions_Mastery.LRM_Rocket",
               "mezType": "Knockback"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Interrupt",
+        "Knockback",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Munitions_Mastery.LRM_Rocket",
+      "archetypeOrder": "epicPool",
       "powerIndex": 4,
       "castTimeReal": 5.87,
       "toggleCost": 22.75,
+      "isEpic": true,
       "fullName": "Epic_Munitions_Mastery_LRM_Rocket",
       "displayName": "LRM Rocket",
       "requires": {
         "powers": {
-          "Epic_Munitions_Mastery_Body_Armor": true,
-          "Epic_Munitions_Mastery_Cryo_Freeze_Ray": true,
-          "Epic_Munitions_Mastery_Sleep_Grenade": true,
-          "Epic_Munitions_Mastery_Surveillance": true
+          "Epic.Munitions_Mastery.LRM_Rocket": true
         },
         "count": 2
       },

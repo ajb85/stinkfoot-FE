@@ -2,107 +2,74 @@
   "fullName": "IOSet.Quickfoot",
   "enhancements": [
     {
-      "effects": [
-        {
-          "effectType": "Run",
-          "values": [
-            {
-              "etModifies": "SpeedRunning",
-              "mag": {
-                "pve": 0.424
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Quickfoot_A.Attuned_Quickfoot_A"
-            }
-          ]
-        }
-      ],
+      "type": "set",
+      "fullName": "Boosts.Attuned_Quickfoot_A.Attuned_Quickfoot_A",
+      "displayName": "Run",
       "description": {
         "short": "+Run",
         "long": "Enhances the run speed of a power by {Boost.Attrib.Run.Scale}%."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Quickfoot_A.Attuned_Quickfoot_A",
-      "setName": "Quickfoot",
-      "displayName": "Run"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Endurance",
-          "values": [
-            {
-              "etModifies": "EnduranceDiscount",
-              "mag": {
-                "pve": 0.424
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Quickfoot_B.Attuned_Quickfoot_B"
+          "mag": {
+            "IO": {
+              "cap": 0.424
             }
-          ]
+          },
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Quickfoot_B.Attuned_Quickfoot_B",
+      "displayName": "Endurance",
       "description": {
         "short": "-End Cost",
         "long": "Reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Quickfoot_B.Attuned_Quickfoot_B",
-      "setName": "Quickfoot",
-      "displayName": "Endurance"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Endurance",
-          "values": [
-            {
-              "etModifies": "EnduranceDiscount",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Quickfoot_C.Attuned_Quickfoot_C"
+          "mag": {
+            "IO": {
+              "cap": 0.424
             }
-          ]
-        },
-        {
-          "effectType": "Run",
-          "values": [
-            {
-              "etModifies": "SpeedRunning",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Quickfoot_C.Attuned_Quickfoot_C"
-            }
-          ]
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Quickfoot_C.Attuned_Quickfoot_C",
+      "displayName": "Endurance/Run",
       "description": {
         "short": "+Run, -End Cost",
         "long": "Enhances the run speed of a power by {Boost.Attrib.Run.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Quickfoot_C.Attuned_Quickfoot_C",
-      "setName": "Quickfoot",
-      "displayName": "Endurance/Run"
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "toWho": "self"
+        }
+      ]
     }
   ],
   "levels": {

@@ -6,17 +6,6 @@
   "displayName": "Leviathan Mastery",
   "powers": [
     {
-      "allowedEnhancements": [
-        "Damage",
-        "Defense_Debuff",
-        "Endurance_Discount",
-        "Knockback",
-        "Range",
-        "Recharge",
-        "Stun"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Level",
@@ -29,12 +18,24 @@
               "duration": 30,
               "effectType": "EntCreate",
               "stacking": 1,
-              "toWho": "All",
+              "toWho": "all",
               "powerFullName": "Epic.Dominator_Leviathan_Mastery.Water_Spout"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Damage",
+        "Defense_Debuff",
+        "Endurance_Discount",
+        "Knockback",
+        "Range",
+        "Recharge",
+        "Stun"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Dominator_Leviathan_Mastery.Water_Spout",
+      "archetypeOrder": "epicPool",
       "powerIndex": 0,
       "castTimeReal": 1.17,
       "toggleCost": 26,
@@ -76,15 +77,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Range",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Damage",
@@ -97,14 +89,25 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Dominator_Leviathan_Mastery.Chum_Spray",
               "damageType": "Toxic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Dominator_Leviathan_Mastery.Chum_Spray",
+      "archetypeOrder": "epicPool",
       "powerIndex": 1,
       "castTimeReal": 2.67,
       "toggleCost": 18.98,
@@ -144,14 +147,6 @@
       "aoeModifier": 2.73993444
     },
     {
-      "allowedEnhancements": [
-        "Endurance_Discount",
-        "Heal",
-        "Recharge",
-        "Endurance_Modification"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Ones",
@@ -163,7 +158,7 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "MezResist",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Epic.Dominator_Leviathan_Mastery.Hibernate",
               "mezType": "Knockback"
             },
@@ -174,7 +169,7 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "MezResist",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Epic.Dominator_Leviathan_Mastery.Hibernate",
               "mezType": "Knockup"
             },
@@ -185,7 +180,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Mez",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Dominator_Leviathan_Mastery.Hibernate",
               "mezType": "Knockback"
             },
@@ -196,7 +192,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Mez",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Dominator_Leviathan_Mastery.Hibernate",
               "mezType": "Knockup"
             },
@@ -207,7 +204,7 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Mez",
-              "toWho": "Self",
+              "toWho": "self",
               "attribType": 1,
               "powerFullName": "Epic.Dominator_Leviathan_Mastery.Hibernate",
               "mezType": "Untouchable"
@@ -219,10 +216,10 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Mez",
-              "toWho": "Self",
+              "toWho": "self",
               "attribType": 1,
               "powerFullName": "Epic.Dominator_Leviathan_Mastery.Hibernate",
-              "mezType": "Immobilization"
+              "mezType": "Immob"
             },
             {
               "mag": {
@@ -231,10 +228,10 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Mez",
-              "toWho": "Self",
+              "toWho": "self",
               "attribType": 1,
               "powerFullName": "Epic.Dominator_Leviathan_Mastery.Hibernate",
-              "mezType": "OnlyAffectsSelf"
+              "mezType": "Only Affects Self"
             },
             {
               "mag": {
@@ -243,7 +240,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Regeneration",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Dominator_Leviathan_Mastery.Hibernate"
             },
             {
@@ -253,7 +251,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Recovery",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Dominator_Leviathan_Mastery.Hibernate"
             },
             {
@@ -262,21 +261,30 @@
               },
               "probability": 1,
               "effectType": "GrantPower",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Epic.Dominator_Leviathan_Mastery.Hibernate"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Endurance_Discount",
+        "Heal",
+        "Recharge",
+        "Endurance_Modification"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Dominator_Leviathan_Mastery.Hibernate",
+      "archetypeOrder": "epicPool",
       "powerIndex": 2,
       "castTimeReal": 0.07,
       "toggleCost": 0.325,
+      "isEpic": true,
       "fullName": "Epic_Leviathan_Mastery_Hibernate",
       "displayName": "Hibernate",
       "requires": {
         "powers": {
-          "Epic_Leviathan_Mastery_Water_Spout": true,
-          "Epic_Leviathan_Mastery_Bile_Spray": true
+          "Epic.Dominator_Leviathan_Mastery.Hibernate": true
         },
         "count": 1
       },
@@ -308,13 +316,6 @@
       "powerType": "Toggle"
     },
     {
-      "allowedEnhancements": [
-        "Endurance_Discount",
-        "Recharge",
-        "Res_Damage"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Res_Dmg",
@@ -327,7 +328,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Dominator_Leviathan_Mastery.Shark_Skin",
               "damageType": "Smashing"
             },
@@ -339,7 +341,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Dominator_Leviathan_Mastery.Shark_Skin",
               "damageType": "Lethal"
             },
@@ -351,7 +354,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Dominator_Leviathan_Mastery.Shark_Skin",
               "damageType": "Cold"
             },
@@ -362,7 +366,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Dominator_Leviathan_Mastery.Shark_Skin",
               "damageType": "Fire"
             },
@@ -373,7 +378,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Dominator_Leviathan_Mastery.Shark_Skin",
               "damageType": "Energy"
             },
@@ -384,7 +390,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Dominator_Leviathan_Mastery.Shark_Skin",
               "damageType": "Negative"
             },
@@ -395,7 +402,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Dominator_Leviathan_Mastery.Shark_Skin",
               "damageType": "Toxic"
             },
@@ -406,22 +414,31 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Dominator_Leviathan_Mastery.Shark_Skin",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Endurance_Discount",
+        "Recharge",
+        "Res_Damage"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Dominator_Leviathan_Mastery.Shark_Skin",
+      "archetypeOrder": "epicPool",
       "powerIndex": 3,
       "castTimeReal": 0.67,
       "toggleCost": 0.325,
+      "isEpic": true,
       "fullName": "Epic_Leviathan_Mastery_Shark_Skin",
       "displayName": "Shark Skin",
       "requires": {
         "powers": {
-          "Epic_Leviathan_Mastery_Water_Spout": true,
-          "Epic_Leviathan_Mastery_Bile_Spray": true
+          "Epic.Dominator_Leviathan_Mastery.Shark_Skin": true
         },
         "count": 1
       },
@@ -452,16 +469,6 @@
       "powerType": "Toggle"
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Range",
-        "Recharge",
-        "Slow"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Ones",
@@ -473,23 +480,32 @@
               "probability": 1,
               "duration": 240,
               "effectType": "EntCreate",
-              "toWho": "All",
+              "toWho": "all",
               "powerFullName": "Epic.Dominator_Leviathan_Mastery.Summon_Coralax"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Range",
+        "Recharge",
+        "Slow"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Dominator_Leviathan_Mastery.Summon_Coralax",
+      "archetypeOrder": "epicPool",
       "powerIndex": 4,
       "castTimeReal": 3.2,
       "toggleCost": 26,
+      "isEpic": true,
       "fullName": "Epic_Leviathan_Mastery_Summon_Coralax",
       "displayName": "Summon Coralax",
       "requires": {
         "powers": {
-          "Epic_Leviathan_Mastery_Water_Spout": true,
-          "Epic_Leviathan_Mastery_Bile_Spray": true,
-          "Epic_Leviathan_Mastery_Hibernate": true,
-          "Epic_Leviathan_Mastery_Shark_Skin": true
+          "Epic.Dominator_Leviathan_Mastery.Summon_Coralax": true
         },
         "count": 2
       },

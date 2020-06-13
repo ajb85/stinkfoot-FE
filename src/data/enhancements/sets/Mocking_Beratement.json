@@ -2,262 +2,157 @@
   "fullName": "IOSet.Mocking_Beratement",
   "enhancements": [
     {
-      "effects": [
-        {
-          "effectType": "Taunt",
-          "values": [
-            {
-              "etModifies": "Mez",
-              "mag": {
-                "pve": 0.424
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Mocking_Beratement_A.Attuned_Mocking_Beratement_A",
-              "mezType": "Taunt"
-            }
-          ]
-        }
-      ],
+      "type": "set",
+      "fullName": "Boosts.Attuned_Mocking_Beratement_A.Attuned_Mocking_Beratement_A",
+      "displayName": "Taunt",
       "description": {
         "short": "+Taunt",
         "long": "Enhances the taunt duration of a power by {Boost.Attrib.Taunt.Scale}%."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Mocking_Beratement_A.Attuned_Mocking_Beratement_A",
-      "setName": "Mocking_Beratement",
-      "displayName": "Taunt"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Recharge",
-          "values": [
-            {
-              "etModifies": "RechargeTime",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Mocking_Beratement_B.Attuned_Mocking_Beratement_B"
+          "mag": {
+            "IO": {
+              "cap": 0.424
             }
-          ]
-        },
-        {
-          "effectType": "Taunt",
-          "values": [
-            {
-              "etModifies": "Mez",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Mocking_Beratement_B.Attuned_Mocking_Beratement_B",
-              "mezType": "Taunt"
-            }
-          ]
+          },
+          "mezType": 11,
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Mocking_Beratement_B.Attuned_Mocking_Beratement_B",
+      "displayName": "Taunt/Recharge",
       "description": {
         "short": "+Taunt, +Rech",
         "long": "Enhances the taunt duration of a power by {Boost.Attrib.Taunt.Scale}% and reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}%."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Mocking_Beratement_B.Attuned_Mocking_Beratement_B",
-      "setName": "Mocking_Beratement",
-      "displayName": "Taunt/Recharge"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Recharge",
-          "values": [
-            {
-              "etModifies": "RechargeTime",
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Mocking_Beratement_C.Attuned_Mocking_Beratement_C"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
+          },
+          "stat": "Recharge",
+          "toWho": "self"
         },
         {
-          "effectType": "Taunt",
-          "values": [
-            {
-              "etModifies": "Mez",
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Mocking_Beratement_C.Attuned_Mocking_Beratement_C",
-              "mezType": "Taunt"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
-        },
-        {
-          "effectType": "Range",
-          "values": [
-            {
-              "etModifies": "Range",
-              "mag": {
-                "pve": 0.1275
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Mocking_Beratement_C.Attuned_Mocking_Beratement_C"
-            }
-          ]
+          },
+          "mezType": 11,
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Mocking_Beratement_C.Attuned_Mocking_Beratement_C",
+      "displayName": "Taunt/Recharge/Range",
       "description": {
         "short": "+Taunt, +Rech, +Range",
         "long": "Enhances the taunt duration of a power by {Boost.Attrib.Taunt.Scale}% the range by {Boost.Attrib.Range.Scale}% and reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}%."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Mocking_Beratement_C.Attuned_Mocking_Beratement_C",
-      "setName": "Mocking_Beratement",
-      "displayName": "Taunt/Recharge/Range"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Recharge",
-          "values": [
-            {
-              "etModifies": "RechargeTime",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Mocking_Beratement_D.Attuned_Mocking_Beratement_D"
+          "mag": {
+            "IO": {
+              "cap": 0.212
             }
-          ]
+          },
+          "stat": "Recharge",
+          "toWho": "self"
         },
         {
-          "effectType": "Accuracy",
-          "values": [
-            {
-              "etModifies": "Accuracy",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Mocking_Beratement_D.Attuned_Mocking_Beratement_D"
+          "mag": {
+            "IO": {
+              "cap": 0.212
             }
-          ]
+          },
+          "mezType": 11,
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Mocking_Beratement_D.Attuned_Mocking_Beratement_D",
+      "displayName": "Recharge/Accuracy",
       "description": {
         "short": "+ACC, +Rech",
         "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}%."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Mocking_Beratement_D.Attuned_Mocking_Beratement_D",
-      "setName": "Mocking_Beratement",
-      "displayName": "Recharge/Accuracy"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Taunt",
-          "values": [
-            {
-              "etModifies": "Mez",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Mocking_Beratement_E.Attuned_Mocking_Beratement_E",
-              "mezType": "Taunt"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
+          },
+          "stat": "Recharge",
+          "toWho": "self"
         },
         {
-          "effectType": "Range",
-          "values": [
-            {
-              "etModifies": "Range",
-              "mag": {
-                "pve": 0.159375
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Mocking_Beratement_E.Attuned_Mocking_Beratement_E"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
+          },
+          "stat": "Accuracy",
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Mocking_Beratement_E.Attuned_Mocking_Beratement_E",
+      "displayName": "Taunt/Range",
       "description": {
         "short": "+Taunt, +Range",
         "long": "Enhances the taunt duration of a power by {Boost.Attrib.Taunt.Scale}% and the range by {Boost.Attrib.Range.Scale}%."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Mocking_Beratement_E.Attuned_Mocking_Beratement_E",
-      "setName": "Mocking_Beratement",
-      "displayName": "Taunt/Range"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Recharge",
-          "values": [
-            {
-              "etModifies": "RechargeTime",
-              "mag": {
-                "pve": 0.424
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Mocking_Beratement_F.Attuned_Mocking_Beratement_F"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
+          },
+          "mezType": 11,
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Mocking_Beratement_F.Attuned_Mocking_Beratement_F",
+      "displayName": "Recharge",
       "description": {
         "short": "+Rech",
         "long": "Reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}%."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Mocking_Beratement_F.Attuned_Mocking_Beratement_F",
-      "setName": "Mocking_Beratement",
-      "displayName": "Recharge"
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.424
+            }
+          },
+          "stat": "Recharge",
+          "toWho": "self"
+        }
+      ]
     }
   ],
   "levels": {

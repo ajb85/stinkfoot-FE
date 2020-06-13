@@ -6,16 +6,6 @@
   "displayName": "Dark Blast",
   "powers": [
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "ToHit_Debuff",
-        "Endurance_Discount",
-        "Range",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Damage",
@@ -28,8 +18,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Dark_Blast.Dark_Blast",
               "damageType": "Negative"
             }
@@ -46,8 +37,9 @@
               "duration": 6,
               "effectType": "ToHit",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Dark_Blast.Dark_Blast"
             }
           ]
@@ -65,7 +57,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Dark_Blast.Dark_Blast",
               "damageType": "Smashing"
             },
@@ -79,7 +71,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Dark_Blast.Dark_Blast",
               "damageType": "Lethal"
             },
@@ -93,7 +85,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Dark_Blast.Dark_Blast",
               "damageType": "Fire"
             },
@@ -107,7 +99,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Dark_Blast.Dark_Blast",
               "damageType": "Cold"
             },
@@ -121,7 +113,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Dark_Blast.Dark_Blast",
               "damageType": "Energy"
             },
@@ -135,7 +127,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Dark_Blast.Dark_Blast",
               "damageType": "Negative"
             },
@@ -149,7 +141,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Dark_Blast.Dark_Blast",
               "damageType": "Toxic"
             },
@@ -163,13 +155,24 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Dark_Blast.Dark_Blast",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "ToHit_Debuff",
+        "Endurance_Discount",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Ranged.Dark_Blast.Dark_Blast",
+      "archetypeOrder": "primary",
       "powerIndex": 0,
       "castTimeReal": 1,
       "toggleCost": 5.2,
@@ -210,16 +213,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "ToHit_Debuff",
-        "Endurance_Discount",
-        "Range",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Damage",
@@ -234,8 +227,9 @@
               "effectType": "Damage",
               "ticks": 8,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Dark_Blast.Gloom",
               "damageType": "Negative"
             }
@@ -252,8 +246,9 @@
               "duration": 10,
               "effectType": "ToHit",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Dark_Blast.Gloom"
             }
           ]
@@ -271,7 +266,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Dark_Blast.Gloom",
               "damageType": "Smashing"
             },
@@ -285,7 +280,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Dark_Blast.Gloom",
               "damageType": "Lethal"
             },
@@ -299,7 +294,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Dark_Blast.Gloom",
               "damageType": "Fire"
             },
@@ -313,7 +308,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Dark_Blast.Gloom",
               "damageType": "Cold"
             },
@@ -327,7 +322,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Dark_Blast.Gloom",
               "damageType": "Energy"
             },
@@ -341,7 +336,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Dark_Blast.Gloom",
               "damageType": "Negative"
             },
@@ -355,7 +350,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Dark_Blast.Gloom",
               "damageType": "Toxic"
             },
@@ -369,13 +364,24 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Dark_Blast.Gloom",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "ToHit_Debuff",
+        "Endurance_Discount",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Ranged.Dark_Blast.Gloom",
+      "archetypeOrder": "primary",
       "powerIndex": 1,
       "castTimeReal": 1.67,
       "toggleCost": 8.528,
@@ -416,17 +422,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "ToHit_Debuff",
-        "Endurance_Discount",
-        "Knockback",
-        "Range",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Damage",
@@ -439,8 +434,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Dark_Blast.Umbral_Torrent",
               "damageType": "Negative"
             }
@@ -457,8 +453,9 @@
               "probability": 1,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Dark_Blast.Umbral_Torrent",
               "mezType": "Knockback"
             }
@@ -475,8 +472,9 @@
               "duration": 10,
               "effectType": "ToHit",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Dark_Blast.Umbral_Torrent"
             }
           ]
@@ -492,7 +490,7 @@
               "duration": 8.53,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Dark_Blast.Umbral_Torrent",
               "damageType": "Smashing"
             },
@@ -504,7 +502,7 @@
               "duration": 8.53,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Dark_Blast.Umbral_Torrent",
               "damageType": "Lethal"
             },
@@ -516,7 +514,7 @@
               "duration": 8.53,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Dark_Blast.Umbral_Torrent",
               "damageType": "Fire"
             },
@@ -528,7 +526,7 @@
               "duration": 8.53,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Dark_Blast.Umbral_Torrent",
               "damageType": "Cold"
             },
@@ -540,7 +538,7 @@
               "duration": 8.53,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Dark_Blast.Umbral_Torrent",
               "damageType": "Energy"
             },
@@ -552,7 +550,7 @@
               "duration": 8.53,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Dark_Blast.Umbral_Torrent",
               "damageType": "Negative"
             },
@@ -564,7 +562,7 @@
               "duration": 8.53,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Dark_Blast.Umbral_Torrent",
               "damageType": "Toxic"
             },
@@ -576,13 +574,25 @@
               "duration": 8.53,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Dark_Blast.Umbral_Torrent",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "ToHit_Debuff",
+        "Endurance_Discount",
+        "Knockback",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Ranged.Dark_Blast.Umbral_Torrent",
+      "archetypeOrder": "primary",
       "powerIndex": 2,
       "castTimeReal": 1.03,
       "toggleCost": 14.352,
@@ -626,13 +636,6 @@
       "aoeModifier": 3.31991267
     },
     {
-      "allowedEnhancements": [
-        "ToHit_Buff",
-        "Endurance_Discount",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Buff_ToHit",
@@ -646,7 +649,8 @@
               "variableModified": true,
               "effectType": "ToHit",
               "stacking": 1,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Dark_Blast.Aim"
             }
           ]
@@ -663,7 +667,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Dark_Blast.Aim",
               "damageType": "Smashing"
             },
@@ -676,7 +680,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Dark_Blast.Aim",
               "damageType": "Lethal"
             },
@@ -689,7 +693,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Dark_Blast.Aim",
               "damageType": "Fire"
             },
@@ -702,7 +706,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Dark_Blast.Aim",
               "damageType": "Cold"
             },
@@ -715,7 +719,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Dark_Blast.Aim",
               "damageType": "Energy"
             },
@@ -728,7 +732,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Dark_Blast.Aim",
               "damageType": "Negative"
             },
@@ -741,7 +745,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Dark_Blast.Aim",
               "damageType": "Toxic"
             },
@@ -754,13 +758,21 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Dark_Blast.Aim",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "ToHit_Buff",
+        "Endurance_Discount",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Ranged.Dark_Blast.Aim",
+      "archetypeOrder": "primary",
       "powerIndex": 3,
       "castTimeReal": 1.17,
       "toggleCost": 5.2,
@@ -795,17 +807,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "ToHit_Debuff",
-        "Endurance_Discount",
-        "Interrupt",
-        "Range",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Damage",
@@ -818,8 +819,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Dark_Blast.Moonbeam",
               "damageType": "Negative"
             }
@@ -836,8 +838,9 @@
               "duration": 10,
               "effectType": "ToHit",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Dark_Blast.Moonbeam"
             }
           ]
@@ -854,7 +857,7 @@
               "effectType": "PowerRedirect",
               "stacking": 1,
               "specialCase": 43,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Dark_Blast.Moonbeam"
             },
             {
@@ -867,7 +870,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Dark_Blast.Moonbeam",
               "damageType": "Smashing"
             },
@@ -881,7 +884,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Dark_Blast.Moonbeam",
               "damageType": "Lethal"
             },
@@ -895,7 +898,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Dark_Blast.Moonbeam",
               "damageType": "Fire"
             },
@@ -909,7 +912,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Dark_Blast.Moonbeam",
               "damageType": "Cold"
             },
@@ -923,7 +926,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Dark_Blast.Moonbeam",
               "damageType": "Energy"
             },
@@ -937,7 +940,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Dark_Blast.Moonbeam",
               "damageType": "Negative"
             },
@@ -951,7 +954,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Dark_Blast.Moonbeam",
               "damageType": "Toxic"
             },
@@ -965,24 +968,36 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Dark_Blast.Moonbeam",
               "damageType": "Psionic"
             },
             {
+              "etModifies": "Range",
               "mag": {
                 "pve": 0.5
               },
               "probability": 1,
               "duration": 10,
               "effectType": "Enhancement",
-              "eTModifies": 24,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Dark_Blast.Moonbeam"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "ToHit_Debuff",
+        "Endurance_Discount",
+        "Interrupt",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Ranged.Dark_Blast.Moonbeam",
+      "archetypeOrder": "primary",
       "powerIndex": 4,
       "castTimeReal": 4.33,
       "toggleCost": 14.352,
@@ -1025,17 +1040,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "ToHit_Debuff",
-        "Endurance_Discount",
-        "Immobilize",
-        "Range",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Damage",
@@ -1051,8 +1055,9 @@
               "ticks": 8,
               "delayedTime": 1,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Dark_Blast.Tenebrous_Tentacles",
               "damageType": "Smashing"
             },
@@ -1064,8 +1069,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Dark_Blast.Tenebrous_Tentacles",
               "damageType": "Negative"
             }
@@ -1082,8 +1088,9 @@
               "duration": 8,
               "effectType": "ToHit",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Dark_Blast.Tenebrous_Tentacles"
             }
           ]
@@ -1099,10 +1106,11 @@
               "duration": 17.8800011,
               "effectType": "Mez",
               "stacking": 1,
-              "toWho": "Target",
+              "buffable": true,
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Blaster_Ranged.Dark_Blast.Tenebrous_Tentacles",
-              "mezType": "Immobilization"
+              "mezType": "Immob"
             }
           ]
         },
@@ -1117,10 +1125,11 @@
               "duration": 2,
               "effectType": "Mez",
               "stacking": 1,
-              "toWho": "Target",
+              "buffable": true,
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Blaster_Ranged.Dark_Blast.Tenebrous_Tentacles",
-              "mezType": "Immobilization"
+              "mezType": "Immob"
             },
             {
               "mag": {
@@ -1130,7 +1139,7 @@
               "duration": 9.17,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Dark_Blast.Tenebrous_Tentacles",
               "damageType": "Smashing"
             },
@@ -1142,7 +1151,7 @@
               "duration": 9.17,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Dark_Blast.Tenebrous_Tentacles",
               "damageType": "Lethal"
             },
@@ -1154,7 +1163,7 @@
               "duration": 9.17,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Dark_Blast.Tenebrous_Tentacles",
               "damageType": "Fire"
             },
@@ -1166,7 +1175,7 @@
               "duration": 9.17,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Dark_Blast.Tenebrous_Tentacles",
               "damageType": "Cold"
             },
@@ -1178,7 +1187,7 @@
               "duration": 9.17,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Dark_Blast.Tenebrous_Tentacles",
               "damageType": "Energy"
             },
@@ -1190,7 +1199,7 @@
               "duration": 9.17,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Dark_Blast.Tenebrous_Tentacles",
               "damageType": "Negative"
             },
@@ -1202,7 +1211,7 @@
               "duration": 9.17,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Dark_Blast.Tenebrous_Tentacles",
               "damageType": "Toxic"
             },
@@ -1214,13 +1223,25 @@
               "duration": 9.17,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Dark_Blast.Tenebrous_Tentacles",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "ToHit_Debuff",
+        "Endurance_Discount",
+        "Immobilize",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Ranged.Dark_Blast.Tenebrous_Tentacles",
+      "archetypeOrder": "primary",
       "powerIndex": 5,
       "castTimeReal": 1.67,
       "toggleCost": 10.192,
@@ -1264,17 +1285,6 @@
       "aoeModifier": 2.30662441
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "ToHit_Debuff",
-        "Endurance_Discount",
-        "Hold",
-        "Range",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Immobilize",
@@ -1288,8 +1298,9 @@
               "duration": 9.536,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Blaster_Ranged.Dark_Blast.Abyssal_Gaze",
               "mezType": "Hold"
@@ -1307,8 +1318,9 @@
               "duration": 10,
               "effectType": "ToHit",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Dark_Blast.Abyssal_Gaze"
             }
           ]
@@ -1326,8 +1338,9 @@
               "effectType": "Damage",
               "ticks": 3,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Dark_Blast.Abyssal_Gaze",
               "damageType": "Negative"
             }
@@ -1346,7 +1359,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Dark_Blast.Abyssal_Gaze",
               "damageType": "Smashing"
             },
@@ -1360,7 +1373,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Dark_Blast.Abyssal_Gaze",
               "damageType": "Lethal"
             },
@@ -1374,7 +1387,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Dark_Blast.Abyssal_Gaze",
               "damageType": "Fire"
             },
@@ -1388,7 +1401,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Dark_Blast.Abyssal_Gaze",
               "damageType": "Cold"
             },
@@ -1402,7 +1415,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Dark_Blast.Abyssal_Gaze",
               "damageType": "Energy"
             },
@@ -1416,7 +1429,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Dark_Blast.Abyssal_Gaze",
               "damageType": "Negative"
             },
@@ -1430,7 +1443,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Dark_Blast.Abyssal_Gaze",
               "damageType": "Toxic"
             },
@@ -1444,13 +1457,25 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Dark_Blast.Abyssal_Gaze",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "ToHit_Debuff",
+        "Endurance_Discount",
+        "Hold",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Ranged.Dark_Blast.Abyssal_Gaze",
+      "archetypeOrder": "primary",
       "powerIndex": 6,
       "castTimeReal": 1.67,
       "toggleCost": 7.8,
@@ -1491,17 +1516,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "ToHit_Debuff",
-        "Endurance_Discount",
-        "Heal",
-        "Range",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Damage",
@@ -1514,8 +1528,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Dark_Blast.Life_Drain",
               "damageType": "Negative"
             }
@@ -1533,8 +1548,9 @@
               "effectType": "Heal",
               "delayedTime": 0.5,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Dark_Blast.Life_Drain"
             }
           ]
@@ -1550,8 +1566,9 @@
               "duration": 10,
               "effectType": "ToHit",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Dark_Blast.Life_Drain"
             }
           ]
@@ -1569,7 +1586,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Dark_Blast.Life_Drain",
               "damageType": "Smashing"
             },
@@ -1583,7 +1600,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Dark_Blast.Life_Drain",
               "damageType": "Lethal"
             },
@@ -1597,7 +1614,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Dark_Blast.Life_Drain",
               "damageType": "Fire"
             },
@@ -1611,7 +1628,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Dark_Blast.Life_Drain",
               "damageType": "Cold"
             },
@@ -1625,7 +1642,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Dark_Blast.Life_Drain",
               "damageType": "Energy"
             },
@@ -1639,7 +1656,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Dark_Blast.Life_Drain",
               "damageType": "Negative"
             },
@@ -1653,7 +1670,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Dark_Blast.Life_Drain",
               "damageType": "Toxic"
             },
@@ -1667,13 +1684,25 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Dark_Blast.Life_Drain",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "ToHit_Debuff",
+        "Endurance_Discount",
+        "Heal",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Ranged.Dark_Blast.Life_Drain",
+      "archetypeOrder": "primary",
       "powerIndex": 7,
       "castTimeReal": 1.93,
       "toggleCost": 8.528,
@@ -1715,15 +1744,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "ToHit_Debuff",
-        "Endurance_Discount",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Damage",
@@ -1736,8 +1756,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Dark_Blast.Blackstar",
               "damageType": "Smashing"
             },
@@ -1749,8 +1770,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Dark_Blast.Blackstar",
               "damageType": "Negative"
             }
@@ -1767,8 +1789,9 @@
               "duration": 20,
               "effectType": "ToHit",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Dark_Blast.Blackstar"
             }
           ]
@@ -1784,7 +1807,7 @@
               "duration": 10.5,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Dark_Blast.Blackstar",
               "damageType": "Smashing"
             },
@@ -1796,7 +1819,7 @@
               "duration": 10.5,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Dark_Blast.Blackstar",
               "damageType": "Lethal"
             },
@@ -1808,7 +1831,7 @@
               "duration": 10.5,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Dark_Blast.Blackstar",
               "damageType": "Fire"
             },
@@ -1820,7 +1843,7 @@
               "duration": 10.5,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Dark_Blast.Blackstar",
               "damageType": "Cold"
             },
@@ -1832,7 +1855,7 @@
               "duration": 10.5,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Dark_Blast.Blackstar",
               "damageType": "Energy"
             },
@@ -1844,7 +1867,7 @@
               "duration": 10.5,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Dark_Blast.Blackstar",
               "damageType": "Negative"
             },
@@ -1856,7 +1879,7 @@
               "duration": 10.5,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Dark_Blast.Blackstar",
               "damageType": "Toxic"
             },
@@ -1868,13 +1891,23 @@
               "duration": 10.5,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Dark_Blast.Blackstar",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "ToHit_Debuff",
+        "Endurance_Discount",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Ranged.Dark_Blast.Blackstar",
+      "archetypeOrder": "primary",
       "powerIndex": 8,
       "castTimeReal": 3,
       "toggleCost": 27.7316,

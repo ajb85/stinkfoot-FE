@@ -6,16 +6,6 @@
   "displayName": "Kinetic Melee",
   "powers": [
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Knockback",
-        "Recharge",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Damage",
@@ -28,8 +18,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Kinetic_Attack.Quick_Strike",
               "damageType": "Smashing"
             },
@@ -41,8 +32,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Kinetic_Attack.Quick_Strike",
               "damageType": "Energy"
             }
@@ -59,8 +51,9 @@
               "probability": 0.25,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Kinetic_Attack.Quick_Strike",
               "mezType": "Knockback"
             },
@@ -73,7 +66,7 @@
               "effectType": "Rage",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Kinetic_Attack.Quick_Strike"
             },
             {
@@ -82,7 +75,7 @@
               },
               "probability": 1,
               "effectType": "GrantPower",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Kinetic_Attack.Quick_Strike"
             }
           ]
@@ -99,9 +92,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Kinetic_Attack.Quick_Strike",
               "requiresToHitCheck": true,
@@ -119,7 +113,7 @@
               "probability": 1,
               "duration": 4,
               "effectType": "DamageBuff",
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Kinetic_Attack.Quick_Strike",
               "damageType": "Smashing"
             },
@@ -130,7 +124,7 @@
               "probability": 1,
               "duration": 4,
               "effectType": "DamageBuff",
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Kinetic_Attack.Quick_Strike",
               "damageType": "Lethal"
             },
@@ -141,7 +135,7 @@
               "probability": 1,
               "duration": 4,
               "effectType": "DamageBuff",
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Kinetic_Attack.Quick_Strike",
               "damageType": "Fire"
             },
@@ -152,7 +146,7 @@
               "probability": 1,
               "duration": 4,
               "effectType": "DamageBuff",
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Kinetic_Attack.Quick_Strike",
               "damageType": "Cold"
             },
@@ -163,7 +157,7 @@
               "probability": 1,
               "duration": 4,
               "effectType": "DamageBuff",
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Kinetic_Attack.Quick_Strike",
               "damageType": "Energy"
             },
@@ -174,7 +168,7 @@
               "probability": 1,
               "duration": 4,
               "effectType": "DamageBuff",
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Kinetic_Attack.Quick_Strike",
               "damageType": "Negative"
             }
@@ -189,14 +183,26 @@
               },
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Kinetic_Attack.Quick_Strike",
               "damageType": "Fire"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Knockback",
+        "Recharge",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Kinetic_Attack.Quick_Strike",
+      "archetypeOrder": "primary",
       "powerIndex": 0,
       "castTimeReal": 0.83,
       "toggleCost": 4.368,
@@ -239,16 +245,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Recharge",
-        "Stun",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Damage",
@@ -261,8 +257,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Kinetic_Attack.Body_Blow",
               "damageType": "Smashing"
             },
@@ -274,8 +271,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Kinetic_Attack.Body_Blow",
               "damageType": "Energy"
             }
@@ -292,8 +290,9 @@
               "duration": 7.15200043,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Kinetic_Attack.Body_Blow",
               "mezType": "Stun"
@@ -311,8 +310,9 @@
               "duration": 2,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Kinetic_Attack.Body_Blow",
               "mezType": "Stun"
@@ -326,7 +326,7 @@
               "effectType": "Rage",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Kinetic_Attack.Body_Blow"
             },
             {
@@ -335,7 +335,7 @@
               },
               "probability": 1,
               "effectType": "GrantPower",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Kinetic_Attack.Body_Blow"
             }
           ]
@@ -352,9 +352,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Kinetic_Attack.Body_Blow",
               "requiresToHitCheck": true,
@@ -372,7 +373,7 @@
               "probability": 1,
               "duration": 5,
               "effectType": "DamageBuff",
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Kinetic_Attack.Body_Blow",
               "damageType": "Smashing"
             },
@@ -383,7 +384,7 @@
               "probability": 1,
               "duration": 5,
               "effectType": "DamageBuff",
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Kinetic_Attack.Body_Blow",
               "damageType": "Lethal"
             },
@@ -394,7 +395,7 @@
               "probability": 1,
               "duration": 5,
               "effectType": "DamageBuff",
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Kinetic_Attack.Body_Blow",
               "damageType": "Fire"
             },
@@ -405,7 +406,7 @@
               "probability": 1,
               "duration": 5,
               "effectType": "DamageBuff",
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Kinetic_Attack.Body_Blow",
               "damageType": "Cold"
             },
@@ -416,7 +417,7 @@
               "probability": 1,
               "duration": 5,
               "effectType": "DamageBuff",
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Kinetic_Attack.Body_Blow",
               "damageType": "Energy"
             },
@@ -427,7 +428,7 @@
               "probability": 1,
               "duration": 5,
               "effectType": "DamageBuff",
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Kinetic_Attack.Body_Blow",
               "damageType": "Negative"
             }
@@ -442,14 +443,26 @@
               },
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Kinetic_Attack.Body_Blow",
               "damageType": "Fire"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Recharge",
+        "Stun",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Kinetic_Attack.Body_Blow",
+      "archetypeOrder": "primary",
       "powerIndex": 1,
       "castTimeReal": 1.07,
       "toggleCost": 6.032,
@@ -492,16 +505,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Recharge",
-        "Stun",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Damage",
@@ -514,8 +517,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Kinetic_Attack.Smashing_Blow",
               "damageType": "Smashing"
             },
@@ -527,8 +531,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Kinetic_Attack.Smashing_Blow",
               "damageType": "Energy"
             }
@@ -545,8 +550,9 @@
               "duration": 7.15200043,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Kinetic_Attack.Smashing_Blow",
               "mezType": "Stun"
@@ -564,8 +570,9 @@
               "duration": 2,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Kinetic_Attack.Smashing_Blow",
               "mezType": "Stun"
@@ -579,7 +586,7 @@
               "effectType": "Rage",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Kinetic_Attack.Smashing_Blow"
             },
             {
@@ -588,7 +595,7 @@
               },
               "probability": 1,
               "effectType": "GrantPower",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Kinetic_Attack.Smashing_Blow"
             }
           ]
@@ -605,9 +612,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Kinetic_Attack.Smashing_Blow",
               "requiresToHitCheck": true,
@@ -625,7 +633,7 @@
               "probability": 1,
               "duration": 5,
               "effectType": "DamageBuff",
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Kinetic_Attack.Smashing_Blow",
               "damageType": "Smashing"
             },
@@ -636,7 +644,7 @@
               "probability": 1,
               "duration": 5,
               "effectType": "DamageBuff",
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Kinetic_Attack.Smashing_Blow",
               "damageType": "Lethal"
             },
@@ -647,7 +655,7 @@
               "probability": 1,
               "duration": 5,
               "effectType": "DamageBuff",
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Kinetic_Attack.Smashing_Blow",
               "damageType": "Fire"
             },
@@ -658,7 +666,7 @@
               "probability": 1,
               "duration": 5,
               "effectType": "DamageBuff",
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Kinetic_Attack.Smashing_Blow",
               "damageType": "Cold"
             },
@@ -669,7 +677,7 @@
               "probability": 1,
               "duration": 5,
               "effectType": "DamageBuff",
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Kinetic_Attack.Smashing_Blow",
               "damageType": "Energy"
             },
@@ -680,7 +688,7 @@
               "probability": 1,
               "duration": 5,
               "effectType": "DamageBuff",
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Kinetic_Attack.Smashing_Blow",
               "damageType": "Negative"
             }
@@ -695,14 +703,26 @@
               },
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Kinetic_Attack.Smashing_Blow",
               "damageType": "Fire"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Recharge",
+        "Stun",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Kinetic_Attack.Smashing_Blow",
+      "archetypeOrder": "primary",
       "powerIndex": 2,
       "castTimeReal": 1.2,
       "toggleCost": 7.696,
@@ -745,13 +765,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "ToHit_Buff",
-        "Endurance_Discount",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Ones",
@@ -764,7 +777,7 @@
               "duration": 20,
               "effectType": "SetMode",
               "ticks": 21,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Kinetic_Attack.Power_Siphon"
             }
           ]
@@ -781,12 +794,21 @@
               "variableModified": true,
               "effectType": "ToHit",
               "stacking": 1,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Kinetic_Attack.Power_Siphon"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "ToHit_Buff",
+        "Endurance_Discount",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Kinetic_Attack.Power_Siphon",
+      "archetypeOrder": "primary",
       "powerIndex": 3,
       "castTimeReal": 1.93,
       "toggleCost": 5.2,
@@ -823,17 +845,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Knockback",
-        "Range",
-        "Recharge",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Damage",
@@ -846,8 +857,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Kinetic_Attack.Repulsing_Torrent",
               "damageType": "Smashing"
             },
@@ -859,8 +871,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Kinetic_Attack.Repulsing_Torrent",
               "damageType": "Energy"
             }
@@ -877,8 +890,9 @@
               "probability": 0.8,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Kinetic_Attack.Repulsing_Torrent",
               "mezType": "Knockback"
             }
@@ -896,9 +910,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Kinetic_Attack.Repulsing_Torrent",
               "requiresToHitCheck": true,
@@ -918,7 +933,7 @@
               "effectType": "Rage",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Kinetic_Attack.Repulsing_Torrent"
             }
           ]
@@ -932,14 +947,27 @@
               },
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Kinetic_Attack.Repulsing_Torrent",
               "damageType": "Fire"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Knockback",
+        "Range",
+        "Recharge",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Kinetic_Attack.Repulsing_Torrent",
+      "archetypeOrder": "primary",
       "powerIndex": 4,
       "castTimeReal": 2,
       "toggleCost": 11.856,
@@ -982,14 +1010,6 @@
       "aoeModifier": 2.37995839
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Range",
-        "Recharge",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Taunt",
@@ -1003,8 +1023,9 @@
               "duration": 20.5999985,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Kinetic_Attack.Taunt",
               "mezType": "Taunt"
@@ -1015,21 +1036,30 @@
           "effectType": "Ones",
           "values": [
             {
+              "etModifies": "Range",
               "mag": {
                 "pve": -0.75
               },
               "probability": 1,
               "duration": 12,
               "effectType": "Enhancement",
-              "eTModifies": 24,
               "stacking": 1,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Kinetic_Attack.Taunt"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Range",
+        "Recharge",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Kinetic_Attack.Taunt",
+      "archetypeOrder": "primary",
       "powerIndex": 5,
       "castTimeReal": 1.67,
       "fullName": "Brute_Primary_Kinetic_Melee_Taunt",
@@ -1065,16 +1095,6 @@
       "aoeModifier": 3.25
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Knockback",
-        "Recharge",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Damage",
@@ -1087,8 +1107,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Kinetic_Attack.Burst",
               "damageType": "Smashing"
             },
@@ -1100,8 +1121,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Kinetic_Attack.Burst",
               "damageType": "Energy"
             }
@@ -1118,8 +1140,9 @@
               "probability": 0.5,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Kinetic_Attack.Burst",
               "mezType": "Knockback"
             },
@@ -1132,7 +1155,7 @@
               "effectType": "Rage",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Kinetic_Attack.Burst"
             },
             {
@@ -1141,7 +1164,7 @@
               },
               "probability": 1,
               "effectType": "GrantPower",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Kinetic_Attack.Burst"
             }
           ]
@@ -1158,9 +1181,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Kinetic_Attack.Burst",
               "requiresToHitCheck": true,
@@ -1178,7 +1202,7 @@
               "probability": 1,
               "duration": 7,
               "effectType": "DamageBuff",
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Kinetic_Attack.Burst",
               "damageType": "Smashing"
             },
@@ -1189,7 +1213,7 @@
               "probability": 1,
               "duration": 7,
               "effectType": "DamageBuff",
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Kinetic_Attack.Burst",
               "damageType": "Lethal"
             },
@@ -1200,7 +1224,7 @@
               "probability": 1,
               "duration": 7,
               "effectType": "DamageBuff",
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Kinetic_Attack.Burst",
               "damageType": "Fire"
             },
@@ -1211,7 +1235,7 @@
               "probability": 1,
               "duration": 7,
               "effectType": "DamageBuff",
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Kinetic_Attack.Burst",
               "damageType": "Cold"
             },
@@ -1222,7 +1246,7 @@
               "probability": 1,
               "duration": 7,
               "effectType": "DamageBuff",
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Kinetic_Attack.Burst",
               "damageType": "Energy"
             },
@@ -1233,7 +1257,7 @@
               "probability": 1,
               "duration": 7,
               "effectType": "DamageBuff",
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Kinetic_Attack.Burst",
               "damageType": "Negative"
             }
@@ -1248,14 +1272,26 @@
               },
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Kinetic_Attack.Burst",
               "damageType": "Fire"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Knockback",
+        "Recharge",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Kinetic_Attack.Burst",
+      "archetypeOrder": "primary",
       "powerIndex": 6,
       "castTimeReal": 2.67,
       "toggleCost": 14.352,
@@ -1299,17 +1335,6 @@
       "aoeModifier": 2.2
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Knockback",
-        "Range",
-        "Recharge",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Damage",
@@ -1322,8 +1347,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Kinetic_Attack.Focused_Burst",
               "damageType": "Smashing"
             },
@@ -1335,8 +1361,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Kinetic_Attack.Focused_Burst",
               "damageType": "Energy"
             }
@@ -1353,8 +1380,9 @@
               "probability": 0.5,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Kinetic_Attack.Focused_Burst",
               "mezType": "Knockback"
             },
@@ -1367,7 +1395,7 @@
               "effectType": "Rage",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Kinetic_Attack.Focused_Burst"
             },
             {
@@ -1376,7 +1404,7 @@
               },
               "probability": 1,
               "effectType": "GrantPower",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Kinetic_Attack.Focused_Burst"
             }
           ]
@@ -1393,9 +1421,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Kinetic_Attack.Focused_Burst",
               "requiresToHitCheck": true,
@@ -1413,7 +1442,7 @@
               "probability": 1,
               "duration": 7,
               "effectType": "DamageBuff",
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Kinetic_Attack.Focused_Burst",
               "damageType": "Smashing"
             },
@@ -1424,7 +1453,7 @@
               "probability": 1,
               "duration": 7,
               "effectType": "DamageBuff",
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Kinetic_Attack.Focused_Burst",
               "damageType": "Lethal"
             },
@@ -1435,7 +1464,7 @@
               "probability": 1,
               "duration": 7,
               "effectType": "DamageBuff",
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Kinetic_Attack.Focused_Burst",
               "damageType": "Fire"
             },
@@ -1446,7 +1475,7 @@
               "probability": 1,
               "duration": 7,
               "effectType": "DamageBuff",
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Kinetic_Attack.Focused_Burst",
               "damageType": "Cold"
             },
@@ -1457,7 +1486,7 @@
               "probability": 1,
               "duration": 7,
               "effectType": "DamageBuff",
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Kinetic_Attack.Focused_Burst",
               "damageType": "Energy"
             },
@@ -1468,7 +1497,7 @@
               "probability": 1,
               "duration": 7,
               "effectType": "DamageBuff",
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Kinetic_Attack.Focused_Burst",
               "damageType": "Negative"
             }
@@ -1483,14 +1512,27 @@
               },
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Kinetic_Attack.Focused_Burst",
               "damageType": "Fire"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Knockback",
+        "Range",
+        "Recharge",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Kinetic_Attack.Focused_Burst",
+      "archetypeOrder": "primary",
       "powerIndex": 7,
       "castTimeReal": 2,
       "toggleCost": 8.528,
@@ -1531,16 +1573,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Recharge",
-        "Stun",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Damage",
@@ -1553,8 +1585,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Kinetic_Attack.Total_Focus",
               "damageType": "Smashing"
             },
@@ -1566,8 +1599,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Kinetic_Attack.Total_Focus",
               "damageType": "Energy"
             }
@@ -1584,8 +1618,9 @@
               "duration": 11.92,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Kinetic_Attack.Total_Focus",
               "mezType": "Stun"
@@ -1603,8 +1638,9 @@
               "duration": 2,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Kinetic_Attack.Total_Focus",
               "mezType": "Stun"
@@ -1617,7 +1653,7 @@
               "variableModified": true,
               "effectType": "GrantPower",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Kinetic_Attack.Total_Focus"
             },
             {
@@ -1627,7 +1663,7 @@
               "probability": 1,
               "effectType": "Rage",
               "resistible": true,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Kinetic_Attack.Total_Focus"
             }
           ]
@@ -1644,9 +1680,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Kinetic_Attack.Total_Focus",
               "requiresToHitCheck": true,
@@ -1664,7 +1701,7 @@
               "probability": 1,
               "duration": 8,
               "effectType": "DamageBuff",
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Kinetic_Attack.Total_Focus",
               "damageType": "Smashing"
             },
@@ -1675,7 +1712,7 @@
               "probability": 1,
               "duration": 8,
               "effectType": "DamageBuff",
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Kinetic_Attack.Total_Focus",
               "damageType": "Lethal"
             },
@@ -1686,7 +1723,7 @@
               "probability": 1,
               "duration": 8,
               "effectType": "DamageBuff",
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Kinetic_Attack.Total_Focus",
               "damageType": "Fire"
             },
@@ -1697,7 +1734,7 @@
               "probability": 1,
               "duration": 8,
               "effectType": "DamageBuff",
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Kinetic_Attack.Total_Focus",
               "damageType": "Cold"
             },
@@ -1708,7 +1745,7 @@
               "probability": 1,
               "duration": 8,
               "effectType": "DamageBuff",
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Kinetic_Attack.Total_Focus",
               "damageType": "Energy"
             },
@@ -1719,7 +1756,7 @@
               "probability": 1,
               "duration": 8,
               "effectType": "DamageBuff",
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Kinetic_Attack.Total_Focus",
               "damageType": "Negative"
             }
@@ -1734,14 +1771,26 @@
               },
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Kinetic_Attack.Total_Focus",
               "damageType": "Fire"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Recharge",
+        "Stun",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Kinetic_Attack.Total_Focus",
+      "archetypeOrder": "primary",
       "powerIndex": 8,
       "castTimeReal": 2.83,
       "toggleCost": 18.512,

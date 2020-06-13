@@ -3,792 +3,271 @@
   "fullName": "IOSet.Overwhelming_Force",
   "enhancements": [
     {
-      "effects": [
-        {
-          "effectType": "Damage",
-          "values": [
-            {
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Overwhelming_Force_A.Attuned_Overwhelming_Force_A",
-              "damageType": "Smashing"
-            }
-          ]
-        },
-        {
-          "effectType": "Boosts_33",
-          "values": [
-            {
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Overwhelming_Force_A.Attuned_Overwhelming_Force_A",
-              "damageType": "Lethal"
-            },
-            {
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Overwhelming_Force_A.Attuned_Overwhelming_Force_A",
-              "damageType": "Fire"
-            },
-            {
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Overwhelming_Force_A.Attuned_Overwhelming_Force_A",
-              "damageType": "Cold"
-            },
-            {
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Overwhelming_Force_A.Attuned_Overwhelming_Force_A",
-              "damageType": "Energy"
-            },
-            {
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Overwhelming_Force_A.Attuned_Overwhelming_Force_A",
-              "damageType": "Negative"
-            },
-            {
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Overwhelming_Force_A.Attuned_Overwhelming_Force_A",
-              "damageType": "Toxic"
-            },
-            {
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Overwhelming_Force_A.Attuned_Overwhelming_Force_A",
-              "damageType": "Psionic"
-            }
-          ]
-        },
-        {
-          "effectType": "Accuracy",
-          "values": [
-            {
-              "etModifies": "Accuracy",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Overwhelming_Force_A.Attuned_Overwhelming_Force_A"
-            }
-          ]
-        }
-      ],
+      "type": "set",
+      "fullName": "Boosts.Attuned_Overwhelming_Force_A.Attuned_Overwhelming_Force_A",
+      "displayName": "Accuracy/Damage",
       "description": {
         "short": "+ACC, +DMG",
         "long": "UNIQUE -- No more than 1 enhancement of this type may be slotted by a character.  Enhances the damage of a power by {Boost.Attrib.Damage.Scale}% and increases the accuracy of a power by {Boost.Attrib.Accuracy.Scale}%."
       },
-      "isUnique": true,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Overwhelming_Force_A.Attuned_Overwhelming_Force_A",
-      "setName": "Overwhelming_Force",
-      "displayName": "Accuracy/Damage"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Endurance",
-          "values": [
-            {
-              "etModifies": "EnduranceDiscount",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Overwhelming_Force_B.Attuned_Overwhelming_Force_B"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
+          },
+          "stat": "Accuracy",
+          "toWho": "self"
         },
         {
-          "effectType": "Recharge",
-          "values": [
-            {
-              "etModifies": "RechargeTime",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Overwhelming_Force_B.Attuned_Overwhelming_Force_B"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
+          },
+          "stat": "Damage",
+          "damageType": [
+            "Smashing",
+            "Lethal",
+            "Fire",
+            "Cold",
+            "Energy",
+            "Negative",
+            "Toxic",
+            "Psionic"
+          ],
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Overwhelming_Force_B.Attuned_Overwhelming_Force_B",
+      "displayName": "Endurance/Recharge",
       "description": {
         "short": "-End Cost, +Rech",
         "long": "UNIQUE -- No more than 1 enhancement of this type may be slotted by a character.  Reduces recharge time of a power by {Boost.Attrib.Recharge.Scale}% and decreases its endurance cost by {Boost.Attrib.Endurance.Scale}%."
       },
-      "isUnique": true,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Overwhelming_Force_B.Attuned_Overwhelming_Force_B",
-      "setName": "Overwhelming_Force",
-      "displayName": "Endurance/Recharge"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Damage",
-          "values": [
-            {
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Overwhelming_Force_C.Attuned_Overwhelming_Force_C",
-              "damageType": "Smashing"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self"
         },
         {
-          "effectType": "Boosts_33",
-          "values": [
-            {
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Overwhelming_Force_C.Attuned_Overwhelming_Force_C",
-              "damageType": "Lethal"
-            },
-            {
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Overwhelming_Force_C.Attuned_Overwhelming_Force_C",
-              "damageType": "Fire"
-            },
-            {
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Overwhelming_Force_C.Attuned_Overwhelming_Force_C",
-              "damageType": "Cold"
-            },
-            {
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Overwhelming_Force_C.Attuned_Overwhelming_Force_C",
-              "damageType": "Energy"
-            },
-            {
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Overwhelming_Force_C.Attuned_Overwhelming_Force_C",
-              "damageType": "Negative"
-            },
-            {
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Overwhelming_Force_C.Attuned_Overwhelming_Force_C",
-              "damageType": "Toxic"
-            },
-            {
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Overwhelming_Force_C.Attuned_Overwhelming_Force_C",
-              "damageType": "Psionic"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
-        },
-        {
-          "effectType": "Accuracy",
-          "values": [
-            {
-              "etModifies": "Accuracy",
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Overwhelming_Force_C.Attuned_Overwhelming_Force_C"
-            }
-          ]
-        },
-        {
-          "effectType": "Endurance",
-          "values": [
-            {
-              "etModifies": "EnduranceDiscount",
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Overwhelming_Force_C.Attuned_Overwhelming_Force_C"
-            }
-          ]
+          },
+          "stat": "Recharge",
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Overwhelming_Force_C.Attuned_Overwhelming_Force_C",
+      "displayName": "Accuracy/Damage/Endurance",
       "description": {
         "short": "+ACC, +DMG, -End Cost",
         "long": "UNIQUE -- No more than 1 enhancement of this type may be slotted by a character.  Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}%, enhances the damage of a power by {Boost.Attrib.Damage.Scale}% and reduces endurance cost by {Boost.Attrib.Endurance.Scale}%."
       },
-      "isUnique": true,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Overwhelming_Force_C.Attuned_Overwhelming_Force_C",
-      "setName": "Overwhelming_Force",
-      "displayName": "Accuracy/Damage/Endurance"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Damage",
-          "values": [
-            {
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Overwhelming_Force_D.Attuned_Overwhelming_Force_D",
-              "damageType": "Smashing"
+          "mag": {
+            "IO": {
+              "cap": 0.212
             }
-          ]
+          },
+          "stat": "Accuracy",
+          "toWho": "self"
         },
         {
-          "effectType": "Boosts_33",
-          "values": [
-            {
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Overwhelming_Force_D.Attuned_Overwhelming_Force_D",
-              "damageType": "Lethal"
-            },
-            {
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Overwhelming_Force_D.Attuned_Overwhelming_Force_D",
-              "damageType": "Fire"
-            },
-            {
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Overwhelming_Force_D.Attuned_Overwhelming_Force_D",
-              "damageType": "Cold"
-            },
-            {
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Overwhelming_Force_D.Attuned_Overwhelming_Force_D",
-              "damageType": "Energy"
-            },
-            {
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Overwhelming_Force_D.Attuned_Overwhelming_Force_D",
-              "damageType": "Negative"
-            },
-            {
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Overwhelming_Force_D.Attuned_Overwhelming_Force_D",
-              "damageType": "Toxic"
-            },
-            {
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Overwhelming_Force_D.Attuned_Overwhelming_Force_D",
-              "damageType": "Psionic"
+          "mag": {
+            "IO": {
+              "cap": 0.212
             }
-          ]
+          },
+          "stat": "Damage",
+          "damageType": [
+            "Smashing",
+            "Lethal",
+            "Fire",
+            "Cold",
+            "Energy",
+            "Negative",
+            "Toxic",
+            "Psionic"
+          ],
+          "toWho": "self"
         },
         {
-          "effectType": "Endurance",
-          "values": [
-            {
-              "etModifies": "EnduranceDiscount",
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Overwhelming_Force_D.Attuned_Overwhelming_Force_D"
+          "mag": {
+            "IO": {
+              "cap": 0.212
             }
-          ]
-        },
-        {
-          "effectType": "Recharge",
-          "values": [
-            {
-              "etModifies": "RechargeTime",
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Overwhelming_Force_D.Attuned_Overwhelming_Force_D"
-            }
-          ]
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Overwhelming_Force_D.Attuned_Overwhelming_Force_D",
+      "displayName": "Damage/Endurance/Recharge",
       "description": {
         "short": "+DMG, +Rech, -End Cost",
         "long": "UNIQUE -- No more than 1 enhancement of this type may be slotted by a character.  Enhances the damage of a power by {Boost.Attrib.Damage.Scale}%, reduces recharge time by {Boost.Attrib.Recharge.Scale}% and reduces endurance cost by {Boost.Attrib.Endurance.Scale}% ."
       },
-      "isUnique": true,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Overwhelming_Force_D.Attuned_Overwhelming_Force_D",
-      "setName": "Overwhelming_Force",
-      "displayName": "Damage/Endurance/Recharge"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Damage",
-          "values": [
-            {
-              "mag": {
-                "pve": 0.1855
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Overwhelming_Force_E.Attuned_Overwhelming_Force_E",
-              "damageType": "Smashing"
+          "mag": {
+            "IO": {
+              "cap": 0.212
             }
-          ]
+          },
+          "stat": "Damage",
+          "damageType": [
+            "Smashing",
+            "Lethal",
+            "Fire",
+            "Cold",
+            "Energy",
+            "Negative",
+            "Toxic",
+            "Psionic"
+          ],
+          "toWho": "self"
         },
         {
-          "effectType": "Boosts_33",
-          "values": [
-            {
-              "mag": {
-                "pve": 0.1855
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Overwhelming_Force_E.Attuned_Overwhelming_Force_E",
-              "damageType": "Lethal"
-            },
-            {
-              "mag": {
-                "pve": 0.1855
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Overwhelming_Force_E.Attuned_Overwhelming_Force_E",
-              "damageType": "Fire"
-            },
-            {
-              "mag": {
-                "pve": 0.1855
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Overwhelming_Force_E.Attuned_Overwhelming_Force_E",
-              "damageType": "Cold"
-            },
-            {
-              "mag": {
-                "pve": 0.1855
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Overwhelming_Force_E.Attuned_Overwhelming_Force_E",
-              "damageType": "Energy"
-            },
-            {
-              "mag": {
-                "pve": 0.1855
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Overwhelming_Force_E.Attuned_Overwhelming_Force_E",
-              "damageType": "Negative"
-            },
-            {
-              "mag": {
-                "pve": 0.1855
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Overwhelming_Force_E.Attuned_Overwhelming_Force_E",
-              "damageType": "Toxic"
-            },
-            {
-              "mag": {
-                "pve": 0.1855
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Overwhelming_Force_E.Attuned_Overwhelming_Force_E",
-              "damageType": "Psionic"
+          "mag": {
+            "IO": {
+              "cap": 0.212
             }
-          ]
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self"
         },
         {
-          "effectType": "Accuracy",
-          "values": [
-            {
-              "etModifies": "Accuracy",
-              "mag": {
-                "pve": 0.1855
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Overwhelming_Force_E.Attuned_Overwhelming_Force_E"
+          "mag": {
+            "IO": {
+              "cap": 0.212
             }
-          ]
-        },
-        {
-          "effectType": "Recharge",
-          "values": [
-            {
-              "etModifies": "RechargeTime",
-              "mag": {
-                "pve": 0.1855
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Overwhelming_Force_E.Attuned_Overwhelming_Force_E"
-            }
-          ]
-        },
-        {
-          "effectType": "Endurance",
-          "values": [
-            {
-              "etModifies": "EnduranceDiscount",
-              "mag": {
-                "pve": 0.1855
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Overwhelming_Force_E.Attuned_Overwhelming_Force_E"
-            }
-          ]
+          },
+          "stat": "Recharge",
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Overwhelming_Force_E.Attuned_Overwhelming_Force_E",
+      "displayName": "Accuracy/Damage/Endurance/Recharge",
       "description": {
         "short": "+ACC, +DMG, -End Cost, +Rech",
         "long": "UNIQUE -- No more than 1 enhancement of this type may be slotted by a character.  Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}%, damage by {Boost.Attrib.Damage.Scale}%, reduces endurance cost by {Boost.Attrib.Endurance.Scale}% and reduces recharge time by {Boost.Attrib.Recharge.Scale}%."
       },
-      "isUnique": true,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Overwhelming_Force_E.Attuned_Overwhelming_Force_E",
-      "setName": "Overwhelming_Force",
-      "displayName": "Accuracy/Damage/Endurance/Recharge"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "KnockConvert",
-          "values": [
-            {
-              "etModifies": "Mez",
-              "mag": {
-                "pve": -0.99
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Overwhelming_Force_F.Attuned_Overwhelming_Force_F",
-              "mezType": "Knockback"
-            },
-            {
-              "etModifies": "Mez",
-              "mag": {
-                "pve": -0.99
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Overwhelming_Force_F.Attuned_Overwhelming_Force_F",
-              "mezType": "Knockup"
+          "mag": {
+            "IO": {
+              "cap": 0.1855
             }
-          ]
+          },
+          "stat": "Accuracy",
+          "toWho": "self"
         },
         {
-          "effectType": "Knockdown",
-          "values": [
-            {
-              "mag": {
-                "pve": 0.67
-              },
-              "cancelOnMiss": true,
-              "probability": 0.2,
-              "effectType": "Mez",
-              "stacking": 1,
-              "toWho": "all",
-              "powerFullName": "Boosts.Attuned_Overwhelming_Force_F.Attuned_Overwhelming_Force_F",
-              "mezType": "Knockback"
+          "mag": {
+            "IO": {
+              "cap": 0.1855
             }
-          ]
+          },
+          "stat": "Damage",
+          "damageType": [
+            "Smashing",
+            "Lethal",
+            "Fire",
+            "Cold",
+            "Energy",
+            "Negative",
+            "Toxic",
+            "Psionic"
+          ],
+          "toWho": "self"
         },
         {
-          "effectType": "Ones",
-          "values": [
-            {
-              "mag": {
-                "pve": -1
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Overwhelming_Force_F.Attuned_Overwhelming_Force_F"
+          "mag": {
+            "IO": {
+              "cap": 0.1855
             }
-          ]
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self"
         },
         {
-          "effectType": "Damage",
-          "values": [
-            {
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Overwhelming_Force_F.Attuned_Overwhelming_Force_F",
-              "damageType": "Smashing"
+          "mag": {
+            "IO": {
+              "cap": 0.1855
             }
-          ]
-        },
-        {
-          "effectType": "Boosts_33",
-          "values": [
-            {
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Overwhelming_Force_F.Attuned_Overwhelming_Force_F",
-              "damageType": "Lethal"
-            },
-            {
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Overwhelming_Force_F.Attuned_Overwhelming_Force_F",
-              "damageType": "Fire"
-            },
-            {
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Overwhelming_Force_F.Attuned_Overwhelming_Force_F",
-              "damageType": "Cold"
-            },
-            {
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Overwhelming_Force_F.Attuned_Overwhelming_Force_F",
-              "damageType": "Energy"
-            },
-            {
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Overwhelming_Force_F.Attuned_Overwhelming_Force_F",
-              "damageType": "Negative"
-            },
-            {
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Overwhelming_Force_F.Attuned_Overwhelming_Force_F",
-              "damageType": "Toxic"
-            },
-            {
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Overwhelming_Force_F.Attuned_Overwhelming_Force_F",
-              "damageType": "Psionic"
-            }
-          ]
+          },
+          "stat": "Recharge",
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Overwhelming_Force_F.Attuned_Overwhelming_Force_F",
+      "displayName": "Damage/Chance for Knockdown/Knockback to Knockdown",
       "description": {
         "short": "+DMG, Chance for Knockdown, Converts Knockback to Knockdown",
         "long": "UNIQUE -- No more than 1 enhancement of this type may be slotted by a character.  Provides a 20% chance to cause knockdown to your targets, enhances the damage of a power by {Boost.Attrib.Damage.Scale}%, and converts any Knockback this power deals into Knockdown.  Some powers may have their chance to Knockdown reduced when this enhancement is slotted.  This enhancement also has a penchant for the dramatic..."
       },
-      "isUnique": true,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Overwhelming_Force_F.Attuned_Overwhelming_Force_F",
-      "setName": "Overwhelming_Force",
-      "displayName": "Damage/Chance for Knockdown/Knockback to Knockdown"
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Damage",
+          "damageType": [
+            "Smashing",
+            "Lethal",
+            "Fire",
+            "Cold",
+            "Energy",
+            "Negative",
+            "Toxic",
+            "Psionic"
+          ],
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": -0.99
+            }
+          },
+          "stat": "Knockback to Knockdown",
+          "mezType": 4,
+          "toWho": "self"
+        }
+      ]
     }
   ],
   "levels": {

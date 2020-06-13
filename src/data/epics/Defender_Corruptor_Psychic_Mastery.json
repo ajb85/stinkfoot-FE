@@ -6,16 +6,6 @@
   "displayName": "Psychic Mastery",
   "powers": [
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Hold",
-        "Range",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Immobilize",
@@ -28,8 +18,9 @@
               "duration": 14.3040009,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.Psychic_Mastery.Dominate",
               "mezType": "Hold"
@@ -47,8 +38,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Psychic_Mastery.Dominate",
               "damageType": "Psionic"
             }
@@ -65,8 +57,9 @@
               "duration": 2,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.Psychic_Mastery.Dominate",
               "mezType": "Hold"
@@ -74,6 +67,17 @@
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Hold",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Psychic_Mastery.Dominate",
+      "archetypeOrder": "epicPool",
       "powerIndex": 0,
       "castTimeReal": 1.1,
       "toggleCost": 10.66,
@@ -111,15 +115,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Endurance_Discount",
-        "Range",
-        "Recharge",
-        "Sleep"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Sleep",
@@ -132,8 +127,9 @@
               "duration": 23.84,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.Psychic_Mastery.Mass_Hypnosis",
               "mezType": "Sleep"
@@ -151,8 +147,9 @@
               "duration": 2,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.Psychic_Mastery.Mass_Hypnosis",
               "mezType": "Sleep"
@@ -160,6 +157,16 @@
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Endurance_Discount",
+        "Range",
+        "Recharge",
+        "Sleep"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Psychic_Mastery.Mass_Hypnosis",
+      "archetypeOrder": "epicPool",
       "powerIndex": 1,
       "castTimeReal": 2.03,
       "toggleCost": 19.5,
@@ -198,13 +205,6 @@
       "aoeModifier": 4.75
     },
     {
-      "allowedEnhancements": [
-        "Endurance_Discount",
-        "Recharge",
-        "Res_Damage"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Res_Dmg",
@@ -217,7 +217,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Psychic_Mastery.Mind_Over_Body",
               "damageType": "Smashing"
             },
@@ -229,7 +230,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Psychic_Mastery.Mind_Over_Body",
               "damageType": "Lethal"
             },
@@ -241,7 +243,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Psychic_Mastery.Mind_Over_Body",
               "damageType": "Psionic"
             },
@@ -252,7 +255,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Psychic_Mastery.Mind_Over_Body",
               "damageType": "Fire"
             },
@@ -263,7 +267,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Psychic_Mastery.Mind_Over_Body",
               "damageType": "Cold"
             },
@@ -274,7 +279,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Psychic_Mastery.Mind_Over_Body",
               "damageType": "Energy"
             },
@@ -285,7 +291,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Psychic_Mastery.Mind_Over_Body",
               "damageType": "Negative"
             },
@@ -296,22 +303,31 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Psychic_Mastery.Mind_Over_Body",
               "damageType": "Toxic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Endurance_Discount",
+        "Recharge",
+        "Res_Damage"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Psychic_Mastery.Mind_Over_Body",
+      "archetypeOrder": "epicPool",
       "powerIndex": 2,
       "castTimeReal": 0.67,
       "toggleCost": 0.325,
+      "isEpic": true,
       "fullName": "Epic_Psychic_Mastery_Mind_Over_Body",
       "displayName": "Mind Over Body",
       "requires": {
         "powers": {
-          "Epic_Psychic_Mastery_Dominate": true,
-          "Epic_Psychic_Mastery_Mass_Hypnosis": true
+          "Epic.Psychic_Mastery.Mind_Over_Body": true
         },
         "count": 1
       },
@@ -342,15 +358,6 @@
       "powerType": "Toggle"
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Confuse",
-        "Damage",
-        "Endurance_Discount",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Ones",
@@ -363,8 +370,9 @@
               "duration": 1.5,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.Psychic_Mastery.World_of_Confusion",
               "requiresToHitCheck": true,
@@ -383,23 +391,34 @@
               "effectType": "Damage",
               "ticks": 1,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Psychic_Mastery.World_of_Confusion",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Confuse",
+        "Damage",
+        "Endurance_Discount",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Psychic_Mastery.World_of_Confusion",
+      "archetypeOrder": "epicPool",
       "powerIndex": 3,
       "castTimeReal": 1.67,
       "toggleCost": 0.325,
+      "isEpic": true,
       "fullName": "Epic_Psychic_Mastery_World_of_Confusion",
       "displayName": "World of Confusion",
       "requires": {
         "powers": {
-          "Epic_Psychic_Mastery_Dominate": true,
-          "Epic_Psychic_Mastery_Mass_Hypnosis": true
+          "Epic.Psychic_Mastery.World_of_Confusion": true
         },
         "count": 1
       },
@@ -435,13 +454,6 @@
       "powerType": "Toggle"
     },
     {
-      "allowedEnhancements": [
-        "Endurance_Discount",
-        "Range",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Immobilize",
@@ -454,8 +466,9 @@
               "probability": 1,
               "duration": 0.894000053,
               "effectType": "Mez",
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.Psychic_Mastery.Telekinesis",
               "mezType": "Hold"
@@ -472,8 +485,9 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Mez",
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Psychic_Mastery.Telekinesis",
               "mezType": "Repel"
             },
@@ -483,23 +497,29 @@
               },
               "probability": 1,
               "effectType": "GrantPower",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Epic.Psychic_Mastery.Telekinesis"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Endurance_Discount",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Psychic_Mastery.Telekinesis",
+      "archetypeOrder": "epicPool",
       "powerIndex": 4,
       "castTimeReal": 1.13,
       "toggleCost": 3.9,
+      "isEpic": true,
       "fullName": "Epic_Psychic_Mastery_Telekinesis",
       "displayName": "Telekinesis",
       "requires": {
         "powers": {
-          "Epic_Psychic_Mastery_Dominate": true,
-          "Epic_Psychic_Mastery_Mass_Hypnosis": true,
-          "Epic_Psychic_Mastery_Mind_Over_Body": true,
-          "Epic_Psychic_Mastery_World_of_Confusion": true
+          "Epic.Psychic_Mastery.Telekinesis": true
         },
         "count": 2
       },

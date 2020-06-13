@@ -6,11 +6,6 @@
   "displayName": "Body Mastery",
   "powers": [
     {
-      "allowedEnhancements": [
-        "Endurance_Modification"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Ones",
@@ -22,12 +17,19 @@
               "probability": 1,
               "duration": 10.25,
               "effectType": "Endurance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Body_Mastery_Stalker.Conserve_Power"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Endurance_Modification"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Body_Mastery_Stalker.Conserve_Power",
+      "archetypeOrder": "epicPool",
       "powerIndex": 0,
       "fullName": "Epic_Body_Mastery_Superior_Conditioning",
       "displayName": "Superior Conditioning",
@@ -59,13 +61,6 @@
       "powerType": "Auto"
     },
     {
-      "allowedEnhancements": [
-        "ToHit_Buff",
-        "Endurance_Discount",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Buff_ToHit",
@@ -78,7 +73,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "ToHit",
-              "toWho": "All",
+              "buffable": true,
+              "toWho": "all",
               "powerFullName": "Epic.Body_Mastery_Stalker.Focused_Accuracy"
             }
           ]
@@ -87,14 +83,14 @@
           "effectType": "Res_Boolean",
           "values": [
             {
+              "etModifies": "ToHit",
               "mag": {
                 "pve": 0.5536
               },
               "probability": 1,
               "duration": 0.75,
               "effectType": "ResEffect",
-              "eTModifies": 40,
-              "toWho": "All",
+              "toWho": "all",
               "powerFullName": "Epic.Body_Mastery_Stalker.Focused_Accuracy"
             }
           ]
@@ -103,6 +99,7 @@
           "effectType": "Ones",
           "values": [
             {
+              "etModifies": "Accuracy",
               "mag": {
                 "pve": 0.2
               },
@@ -110,19 +107,18 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Enhancement",
-              "eTModifies": 1,
-              "toWho": "All",
+              "toWho": "all",
               "powerFullName": "Epic.Body_Mastery_Stalker.Focused_Accuracy"
             },
             {
+              "etModifies": "PerceptionRadius",
               "mag": {
                 "pve": 0.6
               },
               "probability": 1,
               "duration": 0.75,
               "effectType": "ResEffect",
-              "eTModifies": 23,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Epic.Body_Mastery_Stalker.Focused_Accuracy"
             },
             {
@@ -132,12 +128,21 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "PerceptionRadius",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Body_Mastery_Stalker.Focused_Accuracy"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "ToHit_Buff",
+        "Endurance_Discount",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Body_Mastery_Stalker.Focused_Accuracy",
+      "archetypeOrder": "epicPool",
       "powerIndex": 1,
       "castTimeReal": 1.17,
       "toggleCost": 0.78,
@@ -173,16 +178,6 @@
       "powerType": "Toggle"
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Defense_Debuff",
-        "Endurance_Discount",
-        "Range",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Damage",
@@ -195,8 +190,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Body_Mastery_Stalker.Laser_Beam_Eyes",
               "damageType": "Energy"
             }
@@ -213,22 +209,34 @@
               "duration": 6,
               "effectType": "Defense",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Body_Mastery_Stalker.Laser_Beam_Eyes"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Defense_Debuff",
+        "Endurance_Discount",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Body_Mastery_Stalker.Laser_Beam_Eyes",
+      "archetypeOrder": "epicPool",
       "powerIndex": 2,
       "castTimeReal": 1.67,
       "toggleCost": 6.5,
+      "isEpic": true,
       "fullName": "Epic_Body_Mastery_Laser_Beam_Eyes",
       "displayName": "Laser Beam Eyes",
       "requires": {
         "powers": {
-          "Epic_Body_Mastery_Superior_Conditioning": true,
-          "Epic_Body_Mastery_Focused_Accuracy": true
+          "Epic.Body_Mastery_Stalker.Laser_Beam_Eyes": true
         },
         "count": 1
       },
@@ -261,12 +269,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Heal",
-        "Endurance_Modification"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Ones",
@@ -278,7 +280,8 @@
               "probability": 1,
               "duration": 10.25,
               "effectType": "Regeneration",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Body_Mastery_Stalker.Physical_Perfection"
             },
             {
@@ -288,19 +291,27 @@
               "probability": 1,
               "duration": 10.25,
               "effectType": "Recovery",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Body_Mastery_Stalker.Physical_Perfection"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Heal",
+        "Endurance_Modification"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Body_Mastery_Stalker.Physical_Perfection",
+      "archetypeOrder": "epicPool",
       "powerIndex": 3,
+      "isEpic": true,
       "fullName": "Epic_Body_Mastery_Physical_Perfection",
       "displayName": "Physical Perfection",
       "requires": {
         "powers": {
-          "Epic_Body_Mastery_Superior_Conditioning": true,
-          "Epic_Body_Mastery_Focused_Accuracy": true
+          "Epic.Body_Mastery_Stalker.Physical_Perfection": true
         },
         "count": 1
       },
@@ -328,16 +339,6 @@
       "powerType": "Auto"
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Knockback",
-        "Range",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Damage",
@@ -350,8 +351,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Body_Mastery_Stalker.Energy_Torrent",
               "damageType": "Smashing"
             },
@@ -363,8 +365,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Body_Mastery_Stalker.Energy_Torrent",
               "damageType": "Energy"
             }
@@ -381,25 +384,35 @@
               "probability": 1,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Body_Mastery_Stalker.Energy_Torrent",
               "mezType": "Knockback"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Knockback",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Body_Mastery_Stalker.Energy_Torrent",
+      "archetypeOrder": "epicPool",
       "powerIndex": 4,
       "castTimeReal": 1.07,
       "toggleCost": 14.82,
+      "isEpic": true,
       "fullName": "Epic_Body_Mastery_Energy_Torrent",
       "displayName": "Energy Torrent",
       "requires": {
         "powers": {
-          "Epic_Body_Mastery_Superior_Conditioning": true,
-          "Epic_Body_Mastery_Focused_Accuracy": true,
-          "Epic_Body_Mastery_Laser_Beam_Eyes": true,
-          "Epic_Body_Mastery_Physical_Perfection": true
+          "Epic.Body_Mastery_Stalker.Energy_Torrent": true
         },
         "count": 2
       },

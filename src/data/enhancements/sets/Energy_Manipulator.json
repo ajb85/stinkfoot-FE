@@ -2,143 +2,99 @@
   "fullName": "IOSet.Energy_Manipulator",
   "enhancements": [
     {
-      "effects": [
-        {
-          "effectType": "EndMod",
-          "values": [
-            {
-              "etModifies": "Recovery",
-              "mag": {
-                "pve": 0.424
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Energy_Manipulator_A.Attuned_Energy_Manipulator_A"
-            }
-          ]
-        },
-        {
-          "effectType": "Endurance",
-          "values": [
-            {
-              "etModifies": "Endurance",
-              "mag": {
-                "pve": 0.424
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Energy_Manipulator_A.Attuned_Energy_Manipulator_A"
-            }
-          ]
-        }
-      ],
+      "type": "set",
+      "fullName": "Boosts.Attuned_Energy_Manipulator_A.Attuned_Energy_Manipulator_A",
+      "displayName": "Endurance Modification",
       "description": {
         "short": "+EndMod",
         "long": "Enhances the Endurance Modification potential of a power by {Boost.Attrib.EndMod.Scale}%."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Energy_Manipulator_A.Attuned_Energy_Manipulator_A",
-      "setName": "Energy_Manipulator",
-      "displayName": "Endurance Modification"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Recharge",
-          "values": [
-            {
-              "etModifies": "RechargeTime",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Energy_Manipulator_B.Attuned_Energy_Manipulator_B"
+          "mag": {
+            "IO": {
+              "cap": 0.424
             }
-          ]
+          },
+          "stat": "Endurance_Modification",
+          "toWho": "self"
         },
         {
-          "effectType": "EndMod",
-          "values": [
-            {
-              "etModifies": "Recovery",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Energy_Manipulator_B.Attuned_Energy_Manipulator_B"
+          "mag": {
+            "IO": {
+              "cap": 0.424
             }
-          ]
-        },
-        {
-          "effectType": "Endurance",
-          "values": [
-            {
-              "etModifies": "Endurance",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Energy_Manipulator_B.Attuned_Energy_Manipulator_B"
-            }
-          ]
+          },
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Energy_Manipulator_B.Attuned_Energy_Manipulator_B",
+      "displayName": "Endurance Modification/Recharge",
       "description": {
         "short": "+EndMod, +Rech",
         "long": "Enhances the Endurance Modification potential of a power by {Boost.Attrib.EndMod.Scale}% and reduces the recharge time by {Boost.Attrib.Recharge.Scale}%."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Energy_Manipulator_B.Attuned_Energy_Manipulator_B",
-      "setName": "Energy_Manipulator",
-      "displayName": "Endurance Modification/Recharge"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Stun",
-          "values": [
-            {
-              "mag": {
-                "pve": 2
-              },
-              "procsPerMinute": 2,
-              "cancelOnMiss": true,
-              "duration": 8,
-              "effectType": "Mez",
-              "stacking": 1,
-              "resistible": true,
-              "toWho": "all",
-              "attribType": 1,
-              "powerFullName": "Boosts.Attuned_Energy_Manipulator_C.Attuned_Energy_Manipulator_C",
-              "mezType": "Stun"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
+          },
+          "stat": "Endurance_Modification",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Recharge",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Energy_Manipulator_C.Attuned_Energy_Manipulator_C",
+      "displayName": "Chance to Stun",
       "description": {
         "short": "Adds Disorient Chance",
         "long": "Adds a chance to Disorient your foe.  This effect will trigger roughly 2 times per minute."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Energy_Manipulator_C.Attuned_Energy_Manipulator_C",
-      "setName": "Energy_Manipulator",
-      "displayName": "Chance to Stun"
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 2
+            }
+          },
+          "stat": "Chance to Stun",
+          "procsPerMinute": 2,
+          "cancelOnMiss": true,
+          "mezType": 10,
+          "stacking": 1,
+          "resistible": true,
+          "pvMode": 1,
+          "toWho": "all",
+          "attribType": 1
+        }
+      ]
     }
   ],
   "levels": {

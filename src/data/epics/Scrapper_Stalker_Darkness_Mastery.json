@@ -6,17 +6,6 @@
   "displayName": "Darkness Mastery",
   "powers": [
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "ToHit_Debuff",
-        "Endurance_Discount",
-        "Knockback",
-        "Range",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Damage",
@@ -29,8 +18,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Darkness_Mastery.Torrent",
               "damageType": "Smashing"
             }
@@ -47,8 +37,9 @@
               "probability": 1,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Darkness_Mastery.Torrent",
               "mezType": "Knockback"
             }
@@ -65,8 +56,9 @@
               "duration": 10,
               "effectType": "ToHit",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Darkness_Mastery.Torrent"
             }
           ]
@@ -83,7 +75,7 @@
               "effectType": "Rage",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Epic.Darkness_Mastery.Torrent"
             }
           ]
@@ -100,9 +92,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.Darkness_Mastery.Torrent",
               "requiresToHitCheck": true,
@@ -111,6 +104,18 @@
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "ToHit_Debuff",
+        "Endurance_Discount",
+        "Knockback",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Darkness_Mastery.Torrent",
+      "archetypeOrder": "epicPool",
       "powerIndex": 0,
       "castTimeReal": 1.03,
       "toggleCost": 17.94,
@@ -153,15 +158,6 @@
       "aoeModifier": 2.73993444
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Endurance_Discount",
-        "Hold",
-        "Range",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Immobilize",
@@ -174,8 +170,9 @@
               "duration": 9.536,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.Darkness_Mastery.Petrifying_Gaze",
               "mezType": "Hold"
@@ -193,8 +190,9 @@
               "duration": 2,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.Darkness_Mastery.Petrifying_Gaze",
               "mezType": "Hold"
@@ -208,7 +206,7 @@
               "effectType": "Rage",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Epic.Darkness_Mastery.Petrifying_Gaze"
             }
           ]
@@ -225,9 +223,10 @@
               "duration": 13.33,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.Darkness_Mastery.Petrifying_Gaze",
               "requiresToHitCheck": true,
@@ -236,6 +235,16 @@
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Endurance_Discount",
+        "Hold",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Darkness_Mastery.Petrifying_Gaze",
+      "archetypeOrder": "epicPool",
       "powerIndex": 1,
       "castTimeReal": 1.67,
       "toggleCost": 9.75,
@@ -271,16 +280,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "ToHit_Debuff",
-        "Endurance_Discount",
-        "Range",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Damage",
@@ -293,8 +292,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Darkness_Mastery.Dark_Blast",
               "damageType": "Negative"
             }
@@ -311,8 +311,9 @@
               "duration": 6,
               "effectType": "ToHit",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Darkness_Mastery.Dark_Blast"
             }
           ]
@@ -329,7 +330,7 @@
               "effectType": "Rage",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Epic.Darkness_Mastery.Dark_Blast"
             }
           ]
@@ -346,9 +347,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.Darkness_Mastery.Dark_Blast",
               "requiresToHitCheck": true,
@@ -357,15 +359,26 @@
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "ToHit_Debuff",
+        "Endurance_Discount",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Darkness_Mastery.Dark_Blast",
+      "archetypeOrder": "epicPool",
       "powerIndex": 2,
       "castTimeReal": 1,
       "toggleCost": 6.5,
+      "isEpic": true,
       "fullName": "Epic_Darkness_Mastery_Dark_Blast",
       "displayName": "Dark Blast",
       "requires": {
         "powers": {
-          "Epic_Darkness_Mastery_Torrent": true,
-          "Epic_Darkness_Mastery_Petrifying_Gaze": true
+          "Epic.Darkness_Mastery.Dark_Blast": true
         },
         "count": 1
       },
@@ -398,16 +411,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "ToHit_Debuff",
-        "Endurance_Discount",
-        "Range",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Damage",
@@ -422,8 +425,9 @@
               "effectType": "Damage",
               "ticks": 10,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Darkness_Mastery.Night_Fall",
               "damageType": "Negative"
             }
@@ -440,8 +444,9 @@
               "duration": 10,
               "effectType": "ToHit",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Darkness_Mastery.Night_Fall"
             }
           ]
@@ -458,7 +463,7 @@
               "effectType": "Rage",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Epic.Darkness_Mastery.Night_Fall"
             }
           ]
@@ -475,9 +480,10 @@
               "duration": 13.33,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.Darkness_Mastery.Night_Fall",
               "requiresToHitCheck": true,
@@ -486,15 +492,26 @@
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "ToHit_Debuff",
+        "Endurance_Discount",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Darkness_Mastery.Night_Fall",
+      "archetypeOrder": "epicPool",
       "powerIndex": 3,
       "castTimeReal": 2,
       "toggleCost": 16.38,
+      "isEpic": true,
       "fullName": "Epic_Darkness_Mastery_Night_Fall",
       "displayName": "Night Fall",
       "requires": {
         "powers": {
-          "Epic_Darkness_Mastery_Torrent": true,
-          "Epic_Darkness_Mastery_Petrifying_Gaze": true
+          "Epic.Darkness_Mastery.Night_Fall": true
         },
         "count": 1
       },
@@ -530,17 +547,6 @@
       "aoeModifier": 2.51993251
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "ToHit_Debuff",
-        "Endurance_Discount",
-        "Immobilize",
-        "Range",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Damage",
@@ -556,8 +562,9 @@
               "ticks": 8,
               "delayedTime": 1,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Darkness_Mastery.Tenebrous_Tentacles",
               "damageType": "Smashing"
             },
@@ -569,8 +576,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Darkness_Mastery.Tenebrous_Tentacles",
               "damageType": "Negative"
             }
@@ -587,8 +595,9 @@
               "duration": 8,
               "effectType": "ToHit",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Darkness_Mastery.Tenebrous_Tentacles"
             }
           ]
@@ -604,10 +613,11 @@
               "duration": 17.8800011,
               "effectType": "Mez",
               "stacking": 1,
-              "toWho": "Target",
+              "buffable": true,
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.Darkness_Mastery.Tenebrous_Tentacles",
-              "mezType": "Immobilization"
+              "mezType": "Immob"
             }
           ]
         },
@@ -622,11 +632,12 @@
               "duration": 2,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.Darkness_Mastery.Tenebrous_Tentacles",
-              "mezType": "Immobilization"
+              "mezType": "Immob"
             },
             {
               "mag": {
@@ -637,7 +648,7 @@
               "effectType": "Rage",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Epic.Darkness_Mastery.Tenebrous_Tentacles"
             }
           ]
@@ -654,9 +665,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.Darkness_Mastery.Tenebrous_Tentacles",
               "requiresToHitCheck": true,
@@ -665,17 +677,27 @@
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "ToHit_Debuff",
+        "Endurance_Discount",
+        "Immobilize",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Darkness_Mastery.Tenebrous_Tentacles",
+      "archetypeOrder": "epicPool",
       "powerIndex": 4,
       "castTimeReal": 1.67,
       "toggleCost": 12.74,
+      "isEpic": true,
       "fullName": "Epic_Darkness_Mastery_Tenebrous_Tentacles",
       "displayName": "Tenebrous Tentacles",
       "requires": {
         "powers": {
-          "Epic_Darkness_Mastery_Torrent": true,
-          "Epic_Darkness_Mastery_Petrifying_Gaze": true,
-          "Epic_Darkness_Mastery_Dark_Blast": true,
-          "Epic_Darkness_Mastery_Night_Fall": true
+          "Epic.Darkness_Mastery.Tenebrous_Tentacles": true
         },
         "count": 2
       },

@@ -6,16 +6,6 @@
   "displayName": "Plant Manipulation",
   "powers": [
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Immobilize",
-        "Range",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Damage",
@@ -30,8 +20,9 @@
               "effectType": "Damage",
               "ticks": 5,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Plant_Manipulation.Entangle",
               "damageType": "Smashing"
             },
@@ -45,8 +36,9 @@
               "effectType": "Damage",
               "ticks": 5,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Plant_Manipulation.Entangle",
               "damageType": "Lethal"
             }
@@ -63,11 +55,12 @@
               "duration": 17.8800011,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Blaster_Support.Plant_Manipulation.Entangle",
-              "mezType": "Immobilization"
+              "mezType": "Immob"
             }
           ]
         },
@@ -82,11 +75,12 @@
               "duration": 2,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Blaster_Support.Plant_Manipulation.Entangle",
-              "mezType": "Immobilization"
+              "mezType": "Immob"
             },
             {
               "mag": {
@@ -96,7 +90,7 @@
               "duration": 15,
               "effectType": "MezResist",
               "stacking": 1,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Plant_Manipulation.Entangle",
               "mezType": "Knockback"
             },
@@ -108,7 +102,7 @@
               "duration": 15,
               "effectType": "MezResist",
               "stacking": 1,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Plant_Manipulation.Entangle",
               "mezType": "Knockup"
             },
@@ -120,7 +114,8 @@
               "duration": 15,
               "effectType": "Mez",
               "stacking": 1,
-              "toWho": "Target",
+              "buffable": true,
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Plant_Manipulation.Entangle",
               "mezType": "Knockback"
             },
@@ -132,7 +127,8 @@
               "duration": 15,
               "effectType": "Mez",
               "stacking": 1,
-              "toWho": "Target",
+              "buffable": true,
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Plant_Manipulation.Entangle",
               "mezType": "Knockup"
             },
@@ -144,7 +140,8 @@
               "duration": 15,
               "effectType": "Fly",
               "stacking": 1,
-              "toWho": "Target",
+              "buffable": true,
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Plant_Manipulation.Entangle"
             }
           ]
@@ -162,7 +159,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Plant_Manipulation.Entangle",
               "damageType": "Smashing"
             },
@@ -176,7 +173,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Plant_Manipulation.Entangle",
               "damageType": "Lethal"
             },
@@ -190,7 +187,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Plant_Manipulation.Entangle",
               "damageType": "Fire"
             },
@@ -204,7 +201,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Plant_Manipulation.Entangle",
               "damageType": "Cold"
             },
@@ -218,7 +215,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Plant_Manipulation.Entangle",
               "damageType": "Energy"
             },
@@ -232,7 +229,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Plant_Manipulation.Entangle",
               "damageType": "Negative"
             },
@@ -246,7 +243,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Plant_Manipulation.Entangle",
               "damageType": "Toxic"
             },
@@ -260,13 +257,24 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Plant_Manipulation.Entangle",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Immobilize",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Support.Plant_Manipulation.Entangle",
+      "archetypeOrder": "secondary",
       "powerIndex": 0,
       "castTimeReal": 1.2,
       "toggleCost": 5.2,
@@ -306,15 +314,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Defense_Debuff",
-        "Endurance_Discount",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Damage",
@@ -327,8 +326,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Plant_Manipulation.Skewer",
               "damageType": "Lethal"
             },
@@ -343,8 +343,9 @@
               "ticks": 4,
               "delayedTime": 0.5,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Plant_Manipulation.Skewer",
               "damageType": "Toxic"
             }
@@ -359,7 +360,7 @@
               },
               "effectType": "DropToggles",
               "stacking": 1,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Plant_Manipulation.Skewer"
             }
           ]
@@ -375,8 +376,9 @@
               "duration": 6,
               "effectType": "Defense",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Plant_Manipulation.Skewer"
             }
           ]
@@ -394,7 +396,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Plant_Manipulation.Skewer",
               "damageType": "Smashing"
             },
@@ -408,7 +410,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Plant_Manipulation.Skewer",
               "damageType": "Lethal"
             },
@@ -422,7 +424,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Plant_Manipulation.Skewer",
               "damageType": "Fire"
             },
@@ -436,7 +438,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Plant_Manipulation.Skewer",
               "damageType": "Cold"
             },
@@ -450,7 +452,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Plant_Manipulation.Skewer",
               "damageType": "Energy"
             },
@@ -464,7 +466,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Plant_Manipulation.Skewer",
               "damageType": "Negative"
             },
@@ -478,7 +480,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Plant_Manipulation.Skewer",
               "damageType": "Toxic"
             },
@@ -492,13 +494,23 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Plant_Manipulation.Skewer",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Defense_Debuff",
+        "Endurance_Discount",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Support.Plant_Manipulation.Skewer",
+      "archetypeOrder": "secondary",
       "powerIndex": 1,
       "castTimeReal": 1.63,
       "toggleCost": 10.192,
@@ -539,16 +551,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Hold",
-        "Range",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Immobilize",
@@ -561,8 +563,9 @@
               "duration": 14.3040009,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Blaster_Support.Plant_Manipulation.Strangler",
               "mezType": "Hold"
@@ -580,8 +583,9 @@
               "duration": 2,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Blaster_Support.Plant_Manipulation.Strangler",
               "mezType": "Hold"
@@ -601,8 +605,9 @@
               "effectType": "Damage",
               "ticks": 5,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Plant_Manipulation.Strangler",
               "damageType": "Smashing"
             }
@@ -621,7 +626,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Plant_Manipulation.Strangler",
               "damageType": "Smashing"
             },
@@ -635,7 +640,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Plant_Manipulation.Strangler",
               "damageType": "Lethal"
             },
@@ -649,7 +654,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Plant_Manipulation.Strangler",
               "damageType": "Fire"
             },
@@ -663,7 +668,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Plant_Manipulation.Strangler",
               "damageType": "Cold"
             },
@@ -677,7 +682,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Plant_Manipulation.Strangler",
               "damageType": "Energy"
             },
@@ -691,7 +696,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Plant_Manipulation.Strangler",
               "damageType": "Negative"
             },
@@ -705,13 +710,24 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Plant_Manipulation.Strangler",
               "damageType": "Toxic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Hold",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Support.Plant_Manipulation.Strangler",
+      "archetypeOrder": "secondary",
       "powerIndex": 2,
       "castTimeReal": 2.07,
       "toggleCost": 11.388,
@@ -750,13 +766,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "ToHit_Buff",
-        "Endurance_Discount",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Buff_ToHit",
@@ -770,7 +779,8 @@
               "variableModified": true,
               "effectType": "ToHit",
               "stacking": 1,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Plant_Manipulation.Toxins"
             }
           ]
@@ -784,12 +794,20 @@
               },
               "probability": 1,
               "effectType": "GrantPower",
-              "toWho": "All",
+              "toWho": "all",
               "powerFullName": "Blaster_Support.Plant_Manipulation.Toxins"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "ToHit_Buff",
+        "Endurance_Discount",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Support.Plant_Manipulation.Toxins",
+      "archetypeOrder": "secondary",
       "powerIndex": 3,
       "castTimeReal": 1.17,
       "toggleCost": 5.2,
@@ -825,15 +843,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Defense_Debuff",
-        "Endurance_Discount",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Damage",
@@ -846,8 +855,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Plant_Manipulation.Thorn_Burst",
               "damageType": "Lethal"
             },
@@ -862,8 +872,9 @@
               "ticks": 4,
               "delayedTime": 0.5,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Plant_Manipulation.Thorn_Burst",
               "damageType": "Toxic"
             }
@@ -880,8 +891,9 @@
               "duration": 10,
               "effectType": "Defense",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Plant_Manipulation.Thorn_Burst"
             }
           ]
@@ -897,7 +909,7 @@
               "duration": 10.5,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Plant_Manipulation.Thorn_Burst",
               "damageType": "Smashing"
             },
@@ -909,7 +921,7 @@
               "duration": 10.5,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Plant_Manipulation.Thorn_Burst",
               "damageType": "Lethal"
             },
@@ -921,7 +933,7 @@
               "duration": 10.5,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Plant_Manipulation.Thorn_Burst",
               "damageType": "Fire"
             },
@@ -933,7 +945,7 @@
               "duration": 10.5,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Plant_Manipulation.Thorn_Burst",
               "damageType": "Cold"
             },
@@ -945,7 +957,7 @@
               "duration": 10.5,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Plant_Manipulation.Thorn_Burst",
               "damageType": "Energy"
             },
@@ -957,7 +969,7 @@
               "duration": 10.5,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Plant_Manipulation.Thorn_Burst",
               "damageType": "Negative"
             },
@@ -969,7 +981,7 @@
               "duration": 10.5,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Plant_Manipulation.Thorn_Burst",
               "damageType": "Toxic"
             },
@@ -981,13 +993,23 @@
               "duration": 10.5,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Plant_Manipulation.Thorn_Burst",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Defense_Debuff",
+        "Endurance_Discount",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Support.Plant_Manipulation.Thorn_Burst",
+      "archetypeOrder": "secondary",
       "powerIndex": 4,
       "castTimeReal": 3,
       "toggleCost": 16.016,
@@ -1027,15 +1049,6 @@
       "aoeModifier": 3.25
     },
     {
-      "allowedEnhancements": [
-        "Endurance_Discount",
-        "Heal",
-        "Recharge",
-        "Endurance_Modification",
-        "Res_Damage"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "HealSelf",
@@ -1047,7 +1060,8 @@
               "probability": 1,
               "duration": 3,
               "effectType": "Absorb",
-              "toWho": "All",
+              "buffable": true,
+              "toWho": "all",
               "powerFullName": "Blaster_Support.Plant_Manipulation.Wild_Fortress"
             }
           ]
@@ -1062,7 +1076,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Recovery",
-              "toWho": "All",
+              "buffable": true,
+              "toWho": "all",
               "powerFullName": "Blaster_Support.Plant_Manipulation.Wild_Fortress"
             }
           ]
@@ -1077,7 +1092,7 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Mez",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Plant_Manipulation.Wild_Fortress",
               "mezType": "Confuse"
             }
@@ -1093,13 +1108,24 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Plant_Manipulation.Wild_Fortress",
               "damageType": "Toxic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Endurance_Discount",
+        "Heal",
+        "Recharge",
+        "Endurance_Modification",
+        "Res_Damage"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Support.Plant_Manipulation.Wild_Fortress",
+      "archetypeOrder": "secondary",
       "powerIndex": 5,
       "castTimeReal": 2.27,
       "fullName": "Blaster_Secondary_Plant_Manipulation_Wild_Fortress",
@@ -1136,16 +1162,6 @@
       "powerType": "Toggle"
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Defense_Debuff",
-        "Endurance_Discount",
-        "Knockback",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Damage",
@@ -1158,8 +1174,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Plant_Manipulation.Ripper",
               "damageType": "Lethal"
             },
@@ -1174,8 +1191,9 @@
               "ticks": 5,
               "delayedTime": 0.5,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Plant_Manipulation.Ripper",
               "damageType": "Toxic"
             }
@@ -1192,8 +1210,9 @@
               "probability": 0.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Plant_Manipulation.Ripper",
               "mezType": "Knockback"
             },
@@ -1203,7 +1222,7 @@
               },
               "effectType": "DropToggles",
               "stacking": 1,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Plant_Manipulation.Ripper"
             }
           ]
@@ -1220,8 +1239,9 @@
               "duration": 12,
               "effectType": "Defense",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Plant_Manipulation.Ripper"
             }
           ]
@@ -1239,7 +1259,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Plant_Manipulation.Ripper",
               "damageType": "Smashing"
             },
@@ -1253,7 +1273,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Plant_Manipulation.Ripper",
               "damageType": "Lethal"
             },
@@ -1267,7 +1287,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Plant_Manipulation.Ripper",
               "damageType": "Fire"
             },
@@ -1281,7 +1301,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Plant_Manipulation.Ripper",
               "damageType": "Cold"
             },
@@ -1295,7 +1315,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Plant_Manipulation.Ripper",
               "damageType": "Energy"
             },
@@ -1309,7 +1329,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Plant_Manipulation.Ripper",
               "damageType": "Negative"
             },
@@ -1323,7 +1343,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Plant_Manipulation.Ripper",
               "damageType": "Toxic"
             },
@@ -1337,13 +1357,24 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Plant_Manipulation.Ripper",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Defense_Debuff",
+        "Endurance_Discount",
+        "Knockback",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Support.Plant_Manipulation.Ripper",
+      "archetypeOrder": "secondary",
       "powerIndex": 6,
       "castTimeReal": 2.17,
       "toggleCost": 12.688,
@@ -1388,15 +1419,6 @@
       "aoeModifier": 1.35699379
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Endurance_Discount",
-        "Hold",
-        "Range",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Immobilize",
@@ -1409,8 +1431,9 @@
               "duration": 9.536,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Blaster_Support.Plant_Manipulation.Vines",
               "mezType": "Hold"
@@ -1428,8 +1451,9 @@
               "duration": 2,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Blaster_Support.Plant_Manipulation.Vines",
               "mezType": "Hold"
@@ -1449,7 +1473,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Plant_Manipulation.Vines",
               "damageType": "Smashing"
             },
@@ -1463,7 +1487,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Plant_Manipulation.Vines",
               "damageType": "Lethal"
             },
@@ -1477,7 +1501,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Plant_Manipulation.Vines",
               "damageType": "Fire"
             },
@@ -1491,7 +1515,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Plant_Manipulation.Vines",
               "damageType": "Cold"
             },
@@ -1505,7 +1529,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Plant_Manipulation.Vines",
               "damageType": "Energy"
             },
@@ -1519,7 +1543,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Plant_Manipulation.Vines",
               "damageType": "Negative"
             },
@@ -1533,7 +1557,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Plant_Manipulation.Vines",
               "damageType": "Toxic"
             },
@@ -1547,13 +1571,23 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Plant_Manipulation.Vines",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Endurance_Discount",
+        "Hold",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Support.Plant_Manipulation.Vines",
+      "archetypeOrder": "secondary",
       "powerIndex": 7,
       "castTimeReal": 3.1,
       "toggleCost": 20.18,
@@ -1591,14 +1625,6 @@
       "aoeModifier": 3.25
     },
     {
-      "allowedEnhancements": [
-        "ToHit_Debuff",
-        "Endurance_Discount",
-        "Range",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Debuff_ToHit",
@@ -1610,8 +1636,9 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "ToHit",
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Plant_Manipulation.Spore_Cloud"
             }
           ]
@@ -1628,7 +1655,7 @@
               "duration": 0.75,
               "effectType": "DamageBuff",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Plant_Manipulation.Spore_Cloud",
               "damageType": "Smashing"
             },
@@ -1641,7 +1668,7 @@
               "duration": 0.75,
               "effectType": "DamageBuff",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Plant_Manipulation.Spore_Cloud",
               "damageType": "Lethal"
             },
@@ -1654,7 +1681,7 @@
               "duration": 0.75,
               "effectType": "DamageBuff",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Plant_Manipulation.Spore_Cloud",
               "damageType": "Fire"
             },
@@ -1667,7 +1694,7 @@
               "duration": 0.75,
               "effectType": "DamageBuff",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Plant_Manipulation.Spore_Cloud",
               "damageType": "Cold"
             },
@@ -1680,7 +1707,7 @@
               "duration": 0.75,
               "effectType": "DamageBuff",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Plant_Manipulation.Spore_Cloud",
               "damageType": "Energy"
             },
@@ -1693,7 +1720,7 @@
               "duration": 0.75,
               "effectType": "DamageBuff",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Plant_Manipulation.Spore_Cloud",
               "damageType": "Negative"
             },
@@ -1706,7 +1733,7 @@
               "duration": 0.75,
               "effectType": "DamageBuff",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Plant_Manipulation.Spore_Cloud",
               "damageType": "Toxic"
             },
@@ -1719,7 +1746,7 @@
               "duration": 0.75,
               "effectType": "DamageBuff",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Plant_Manipulation.Spore_Cloud",
               "damageType": "Psionic"
             }
@@ -1736,7 +1763,7 @@
               "duration": 0.75,
               "effectType": "Regeneration",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Plant_Manipulation.Spore_Cloud"
             }
           ]
@@ -1752,7 +1779,7 @@
               "duration": 0.75,
               "effectType": "Regeneration",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Plant_Manipulation.Spore_Cloud"
             }
           ]
@@ -1768,7 +1795,7 @@
               "duration": 10.6,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Plant_Manipulation.Spore_Cloud",
               "damageType": "Smashing"
             },
@@ -1780,7 +1807,7 @@
               "duration": 10.6,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Plant_Manipulation.Spore_Cloud",
               "damageType": "Lethal"
             },
@@ -1792,7 +1819,7 @@
               "duration": 10.6,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Plant_Manipulation.Spore_Cloud",
               "damageType": "Fire"
             },
@@ -1804,7 +1831,7 @@
               "duration": 10.6,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Plant_Manipulation.Spore_Cloud",
               "damageType": "Cold"
             },
@@ -1816,7 +1843,7 @@
               "duration": 10.6,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Plant_Manipulation.Spore_Cloud",
               "damageType": "Energy"
             },
@@ -1828,7 +1855,7 @@
               "duration": 10.6,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Plant_Manipulation.Spore_Cloud",
               "damageType": "Negative"
             },
@@ -1840,7 +1867,7 @@
               "duration": 10.6,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Plant_Manipulation.Spore_Cloud",
               "damageType": "Toxic"
             },
@@ -1852,13 +1879,22 @@
               "duration": 10.6,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Plant_Manipulation.Spore_Cloud",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "ToHit_Debuff",
+        "Endurance_Discount",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Support.Plant_Manipulation.Spore_Cloud",
+      "archetypeOrder": "secondary",
       "powerIndex": 8,
       "castTimeReal": 3.1,
       "toggleCost": 0.52,

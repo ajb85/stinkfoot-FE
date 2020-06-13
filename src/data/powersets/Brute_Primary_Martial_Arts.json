@@ -6,16 +6,6 @@
   "displayName": "Martial Arts",
   "powers": [
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Recharge",
-        "Stun",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Damage",
@@ -28,8 +18,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Martial_Arts.Thunder_Kick",
               "damageType": "Smashing"
             }
@@ -47,8 +38,9 @@
               "duration": 7.15200043,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Martial_Arts.Thunder_Kick",
               "mezType": "Stun"
@@ -64,8 +56,9 @@
               },
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Martial_Arts.Thunder_Kick",
               "damageType": "Fire"
             }
@@ -83,9 +76,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Martial_Arts.Thunder_Kick",
               "requiresToHitCheck": true,
@@ -103,12 +97,23 @@
               "probability": 1,
               "effectType": "Rage",
               "resistible": true,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Martial_Arts.Thunder_Kick"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Recharge",
+        "Stun",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Martial_Arts.Thunder_Kick",
+      "archetypeOrder": "primary",
       "powerIndex": 0,
       "castTimeReal": 0.83,
       "toggleCost": 4.368,
@@ -150,15 +155,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Recharge",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Damage",
@@ -171,8 +167,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Martial_Arts.Storm_Kick",
               "damageType": "Smashing"
             }
@@ -187,8 +184,9 @@
               },
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Martial_Arts.Storm_Kick",
               "damageType": "Fire"
             }
@@ -204,7 +202,7 @@
               "probability": 1,
               "duration": 10,
               "effectType": "Defense",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Martial_Arts.Storm_Kick",
               "damageType": "Melee"
             },
@@ -215,7 +213,7 @@
               "probability": 1,
               "duration": 10,
               "effectType": "Defense",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Martial_Arts.Storm_Kick",
               "damageType": "Ranged"
             },
@@ -226,7 +224,7 @@
               "probability": 1,
               "duration": 10,
               "effectType": "Defense",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Martial_Arts.Storm_Kick",
               "damageType": "AoE"
             },
@@ -237,7 +235,7 @@
               "probability": 1,
               "duration": 10,
               "effectType": "Defense",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Martial_Arts.Storm_Kick",
               "damageType": "Smashing"
             },
@@ -248,7 +246,7 @@
               "probability": 1,
               "duration": 10,
               "effectType": "Defense",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Martial_Arts.Storm_Kick",
               "damageType": "Lethal"
             },
@@ -259,7 +257,7 @@
               "probability": 1,
               "duration": 10,
               "effectType": "Defense",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Martial_Arts.Storm_Kick",
               "damageType": "Fire"
             },
@@ -270,7 +268,7 @@
               "probability": 1,
               "duration": 10,
               "effectType": "Defense",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Martial_Arts.Storm_Kick",
               "damageType": "Cold"
             },
@@ -281,7 +279,7 @@
               "probability": 1,
               "duration": 10,
               "effectType": "Defense",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Martial_Arts.Storm_Kick",
               "damageType": "Energy"
             },
@@ -292,7 +290,7 @@
               "probability": 1,
               "duration": 10,
               "effectType": "Defense",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Martial_Arts.Storm_Kick",
               "damageType": "Negative"
             }
@@ -310,9 +308,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Martial_Arts.Storm_Kick",
               "requiresToHitCheck": true,
@@ -330,12 +329,22 @@
               "probability": 1,
               "effectType": "Rage",
               "resistible": true,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Martial_Arts.Storm_Kick"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Recharge",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Martial_Arts.Storm_Kick",
+      "archetypeOrder": "primary",
       "powerIndex": 1,
       "castTimeReal": 0.83,
       "toggleCost": 7.0044,
@@ -377,16 +386,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Recharge",
-        "Stun",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Damage",
@@ -399,8 +398,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Martial_Arts.Cobra_Strike",
               "damageType": "Smashing"
             }
@@ -418,8 +418,9 @@
               "duration": 11.92,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Martial_Arts.Cobra_Strike",
               "mezType": "Stun"
@@ -435,8 +436,9 @@
               },
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Martial_Arts.Cobra_Strike",
               "damageType": "Fire"
             }
@@ -454,9 +456,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Martial_Arts.Cobra_Strike",
               "requiresToHitCheck": true,
@@ -474,12 +477,23 @@
               "probability": 1,
               "effectType": "Rage",
               "resistible": true,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Martial_Arts.Cobra_Strike"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Recharge",
+        "Stun",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Martial_Arts.Cobra_Strike",
+      "archetypeOrder": "primary",
       "powerIndex": 2,
       "castTimeReal": 1.67,
       "toggleCost": 10.192,
@@ -521,14 +535,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Range",
-        "Recharge",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Taunt",
@@ -542,8 +548,9 @@
               "duration": 20.5999985,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Martial_Arts.Warriors_Provocation",
               "mezType": "Taunt"
@@ -554,16 +561,16 @@
           "effectType": "Ones",
           "values": [
             {
+              "etModifies": "Range",
               "mag": {
                 "pve": -0.75
               },
               "probability": 1,
               "duration": 12,
               "effectType": "Enhancement",
-              "eTModifies": 24,
               "stacking": 1,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Martial_Arts.Warriors_Provocation"
             },
             {
@@ -573,14 +580,24 @@
               "probability": 1,
               "effectType": "Null",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Martial_Arts.Warriors_Provocation",
               "requiresToHitCheck": true
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Range",
+        "Recharge",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Martial_Arts.Warriors_Provocation",
+      "archetypeOrder": "primary",
       "powerIndex": 3,
       "castTimeReal": 1.67,
       "fullName": "Brute_Primary_Martial_Arts_Warrior's_Provocation",
@@ -616,16 +633,6 @@
       "aoeModifier": 3.25
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Knockback",
-        "Recharge",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Damage",
@@ -638,8 +645,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Martial_Arts.Crane_Kick",
               "damageType": "Smashing"
             }
@@ -656,8 +664,9 @@
               "probability": 0.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Martial_Arts.Crane_Kick",
               "mezType": "Knockback"
             }
@@ -672,8 +681,9 @@
               },
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Martial_Arts.Crane_Kick",
               "damageType": "Fire"
             }
@@ -691,9 +701,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Martial_Arts.Crane_Kick",
               "requiresToHitCheck": true,
@@ -711,12 +722,23 @@
               "probability": 1,
               "effectType": "Rage",
               "resistible": true,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Martial_Arts.Crane_Kick"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Knockback",
+        "Recharge",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Martial_Arts.Crane_Kick",
+      "archetypeOrder": "primary",
       "powerIndex": 4,
       "castTimeReal": 1.67,
       "toggleCost": 10.192,
@@ -758,13 +780,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "ToHit_Buff",
-        "Endurance_Discount",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Buff_ToHit",
@@ -778,7 +793,8 @@
               "variableModified": true,
               "effectType": "ToHit",
               "stacking": 1,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Martial_Arts.Focus_Chi"
             }
           ]
@@ -795,7 +811,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Martial_Arts.Focus_Chi",
               "damageType": "Smashing"
             },
@@ -808,7 +824,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Martial_Arts.Focus_Chi",
               "damageType": "Lethal"
             },
@@ -821,7 +837,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Martial_Arts.Focus_Chi",
               "damageType": "Fire"
             },
@@ -834,7 +850,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Martial_Arts.Focus_Chi",
               "damageType": "Cold"
             },
@@ -847,7 +863,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Martial_Arts.Focus_Chi",
               "damageType": "Energy"
             },
@@ -860,7 +876,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Martial_Arts.Focus_Chi",
               "damageType": "Negative"
             },
@@ -873,7 +889,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Martial_Arts.Focus_Chi",
               "damageType": "Toxic"
             },
@@ -886,13 +902,21 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Martial_Arts.Focus_Chi",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "ToHit_Buff",
+        "Endurance_Discount",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Martial_Arts.Focus_Chi",
+      "archetypeOrder": "primary",
       "powerIndex": 5,
       "castTimeReal": 1.17,
       "toggleCost": 5.2,
@@ -926,17 +950,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Immobilize",
-        "Recharge",
-        "Slow",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Damage",
@@ -949,8 +962,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Martial_Arts.Crippling_Axe_Kick",
               "damageType": "Smashing"
             }
@@ -968,11 +982,12 @@
               "duration": 11.92,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Martial_Arts.Crippling_Axe_Kick",
-              "mezType": "Immobilization"
+              "mezType": "Immob"
             }
           ]
         },
@@ -987,21 +1002,22 @@
               "duration": 8,
               "effectType": "SpeedRunning",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Martial_Arts.Crippling_Axe_Kick"
             },
             {
+              "etModifies": "JumpHeight",
               "mag": {
                 "pve": -0.5
               },
               "probability": 1,
               "duration": 8,
               "effectType": "Enhancement",
-              "eTModifies": 16,
               "stacking": 1,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Martial_Arts.Crippling_Axe_Kick"
             },
             {
@@ -1012,8 +1028,9 @@
               "duration": 8,
               "effectType": "SpeedJumping",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Martial_Arts.Crippling_Axe_Kick"
             }
           ]
@@ -1029,8 +1046,9 @@
               "duration": 8,
               "effectType": "Fly",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Martial_Arts.Crippling_Axe_Kick"
             },
             {
@@ -1040,7 +1058,7 @@
               "probability": 1,
               "effectType": "Rage",
               "resistible": true,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Martial_Arts.Crippling_Axe_Kick"
             }
           ]
@@ -1057,8 +1075,9 @@
               "duration": 10,
               "effectType": "Defense",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Martial_Arts.Crippling_Axe_Kick"
             }
           ]
@@ -1072,8 +1091,9 @@
               },
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Martial_Arts.Crippling_Axe_Kick",
               "damageType": "Fire"
             }
@@ -1091,9 +1111,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Martial_Arts.Crippling_Axe_Kick",
               "requiresToHitCheck": true,
@@ -1102,6 +1123,18 @@
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Immobilize",
+        "Recharge",
+        "Slow",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Martial_Arts.Crippling_Axe_Kick",
+      "archetypeOrder": "primary",
       "powerIndex": 6,
       "castTimeReal": 1.6,
       "toggleCost": 11.024,
@@ -1143,16 +1176,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Knockback",
-        "Recharge",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Damage",
@@ -1165,8 +1188,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Martial_Arts.Dragons_Tail",
               "damageType": "Smashing"
             }
@@ -1183,8 +1207,9 @@
               "probability": 0.75,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Martial_Arts.Dragons_Tail",
               "nearGround": true,
               "mezType": "Knockback"
@@ -1196,7 +1221,7 @@
               "probability": 1,
               "effectType": "Rage",
               "resistible": true,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Martial_Arts.Dragons_Tail"
             }
           ]
@@ -1210,8 +1235,9 @@
               },
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Martial_Arts.Dragons_Tail",
               "damageType": "Fire"
             }
@@ -1229,9 +1255,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Martial_Arts.Dragons_Tail",
               "requiresToHitCheck": true,
@@ -1240,6 +1267,17 @@
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Knockback",
+        "Recharge",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Martial_Arts.Dragons_Tail",
+      "archetypeOrder": "primary",
       "powerIndex": 7,
       "castTimeReal": 1.5,
       "toggleCost": 13.52,
@@ -1282,16 +1320,6 @@
       "aoeModifier": 2.2
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Recharge",
-        "Stun",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Damage",
@@ -1304,8 +1332,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Martial_Arts.Eagles_Claw",
               "damageType": "Smashing"
             }
@@ -1323,8 +1352,9 @@
               "duration": 4.768,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Martial_Arts.Eagles_Claw",
               "mezType": "Stun"
@@ -1340,8 +1370,9 @@
               },
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Martial_Arts.Eagles_Claw",
               "damageType": "Fire"
             }
@@ -1358,7 +1389,7 @@
               "duration": 3,
               "effectType": "DamageBuff",
               "delayedTime": 2.5,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Martial_Arts.Eagles_Claw",
               "damageType": "Smashing"
             },
@@ -1370,7 +1401,7 @@
               "duration": 3,
               "effectType": "DamageBuff",
               "delayedTime": 2.5,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Martial_Arts.Eagles_Claw",
               "damageType": "Lethal"
             },
@@ -1382,7 +1413,7 @@
               "duration": 3,
               "effectType": "DamageBuff",
               "delayedTime": 2.5,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Martial_Arts.Eagles_Claw",
               "damageType": "Fire"
             },
@@ -1394,7 +1425,7 @@
               "duration": 3,
               "effectType": "DamageBuff",
               "delayedTime": 2.5,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Martial_Arts.Eagles_Claw",
               "damageType": "Cold"
             },
@@ -1406,7 +1437,7 @@
               "duration": 3,
               "effectType": "DamageBuff",
               "delayedTime": 2.5,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Martial_Arts.Eagles_Claw",
               "damageType": "Energy"
             },
@@ -1418,7 +1449,7 @@
               "duration": 3,
               "effectType": "DamageBuff",
               "delayedTime": 2.5,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Martial_Arts.Eagles_Claw",
               "damageType": "Negative"
             },
@@ -1430,7 +1461,7 @@
               "duration": 3,
               "effectType": "DamageBuff",
               "delayedTime": 2.5,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Martial_Arts.Eagles_Claw",
               "damageType": "Toxic"
             },
@@ -1442,7 +1473,7 @@
               "duration": 3,
               "effectType": "DamageBuff",
               "delayedTime": 2.5,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Martial_Arts.Eagles_Claw",
               "damageType": "Psionic"
             }
@@ -1458,7 +1489,7 @@
               "probability": 1,
               "effectType": "Rage",
               "resistible": true,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Martial_Arts.Eagles_Claw"
             }
           ]
@@ -1475,9 +1506,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Martial_Arts.Eagles_Claw",
               "requiresToHitCheck": true,
@@ -1486,6 +1518,17 @@
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Recharge",
+        "Stun",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Martial_Arts.Eagles_Claw",
+      "archetypeOrder": "primary",
       "powerIndex": 8,
       "castTimeReal": 2.53,
       "toggleCost": 11.856,

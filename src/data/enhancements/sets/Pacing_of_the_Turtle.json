@@ -2,458 +2,183 @@
   "fullName": "IOSet.Pacing_of_the_Turtle",
   "enhancements": [
     {
-      "effects": [
-        {
-          "effectType": "Accuracy",
-          "values": [
-            {
-              "etModifies": "Accuracy",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Pacing_of_the_Turtle_A.Attuned_Pacing_of_the_Turtle_A"
-            }
-          ]
-        },
-        {
-          "effectType": "Slow",
-          "values": [
-            {
-              "etModifies": "SpeedRunning",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Pacing_of_the_Turtle_A.Attuned_Pacing_of_the_Turtle_A"
-            }
-          ]
-        },
-        {
-          "effectType": "Boosts_33",
-          "values": [
-            {
-              "etModifies": "SpeedJumping",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Pacing_of_the_Turtle_A.Attuned_Pacing_of_the_Turtle_A"
-            },
-            {
-              "etModifies": "SpeedFlying",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Pacing_of_the_Turtle_A.Attuned_Pacing_of_the_Turtle_A"
-            }
-          ]
-        }
-      ],
+      "type": "set",
+      "fullName": "Boosts.Attuned_Pacing_of_the_Turtle_A.Attuned_Pacing_of_the_Turtle_A",
+      "displayName": "Accuracy/Slow",
       "description": {
         "short": "+ACC, +Slow",
         "long": "Enhances the accuracy by {Boost.Attrib.Accuracy.Scale}% and slowing ability of a power by {Boost.Attrib.Slow.Scale}%."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Pacing_of_the_Turtle_A.Attuned_Pacing_of_the_Turtle_A",
-      "setName": "Pacing_of_the_Turtle",
-      "displayName": "Accuracy/Slow"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Damage",
-          "values": [
-            {
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Pacing_of_the_Turtle_B.Attuned_Pacing_of_the_Turtle_B",
-              "damageType": "Smashing"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
+          },
+          "stat": "Accuracy",
+          "toWho": "self"
         },
         {
-          "effectType": "Boosts_33",
-          "values": [
-            {
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Pacing_of_the_Turtle_B.Attuned_Pacing_of_the_Turtle_B",
-              "damageType": "Lethal"
-            },
-            {
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Pacing_of_the_Turtle_B.Attuned_Pacing_of_the_Turtle_B",
-              "damageType": "Fire"
-            },
-            {
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Pacing_of_the_Turtle_B.Attuned_Pacing_of_the_Turtle_B",
-              "damageType": "Cold"
-            },
-            {
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Pacing_of_the_Turtle_B.Attuned_Pacing_of_the_Turtle_B",
-              "damageType": "Energy"
-            },
-            {
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Pacing_of_the_Turtle_B.Attuned_Pacing_of_the_Turtle_B",
-              "damageType": "Negative"
-            },
-            {
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Pacing_of_the_Turtle_B.Attuned_Pacing_of_the_Turtle_B",
-              "damageType": "Toxic"
-            },
-            {
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Pacing_of_the_Turtle_B.Attuned_Pacing_of_the_Turtle_B",
-              "damageType": "Psionic"
-            },
-            {
-              "etModifies": "SpeedJumping",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Pacing_of_the_Turtle_B.Attuned_Pacing_of_the_Turtle_B"
-            },
-            {
-              "etModifies": "SpeedFlying",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Pacing_of_the_Turtle_B.Attuned_Pacing_of_the_Turtle_B"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
-        },
-        {
-          "effectType": "Slow",
-          "values": [
-            {
-              "etModifies": "SpeedRunning",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Pacing_of_the_Turtle_B.Attuned_Pacing_of_the_Turtle_B"
-            }
-          ]
+          },
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Pacing_of_the_Turtle_B.Attuned_Pacing_of_the_Turtle_B",
+      "displayName": "Damage/Slow",
       "description": {
         "short": "+DMG, +Slow",
         "long": "Enhances the damage by {Boost.Attrib.Damage.Scale}% and slowing ability of a power by {Boost.Attrib.Slow.Scale}%."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Pacing_of_the_Turtle_B.Attuned_Pacing_of_the_Turtle_B",
-      "setName": "Pacing_of_the_Turtle",
-      "displayName": "Damage/Slow"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Accuracy",
-          "values": [
-            {
-              "etModifies": "Accuracy",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Pacing_of_the_Turtle_C.Attuned_Pacing_of_the_Turtle_C"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
+          },
+          "stat": "Damage",
+          "damageType": [
+            "Smashing",
+            "Lethal",
+            "Fire",
+            "Cold",
+            "Energy",
+            "Negative",
+            "Toxic",
+            "Psionic"
+          ],
+          "toWho": "self"
         },
         {
-          "effectType": "Endurance",
-          "values": [
-            {
-              "etModifies": "EnduranceDiscount",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Pacing_of_the_Turtle_C.Attuned_Pacing_of_the_Turtle_C"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
+          },
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Pacing_of_the_Turtle_C.Attuned_Pacing_of_the_Turtle_C",
+      "displayName": "Accuracy/Endurance",
       "description": {
         "short": "+ACC, -End Cost",
         "long": "Enhances the accuracy by {Boost.Attrib.Accuracy.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Pacing_of_the_Turtle_C.Attuned_Pacing_of_the_Turtle_C",
-      "setName": "Pacing_of_the_Turtle",
-      "displayName": "Accuracy/Endurance"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Range",
-          "values": [
-            {
-              "etModifies": "Range",
-              "mag": {
-                "pve": 0.159375
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Pacing_of_the_Turtle_D.Attuned_Pacing_of_the_Turtle_D"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
+          },
+          "stat": "Accuracy",
+          "toWho": "self"
         },
         {
-          "effectType": "Slow",
-          "values": [
-            {
-              "etModifies": "SpeedRunning",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Pacing_of_the_Turtle_D.Attuned_Pacing_of_the_Turtle_D"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
-        },
-        {
-          "effectType": "Boosts_33",
-          "values": [
-            {
-              "etModifies": "SpeedJumping",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Pacing_of_the_Turtle_D.Attuned_Pacing_of_the_Turtle_D"
-            },
-            {
-              "etModifies": "SpeedFlying",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Pacing_of_the_Turtle_D.Attuned_Pacing_of_the_Turtle_D"
-            }
-          ]
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Pacing_of_the_Turtle_D.Attuned_Pacing_of_the_Turtle_D",
+      "displayName": "Range/Slow",
       "description": {
         "short": "+Range, +Slow",
         "long": "Enhances the range by {Boost.Attrib.Range.Scale}% and slowing ability of a power by {Boost.Attrib.Slow.Scale}%."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Pacing_of_the_Turtle_D.Attuned_Pacing_of_the_Turtle_D",
-      "setName": "Pacing_of_the_Turtle",
-      "displayName": "Range/Slow"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Endurance",
-          "values": [
-            {
-              "etModifies": "EnduranceDiscount",
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Pacing_of_the_Turtle_E.Attuned_Pacing_of_the_Turtle_E"
+          "mag": {
+            "IO": {
+              "cap": 0.159375
             }
-          ]
-        },
-        {
-          "effectType": "Recharge",
-          "values": [
-            {
-              "etModifies": "RechargeTime",
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Pacing_of_the_Turtle_E.Attuned_Pacing_of_the_Turtle_E"
-            }
-          ]
-        },
-        {
-          "effectType": "Slow",
-          "values": [
-            {
-              "etModifies": "SpeedRunning",
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Pacing_of_the_Turtle_E.Attuned_Pacing_of_the_Turtle_E"
-            }
-          ]
-        },
-        {
-          "effectType": "Boosts_33",
-          "values": [
-            {
-              "etModifies": "SpeedJumping",
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Pacing_of_the_Turtle_E.Attuned_Pacing_of_the_Turtle_E"
-            },
-            {
-              "etModifies": "SpeedFlying",
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Pacing_of_the_Turtle_E.Attuned_Pacing_of_the_Turtle_E"
-            }
-          ]
+          },
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Pacing_of_the_Turtle_E.Attuned_Pacing_of_the_Turtle_E",
+      "displayName": "Endurance/Recharge/Slow",
       "description": {
         "short": "+Slow, +Rech, -End Cost",
         "long": "Enhances the slowing ability of a power by {Boost.Attrib.Slow.Scale}%, reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}% and reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}%."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Pacing_of_the_Turtle_E.Attuned_Pacing_of_the_Turtle_E",
-      "setName": "Pacing_of_the_Turtle",
-      "displayName": "Endurance/Recharge/Slow"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Recharge",
-          "values": [
-            {
-              "etModifies": "RechargeTime",
-              "mag": {},
-              "procsPerMinute": 3.5,
-              "duration": 20,
-              "effectType": "Enhancement",
-              "resistible": true,
-              "toWho": "all",
-              "powerFullName": "Boosts.Attuned_Pacing_of_the_Turtle_F.Attuned_Pacing_of_the_Turtle_F"
+          "mag": {
+            "IO": {
+              "cap": 0.212
             }
-          ]
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.212
+            }
+          },
+          "stat": "Recharge",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.212
+            }
+          },
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Pacing_of_the_Turtle_F.Attuned_Pacing_of_the_Turtle_F",
+      "displayName": "Chance for Recharge Slow",
       "description": {
         "short": "Chance for -Rech",
         "long": "Gives a chance of slowing your targets recharge times by 20%.  This effect will trigger roughly 3.5 times per minute."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Pacing_of_the_Turtle_F.Attuned_Pacing_of_the_Turtle_F",
-      "setName": "Pacing_of_the_Turtle",
-      "displayName": "Chance for Recharge Slow"
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": -0.2
+            }
+          },
+          "stat": "Chance for Recharge Slow",
+          "procsPerMinute": 3.5,
+          "resistible": true,
+          "toWho": "all"
+        }
+      ]
     }
   ],
   "levels": {

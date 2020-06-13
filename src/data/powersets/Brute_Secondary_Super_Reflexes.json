@@ -6,13 +6,6 @@
   "displayName": "Super Reflexes",
   "powers": [
     {
-      "allowedEnhancements": [
-        "Defense_Buff",
-        "Endurance_Discount",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Buff_Def",
@@ -25,7 +18,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Super_Reflexes.Focused_Fighting",
               "damageType": "Melee"
             }
@@ -41,7 +35,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Mez",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Super_Reflexes.Focused_Fighting",
               "mezType": "Confuse"
             },
@@ -52,19 +47,20 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "MezResist",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Super_Reflexes.Focused_Fighting",
               "mezType": "Confuse"
             },
             {
+              "etModifies": "Defense",
               "mag": {
                 "pve": 0.11072
               },
               "probability": 1,
               "duration": 0.75,
               "effectType": "ResEffect",
-              "eTModifies": 5,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Super_Reflexes.Focused_Fighting"
             }
           ]
@@ -79,13 +75,21 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Elusivity",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Super_Reflexes.Focused_Fighting",
               "damageType": "Melee"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Defense_Buff",
+        "Endurance_Discount",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Defense.Super_Reflexes.Focused_Fighting",
+      "archetypeOrder": "secondary",
       "powerIndex": 0,
       "castTimeReal": 0.67,
       "toggleCost": 0.26,
@@ -122,13 +126,6 @@
       "powerType": "Toggle"
     },
     {
-      "allowedEnhancements": [
-        "Defense_Buff",
-        "Endurance_Discount",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Buff_Def",
@@ -141,7 +138,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Super_Reflexes.Focused_Senses",
               "damageType": "Ranged"
             },
@@ -152,7 +150,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Super_Reflexes.Focused_Senses",
               "damageType": "Psionic"
             }
@@ -162,14 +161,15 @@
           "effectType": "Ones",
           "values": [
             {
+              "etModifies": "PerceptionRadius",
               "mag": {
                 "pve": 0.6
               },
               "probability": 1,
               "duration": 0.75,
               "effectType": "ResEffect",
-              "eTModifies": 23,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Super_Reflexes.Focused_Senses"
             },
             {
@@ -179,7 +179,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "PerceptionRadius",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Super_Reflexes.Focused_Senses"
             },
             {
@@ -189,7 +190,7 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Elusivity",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Super_Reflexes.Focused_Senses",
               "damageType": "Ranged"
             },
@@ -200,7 +201,7 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Elusivity",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Super_Reflexes.Focused_Senses",
               "damageType": "Psionic"
             }
@@ -210,19 +211,28 @@
           "effectType": "Res_Boolean",
           "values": [
             {
+              "etModifies": "Defense",
               "mag": {
                 "pve": 0.11072
               },
               "probability": 1,
               "duration": 0.75,
               "effectType": "ResEffect",
-              "eTModifies": 5,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Super_Reflexes.Focused_Senses"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Defense_Buff",
+        "Endurance_Discount",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Defense.Super_Reflexes.Focused_Senses",
+      "archetypeOrder": "secondary",
       "powerIndex": 1,
       "castTimeReal": 2.03,
       "toggleCost": 0.26,
@@ -259,11 +269,6 @@
       "powerType": "Toggle"
     },
     {
-      "allowedEnhancements": [
-        "Defense_Buff"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Buff_Def",
@@ -275,7 +280,8 @@
               "probability": 1,
               "duration": 2.5,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Super_Reflexes.Agile",
               "damageType": "Ranged"
             }
@@ -285,14 +291,15 @@
           "effectType": "Res_Boolean",
           "values": [
             {
+              "etModifies": "Defense",
               "mag": {
                 "pve": 0.05536
               },
               "probability": 1,
               "duration": 2.5,
               "effectType": "ResEffect",
-              "eTModifies": 5,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Super_Reflexes.Agile"
             }
           ]
@@ -304,7 +311,7 @@
               "mag": {},
               "probability": 1,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "toWho": "self",
               "attribType": 2,
               "powerFullName": "Brute_Defense.Super_Reflexes.Agile",
               "damageType": "Smashing"
@@ -313,7 +320,7 @@
               "mag": {},
               "probability": 1,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "toWho": "self",
               "attribType": 2,
               "powerFullName": "Brute_Defense.Super_Reflexes.Agile",
               "damageType": "Lethal"
@@ -322,7 +329,7 @@
               "mag": {},
               "probability": 1,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "toWho": "self",
               "attribType": 2,
               "powerFullName": "Brute_Defense.Super_Reflexes.Agile",
               "damageType": "Fire"
@@ -331,7 +338,7 @@
               "mag": {},
               "probability": 1,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "toWho": "self",
               "attribType": 2,
               "powerFullName": "Brute_Defense.Super_Reflexes.Agile",
               "damageType": "Cold"
@@ -340,7 +347,7 @@
               "mag": {},
               "probability": 1,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "toWho": "self",
               "attribType": 2,
               "powerFullName": "Brute_Defense.Super_Reflexes.Agile",
               "damageType": "Energy"
@@ -349,7 +356,7 @@
               "mag": {},
               "probability": 1,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "toWho": "self",
               "attribType": 2,
               "powerFullName": "Brute_Defense.Super_Reflexes.Agile",
               "damageType": "Negative"
@@ -357,6 +364,12 @@
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Defense_Buff"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Defense.Super_Reflexes.Agile",
+      "archetypeOrder": "secondary",
       "powerIndex": 2,
       "fullName": "Brute_Secondary_Super_Reflexes_Agile",
       "displayName": "Agile",
@@ -387,12 +400,6 @@
       "powerType": "Auto"
     },
     {
-      "allowedEnhancements": [
-        "Endurance_Discount",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Ones",
@@ -406,7 +413,7 @@
               "variableModified": true,
               "effectType": "MezResist",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Super_Reflexes.Practiced_Brawler",
               "mezType": "Knockback"
             },
@@ -419,7 +426,7 @@
               "variableModified": true,
               "effectType": "MezResist",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Super_Reflexes.Practiced_Brawler",
               "mezType": "Knockup"
             },
@@ -432,7 +439,8 @@
               "variableModified": true,
               "effectType": "Mez",
               "stacking": 1,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Super_Reflexes.Practiced_Brawler",
               "mezType": "Knockback"
             },
@@ -445,19 +453,86 @@
               "variableModified": true,
               "effectType": "Mez",
               "stacking": 1,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Super_Reflexes.Practiced_Brawler",
               "mezType": "Knockup"
             },
             {
+              "etModifies": "Defense",
+              "mag": {
+                "pvp": 0.3
+              },
+              "probability": 1,
+              "duration": 120,
+              "effectType": "ResEffect",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Super_Reflexes.Practiced_Brawler"
+            },
+            {
+              "etModifies": "ToHit",
+              "mag": {
+                "pvp": 0.3
+              },
+              "probability": 1,
+              "duration": 120,
+              "effectType": "ResEffect",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Super_Reflexes.Practiced_Brawler"
+            },
+            {
+              "etModifies": "RechargeTime",
+              "mag": {
+                "pvp": 0.3
+              },
+              "probability": 1,
+              "duration": 120,
+              "effectType": "ResEffect",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Super_Reflexes.Practiced_Brawler"
+            },
+            {
+              "etModifies": "SpeedRunning",
               "mag": {
                 "pvp": 0.5
               },
               "probability": 1,
               "duration": 120,
               "effectType": "ResEffect",
-              "eTModifies": 5,
-              "toWho": "Self",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Super_Reflexes.Practiced_Brawler"
+            },
+            {
+              "etModifies": "SpeedFlying",
+              "mag": {
+                "pvp": 0.5
+              },
+              "probability": 1,
+              "duration": 120,
+              "effectType": "ResEffect",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Super_Reflexes.Practiced_Brawler"
+            },
+            {
+              "etModifies": "JumpHeight",
+              "mag": {
+                "pvp": 0.5
+              },
+              "probability": 1,
+              "duration": 120,
+              "effectType": "ResEffect",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Super_Reflexes.Practiced_Brawler"
+            },
+            {
+              "etModifies": "SpeedJumping",
+              "mag": {
+                "pvp": 0.5
+              },
+              "probability": 1,
+              "duration": 120,
+              "effectType": "ResEffect",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Super_Reflexes.Practiced_Brawler"
             }
           ]
@@ -474,7 +549,8 @@
               "variableModified": true,
               "effectType": "Mez",
               "stacking": 1,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Super_Reflexes.Practiced_Brawler",
               "mezType": "Stun"
             },
@@ -487,7 +563,8 @@
               "variableModified": true,
               "effectType": "Mez",
               "stacking": 1,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Super_Reflexes.Practiced_Brawler",
               "mezType": "Hold"
             },
@@ -500,7 +577,8 @@
               "variableModified": true,
               "effectType": "Mez",
               "stacking": 1,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Super_Reflexes.Practiced_Brawler",
               "mezType": "Sleep"
             },
@@ -513,9 +591,10 @@
               "variableModified": true,
               "effectType": "Mez",
               "stacking": 1,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Super_Reflexes.Practiced_Brawler",
-              "mezType": "Immobilization"
+              "mezType": "Immob"
             },
             {
               "mag": {
@@ -526,7 +605,7 @@
               "variableModified": true,
               "effectType": "MezResist",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Super_Reflexes.Practiced_Brawler",
               "mezType": "Stun"
             },
@@ -539,7 +618,7 @@
               "variableModified": true,
               "effectType": "MezResist",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Super_Reflexes.Practiced_Brawler",
               "mezType": "Hold"
             },
@@ -552,7 +631,7 @@
               "variableModified": true,
               "effectType": "MezResist",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Super_Reflexes.Practiced_Brawler",
               "mezType": "Sleep"
             },
@@ -565,13 +644,20 @@
               "variableModified": true,
               "effectType": "MezResist",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Super_Reflexes.Practiced_Brawler",
-              "mezType": "Immobilization"
+              "mezType": "Immob"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Endurance_Discount",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Defense.Super_Reflexes.Practiced_Brawler",
+      "archetypeOrder": "secondary",
       "powerIndex": 3,
       "castTimeReal": 1.53,
       "toggleCost": 10.4,
@@ -604,11 +690,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Defense_Buff"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Buff_Def",
@@ -620,7 +701,8 @@
               "probability": 1,
               "duration": 2.5,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Super_Reflexes.Dodge",
               "damageType": "Melee"
             }
@@ -630,14 +712,15 @@
           "effectType": "Res_Boolean",
           "values": [
             {
+              "etModifies": "Defense",
               "mag": {
                 "pve": 0.05536
               },
               "probability": 1,
               "duration": 2.5,
               "effectType": "ResEffect",
-              "eTModifies": 5,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Super_Reflexes.Dodge"
             }
           ]
@@ -649,7 +732,7 @@
               "mag": {},
               "probability": 1,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "toWho": "self",
               "attribType": 2,
               "powerFullName": "Brute_Defense.Super_Reflexes.Dodge",
               "damageType": "Smashing"
@@ -658,7 +741,7 @@
               "mag": {},
               "probability": 1,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "toWho": "self",
               "attribType": 2,
               "powerFullName": "Brute_Defense.Super_Reflexes.Dodge",
               "damageType": "Lethal"
@@ -667,7 +750,7 @@
               "mag": {},
               "probability": 1,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "toWho": "self",
               "attribType": 2,
               "powerFullName": "Brute_Defense.Super_Reflexes.Dodge",
               "damageType": "Fire"
@@ -676,7 +759,7 @@
               "mag": {},
               "probability": 1,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "toWho": "self",
               "attribType": 2,
               "powerFullName": "Brute_Defense.Super_Reflexes.Dodge",
               "damageType": "Cold"
@@ -685,7 +768,7 @@
               "mag": {},
               "probability": 1,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "toWho": "self",
               "attribType": 2,
               "powerFullName": "Brute_Defense.Super_Reflexes.Dodge",
               "damageType": "Energy"
@@ -694,7 +777,7 @@
               "mag": {},
               "probability": 1,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "toWho": "self",
               "attribType": 2,
               "powerFullName": "Brute_Defense.Super_Reflexes.Dodge",
               "damageType": "Negative"
@@ -702,6 +785,12 @@
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Defense_Buff"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Defense.Super_Reflexes.Dodge",
+      "archetypeOrder": "secondary",
       "powerIndex": 4,
       "fullName": "Brute_Secondary_Super_Reflexes_Dodge",
       "displayName": "Dodge",
@@ -732,14 +821,6 @@
       "powerType": "Auto"
     },
     {
-      "allowedEnhancements": [
-        "Defense_Buff",
-        "Endurance_Discount",
-        "Recharge",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Buff_Def",
@@ -752,7 +833,8 @@
               "probability": 1,
               "duration": 2.25,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Super_Reflexes.Evasion",
               "damageType": "AoE"
             }
@@ -762,14 +844,15 @@
           "effectType": "Res_Boolean",
           "values": [
             {
+              "etModifies": "Defense",
               "mag": {
                 "pve": 0.11072
               },
               "probability": 1,
               "duration": 2.25,
               "effectType": "ResEffect",
-              "eTModifies": 5,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Super_Reflexes.Evasion"
             }
           ]
@@ -784,7 +867,7 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Elusivity",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Super_Reflexes.Evasion",
               "damageType": "AoE"
             }
@@ -802,9 +885,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "All",
+              "toWho": "all",
               "attribType": 1,
               "powerFullName": "Brute_Defense.Super_Reflexes.Evasion",
               "requiresToHitCheck": true,
@@ -813,6 +897,15 @@
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Defense_Buff",
+        "Endurance_Discount",
+        "Recharge",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Defense.Super_Reflexes.Evasion",
+      "archetypeOrder": "secondary",
       "powerIndex": 5,
       "castTimeReal": 3,
       "toggleCost": 0.26,
@@ -851,11 +944,6 @@
       "powerType": "Toggle"
     },
     {
-      "allowedEnhancements": [
-        "Defense_Buff"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Buff_Def",
@@ -867,7 +955,8 @@
               "probability": 1,
               "duration": 2.5,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Super_Reflexes.Lucky",
               "damageType": "AoE"
             }
@@ -877,14 +966,15 @@
           "effectType": "Res_Boolean",
           "values": [
             {
+              "etModifies": "Defense",
               "mag": {
                 "pve": 0.05536
               },
               "probability": 1,
               "duration": 2.5,
               "effectType": "ResEffect",
-              "eTModifies": 5,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Super_Reflexes.Lucky"
             }
           ]
@@ -896,7 +986,7 @@
               "mag": {},
               "probability": 1,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "toWho": "self",
               "attribType": 2,
               "powerFullName": "Brute_Defense.Super_Reflexes.Lucky",
               "damageType": "Smashing"
@@ -905,7 +995,7 @@
               "mag": {},
               "probability": 1,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "toWho": "self",
               "attribType": 2,
               "powerFullName": "Brute_Defense.Super_Reflexes.Lucky",
               "damageType": "Lethal"
@@ -914,7 +1004,7 @@
               "mag": {},
               "probability": 1,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "toWho": "self",
               "attribType": 2,
               "powerFullName": "Brute_Defense.Super_Reflexes.Lucky",
               "damageType": "Fire"
@@ -923,7 +1013,7 @@
               "mag": {},
               "probability": 1,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "toWho": "self",
               "attribType": 2,
               "powerFullName": "Brute_Defense.Super_Reflexes.Lucky",
               "damageType": "Cold"
@@ -932,7 +1022,7 @@
               "mag": {},
               "probability": 1,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "toWho": "self",
               "attribType": 2,
               "powerFullName": "Brute_Defense.Super_Reflexes.Lucky",
               "damageType": "Energy"
@@ -941,7 +1031,7 @@
               "mag": {},
               "probability": 1,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "toWho": "self",
               "attribType": 2,
               "powerFullName": "Brute_Defense.Super_Reflexes.Lucky",
               "damageType": "Negative"
@@ -949,6 +1039,12 @@
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Defense_Buff"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Defense.Super_Reflexes.Lucky",
+      "archetypeOrder": "secondary",
       "powerIndex": 6,
       "fullName": "Brute_Secondary_Super_Reflexes_Lucky",
       "displayName": "Lucky",
@@ -979,36 +1075,52 @@
       "powerType": "Auto"
     },
     {
-      "allowedEnhancements": [
-        "Fly",
-        "Run"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Ones",
           "values": [
             {
+              "etModifies": "RechargeTime",
               "mag": {
                 "pve": 0.2
               },
               "probability": 1,
               "duration": 10.25,
               "effectType": "Enhancement",
-              "eTModifies": 25,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Super_Reflexes.Quickness"
             },
             {
+              "etModifies": "SpeedRunning",
               "mag": {
                 "pve": 0.4
               },
               "probability": 1,
               "duration": 10.25,
               "effectType": "ResEffect",
-              "eTModifies": 32,
-              "toWho": "Self",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Super_Reflexes.Quickness"
+            },
+            {
+              "etModifies": "RechargeTime",
+              "mag": {
+                "pve": 0.4
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "ResEffect",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Super_Reflexes.Quickness"
+            },
+            {
+              "etModifies": "SpeedFlying",
+              "mag": {
+                "pve": 0.4
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "ResEffect",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Super_Reflexes.Quickness"
             }
           ]
@@ -1023,7 +1135,8 @@
               "probability": 1,
               "duration": 10.25,
               "effectType": "SpeedRunning",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Super_Reflexes.Quickness"
             }
           ]
@@ -1038,12 +1151,20 @@
               "probability": 1,
               "duration": 10.25,
               "effectType": "SpeedFlying",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Super_Reflexes.Quickness"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Fly",
+        "Run"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Defense.Super_Reflexes.Quickness",
+      "archetypeOrder": "secondary",
       "powerIndex": 7,
       "fullName": "Brute_Secondary_Super_Reflexes_Quickness",
       "displayName": "Quickness",
@@ -1072,15 +1193,6 @@
       "powerType": "Auto"
     },
     {
-      "allowedEnhancements": [
-        "Defense_Buff",
-        "Endurance_Discount",
-        "Recharge",
-        "Endurance_Modification",
-        "Run"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Buff_Def",
@@ -1092,7 +1204,8 @@
               "probability": 1,
               "duration": 180,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Super_Reflexes.Elude",
               "damageType": "Melee"
             },
@@ -1103,7 +1216,8 @@
               "probability": 1,
               "duration": 180,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Super_Reflexes.Elude",
               "damageType": "Ranged"
             },
@@ -1114,7 +1228,8 @@
               "probability": 1,
               "duration": 180,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Super_Reflexes.Elude",
               "damageType": "AoE"
             }
@@ -1130,7 +1245,8 @@
               "probability": 1,
               "duration": 180,
               "effectType": "Recovery",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Super_Reflexes.Elude"
             },
             {
@@ -1140,7 +1256,8 @@
               "probability": 1,
               "duration": 180,
               "effectType": "JumpHeight",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Super_Reflexes.Elude"
             },
             {
@@ -1152,7 +1269,7 @@
               "duration": 180,
               "effectType": "Null",
               "stacking": 1,
-              "toWho": "All",
+              "toWho": "all",
               "powerFullName": "Brute_Defense.Super_Reflexes.Elude"
             },
             {
@@ -1162,7 +1279,7 @@
               "probability": 1,
               "duration": 30,
               "effectType": "GlobalChanceMod",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Super_Reflexes.Elude"
             }
           ]
@@ -1177,7 +1294,8 @@
               "probability": 1,
               "duration": 180,
               "effectType": "SpeedRunning",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Super_Reflexes.Elude"
             }
           ]
@@ -1186,14 +1304,15 @@
           "effectType": "Res_Boolean",
           "values": [
             {
+              "etModifies": "Defense",
               "mag": {
                 "pve": 0.2768
               },
               "probability": 1,
               "duration": 180,
               "effectType": "ResEffect",
-              "eTModifies": 5,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Super_Reflexes.Elude"
             }
           ]
@@ -1209,7 +1328,7 @@
               "duration": 20,
               "effectType": "Recovery",
               "delayedTime": 180,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Super_Reflexes.Elude"
             },
             {
@@ -1221,12 +1340,22 @@
               "effectType": "Endurance",
               "delayedTime": 180,
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Super_Reflexes.Elude"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Defense_Buff",
+        "Endurance_Discount",
+        "Recharge",
+        "Endurance_Modification",
+        "Run"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Defense.Super_Reflexes.Elude",
+      "archetypeOrder": "secondary",
       "powerIndex": 8,
       "castTimeReal": 2,
       "toggleCost": 2.6,

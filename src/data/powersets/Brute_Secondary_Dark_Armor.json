@@ -6,13 +6,6 @@
   "displayName": "Dark Armor",
   "powers": [
     {
-      "allowedEnhancements": [
-        "Endurance_Discount",
-        "Recharge",
-        "Res_Damage"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Res_DMG",
@@ -25,7 +18,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Dark_Armor.Dark_Embrace",
               "damageType": "Smashing"
             },
@@ -37,7 +31,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Dark_Armor.Dark_Embrace",
               "damageType": "Lethal"
             },
@@ -49,7 +44,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Dark_Armor.Dark_Embrace",
               "damageType": "Toxic"
             },
@@ -61,13 +57,22 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Dark_Armor.Dark_Embrace",
               "damageType": "Negative"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Endurance_Discount",
+        "Recharge",
+        "Res_Damage"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Defense.Dark_Armor.Dark_Embrace",
+      "archetypeOrder": "secondary",
       "powerIndex": 0,
       "castTimeReal": 0.67,
       "toggleCost": 0.208,
@@ -105,15 +110,6 @@
       "powerType": "Toggle"
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Recharge",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Damage",
@@ -125,8 +121,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Defense.Dark_Armor.Death_Shroud",
               "damageType": "Negative"
             }
@@ -144,9 +141,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Defense.Dark_Armor.Death_Shroud",
               "requiresToHitCheck": true,
@@ -155,6 +153,16 @@
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Recharge",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Defense.Dark_Armor.Death_Shroud",
+      "archetypeOrder": "secondary",
       "powerIndex": 1,
       "castTimeReal": 3.47,
       "toggleCost": 0.52,
@@ -195,13 +203,6 @@
       "powerType": "Toggle"
     },
     {
-      "allowedEnhancements": [
-        "Endurance_Discount",
-        "Recharge",
-        "Res_Damage"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Res_DMG",
@@ -214,7 +215,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Dark_Armor.Murky_Cloud",
               "damageType": "Fire"
             },
@@ -226,7 +228,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Dark_Armor.Murky_Cloud",
               "damageType": "Cold"
             },
@@ -238,7 +241,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Dark_Armor.Murky_Cloud",
               "damageType": "Energy"
             },
@@ -250,7 +254,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Dark_Armor.Murky_Cloud",
               "damageType": "Negative"
             }
@@ -260,19 +265,38 @@
           "effectType": "Res_Boolean",
           "values": [
             {
+              "etModifies": "Recovery",
               "mag": {
                 "pve": 0.5536
               },
               "probability": 1,
               "duration": 0.75,
               "effectType": "ResEffect",
-              "eTModifies": 26,
-              "toWho": "All",
+              "toWho": "all",
+              "powerFullName": "Brute_Defense.Dark_Armor.Murky_Cloud"
+            },
+            {
+              "etModifies": "Endurance",
+              "mag": {
+                "pve": 0.5536
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "ResEffect",
+              "toWho": "all",
               "powerFullName": "Brute_Defense.Dark_Armor.Murky_Cloud"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Endurance_Discount",
+        "Recharge",
+        "Res_Damage"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Defense.Dark_Armor.Murky_Cloud",
+      "archetypeOrder": "secondary",
       "powerIndex": 2,
       "castTimeReal": 1.17,
       "toggleCost": 0.208,
@@ -310,13 +334,6 @@
       "powerType": "Toggle"
     },
     {
-      "allowedEnhancements": [
-        "Endurance_Discount",
-        "Recharge",
-        "Res_Damage"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Res_DMG",
@@ -329,7 +346,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Dark_Armor.Obsidian_Shield",
               "damageType": "Psionic"
             }
@@ -345,7 +363,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Mez",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Dark_Armor.Obsidian_Shield",
               "mezType": "Stun"
             },
@@ -356,7 +375,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Mez",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Dark_Armor.Obsidian_Shield",
               "mezType": "Hold"
             },
@@ -367,7 +387,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Mez",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Dark_Armor.Obsidian_Shield",
               "mezType": "Sleep"
             },
@@ -378,9 +399,10 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Mez",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Dark_Armor.Obsidian_Shield",
-              "mezType": "Terrorize"
+              "mezType": "Terror"
             },
             {
               "mag": {
@@ -389,7 +411,7 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "MezResist",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Dark_Armor.Obsidian_Shield",
               "mezType": "Stun"
             },
@@ -400,7 +422,7 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "MezResist",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Dark_Armor.Obsidian_Shield",
               "mezType": "Hold"
             },
@@ -411,7 +433,7 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "MezResist",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Dark_Armor.Obsidian_Shield",
               "mezType": "Sleep"
             },
@@ -422,9 +444,9 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "MezResist",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Dark_Armor.Obsidian_Shield",
-              "mezType": "Terrorize"
+              "mezType": "Terror"
             }
           ]
         },
@@ -432,19 +454,93 @@
           "effectType": "Ones",
           "values": [
             {
+              "etModifies": "Defense",
+              "mag": {
+                "pvp": 0.3
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "ResEffect",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Dark_Armor.Obsidian_Shield"
+            },
+            {
+              "etModifies": "ToHit",
+              "mag": {
+                "pvp": 0.3
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "ResEffect",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Dark_Armor.Obsidian_Shield"
+            },
+            {
+              "etModifies": "RechargeTime",
+              "mag": {
+                "pvp": 0.3
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "ResEffect",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Dark_Armor.Obsidian_Shield"
+            },
+            {
+              "etModifies": "SpeedRunning",
               "mag": {
                 "pvp": 0.5
               },
               "probability": 1,
               "duration": 0.75,
               "effectType": "ResEffect",
-              "eTModifies": 5,
-              "toWho": "Self",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Dark_Armor.Obsidian_Shield"
+            },
+            {
+              "etModifies": "SpeedFlying",
+              "mag": {
+                "pvp": 0.5
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "ResEffect",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Dark_Armor.Obsidian_Shield"
+            },
+            {
+              "etModifies": "JumpHeight",
+              "mag": {
+                "pvp": 0.5
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "ResEffect",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Dark_Armor.Obsidian_Shield"
+            },
+            {
+              "etModifies": "SpeedJumping",
+              "mag": {
+                "pvp": 0.5
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "ResEffect",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Dark_Armor.Obsidian_Shield"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Endurance_Discount",
+        "Recharge",
+        "Res_Damage"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Defense.Dark_Armor.Obsidian_Shield",
+      "archetypeOrder": "secondary",
       "powerIndex": 3,
       "castTimeReal": 1.17,
       "toggleCost": 0.208,
@@ -482,16 +578,6 @@
       "powerType": "Toggle"
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Heal",
-        "Recharge",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Damage",
@@ -503,8 +589,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Defense.Dark_Armor.Dark_Regeneration",
               "damageType": "Negative"
             }
@@ -522,12 +609,24 @@
               "effectType": "Heal",
               "delayedTime": 0.25,
               "stacking": 1,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Dark_Armor.Dark_Regeneration"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Heal",
+        "Recharge",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Defense.Dark_Armor.Dark_Regeneration",
+      "archetypeOrder": "secondary",
       "powerIndex": 4,
       "castTimeReal": 1.17,
       "toggleCost": 33.8,
@@ -572,13 +671,6 @@
       "aoeModifier": 4
     },
     {
-      "allowedEnhancements": [
-        "Defense_Buff",
-        "Endurance_Discount",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Ones",
@@ -590,7 +682,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "StealthRadius",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Dark_Armor.Cloak_of_Darkness"
             },
             {
@@ -600,18 +693,20 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "StealthRadiusPlayer",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Dark_Armor.Cloak_of_Darkness"
             },
             {
+              "etModifies": "PerceptionRadius",
               "mag": {
                 "pve": 0.6
               },
               "probability": 1,
               "duration": 0.75,
               "effectType": "ResEffect",
-              "eTModifies": 23,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Dark_Armor.Cloak_of_Darkness"
             },
             {
@@ -621,7 +716,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "PerceptionRadius",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Dark_Armor.Cloak_of_Darkness"
             }
           ]
@@ -637,7 +733,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Dark_Armor.Cloak_of_Darkness",
               "damageType": "Melee"
             },
@@ -649,7 +746,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Dark_Armor.Cloak_of_Darkness",
               "damageType": "Ranged"
             },
@@ -661,7 +759,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Dark_Armor.Cloak_of_Darkness",
               "damageType": "AoE"
             },
@@ -673,7 +772,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Dark_Armor.Cloak_of_Darkness",
               "damageType": "Smashing"
             },
@@ -685,7 +785,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Dark_Armor.Cloak_of_Darkness",
               "damageType": "Lethal"
             },
@@ -697,7 +798,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Dark_Armor.Cloak_of_Darkness",
               "damageType": "Fire"
             },
@@ -709,7 +811,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Dark_Armor.Cloak_of_Darkness",
               "damageType": "Cold"
             },
@@ -721,7 +824,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Dark_Armor.Cloak_of_Darkness",
               "damageType": "Energy"
             },
@@ -733,7 +837,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Dark_Armor.Cloak_of_Darkness",
               "damageType": "Negative"
             },
@@ -745,7 +850,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Dark_Armor.Cloak_of_Darkness",
               "damageType": "Psionic"
             }
@@ -761,9 +867,10 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Mez",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Dark_Armor.Cloak_of_Darkness",
-              "mezType": "Immobilization"
+              "mezType": "Immob"
             },
             {
               "mag": {
@@ -772,13 +879,21 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "MezResist",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Dark_Armor.Cloak_of_Darkness",
-              "mezType": "Immobilization"
+              "mezType": "Immob"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Defense_Buff",
+        "Endurance_Discount",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Defense.Dark_Armor.Cloak_of_Darkness",
+      "archetypeOrder": "secondary",
       "powerIndex": 5,
       "castTimeReal": 1.17,
       "toggleCost": 0.26,
@@ -815,15 +930,6 @@
       "powerType": "Toggle"
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "ToHit_Debuff",
-        "Endurance_Discount",
-        "Fear",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Fear",
@@ -836,11 +942,12 @@
               "probability": 1,
               "duration": 5.96,
               "effectType": "Mez",
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Defense.Dark_Armor.Cloak_of_Fear",
-              "mezType": "Terrorize"
+              "mezType": "Terror"
             }
           ]
         },
@@ -854,13 +961,24 @@
               "probability": 1,
               "duration": 5,
               "effectType": "ToHit",
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Defense.Dark_Armor.Cloak_of_Fear"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "ToHit_Debuff",
+        "Endurance_Discount",
+        "Fear",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Defense.Dark_Armor.Cloak_of_Fear",
+      "archetypeOrder": "secondary",
       "powerIndex": 6,
       "castTimeReal": 1.17,
       "toggleCost": 0.52,
@@ -901,14 +1019,6 @@
       "powerType": "Toggle"
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Endurance_Discount",
-        "Recharge",
-        "Stun"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Stun",
@@ -921,8 +1031,9 @@
               "probability": 1,
               "duration": 7.15200043,
               "effectType": "Mez",
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Defense.Dark_Armor.Oppressive_Gloom",
               "mezType": "Stun"
@@ -940,7 +1051,7 @@
               "variableModified": true,
               "effectType": "Damage",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Dark_Armor.Oppressive_Gloom",
               "damageType": "Special"
             }
@@ -957,8 +1068,9 @@
               "probability": 1,
               "duration": 2,
               "effectType": "Mez",
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Defense.Dark_Armor.Oppressive_Gloom",
               "mezType": "Stun"
@@ -966,6 +1078,15 @@
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Endurance_Discount",
+        "Recharge",
+        "Stun"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Defense.Dark_Armor.Oppressive_Gloom",
+      "archetypeOrder": "secondary",
       "powerIndex": 7,
       "castTimeReal": 1.17,
       "toggleCost": 0.078,
@@ -1004,15 +1125,6 @@
       "powerType": "Toggle"
     },
     {
-      "allowedEnhancements": [
-        "Damage",
-        "Heal",
-        "Recharge",
-        "Endurance_Modification",
-        "Stun"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Damage",
@@ -1024,8 +1136,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Defense.Dark_Armor.Soul_Transfer",
               "damageType": "Negative"
             }
@@ -1043,8 +1156,9 @@
               "duration": 11.92,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Defense.Dark_Armor.Soul_Transfer",
               "mezType": "Stun"
@@ -1064,7 +1178,8 @@
               "effectType": "Heal",
               "ticks": 1,
               "stacking": 1,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Dark_Armor.Soul_Transfer"
             }
           ]
@@ -1079,7 +1194,7 @@
               "probability": 1,
               "duration": 15,
               "effectType": "Mez",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Dark_Armor.Soul_Transfer",
               "mezType": "Untouchable"
             },
@@ -1092,7 +1207,8 @@
               "effectType": "Endurance",
               "delayedTime": 0.25,
               "stacking": 1,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Dark_Armor.Soul_Transfer"
             },
             {
@@ -1104,10 +1220,10 @@
               "variableModified": true,
               "effectType": "Mez",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "attribType": 1,
               "powerFullName": "Brute_Defense.Dark_Armor.Soul_Transfer",
-              "mezType": "Immobilization"
+              "mezType": "Immob"
             },
             {
               "mag": {
@@ -1116,12 +1232,22 @@
               "probability": 1,
               "duration": 60,
               "effectType": "XPDebtProtection",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Dark_Armor.Soul_Transfer"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Damage",
+        "Heal",
+        "Recharge",
+        "Endurance_Modification",
+        "Stun"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Defense.Dark_Armor.Soul_Transfer",
+      "archetypeOrder": "secondary",
       "powerIndex": 8,
       "castTimeReal": 1.17,
       "fullName": "Brute_Secondary_Dark_Armor_Soul_Transfer",

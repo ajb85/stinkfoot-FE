@@ -6,16 +6,6 @@
   "displayName": "Spines",
   "powers": [
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Recharge",
-        "Slow",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Damage",
@@ -28,8 +18,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Spines.Barb_Swipe",
               "damageType": "Lethal"
             },
@@ -44,8 +35,9 @@
               "ticks": 3,
               "delayedTime": 0.5,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Spines.Barb_Swipe",
               "damageType": "Toxic"
             }
@@ -62,8 +54,9 @@
               "duration": 4,
               "effectType": "SpeedRunning",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Spines.Barb_Swipe"
             },
             {
@@ -74,21 +67,35 @@
               "duration": 4,
               "effectType": "SpeedFlying",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Spines.Barb_Swipe"
             },
             {
+              "etModifies": "RechargeTime",
               "mag": {
-                "pve": -0.2
+                "pve": -0.1
               },
               "probability": 1,
               "duration": 2,
               "effectType": "Enhancement",
-              "eTModifies": 25,
               "stacking": 1,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
+              "powerFullName": "Brute_Melee.Spines.Barb_Swipe"
+            },
+            {
+              "etModifies": "JumpHeight",
+              "mag": {
+                "pve": -0.2
+              },
+              "probability": 1,
+              "duration": 4,
+              "effectType": "Enhancement",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Spines.Barb_Swipe"
             },
             {
@@ -99,8 +106,9 @@
               "duration": 4,
               "effectType": "SpeedJumping",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Spines.Barb_Swipe"
             }
           ]
@@ -117,11 +125,12 @@
               "duration": 9.536,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Spines.Barb_Swipe",
-              "mezType": "Immobilization"
+              "mezType": "Immob"
             }
           ]
         },
@@ -137,7 +146,7 @@
               "effectType": "Rage",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Spines.Barb_Swipe"
             }
           ]
@@ -154,9 +163,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Spines.Barb_Swipe",
               "requiresToHitCheck": true,
@@ -173,14 +183,26 @@
               },
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Spines.Barb_Swipe",
               "damageType": "Fire"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Recharge",
+        "Slow",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Spines.Barb_Swipe",
+      "archetypeOrder": "primary",
       "powerIndex": 0,
       "castTimeReal": 0.83,
       "toggleCost": 4.368,
@@ -222,16 +244,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Recharge",
-        "Slow",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Damage",
@@ -244,8 +256,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Spines.Lunge",
               "damageType": "Lethal"
             },
@@ -260,8 +273,9 @@
               "ticks": 4,
               "delayedTime": 0.5,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Spines.Lunge",
               "damageType": "Toxic"
             }
@@ -278,8 +292,9 @@
               "duration": 6,
               "effectType": "SpeedRunning",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Spines.Lunge"
             },
             {
@@ -290,21 +305,35 @@
               "duration": 6,
               "effectType": "SpeedFlying",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Spines.Lunge"
             },
             {
+              "etModifies": "RechargeTime",
               "mag": {
-                "pve": -0.2
+                "pve": -0.1
               },
               "probability": 1,
               "duration": 4,
               "effectType": "Enhancement",
-              "eTModifies": 25,
               "stacking": 1,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
+              "powerFullName": "Brute_Melee.Spines.Lunge"
+            },
+            {
+              "etModifies": "JumpHeight",
+              "mag": {
+                "pve": -0.2
+              },
+              "probability": 1,
+              "duration": 6,
+              "effectType": "Enhancement",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Spines.Lunge"
             },
             {
@@ -315,8 +344,9 @@
               "duration": 6,
               "effectType": "SpeedJumping",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Spines.Lunge"
             }
           ]
@@ -334,11 +364,12 @@
               "duration": 9.536,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Spines.Lunge",
-              "mezType": "Immobilization"
+              "mezType": "Immob"
             }
           ]
         },
@@ -354,7 +385,7 @@
               "effectType": "Rage",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Spines.Lunge"
             }
           ]
@@ -371,9 +402,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Spines.Lunge",
               "requiresToHitCheck": true,
@@ -390,14 +422,26 @@
               },
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Spines.Lunge",
               "damageType": "Fire"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Recharge",
+        "Slow",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Spines.Lunge",
+      "archetypeOrder": "primary",
       "powerIndex": 1,
       "castTimeReal": 1.63,
       "toggleCost": 6.864,
@@ -439,16 +483,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Recharge",
-        "Slow",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Damage",
@@ -461,8 +495,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Spines.Spine_Burst",
               "damageType": "Lethal"
             },
@@ -477,8 +512,9 @@
               "ticks": 4,
               "delayedTime": 0.5,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Spines.Spine_Burst",
               "damageType": "Toxic"
             }
@@ -495,8 +531,9 @@
               "duration": 10,
               "effectType": "SpeedRunning",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Spines.Spine_Burst"
             },
             {
@@ -507,21 +544,35 @@
               "duration": 10,
               "effectType": "SpeedFlying",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Spines.Spine_Burst"
             },
             {
+              "etModifies": "RechargeTime",
               "mag": {
-                "pve": -0.2
+                "pve": -0.1
               },
               "probability": 1,
               "duration": 8,
               "effectType": "Enhancement",
-              "eTModifies": 25,
               "stacking": 1,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
+              "powerFullName": "Brute_Melee.Spines.Spine_Burst"
+            },
+            {
+              "etModifies": "JumpHeight",
+              "mag": {
+                "pve": -0.2
+              },
+              "probability": 1,
+              "duration": 10,
+              "effectType": "Enhancement",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Spines.Spine_Burst"
             },
             {
@@ -532,8 +583,9 @@
               "duration": 10,
               "effectType": "SpeedJumping",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Spines.Spine_Burst"
             }
           ]
@@ -551,11 +603,12 @@
               "duration": 11.92,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Spines.Spine_Burst",
-              "mezType": "Immobilization"
+              "mezType": "Immob"
             }
           ]
         },
@@ -571,7 +624,7 @@
               "effectType": "Rage",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Spines.Spine_Burst"
             }
           ]
@@ -588,9 +641,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Spines.Spine_Burst",
               "requiresToHitCheck": true,
@@ -607,14 +661,26 @@
               },
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Spines.Spine_Burst",
               "damageType": "Fire"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Recharge",
+        "Slow",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Spines.Spine_Burst",
+      "archetypeOrder": "primary",
       "powerIndex": 2,
       "castTimeReal": 3,
       "toggleCost": 15.184,
@@ -657,13 +723,6 @@
       "aoeModifier": 3.25
     },
     {
-      "allowedEnhancements": [
-        "ToHit_Buff",
-        "Endurance_Discount",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Buff_ToHit",
@@ -677,7 +736,8 @@
               "variableModified": true,
               "effectType": "ToHit",
               "stacking": 1,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Spines.Build_Up"
             }
           ]
@@ -694,7 +754,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Spines.Build_Up",
               "damageType": "Smashing"
             },
@@ -707,7 +767,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Spines.Build_Up",
               "damageType": "Lethal"
             },
@@ -720,7 +780,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Spines.Build_Up",
               "damageType": "Fire"
             },
@@ -733,7 +793,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Spines.Build_Up",
               "damageType": "Cold"
             },
@@ -746,7 +806,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Spines.Build_Up",
               "damageType": "Energy"
             },
@@ -759,7 +819,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Spines.Build_Up",
               "damageType": "Negative"
             },
@@ -772,7 +832,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Spines.Build_Up",
               "damageType": "Toxic"
             },
@@ -785,13 +845,21 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Spines.Build_Up",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "ToHit_Buff",
+        "Endurance_Discount",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Spines.Build_Up",
+      "archetypeOrder": "primary",
       "powerIndex": 3,
       "castTimeReal": 0.73,
       "toggleCost": 5.2,
@@ -826,18 +894,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Immobilize",
-        "Range",
-        "Recharge",
-        "Slow",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Damage",
@@ -850,8 +906,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Spines.Impale",
               "damageType": "Lethal"
             },
@@ -866,8 +923,9 @@
               "ticks": 5,
               "delayedTime": 0.5,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Spines.Impale",
               "damageType": "Toxic"
             }
@@ -886,11 +944,12 @@
               "duration": 17.8800011,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Spines.Impale",
-              "mezType": "Immobilization"
+              "mezType": "Immob"
             }
           ]
         },
@@ -905,8 +964,9 @@
               "duration": 15,
               "effectType": "Fly",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Spines.Impale"
             },
             {
@@ -918,7 +978,7 @@
               "effectType": "Rage",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Spines.Impale"
             }
           ]
@@ -934,8 +994,9 @@
               "duration": 15,
               "effectType": "SpeedRunning",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Spines.Impale"
             },
             {
@@ -946,21 +1007,23 @@
               "duration": 15,
               "effectType": "SpeedFlying",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Spines.Impale"
             },
             {
+              "etModifies": "JumpHeight",
               "mag": {
-                "pve": -0.1
+                "pve": -0.3
               },
               "probability": 1,
               "duration": 15,
               "effectType": "Enhancement",
-              "eTModifies": 16,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Spines.Impale"
             },
             {
@@ -971,8 +1034,22 @@
               "duration": 15,
               "effectType": "SpeedJumping",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
+              "powerFullName": "Brute_Melee.Spines.Impale"
+            },
+            {
+              "etModifies": "RechargeTime",
+              "mag": {
+                "pve": -0.1
+              },
+              "probability": 1,
+              "duration": 8,
+              "effectType": "Enhancement",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Spines.Impale"
             }
           ]
@@ -989,9 +1066,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Spines.Impale",
               "requiresToHitCheck": true,
@@ -1008,14 +1086,28 @@
               },
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Spines.Impale",
               "damageType": "Fire"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Immobilize",
+        "Range",
+        "Recharge",
+        "Slow",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Spines.Impale",
+      "archetypeOrder": "primary",
       "powerIndex": 4,
       "castTimeReal": 2.43,
       "toggleCost": 5.2,
@@ -1056,14 +1148,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Range",
-        "Recharge",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Taunt",
@@ -1077,8 +1161,9 @@
               "duration": 20.5999985,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Spines.Taunt",
               "mezType": "Taunt"
@@ -1089,16 +1174,16 @@
           "effectType": "Ones",
           "values": [
             {
+              "etModifies": "Range",
               "mag": {
                 "pve": -0.75
               },
               "probability": 1,
               "duration": 12,
               "effectType": "Enhancement",
-              "eTModifies": 24,
               "stacking": 1,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Spines.Taunt"
             },
             {
@@ -1108,14 +1193,24 @@
               "probability": 1,
               "effectType": "Null",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Spines.Taunt",
               "requiresToHitCheck": true
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Range",
+        "Recharge",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Spines.Taunt",
+      "archetypeOrder": "primary",
       "powerIndex": 5,
       "castTimeReal": 1.67,
       "fullName": "Brute_Primary_Spines_Taunt",
@@ -1151,16 +1246,6 @@
       "aoeModifier": 3.25
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Recharge",
-        "Slow",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Damage",
@@ -1172,8 +1257,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Spines.Quills",
               "damageType": "Lethal"
             }
@@ -1191,11 +1277,12 @@
               "probability": 1,
               "duration": 3.57600021,
               "effectType": "Mez",
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Spines.Quills",
-              "mezType": "Immobilization"
+              "mezType": "Immob"
             }
           ]
         },
@@ -1203,16 +1290,16 @@
           "effectType": "Slow",
           "values": [
             {
+              "etModifies": "RechargeTime",
               "mag": {
-                "pve": -0.2
+                "pve": -0.1
               },
               "cancelOnMiss": true,
               "probability": 1,
               "duration": 3,
               "effectType": "Enhancement",
-              "eTModifies": 25,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Spines.Quills"
             },
             {
@@ -1223,8 +1310,9 @@
               "probability": 1,
               "duration": 3,
               "effectType": "SpeedFlying",
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Spines.Quills"
             },
             {
@@ -1235,8 +1323,22 @@
               "probability": 1,
               "duration": 3,
               "effectType": "SpeedRunning",
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
+              "powerFullName": "Brute_Melee.Spines.Quills"
+            },
+            {
+              "etModifies": "JumpHeight",
+              "mag": {
+                "pve": -0.2
+              },
+              "cancelOnMiss": true,
+              "probability": 1,
+              "duration": 3,
+              "effectType": "Enhancement",
+              "resistible": true,
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Spines.Quills"
             },
             {
@@ -1247,8 +1349,9 @@
               "probability": 1,
               "duration": 3,
               "effectType": "SpeedJumping",
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Spines.Quills"
             }
           ]
@@ -1261,7 +1364,7 @@
               "probability": 1,
               "duration": 2,
               "effectType": "Null",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Spines.Quills"
             }
           ]
@@ -1278,9 +1381,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Spines.Quills",
               "requiresToHitCheck": true,
@@ -1297,14 +1401,26 @@
               },
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Spines.Quills",
               "damageType": "Fire"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Recharge",
+        "Slow",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Spines.Quills",
+      "archetypeOrder": "primary",
       "powerIndex": 6,
       "castTimeReal": 0.73,
       "toggleCost": 0.52,
@@ -1348,17 +1464,6 @@
       "powerType": "Toggle"
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Knockback",
-        "Recharge",
-        "Slow",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Damage",
@@ -1371,8 +1476,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Spines.Ripper",
               "damageType": "Lethal"
             },
@@ -1387,8 +1493,9 @@
               "ticks": 5,
               "delayedTime": 0.5,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Spines.Ripper",
               "damageType": "Toxic"
             }
@@ -1405,8 +1512,9 @@
               "probability": 0.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Spines.Ripper",
               "mezType": "Knockback"
             },
@@ -1419,7 +1527,7 @@
               "effectType": "Rage",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Spines.Ripper"
             }
           ]
@@ -1428,16 +1536,16 @@
           "effectType": "Slow",
           "values": [
             {
+              "etModifies": "RechargeTime",
               "mag": {
-                "pve": -0.2
+                "pve": -0.1
               },
               "probability": 1,
               "duration": 10,
               "effectType": "Enhancement",
-              "eTModifies": 25,
               "stacking": 1,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Spines.Ripper"
             },
             {
@@ -1448,8 +1556,9 @@
               "duration": 15,
               "effectType": "SpeedRunning",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Spines.Ripper"
             },
             {
@@ -1460,8 +1569,22 @@
               "duration": 15,
               "effectType": "SpeedFlying",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
+              "powerFullName": "Brute_Melee.Spines.Ripper"
+            },
+            {
+              "etModifies": "JumpHeight",
+              "mag": {
+                "pve": -0.2
+              },
+              "probability": 1,
+              "duration": 15,
+              "effectType": "Enhancement",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Spines.Ripper"
             },
             {
@@ -1472,8 +1595,9 @@
               "duration": 15,
               "effectType": "SpeedJumping",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Spines.Ripper"
             }
           ]
@@ -1491,11 +1615,12 @@
               "duration": 11.92,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Spines.Ripper",
-              "mezType": "Immobilization"
+              "mezType": "Immob"
             }
           ]
         },
@@ -1511,9 +1636,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Spines.Ripper",
               "requiresToHitCheck": true,
@@ -1530,14 +1656,27 @@
               },
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Spines.Ripper",
               "damageType": "Fire"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Knockback",
+        "Recharge",
+        "Slow",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Spines.Ripper",
+      "archetypeOrder": "primary",
       "powerIndex": 7,
       "castTimeReal": 2.17,
       "toggleCost": 11.024,
@@ -1583,17 +1722,6 @@
       "aoeModifier": 1.35699379
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Range",
-        "Recharge",
-        "Slow",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Damage",
@@ -1606,8 +1734,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Spines.Throw_Spines",
               "damageType": "Lethal"
             },
@@ -1622,8 +1751,9 @@
               "ticks": 5,
               "delayedTime": 0.5,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Spines.Throw_Spines",
               "damageType": "Toxic"
             }
@@ -1640,8 +1770,9 @@
               "duration": 15,
               "effectType": "SpeedRunning",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Spines.Throw_Spines"
             },
             {
@@ -1652,21 +1783,35 @@
               "duration": 15,
               "effectType": "SpeedFlying",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Spines.Throw_Spines"
             },
             {
+              "etModifies": "RechargeTime",
               "mag": {
-                "pve": -0.5
+                "pve": -0.2
               },
               "probability": 1,
               "duration": 10,
               "effectType": "Enhancement",
-              "eTModifies": 25,
               "stacking": 1,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
+              "powerFullName": "Brute_Melee.Spines.Throw_Spines"
+            },
+            {
+              "etModifies": "JumpHeight",
+              "mag": {
+                "pve": -0.5
+              },
+              "probability": 1,
+              "duration": 15,
+              "effectType": "Enhancement",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Spines.Throw_Spines"
             },
             {
@@ -1677,8 +1822,9 @@
               "duration": 15,
               "effectType": "SpeedJumping",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Spines.Throw_Spines"
             }
           ]
@@ -1696,11 +1842,12 @@
               "duration": 11.92,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Spines.Throw_Spines",
-              "mezType": "Immobilization"
+              "mezType": "Immob"
             }
           ]
         },
@@ -1716,9 +1863,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Spines.Throw_Spines",
               "requiresToHitCheck": true,
@@ -1735,14 +1883,27 @@
               },
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Spines.Throw_Spines",
               "damageType": "Fire"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Range",
+        "Recharge",
+        "Slow",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Spines.Throw_Spines",
+      "archetypeOrder": "primary",
       "powerIndex": 8,
       "castTimeReal": 1.63,
       "toggleCost": 13,

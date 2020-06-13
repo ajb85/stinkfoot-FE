@@ -6,16 +6,6 @@
   "displayName": "Arctic Mastery",
   "powers": [
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Immobilize",
-        "Range",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Damage",
@@ -30,8 +20,9 @@
               "effectType": "Damage",
               "ticks": 5,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Arctic_Mastery.Chilblain",
               "damageType": "Cold"
             }
@@ -49,11 +40,12 @@
               "duration": 17.8800011,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.Arctic_Mastery.Chilblain",
-              "mezType": "Immobilization"
+              "mezType": "Immob"
             }
           ]
         },
@@ -61,16 +53,16 @@
           "effectType": "Slow",
           "values": [
             {
+              "etModifies": "JumpHeight",
               "mag": {
-                "pve": -0.2
+                "pve": -0.3
               },
               "probability": 1,
               "duration": 18,
               "effectType": "Enhancement",
-              "eTModifies": 16,
               "stacking": 1,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Arctic_Mastery.Chilblain"
             },
             {
@@ -81,8 +73,9 @@
               "duration": 18,
               "effectType": "SpeedJumping",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Arctic_Mastery.Chilblain"
             },
             {
@@ -93,8 +86,9 @@
               "duration": 18,
               "effectType": "SpeedRunning",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Arctic_Mastery.Chilblain"
             },
             {
@@ -105,9 +99,24 @@
               "duration": 18,
               "effectType": "SpeedFlying",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Arctic_Mastery.Chilblain"
+            },
+            {
+              "etModifies": "RechargeTime",
+              "mag": {
+                "pve": -0.2
+              },
+              "probability": 1,
+              "duration": 18,
+              "effectType": "Enhancement",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Epic.Arctic_Mastery.Chilblain",
+              "nearGround": true
             }
           ]
         },
@@ -122,7 +131,8 @@
               "duration": 15,
               "effectType": "MezResist",
               "stacking": 1,
-              "toWho": "Target",
+              "buffable": true,
+              "toWho": "target",
               "powerFullName": "Epic.Arctic_Mastery.Chilblain",
               "mezType": "Knockback"
             },
@@ -134,7 +144,8 @@
               "duration": 15,
               "effectType": "MezResist",
               "stacking": 1,
-              "toWho": "Target",
+              "buffable": true,
+              "toWho": "target",
               "powerFullName": "Epic.Arctic_Mastery.Chilblain",
               "mezType": "Knockup"
             },
@@ -146,7 +157,8 @@
               "duration": 15,
               "effectType": "Mez",
               "stacking": 1,
-              "toWho": "Target",
+              "buffable": true,
+              "toWho": "target",
               "powerFullName": "Epic.Arctic_Mastery.Chilblain",
               "mezType": "Knockback"
             },
@@ -158,7 +170,8 @@
               "duration": 15,
               "effectType": "Mez",
               "stacking": 1,
-              "toWho": "Target",
+              "buffable": true,
+              "toWho": "target",
               "powerFullName": "Epic.Arctic_Mastery.Chilblain",
               "mezType": "Knockup"
             },
@@ -170,7 +183,8 @@
               "duration": 15,
               "effectType": "Fly",
               "stacking": 1,
-              "toWho": "Target",
+              "buffable": true,
+              "toWho": "target",
               "powerFullName": "Epic.Arctic_Mastery.Chilblain"
             },
             {
@@ -181,8 +195,9 @@
               "duration": 6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.Arctic_Mastery.Chilblain",
               "mezType": "Taunt"
@@ -201,9 +216,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.Arctic_Mastery.Chilblain",
               "requiresToHitCheck": true,
@@ -222,14 +238,26 @@
               "effectType": "Damage",
               "ticks": 5,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Arctic_Mastery.Chilblain",
               "damageType": "Fire"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Immobilize",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Arctic_Mastery.Chilblain",
+      "archetypeOrder": "epicPool",
       "powerIndex": 0,
       "castTimeReal": 1.17,
       "toggleCost": 9.75,
@@ -267,16 +295,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Hold",
-        "Range",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Immobilize",
@@ -289,8 +307,9 @@
               "duration": 14.3040009,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.Arctic_Mastery.Block_of_Ice",
               "mezType": "Hold"
@@ -308,8 +327,9 @@
               "duration": 2,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.Arctic_Mastery.Block_of_Ice",
               "mezType": "Hold"
@@ -322,7 +342,7 @@
               "duration": 10,
               "effectType": "MezResist",
               "stacking": 1,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Arctic_Mastery.Block_of_Ice",
               "mezType": "Knockback"
             },
@@ -334,7 +354,7 @@
               "duration": 10,
               "effectType": "MezResist",
               "stacking": 1,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Arctic_Mastery.Block_of_Ice",
               "mezType": "Knockup"
             },
@@ -346,7 +366,8 @@
               "duration": 10,
               "effectType": "Mez",
               "stacking": 1,
-              "toWho": "Target",
+              "buffable": true,
+              "toWho": "target",
               "powerFullName": "Epic.Arctic_Mastery.Block_of_Ice",
               "mezType": "Knockback"
             },
@@ -358,7 +379,8 @@
               "duration": 10,
               "effectType": "Mez",
               "stacking": 1,
-              "toWho": "Target",
+              "buffable": true,
+              "toWho": "target",
               "powerFullName": "Epic.Arctic_Mastery.Block_of_Ice",
               "mezType": "Knockup"
             },
@@ -370,8 +392,9 @@
               "duration": 6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.Arctic_Mastery.Block_of_Ice",
               "mezType": "Taunt"
@@ -389,8 +412,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Arctic_Mastery.Block_of_Ice",
               "damageType": "Cold"
             }
@@ -400,16 +424,16 @@
           "effectType": "Slow",
           "values": [
             {
+              "etModifies": "JumpHeight",
               "mag": {
                 "pve": -0.3
               },
               "probability": 1,
               "duration": 18,
               "effectType": "Enhancement",
-              "eTModifies": 16,
               "stacking": 1,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Arctic_Mastery.Block_of_Ice"
             },
             {
@@ -420,8 +444,9 @@
               "duration": 18,
               "effectType": "SpeedJumping",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Arctic_Mastery.Block_of_Ice"
             },
             {
@@ -432,8 +457,9 @@
               "duration": 18,
               "effectType": "SpeedRunning",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Arctic_Mastery.Block_of_Ice"
             },
             {
@@ -444,9 +470,24 @@
               "duration": 18,
               "effectType": "SpeedFlying",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Arctic_Mastery.Block_of_Ice"
+            },
+            {
+              "etModifies": "RechargeTime",
+              "mag": {
+                "pve": -0.3
+              },
+              "probability": 1,
+              "duration": 18,
+              "effectType": "Enhancement",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Epic.Arctic_Mastery.Block_of_Ice",
+              "nearGround": true
             }
           ]
         },
@@ -462,9 +503,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.Arctic_Mastery.Block_of_Ice",
               "requiresToHitCheck": true,
@@ -481,14 +523,26 @@
               },
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Arctic_Mastery.Block_of_Ice",
               "damageType": "Fire"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Hold",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Arctic_Mastery.Block_of_Ice",
+      "archetypeOrder": "epicPool",
       "powerIndex": 1,
       "castTimeReal": 1.87,
       "toggleCost": 10.66,
@@ -526,16 +580,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Range",
-        "Recharge",
-        "Slow"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Damage",
@@ -548,8 +592,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Arctic_Mastery.Ice_Blast",
               "damageType": "Smashing"
             },
@@ -561,8 +606,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Arctic_Mastery.Ice_Blast",
               "damageType": "Cold"
             }
@@ -572,16 +618,16 @@
           "effectType": "Slow",
           "values": [
             {
+              "etModifies": "JumpHeight",
               "mag": {
                 "pve": -0.2
               },
               "probability": 1,
               "duration": 10,
               "effectType": "Enhancement",
-              "eTModifies": 16,
               "stacking": 1,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Arctic_Mastery.Ice_Blast"
             },
             {
@@ -592,8 +638,9 @@
               "duration": 10,
               "effectType": "SpeedJumping",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Arctic_Mastery.Ice_Blast"
             },
             {
@@ -604,8 +651,9 @@
               "duration": 10,
               "effectType": "SpeedRunning",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Arctic_Mastery.Ice_Blast"
             },
             {
@@ -616,8 +664,22 @@
               "duration": 10,
               "effectType": "SpeedFlying",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
+              "powerFullName": "Epic.Arctic_Mastery.Ice_Blast"
+            },
+            {
+              "etModifies": "RechargeTime",
+              "mag": {
+                "pve": -0.2
+              },
+              "probability": 1,
+              "duration": 10,
+              "effectType": "Enhancement",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "target",
               "powerFullName": "Epic.Arctic_Mastery.Ice_Blast"
             }
           ]
@@ -634,9 +696,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.Arctic_Mastery.Ice_Blast",
               "requiresToHitCheck": true,
@@ -655,8 +718,9 @@
               "duration": 6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.Arctic_Mastery.Ice_Blast",
               "mezType": "Taunt"
@@ -672,23 +736,35 @@
               },
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Arctic_Mastery.Ice_Blast",
               "damageType": "Fire"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Range",
+        "Recharge",
+        "Slow"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Arctic_Mastery.Ice_Blast",
+      "archetypeOrder": "epicPool",
       "powerIndex": 2,
       "castTimeReal": 1.67,
       "toggleCost": 6.5,
+      "isEpic": true,
       "fullName": "Epic_Arctic_Mastery_Ice_Blast",
       "displayName": "Ice Blast",
       "requires": {
         "powers": {
-          "Epic_Arctic_Mastery_Chilblain": true,
-          "Epic_Arctic_Mastery_Block_of_Ice": true
+          "Epic.Arctic_Mastery.Ice_Blast": true
         },
         "count": 1
       },
@@ -720,30 +796,21 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Endurance_Discount",
-        "Range",
-        "Recharge",
-        "Slow"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Slow",
           "values": [
             {
+              "etModifies": "RechargeTime",
               "mag": {
                 "pve": -0.65
               },
               "probability": 1,
               "duration": 10,
               "effectType": "Enhancement",
-              "eTModifies": 25,
               "stacking": 1,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Arctic_Mastery.Shiver"
             },
             {
@@ -754,8 +821,9 @@
               "duration": 10,
               "effectType": "SpeedRunning",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Arctic_Mastery.Shiver"
             },
             {
@@ -766,8 +834,22 @@
               "duration": 10,
               "effectType": "SpeedFlying",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
+              "powerFullName": "Epic.Arctic_Mastery.Shiver"
+            },
+            {
+              "etModifies": "JumpHeight",
+              "mag": {
+                "pve": -0.65
+              },
+              "probability": 1,
+              "duration": 10,
+              "effectType": "Enhancement",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "target",
               "powerFullName": "Epic.Arctic_Mastery.Shiver"
             },
             {
@@ -778,8 +860,9 @@
               "duration": 10,
               "effectType": "SpeedJumping",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Arctic_Mastery.Shiver"
             }
           ]
@@ -795,7 +878,7 @@
               "duration": 10,
               "effectType": "SpeedRunning",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Arctic_Mastery.Shiver"
             }
           ]
@@ -812,9 +895,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.Arctic_Mastery.Shiver",
               "requiresToHitCheck": true,
@@ -833,8 +917,9 @@
               "duration": 6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.Arctic_Mastery.Shiver",
               "mezType": "Taunt"
@@ -850,23 +935,34 @@
               },
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Arctic_Mastery.Shiver",
               "damageType": "Fire"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Endurance_Discount",
+        "Range",
+        "Recharge",
+        "Slow"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Arctic_Mastery.Shiver",
+      "archetypeOrder": "epicPool",
       "powerIndex": 3,
       "castTimeReal": 2.17,
       "toggleCost": 15.6,
+      "isEpic": true,
       "fullName": "Epic_Arctic_Mastery_Shiver",
       "displayName": "Shiver",
       "requires": {
         "powers": {
-          "Epic_Arctic_Mastery_Chilblain": true,
-          "Epic_Arctic_Mastery_Block_of_Ice": true
+          "Epic.Arctic_Mastery.Shiver": true
         },
         "count": 1
       },
@@ -899,15 +995,6 @@
       "aoeModifier": 5.04995537
     },
     {
-      "allowedEnhancements": [
-        "Damage",
-        "Endurance_Discount",
-        "Range",
-        "Recharge",
-        "Slow"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Level",
@@ -920,8 +1007,9 @@
               "duration": 15,
               "effectType": "EntCreate",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "All",
+              "toWho": "all",
               "powerFullName": "Epic.Arctic_Mastery.Ice_Storm"
             }
           ]
@@ -936,24 +1024,33 @@
               "duration": 15,
               "effectType": "EntCreate",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "All",
+              "toWho": "all",
               "powerFullName": "Epic.Arctic_Mastery.Ice_Storm"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Damage",
+        "Endurance_Discount",
+        "Range",
+        "Recharge",
+        "Slow"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Arctic_Mastery.Ice_Storm",
+      "archetypeOrder": "epicPool",
       "powerIndex": 4,
       "castTimeReal": 2.03,
       "toggleCost": 19.5,
+      "isEpic": true,
       "fullName": "Epic_Arctic_Mastery_Ice_Storm",
       "displayName": "Ice Storm",
       "requires": {
         "powers": {
-          "Epic_Arctic_Mastery_Chilblain": true,
-          "Epic_Arctic_Mastery_Block_of_Ice": true,
-          "Epic_Arctic_Mastery_Ice_Blast": true,
-          "Epic_Arctic_Mastery_Shiver": true
+          "Epic.Arctic_Mastery.Ice_Storm": true
         },
         "count": 2
       },

@@ -6,15 +6,6 @@
   "displayName": "Sonic Attack",
   "powers": [
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Range",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Damage",
@@ -26,8 +17,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Shriek",
               "damageType": "Smashing"
             },
@@ -39,8 +31,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Shriek",
               "damageType": "Energy"
             }
@@ -58,7 +51,7 @@
               "effectType": "Resistance",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Shriek",
               "damageType": "Smashing"
             },
@@ -71,7 +64,7 @@
               "effectType": "Resistance",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Shriek",
               "damageType": "Lethal"
             },
@@ -84,7 +77,7 @@
               "effectType": "Resistance",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Shriek",
               "damageType": "Fire"
             },
@@ -97,7 +90,7 @@
               "effectType": "Resistance",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Shriek",
               "damageType": "Cold"
             },
@@ -110,7 +103,7 @@
               "effectType": "Resistance",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Shriek",
               "damageType": "Energy"
             },
@@ -123,7 +116,7 @@
               "effectType": "Resistance",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Shriek",
               "damageType": "Negative"
             },
@@ -136,7 +129,7 @@
               "effectType": "Resistance",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Shriek",
               "damageType": "Psionic"
             },
@@ -149,7 +142,7 @@
               "effectType": "Resistance",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Shriek",
               "damageType": "Toxic"
             }
@@ -168,7 +161,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Shriek",
               "damageType": "Smashing"
             },
@@ -182,7 +175,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Shriek",
               "damageType": "Lethal"
             },
@@ -196,7 +189,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Shriek",
               "damageType": "Fire"
             },
@@ -210,7 +203,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Shriek",
               "damageType": "Cold"
             },
@@ -224,7 +217,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Shriek",
               "damageType": "Energy"
             },
@@ -238,7 +231,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Shriek",
               "damageType": "Negative"
             },
@@ -252,7 +245,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Shriek",
               "damageType": "Toxic"
             },
@@ -266,13 +259,23 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Shriek",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Ranged.Sonic_Attack.Shriek",
+      "archetypeOrder": "primary",
       "powerIndex": 0,
       "castTimeReal": 1,
       "toggleCost": 4.368,
@@ -311,15 +314,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Range",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Damage",
@@ -333,8 +327,9 @@
               "effectType": "Damage",
               "ticks": 5,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Scream",
               "damageType": "Smashing"
             },
@@ -348,8 +343,9 @@
               "effectType": "Damage",
               "ticks": 5,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Scream",
               "damageType": "Energy"
             }
@@ -367,7 +363,7 @@
               "effectType": "Resistance",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Scream",
               "damageType": "Smashing"
             },
@@ -380,7 +376,7 @@
               "effectType": "Resistance",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Scream",
               "damageType": "Lethal"
             },
@@ -393,7 +389,7 @@
               "effectType": "Resistance",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Scream",
               "damageType": "Fire"
             },
@@ -406,7 +402,7 @@
               "effectType": "Resistance",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Scream",
               "damageType": "Cold"
             },
@@ -419,7 +415,7 @@
               "effectType": "Resistance",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Scream",
               "damageType": "Energy"
             },
@@ -432,7 +428,7 @@
               "effectType": "Resistance",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Scream",
               "damageType": "Negative"
             },
@@ -445,7 +441,7 @@
               "effectType": "Resistance",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Scream",
               "damageType": "Psionic"
             },
@@ -458,7 +454,7 @@
               "effectType": "Resistance",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Scream",
               "damageType": "Toxic"
             }
@@ -477,7 +473,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Scream",
               "damageType": "Smashing"
             },
@@ -491,7 +487,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Scream",
               "damageType": "Lethal"
             },
@@ -505,7 +501,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Scream",
               "damageType": "Fire"
             },
@@ -519,7 +515,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Scream",
               "damageType": "Cold"
             },
@@ -533,7 +529,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Scream",
               "damageType": "Energy"
             },
@@ -547,7 +543,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Scream",
               "damageType": "Negative"
             },
@@ -561,7 +557,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Scream",
               "damageType": "Toxic"
             },
@@ -575,13 +571,23 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Scream",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Ranged.Sonic_Attack.Scream",
+      "archetypeOrder": "primary",
       "powerIndex": 1,
       "castTimeReal": 1.67,
       "toggleCost": 6.864,
@@ -620,15 +626,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Range",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Damage",
@@ -640,8 +637,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Howl",
               "damageType": "Smashing"
             },
@@ -653,8 +651,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Howl",
               "damageType": "Energy"
             }
@@ -672,7 +671,7 @@
               "effectType": "Resistance",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Howl",
               "damageType": "Smashing"
             },
@@ -685,7 +684,7 @@
               "effectType": "Resistance",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Howl",
               "damageType": "Lethal"
             },
@@ -698,7 +697,7 @@
               "effectType": "Resistance",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Howl",
               "damageType": "Fire"
             },
@@ -711,7 +710,7 @@
               "effectType": "Resistance",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Howl",
               "damageType": "Cold"
             },
@@ -724,7 +723,7 @@
               "effectType": "Resistance",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Howl",
               "damageType": "Energy"
             },
@@ -737,7 +736,7 @@
               "effectType": "Resistance",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Howl",
               "damageType": "Negative"
             },
@@ -750,7 +749,7 @@
               "effectType": "Resistance",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Howl",
               "damageType": "Psionic"
             },
@@ -763,7 +762,7 @@
               "effectType": "Resistance",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Howl",
               "damageType": "Toxic"
             }
@@ -780,7 +779,7 @@
               "duration": 9.83,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Howl",
               "damageType": "Smashing"
             },
@@ -792,7 +791,7 @@
               "duration": 9.83,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Howl",
               "damageType": "Lethal"
             },
@@ -804,7 +803,7 @@
               "duration": 9.83,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Howl",
               "damageType": "Fire"
             },
@@ -816,7 +815,7 @@
               "duration": 9.83,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Howl",
               "damageType": "Cold"
             },
@@ -828,7 +827,7 @@
               "duration": 9.83,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Howl",
               "damageType": "Energy"
             },
@@ -840,7 +839,7 @@
               "duration": 9.83,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Howl",
               "damageType": "Negative"
             },
@@ -852,7 +851,7 @@
               "duration": 9.83,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Howl",
               "damageType": "Toxic"
             },
@@ -864,13 +863,23 @@
               "duration": 9.83,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Howl",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Ranged.Sonic_Attack.Howl",
+      "archetypeOrder": "primary",
       "powerIndex": 2,
       "castTimeReal": 2.33,
       "toggleCost": 10.192,
@@ -911,16 +920,6 @@
       "aoeModifier": 2.44994545
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Knockback",
-        "Range",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Damage",
@@ -932,8 +931,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Shockwave",
               "damageType": "Smashing"
             },
@@ -945,8 +945,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Shockwave",
               "damageType": "Energy"
             }
@@ -963,8 +964,9 @@
               "probability": 1,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Shockwave",
               "mezType": "Knockback"
             }
@@ -981,7 +983,7 @@
               "duration": 9.67,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Shockwave",
               "damageType": "Smashing"
             },
@@ -993,7 +995,7 @@
               "duration": 9.67,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Shockwave",
               "damageType": "Lethal"
             },
@@ -1005,7 +1007,7 @@
               "duration": 9.67,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Shockwave",
               "damageType": "Fire"
             },
@@ -1017,7 +1019,7 @@
               "duration": 9.67,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Shockwave",
               "damageType": "Cold"
             },
@@ -1029,7 +1031,7 @@
               "duration": 9.67,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Shockwave",
               "damageType": "Energy"
             },
@@ -1041,7 +1043,7 @@
               "duration": 9.67,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Shockwave",
               "damageType": "Negative"
             },
@@ -1053,7 +1055,7 @@
               "duration": 9.67,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Shockwave",
               "damageType": "Toxic"
             },
@@ -1065,13 +1067,24 @@
               "duration": 9.67,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Shockwave",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Knockback",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Ranged.Sonic_Attack.Shockwave",
+      "archetypeOrder": "primary",
       "powerIndex": 3,
       "castTimeReal": 2.17,
       "toggleCost": 11.856,
@@ -1113,15 +1126,6 @@
       "aoeModifier": 2.44994545
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Range",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Damage",
@@ -1133,8 +1137,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Shout",
               "damageType": "Smashing"
             },
@@ -1146,8 +1151,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Shout",
               "damageType": "Energy"
             }
@@ -1165,7 +1171,7 @@
               "effectType": "Resistance",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Shout",
               "damageType": "Smashing"
             },
@@ -1178,7 +1184,7 @@
               "effectType": "Resistance",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Shout",
               "damageType": "Lethal"
             },
@@ -1191,7 +1197,7 @@
               "effectType": "Resistance",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Shout",
               "damageType": "Fire"
             },
@@ -1204,7 +1210,7 @@
               "effectType": "Resistance",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Shout",
               "damageType": "Cold"
             },
@@ -1217,7 +1223,7 @@
               "effectType": "Resistance",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Shout",
               "damageType": "Energy"
             },
@@ -1230,7 +1236,7 @@
               "effectType": "Resistance",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Shout",
               "damageType": "Negative"
             },
@@ -1243,7 +1249,7 @@
               "effectType": "Resistance",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Shout",
               "damageType": "Psionic"
             },
@@ -1256,7 +1262,7 @@
               "effectType": "Resistance",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Shout",
               "damageType": "Toxic"
             }
@@ -1275,7 +1281,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Shout",
               "damageType": "Smashing"
             },
@@ -1289,7 +1295,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Shout",
               "damageType": "Lethal"
             },
@@ -1303,7 +1309,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Shout",
               "damageType": "Fire"
             },
@@ -1317,7 +1323,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Shout",
               "damageType": "Cold"
             },
@@ -1331,7 +1337,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Shout",
               "damageType": "Energy"
             },
@@ -1345,7 +1351,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Shout",
               "damageType": "Negative"
             },
@@ -1359,7 +1365,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Shout",
               "damageType": "Toxic"
             },
@@ -1373,13 +1379,23 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Shout",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Ranged.Sonic_Attack.Shout",
+      "archetypeOrder": "primary",
       "powerIndex": 4,
       "castTimeReal": 2.67,
       "toggleCost": 11.024,
@@ -1417,13 +1433,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "ToHit_Buff",
-        "Endurance_Discount",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Buff_ToHit",
@@ -1437,7 +1446,8 @@
               "variableModified": true,
               "effectType": "ToHit",
               "stacking": 1,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Amplify"
             }
           ]
@@ -1454,7 +1464,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Amplify",
               "damageType": "Smashing"
             },
@@ -1467,7 +1477,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Amplify",
               "damageType": "Lethal"
             },
@@ -1480,7 +1490,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Amplify",
               "damageType": "Fire"
             },
@@ -1493,7 +1503,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Amplify",
               "damageType": "Cold"
             },
@@ -1506,7 +1516,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Amplify",
               "damageType": "Energy"
             },
@@ -1519,7 +1529,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Amplify",
               "damageType": "Negative"
             },
@@ -1532,7 +1542,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Amplify",
               "damageType": "Toxic"
             },
@@ -1545,13 +1555,21 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Amplify",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "ToHit_Buff",
+        "Endurance_Discount",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Ranged.Sonic_Attack.Amplify",
+      "archetypeOrder": "primary",
       "powerIndex": 5,
       "castTimeReal": 1.17,
       "toggleCost": 5.2,
@@ -1586,16 +1604,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Range",
-        "Recharge",
-        "Sleep"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Sleep",
@@ -1609,8 +1617,9 @@
               "effectType": "Mez",
               "delayedTime": 0.25,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Sirens_Song",
               "mezType": "Sleep"
@@ -1629,8 +1638,9 @@
               "effectType": "Mez",
               "delayedTime": 0.25,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Sirens_Song",
               "mezType": "Sleep"
@@ -1643,7 +1653,7 @@
               "duration": 9.5,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Sirens_Song",
               "damageType": "Smashing"
             },
@@ -1655,7 +1665,7 @@
               "duration": 9.5,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Sirens_Song",
               "damageType": "Lethal"
             },
@@ -1667,7 +1677,7 @@
               "duration": 9.5,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Sirens_Song",
               "damageType": "Fire"
             },
@@ -1679,7 +1689,7 @@
               "duration": 9.5,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Sirens_Song",
               "damageType": "Cold"
             },
@@ -1691,7 +1701,7 @@
               "duration": 9.5,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Sirens_Song",
               "damageType": "Energy"
             },
@@ -1703,7 +1713,7 @@
               "duration": 9.5,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Sirens_Song",
               "damageType": "Negative"
             },
@@ -1715,7 +1725,7 @@
               "duration": 9.5,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Sirens_Song",
               "damageType": "Toxic"
             },
@@ -1727,7 +1737,7 @@
               "duration": 9.5,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Sirens_Song",
               "damageType": "Psionic"
             }
@@ -1744,14 +1754,26 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Sirens_Song",
               "damageType": "Energy"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Range",
+        "Recharge",
+        "Sleep"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Ranged.Sonic_Attack.Sirens_Song",
+      "archetypeOrder": "primary",
       "powerIndex": 6,
       "castTimeReal": 2,
       "toggleCost": 15.6,
@@ -1793,16 +1815,6 @@
       "aoeModifier": 2.45329237
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Range",
-        "Recharge",
-        "Stun"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Damage",
@@ -1814,8 +1826,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Screech",
               "damageType": "Smashing"
             },
@@ -1827,8 +1840,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Screech",
               "damageType": "Energy"
             }
@@ -1845,8 +1859,9 @@
               "duration": 11.92,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Screech",
               "mezType": "Stun"
@@ -1864,8 +1879,9 @@
               "duration": 2,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Screech",
               "mezType": "Stun"
@@ -1880,7 +1896,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Screech",
               "damageType": "Smashing"
             },
@@ -1894,7 +1910,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Screech",
               "damageType": "Lethal"
             },
@@ -1908,7 +1924,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Screech",
               "damageType": "Fire"
             },
@@ -1922,7 +1938,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Screech",
               "damageType": "Cold"
             },
@@ -1936,7 +1952,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Screech",
               "damageType": "Energy"
             },
@@ -1950,7 +1966,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Screech",
               "damageType": "Negative"
             },
@@ -1964,7 +1980,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Screech",
               "damageType": "Toxic"
             },
@@ -1978,7 +1994,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Screech",
               "damageType": "Psionic"
             }
@@ -1996,7 +2012,7 @@
               "effectType": "Resistance",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Screech",
               "damageType": "Smashing"
             },
@@ -2009,7 +2025,7 @@
               "effectType": "Resistance",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Screech",
               "damageType": "Lethal"
             },
@@ -2022,7 +2038,7 @@
               "effectType": "Resistance",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Screech",
               "damageType": "Fire"
             },
@@ -2035,7 +2051,7 @@
               "effectType": "Resistance",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Screech",
               "damageType": "Cold"
             },
@@ -2048,7 +2064,7 @@
               "effectType": "Resistance",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Screech",
               "damageType": "Energy"
             },
@@ -2061,7 +2077,7 @@
               "effectType": "Resistance",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Screech",
               "damageType": "Negative"
             },
@@ -2074,7 +2090,7 @@
               "effectType": "Resistance",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Screech",
               "damageType": "Psionic"
             },
@@ -2087,13 +2103,24 @@
               "effectType": "Resistance",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Screech",
               "damageType": "Toxic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Range",
+        "Recharge",
+        "Stun"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Ranged.Sonic_Attack.Screech",
+      "archetypeOrder": "primary",
       "powerIndex": 7,
       "castTimeReal": 1.5,
       "toggleCost": 10.192,
@@ -2132,15 +2159,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Recharge",
-        "Stun"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Damage",
@@ -2153,8 +2171,9 @@
               "effectType": "Damage",
               "delayedTime": 0.5,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Dreadful_Wail",
               "damageType": "Smashing"
             },
@@ -2167,8 +2186,9 @@
               "effectType": "Damage",
               "delayedTime": 0.5,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Dreadful_Wail",
               "damageType": "Energy"
             }
@@ -2185,8 +2205,9 @@
               "duration": 11.92,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Dreadful_Wail",
               "mezType": "Stun"
@@ -2204,8 +2225,9 @@
               "duration": 2,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Dreadful_Wail",
               "mezType": "Stun"
@@ -2218,7 +2240,7 @@
               "duration": 9.47,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Dreadful_Wail",
               "damageType": "Smashing"
             },
@@ -2230,7 +2252,7 @@
               "duration": 9.47,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Dreadful_Wail",
               "damageType": "Lethal"
             },
@@ -2242,7 +2264,7 @@
               "duration": 9.47,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Dreadful_Wail",
               "damageType": "Fire"
             },
@@ -2254,7 +2276,7 @@
               "duration": 9.47,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Dreadful_Wail",
               "damageType": "Cold"
             },
@@ -2266,7 +2288,7 @@
               "duration": 9.47,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Dreadful_Wail",
               "damageType": "Energy"
             },
@@ -2278,7 +2300,7 @@
               "duration": 9.47,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Dreadful_Wail",
               "damageType": "Negative"
             },
@@ -2290,7 +2312,7 @@
               "duration": 9.47,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Dreadful_Wail",
               "damageType": "Toxic"
             },
@@ -2302,7 +2324,7 @@
               "duration": 9.47,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Dreadful_Wail",
               "damageType": "Psionic"
             }
@@ -2321,7 +2343,7 @@
               "delayedTime": 0.5,
               "stacking": 1,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Dreadful_Wail",
               "damageType": "Smashing"
             },
@@ -2335,7 +2357,7 @@
               "delayedTime": 0.5,
               "stacking": 1,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Dreadful_Wail",
               "damageType": "Lethal"
             },
@@ -2349,7 +2371,7 @@
               "delayedTime": 0.5,
               "stacking": 1,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Dreadful_Wail",
               "damageType": "Fire"
             },
@@ -2363,7 +2385,7 @@
               "delayedTime": 0.5,
               "stacking": 1,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Dreadful_Wail",
               "damageType": "Cold"
             },
@@ -2377,7 +2399,7 @@
               "delayedTime": 0.5,
               "stacking": 1,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Dreadful_Wail",
               "damageType": "Energy"
             },
@@ -2391,7 +2413,7 @@
               "delayedTime": 0.5,
               "stacking": 1,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Dreadful_Wail",
               "damageType": "Negative"
             },
@@ -2405,7 +2427,7 @@
               "delayedTime": 0.5,
               "stacking": 1,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Dreadful_Wail",
               "damageType": "Psionic"
             },
@@ -2419,13 +2441,23 @@
               "delayedTime": 0.5,
               "stacking": 1,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Sonic_Attack.Dreadful_Wail",
               "damageType": "Toxic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Recharge",
+        "Stun"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Ranged.Sonic_Attack.Dreadful_Wail",
+      "archetypeOrder": "primary",
       "powerIndex": 8,
       "castTimeReal": 1.97,
       "toggleCost": 27.716,

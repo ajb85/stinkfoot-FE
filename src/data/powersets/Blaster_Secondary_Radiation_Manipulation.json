@@ -6,17 +6,6 @@
   "displayName": "Atomic Manipulation",
   "powers": [
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Immobilize",
-        "Range",
-        "Recharge",
-        "Endurance_Modification"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Damage",
@@ -31,8 +20,9 @@
               "effectType": "Damage",
               "ticks": 10,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Radiation_Manipulation.Electron_Shackles",
               "damageType": "Energy"
             }
@@ -50,11 +40,12 @@
               "duration": 17.8800011,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Blaster_Support.Radiation_Manipulation.Electron_Shackles",
-              "mezType": "Immobilization"
+              "mezType": "Immob"
             }
           ]
         },
@@ -69,7 +60,7 @@
               "duration": 15,
               "effectType": "MezResist",
               "stacking": 1,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Radiation_Manipulation.Electron_Shackles",
               "mezType": "Knockback"
             },
@@ -81,7 +72,7 @@
               "duration": 15,
               "effectType": "MezResist",
               "stacking": 1,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Radiation_Manipulation.Electron_Shackles",
               "mezType": "Knockup"
             },
@@ -93,7 +84,8 @@
               "duration": 15,
               "effectType": "Mez",
               "stacking": 1,
-              "toWho": "Target",
+              "buffable": true,
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Radiation_Manipulation.Electron_Shackles",
               "mezType": "Knockback"
             },
@@ -105,7 +97,8 @@
               "duration": 15,
               "effectType": "Mez",
               "stacking": 1,
-              "toWho": "Target",
+              "buffable": true,
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Radiation_Manipulation.Electron_Shackles",
               "mezType": "Knockup"
             }
@@ -123,8 +116,9 @@
               "duration": 10,
               "effectType": "Defense",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Radiation_Manipulation.Electron_Shackles"
             }
           ]
@@ -138,7 +132,7 @@
               },
               "probability": 1,
               "effectType": "GrantPower",
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Radiation_Manipulation.Electron_Shackles"
             },
             {
@@ -147,7 +141,7 @@
               },
               "probability": 1,
               "effectType": "RevokePower",
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Radiation_Manipulation.Electron_Shackles"
             }
           ]
@@ -161,8 +155,9 @@
               },
               "probability": 1,
               "effectType": "GrantPower",
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Radiation_Manipulation.Electron_Shackles"
             }
           ]
@@ -180,7 +175,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Radiation_Manipulation.Electron_Shackles",
               "damageType": "Smashing"
             },
@@ -194,7 +189,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Radiation_Manipulation.Electron_Shackles",
               "damageType": "Lethal"
             },
@@ -208,7 +203,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Radiation_Manipulation.Electron_Shackles",
               "damageType": "Fire"
             },
@@ -222,7 +217,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Radiation_Manipulation.Electron_Shackles",
               "damageType": "Cold"
             },
@@ -236,7 +231,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Radiation_Manipulation.Electron_Shackles",
               "damageType": "Energy"
             },
@@ -250,7 +245,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Radiation_Manipulation.Electron_Shackles",
               "damageType": "Negative"
             },
@@ -264,7 +259,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Radiation_Manipulation.Electron_Shackles",
               "damageType": "Toxic"
             },
@@ -278,13 +273,25 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Radiation_Manipulation.Electron_Shackles",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Immobilize",
+        "Range",
+        "Recharge",
+        "Endurance_Modification"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Support.Radiation_Manipulation.Electron_Shackles",
+      "archetypeOrder": "secondary",
       "powerIndex": 0,
       "castTimeReal": 1.17,
       "toggleCost": 5.2,
@@ -326,16 +333,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Defense_Debuff",
-        "Endurance_Discount",
-        "Knockback",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Damage",
@@ -348,8 +345,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Radiation_Manipulation.Negatron_Slam",
               "damageType": "Smashing"
             },
@@ -361,8 +359,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Radiation_Manipulation.Negatron_Slam",
               "damageType": "Energy"
             }
@@ -380,8 +379,9 @@
               "duration": 10,
               "effectType": "Defense",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Radiation_Manipulation.Negatron_Slam"
             }
           ]
@@ -397,8 +397,9 @@
               "probability": 0.33,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Radiation_Manipulation.Negatron_Slam",
               "mezType": "Knockback"
             }
@@ -413,7 +414,7 @@
               },
               "probability": 1,
               "effectType": "GrantPower",
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Radiation_Manipulation.Negatron_Slam"
             },
             {
@@ -422,7 +423,7 @@
               },
               "probability": 1,
               "effectType": "RevokePower",
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Radiation_Manipulation.Negatron_Slam"
             }
           ]
@@ -436,8 +437,9 @@
               },
               "probability": 1,
               "effectType": "GrantPower",
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Radiation_Manipulation.Negatron_Slam"
             }
           ]
@@ -455,7 +457,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Radiation_Manipulation.Negatron_Slam",
               "damageType": "Smashing"
             },
@@ -469,7 +471,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Radiation_Manipulation.Negatron_Slam",
               "damageType": "Lethal"
             },
@@ -483,7 +485,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Radiation_Manipulation.Negatron_Slam",
               "damageType": "Fire"
             },
@@ -497,7 +499,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Radiation_Manipulation.Negatron_Slam",
               "damageType": "Cold"
             },
@@ -511,7 +513,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Radiation_Manipulation.Negatron_Slam",
               "damageType": "Energy"
             },
@@ -525,7 +527,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Radiation_Manipulation.Negatron_Slam",
               "damageType": "Negative"
             },
@@ -539,7 +541,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Radiation_Manipulation.Negatron_Slam",
               "damageType": "Toxic"
             },
@@ -553,13 +555,24 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Radiation_Manipulation.Negatron_Slam",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Defense_Debuff",
+        "Endurance_Discount",
+        "Knockback",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Support.Radiation_Manipulation.Negatron_Slam",
+      "archetypeOrder": "secondary",
       "powerIndex": 1,
       "castTimeReal": 1.5,
       "toggleCost": 10.192,
@@ -602,17 +615,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "ToHit_Debuff",
-        "Endurance_Discount",
-        "Hold",
-        "Range",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Immobilize",
@@ -626,8 +628,9 @@
               "duration": 14.3040009,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Blaster_Support.Radiation_Manipulation.Positron_Cell",
               "mezType": "Hold"
@@ -647,8 +650,9 @@
               "effectType": "Damage",
               "ticks": 5,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Radiation_Manipulation.Positron_Cell",
               "damageType": "Energy"
             }
@@ -665,8 +669,9 @@
               "duration": 10,
               "effectType": "Defense",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Radiation_Manipulation.Positron_Cell"
             }
           ]
@@ -680,7 +685,7 @@
               },
               "probability": 1,
               "effectType": "GrantPower",
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Radiation_Manipulation.Positron_Cell"
             },
             {
@@ -689,7 +694,7 @@
               },
               "probability": 1,
               "effectType": "RevokePower",
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Radiation_Manipulation.Positron_Cell"
             }
           ]
@@ -703,8 +708,9 @@
               },
               "probability": 1,
               "effectType": "GrantPower",
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Radiation_Manipulation.Positron_Cell"
             }
           ]
@@ -722,7 +728,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Radiation_Manipulation.Positron_Cell",
               "damageType": "Smashing"
             },
@@ -736,7 +742,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Radiation_Manipulation.Positron_Cell",
               "damageType": "Lethal"
             },
@@ -750,7 +756,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Radiation_Manipulation.Positron_Cell",
               "damageType": "Fire"
             },
@@ -764,7 +770,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Radiation_Manipulation.Positron_Cell",
               "damageType": "Cold"
             },
@@ -778,7 +784,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Radiation_Manipulation.Positron_Cell",
               "damageType": "Energy"
             },
@@ -792,7 +798,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Radiation_Manipulation.Positron_Cell",
               "damageType": "Negative"
             },
@@ -806,7 +812,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Radiation_Manipulation.Positron_Cell",
               "damageType": "Toxic"
             },
@@ -820,13 +826,25 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Radiation_Manipulation.Positron_Cell",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "ToHit_Debuff",
+        "Endurance_Discount",
+        "Hold",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Support.Radiation_Manipulation.Positron_Cell",
+      "archetypeOrder": "secondary",
       "powerIndex": 2,
       "castTimeReal": 1.67,
       "toggleCost": 11.388,
@@ -868,13 +886,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "ToHit_Buff",
-        "Endurance_Discount",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Buff_ToHit",
@@ -888,7 +899,8 @@
               "variableModified": true,
               "effectType": "ToHit",
               "stacking": 1,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Radiation_Manipulation.Ionize"
             }
           ]
@@ -905,7 +917,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Radiation_Manipulation.Ionize",
               "damageType": "Smashing"
             },
@@ -918,7 +930,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Radiation_Manipulation.Ionize",
               "damageType": "Lethal"
             },
@@ -931,7 +943,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Radiation_Manipulation.Ionize",
               "damageType": "Fire"
             },
@@ -944,7 +956,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Radiation_Manipulation.Ionize",
               "damageType": "Cold"
             },
@@ -957,7 +969,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Radiation_Manipulation.Ionize",
               "damageType": "Energy"
             },
@@ -970,7 +982,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Radiation_Manipulation.Ionize",
               "damageType": "Negative"
             },
@@ -983,7 +995,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Radiation_Manipulation.Ionize",
               "damageType": "Toxic"
             },
@@ -996,13 +1008,21 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Radiation_Manipulation.Ionize",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "ToHit_Buff",
+        "Endurance_Discount",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Support.Radiation_Manipulation.Ionize",
+      "archetypeOrder": "secondary",
       "powerIndex": 3,
       "castTimeReal": 1.17,
       "toggleCost": 5.2,
@@ -1037,14 +1057,6 @@
       "powerType": "Toggle"
     },
     {
-      "allowedEnhancements": [
-        "Defense_Debuff",
-        "ToHit_Debuff",
-        "Endurance_Discount",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "DeBuff_ToHit",
@@ -1056,8 +1068,9 @@
               "probability": 1,
               "duration": 1,
               "effectType": "ToHit",
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Radiation_Manipulation.Beta_Decay"
             }
           ]
@@ -1072,8 +1085,9 @@
               "probability": 1,
               "duration": 1,
               "effectType": "Defense",
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Radiation_Manipulation.Beta_Decay"
             }
           ]
@@ -1082,6 +1096,7 @@
           "effectType": "Ones",
           "values": [
             {
+              "etModifies": "RechargeTime",
               "mag": {
                 "pve": 0.025
               },
@@ -1089,14 +1104,22 @@
               "duration": 1,
               "variableModified": true,
               "effectType": "Enhancement",
-              "eTModifies": 25,
               "variableModifiedOverride": true,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Radiation_Manipulation.Beta_Decay"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Defense_Debuff",
+        "ToHit_Debuff",
+        "Endurance_Discount",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Support.Radiation_Manipulation.Beta_Decay",
+      "archetypeOrder": "secondary",
       "powerIndex": 4,
       "castTimeReal": 0.67,
       "toggleCost": 0.208,
@@ -1139,14 +1162,6 @@
       "powerType": "Toggle"
     },
     {
-      "allowedEnhancements": [
-        "Endurance_Discount",
-        "Heal",
-        "Recharge",
-        "Endurance_Modification"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Ones",
@@ -1158,7 +1173,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Regeneration",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Radiation_Manipulation.Metabolic_Acceleration"
             },
             {
@@ -1168,18 +1184,19 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Recovery",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Radiation_Manipulation.Metabolic_Acceleration"
             },
             {
+              "etModifies": "RechargeTime",
               "mag": {
                 "pve": 0.2
               },
               "probability": 1,
               "duration": 0.75,
               "effectType": "Enhancement",
-              "eTModifies": 25,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Radiation_Manipulation.Metabolic_Acceleration"
             }
           ]
@@ -1194,7 +1211,7 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "MezResist",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Radiation_Manipulation.Metabolic_Acceleration",
               "mezType": "Hold"
             },
@@ -1205,7 +1222,7 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "MezResist",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Radiation_Manipulation.Metabolic_Acceleration",
               "mezType": "Stun"
             },
@@ -1216,7 +1233,7 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "MezResist",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Radiation_Manipulation.Metabolic_Acceleration",
               "mezType": "Sleep"
             },
@@ -1227,24 +1244,44 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "MezResist",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Radiation_Manipulation.Metabolic_Acceleration",
-              "mezType": "Immobilization"
+              "mezType": "Immob"
             },
             {
+              "etModifies": "Recovery",
               "mag": {
                 "pve": 0.2768
               },
               "probability": 1,
               "duration": 0.75,
               "effectType": "ResEffect",
-              "eTModifies": 26,
-              "toWho": "All",
+              "toWho": "all",
+              "powerFullName": "Blaster_Support.Radiation_Manipulation.Metabolic_Acceleration"
+            },
+            {
+              "etModifies": "Endurance",
+              "mag": {
+                "pve": 0.2768
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "ResEffect",
+              "toWho": "all",
               "powerFullName": "Blaster_Support.Radiation_Manipulation.Metabolic_Acceleration"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Endurance_Discount",
+        "Heal",
+        "Recharge",
+        "Endurance_Modification"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Support.Radiation_Manipulation.Metabolic_Acceleration",
+      "archetypeOrder": "secondary",
       "powerIndex": 5,
       "castTimeReal": 0.73,
       "fullName": "Blaster_Secondary_Atomic_Manipulation_Metabolic_Acceleration",
@@ -1279,16 +1316,6 @@
       "powerType": "Toggle"
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Defense_Debuff",
-        "Endurance_Discount",
-        "Recharge",
-        "Stun"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Damage",
@@ -1301,8 +1328,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Radiation_Manipulation.Atom_Smasher",
               "damageType": "Energy"
             },
@@ -1314,8 +1342,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Radiation_Manipulation.Atom_Smasher",
               "damageType": "Toxic"
             }
@@ -1333,8 +1362,9 @@
               "duration": 10,
               "effectType": "Defense",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Radiation_Manipulation.Atom_Smasher"
             }
           ]
@@ -1350,8 +1380,9 @@
               "duration": 7.15200043,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Blaster_Support.Radiation_Manipulation.Atom_Smasher",
               "mezType": "Stun"
@@ -1369,8 +1400,9 @@
               "duration": 2,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Blaster_Support.Radiation_Manipulation.Atom_Smasher",
               "mezType": "Stun"
@@ -1388,7 +1420,7 @@
               "duration": 10.43,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Radiation_Manipulation.Atom_Smasher",
               "damageType": "Smashing"
             },
@@ -1400,7 +1432,7 @@
               "duration": 10.43,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Radiation_Manipulation.Atom_Smasher",
               "damageType": "Lethal"
             },
@@ -1412,7 +1444,7 @@
               "duration": 10.43,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Radiation_Manipulation.Atom_Smasher",
               "damageType": "Fire"
             },
@@ -1424,7 +1456,7 @@
               "duration": 10.43,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Radiation_Manipulation.Atom_Smasher",
               "damageType": "Cold"
             },
@@ -1436,7 +1468,7 @@
               "duration": 10.43,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Radiation_Manipulation.Atom_Smasher",
               "damageType": "Energy"
             },
@@ -1448,7 +1480,7 @@
               "duration": 10.43,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Radiation_Manipulation.Atom_Smasher",
               "damageType": "Negative"
             },
@@ -1460,7 +1492,7 @@
               "duration": 10.43,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Radiation_Manipulation.Atom_Smasher",
               "damageType": "Toxic"
             },
@@ -1472,13 +1504,24 @@
               "duration": 10.43,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Radiation_Manipulation.Atom_Smasher",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Defense_Debuff",
+        "Endurance_Discount",
+        "Recharge",
+        "Stun"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Support.Radiation_Manipulation.Atom_Smasher",
+      "archetypeOrder": "secondary",
       "powerIndex": 6,
       "castTimeReal": 2.93,
       "toggleCost": 20.176,
@@ -1522,14 +1565,6 @@
       "aoeModifier": 2.5
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Endurance_Discount",
-        "Hold",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Level",
@@ -1543,8 +1578,9 @@
               "variableModified": true,
               "effectType": "EntCreate",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Radiation_Manipulation.Radioactive_Cloud"
             }
           ]
@@ -1560,7 +1596,7 @@
               "duration": 8.57,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Radiation_Manipulation.Radioactive_Cloud",
               "damageType": "Smashing"
             },
@@ -1572,7 +1608,7 @@
               "duration": 8.57,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Radiation_Manipulation.Radioactive_Cloud",
               "damageType": "Lethal"
             },
@@ -1584,7 +1620,7 @@
               "duration": 8.57,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Radiation_Manipulation.Radioactive_Cloud",
               "damageType": "Fire"
             },
@@ -1596,7 +1632,7 @@
               "duration": 8.57,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Radiation_Manipulation.Radioactive_Cloud",
               "damageType": "Cold"
             },
@@ -1608,7 +1644,7 @@
               "duration": 8.57,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Radiation_Manipulation.Radioactive_Cloud",
               "damageType": "Energy"
             },
@@ -1620,7 +1656,7 @@
               "duration": 8.57,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Radiation_Manipulation.Radioactive_Cloud",
               "damageType": "Negative"
             },
@@ -1632,7 +1668,7 @@
               "duration": 8.57,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Radiation_Manipulation.Radioactive_Cloud",
               "damageType": "Toxic"
             },
@@ -1644,13 +1680,22 @@
               "duration": 8.57,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Radiation_Manipulation.Radioactive_Cloud",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Endurance_Discount",
+        "Hold",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Support.Radiation_Manipulation.Radioactive_Cloud",
+      "archetypeOrder": "secondary",
       "powerIndex": 7,
       "castTimeReal": 1.07,
       "toggleCost": 20.18,
@@ -1685,16 +1730,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Defense_Debuff",
-        "Endurance_Discount",
-        "Recharge",
-        "Stun"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Damage",
@@ -1707,8 +1742,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Radiation_Manipulation.Positronic_Fist",
               "damageType": "Smashing"
             },
@@ -1720,8 +1756,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Radiation_Manipulation.Positronic_Fist",
               "damageType": "Energy"
             }
@@ -1739,8 +1776,9 @@
               "duration": 10,
               "effectType": "Defense",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Radiation_Manipulation.Positronic_Fist"
             }
           ]
@@ -1756,8 +1794,9 @@
               "duration": 11.92,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Blaster_Support.Radiation_Manipulation.Positronic_Fist",
               "mezType": "Stun"
@@ -1775,8 +1814,9 @@
               "duration": 2,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Blaster_Support.Radiation_Manipulation.Positronic_Fist",
               "mezType": "Stun"
@@ -1792,7 +1832,7 @@
               },
               "probability": 1,
               "effectType": "GrantPower",
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Radiation_Manipulation.Positronic_Fist"
             },
             {
@@ -1801,7 +1841,7 @@
               },
               "probability": 1,
               "effectType": "RevokePower",
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Radiation_Manipulation.Positronic_Fist"
             }
           ]
@@ -1815,8 +1855,9 @@
               },
               "probability": 1,
               "effectType": "GrantPower",
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Radiation_Manipulation.Positronic_Fist"
             }
           ]
@@ -1834,7 +1875,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Radiation_Manipulation.Positronic_Fist",
               "damageType": "Smashing"
             },
@@ -1848,7 +1889,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Radiation_Manipulation.Positronic_Fist",
               "damageType": "Lethal"
             },
@@ -1862,7 +1903,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Radiation_Manipulation.Positronic_Fist",
               "damageType": "Fire"
             },
@@ -1876,7 +1917,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Radiation_Manipulation.Positronic_Fist",
               "damageType": "Cold"
             },
@@ -1890,7 +1931,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Radiation_Manipulation.Positronic_Fist",
               "damageType": "Energy"
             },
@@ -1904,7 +1945,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Radiation_Manipulation.Positronic_Fist",
               "damageType": "Negative"
             },
@@ -1918,7 +1959,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Radiation_Manipulation.Positronic_Fist",
               "damageType": "Toxic"
             },
@@ -1932,13 +1973,24 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Radiation_Manipulation.Positronic_Fist",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Defense_Debuff",
+        "Endurance_Discount",
+        "Recharge",
+        "Stun"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Support.Radiation_Manipulation.Positronic_Fist",
+      "archetypeOrder": "secondary",
       "powerIndex": 8,
       "castTimeReal": 2.67,
       "toggleCost": 18.512,

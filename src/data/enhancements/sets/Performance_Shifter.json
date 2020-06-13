@@ -2,323 +2,210 @@
   "fullName": "IOSet.Performance_Shifter",
   "enhancements": [
     {
-      "effects": [
-        {
-          "effectType": "EndMod",
-          "values": [
-            {
-              "etModifies": "Recovery",
-              "mag": {
-                "pve": 0.424
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Performance_Shifter_A.Attuned_Performance_Shifter_A"
-            }
-          ]
-        },
-        {
-          "effectType": "Endurance",
-          "values": [
-            {
-              "etModifies": "Endurance",
-              "mag": {
-                "pve": 0.424
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Performance_Shifter_A.Attuned_Performance_Shifter_A"
-            }
-          ]
-        }
-      ],
+      "type": "set",
+      "fullName": "Boosts.Attuned_Performance_Shifter_A.Attuned_Performance_Shifter_A",
+      "displayName": "Endurance Modification",
       "description": {
         "short": "+EndMod",
         "long": "Enhances the Endurance Modification potential of a power by {Boost.Attrib.EndMod.Scale}%."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Performance_Shifter_A.Attuned_Performance_Shifter_A",
-      "setName": "Performance_Shifter",
-      "displayName": "Endurance Modification"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Recharge",
-          "values": [
-            {
-              "etModifies": "RechargeTime",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Performance_Shifter_B.Attuned_Performance_Shifter_B"
+          "mag": {
+            "IO": {
+              "cap": 0.424
             }
-          ]
+          },
+          "stat": "Endurance_Modification",
+          "toWho": "self"
         },
         {
-          "effectType": "EndMod",
-          "values": [
-            {
-              "etModifies": "Recovery",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Performance_Shifter_B.Attuned_Performance_Shifter_B"
+          "mag": {
+            "IO": {
+              "cap": 0.424
             }
-          ]
-        },
-        {
-          "effectType": "Endurance",
-          "values": [
-            {
-              "etModifies": "Endurance",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Performance_Shifter_B.Attuned_Performance_Shifter_B"
-            }
-          ]
+          },
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Performance_Shifter_B.Attuned_Performance_Shifter_B",
+      "displayName": "Endurance Modification/Recharge",
       "description": {
         "short": "+EndMod, +Rech",
         "long": "Enhances the Endurance Modification potential of a power by {Boost.Attrib.EndMod.Scale}% and reduces the recharge time by {Boost.Attrib.Recharge.Scale}%."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Performance_Shifter_B.Attuned_Performance_Shifter_B",
-      "setName": "Performance_Shifter",
-      "displayName": "Endurance Modification/Recharge"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Recharge",
-          "values": [
-            {
-              "etModifies": "RechargeTime",
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Performance_Shifter_C.Attuned_Performance_Shifter_C"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
+          },
+          "stat": "Endurance_Modification",
+          "toWho": "self"
         },
         {
-          "effectType": "Accuracy",
-          "values": [
-            {
-              "etModifies": "Accuracy",
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Performance_Shifter_C.Attuned_Performance_Shifter_C"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
+          },
+          "stat": "Recharge",
+          "toWho": "self"
         },
         {
-          "effectType": "EndMod",
-          "values": [
-            {
-              "etModifies": "Recovery",
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Performance_Shifter_C.Attuned_Performance_Shifter_C"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
-        },
-        {
-          "effectType": "Endurance",
-          "values": [
-            {
-              "etModifies": "Endurance",
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Performance_Shifter_C.Attuned_Performance_Shifter_C"
-            }
-          ]
+          },
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Performance_Shifter_C.Attuned_Performance_Shifter_C",
+      "displayName": "Endurance Modification/Recharge/Accuracy",
       "description": {
         "short": "+EndMod, +Rech, +ACC",
         "long": "Enhances the Endurance Modification potential of a power by {Boost.Attrib.EndMod.Scale}%, the accuracy by {Boost.Attrib.Accuracy.Scale}% and reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}%."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Performance_Shifter_C.Attuned_Performance_Shifter_C",
-      "setName": "Performance_Shifter",
-      "displayName": "Endurance Modification/Recharge/Accuracy"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Recharge",
-          "values": [
-            {
-              "etModifies": "RechargeTime",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Performance_Shifter_D.Attuned_Performance_Shifter_D"
+          "mag": {
+            "IO": {
+              "cap": 0.212
             }
-          ]
+          },
+          "stat": "Endurance_Modification",
+          "toWho": "self"
         },
         {
-          "effectType": "Accuracy",
-          "values": [
-            {
-              "etModifies": "Accuracy",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Performance_Shifter_D.Attuned_Performance_Shifter_D"
+          "mag": {
+            "IO": {
+              "cap": 0.212
             }
-          ]
+          },
+          "stat": "Recharge",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.212
+            }
+          },
+          "stat": "Accuracy",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.212
+            }
+          },
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Performance_Shifter_D.Attuned_Performance_Shifter_D",
+      "displayName": "Recharge/Accuracy",
       "description": {
         "short": "+Rech, +Acc",
         "long": "Reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}% and increases the accuracy  of a power by {Boost.Attrib.Accuracy.Scale}%."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Performance_Shifter_D.Attuned_Performance_Shifter_D",
-      "setName": "Performance_Shifter",
-      "displayName": "Recharge/Accuracy"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "EndMod",
-          "values": [
-            {
-              "etModifies": "Recovery",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Performance_Shifter_E.Attuned_Performance_Shifter_E"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
+          },
+          "stat": "Recharge",
+          "toWho": "self"
         },
         {
-          "effectType": "Endurance",
-          "values": [
-            {
-              "etModifies": "Endurance",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Performance_Shifter_E.Attuned_Performance_Shifter_E"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
-        },
-        {
-          "effectType": "Accuracy",
-          "values": [
-            {
-              "etModifies": "Accuracy",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Performance_Shifter_E.Attuned_Performance_Shifter_E"
-            }
-          ]
+          },
+          "stat": "Accuracy",
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Performance_Shifter_E.Attuned_Performance_Shifter_E",
+      "displayName": "Endurance Modification/Accuracy",
       "description": {
         "short": "+EndMod, +ACC",
         "long": "Enhances the Endurance Modification potential of a power by {Boost.Attrib.EndMod.Scale}% and the accuracy by {Boost.Attrib.Accuracy.Scale}%."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Performance_Shifter_E.Attuned_Performance_Shifter_E",
-      "setName": "Performance_Shifter",
-      "displayName": "Endurance Modification/Accuracy"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Damage",
-          "values": [
-            {
-              "mag": {
-                "pve": 0.1
-              },
-              "procsPerMinute": 1.5,
-              "cancelOnMiss": true,
-              "probability": 1,
-              "effectType": "Endurance",
-              "stacking": 1,
-              "toWho": "all",
-              "powerFullName": "Boosts.Attuned_Performance_Shifter_F.Attuned_Performance_Shifter_F"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
+          },
+          "stat": "Endurance_Modification",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Accuracy",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Performance_Shifter_F.Attuned_Performance_Shifter_F",
+      "displayName": "Chance for +Endurance",
       "description": {
         "short": "Chance for +Endurance",
         "long": "Gives a chance of granting the powers target a small infusion of endurance.  This effect will trigger roughly 1.5 times per minute."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Performance_Shifter_F.Attuned_Performance_Shifter_F",
-      "setName": "Performance_Shifter",
-      "displayName": "Chance for +Endurance"
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.1
+            }
+          },
+          "stat": "Chance for +Endurance",
+          "procsPerMinute": 1.5,
+          "cancelOnMiss": true,
+          "stacking": 1,
+          "toWho": "all"
+        }
+      ]
     }
   ],
   "levels": {

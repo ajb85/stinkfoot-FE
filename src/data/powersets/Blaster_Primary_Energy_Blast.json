@@ -6,16 +6,6 @@
   "displayName": "Energy Blast",
   "powers": [
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Knockback",
-        "Range",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Damage",
@@ -27,8 +17,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Energy_Blast.Power_Bolt",
               "damageType": "Smashing"
             },
@@ -40,8 +31,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Energy_Blast.Power_Bolt",
               "damageType": "Energy"
             }
@@ -58,8 +50,9 @@
               "probability": 0.2,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Energy_Blast.Power_Bolt",
               "mezType": "Knockback"
             }
@@ -78,7 +71,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Energy_Blast.Power_Bolt",
               "damageType": "Smashing"
             },
@@ -92,7 +85,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Energy_Blast.Power_Bolt",
               "damageType": "Lethal"
             },
@@ -106,7 +99,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Energy_Blast.Power_Bolt",
               "damageType": "Fire"
             },
@@ -120,7 +113,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Energy_Blast.Power_Bolt",
               "damageType": "Cold"
             },
@@ -134,7 +127,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Energy_Blast.Power_Bolt",
               "damageType": "Energy"
             },
@@ -148,7 +141,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Energy_Blast.Power_Bolt",
               "damageType": "Negative"
             },
@@ -162,7 +155,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Energy_Blast.Power_Bolt",
               "damageType": "Toxic"
             },
@@ -176,13 +169,24 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Energy_Blast.Power_Bolt",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Knockback",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Ranged.Energy_Blast.Power_Bolt",
+      "archetypeOrder": "primary",
       "powerIndex": 0,
       "castTimeReal": 1,
       "toggleCost": 5.2,
@@ -222,16 +226,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Knockback",
-        "Range",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Damage",
@@ -243,8 +237,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Energy_Blast.Power_Blast",
               "damageType": "Smashing"
             },
@@ -256,8 +251,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Energy_Blast.Power_Blast",
               "damageType": "Energy"
             }
@@ -274,8 +270,9 @@
               "probability": 0.3,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Energy_Blast.Power_Blast",
               "mezType": "Knockback"
             }
@@ -294,7 +291,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Energy_Blast.Power_Blast",
               "damageType": "Smashing"
             },
@@ -308,7 +305,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Energy_Blast.Power_Blast",
               "damageType": "Lethal"
             },
@@ -322,7 +319,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Energy_Blast.Power_Blast",
               "damageType": "Fire"
             },
@@ -336,7 +333,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Energy_Blast.Power_Blast",
               "damageType": "Cold"
             },
@@ -350,7 +347,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Energy_Blast.Power_Blast",
               "damageType": "Energy"
             },
@@ -364,7 +361,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Energy_Blast.Power_Blast",
               "damageType": "Negative"
             },
@@ -378,7 +375,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Energy_Blast.Power_Blast",
               "damageType": "Toxic"
             },
@@ -392,13 +389,24 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Energy_Blast.Power_Blast",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Knockback",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Ranged.Energy_Blast.Power_Blast",
+      "archetypeOrder": "primary",
       "powerIndex": 1,
       "castTimeReal": 1.67,
       "toggleCost": 8.528,
@@ -438,16 +446,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Knockback",
-        "Range",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Damage",
@@ -459,8 +457,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Energy_Blast.Energy_Torrent",
               "damageType": "Smashing"
             },
@@ -472,8 +471,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Energy_Blast.Energy_Torrent",
               "damageType": "Energy"
             }
@@ -490,8 +490,9 @@
               "probability": 0.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Energy_Blast.Energy_Torrent",
               "mezType": "Knockback"
             }
@@ -508,7 +509,7 @@
               "duration": 8.57,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Energy_Blast.Energy_Torrent",
               "damageType": "Smashing"
             },
@@ -520,7 +521,7 @@
               "duration": 8.57,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Energy_Blast.Energy_Torrent",
               "damageType": "Lethal"
             },
@@ -532,7 +533,7 @@
               "duration": 8.57,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Energy_Blast.Energy_Torrent",
               "damageType": "Fire"
             },
@@ -544,7 +545,7 @@
               "duration": 8.57,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Energy_Blast.Energy_Torrent",
               "damageType": "Cold"
             },
@@ -556,7 +557,7 @@
               "duration": 8.57,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Energy_Blast.Energy_Torrent",
               "damageType": "Energy"
             },
@@ -568,7 +569,7 @@
               "duration": 8.57,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Energy_Blast.Energy_Torrent",
               "damageType": "Negative"
             },
@@ -580,7 +581,7 @@
               "duration": 8.57,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Energy_Blast.Energy_Torrent",
               "damageType": "Toxic"
             },
@@ -592,13 +593,24 @@
               "duration": 8.57,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Energy_Blast.Energy_Torrent",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Knockback",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Ranged.Energy_Blast.Energy_Torrent",
+      "archetypeOrder": "primary",
       "powerIndex": 2,
       "castTimeReal": 1.07,
       "toggleCost": 11.856,
@@ -640,16 +652,6 @@
       "aoeModifier": 2.37995839
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Knockback",
-        "Range",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Damage",
@@ -661,8 +663,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Energy_Blast.Power_Burst",
               "damageType": "Smashing"
             },
@@ -674,8 +677,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Energy_Blast.Power_Burst",
               "damageType": "Energy"
             }
@@ -692,8 +696,9 @@
               "probability": 0.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Energy_Blast.Power_Burst",
               "mezType": "Knockback"
             }
@@ -712,7 +717,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Energy_Blast.Power_Burst",
               "damageType": "Smashing"
             },
@@ -726,7 +731,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Energy_Blast.Power_Burst",
               "damageType": "Lethal"
             },
@@ -740,7 +745,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Energy_Blast.Power_Burst",
               "damageType": "Fire"
             },
@@ -754,7 +759,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Energy_Blast.Power_Burst",
               "damageType": "Cold"
             },
@@ -768,7 +773,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Energy_Blast.Power_Burst",
               "damageType": "Energy"
             },
@@ -782,7 +787,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Energy_Blast.Power_Burst",
               "damageType": "Negative"
             },
@@ -796,7 +801,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Energy_Blast.Power_Burst",
               "damageType": "Toxic"
             },
@@ -810,13 +815,24 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Energy_Blast.Power_Burst",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Knockback",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Ranged.Energy_Blast.Power_Burst",
+      "archetypeOrder": "primary",
       "powerIndex": 3,
       "castTimeReal": 2,
       "toggleCost": 10.4,
@@ -855,17 +871,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Interrupt",
-        "Knockback",
-        "Range",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Damage",
@@ -877,8 +882,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Energy_Blast.Sniper_Blast",
               "damageType": "Smashing"
             },
@@ -890,8 +896,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Energy_Blast.Sniper_Blast",
               "damageType": "Energy"
             }
@@ -909,7 +916,7 @@
               "effectType": "PowerRedirect",
               "stacking": 1,
               "specialCase": 43,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Energy_Blast.Sniper_Blast"
             },
             {
@@ -922,7 +929,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Energy_Blast.Sniper_Blast",
               "damageType": "Smashing"
             },
@@ -936,7 +943,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Energy_Blast.Sniper_Blast",
               "damageType": "Lethal"
             },
@@ -950,7 +957,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Energy_Blast.Sniper_Blast",
               "damageType": "Fire"
             },
@@ -964,7 +971,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Energy_Blast.Sniper_Blast",
               "damageType": "Cold"
             },
@@ -978,7 +985,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Energy_Blast.Sniper_Blast",
               "damageType": "Energy"
             },
@@ -992,7 +999,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Energy_Blast.Sniper_Blast",
               "damageType": "Negative"
             },
@@ -1006,7 +1013,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Energy_Blast.Sniper_Blast",
               "damageType": "Toxic"
             },
@@ -1020,19 +1027,19 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Energy_Blast.Sniper_Blast",
               "damageType": "Psionic"
             },
             {
+              "etModifies": "Range",
               "mag": {
                 "pve": 0.5
               },
               "probability": 1,
               "duration": 10,
               "effectType": "Enhancement",
-              "eTModifies": 24,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Energy_Blast.Sniper_Blast"
             }
           ]
@@ -1048,14 +1055,27 @@
               "probability": 0.5,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Energy_Blast.Sniper_Blast",
               "mezType": "Knockback"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Interrupt",
+        "Knockback",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Ranged.Energy_Blast.Sniper_Blast",
+      "archetypeOrder": "primary",
       "powerIndex": 4,
       "castTimeReal": 4.33,
       "toggleCost": 14.352,
@@ -1097,13 +1117,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "ToHit_Buff",
-        "Endurance_Discount",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Buff_ToHit",
@@ -1117,7 +1130,8 @@
               "variableModified": true,
               "effectType": "ToHit",
               "stacking": 1,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Energy_Blast.Aim"
             }
           ]
@@ -1134,7 +1148,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Energy_Blast.Aim",
               "damageType": "Smashing"
             },
@@ -1147,7 +1161,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Energy_Blast.Aim",
               "damageType": "Lethal"
             },
@@ -1160,7 +1174,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Energy_Blast.Aim",
               "damageType": "Fire"
             },
@@ -1173,7 +1187,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Energy_Blast.Aim",
               "damageType": "Cold"
             },
@@ -1186,7 +1200,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Energy_Blast.Aim",
               "damageType": "Energy"
             },
@@ -1199,7 +1213,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Energy_Blast.Aim",
               "damageType": "Negative"
             },
@@ -1212,7 +1226,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Energy_Blast.Aim",
               "damageType": "Toxic"
             },
@@ -1225,13 +1239,21 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Energy_Blast.Aim",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "ToHit_Buff",
+        "Endurance_Discount",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Ranged.Energy_Blast.Aim",
+      "archetypeOrder": "primary",
       "powerIndex": 5,
       "castTimeReal": 1.17,
       "toggleCost": 5.2,
@@ -1266,16 +1288,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Knockback",
-        "Range",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Damage",
@@ -1288,8 +1300,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Energy_Blast.Power_Push",
               "damageType": "Smashing"
             },
@@ -1301,8 +1314,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Energy_Blast.Power_Push",
               "damageType": "Energy"
             }
@@ -1319,8 +1333,9 @@
               "probability": 1,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Energy_Blast.Power_Push",
               "mezType": "Knockback"
             }
@@ -1339,7 +1354,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Energy_Blast.Power_Push",
               "damageType": "Smashing"
             },
@@ -1353,7 +1368,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Energy_Blast.Power_Push",
               "damageType": "Lethal"
             },
@@ -1367,7 +1382,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Energy_Blast.Power_Push",
               "damageType": "Fire"
             },
@@ -1381,7 +1396,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Energy_Blast.Power_Push",
               "damageType": "Cold"
             },
@@ -1395,7 +1410,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Energy_Blast.Power_Push",
               "damageType": "Energy"
             },
@@ -1409,7 +1424,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Energy_Blast.Power_Push",
               "damageType": "Negative"
             },
@@ -1423,7 +1438,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Energy_Blast.Power_Push",
               "damageType": "Toxic"
             },
@@ -1437,13 +1452,24 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Energy_Blast.Power_Push",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Knockback",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Ranged.Energy_Blast.Power_Push",
+      "archetypeOrder": "primary",
       "powerIndex": 6,
       "castTimeReal": 1.1,
       "toggleCost": 8.528,
@@ -1482,16 +1508,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Knockback",
-        "Range",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Damage",
@@ -1503,8 +1519,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Energy_Blast.Explosive_Blast",
               "damageType": "Smashing"
             },
@@ -1516,8 +1533,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Energy_Blast.Explosive_Blast",
               "damageType": "Energy"
             }
@@ -1534,8 +1552,9 @@
               "probability": 0.5,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Energy_Blast.Explosive_Blast",
               "mezType": "Knockback"
             }
@@ -1552,7 +1571,7 @@
               "duration": 9.17,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Energy_Blast.Explosive_Blast",
               "damageType": "Smashing"
             },
@@ -1564,7 +1583,7 @@
               "duration": 9.17,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Energy_Blast.Explosive_Blast",
               "damageType": "Lethal"
             },
@@ -1576,7 +1595,7 @@
               "duration": 9.17,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Energy_Blast.Explosive_Blast",
               "damageType": "Fire"
             },
@@ -1588,7 +1607,7 @@
               "duration": 9.17,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Energy_Blast.Explosive_Blast",
               "damageType": "Cold"
             },
@@ -1600,7 +1619,7 @@
               "duration": 9.17,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Energy_Blast.Explosive_Blast",
               "damageType": "Energy"
             },
@@ -1612,7 +1631,7 @@
               "duration": 9.17,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Energy_Blast.Explosive_Blast",
               "damageType": "Negative"
             },
@@ -1624,7 +1643,7 @@
               "duration": 9.17,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Energy_Blast.Explosive_Blast",
               "damageType": "Toxic"
             },
@@ -1636,13 +1655,24 @@
               "duration": 9.17,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Energy_Blast.Explosive_Blast",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Knockback",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Ranged.Energy_Blast.Explosive_Blast",
+      "archetypeOrder": "primary",
       "powerIndex": 7,
       "castTimeReal": 1.67,
       "toggleCost": 15.184,
@@ -1683,15 +1713,6 @@
       "aoeModifier": 3.25
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Knockback",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Damage",
@@ -1703,8 +1724,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Energy_Blast.Nova",
               "damageType": "Smashing"
             },
@@ -1716,8 +1738,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Energy_Blast.Nova",
               "damageType": "Energy"
             }
@@ -1734,8 +1757,9 @@
               "probability": 1,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Energy_Blast.Nova",
               "mezType": "Knockback"
             }
@@ -1752,7 +1776,7 @@
               "duration": 10.5,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Energy_Blast.Nova",
               "damageType": "Smashing"
             },
@@ -1764,7 +1788,7 @@
               "duration": 10.5,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Energy_Blast.Nova",
               "damageType": "Lethal"
             },
@@ -1776,7 +1800,7 @@
               "duration": 10.5,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Energy_Blast.Nova",
               "damageType": "Fire"
             },
@@ -1788,7 +1812,7 @@
               "duration": 10.5,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Energy_Blast.Nova",
               "damageType": "Cold"
             },
@@ -1800,7 +1824,7 @@
               "duration": 10.5,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Energy_Blast.Nova",
               "damageType": "Energy"
             },
@@ -1812,7 +1836,7 @@
               "duration": 10.5,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Energy_Blast.Nova",
               "damageType": "Negative"
             },
@@ -1824,7 +1848,7 @@
               "duration": 10.5,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Energy_Blast.Nova",
               "damageType": "Toxic"
             },
@@ -1836,13 +1860,23 @@
               "duration": 10.5,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Energy_Blast.Nova",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Knockback",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Ranged.Energy_Blast.Nova",
+      "archetypeOrder": "primary",
       "powerIndex": 8,
       "castTimeReal": 3,
       "toggleCost": 27.716,

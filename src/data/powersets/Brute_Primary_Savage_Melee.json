@@ -6,15 +6,6 @@
   "displayName": "Savage Melee",
   "powers": [
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Recharge",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Damage",
@@ -29,8 +20,9 @@
               "effectType": "Damage",
               "ticks": 2,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Savage_Melee.Savage_Strike",
               "damageType": "Lethal"
             }
@@ -47,7 +39,7 @@
               "variableModified": true,
               "effectType": "GrantPower",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Savage_Melee.Savage_Strike"
             }
           ]
@@ -64,9 +56,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Savage_Melee.Savage_Strike",
               "requiresToHitCheck": true,
@@ -83,14 +76,25 @@
               },
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Savage_Melee.Savage_Strike",
               "damageType": "Fire"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Recharge",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Savage_Melee.Savage_Strike",
+      "archetypeOrder": "primary",
       "powerIndex": 0,
       "castTimeReal": 0.8,
       "toggleCost": 3.95,
@@ -132,16 +136,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Recharge",
-        "Slow",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Damage",
@@ -154,8 +148,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Savage_Melee.Maiming_Slash",
               "damageType": "Lethal"
             }
@@ -172,7 +167,7 @@
               "variableModified": true,
               "effectType": "GrantPower",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Savage_Melee.Maiming_Slash"
             }
           ]
@@ -187,20 +182,21 @@
               "probability": 1,
               "duration": 10,
               "effectType": "SpeedRunning",
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Savage_Melee.Maiming_Slash"
             },
             {
+              "etModifies": "JumpHeight",
               "mag": {
                 "pve": -0.7
               },
               "probability": 1,
               "duration": 10,
               "effectType": "Enhancement",
-              "eTModifies": 16,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Savage_Melee.Maiming_Slash"
             },
             {
@@ -210,8 +206,9 @@
               "probability": 1,
               "duration": 10,
               "effectType": "SpeedJumping",
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Savage_Melee.Maiming_Slash"
             }
           ]
@@ -228,9 +225,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Savage_Melee.Maiming_Slash",
               "requiresToHitCheck": true,
@@ -247,14 +245,26 @@
               },
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Savage_Melee.Maiming_Slash",
               "damageType": "Fire"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Recharge",
+        "Slow",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Savage_Melee.Maiming_Slash",
+      "archetypeOrder": "primary",
       "powerIndex": 1,
       "castTimeReal": 1.17,
       "toggleCost": 6.032,
@@ -297,16 +307,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Defense_Debuff",
-        "Endurance_Discount",
-        "Recharge",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Damage",
@@ -321,8 +321,9 @@
               "effectType": "Damage",
               "ticks": 6,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Savage_Melee.Shred",
               "damageType": "Lethal"
             }
@@ -339,8 +340,9 @@
               "duration": 10,
               "effectType": "Defense",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Savage_Melee.Shred"
             }
           ]
@@ -354,7 +356,7 @@
               },
               "effectType": "RechargePower",
               "delayedTime": 2,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Savage_Melee.Shred"
             }
           ]
@@ -368,7 +370,7 @@
               },
               "probability": 1,
               "effectType": "RevokePower",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Savage_Melee.Shred"
             },
             {
@@ -377,7 +379,7 @@
               },
               "probability": 1,
               "effectType": "GrantPower",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Savage_Melee.Shred"
             }
           ]
@@ -394,9 +396,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Savage_Melee.Shred",
               "requiresToHitCheck": true,
@@ -413,14 +416,26 @@
               },
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Savage_Melee.Shred",
               "damageType": "Fire"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Defense_Debuff",
+        "Endurance_Discount",
+        "Recharge",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Savage_Melee.Shred",
+      "archetypeOrder": "primary",
       "powerIndex": 2,
       "castTimeReal": 2.17,
       "toggleCost": 8.112,
@@ -467,13 +482,6 @@
       "aoeModifier": 1.32876015
     },
     {
-      "allowedEnhancements": [
-        "Endurance_Discount",
-        "Heal",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Ones",
@@ -485,8 +493,9 @@
               "probability": 1,
               "duration": 15,
               "effectType": "ToHit",
+              "buffable": true,
               "resistible": true,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": ""
             }
           ]
@@ -503,7 +512,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "",
               "damageType": "Smashing"
             },
@@ -516,7 +525,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "",
               "damageType": "Lethal"
             },
@@ -529,7 +538,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "",
               "damageType": "Fire"
             },
@@ -542,7 +551,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "",
               "damageType": "Cold"
             },
@@ -555,7 +564,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "",
               "damageType": "Negative"
             },
@@ -568,7 +577,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "",
               "damageType": "Toxic"
             },
@@ -581,13 +590,21 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Endurance_Discount",
+        "Heal",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Savage_Melee.Blood_Thirst",
+      "archetypeOrder": "primary",
       "powerIndex": 3,
       "castTimeReal": 2,
       "toggleCost": 7.8,
@@ -624,16 +641,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Knockback",
-        "Recharge",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Damage",
@@ -646,8 +653,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Savage_Melee.Vicious_Slash",
               "damageType": "Lethal"
             }
@@ -664,8 +672,9 @@
               "probability": 0.67,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Savage_Melee.Vicious_Slash",
               "mezType": "Knockback"
             },
@@ -675,7 +684,7 @@
               },
               "probability": 1,
               "effectType": "GrantPower",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Savage_Melee.Vicious_Slash"
             }
           ]
@@ -692,9 +701,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Savage_Melee.Vicious_Slash",
               "requiresToHitCheck": true,
@@ -711,14 +721,26 @@
               },
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Savage_Melee.Vicious_Slash",
               "damageType": "Fire"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Knockback",
+        "Recharge",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Savage_Melee.Vicious_Slash",
+      "archetypeOrder": "primary",
       "powerIndex": 4,
       "castTimeReal": 1.67,
       "toggleCost": 9.36,
@@ -761,14 +783,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Range",
-        "Recharge",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Taunt",
@@ -782,8 +796,9 @@
               "duration": 20.5999985,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Savage_Melee.Taunt",
               "mezType": "Taunt"
@@ -794,21 +809,30 @@
           "effectType": "Ones",
           "values": [
             {
+              "etModifies": "Range",
               "mag": {
                 "pve": -0.75
               },
               "probability": 1,
               "duration": 12,
               "effectType": "Enhancement",
-              "eTModifies": 24,
               "stacking": 1,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Savage_Melee.Taunt"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Range",
+        "Recharge",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Savage_Melee.Taunt",
+      "archetypeOrder": "primary",
       "powerIndex": 5,
       "castTimeReal": 1.67,
       "fullName": "Brute_Primary_Savage_Melee_Taunt",
@@ -844,15 +868,6 @@
       "aoeModifier": 3.25
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Recharge",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Ones",
@@ -865,7 +880,7 @@
               "variableModified": true,
               "effectType": "PowerRedirect",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Savage_Melee.Rending_Flurry"
             },
             {
@@ -874,7 +889,7 @@
               },
               "probability": 1,
               "effectType": "RevokePower",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Savage_Melee.Rending_Flurry"
             },
             {
@@ -883,7 +898,7 @@
               },
               "probability": 1,
               "effectType": "GrantPower",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Savage_Melee.Rending_Flurry"
             }
           ]
@@ -899,8 +914,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 2,
               "powerFullName": "Brute_Melee.Savage_Melee.Rending_Flurry",
               "damageType": "Lethal"
@@ -919,9 +935,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Savage_Melee.Rending_Flurry",
               "requiresToHitCheck": true,
@@ -938,14 +955,25 @@
               },
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Savage_Melee.Rending_Flurry",
               "damageType": "Fire"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Recharge",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Savage_Melee.Rending_Flurry",
+      "archetypeOrder": "primary",
       "powerIndex": 6,
       "castTimeReal": 2.17,
       "toggleCost": 13.52,
@@ -989,15 +1017,6 @@
       "aoeModifier": 2.2
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Recharge",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Damage",
@@ -1007,8 +1026,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Savage_Melee.Hemorrhage",
               "damageType": "Lethal"
             }
@@ -1023,7 +1043,7 @@
               },
               "probability": 1,
               "effectType": "RevokePower",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Savage_Melee.Hemorrhage"
             },
             {
@@ -1032,7 +1052,7 @@
               },
               "probability": 1,
               "effectType": "GrantPower",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Savage_Melee.Hemorrhage"
             }
           ]
@@ -1049,9 +1069,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Savage_Melee.Hemorrhage",
               "requiresToHitCheck": true,
@@ -1068,14 +1089,25 @@
               },
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Savage_Melee.Hemorrhage",
               "damageType": "Fire"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Recharge",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Savage_Melee.Hemorrhage",
+      "archetypeOrder": "primary",
       "powerIndex": 7,
       "castTimeReal": 2,
       "toggleCost": 13.52,
@@ -1117,16 +1149,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Range",
-        "Recharge",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Ones",
@@ -1140,7 +1162,8 @@
               "effectType": "Mez",
               "delayedTime": 0.7,
               "stacking": 1,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Savage_Melee.Savage_Leap",
               "mezType": "Teleport"
             },
@@ -1152,7 +1175,7 @@
               "duration": 4,
               "effectType": "EntCreate",
               "delayedTime": 0.625,
-              "toWho": "All",
+              "toWho": "all",
               "powerFullName": "Brute_Melee.Savage_Melee.Savage_Leap"
             },
             {
@@ -1161,12 +1184,23 @@
               },
               "probability": 1,
               "effectType": "GrantPower",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Savage_Melee.Savage_Leap"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Range",
+        "Recharge",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Savage_Melee.Savage_Leap",
+      "archetypeOrder": "primary",
       "powerIndex": 8,
       "castTimeReal": 1.17,
       "toggleCost": 17.58,

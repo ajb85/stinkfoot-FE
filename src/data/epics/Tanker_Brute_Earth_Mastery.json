@@ -6,16 +6,6 @@
   "displayName": "Earth Mastery",
   "powers": [
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Immobilize",
-        "Range",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Damage",
@@ -30,8 +20,9 @@
               "effectType": "Damage",
               "ticks": 5,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Earth_Mastery.Stone_Prison",
               "nearGround": true,
               "damageType": "Smashing"
@@ -50,12 +41,13 @@
               "duration": 17.8800011,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.Earth_Mastery.Stone_Prison",
               "nearGround": true,
-              "mezType": "Immobilization"
+              "mezType": "Immob"
             }
           ]
         },
@@ -70,7 +62,7 @@
               "duration": 15,
               "effectType": "MezResist",
               "stacking": 1,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Earth_Mastery.Stone_Prison",
               "nearGround": true,
               "mezType": "Knockback"
@@ -83,7 +75,7 @@
               "duration": 15,
               "effectType": "MezResist",
               "stacking": 1,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Earth_Mastery.Stone_Prison",
               "nearGround": true,
               "mezType": "Knockup"
@@ -96,7 +88,8 @@
               "duration": 15,
               "effectType": "Mez",
               "stacking": 1,
-              "toWho": "Target",
+              "buffable": true,
+              "toWho": "target",
               "powerFullName": "Epic.Earth_Mastery.Stone_Prison",
               "nearGround": true,
               "mezType": "Knockback"
@@ -109,7 +102,8 @@
               "duration": 15,
               "effectType": "Mez",
               "stacking": 1,
-              "toWho": "Target",
+              "buffable": true,
+              "toWho": "target",
               "powerFullName": "Epic.Earth_Mastery.Stone_Prison",
               "nearGround": true,
               "mezType": "Knockup"
@@ -122,7 +116,8 @@
               "duration": 15,
               "effectType": "Fly",
               "stacking": 1,
-              "toWho": "Target",
+              "buffable": true,
+              "toWho": "target",
               "powerFullName": "Epic.Earth_Mastery.Stone_Prison"
             },
             {
@@ -133,8 +128,9 @@
               "duration": 6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.Earth_Mastery.Stone_Prison",
               "mezType": "Taunt"
@@ -151,8 +147,9 @@
               "probability": 1,
               "duration": 15,
               "effectType": "Defense",
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Earth_Mastery.Stone_Prison"
             }
           ]
@@ -169,9 +166,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.Earth_Mastery.Stone_Prison",
               "requiresToHitCheck": true,
@@ -190,14 +188,26 @@
               "effectType": "Damage",
               "ticks": 5,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Earth_Mastery.Stone_Prison",
               "damageType": "Fire"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Immobilize",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Earth_Mastery.Stone_Prison",
+      "archetypeOrder": "epicPool",
       "powerIndex": 0,
       "castTimeReal": 1.93,
       "toggleCost": 9.75,
@@ -235,14 +245,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Endurance_Discount",
-        "Recharge",
-        "Sleep"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Sleep",
@@ -256,8 +258,9 @@
               "duration": 23.84,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.Earth_Mastery.Salt_Crystals",
               "nearGround": true,
@@ -275,8 +278,9 @@
               "probability": 1,
               "duration": 15,
               "effectType": "Defense",
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Earth_Mastery.Salt_Crystals"
             }
           ]
@@ -293,9 +297,10 @@
               "duration": 13.33,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.Earth_Mastery.Salt_Crystals",
               "requiresToHitCheck": true,
@@ -314,8 +319,9 @@
               "duration": 6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.Earth_Mastery.Salt_Crystals",
               "mezType": "Taunt"
@@ -323,6 +329,15 @@
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Endurance_Discount",
+        "Recharge",
+        "Sleep"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Earth_Mastery.Salt_Crystals",
+      "archetypeOrder": "epicPool",
       "powerIndex": 1,
       "castTimeReal": 1.07,
       "toggleCost": 19.5,
@@ -359,16 +374,6 @@
       "aoeModifier": 5.5
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Hold",
-        "Range",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Immobilize",
@@ -381,8 +386,9 @@
               "duration": 14.3040009,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.Earth_Mastery.Fossilize",
               "nearGround": true,
@@ -401,8 +407,9 @@
               "duration": 2,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.Earth_Mastery.Fossilize",
               "nearGround": true,
@@ -416,8 +423,9 @@
               "duration": 6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.Earth_Mastery.Fossilize",
               "mezType": "Taunt"
@@ -435,8 +443,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Earth_Mastery.Fossilize",
               "damageType": "Smashing"
             }
@@ -452,8 +461,9 @@
               "probability": 1,
               "duration": 12,
               "effectType": "Defense",
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Earth_Mastery.Fossilize"
             }
           ]
@@ -470,9 +480,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.Earth_Mastery.Fossilize",
               "requiresToHitCheck": true,
@@ -489,23 +500,35 @@
               },
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Earth_Mastery.Fossilize",
               "damageType": "Fire"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Hold",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Earth_Mastery.Fossilize",
+      "archetypeOrder": "epicPool",
       "powerIndex": 2,
       "castTimeReal": 2.07,
       "toggleCost": 10.66,
+      "isEpic": true,
       "fullName": "Epic_Earth_Mastery_Fossilize",
       "displayName": "Fossilize",
       "requires": {
         "powers": {
-          "Epic_Earth_Mastery_Stone_Prison": true,
-          "Epic_Earth_Mastery_Salt_Crystals": true
+          "Epic.Earth_Mastery.Fossilize": true
         },
         "count": 1
       },
@@ -537,14 +560,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Endurance_Discount",
-        "Range",
-        "Recharge",
-        "Slow"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Ones",
@@ -557,7 +572,7 @@
               "duration": 45,
               "effectType": "EntCreate",
               "stacking": 1,
-              "toWho": "All",
+              "toWho": "all",
               "powerFullName": "Epic.Earth_Mastery.Quick_Sand"
             }
           ]
@@ -572,22 +587,32 @@
               "duration": 15,
               "effectType": "EntCreate",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "All",
+              "toWho": "all",
               "powerFullName": "Epic.Earth_Mastery.Quick_Sand"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Endurance_Discount",
+        "Range",
+        "Recharge",
+        "Slow"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Earth_Mastery.Quick_Sand",
+      "archetypeOrder": "epicPool",
       "powerIndex": 3,
       "castTimeReal": 3.1,
       "toggleCost": 7.8,
+      "isEpic": true,
       "fullName": "Epic_Earth_Mastery_Quick_Sand",
       "displayName": "Quick Sand",
       "requires": {
         "powers": {
-          "Epic_Earth_Mastery_Stone_Prison": true,
-          "Epic_Earth_Mastery_Salt_Crystals": true
+          "Epic.Earth_Mastery.Quick_Sand": true
         },
         "count": 1
       },
@@ -619,16 +644,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Range",
-        "Recharge",
-        "Stun"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Stun",
@@ -641,8 +656,9 @@
               "duration": 9.536,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.Earth_Mastery.Stalagmites",
               "nearGround": true,
@@ -661,8 +677,9 @@
               "duration": 2,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.Earth_Mastery.Stalagmites",
               "nearGround": true,
@@ -676,8 +693,9 @@
               "duration": 6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.Earth_Mastery.Stalagmites",
               "mezType": "Taunt"
@@ -695,8 +713,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Earth_Mastery.Stalagmites",
               "damageType": "Lethal"
             }
@@ -712,8 +731,9 @@
               "probability": 1,
               "duration": 12,
               "effectType": "Defense",
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Earth_Mastery.Stalagmites"
             }
           ]
@@ -730,9 +750,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.Earth_Mastery.Stalagmites",
               "requiresToHitCheck": true,
@@ -749,25 +770,35 @@
               },
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Earth_Mastery.Stalagmites",
               "damageType": "Fire"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Range",
+        "Recharge",
+        "Stun"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Earth_Mastery.Stalagmites",
+      "archetypeOrder": "epicPool",
       "powerIndex": 4,
       "castTimeReal": 2.1,
       "toggleCost": 18.98,
+      "isEpic": true,
       "fullName": "Epic_Earth_Mastery_Stalagmites",
       "displayName": "Stalagmites",
       "requires": {
         "powers": {
-          "Epic_Earth_Mastery_Stone_Prison": true,
-          "Epic_Earth_Mastery_Salt_Crystals": true,
-          "Epic_Earth_Mastery_Fossilize": true,
-          "Epic_Earth_Mastery_Quick_Sand": true
+          "Epic.Earth_Mastery.Stalagmites": true
         },
         "count": 2
       },

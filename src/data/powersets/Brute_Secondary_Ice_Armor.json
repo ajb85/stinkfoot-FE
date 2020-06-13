@@ -6,13 +6,6 @@
   "displayName": "Ice Armor",
   "powers": [
     {
-      "allowedEnhancements": [
-        "Defense_Buff",
-        "Endurance_Discount",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Buff_Def",
@@ -25,7 +18,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Ice_Armor.Ice_Armor",
               "damageType": "Smashing"
             },
@@ -37,7 +31,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Ice_Armor.Ice_Armor",
               "damageType": "Lethal"
             }
@@ -54,7 +49,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Ice_Armor.Ice_Armor",
               "damageType": "Cold"
             },
@@ -66,7 +62,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Ice_Armor.Ice_Armor",
               "damageType": "Fire"
             }
@@ -82,7 +79,7 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Elusivity",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Ice_Armor.Ice_Armor",
               "damageType": "Smashing"
             },
@@ -93,7 +90,7 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Elusivity",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Ice_Armor.Ice_Armor",
               "damageType": "Lethal"
             }
@@ -103,19 +100,27 @@
           "effectType": "Res_Boolean",
           "values": [
             {
+              "etModifies": "Defense",
               "mag": {
                 "pve": 0.11072
               },
               "probability": 1,
               "duration": 0.75,
               "effectType": "ResEffect",
-              "eTModifies": 5,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Ice_Armor.Ice_Armor"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Defense_Buff",
+        "Endurance_Discount",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Defense.Ice_Armor.Ice_Armor",
+      "archetypeOrder": "secondary",
       "powerIndex": 0,
       "castTimeReal": 0.73,
       "toggleCost": 0.26,
@@ -152,14 +157,6 @@
       "powerType": "Toggle"
     },
     {
-      "allowedEnhancements": [
-        "Endurance_Discount",
-        "Heal",
-        "Recharge",
-        "Res_Damage"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "HealSelf",
@@ -173,7 +170,7 @@
               "variableModified": true,
               "effectType": "HitPoints",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Ice_Armor.Hoarfrost"
             },
             {
@@ -184,7 +181,8 @@
               "variableModified": true,
               "effectType": "Heal",
               "stacking": 1,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Ice_Armor.Hoarfrost"
             }
           ]
@@ -199,13 +197,23 @@
               "probability": 1,
               "duration": 120,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Ice_Armor.Hoarfrost",
               "damageType": "Toxic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Endurance_Discount",
+        "Heal",
+        "Recharge",
+        "Res_Damage"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Defense.Ice_Armor.Hoarfrost",
+      "archetypeOrder": "secondary",
       "powerIndex": 1,
       "castTimeReal": 0.73,
       "toggleCost": 14.56,
@@ -242,14 +250,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Endurance_Discount",
-        "Recharge",
-        "Slow",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Slow",
@@ -261,20 +261,21 @@
               "probability": 1,
               "duration": 5,
               "effectType": "SpeedRunning",
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Defense.Ice_Armor.Chilling_Embrace"
             },
             {
+              "etModifies": "RechargeTime",
               "mag": {
-                "pve": -0.7
+                "pve": -0.4
               },
               "probability": 1,
               "duration": 5,
               "effectType": "Enhancement",
-              "eTModifies": 25,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Defense.Ice_Armor.Chilling_Embrace"
             },
             {
@@ -284,8 +285,21 @@
               "probability": 1,
               "duration": 5,
               "effectType": "SpeedFlying",
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
+              "powerFullName": "Brute_Defense.Ice_Armor.Chilling_Embrace"
+            },
+            {
+              "etModifies": "JumpHeight",
+              "mag": {
+                "pve": -0.7
+              },
+              "probability": 1,
+              "duration": 5,
+              "effectType": "Enhancement",
+              "resistible": true,
+              "toWho": "target",
               "powerFullName": "Brute_Defense.Ice_Armor.Chilling_Embrace"
             },
             {
@@ -295,8 +309,9 @@
               "probability": 1,
               "duration": 5,
               "effectType": "SpeedJumping",
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Defense.Ice_Armor.Chilling_Embrace"
             }
           ]
@@ -312,7 +327,7 @@
               "duration": 5,
               "effectType": "SpeedRunning",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Defense.Ice_Armor.Chilling_Embrace"
             }
           ]
@@ -328,7 +343,7 @@
               "duration": 5,
               "effectType": "DamageBuff",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Defense.Ice_Armor.Chilling_Embrace",
               "damageType": "Smashing"
             },
@@ -340,7 +355,7 @@
               "duration": 5,
               "effectType": "DamageBuff",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Defense.Ice_Armor.Chilling_Embrace",
               "damageType": "Lethal"
             },
@@ -352,7 +367,7 @@
               "duration": 5,
               "effectType": "DamageBuff",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Defense.Ice_Armor.Chilling_Embrace",
               "damageType": "Fire"
             },
@@ -364,7 +379,7 @@
               "duration": 5,
               "effectType": "DamageBuff",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Defense.Ice_Armor.Chilling_Embrace",
               "damageType": "Cold"
             },
@@ -376,7 +391,7 @@
               "duration": 5,
               "effectType": "DamageBuff",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Defense.Ice_Armor.Chilling_Embrace",
               "damageType": "Energy"
             },
@@ -388,7 +403,7 @@
               "duration": 5,
               "effectType": "DamageBuff",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Defense.Ice_Armor.Chilling_Embrace",
               "damageType": "Negative"
             },
@@ -400,7 +415,7 @@
               "duration": 5,
               "effectType": "DamageBuff",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Defense.Ice_Armor.Chilling_Embrace",
               "damageType": "Toxic"
             },
@@ -412,7 +427,7 @@
               "duration": 5,
               "effectType": "DamageBuff",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Defense.Ice_Armor.Chilling_Embrace",
               "damageType": "Psionic"
             }
@@ -430,9 +445,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Defense.Ice_Armor.Chilling_Embrace",
               "requiresToHitCheck": true,
@@ -441,6 +457,15 @@
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Endurance_Discount",
+        "Recharge",
+        "Slow",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Defense.Ice_Armor.Chilling_Embrace",
+      "archetypeOrder": "secondary",
       "powerIndex": 2,
       "castTimeReal": 0.73,
       "toggleCost": 0.26,
@@ -480,12 +505,6 @@
       "powerType": "Toggle"
     },
     {
-      "allowedEnhancements": [
-        "Endurance_Discount",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Ones",
@@ -498,7 +517,7 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "MezResist",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Ice_Armor.Wet_Ice",
               "mezType": "Knockback"
             },
@@ -510,7 +529,7 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "MezResist",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Ice_Armor.Wet_Ice",
               "mezType": "Knockup"
             },
@@ -522,7 +541,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Mez",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Ice_Armor.Wet_Ice",
               "mezType": "Knockback"
             },
@@ -534,11 +554,13 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Mez",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Ice_Armor.Wet_Ice",
               "mezType": "Knockup"
             },
             {
+              "etModifies": "SpeedRunning",
               "mag": {
                 "pve": 0.6,
                 "pvp": 0.5
@@ -546,8 +568,77 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "ResEffect",
-              "eTModifies": 32,
-              "toWho": "Self",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Ice_Armor.Wet_Ice"
+            },
+            {
+              "etModifies": "RechargeTime",
+              "mag": {
+                "pve": 0.6,
+                "pvp": 0.5
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "ResEffect",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Ice_Armor.Wet_Ice"
+            },
+            {
+              "etModifies": "SpeedFlying",
+              "mag": {
+                "pve": 0.6,
+                "pvp": 0.5
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "ResEffect",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Ice_Armor.Wet_Ice"
+            },
+            {
+              "etModifies": "JumpHeight",
+              "mag": {
+                "pve": 0.6,
+                "pvp": 0.5
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "ResEffect",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Ice_Armor.Wet_Ice"
+            },
+            {
+              "etModifies": "SpeedJumping",
+              "mag": {
+                "pve": 0.6,
+                "pvp": 0.5
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "ResEffect",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Ice_Armor.Wet_Ice"
+            },
+            {
+              "etModifies": "Defense",
+              "mag": {
+                "pvp": 0.3
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "ResEffect",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Ice_Armor.Wet_Ice"
+            },
+            {
+              "etModifies": "ToHit",
+              "mag": {
+                "pvp": 0.3
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "ResEffect",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Ice_Armor.Wet_Ice"
             }
           ]
@@ -562,7 +653,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Mez",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Ice_Armor.Wet_Ice",
               "mezType": "Stun"
             },
@@ -573,7 +665,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Mez",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Ice_Armor.Wet_Ice",
               "mezType": "Hold"
             },
@@ -584,7 +677,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Mez",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Ice_Armor.Wet_Ice",
               "mezType": "Sleep"
             },
@@ -595,9 +689,10 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Mez",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Ice_Armor.Wet_Ice",
-              "mezType": "Immobilization"
+              "mezType": "Immob"
             },
             {
               "mag": {
@@ -606,7 +701,7 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "MezResist",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Ice_Armor.Wet_Ice",
               "mezType": "Stun"
             },
@@ -617,7 +712,7 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "MezResist",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Ice_Armor.Wet_Ice",
               "mezType": "Hold"
             },
@@ -628,7 +723,7 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "MezResist",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Ice_Armor.Wet_Ice",
               "mezType": "Sleep"
             },
@@ -639,19 +734,19 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "MezResist",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Ice_Armor.Wet_Ice",
-              "mezType": "Immobilization"
+              "mezType": "Immob"
             },
             {
+              "etModifies": "Defense",
               "mag": {
                 "pve": 0.11072
               },
               "probability": 1,
               "duration": 0.75,
               "effectType": "ResEffect",
-              "eTModifies": 5,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Ice_Armor.Wet_Ice"
             }
           ]
@@ -667,7 +762,7 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Ice_Armor.Wet_Ice",
               "damageType": "Cold"
             }
@@ -684,7 +779,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Ice_Armor.Wet_Ice",
               "damageType": "Smashing"
             },
@@ -696,7 +792,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Ice_Armor.Wet_Ice",
               "damageType": "Lethal"
             },
@@ -708,7 +805,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Ice_Armor.Wet_Ice",
               "damageType": "Fire"
             },
@@ -720,7 +818,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Ice_Armor.Wet_Ice",
               "damageType": "Cold"
             },
@@ -732,7 +831,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Ice_Armor.Wet_Ice",
               "damageType": "Energy"
             },
@@ -744,13 +844,21 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Ice_Armor.Wet_Ice",
               "damageType": "Negative"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Endurance_Discount",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Defense.Ice_Armor.Wet_Ice",
+      "archetypeOrder": "secondary",
       "powerIndex": 3,
       "castTimeReal": 0.73,
       "toggleCost": 0.26,
@@ -785,13 +893,6 @@
       "powerType": "Toggle"
     },
     {
-      "allowedEnhancements": [
-        "Defense_Buff",
-        "Endurance_Discount",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Buff_Def",
@@ -804,7 +905,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Ice_Armor.Glacial_Armor",
               "damageType": "Energy"
             },
@@ -816,7 +918,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Ice_Armor.Glacial_Armor",
               "damageType": "Negative"
             },
@@ -827,7 +930,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Ice_Armor.Glacial_Armor",
               "damageType": "Psionic"
             }
@@ -844,7 +948,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Ice_Armor.Glacial_Armor",
               "damageType": "Cold"
             }
@@ -860,7 +965,7 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Elusivity",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Ice_Armor.Glacial_Armor",
               "damageType": "Psionic"
             },
@@ -871,7 +976,7 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Elusivity",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Ice_Armor.Glacial_Armor",
               "damageType": "Energy"
             },
@@ -881,18 +986,18 @@
               },
               "probability": 1,
               "duration": 0.75,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Ice_Armor.Glacial_Armor"
             },
             {
+              "etModifies": "PerceptionRadius",
               "mag": {
                 "pve": 0.6
               },
               "probability": 1,
               "duration": 0.75,
               "effectType": "ResEffect",
-              "eTModifies": 23,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Ice_Armor.Glacial_Armor"
             },
             {
@@ -902,7 +1007,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "PerceptionRadius",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Ice_Armor.Glacial_Armor"
             }
           ]
@@ -911,19 +1017,27 @@
           "effectType": "Res_Boolean",
           "values": [
             {
+              "etModifies": "Defense",
               "mag": {
                 "pve": 0.11072
               },
               "probability": 1,
               "duration": 0.75,
               "effectType": "ResEffect",
-              "eTModifies": 5,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Ice_Armor.Glacial_Armor"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Defense_Buff",
+        "Endurance_Discount",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Defense.Ice_Armor.Glacial_Armor",
+      "archetypeOrder": "secondary",
       "powerIndex": 4,
       "castTimeReal": 2.03,
       "toggleCost": 0.26,
@@ -961,15 +1075,6 @@
       "powerType": "Toggle"
     },
     {
-      "allowedEnhancements": [
-        "Defense_Buff",
-        "Endurance_Discount",
-        "Recharge",
-        "Endurance_Modification",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Ones",
@@ -981,8 +1086,9 @@
               "probability": 1,
               "effectType": "Endurance",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Defense.Ice_Armor.Energy_Absorption"
             },
             {
@@ -993,18 +1099,63 @@
               "variableModified": true,
               "effectType": "Endurance",
               "stacking": 1,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Ice_Armor.Energy_Absorption"
             },
             {
+              "etModifies": "SpeedRunning",
               "mag": {
                 "pve": 0.2
               },
               "probability": 1,
               "duration": 45,
               "effectType": "ResEffect",
-              "eTModifies": 32,
-              "toWho": "Self",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Ice_Armor.Energy_Absorption"
+            },
+            {
+              "etModifies": "RechargeTime",
+              "mag": {
+                "pve": 0.2
+              },
+              "probability": 1,
+              "duration": 45,
+              "effectType": "ResEffect",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Ice_Armor.Energy_Absorption"
+            },
+            {
+              "etModifies": "SpeedFlying",
+              "mag": {
+                "pve": 0.2
+              },
+              "probability": 1,
+              "duration": 45,
+              "effectType": "ResEffect",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Ice_Armor.Energy_Absorption"
+            },
+            {
+              "etModifies": "JumpHeight",
+              "mag": {
+                "pve": 0.2
+              },
+              "probability": 1,
+              "duration": 45,
+              "effectType": "ResEffect",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Ice_Armor.Energy_Absorption"
+            },
+            {
+              "etModifies": "SpeedJumping",
+              "mag": {
+                "pve": 0.2
+              },
+              "probability": 1,
+              "duration": 45,
+              "effectType": "ResEffect",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Ice_Armor.Energy_Absorption"
             }
           ]
@@ -1019,8 +1170,9 @@
               "probability": 1,
               "effectType": "Endurance",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Defense.Ice_Armor.Energy_Absorption"
             }
           ]
@@ -1037,7 +1189,8 @@
               "variableModified": true,
               "effectType": "Defense",
               "stacking": 1,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Ice_Armor.Energy_Absorption",
               "damageType": "Smashing"
             },
@@ -1050,7 +1203,8 @@
               "variableModified": true,
               "effectType": "Defense",
               "stacking": 1,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Ice_Armor.Energy_Absorption",
               "damageType": "Lethal"
             },
@@ -1063,7 +1217,8 @@
               "variableModified": true,
               "effectType": "Defense",
               "stacking": 1,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Ice_Armor.Energy_Absorption",
               "damageType": "Fire"
             },
@@ -1076,7 +1231,8 @@
               "variableModified": true,
               "effectType": "Defense",
               "stacking": 1,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Ice_Armor.Energy_Absorption",
               "damageType": "Cold"
             },
@@ -1089,7 +1245,8 @@
               "variableModified": true,
               "effectType": "Defense",
               "stacking": 1,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Ice_Armor.Energy_Absorption",
               "damageType": "Energy"
             },
@@ -1102,7 +1259,8 @@
               "variableModified": true,
               "effectType": "Defense",
               "stacking": 1,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Ice_Armor.Energy_Absorption",
               "damageType": "Negative"
             }
@@ -1120,9 +1278,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Defense.Ice_Armor.Energy_Absorption",
               "requiresToHitCheck": true,
@@ -1131,6 +1290,16 @@
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Defense_Buff",
+        "Endurance_Discount",
+        "Recharge",
+        "Endurance_Modification",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Defense.Ice_Armor.Energy_Absorption",
+      "archetypeOrder": "secondary",
       "powerIndex": 5,
       "castTimeReal": 1.33,
       "toggleCost": 13,
@@ -1173,11 +1342,6 @@
       "aoeModifier": 2.8
     },
     {
-      "allowedEnhancements": [
-        "Res_Damage"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Res_Dmg",
@@ -1189,7 +1353,8 @@
               "probability": 1,
               "duration": 10.25,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Ice_Armor.Permafrost",
               "damageType": "Cold"
             },
@@ -1200,7 +1365,8 @@
               "probability": 1,
               "duration": 10.25,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Ice_Armor.Permafrost",
               "damageType": "Fire"
             }
@@ -1210,19 +1376,69 @@
           "effectType": "Ones",
           "values": [
             {
+              "etModifies": "SpeedRunning",
               "mag": {
                 "pve": 0.2
               },
               "probability": 1,
               "duration": 10.25,
               "effectType": "ResEffect",
-              "eTModifies": 32,
-              "toWho": "Self",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Ice_Armor.Permafrost"
+            },
+            {
+              "etModifies": "RechargeTime",
+              "mag": {
+                "pve": 0.2
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "ResEffect",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Ice_Armor.Permafrost"
+            },
+            {
+              "etModifies": "SpeedFlying",
+              "mag": {
+                "pve": 0.2
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "ResEffect",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Ice_Armor.Permafrost"
+            },
+            {
+              "etModifies": "JumpHeight",
+              "mag": {
+                "pve": 0.2
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "ResEffect",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Ice_Armor.Permafrost"
+            },
+            {
+              "etModifies": "SpeedJumping",
+              "mag": {
+                "pve": 0.2
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "ResEffect",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Ice_Armor.Permafrost"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Res_Damage"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Defense.Ice_Armor.Permafrost",
+      "archetypeOrder": "secondary",
       "powerIndex": 6,
       "fullName": "Brute_Secondary_Ice_Armor_Permafrost",
       "displayName": "Permafrost",
@@ -1254,15 +1470,6 @@
       "powerType": "Auto"
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Recharge",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Damage",
@@ -1274,8 +1481,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Defense.Ice_Armor.Icicles",
               "damageType": "Lethal"
             }
@@ -1293,9 +1501,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Defense.Ice_Armor.Icicles",
               "requiresToHitCheck": true,
@@ -1312,14 +1521,25 @@
               },
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Defense.Ice_Armor.Icicles",
               "damageType": "Fire"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Recharge",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Defense.Ice_Armor.Icicles",
+      "archetypeOrder": "secondary",
       "powerIndex": 7,
       "castTimeReal": 1.67,
       "toggleCost": 0.52,
@@ -1360,14 +1580,6 @@
       "powerType": "Toggle"
     },
     {
-      "allowedEnhancements": [
-        "Endurance_Discount",
-        "Heal",
-        "Recharge",
-        "Endurance_Modification"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Ones",
@@ -1379,7 +1591,7 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "MezResist",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Ice_Armor.Hibernate",
               "mezType": "Knockback"
             },
@@ -1390,7 +1602,7 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "MezResist",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Ice_Armor.Hibernate",
               "mezType": "Knockup"
             },
@@ -1401,7 +1613,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Mez",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Ice_Armor.Hibernate",
               "mezType": "Knockback"
             },
@@ -1412,7 +1625,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Mez",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Ice_Armor.Hibernate",
               "mezType": "Knockup"
             },
@@ -1423,7 +1637,7 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Mez",
-              "toWho": "Self",
+              "toWho": "self",
               "attribType": 1,
               "powerFullName": "Brute_Defense.Ice_Armor.Hibernate",
               "mezType": "Untouchable"
@@ -1435,10 +1649,10 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Mez",
-              "toWho": "Self",
+              "toWho": "self",
               "attribType": 1,
               "powerFullName": "Brute_Defense.Ice_Armor.Hibernate",
-              "mezType": "Immobilization"
+              "mezType": "Immob"
             },
             {
               "mag": {
@@ -1447,10 +1661,10 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Mez",
-              "toWho": "Self",
+              "toWho": "self",
               "attribType": 1,
               "powerFullName": "Brute_Defense.Ice_Armor.Hibernate",
-              "mezType": "OnlyAffectsSelf"
+              "mezType": "Only Affects Self"
             },
             {
               "mag": {
@@ -1459,7 +1673,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Regeneration",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Ice_Armor.Hibernate"
             },
             {
@@ -1469,7 +1684,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Recovery",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Ice_Armor.Hibernate"
             },
             {
@@ -1478,12 +1694,21 @@
               },
               "probability": 1,
               "effectType": "GrantPower",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Ice_Armor.Hibernate"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Endurance_Discount",
+        "Heal",
+        "Recharge",
+        "Endurance_Modification"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Defense.Ice_Armor.Hibernate",
+      "archetypeOrder": "secondary",
       "powerIndex": 8,
       "castTimeReal": 0.07,
       "toggleCost": 0.26,

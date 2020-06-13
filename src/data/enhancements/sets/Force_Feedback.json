@@ -2,513 +2,209 @@
   "fullName": "IOSet.Force_Feedback",
   "enhancements": [
     {
-      "effects": [
-        {
-          "effectType": "Knockback",
-          "values": [
-            {
-              "etModifies": "Mez",
-              "mag": {
-                "pve": 0.4775
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Force_Feedback_A.Attuned_Force_Feedback_A",
-              "mezType": "Knockback"
-            }
-          ]
-        },
-        {
-          "effectType": "Boosts_60",
-          "values": [
-            {
-              "etModifies": "Mez",
-              "mag": {
-                "pve": 0.4775
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Force_Feedback_A.Attuned_Force_Feedback_A",
-              "mezType": "Knockup"
-            }
-          ]
-        },
-        {
-          "effectType": "Damage",
-          "values": [
-            {
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Force_Feedback_A.Attuned_Force_Feedback_A",
-              "damageType": "Smashing"
-            }
-          ]
-        },
-        {
-          "effectType": "Boosts_33",
-          "values": [
-            {
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Force_Feedback_A.Attuned_Force_Feedback_A",
-              "damageType": "Lethal"
-            },
-            {
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Force_Feedback_A.Attuned_Force_Feedback_A",
-              "damageType": "Fire"
-            },
-            {
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Force_Feedback_A.Attuned_Force_Feedback_A",
-              "damageType": "Cold"
-            },
-            {
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Force_Feedback_A.Attuned_Force_Feedback_A",
-              "damageType": "Energy"
-            },
-            {
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Force_Feedback_A.Attuned_Force_Feedback_A",
-              "damageType": "Negative"
-            },
-            {
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Force_Feedback_A.Attuned_Force_Feedback_A",
-              "damageType": "Toxic"
-            },
-            {
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Force_Feedback_A.Attuned_Force_Feedback_A",
-              "damageType": "Psionic"
-            }
-          ]
-        }
-      ],
+      "type": "set",
+      "fullName": "Boosts.Attuned_Force_Feedback_A.Attuned_Force_Feedback_A",
+      "displayName": "Knockback/Damage",
       "description": {
         "short": "+Knockback, +DMG",
         "long": "Enhances the Knockback potential of a power by {Boost.Attrib.Knockback.Scale}% and the damage by {Boost.Attrib.Damage.Scale}%."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Force_Feedback_A.Attuned_Force_Feedback_A",
-      "setName": "Force_Feedback",
-      "displayName": "Knockback/Damage"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Accuracy",
-          "values": [
-            {
-              "etModifies": "Accuracy",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Force_Feedback_B.Attuned_Force_Feedback_B"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
+          },
+          "stat": "Damage",
+          "damageType": [
+            "Smashing",
+            "Lethal",
+            "Fire",
+            "Cold",
+            "Energy",
+            "Negative",
+            "Toxic",
+            "Psionic"
+          ],
+          "toWho": "self"
         },
         {
-          "effectType": "Knockback",
-          "values": [
-            {
-              "etModifies": "Mez",
-              "mag": {
-                "pve": 0.4775
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Force_Feedback_B.Attuned_Force_Feedback_B",
-              "mezType": "Knockback"
+          "mag": {
+            "IO": {
+              "cap": 0.4775
             }
-          ]
-        },
-        {
-          "effectType": "Boosts_60",
-          "values": [
-            {
-              "etModifies": "Mez",
-              "mag": {
-                "pve": 0.4775
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Force_Feedback_B.Attuned_Force_Feedback_B",
-              "mezType": "Knockup"
-            }
-          ]
+          },
+          "mezType": 4,
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Force_Feedback_B.Attuned_Force_Feedback_B",
+      "displayName": "Knockback/Accuracy",
       "description": {
         "short": "+Knockback, +ACC",
         "long": "Enhances the Knockback potential of a power by {Boost.Attrib.Knockback.Scale}% and the accuracy by {Boost.Attrib.Accuracy.Scale}%."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Force_Feedback_B.Attuned_Force_Feedback_B",
-      "setName": "Force_Feedback",
-      "displayName": "Knockback/Accuracy"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Recharge",
-          "values": [
-            {
-              "etModifies": "RechargeTime",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Force_Feedback_C.Attuned_Force_Feedback_C"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
+          },
+          "stat": "Accuracy",
+          "toWho": "self"
         },
         {
-          "effectType": "Knockback",
-          "values": [
-            {
-              "etModifies": "Mez",
-              "mag": {
-                "pve": 0.4775
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Force_Feedback_C.Attuned_Force_Feedback_C",
-              "mezType": "Knockback"
+          "mag": {
+            "IO": {
+              "cap": 0.4775
             }
-          ]
-        },
-        {
-          "effectType": "Boosts_60",
-          "values": [
-            {
-              "etModifies": "Mez",
-              "mag": {
-                "pve": 0.4775
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Force_Feedback_C.Attuned_Force_Feedback_C",
-              "mezType": "Knockup"
-            }
-          ]
+          },
+          "mezType": 4,
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Force_Feedback_C.Attuned_Force_Feedback_C",
+      "displayName": "Knockback/Recharge",
       "description": {
         "short": "+Knockback, +Rech",
         "long": "Enhances the Knockback potential of a power by {Boost.Attrib.Knockback.Scale}% and reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}%."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Force_Feedback_C.Attuned_Force_Feedback_C",
-      "setName": "Force_Feedback",
-      "displayName": "Knockback/Recharge"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Recharge",
-          "values": [
-            {
-              "etModifies": "RechargeTime",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Force_Feedback_D.Attuned_Force_Feedback_D"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
+          },
+          "stat": "Recharge",
+          "toWho": "self"
         },
         {
-          "effectType": "Endurance",
-          "values": [
-            {
-              "etModifies": "EnduranceDiscount",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Force_Feedback_D.Attuned_Force_Feedback_D"
+          "mag": {
+            "IO": {
+              "cap": 0.4775
             }
-          ]
+          },
+          "mezType": 4,
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Force_Feedback_D.Attuned_Force_Feedback_D",
+      "displayName": "Recharge/Endurance",
       "description": {
         "short": "+Rech, +End",
         "long": "Reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}% and the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Force_Feedback_D.Attuned_Force_Feedback_D",
-      "setName": "Force_Feedback",
-      "displayName": "Recharge/Endurance"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Knockback",
-          "values": [
-            {
-              "etModifies": "Mez",
-              "mag": {
-                "pve": 0.382
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Force_Feedback_E.Attuned_Force_Feedback_E",
-              "mezType": "Knockback"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
+          },
+          "stat": "Recharge",
+          "toWho": "self"
         },
         {
-          "effectType": "Boosts_60",
-          "values": [
-            {
-              "etModifies": "Mez",
-              "mag": {
-                "pve": 0.382
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Force_Feedback_E.Attuned_Force_Feedback_E",
-              "mezType": "Knockup"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
-        },
-        {
-          "effectType": "Damage",
-          "values": [
-            {
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Force_Feedback_E.Attuned_Force_Feedback_E",
-              "damageType": "Smashing"
-            }
-          ]
-        },
-        {
-          "effectType": "Boosts_33",
-          "values": [
-            {
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Force_Feedback_E.Attuned_Force_Feedback_E",
-              "damageType": "Lethal"
-            },
-            {
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Force_Feedback_E.Attuned_Force_Feedback_E",
-              "damageType": "Fire"
-            },
-            {
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Force_Feedback_E.Attuned_Force_Feedback_E",
-              "damageType": "Cold"
-            },
-            {
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Force_Feedback_E.Attuned_Force_Feedback_E",
-              "damageType": "Energy"
-            },
-            {
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Force_Feedback_E.Attuned_Force_Feedback_E",
-              "damageType": "Negative"
-            },
-            {
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Force_Feedback_E.Attuned_Force_Feedback_E",
-              "damageType": "Toxic"
-            },
-            {
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Force_Feedback_E.Attuned_Force_Feedback_E",
-              "damageType": "Psionic"
-            }
-          ]
-        },
-        {
-          "effectType": "Endurance",
-          "values": [
-            {
-              "etModifies": "EnduranceDiscount",
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Force_Feedback_E.Attuned_Force_Feedback_E"
-            }
-          ]
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Force_Feedback_E.Attuned_Force_Feedback_E",
+      "displayName": "Knockback/Damage/Endurance",
       "description": {
         "short": "+Knockback, +DMG, +End",
         "long": "Enhances the Knockback potential of a power by {Boost.Attrib.Knockback.Scale}%, the damage by {Boost.Attrib.Damage.Scale}% and reduces the endurance cost by {Boost.Attrib.Endurance.Scale}%."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Force_Feedback_E.Attuned_Force_Feedback_E",
-      "setName": "Force_Feedback",
-      "displayName": "Knockback/Damage/Endurance"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Boost",
-          "values": [
-            {
-              "mag": {
-                "pve": 1
-              },
-              "procsPerMinute": 2,
-              "cancelOnMiss": true,
-              "duration": 5,
-              "variableModified": true,
-              "effectType": "GrantPower",
-              "stacking": 1,
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Force_Feedback_F.Attuned_Force_Feedback_F"
+          "mag": {
+            "IO": {
+              "cap": 0.212
             }
-          ]
+          },
+          "stat": "Damage",
+          "damageType": [
+            "Smashing",
+            "Lethal",
+            "Fire",
+            "Cold",
+            "Energy",
+            "Negative",
+            "Toxic",
+            "Psionic"
+          ],
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.212
+            }
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.382
+            }
+          },
+          "mezType": 4,
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Force_Feedback_F.Attuned_Force_Feedback_F",
+      "displayName": "Chance for +Recharge",
       "description": {
         "short": "+Recharge",
         "long": "Gives a chance to boost the recharge time of all of your powers by 100% for 5 seconds.  This effect will trigger roughly 2 times per minute."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Force_Feedback_F.Attuned_Force_Feedback_F",
-      "setName": "Force_Feedback",
-      "displayName": "Chance for +Recharge",
-      "hasGrantPowerEffect": true
+      "hasGrantPowerEffect": true,
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 1
+            }
+          },
+          "stat": "Chance for +Recharge",
+          "procsPerMinute": 2,
+          "cancelOnMiss": true,
+          "variableModified": true,
+          "stacking": 1,
+          "toWho": "self"
+        }
+      ]
     }
   ],
   "levels": {

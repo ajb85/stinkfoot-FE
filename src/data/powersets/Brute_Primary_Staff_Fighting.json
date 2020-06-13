@@ -6,16 +6,6 @@
   "displayName": "Staff Fighting",
   "powers": [
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Defense_Debuff",
-        "Endurance_Discount",
-        "Recharge",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Damage",
@@ -28,8 +18,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Staff_Fighting.Mercurial_Blow",
               "damageType": "Smashing"
             }
@@ -47,8 +38,9 @@
               "duration": 8,
               "effectType": "Defense",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Staff_Fighting.Mercurial_Blow"
             }
           ]
@@ -62,8 +54,9 @@
               },
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Staff_Fighting.Mercurial_Blow",
               "damageType": "Fire"
             }
@@ -81,9 +74,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Staff_Fighting.Mercurial_Blow",
               "requiresToHitCheck": true,
@@ -103,7 +97,7 @@
               "effectType": "Rage",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Staff_Fighting.Mercurial_Blow"
             }
           ]
@@ -117,7 +111,7 @@
               },
               "effectType": "GrantPower",
               "specialCase": 27,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Staff_Fighting.Mercurial_Blow"
             },
             {
@@ -126,7 +120,7 @@
               },
               "effectType": "RevokePower",
               "specialCase": 28,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Staff_Fighting.Mercurial_Blow"
             }
           ]
@@ -140,7 +134,7 @@
               },
               "effectType": "GrantPower",
               "specialCase": 31,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Staff_Fighting.Mercurial_Blow"
             },
             {
@@ -149,7 +143,7 @@
               },
               "effectType": "RevokePower",
               "specialCase": 32,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Staff_Fighting.Mercurial_Blow"
             }
           ]
@@ -163,7 +157,7 @@
               },
               "effectType": "GrantPower",
               "specialCase": 35,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Staff_Fighting.Mercurial_Blow"
             },
             {
@@ -172,12 +166,23 @@
               },
               "effectType": "RevokePower",
               "specialCase": 36,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Staff_Fighting.Mercurial_Blow"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Defense_Debuff",
+        "Endurance_Discount",
+        "Recharge",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Staff_Fighting.Mercurial_Blow",
+      "archetypeOrder": "primary",
       "powerIndex": 0,
       "castTimeReal": 1,
       "toggleCost": 4.368,
@@ -222,17 +227,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Recharge",
-        "Stun",
-        "Taunt",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Damage",
@@ -245,8 +239,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Staff_Fighting.Precise_Strike",
               "damageType": "Smashing"
             }
@@ -263,8 +258,9 @@
               "duration": 5.96,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Staff_Fighting.Precise_Strike",
               "mezType": "Stun"
@@ -282,8 +278,9 @@
               "duration": 2,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Staff_Fighting.Precise_Strike",
               "mezType": "Stun"
@@ -297,7 +294,7 @@
               "effectType": "Rage",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Staff_Fighting.Precise_Strike"
             }
           ]
@@ -311,8 +308,9 @@
               },
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Staff_Fighting.Precise_Strike",
               "damageType": "Fire"
             }
@@ -330,9 +328,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Staff_Fighting.Precise_Strike",
               "requiresToHitCheck": true,
@@ -349,7 +348,7 @@
               },
               "effectType": "GrantPower",
               "specialCase": 27,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Staff_Fighting.Precise_Strike"
             },
             {
@@ -358,7 +357,7 @@
               },
               "effectType": "RevokePower",
               "specialCase": 28,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Staff_Fighting.Precise_Strike"
             }
           ]
@@ -372,7 +371,7 @@
               },
               "effectType": "GrantPower",
               "specialCase": 31,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Staff_Fighting.Precise_Strike"
             },
             {
@@ -381,7 +380,7 @@
               },
               "effectType": "RevokePower",
               "specialCase": 32,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Staff_Fighting.Precise_Strike"
             }
           ]
@@ -395,7 +394,7 @@
               },
               "effectType": "GrantPower",
               "specialCase": 35,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Staff_Fighting.Precise_Strike"
             },
             {
@@ -404,12 +403,24 @@
               },
               "effectType": "RevokePower",
               "specialCase": 36,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Staff_Fighting.Precise_Strike"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Recharge",
+        "Stun",
+        "Taunt",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Staff_Fighting.Precise_Strike",
+      "archetypeOrder": "primary",
       "powerIndex": 1,
       "castTimeReal": 1.13,
       "toggleCost": 6.864,
@@ -453,16 +464,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Defense_Buff",
-        "Damage",
-        "Endurance_Discount",
-        "Recharge",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Damage",
@@ -477,8 +478,9 @@
               "effectType": "Damage",
               "ticks": 5,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Staff_Fighting.Guarded_Spin",
               "damageType": "Smashing"
             }
@@ -495,8 +497,9 @@
               "effectType": "Damage",
               "ticks": 5,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Staff_Fighting.Guarded_Spin",
               "damageType": "Fire"
             }
@@ -514,7 +517,8 @@
               "variableModified": true,
               "effectType": "Defense",
               "stacking": 1,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Staff_Fighting.Guarded_Spin",
               "damageType": "Melee"
             },
@@ -527,7 +531,8 @@
               "variableModified": true,
               "effectType": "Defense",
               "stacking": 1,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Staff_Fighting.Guarded_Spin",
               "damageType": "Lethal"
             }
@@ -545,9 +550,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Staff_Fighting.Guarded_Spin",
               "requiresToHitCheck": true,
@@ -567,7 +573,7 @@
               "effectType": "Rage",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Staff_Fighting.Guarded_Spin"
             }
           ]
@@ -581,7 +587,7 @@
               },
               "effectType": "GrantPower",
               "specialCase": 27,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Staff_Fighting.Guarded_Spin"
             },
             {
@@ -590,7 +596,7 @@
               },
               "effectType": "RevokePower",
               "specialCase": 28,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Staff_Fighting.Guarded_Spin"
             }
           ]
@@ -604,7 +610,7 @@
               },
               "effectType": "GrantPower",
               "specialCase": 31,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Staff_Fighting.Guarded_Spin"
             },
             {
@@ -613,7 +619,7 @@
               },
               "effectType": "RevokePower",
               "specialCase": 32,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Staff_Fighting.Guarded_Spin"
             }
           ]
@@ -627,7 +633,7 @@
               },
               "effectType": "GrantPower",
               "specialCase": 35,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Staff_Fighting.Guarded_Spin"
             },
             {
@@ -636,12 +642,23 @@
               },
               "effectType": "RevokePower",
               "specialCase": 36,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Staff_Fighting.Guarded_Spin"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Defense_Buff",
+        "Damage",
+        "Endurance_Discount",
+        "Recharge",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Staff_Fighting.Guarded_Spin",
+      "archetypeOrder": "primary",
       "powerIndex": 2,
       "castTimeReal": 1.83,
       "toggleCost": 8.528,
@@ -689,16 +706,6 @@
       "aoeModifier": 1.458992
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Knockback",
-        "Recharge",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Damage",
@@ -713,8 +720,9 @@
               "effectType": "Damage",
               "ticks": 6,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Staff_Fighting.Eye_of_the_Storm",
               "damageType": "Smashing"
             },
@@ -727,9 +735,10 @@
               "effectType": "Damage",
               "delayedTime": 1,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 34,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Staff_Fighting.Eye_of_the_Storm",
               "damageType": "Psionic"
             },
@@ -742,9 +751,10 @@
               "effectType": "Damage",
               "delayedTime": 1,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 38,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Staff_Fighting.Eye_of_the_Storm",
               "damageType": "Energy"
             }
@@ -763,7 +773,7 @@
               "delayedTime": 1,
               "stacking": 1,
               "specialCase": 30,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Staff_Fighting.Eye_of_the_Storm"
             },
             {
@@ -776,7 +786,7 @@
               "effectType": "Null",
               "stacking": 1,
               "specialCase": 30,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Staff_Fighting.Eye_of_the_Storm"
             },
             {
@@ -788,8 +798,9 @@
               "effectType": "Mez",
               "delayedTime": 1,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Staff_Fighting.Eye_of_the_Storm",
               "mezType": "Knockback"
             },
@@ -802,7 +813,7 @@
               "effectType": "Rage",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Staff_Fighting.Eye_of_the_Storm"
             }
           ]
@@ -818,8 +829,9 @@
               "effectType": "Damage",
               "ticks": 6,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Staff_Fighting.Eye_of_the_Storm",
               "damageType": "Fire"
             }
@@ -838,7 +850,7 @@
               "effectType": "Resistance",
               "resistible": true,
               "specialCase": 30,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Staff_Fighting.Eye_of_the_Storm",
               "damageType": "Smashing"
             },
@@ -852,7 +864,7 @@
               "effectType": "Resistance",
               "resistible": true,
               "specialCase": 30,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Staff_Fighting.Eye_of_the_Storm",
               "damageType": "Lethal"
             },
@@ -866,7 +878,7 @@
               "effectType": "Resistance",
               "resistible": true,
               "specialCase": 30,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Staff_Fighting.Eye_of_the_Storm",
               "damageType": "Fire"
             },
@@ -880,7 +892,7 @@
               "effectType": "Resistance",
               "resistible": true,
               "specialCase": 30,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Staff_Fighting.Eye_of_the_Storm",
               "damageType": "Cold"
             },
@@ -894,7 +906,7 @@
               "effectType": "Resistance",
               "resistible": true,
               "specialCase": 30,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Staff_Fighting.Eye_of_the_Storm",
               "damageType": "Energy"
             },
@@ -908,7 +920,7 @@
               "effectType": "Resistance",
               "resistible": true,
               "specialCase": 30,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Staff_Fighting.Eye_of_the_Storm",
               "damageType": "Negative"
             },
@@ -922,7 +934,7 @@
               "effectType": "Resistance",
               "resistible": true,
               "specialCase": 30,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Staff_Fighting.Eye_of_the_Storm",
               "damageType": "Psionic"
             },
@@ -936,7 +948,7 @@
               "effectType": "Resistance",
               "resistible": true,
               "specialCase": 30,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Staff_Fighting.Eye_of_the_Storm",
               "damageType": "Toxic"
             }
@@ -955,7 +967,7 @@
               "effectType": "Defense",
               "resistible": true,
               "specialCase": 38,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Staff_Fighting.Eye_of_the_Storm"
             }
           ]
@@ -964,16 +976,16 @@
           "effectType": "Slow",
           "values": [
             {
+              "etModifies": "RechargeTime",
               "mag": {
                 "pve": -0.15
               },
               "probability": 1,
               "duration": 8,
               "effectType": "Enhancement",
-              "eTModifies": 25,
               "resistible": true,
               "specialCase": 34,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Staff_Fighting.Eye_of_the_Storm"
             },
             {
@@ -985,7 +997,7 @@
               "effectType": "SpeedRunning",
               "resistible": true,
               "specialCase": 34,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Staff_Fighting.Eye_of_the_Storm"
             },
             {
@@ -997,7 +1009,20 @@
               "effectType": "SpeedFlying",
               "resistible": true,
               "specialCase": 34,
-              "toWho": "Target",
+              "toWho": "target",
+              "powerFullName": "Brute_Melee.Staff_Fighting.Eye_of_the_Storm"
+            },
+            {
+              "etModifies": "JumpHeight",
+              "mag": {
+                "pve": -0.15
+              },
+              "probability": 1,
+              "duration": 8,
+              "effectType": "Enhancement",
+              "resistible": true,
+              "specialCase": 34,
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Staff_Fighting.Eye_of_the_Storm"
             },
             {
@@ -1009,7 +1034,7 @@
               "effectType": "SpeedJumping",
               "resistible": true,
               "specialCase": 34,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Staff_Fighting.Eye_of_the_Storm"
             }
           ]
@@ -1026,9 +1051,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Staff_Fighting.Eye_of_the_Storm",
               "requiresToHitCheck": true,
@@ -1045,7 +1071,7 @@
               },
               "effectType": "GrantPower",
               "specialCase": 27,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Staff_Fighting.Eye_of_the_Storm"
             },
             {
@@ -1054,7 +1080,7 @@
               },
               "effectType": "RevokePower",
               "specialCase": 28,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Staff_Fighting.Eye_of_the_Storm"
             }
           ]
@@ -1068,7 +1094,7 @@
               },
               "effectType": "GrantPower",
               "specialCase": 31,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Staff_Fighting.Eye_of_the_Storm"
             },
             {
@@ -1077,7 +1103,7 @@
               },
               "effectType": "RevokePower",
               "specialCase": 32,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Staff_Fighting.Eye_of_the_Storm"
             }
           ]
@@ -1091,7 +1117,7 @@
               },
               "effectType": "GrantPower",
               "specialCase": 35,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Staff_Fighting.Eye_of_the_Storm"
             },
             {
@@ -1100,12 +1126,23 @@
               },
               "effectType": "RevokePower",
               "specialCase": 36,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Staff_Fighting.Eye_of_the_Storm"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Knockback",
+        "Recharge",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Staff_Fighting.Eye_of_the_Storm",
+      "archetypeOrder": "primary",
       "powerIndex": 3,
       "castTimeReal": 2.57,
       "toggleCost": 16.016,
@@ -1150,9 +1187,6 @@
       "aoeModifier": 2.5
     },
     {
-      "allowedEnhancements": [],
-      "enhancementCount": 0,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Ones",
@@ -1164,17 +1198,18 @@
               "probability": 1,
               "duration": 10.25,
               "effectType": "Null",
-              "toWho": "All",
+              "toWho": "all",
               "powerFullName": "Brute_Melee.Staff_Fighting.Staff_Mastery"
             }
           ]
         }
       ],
+      "allowedEnhancements": [],
+      "enhancementCount": 0,
+      "ogFullName": "Brute_Melee.Staff_Fighting.Staff_Mastery",
+      "archetypeOrder": "primary",
       "subPowers": [
         {
-          "allowedEnhancements": [],
-          "enhancementCount": 0,
-          "archetypeOrder": "primary",
           "effects": [
             {
               "effectType": "Ones",
@@ -1186,7 +1221,7 @@
                   "probability": 1,
                   "duration": 1.25,
                   "effectType": "GlobalChanceMod",
-                  "toWho": "Self",
+                  "toWho": "self",
                   "powerFullName": "Brute_Melee.Staff_Fighting.Form_of_the_Body"
                 },
                 {
@@ -1195,15 +1230,21 @@
                   },
                   "probability": 1,
                   "effectType": "RevokePower",
-                  "toWho": "Self",
+                  "toWho": "self",
                   "powerFullName": "Brute_Melee.Staff_Fighting.Form_of_the_Body"
                 }
               ]
             }
           ],
+          "allowedEnhancements": [],
+          "enhancementCount": 0,
+          "ogFullName": "Brute_Melee.Staff_Fighting.Form_of_the_Body",
+          "archetypeOrder": "primary",
           "powerIndex": 0,
           "parent": "Brute_Primary_Staff_Fighting_Staff_Mastery",
           "castTimeReal": 0.63,
+          "isEpic": true,
+          "locationIndex": 30,
           "fullName": "Brute_Primary_Staff_Fighting_Form_of_the_Body",
           "displayName": "Form of the Body",
           "accuracy": 1,
@@ -1229,9 +1270,6 @@
           "powerType": "Toggle"
         },
         {
-          "allowedEnhancements": [],
-          "enhancementCount": 0,
-          "archetypeOrder": "primary",
           "effects": [
             {
               "effectType": "Ones",
@@ -1243,7 +1281,7 @@
                   "probability": 1,
                   "duration": 1.25,
                   "effectType": "GlobalChanceMod",
-                  "toWho": "Self",
+                  "toWho": "self",
                   "powerFullName": "Brute_Melee.Staff_Fighting.Form_of_the_Mind"
                 },
                 {
@@ -1252,15 +1290,21 @@
                   },
                   "probability": 1,
                   "effectType": "RevokePower",
-                  "toWho": "Self",
+                  "toWho": "self",
                   "powerFullName": "Brute_Melee.Staff_Fighting.Form_of_the_Mind"
                 }
               ]
             }
           ],
+          "allowedEnhancements": [],
+          "enhancementCount": 0,
+          "ogFullName": "Brute_Melee.Staff_Fighting.Form_of_the_Mind",
+          "archetypeOrder": "primary",
           "powerIndex": 1,
           "parent": "Brute_Primary_Staff_Fighting_Staff_Mastery",
           "castTimeReal": 0.63,
+          "isEpic": true,
+          "locationIndex": 36,
           "fullName": "Brute_Primary_Staff_Fighting_Form_of_the_Mind",
           "displayName": "Form of the Mind",
           "accuracy": 1,
@@ -1286,9 +1330,6 @@
           "powerType": "Toggle"
         },
         {
-          "allowedEnhancements": [],
-          "enhancementCount": 0,
-          "archetypeOrder": "primary",
           "effects": [
             {
               "effectType": "Ones",
@@ -1300,7 +1341,7 @@
                   "probability": 1,
                   "duration": 1.25,
                   "effectType": "GlobalChanceMod",
-                  "toWho": "Self",
+                  "toWho": "self",
                   "powerFullName": "Brute_Melee.Staff_Fighting.Form_of_the_Soul"
                 },
                 {
@@ -1309,15 +1350,21 @@
                   },
                   "probability": 1,
                   "effectType": "RevokePower",
-                  "toWho": "Self",
+                  "toWho": "self",
                   "powerFullName": "Brute_Melee.Staff_Fighting.Form_of_the_Soul"
                 }
               ]
             }
           ],
+          "allowedEnhancements": [],
+          "enhancementCount": 0,
+          "ogFullName": "Brute_Melee.Staff_Fighting.Form_of_the_Soul",
+          "archetypeOrder": "primary",
           "powerIndex": 2,
           "parent": "Brute_Primary_Staff_Fighting_Staff_Mastery",
           "castTimeReal": 0.63,
+          "isEpic": true,
+          "locationIndex": 42,
           "fullName": "Brute_Primary_Staff_Fighting_Form_of_the_Soul",
           "displayName": "Form of the Soul",
           "accuracy": 1,
@@ -1370,14 +1417,6 @@
       "powerType": "Auto"
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Range",
-        "Recharge",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Taunt",
@@ -1391,8 +1430,9 @@
               "duration": 20.5999985,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Staff_Fighting.Taunt",
               "mezType": "Taunt"
@@ -1403,16 +1443,16 @@
           "effectType": "Ones",
           "values": [
             {
+              "etModifies": "Range",
               "mag": {
                 "pve": -0.75
               },
               "probability": 1,
               "duration": 12,
               "effectType": "Enhancement",
-              "eTModifies": 24,
               "stacking": 1,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Staff_Fighting.Taunt"
             },
             {
@@ -1422,14 +1462,24 @@
               "probability": 1,
               "effectType": "Null",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Staff_Fighting.Taunt",
               "requiresToHitCheck": true
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Range",
+        "Recharge",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Staff_Fighting.Taunt",
+      "archetypeOrder": "primary",
       "powerIndex": 5,
       "castTimeReal": 2,
       "fullName": "Brute_Primary_Staff_Fighting_Taunt",
@@ -1465,17 +1515,6 @@
       "aoeModifier": 3.25
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Knockback",
-        "Range",
-        "Recharge",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Damage",
@@ -1488,8 +1527,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Staff_Fighting.Serpents_Reach",
               "damageType": "Smashing"
             }
@@ -1504,8 +1544,9 @@
               },
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Staff_Fighting.Serpents_Reach",
               "damageType": "Fire"
             }
@@ -1522,8 +1563,9 @@
               "probability": 0.8,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Staff_Fighting.Serpents_Reach",
               "mezType": "Knockback"
             },
@@ -1536,7 +1578,7 @@
               "effectType": "Rage",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Staff_Fighting.Serpents_Reach"
             }
           ]
@@ -1553,9 +1595,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Staff_Fighting.Serpents_Reach",
               "requiresToHitCheck": true,
@@ -1572,7 +1615,7 @@
               },
               "effectType": "GrantPower",
               "specialCase": 27,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Staff_Fighting.Serpents_Reach"
             },
             {
@@ -1581,7 +1624,7 @@
               },
               "effectType": "RevokePower",
               "specialCase": 28,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Staff_Fighting.Serpents_Reach"
             }
           ]
@@ -1595,7 +1638,7 @@
               },
               "effectType": "GrantPower",
               "specialCase": 31,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Staff_Fighting.Serpents_Reach"
             },
             {
@@ -1604,7 +1647,7 @@
               },
               "effectType": "RevokePower",
               "specialCase": 32,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Staff_Fighting.Serpents_Reach"
             }
           ]
@@ -1618,7 +1661,7 @@
               },
               "effectType": "GrantPower",
               "specialCase": 35,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Staff_Fighting.Serpents_Reach"
             },
             {
@@ -1627,12 +1670,24 @@
               },
               "effectType": "RevokePower",
               "specialCase": 36,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Staff_Fighting.Serpents_Reach"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Knockback",
+        "Range",
+        "Recharge",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Staff_Fighting.Serpents_Reach",
+      "archetypeOrder": "primary",
       "powerIndex": 6,
       "castTimeReal": 1.77,
       "toggleCost": 9.36,
@@ -1674,17 +1729,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Immobilize",
-        "Recharge",
-        "Slow",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Damage",
@@ -1699,8 +1743,9 @@
               "effectType": "Damage",
               "ticks": 5,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Staff_Fighting.Innocuous_Strikes",
               "damageType": "Smashing"
             }
@@ -1717,8 +1762,9 @@
               "effectType": "Damage",
               "ticks": 5,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Staff_Fighting.Innocuous_Strikes",
               "damageType": "Fire"
             }
@@ -1735,11 +1781,12 @@
               "duration": 11.92,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Staff_Fighting.Innocuous_Strikes",
-              "mezType": "Immobilization"
+              "mezType": "Immob"
             }
           ]
         },
@@ -1754,11 +1801,12 @@
               "duration": 2,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Staff_Fighting.Innocuous_Strikes",
-              "mezType": "Immobilization"
+              "mezType": "Immob"
             },
             {
               "mag": {
@@ -1769,7 +1817,7 @@
               "effectType": "Rage",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Staff_Fighting.Innocuous_Strikes"
             }
           ]
@@ -1785,8 +1833,9 @@
               "duration": 10,
               "effectType": "SpeedRunning",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Staff_Fighting.Innocuous_Strikes"
             },
             {
@@ -1797,21 +1846,22 @@
               "duration": 10,
               "effectType": "SpeedFlying",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Staff_Fighting.Innocuous_Strikes"
             },
             {
+              "etModifies": "JumpHeight",
               "mag": {
                 "pve": -0.15
               },
               "probability": 1,
               "duration": 10,
               "effectType": "Enhancement",
-              "eTModifies": 16,
               "stacking": 1,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Staff_Fighting.Innocuous_Strikes"
             },
             {
@@ -1822,8 +1872,9 @@
               "duration": 10,
               "effectType": "SpeedJumping",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Staff_Fighting.Innocuous_Strikes"
             }
           ]
@@ -1840,9 +1891,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Staff_Fighting.Innocuous_Strikes",
               "requiresToHitCheck": true,
@@ -1859,7 +1911,7 @@
               },
               "effectType": "GrantPower",
               "specialCase": 27,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Staff_Fighting.Innocuous_Strikes"
             },
             {
@@ -1868,7 +1920,7 @@
               },
               "effectType": "RevokePower",
               "specialCase": 28,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Staff_Fighting.Innocuous_Strikes"
             }
           ]
@@ -1882,7 +1934,7 @@
               },
               "effectType": "GrantPower",
               "specialCase": 31,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Staff_Fighting.Innocuous_Strikes"
             },
             {
@@ -1891,7 +1943,7 @@
               },
               "effectType": "RevokePower",
               "specialCase": 32,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Staff_Fighting.Innocuous_Strikes"
             }
           ]
@@ -1905,7 +1957,7 @@
               },
               "effectType": "GrantPower",
               "specialCase": 35,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Staff_Fighting.Innocuous_Strikes"
             },
             {
@@ -1914,12 +1966,24 @@
               },
               "effectType": "RevokePower",
               "specialCase": 36,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Staff_Fighting.Innocuous_Strikes"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Immobilize",
+        "Recharge",
+        "Slow",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Staff_Fighting.Innocuous_Strikes",
+      "archetypeOrder": "primary",
       "powerIndex": 7,
       "castTimeReal": 2.17,
       "toggleCost": 8.528,
@@ -1967,17 +2031,6 @@
       "aoeModifier": 1.458992
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Knockback",
-        "Recharge",
-        "Stun",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Damage",
@@ -1992,8 +2045,9 @@
               "effectType": "Damage",
               "ticks": 2,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Staff_Fighting.Sky_Splitter",
               "damageType": "Smashing"
             },
@@ -2006,9 +2060,10 @@
               "effectType": "Damage",
               "delayedTime": 1.8,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 34,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Staff_Fighting.Sky_Splitter",
               "damageType": "Psionic"
             },
@@ -2021,9 +2076,10 @@
               "effectType": "Damage",
               "delayedTime": 1.8,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 38,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Staff_Fighting.Sky_Splitter",
               "damageType": "Energy"
             }
@@ -2042,7 +2098,7 @@
               "delayedTime": 1,
               "stacking": 1,
               "specialCase": 30,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Staff_Fighting.Sky_Splitter"
             },
             {
@@ -2055,7 +2111,7 @@
               "effectType": "Null",
               "stacking": 1,
               "specialCase": 30,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Staff_Fighting.Sky_Splitter"
             },
             {
@@ -2067,8 +2123,9 @@
               "effectType": "Mez",
               "delayedTime": 1.8,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Staff_Fighting.Sky_Splitter",
               "mezType": "Stun"
@@ -2080,8 +2137,9 @@
               "probability": 1,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Staff_Fighting.Sky_Splitter",
               "mezType": "Knockup"
             },
@@ -2092,8 +2150,9 @@
               "probability": 1,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Staff_Fighting.Sky_Splitter",
               "mezType": "Knockback"
             },
@@ -2105,7 +2164,7 @@
               "duration": 15,
               "effectType": "Regeneration",
               "specialCase": 38,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Staff_Fighting.Sky_Splitter"
             },
             {
@@ -2116,7 +2175,7 @@
               "duration": 15,
               "effectType": "Recovery",
               "specialCase": 38,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Staff_Fighting.Sky_Splitter"
             },
             {
@@ -2128,7 +2187,7 @@
               "effectType": "Rage",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Staff_Fighting.Sky_Splitter"
             },
             {
@@ -2139,8 +2198,9 @@
               "duration": 10,
               "effectType": "Fly",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Staff_Fighting.Sky_Splitter"
             }
           ]
@@ -2157,8 +2217,9 @@
               "effectType": "Mez",
               "delayedTime": 1.8,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Staff_Fighting.Sky_Splitter",
               "mezType": "Stun"
@@ -2177,8 +2238,9 @@
               "ticks": 2,
               "delayedTime": 1.8,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Staff_Fighting.Sky_Splitter",
               "damageType": "Fire"
             }
@@ -2195,7 +2257,7 @@
               "duration": 15,
               "effectType": "Resistance",
               "specialCase": 30,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Staff_Fighting.Sky_Splitter",
               "damageType": "Smashing"
             },
@@ -2207,7 +2269,7 @@
               "duration": 15,
               "effectType": "Resistance",
               "specialCase": 30,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Staff_Fighting.Sky_Splitter",
               "damageType": "Lethal"
             },
@@ -2219,7 +2281,7 @@
               "duration": 15,
               "effectType": "Resistance",
               "specialCase": 30,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Staff_Fighting.Sky_Splitter",
               "damageType": "Fire"
             },
@@ -2231,7 +2293,7 @@
               "duration": 15,
               "effectType": "Resistance",
               "specialCase": 30,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Staff_Fighting.Sky_Splitter",
               "damageType": "Cold"
             },
@@ -2243,7 +2305,7 @@
               "duration": 15,
               "effectType": "Resistance",
               "specialCase": 30,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Staff_Fighting.Sky_Splitter",
               "damageType": "Energy"
             },
@@ -2255,7 +2317,7 @@
               "duration": 15,
               "effectType": "Resistance",
               "specialCase": 30,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Staff_Fighting.Sky_Splitter",
               "damageType": "Negative"
             },
@@ -2267,7 +2329,7 @@
               "duration": 15,
               "effectType": "Resistance",
               "specialCase": 30,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Staff_Fighting.Sky_Splitter",
               "damageType": "Psionic"
             },
@@ -2279,7 +2341,7 @@
               "duration": 15,
               "effectType": "Resistance",
               "specialCase": 30,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Staff_Fighting.Sky_Splitter",
               "damageType": "Toxic"
             }
@@ -2296,7 +2358,7 @@
               "duration": 15,
               "effectType": "ToHit",
               "specialCase": 34,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Staff_Fighting.Sky_Splitter"
             }
           ]
@@ -2313,9 +2375,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Staff_Fighting.Sky_Splitter",
               "requiresToHitCheck": true,
@@ -2332,7 +2395,7 @@
               },
               "effectType": "GrantPower",
               "specialCase": 27,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Staff_Fighting.Sky_Splitter"
             },
             {
@@ -2341,7 +2404,7 @@
               },
               "effectType": "RevokePower",
               "specialCase": 28,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Staff_Fighting.Sky_Splitter"
             }
           ]
@@ -2355,7 +2418,7 @@
               },
               "effectType": "GrantPower",
               "specialCase": 31,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Staff_Fighting.Sky_Splitter"
             },
             {
@@ -2364,7 +2427,7 @@
               },
               "effectType": "RevokePower",
               "specialCase": 32,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Staff_Fighting.Sky_Splitter"
             }
           ]
@@ -2378,7 +2441,7 @@
               },
               "effectType": "GrantPower",
               "specialCase": 35,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Staff_Fighting.Sky_Splitter"
             },
             {
@@ -2387,12 +2450,24 @@
               },
               "effectType": "RevokePower",
               "specialCase": 36,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Staff_Fighting.Sky_Splitter"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Knockback",
+        "Recharge",
+        "Stun",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Staff_Fighting.Sky_Splitter",
+      "archetypeOrder": "primary",
       "powerIndex": 8,
       "castTimeReal": 2.83,
       "toggleCost": 14.352,

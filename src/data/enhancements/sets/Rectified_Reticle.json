@@ -2,107 +2,77 @@
   "fullName": "IOSet.Rectified_Reticle",
   "enhancements": [
     {
-      "effects": [
-        {
-          "effectType": "ToHitBuff",
-          "values": [
-            {
-              "etModifies": "ToHit",
-              "mag": {
-                "pve": 0.255
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Rectified_Reticle_A.Attuned_Rectified_Reticle_A"
-            }
-          ]
-        }
-      ],
+      "type": "set",
+      "fullName": "Boosts.Attuned_Rectified_Reticle_A.Attuned_Rectified_Reticle_A",
+      "displayName": "To Hit Buff",
       "description": {
         "short": "+To Hit Buff",
         "long": "Enhances the to hit buff potential of a power by {Boost.Attrib.ToHitBuff.Scale}%."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Rectified_Reticle_A.Attuned_Rectified_Reticle_A",
-      "setName": "Rectified_Reticle",
-      "displayName": "To Hit Buff"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Recharge",
-          "values": [
-            {
-              "etModifies": "RechargeTime",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Rectified_Reticle_B.Attuned_Rectified_Reticle_B"
+          "mag": {
+            "IO": {
+              "cap": 0.255
             }
-          ]
-        },
-        {
-          "effectType": "ToHitBuff",
-          "values": [
-            {
-              "etModifies": "ToHit",
-              "mag": {
-                "pve": 0.159375
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Rectified_Reticle_B.Attuned_Rectified_Reticle_B"
-            }
-          ]
+          },
+          "stat": "ToHit_Buff",
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Rectified_Reticle_B.Attuned_Rectified_Reticle_B",
+      "displayName": "To Hit Buff/Recharge",
       "description": {
         "short": "+To Hit Buff, +Rech",
         "long": "Enhances the to hit buff potential of a power by {Boost.Attrib.ToHitBuff.Scale}% and reduces the recharge time by {Boost.Attrib.Recharge.Scale}%."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Rectified_Reticle_B.Attuned_Rectified_Reticle_B",
-      "setName": "Rectified_Reticle",
-      "displayName": "To Hit Buff/Recharge"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Perception",
-          "values": [
-            {
-              "mag": {
-                "pve": 0.2
-              },
-              "cancelOnMiss": true,
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Null",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Rectified_Reticle_C.Attuned_Rectified_Reticle_C"
+          "mag": {
+            "IO": {
+              "cap": 0.159375
             }
-          ]
+          },
+          "stat": "ToHit_Buff",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Recharge",
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Rectified_Reticle_C.Attuned_Rectified_Reticle_C",
+      "displayName": "Increased Perception",
       "description": {
         "short": "+Perception",
         "long": "UNIQUE -- No more than 1 enhancement of this type may be slotted by a character.  Adds {Boost.Attrib.Perception.Scale}%  to your perception radius."
       },
-      "isUnique": true,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Rectified_Reticle_C.Attuned_Rectified_Reticle_C",
-      "setName": "Rectified_Reticle",
-      "displayName": "Increased Perception"
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.2
+            }
+          },
+          "stat": "Increased Perception",
+          "cancelOnMiss": true,
+          "toWho": "self"
+        }
+      ]
     }
   ],
   "levels": {

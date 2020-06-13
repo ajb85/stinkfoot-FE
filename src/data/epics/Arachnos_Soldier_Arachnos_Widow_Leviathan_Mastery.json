@@ -6,16 +6,6 @@
   "displayName": "Leviathan Mastery",
   "powers": [
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Knockback",
-        "Range",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Damage",
@@ -28,8 +18,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.VEAT_Leviathan_Mastery.Spirit_Shark",
               "damageType": "Lethal"
             }
@@ -46,14 +37,26 @@
               "probability": 1,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.VEAT_Leviathan_Mastery.Spirit_Shark",
               "mezType": "Knockback"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Knockback",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.VEAT_Leviathan_Mastery.Spirit_Shark",
+      "archetypeOrder": "epicPool",
       "powerIndex": 0,
       "castTimeReal": 3,
       "toggleCost": 8.58,
@@ -91,16 +94,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Immobilize",
-        "Range",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Damage",
@@ -113,8 +106,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.VEAT_Leviathan_Mastery.School_of_Sharks",
               "nearGround": true,
               "damageType": "Negative"
@@ -132,11 +126,12 @@
               "duration": 17.8800011,
               "effectType": "Mez",
               "stacking": 1,
-              "toWho": "Target",
+              "buffable": true,
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.VEAT_Leviathan_Mastery.School_of_Sharks",
               "nearGround": true,
-              "mezType": "Immobilization"
+              "mezType": "Immob"
             }
           ]
         },
@@ -151,16 +146,28 @@
               "duration": 2,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.VEAT_Leviathan_Mastery.School_of_Sharks",
               "nearGround": true,
-              "mezType": "Immobilization"
+              "mezType": "Immob"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Immobilize",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.VEAT_Leviathan_Mastery.School_of_Sharks",
+      "archetypeOrder": "epicPool",
       "powerIndex": 1,
       "castTimeReal": 2.37,
       "toggleCost": 12.74,
@@ -202,17 +209,6 @@
       "aoeModifier": 2.44994545
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Defense_Debuff",
-        "Endurance_Discount",
-        "Range",
-        "Recharge",
-        "Slow"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Damage",
@@ -225,8 +221,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.VEAT_Leviathan_Mastery.Arctic_Breath",
               "damageType": "Cold"
             }
@@ -236,16 +233,16 @@
           "effectType": "Slow",
           "values": [
             {
+              "etModifies": "JumpHeight",
               "mag": {
                 "pve": -0.3
               },
               "probability": 1,
               "duration": 10,
               "effectType": "Enhancement",
-              "eTModifies": 16,
               "stacking": 1,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.VEAT_Leviathan_Mastery.Arctic_Breath"
             },
             {
@@ -256,8 +253,22 @@
               "duration": 10,
               "effectType": "SpeedJumping",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
+              "powerFullName": "Epic.VEAT_Leviathan_Mastery.Arctic_Breath"
+            },
+            {
+              "etModifies": "RechargeTime",
+              "mag": {
+                "pve": -0.3
+              },
+              "probability": 1,
+              "duration": 10,
+              "effectType": "Enhancement",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "target",
               "powerFullName": "Epic.VEAT_Leviathan_Mastery.Arctic_Breath"
             },
             {
@@ -268,8 +279,9 @@
               "duration": 10,
               "effectType": "SpeedRunning",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.VEAT_Leviathan_Mastery.Arctic_Breath"
             },
             {
@@ -280,8 +292,9 @@
               "duration": 10,
               "effectType": "SpeedFlying",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.VEAT_Leviathan_Mastery.Arctic_Breath"
             }
           ]
@@ -297,7 +310,7 @@
               "duration": 10,
               "effectType": "Resistance",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.VEAT_Leviathan_Mastery.Arctic_Breath",
               "damageType": "Smashing"
             },
@@ -309,7 +322,7 @@
               "duration": 10,
               "effectType": "Resistance",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.VEAT_Leviathan_Mastery.Arctic_Breath",
               "damageType": "Lethal"
             },
@@ -321,7 +334,7 @@
               "duration": 10,
               "effectType": "Resistance",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.VEAT_Leviathan_Mastery.Arctic_Breath",
               "damageType": "Fire"
             },
@@ -333,7 +346,7 @@
               "duration": 10,
               "effectType": "Resistance",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.VEAT_Leviathan_Mastery.Arctic_Breath",
               "damageType": "Cold"
             },
@@ -345,7 +358,7 @@
               "duration": 10,
               "effectType": "Resistance",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.VEAT_Leviathan_Mastery.Arctic_Breath",
               "damageType": "Energy"
             },
@@ -357,7 +370,7 @@
               "duration": 10,
               "effectType": "Resistance",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.VEAT_Leviathan_Mastery.Arctic_Breath",
               "damageType": "Negative"
             },
@@ -369,7 +382,7 @@
               "duration": 10,
               "effectType": "Resistance",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.VEAT_Leviathan_Mastery.Arctic_Breath",
               "damageType": "Toxic"
             },
@@ -381,7 +394,7 @@
               "duration": 10,
               "effectType": "Resistance",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.VEAT_Leviathan_Mastery.Arctic_Breath",
               "damageType": "Psionic"
             }
@@ -397,8 +410,9 @@
               "probability": 1,
               "duration": 10,
               "effectType": "Defense",
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.VEAT_Leviathan_Mastery.Arctic_Breath"
             }
           ]
@@ -417,22 +431,34 @@
               "ticks": 41,
               "stacking": 1,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.VEAT_Leviathan_Mastery.Arctic_Breath",
               "mezType": "Knockback"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Defense_Debuff",
+        "Endurance_Discount",
+        "Range",
+        "Recharge",
+        "Slow"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.VEAT_Leviathan_Mastery.Arctic_Breath",
+      "archetypeOrder": "epicPool",
       "powerIndex": 2,
       "castTimeReal": 2.67,
       "toggleCost": 18.98,
+      "isEpic": true,
       "fullName": "Epic_Leviathan_Mastery_Arctic_Breath",
       "displayName": "Arctic Breath",
       "requires": {
         "powers": {
-          "Epic_Leviathan_Mastery_Spirit_Shark": true,
-          "Epic_Leviathan_Mastery_School_of_Sharks": true
+          "Epic.VEAT_Leviathan_Mastery.Arctic_Breath": true
         },
         "count": 1
       },
@@ -469,15 +495,6 @@
       "aoeModifier": 2.73993444
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Range",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Damage",
@@ -490,23 +507,34 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.VEAT_Leviathan_Mastery.Chum_Spray",
               "damageType": "Toxic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.VEAT_Leviathan_Mastery.Chum_Spray",
+      "archetypeOrder": "epicPool",
       "powerIndex": 3,
       "castTimeReal": 2.67,
       "toggleCost": 18.98,
+      "isEpic": true,
       "fullName": "Epic_Leviathan_Mastery_Bile_Spray",
       "displayName": "Bile Spray",
       "requires": {
         "powers": {
-          "Epic_Leviathan_Mastery_Spirit_Shark": true,
-          "Epic_Leviathan_Mastery_School_of_Sharks": true
+          "Epic.VEAT_Leviathan_Mastery.Chum_Spray": true
         },
         "count": 1
       },
@@ -540,18 +568,6 @@
       "aoeModifier": 2.73993444
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Immobilize",
-        "Knockback",
-        "Range",
-        "Recharge",
-        "Slow"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Ones",
@@ -563,23 +579,34 @@
               "probability": 1,
               "duration": 240,
               "effectType": "EntCreate",
-              "toWho": "All",
+              "toWho": "all",
               "powerFullName": "Epic.VEAT_Leviathan_Mastery.Summon_Guardian"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Immobilize",
+        "Knockback",
+        "Range",
+        "Recharge",
+        "Slow"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.VEAT_Leviathan_Mastery.Summon_Guardian",
+      "archetypeOrder": "epicPool",
       "powerIndex": 4,
       "castTimeReal": 3.2,
       "toggleCost": 26,
+      "isEpic": true,
       "fullName": "Epic_Leviathan_Mastery_Summon_Guardian",
       "displayName": "Summon Guardian",
       "requires": {
         "powers": {
-          "Epic_Leviathan_Mastery_Spirit_Shark": true,
-          "Epic_Leviathan_Mastery_School_of_Sharks": true,
-          "Epic_Leviathan_Mastery_Arctic_Breath": true,
-          "Epic_Leviathan_Mastery_Bile_Spray": true
+          "Epic.VEAT_Leviathan_Mastery.Summon_Guardian": true
         },
         "count": 2
       },

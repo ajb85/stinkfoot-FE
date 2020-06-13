@@ -2,448 +2,186 @@
   "fullName": "IOSet.Touch_of_the_Nictus",
   "enhancements": [
     {
-      "effects": [
-        {
-          "effectType": "Heal",
-          "values": [
-            {
-              "etModifies": "Heal",
-              "mag": {
-                "pve": 0.424
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Touch_of_the_Nictus_A.Attuned_Touch_of_the_Nictus_A"
-            }
-          ]
-        },
-        {
-          "effectType": "Boosts_33",
-          "values": [
-            {
-              "etModifies": "Regeneration",
-              "mag": {
-                "pve": 0.424
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Touch_of_the_Nictus_A.Attuned_Touch_of_the_Nictus_A"
-            },
-            {
-              "etModifies": "HitPoints",
-              "mag": {
-                "pve": 0.424
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Touch_of_the_Nictus_A.Attuned_Touch_of_the_Nictus_A"
-            }
-          ]
-        },
-        {
-          "effectType": "Absorb",
-          "values": [
-            {
-              "etModifies": "Absorb",
-              "mag": {
-                "pve": 0.424
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Touch_of_the_Nictus_A.Attuned_Touch_of_the_Nictus_A"
-            }
-          ]
-        }
-      ],
+      "type": "set",
+      "fullName": "Boosts.Attuned_Touch_of_the_Nictus_A.Attuned_Touch_of_the_Nictus_A",
+      "displayName": "Healing/Absorb",
       "description": {
         "short": "+Heal, +Absorb",
         "long": "Enhances the healing potential and damage absorption of a power by {Boost.Attrib.Heal.Scale}%.  NOTE: This enhancement can only be slotted into healing powers that require a To Hit check."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Touch_of_the_Nictus_A.Attuned_Touch_of_the_Nictus_A",
-      "setName": "Touch_of_the_Nictus",
-      "displayName": "Healing/Absorb"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Heal",
-          "values": [
-            {
-              "etModifies": "Heal",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Touch_of_the_Nictus_B.Attuned_Touch_of_the_Nictus_B"
+          "mag": {
+            "IO": {
+              "cap": 0.424
             }
-          ]
-        },
-        {
-          "effectType": "Boosts_33",
-          "values": [
-            {
-              "etModifies": "Regeneration",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Touch_of_the_Nictus_B.Attuned_Touch_of_the_Nictus_B"
-            },
-            {
-              "etModifies": "HitPoints",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Touch_of_the_Nictus_B.Attuned_Touch_of_the_Nictus_B"
-            }
-          ]
-        },
-        {
-          "effectType": "Recharge",
-          "values": [
-            {
-              "etModifies": "RechargeTime",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Touch_of_the_Nictus_B.Attuned_Touch_of_the_Nictus_B"
-            }
-          ]
-        },
-        {
-          "effectType": "Absorb",
-          "values": [
-            {
-              "etModifies": "Absorb",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Touch_of_the_Nictus_B.Attuned_Touch_of_the_Nictus_B"
-            }
-          ]
+          },
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Touch_of_the_Nictus_B.Attuned_Touch_of_the_Nictus_B",
+      "displayName": "Healing/Absorb/Recharge",
       "description": {
         "short": "+Heal, +Rech, +Absorb",
         "long": "Enhances the healing potential and damage absorption of a power by {Boost.Attrib.Heal.Scale}% and reduces recharge time by {Boost.Attrib.Recharge.Scale}%.  NOTE: This enhancement can only be slotted into healing powers that require a To Hit check."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Touch_of_the_Nictus_B.Attuned_Touch_of_the_Nictus_B",
-      "setName": "Touch_of_the_Nictus",
-      "displayName": "Healing/Absorb/Recharge"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Heal",
-          "values": [
-            {
-              "etModifies": "Heal",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Touch_of_the_Nictus_C.Attuned_Touch_of_the_Nictus_C"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
+          },
+          "stat": "Recharge",
+          "toWho": "self"
         },
         {
-          "effectType": "Boosts_33",
-          "values": [
-            {
-              "etModifies": "Regeneration",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Touch_of_the_Nictus_C.Attuned_Touch_of_the_Nictus_C"
-            },
-            {
-              "etModifies": "HitPoints",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Touch_of_the_Nictus_C.Attuned_Touch_of_the_Nictus_C"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
-        },
-        {
-          "effectType": "Accuracy",
-          "values": [
-            {
-              "etModifies": "Accuracy",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Touch_of_the_Nictus_C.Attuned_Touch_of_the_Nictus_C"
-            }
-          ]
-        },
-        {
-          "effectType": "Absorb",
-          "values": [
-            {
-              "etModifies": "Absorb",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Touch_of_the_Nictus_C.Attuned_Touch_of_the_Nictus_C"
-            }
-          ]
+          },
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Touch_of_the_Nictus_C.Attuned_Touch_of_the_Nictus_C",
+      "displayName": "Accuracy/Healing/Absorb",
       "description": {
         "short": "+Acc, +Heal, +Absorb",
         "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}%, the healing potential and damage absorption of a power by {Boost.Attrib.Heal.Scale}%.  NOTE: This enhancement can only be slotted into healing powers that require a To Hit check."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Touch_of_the_Nictus_C.Attuned_Touch_of_the_Nictus_C",
-      "setName": "Touch_of_the_Nictus",
-      "displayName": "Accuracy/Healing/Absorb"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Heal",
-          "values": [
-            {
-              "etModifies": "Heal",
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Touch_of_the_Nictus_D.Attuned_Touch_of_the_Nictus_D"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
+          },
+          "stat": "Accuracy",
+          "toWho": "self"
         },
         {
-          "effectType": "Boosts_33",
-          "values": [
-            {
-              "etModifies": "Regeneration",
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Touch_of_the_Nictus_D.Attuned_Touch_of_the_Nictus_D"
-            },
-            {
-              "etModifies": "HitPoints",
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Touch_of_the_Nictus_D.Attuned_Touch_of_the_Nictus_D"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
-        },
-        {
-          "effectType": "Endurance",
-          "values": [
-            {
-              "etModifies": "EnduranceDiscount",
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Touch_of_the_Nictus_D.Attuned_Touch_of_the_Nictus_D"
-            }
-          ]
-        },
-        {
-          "effectType": "Accuracy",
-          "values": [
-            {
-              "etModifies": "Accuracy",
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Touch_of_the_Nictus_D.Attuned_Touch_of_the_Nictus_D"
-            }
-          ]
-        },
-        {
-          "effectType": "Absorb",
-          "values": [
-            {
-              "etModifies": "Absorb",
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Touch_of_the_Nictus_D.Attuned_Touch_of_the_Nictus_D"
-            }
-          ]
+          },
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Touch_of_the_Nictus_D.Attuned_Touch_of_the_Nictus_D",
+      "displayName": "Accuracy/Endurance/Healing/Absorb",
       "description": {
         "short": "+Acc, -End Cost, +Heal, +Absorb",
         "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}%, reduces the endurance cost by {Boost.Attrib.Endurance.Scale}%, Enhances the healing potential and damage absorption of a power by {Boost.Attrib.Heal.Scale}%.  NOTE: This enhancement can only be slotted into healing powers that require a To Hit check."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Touch_of_the_Nictus_D.Attuned_Touch_of_the_Nictus_D",
-      "setName": "Touch_of_the_Nictus",
-      "displayName": "Accuracy/Endurance/Healing/Absorb"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Accuracy",
-          "values": [
-            {
-              "etModifies": "Accuracy",
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Touch_of_the_Nictus_E.Attuned_Touch_of_the_Nictus_E"
+          "mag": {
+            "IO": {
+              "cap": 0.212
             }
-          ]
+          },
+          "stat": "Accuracy",
+          "toWho": "self"
         },
         {
-          "effectType": "Endurance",
-          "values": [
-            {
-              "etModifies": "EnduranceDiscount",
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Touch_of_the_Nictus_E.Attuned_Touch_of_the_Nictus_E"
+          "mag": {
+            "IO": {
+              "cap": 0.212
             }
-          ]
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self"
         },
         {
-          "effectType": "Recharge",
-          "values": [
-            {
-              "etModifies": "RechargeTime",
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Touch_of_the_Nictus_E.Attuned_Touch_of_the_Nictus_E"
+          "mag": {
+            "IO": {
+              "cap": 0.212
             }
-          ]
+          },
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Touch_of_the_Nictus_E.Attuned_Touch_of_the_Nictus_E",
+      "displayName": "Accuracy/Endurance/Recharge",
       "description": {
         "short": "+Acc, -End Cost, +Rech",
         "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}%, reduces the endurance cost by {Boost.Attrib.Endurance.Scale}% and reduces recharge time by {Boost.Attrib.Recharge.Scale}%.   NOTE: This enhancement can only be slotted into healing powers that require a To Hit check."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Touch_of_the_Nictus_E.Attuned_Touch_of_the_Nictus_E",
-      "setName": "Touch_of_the_Nictus",
-      "displayName": "Accuracy/Endurance/Recharge"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Damage",
-          "values": [
-            {
-              "mag": {
-                "pve": 71.7501
-              },
-              "procsPerMinute": 3.5,
-              "cancelOnMiss": true,
-              "effectType": "Damage",
-              "stacking": 1,
-              "resistible": true,
-              "toWho": "all",
-              "powerFullName": "Boosts.Attuned_Touch_of_the_Nictus_F.Attuned_Touch_of_the_Nictus_F",
-              "damageType": "Negative"
+          "mag": {
+            "IO": {
+              "cap": 0.212
             }
-          ]
+          },
+          "stat": "Accuracy",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.212
+            }
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.212
+            }
+          },
+          "stat": "Recharge",
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Touch_of_the_Nictus_F.Attuned_Touch_of_the_Nictus_F",
+      "displayName": "Chance for Negative Energy Damage",
       "description": {
         "short": "Adds Minor DMG (Negative Energy)",
         "long": "Provides a chance to cause minor negative energy damage to your targets.  This effect will trigger roughly 3.5 times per minute."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Touch_of_the_Nictus_F.Attuned_Touch_of_the_Nictus_F",
-      "setName": "Touch_of_the_Nictus",
-      "displayName": "Chance for Negative Energy Damage"
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 71.7501
+            }
+          },
+          "stat": "Chance for Negative Energy Damage",
+          "procsPerMinute": 3.5,
+          "cancelOnMiss": true,
+          "damageType": "Negative",
+          "stacking": 1,
+          "resistible": true,
+          "pvMode": 1,
+          "toWho": "all"
+        }
+      ]
     }
   ],
   "levels": {

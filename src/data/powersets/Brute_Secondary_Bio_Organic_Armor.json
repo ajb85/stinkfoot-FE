@@ -6,13 +6,6 @@
   "displayName": "Bio Armor",
   "powers": [
     {
-      "allowedEnhancements": [
-        "Endurance_Discount",
-        "Recharge",
-        "Res_Damage"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Res_Dmg",
@@ -24,7 +17,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Hardened_Carapace",
               "damageType": "Smashing"
             },
@@ -35,7 +29,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Hardened_Carapace",
               "damageType": "Lethal"
             },
@@ -46,7 +41,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Hardened_Carapace",
               "damageType": "Toxic"
             }
@@ -63,7 +59,7 @@
               "duration": 0.75,
               "effectType": "Resistance",
               "specialCase": 44,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Hardened_Carapace",
               "damageType": "Smashing"
             },
@@ -75,7 +71,7 @@
               "duration": 0.75,
               "effectType": "Resistance",
               "specialCase": 44,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Hardened_Carapace",
               "damageType": "Lethal"
             },
@@ -87,7 +83,7 @@
               "duration": 0.75,
               "effectType": "Resistance",
               "specialCase": 44,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Hardened_Carapace",
               "damageType": "Toxic"
             }
@@ -104,7 +100,7 @@
               "duration": 0.75,
               "effectType": "DamageBuff",
               "specialCase": 46,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Hardened_Carapace",
               "damageType": "Smashing"
             },
@@ -116,7 +112,7 @@
               "duration": 0.75,
               "effectType": "DamageBuff",
               "specialCase": 46,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Hardened_Carapace",
               "damageType": "Lethal"
             },
@@ -128,7 +124,7 @@
               "duration": 0.75,
               "effectType": "DamageBuff",
               "specialCase": 46,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Hardened_Carapace",
               "damageType": "Fire"
             },
@@ -140,7 +136,7 @@
               "duration": 0.75,
               "effectType": "DamageBuff",
               "specialCase": 46,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Hardened_Carapace",
               "damageType": "Cold"
             },
@@ -152,7 +148,7 @@
               "duration": 0.75,
               "effectType": "DamageBuff",
               "specialCase": 46,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Hardened_Carapace",
               "damageType": "Energy"
             },
@@ -164,7 +160,7 @@
               "duration": 0.75,
               "effectType": "DamageBuff",
               "specialCase": 46,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Hardened_Carapace",
               "damageType": "Negative"
             },
@@ -176,7 +172,7 @@
               "duration": 0.75,
               "effectType": "DamageBuff",
               "specialCase": 46,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Hardened_Carapace",
               "damageType": "Toxic"
             },
@@ -188,7 +184,7 @@
               "duration": 0.75,
               "effectType": "DamageBuff",
               "specialCase": 46,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Hardened_Carapace",
               "damageType": "Psionic"
             }
@@ -198,15 +194,15 @@
           "effectType": "EfficientAdaptation",
           "values": [
             {
+              "etModifies": "EnduranceDiscount",
               "mag": {
                 "pve": 0.298
               },
               "probability": 1,
               "duration": 0.75,
               "effectType": "Enhancement",
-              "eTModifies": 8,
               "specialCase": 45,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Hardened_Carapace"
             }
           ]
@@ -221,7 +217,7 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Mez",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Hardened_Carapace",
               "mezType": "Stun"
             },
@@ -232,7 +228,7 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Mez",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Hardened_Carapace",
               "mezType": "Sleep"
             },
@@ -243,7 +239,7 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "MezResist",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Hardened_Carapace",
               "mezType": "Stun"
             },
@@ -254,13 +250,21 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "MezResist",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Hardened_Carapace",
               "mezType": "Sleep"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Endurance_Discount",
+        "Recharge",
+        "Res_Damage"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Defense.Bio_Organic_Armor.Hardened_Carapace",
+      "archetypeOrder": "secondary",
       "powerIndex": 0,
       "castTimeReal": 0.67,
       "toggleCost": 0.26,
@@ -298,12 +302,6 @@
       "powerType": "Toggle"
     },
     {
-      "allowedEnhancements": [
-        "Heal",
-        "Endurance_Modification"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "HealSelf",
@@ -315,7 +313,8 @@
               "probability": 1,
               "duration": 5.25,
               "effectType": "HitPoints",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Inexhaustible"
             }
           ]
@@ -331,7 +330,7 @@
               "duration": 5.25,
               "effectType": "HitPoints",
               "specialCase": 44,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Inexhaustible"
             }
           ]
@@ -346,7 +345,8 @@
               "probability": 1,
               "duration": 5.25,
               "effectType": "Regeneration",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Inexhaustible"
             },
             {
@@ -356,18 +356,63 @@
               "probability": 1,
               "duration": 5.25,
               "effectType": "Recovery",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Inexhaustible"
             },
             {
+              "etModifies": "SpeedRunning",
               "mag": {
                 "pve": 0.3
               },
               "probability": 1,
               "duration": 5.25,
               "effectType": "ResEffect",
-              "eTModifies": 32,
-              "toWho": "Self",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Bio_Organic_Armor.Inexhaustible"
+            },
+            {
+              "etModifies": "RechargeTime",
+              "mag": {
+                "pve": 0.3
+              },
+              "probability": 1,
+              "duration": 5.25,
+              "effectType": "ResEffect",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Bio_Organic_Armor.Inexhaustible"
+            },
+            {
+              "etModifies": "SpeedFlying",
+              "mag": {
+                "pve": 0.3
+              },
+              "probability": 1,
+              "duration": 5.25,
+              "effectType": "ResEffect",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Bio_Organic_Armor.Inexhaustible"
+            },
+            {
+              "etModifies": "JumpHeight",
+              "mag": {
+                "pve": 0.3
+              },
+              "probability": 1,
+              "duration": 5.25,
+              "effectType": "ResEffect",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Bio_Organic_Armor.Inexhaustible"
+            },
+            {
+              "etModifies": "SpeedJumping",
+              "mag": {
+                "pve": 0.3
+              },
+              "probability": 1,
+              "duration": 5.25,
+              "effectType": "ResEffect",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Inexhaustible"
             }
           ]
@@ -383,7 +428,7 @@
               "duration": 5.25,
               "effectType": "Regeneration",
               "specialCase": 45,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Inexhaustible"
             },
             {
@@ -394,7 +439,7 @@
               "duration": 5.25,
               "effectType": "Recovery",
               "specialCase": 45,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Inexhaustible"
             }
           ]
@@ -403,19 +448,26 @@
           "effectType": "Res_Boolean",
           "values": [
             {
+              "etModifies": "Endurance",
               "mag": {
                 "pve": 0.5536
               },
               "probability": 1,
               "duration": 5.25,
               "effectType": "ResEffect",
-              "eTModifies": 7,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Inexhaustible"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Heal",
+        "Endurance_Modification"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Defense.Bio_Organic_Armor.Inexhaustible",
+      "archetypeOrder": "secondary",
       "powerIndex": 1,
       "fullName": "Brute_Secondary_Bio_Armor_Inexhaustible",
       "displayName": "Inexhaustible",
@@ -447,13 +499,6 @@
       "powerType": "Auto"
     },
     {
-      "allowedEnhancements": [
-        "Defense_Buff",
-        "Endurance_Discount",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Buff_Def",
@@ -465,7 +510,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Environmental_Adaptation",
               "damageType": "Fire"
             },
@@ -476,7 +522,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Environmental_Adaptation",
               "damageType": "Cold"
             },
@@ -487,7 +534,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Environmental_Adaptation",
               "damageType": "Energy"
             },
@@ -498,7 +546,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Environmental_Adaptation",
               "damageType": "Negative"
             },
@@ -509,7 +558,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Environmental_Adaptation",
               "damageType": "Psionic"
             }
@@ -526,7 +576,7 @@
               "duration": 0.75,
               "effectType": "Defense",
               "specialCase": 44,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Environmental_Adaptation",
               "damageType": "Smashing"
             },
@@ -538,7 +588,7 @@
               "duration": 0.75,
               "effectType": "Defense",
               "specialCase": 44,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Environmental_Adaptation",
               "damageType": "Lethal"
             },
@@ -550,7 +600,7 @@
               "duration": 0.75,
               "effectType": "Defense",
               "specialCase": 44,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Environmental_Adaptation",
               "damageType": "Fire"
             },
@@ -562,7 +612,7 @@
               "duration": 0.75,
               "effectType": "Defense",
               "specialCase": 44,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Environmental_Adaptation",
               "damageType": "Cold"
             },
@@ -574,7 +624,7 @@
               "duration": 0.75,
               "effectType": "Defense",
               "specialCase": 44,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Environmental_Adaptation",
               "damageType": "Energy"
             },
@@ -586,7 +636,7 @@
               "duration": 0.75,
               "effectType": "Defense",
               "specialCase": 44,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Environmental_Adaptation",
               "damageType": "Negative"
             },
@@ -598,7 +648,7 @@
               "duration": 0.75,
               "effectType": "Defense",
               "specialCase": 44,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Environmental_Adaptation",
               "damageType": "Psionic"
             },
@@ -610,7 +660,7 @@
               "duration": 0.75,
               "effectType": "HitPoints",
               "specialCase": 44,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Environmental_Adaptation"
             }
           ]
@@ -626,7 +676,7 @@
               "duration": 0.75,
               "effectType": "ToHit",
               "specialCase": 46,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Environmental_Adaptation"
             }
           ]
@@ -641,7 +691,7 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Mez",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Environmental_Adaptation",
               "mezType": "Hold"
             },
@@ -652,9 +702,10 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Mez",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Environmental_Adaptation",
-              "mezType": "Immobilization"
+              "mezType": "Immob"
             },
             {
               "mag": {
@@ -663,7 +714,7 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "MezResist",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Environmental_Adaptation",
               "mezType": "Hold"
             },
@@ -674,9 +725,10 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "MezResist",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Environmental_Adaptation",
-              "mezType": "Immobilization"
+              "mezType": "Immob"
             }
           ]
         },
@@ -691,7 +743,7 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "MezResist",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Environmental_Adaptation",
               "mezType": "Knockback"
             },
@@ -703,7 +755,7 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "MezResist",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Environmental_Adaptation",
               "mezType": "Knockup"
             },
@@ -715,7 +767,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Mez",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Environmental_Adaptation",
               "mezType": "Knockback"
             },
@@ -727,13 +780,22 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Mez",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Environmental_Adaptation",
               "mezType": "Knockup"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Defense_Buff",
+        "Endurance_Discount",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Defense.Bio_Organic_Armor.Environmental_Adaptation",
+      "archetypeOrder": "secondary",
       "powerIndex": 2,
       "castTimeReal": 0.73,
       "toggleCost": 0.26,
@@ -772,9 +834,6 @@
       "powerType": "Toggle"
     },
     {
-      "allowedEnhancements": [],
-      "enhancementCount": 0,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Ones",
@@ -788,17 +847,18 @@
               "variableModified": true,
               "effectType": "Null",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Evolution"
             }
           ]
         }
       ],
+      "allowedEnhancements": [],
+      "enhancementCount": 0,
+      "ogFullName": "Brute_Defense.Bio_Organic_Armor.Evolution",
+      "archetypeOrder": "secondary",
       "subPowers": [
         {
-          "allowedEnhancements": [],
-          "enhancementCount": 0,
-          "archetypeOrder": "secondary",
           "effects": [
             {
               "effectType": "Ones",
@@ -810,7 +870,7 @@
                   "probability": 1,
                   "duration": 1.1,
                   "effectType": "SetMode",
-                  "toWho": "Self",
+                  "toWho": "self",
                   "powerFullName": "Brute_Defense.Bio_Organic_Armor.Defensive_Adaptation"
                 },
                 {
@@ -820,6 +880,7 @@
                   "probability": 1,
                   "duration": 0.75,
                   "effectType": "GlobalChanceMod",
+                  "buffable": true,
                   "resistible": true,
                   "powerFullName": "Brute_Defense.Bio_Organic_Armor.Defensive_Adaptation"
                 },
@@ -829,7 +890,7 @@
                   },
                   "probability": 1,
                   "effectType": "RevokePower",
-                  "toWho": "Self",
+                  "toWho": "self",
                   "powerFullName": "Brute_Defense.Bio_Organic_Armor.Defensive_Adaptation"
                 },
                 {
@@ -839,7 +900,7 @@
                   "probability": 1,
                   "duration": 1.1,
                   "effectType": "DamageBuff",
-                  "toWho": "Self",
+                  "toWho": "self",
                   "powerFullName": "Brute_Defense.Bio_Organic_Armor.Defensive_Adaptation",
                   "damageType": "Smashing"
                 },
@@ -850,7 +911,7 @@
                   "probability": 1,
                   "duration": 1.1,
                   "effectType": "DamageBuff",
-                  "toWho": "Self",
+                  "toWho": "self",
                   "powerFullName": "Brute_Defense.Bio_Organic_Armor.Defensive_Adaptation",
                   "damageType": "Lethal"
                 },
@@ -861,7 +922,7 @@
                   "probability": 1,
                   "duration": 1.1,
                   "effectType": "DamageBuff",
-                  "toWho": "Self",
+                  "toWho": "self",
                   "powerFullName": "Brute_Defense.Bio_Organic_Armor.Defensive_Adaptation",
                   "damageType": "Fire"
                 },
@@ -872,7 +933,7 @@
                   "probability": 1,
                   "duration": 1.1,
                   "effectType": "DamageBuff",
-                  "toWho": "Self",
+                  "toWho": "self",
                   "powerFullName": "Brute_Defense.Bio_Organic_Armor.Defensive_Adaptation",
                   "damageType": "Cold"
                 },
@@ -883,7 +944,7 @@
                   "probability": 1,
                   "duration": 1.1,
                   "effectType": "DamageBuff",
-                  "toWho": "Self",
+                  "toWho": "self",
                   "powerFullName": "Brute_Defense.Bio_Organic_Armor.Defensive_Adaptation",
                   "damageType": "Energy"
                 },
@@ -894,7 +955,7 @@
                   "probability": 1,
                   "duration": 1.1,
                   "effectType": "DamageBuff",
-                  "toWho": "Self",
+                  "toWho": "self",
                   "powerFullName": "Brute_Defense.Bio_Organic_Armor.Defensive_Adaptation",
                   "damageType": "Negative"
                 },
@@ -905,7 +966,7 @@
                   "probability": 1,
                   "duration": 1.1,
                   "effectType": "DamageBuff",
-                  "toWho": "Self",
+                  "toWho": "self",
                   "powerFullName": "Brute_Defense.Bio_Organic_Armor.Defensive_Adaptation",
                   "damageType": "Toxic"
                 },
@@ -916,16 +977,22 @@
                   "probability": 1,
                   "duration": 1.1,
                   "effectType": "DamageBuff",
-                  "toWho": "Self",
+                  "toWho": "self",
                   "powerFullName": "Brute_Defense.Bio_Organic_Armor.Defensive_Adaptation",
                   "damageType": "Psionic"
                 }
               ]
             }
           ],
+          "allowedEnhancements": [],
+          "enhancementCount": 0,
+          "ogFullName": "Brute_Defense.Bio_Organic_Armor.Defensive_Adaptation",
+          "archetypeOrder": "secondary",
           "powerIndex": 0,
           "parent": "Brute_Secondary_Bio_Armor_Adaptation",
           "castTimeReal": 1,
+          "isEpic": true,
+          "locationIndex": 31,
           "fullName": "Brute_Secondary_Bio_Armor_Defensive_Adaptation",
           "displayName": "Defensive Adaptation",
           "accuracy": 1,
@@ -951,9 +1018,6 @@
           "powerType": "Toggle"
         },
         {
-          "allowedEnhancements": [],
-          "enhancementCount": 0,
-          "archetypeOrder": "secondary",
           "effects": [
             {
               "effectType": "Ones",
@@ -965,7 +1029,7 @@
                   "probability": 1,
                   "duration": 1.1,
                   "effectType": "SetMode",
-                  "toWho": "Self",
+                  "toWho": "self",
                   "powerFullName": "Brute_Defense.Bio_Organic_Armor.Efficient_Adaptation"
                 },
                 {
@@ -975,15 +1039,22 @@
                   "probability": 1,
                   "duration": 0.75,
                   "effectType": "GlobalChanceMod",
+                  "buffable": true,
                   "resistible": true,
                   "powerFullName": ""
                 }
               ]
             }
           ],
+          "allowedEnhancements": [],
+          "enhancementCount": 0,
+          "ogFullName": "Brute_Defense.Bio_Organic_Armor.Efficient_Adaptation",
+          "archetypeOrder": "secondary",
           "powerIndex": 1,
           "parent": "Brute_Secondary_Bio_Armor_Adaptation",
           "castTimeReal": 0.67,
+          "isEpic": true,
+          "locationIndex": 37,
           "fullName": "Brute_Secondary_Bio_Armor_Efficient_Adaptation",
           "displayName": "Efficient Adaptation",
           "accuracy": 1,
@@ -1009,9 +1080,6 @@
           "powerType": "Toggle"
         },
         {
-          "allowedEnhancements": [],
-          "enhancementCount": 0,
-          "archetypeOrder": "secondary",
           "effects": [
             {
               "effectType": "Ones",
@@ -1023,7 +1091,7 @@
                   "probability": 1,
                   "duration": 1.1,
                   "effectType": "SetMode",
-                  "toWho": "Self",
+                  "toWho": "self",
                   "powerFullName": "Brute_Defense.Bio_Organic_Armor.Offensive_Adaptation"
                 },
                 {
@@ -1033,6 +1101,7 @@
                   "probability": 1,
                   "duration": 0.75,
                   "effectType": "GlobalChanceMod",
+                  "buffable": true,
                   "resistible": true,
                   "powerFullName": "Brute_Defense.Bio_Organic_Armor.Offensive_Adaptation"
                 },
@@ -1042,7 +1111,7 @@
                   },
                   "probability": 1,
                   "effectType": "RevokePower",
-                  "toWho": "Self",
+                  "toWho": "self",
                   "powerFullName": "Brute_Defense.Bio_Organic_Armor.Offensive_Adaptation"
                 },
                 {
@@ -1053,7 +1122,7 @@
                   "duration": 1.1,
                   "effectType": "Resistance",
                   "resistible": true,
-                  "toWho": "Self",
+                  "toWho": "self",
                   "powerFullName": "Brute_Defense.Bio_Organic_Armor.Offensive_Adaptation",
                   "damageType": "Smashing"
                 },
@@ -1065,7 +1134,7 @@
                   "duration": 1.1,
                   "effectType": "Resistance",
                   "resistible": true,
-                  "toWho": "Self",
+                  "toWho": "self",
                   "powerFullName": "Brute_Defense.Bio_Organic_Armor.Offensive_Adaptation",
                   "damageType": "Lethal"
                 },
@@ -1077,7 +1146,7 @@
                   "duration": 1.1,
                   "effectType": "Resistance",
                   "resistible": true,
-                  "toWho": "Self",
+                  "toWho": "self",
                   "powerFullName": "Brute_Defense.Bio_Organic_Armor.Offensive_Adaptation",
                   "damageType": "Fire"
                 },
@@ -1089,7 +1158,7 @@
                   "duration": 1.1,
                   "effectType": "Resistance",
                   "resistible": true,
-                  "toWho": "Self",
+                  "toWho": "self",
                   "powerFullName": "Brute_Defense.Bio_Organic_Armor.Offensive_Adaptation",
                   "damageType": "Cold"
                 },
@@ -1101,7 +1170,7 @@
                   "duration": 1.1,
                   "effectType": "Resistance",
                   "resistible": true,
-                  "toWho": "Self",
+                  "toWho": "self",
                   "powerFullName": "Brute_Defense.Bio_Organic_Armor.Offensive_Adaptation",
                   "damageType": "Energy"
                 },
@@ -1113,7 +1182,7 @@
                   "duration": 1.1,
                   "effectType": "Resistance",
                   "resistible": true,
-                  "toWho": "Self",
+                  "toWho": "self",
                   "powerFullName": "Brute_Defense.Bio_Organic_Armor.Offensive_Adaptation",
                   "damageType": "Negative"
                 },
@@ -1125,7 +1194,7 @@
                   "duration": 1.1,
                   "effectType": "Resistance",
                   "resistible": true,
-                  "toWho": "Self",
+                  "toWho": "self",
                   "powerFullName": "Brute_Defense.Bio_Organic_Armor.Offensive_Adaptation",
                   "damageType": "Psionic"
                 },
@@ -1137,16 +1206,22 @@
                   "duration": 1.1,
                   "effectType": "Resistance",
                   "resistible": true,
-                  "toWho": "Self",
+                  "toWho": "self",
                   "powerFullName": "Brute_Defense.Bio_Organic_Armor.Offensive_Adaptation",
                   "damageType": "Toxic"
                 }
               ]
             }
           ],
+          "allowedEnhancements": [],
+          "enhancementCount": 0,
+          "ogFullName": "Brute_Defense.Bio_Organic_Armor.Offensive_Adaptation",
+          "archetypeOrder": "secondary",
           "powerIndex": 2,
           "parent": "Brute_Secondary_Bio_Armor_Adaptation",
           "castTimeReal": 0.67,
+          "isEpic": true,
+          "locationIndex": 43,
           "fullName": "Brute_Secondary_Bio_Armor_Offensive_Adaptation",
           "displayName": "Offensive Adaptation",
           "accuracy": 1,
@@ -1199,13 +1274,6 @@
       "powerType": "Auto"
     },
     {
-      "allowedEnhancements": [
-        "Endurance_Discount",
-        "Heal",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Ones",
@@ -1214,7 +1282,8 @@
               "mag": {},
               "probability": 1,
               "effectType": "Absorb",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Ablative_Carapace"
             },
             {
@@ -1224,7 +1293,8 @@
               "probability": 1,
               "duration": 30,
               "effectType": "Regeneration",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Ablative_Carapace"
             }
           ]
@@ -1236,8 +1306,9 @@
               "mag": {},
               "probability": 1,
               "effectType": "Absorb",
+              "buffable": true,
               "specialCase": 44,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Ablative_Carapace"
             }
           ]
@@ -1252,13 +1323,22 @@
               "probability": 1,
               "duration": 30,
               "effectType": "Regeneration",
+              "buffable": true,
               "specialCase": 45,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Ablative_Carapace"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Endurance_Discount",
+        "Heal",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Defense.Bio_Organic_Armor.Ablative_Carapace",
+      "archetypeOrder": "secondary",
       "powerIndex": 4,
       "castTimeReal": 2.03,
       "toggleCost": 10.4,
@@ -1293,14 +1373,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Endurance_Discount",
-        "Recharge",
-        "Res_Damage",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "InherentTaunt",
@@ -1313,9 +1385,10 @@
               "probability": 1,
               "duration": 13.6,
               "effectType": "Mez",
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Adaptation",
               "requiresToHitCheck": true,
@@ -1335,7 +1408,7 @@
               "effectType": "Resistance",
               "resistible": true,
               "specialCase": 48,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Adaptation",
               "damageType": "Smashing"
             },
@@ -1348,7 +1421,7 @@
               "effectType": "Resistance",
               "resistible": true,
               "specialCase": 48,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Adaptation",
               "damageType": "Lethal"
             },
@@ -1361,7 +1434,7 @@
               "effectType": "Resistance",
               "resistible": true,
               "specialCase": 48,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Adaptation",
               "damageType": "Fire"
             },
@@ -1374,7 +1447,7 @@
               "effectType": "Resistance",
               "resistible": true,
               "specialCase": 48,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Adaptation",
               "damageType": "Cold"
             },
@@ -1387,7 +1460,7 @@
               "effectType": "Resistance",
               "resistible": true,
               "specialCase": 48,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Adaptation",
               "damageType": "Energy"
             },
@@ -1400,7 +1473,7 @@
               "effectType": "Resistance",
               "resistible": true,
               "specialCase": 48,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Adaptation",
               "damageType": "Negative"
             },
@@ -1413,7 +1486,7 @@
               "effectType": "Resistance",
               "resistible": true,
               "specialCase": 48,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Adaptation",
               "damageType": "Psionic"
             },
@@ -1426,7 +1499,7 @@
               "effectType": "Resistance",
               "resistible": true,
               "specialCase": 48,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Adaptation",
               "damageType": "Toxic"
             }
@@ -1443,7 +1516,7 @@
               "duration": 0.75,
               "effectType": "Regeneration",
               "specialCase": 45,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Adaptation"
             },
             {
@@ -1454,7 +1527,7 @@
               "duration": 0.75,
               "effectType": "Recovery",
               "specialCase": 45,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Adaptation"
             }
           ]
@@ -1471,7 +1544,7 @@
               "effectType": "Resistance",
               "resistible": true,
               "specialCase": 46,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Adaptation",
               "damageType": "Smashing"
             },
@@ -1484,7 +1557,7 @@
               "effectType": "Resistance",
               "resistible": true,
               "specialCase": 46,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Adaptation",
               "damageType": "Lethal"
             },
@@ -1497,7 +1570,7 @@
               "effectType": "Resistance",
               "resistible": true,
               "specialCase": 46,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Adaptation",
               "damageType": "Fire"
             },
@@ -1510,7 +1583,7 @@
               "effectType": "Resistance",
               "resistible": true,
               "specialCase": 46,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Adaptation",
               "damageType": "Cold"
             },
@@ -1523,7 +1596,7 @@
               "effectType": "Resistance",
               "resistible": true,
               "specialCase": 46,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Adaptation",
               "damageType": "Energy"
             },
@@ -1536,7 +1609,7 @@
               "effectType": "Resistance",
               "resistible": true,
               "specialCase": 46,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Adaptation",
               "damageType": "Negative"
             },
@@ -1549,7 +1622,7 @@
               "effectType": "Resistance",
               "resistible": true,
               "specialCase": 46,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Adaptation",
               "damageType": "Psionic"
             },
@@ -1562,7 +1635,7 @@
               "effectType": "Resistance",
               "resistible": true,
               "specialCase": 46,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Adaptation",
               "damageType": "Toxic"
             }
@@ -1578,7 +1651,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Adaptation",
               "damageType": "Fire"
             },
@@ -1589,7 +1663,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Adaptation",
               "damageType": "Cold"
             },
@@ -1600,7 +1675,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Adaptation",
               "damageType": "Energy"
             },
@@ -1611,7 +1687,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Adaptation",
               "damageType": "Negative"
             },
@@ -1622,7 +1699,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Adaptation",
               "damageType": "Psionic"
             },
@@ -1633,7 +1711,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Adaptation",
               "damageType": "Toxic"
             },
@@ -1644,7 +1723,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Adaptation",
               "damageType": "Smashing"
             },
@@ -1655,7 +1735,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Adaptation",
               "damageType": "Lethal"
             }
@@ -1672,7 +1753,7 @@
               "duration": 0.75,
               "effectType": "Resistance",
               "specialCase": 44,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Adaptation",
               "damageType": "Fire"
             },
@@ -1684,7 +1765,7 @@
               "duration": 0.75,
               "effectType": "Resistance",
               "specialCase": 44,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Adaptation",
               "damageType": "Cold"
             },
@@ -1696,7 +1777,7 @@
               "duration": 0.75,
               "effectType": "Resistance",
               "specialCase": 44,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Adaptation",
               "damageType": "Energy"
             },
@@ -1708,7 +1789,7 @@
               "duration": 0.75,
               "effectType": "Resistance",
               "specialCase": 44,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Adaptation",
               "damageType": "Negative"
             },
@@ -1720,7 +1801,7 @@
               "duration": 0.75,
               "effectType": "Resistance",
               "specialCase": 44,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Adaptation",
               "damageType": "Psionic"
             },
@@ -1732,7 +1813,7 @@
               "duration": 0.75,
               "effectType": "Resistance",
               "specialCase": 44,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Adaptation",
               "damageType": "Toxic"
             },
@@ -1744,7 +1825,7 @@
               "duration": 0.75,
               "effectType": "Resistance",
               "specialCase": 44,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Adaptation",
               "damageType": "Smashing"
             },
@@ -1756,7 +1837,7 @@
               "duration": 0.75,
               "effectType": "Resistance",
               "specialCase": 44,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Adaptation",
               "damageType": "Lethal"
             },
@@ -1768,7 +1849,7 @@
               "duration": 0.75,
               "effectType": "Defense",
               "specialCase": 44,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Adaptation",
               "damageType": "Smashing"
             },
@@ -1780,7 +1861,7 @@
               "duration": 0.75,
               "effectType": "Defense",
               "specialCase": 44,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Adaptation",
               "damageType": "Lethal"
             },
@@ -1792,7 +1873,7 @@
               "duration": 0.75,
               "effectType": "Defense",
               "specialCase": 44,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Adaptation",
               "damageType": "Fire"
             },
@@ -1804,7 +1885,7 @@
               "duration": 0.75,
               "effectType": "Defense",
               "specialCase": 44,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Adaptation",
               "damageType": "Cold"
             },
@@ -1816,7 +1897,7 @@
               "duration": 0.75,
               "effectType": "Defense",
               "specialCase": 44,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Adaptation",
               "damageType": "Energy"
             },
@@ -1828,7 +1909,7 @@
               "duration": 0.75,
               "effectType": "Defense",
               "specialCase": 44,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Adaptation",
               "damageType": "Negative"
             },
@@ -1840,13 +1921,22 @@
               "duration": 0.75,
               "effectType": "Defense",
               "specialCase": 44,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Adaptation",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Endurance_Discount",
+        "Recharge",
+        "Res_Damage",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Defense.Bio_Organic_Armor.Adaptation",
+      "archetypeOrder": "secondary",
       "powerIndex": 5,
       "castTimeReal": 2.93,
       "toggleCost": 0.26,
@@ -1887,17 +1977,6 @@
       "powerType": "Toggle"
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Heal",
-        "Recharge",
-        "Endurance_Modification",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Damage",
@@ -1909,8 +1988,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.DNA_Siphon",
               "damageType": "Lethal"
             },
@@ -1924,8 +2004,9 @@
               "effectType": "Damage",
               "ticks": 3,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.DNA_Siphon",
               "damageType": "Toxic"
             }
@@ -1943,7 +2024,8 @@
               "effectType": "Heal",
               "delayedTime": 0.25,
               "stacking": 1,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.DNA_Siphon"
             }
           ]
@@ -1961,7 +2043,7 @@
               "delayedTime": 0.25,
               "stacking": 1,
               "specialCase": 44,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.DNA_Siphon"
             }
           ]
@@ -1978,7 +2060,8 @@
               "effectType": "Endurance",
               "delayedTime": 0.25,
               "stacking": 1,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.DNA_Siphon"
             },
             {
@@ -1990,7 +2073,8 @@
               "variableModified": true,
               "effectType": "Regeneration",
               "stacking": 1,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.DNA_Siphon"
             },
             {
@@ -2002,7 +2086,8 @@
               "variableModified": true,
               "effectType": "Recovery",
               "stacking": 1,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.DNA_Siphon"
             }
           ]
@@ -2020,7 +2105,7 @@
               "effectType": "Regeneration",
               "stacking": 1,
               "specialCase": 45,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.DNA_Siphon"
             },
             {
@@ -2033,7 +2118,7 @@
               "effectType": "Recovery",
               "stacking": 1,
               "specialCase": 45,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.DNA_Siphon"
             }
           ]
@@ -2051,7 +2136,7 @@
               "effectType": "Regeneration",
               "resistible": true,
               "specialCase": 46,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.DNA_Siphon"
             }
           ]
@@ -2069,7 +2154,7 @@
               "effectType": "Regeneration",
               "resistible": true,
               "specialCase": 46,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.DNA_Siphon"
             }
           ]
@@ -2086,9 +2171,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.DNA_Siphon",
               "requiresToHitCheck": true,
@@ -2097,6 +2183,18 @@
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Heal",
+        "Recharge",
+        "Endurance_Modification",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Defense.Bio_Organic_Armor.DNA_Siphon",
+      "archetypeOrder": "secondary",
       "powerIndex": 6,
       "castTimeReal": 1.67,
       "toggleCost": 13,
@@ -2143,15 +2241,6 @@
       "aoeModifier": 4
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Recharge",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Damage",
@@ -2163,8 +2252,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Genetic_Contamination",
               "damageType": "Toxic"
             }
@@ -2182,9 +2272,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Genetic_Contamination",
               "requiresToHitCheck": true,
@@ -2204,7 +2295,7 @@
               "effectType": "DamageBuff",
               "resistible": true,
               "specialCase": 47,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Genetic_Contamination",
               "damageType": "Smashing"
             },
@@ -2217,7 +2308,7 @@
               "effectType": "DamageBuff",
               "resistible": true,
               "specialCase": 47,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Genetic_Contamination",
               "damageType": "Lethal"
             },
@@ -2230,7 +2321,7 @@
               "effectType": "DamageBuff",
               "resistible": true,
               "specialCase": 47,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Genetic_Contamination",
               "damageType": "Fire"
             },
@@ -2243,7 +2334,7 @@
               "effectType": "DamageBuff",
               "resistible": true,
               "specialCase": 47,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Genetic_Contamination",
               "damageType": "Cold"
             },
@@ -2256,7 +2347,7 @@
               "effectType": "DamageBuff",
               "resistible": true,
               "specialCase": 47,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Genetic_Contamination",
               "damageType": "Energy"
             },
@@ -2269,7 +2360,7 @@
               "effectType": "DamageBuff",
               "resistible": true,
               "specialCase": 47,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Genetic_Contamination",
               "damageType": "Negative"
             },
@@ -2282,7 +2373,7 @@
               "effectType": "DamageBuff",
               "resistible": true,
               "specialCase": 47,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Genetic_Contamination",
               "damageType": "Toxic"
             },
@@ -2295,7 +2386,7 @@
               "effectType": "DamageBuff",
               "resistible": true,
               "specialCase": 47,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Genetic_Contamination",
               "damageType": "Psionic"
             }
@@ -2313,7 +2404,7 @@
               "effectType": "DamageBuff",
               "resistible": true,
               "specialCase": 44,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Genetic_Contamination",
               "damageType": "Smashing"
             }
@@ -2331,7 +2422,7 @@
               "effectType": "DamageBuff",
               "resistible": true,
               "specialCase": 44,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Genetic_Contamination",
               "damageType": "Lethal"
             },
@@ -2344,7 +2435,7 @@
               "effectType": "DamageBuff",
               "resistible": true,
               "specialCase": 44,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Genetic_Contamination",
               "damageType": "Fire"
             },
@@ -2357,7 +2448,7 @@
               "effectType": "DamageBuff",
               "resistible": true,
               "specialCase": 44,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Genetic_Contamination",
               "damageType": "Cold"
             },
@@ -2370,7 +2461,7 @@
               "effectType": "DamageBuff",
               "resistible": true,
               "specialCase": 44,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Genetic_Contamination",
               "damageType": "Energy"
             },
@@ -2383,7 +2474,7 @@
               "effectType": "DamageBuff",
               "resistible": true,
               "specialCase": 44,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Genetic_Contamination",
               "damageType": "Negative"
             },
@@ -2396,7 +2487,7 @@
               "effectType": "DamageBuff",
               "resistible": true,
               "specialCase": 44,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Genetic_Contamination",
               "damageType": "Toxic"
             },
@@ -2409,13 +2500,23 @@
               "effectType": "DamageBuff",
               "resistible": true,
               "specialCase": 44,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Genetic_Contamination",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Recharge",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Defense.Bio_Organic_Armor.Genetic_Contamination",
+      "archetypeOrder": "secondary",
       "powerIndex": 7,
       "castTimeReal": 1.07,
       "toggleCost": 0.52,
@@ -2456,15 +2557,6 @@
       "powerType": "Toggle"
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Heal",
-        "Recharge",
-        "Endurance_Modification",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Ones",
@@ -2478,7 +2570,8 @@
               "variableModified": true,
               "effectType": "Recovery",
               "stacking": 1,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Parasitic_Aura"
             },
             {
@@ -2490,7 +2583,8 @@
               "variableModified": true,
               "effectType": "Regeneration",
               "stacking": 1,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Parasitic_Aura"
             },
             {
@@ -2499,7 +2593,8 @@
               "variableModified": true,
               "effectType": "Absorb",
               "stacking": 1,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Parasitic_Aura"
             }
           ]
@@ -2517,7 +2612,7 @@
               "effectType": "Recovery",
               "stacking": 1,
               "specialCase": 45,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Parasitic_Aura"
             },
             {
@@ -2530,7 +2625,7 @@
               "effectType": "Regeneration",
               "stacking": 1,
               "specialCase": 45,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Parasitic_Aura"
             }
           ]
@@ -2545,7 +2640,7 @@
               "effectType": "Absorb",
               "stacking": 1,
               "specialCase": 44,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Parasitic_Aura"
             }
           ]
@@ -2562,7 +2657,7 @@
               "effectType": "DamageBuff",
               "resistible": true,
               "specialCase": 47,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Parasitic_Aura",
               "damageType": "Smashing"
             },
@@ -2575,7 +2670,7 @@
               "effectType": "DamageBuff",
               "resistible": true,
               "specialCase": 47,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Parasitic_Aura",
               "damageType": "Lethal"
             },
@@ -2588,7 +2683,7 @@
               "effectType": "DamageBuff",
               "resistible": true,
               "specialCase": 47,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Parasitic_Aura",
               "damageType": "Fire"
             },
@@ -2601,7 +2696,7 @@
               "effectType": "DamageBuff",
               "resistible": true,
               "specialCase": 47,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Parasitic_Aura",
               "damageType": "Cold"
             },
@@ -2614,7 +2709,7 @@
               "effectType": "DamageBuff",
               "resistible": true,
               "specialCase": 47,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Parasitic_Aura",
               "damageType": "Energy"
             },
@@ -2627,7 +2722,7 @@
               "effectType": "DamageBuff",
               "resistible": true,
               "specialCase": 47,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Parasitic_Aura",
               "damageType": "Negative"
             },
@@ -2640,7 +2735,7 @@
               "effectType": "DamageBuff",
               "resistible": true,
               "specialCase": 47,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Parasitic_Aura",
               "damageType": "Toxic"
             },
@@ -2653,7 +2748,7 @@
               "effectType": "DamageBuff",
               "resistible": true,
               "specialCase": 47,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Parasitic_Aura",
               "damageType": "Psionic"
             }
@@ -2671,7 +2766,7 @@
               "effectType": "DamageBuff",
               "resistible": true,
               "specialCase": 44,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Parasitic_Aura",
               "damageType": "Smashing"
             },
@@ -2684,7 +2779,7 @@
               "effectType": "DamageBuff",
               "resistible": true,
               "specialCase": 44,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Parasitic_Aura",
               "damageType": "Lethal"
             },
@@ -2697,7 +2792,7 @@
               "effectType": "DamageBuff",
               "resistible": true,
               "specialCase": 44,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Parasitic_Aura",
               "damageType": "Fire"
             },
@@ -2710,7 +2805,7 @@
               "effectType": "DamageBuff",
               "resistible": true,
               "specialCase": 44,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Parasitic_Aura",
               "damageType": "Cold"
             },
@@ -2723,7 +2818,7 @@
               "effectType": "DamageBuff",
               "resistible": true,
               "specialCase": 44,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Parasitic_Aura",
               "damageType": "Energy"
             },
@@ -2736,7 +2831,7 @@
               "effectType": "DamageBuff",
               "resistible": true,
               "specialCase": 44,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Parasitic_Aura",
               "damageType": "Negative"
             },
@@ -2749,7 +2844,7 @@
               "effectType": "DamageBuff",
               "resistible": true,
               "specialCase": 44,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Parasitic_Aura",
               "damageType": "Toxic"
             },
@@ -2762,7 +2857,7 @@
               "effectType": "DamageBuff",
               "resistible": true,
               "specialCase": 44,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Parasitic_Aura",
               "damageType": "Psionic"
             }
@@ -2780,9 +2875,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Defense.Bio_Organic_Armor.Parasitic_Aura",
               "requiresToHitCheck": true,
@@ -2791,6 +2887,16 @@
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Heal",
+        "Recharge",
+        "Endurance_Modification",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Defense.Bio_Organic_Armor.Parasitic_Aura",
+      "archetypeOrder": "secondary",
       "powerIndex": 8,
       "castTimeReal": 1.87,
       "toggleCost": 18.2,

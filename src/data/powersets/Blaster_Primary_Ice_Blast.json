@@ -6,16 +6,6 @@
   "displayName": "Ice Blast",
   "powers": [
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Range",
-        "Recharge",
-        "Slow"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Damage",
@@ -27,8 +17,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Ice_Bolt",
               "damageType": "Smashing"
             },
@@ -40,8 +31,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Ice_Bolt",
               "damageType": "Cold"
             }
@@ -58,8 +50,9 @@
               "duration": 6,
               "effectType": "SpeedRunning",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Ice_Bolt"
             },
             {
@@ -70,21 +63,22 @@
               "duration": 6,
               "effectType": "SpeedFlying",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Ice_Bolt"
             },
             {
+              "etModifies": "JumpHeight",
               "mag": {
                 "pve": -0.2
               },
               "probability": 1,
               "duration": 6,
               "effectType": "Enhancement",
-              "eTModifies": 16,
               "stacking": 1,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Ice_Bolt"
             },
             {
@@ -95,8 +89,22 @@
               "duration": 6,
               "effectType": "SpeedJumping",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Ice_Blast.Ice_Bolt"
+            },
+            {
+              "etModifies": "RechargeTime",
+              "mag": {
+                "pve": -0.2
+              },
+              "probability": 1,
+              "duration": 6,
+              "effectType": "Enhancement",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Ice_Bolt"
             }
           ]
@@ -114,7 +122,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Ice_Bolt",
               "damageType": "Smashing"
             },
@@ -128,7 +136,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Ice_Bolt",
               "damageType": "Lethal"
             },
@@ -142,7 +150,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Ice_Bolt",
               "damageType": "Fire"
             },
@@ -156,7 +164,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Ice_Bolt",
               "damageType": "Cold"
             },
@@ -170,7 +178,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Ice_Bolt",
               "damageType": "Energy"
             },
@@ -184,7 +192,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Ice_Bolt",
               "damageType": "Negative"
             },
@@ -198,7 +206,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Ice_Bolt",
               "damageType": "Toxic"
             },
@@ -212,13 +220,24 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Ice_Bolt",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Range",
+        "Recharge",
+        "Slow"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Ranged.Ice_Blast.Ice_Bolt",
+      "archetypeOrder": "primary",
       "powerIndex": 0,
       "castTimeReal": 1,
       "toggleCost": 5.2,
@@ -258,16 +277,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Range",
-        "Recharge",
-        "Slow"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Damage",
@@ -279,8 +288,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Ice_Blast",
               "damageType": "Smashing"
             },
@@ -292,8 +302,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Ice_Blast",
               "damageType": "Cold"
             }
@@ -303,16 +314,16 @@
           "effectType": "Slow",
           "values": [
             {
+              "etModifies": "JumpHeight",
               "mag": {
                 "pve": -0.2
               },
               "probability": 1,
               "duration": 10,
               "effectType": "Enhancement",
-              "eTModifies": 16,
               "stacking": 1,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Ice_Blast"
             },
             {
@@ -323,8 +334,9 @@
               "duration": 10,
               "effectType": "SpeedJumping",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Ice_Blast"
             },
             {
@@ -335,8 +347,9 @@
               "duration": 10,
               "effectType": "SpeedRunning",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Ice_Blast"
             },
             {
@@ -347,8 +360,22 @@
               "duration": 10,
               "effectType": "SpeedFlying",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Ice_Blast.Ice_Blast"
+            },
+            {
+              "etModifies": "RechargeTime",
+              "mag": {
+                "pve": -0.2
+              },
+              "probability": 1,
+              "duration": 10,
+              "effectType": "Enhancement",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Ice_Blast"
             }
           ]
@@ -366,7 +393,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Ice_Blast",
               "damageType": "Smashing"
             },
@@ -380,7 +407,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Ice_Blast",
               "damageType": "Lethal"
             },
@@ -394,7 +421,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Ice_Blast",
               "damageType": "Fire"
             },
@@ -408,7 +435,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Ice_Blast",
               "damageType": "Cold"
             },
@@ -422,7 +449,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Ice_Blast",
               "damageType": "Energy"
             },
@@ -436,7 +463,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Ice_Blast",
               "damageType": "Negative"
             },
@@ -450,7 +477,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Ice_Blast",
               "damageType": "Toxic"
             },
@@ -464,13 +491,24 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Ice_Blast",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Range",
+        "Recharge",
+        "Slow"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Ranged.Ice_Blast.Ice_Blast",
+      "archetypeOrder": "primary",
       "powerIndex": 1,
       "castTimeReal": 1.67,
       "toggleCost": 8.528,
@@ -510,16 +548,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Range",
-        "Recharge",
-        "Slow"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Damage",
@@ -534,8 +562,9 @@
               "effectType": "Damage",
               "ticks": 2,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Frost_Breath",
               "damageType": "Cold"
             }
@@ -545,16 +574,16 @@
           "effectType": "Slow",
           "values": [
             {
+              "etModifies": "JumpHeight",
               "mag": {
                 "pve": -0.2
               },
               "probability": 1,
               "duration": 10,
               "effectType": "Enhancement",
-              "eTModifies": 16,
               "stacking": 1,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Frost_Breath"
             },
             {
@@ -565,8 +594,22 @@
               "duration": 10,
               "effectType": "SpeedJumping",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Ice_Blast.Frost_Breath"
+            },
+            {
+              "etModifies": "RechargeTime",
+              "mag": {
+                "pve": -0.2
+              },
+              "probability": 1,
+              "duration": 10,
+              "effectType": "Enhancement",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Frost_Breath"
             },
             {
@@ -577,8 +620,9 @@
               "duration": 10,
               "effectType": "SpeedRunning",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Frost_Breath"
             },
             {
@@ -589,8 +633,9 @@
               "duration": 10,
               "effectType": "SpeedFlying",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Frost_Breath"
             }
           ]
@@ -606,7 +651,7 @@
               "duration": 10.17,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Frost_Breath",
               "damageType": "Smashing"
             },
@@ -618,7 +663,7 @@
               "duration": 10.17,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Frost_Breath",
               "damageType": "Lethal"
             },
@@ -630,7 +675,7 @@
               "duration": 10.17,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Frost_Breath",
               "damageType": "Fire"
             },
@@ -642,7 +687,7 @@
               "duration": 10.17,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Frost_Breath",
               "damageType": "Cold"
             },
@@ -654,7 +699,7 @@
               "duration": 10.17,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Frost_Breath",
               "damageType": "Energy"
             },
@@ -666,7 +711,7 @@
               "duration": 10.17,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Frost_Breath",
               "damageType": "Negative"
             },
@@ -678,7 +723,7 @@
               "duration": 10.17,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Frost_Breath",
               "damageType": "Toxic"
             },
@@ -690,13 +735,24 @@
               "duration": 10.17,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Frost_Breath",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Range",
+        "Recharge",
+        "Slow"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Ranged.Ice_Blast.Frost_Breath",
+      "archetypeOrder": "primary",
       "powerIndex": 2,
       "castTimeReal": 2.67,
       "toggleCost": 15.184,
@@ -738,13 +794,6 @@
       "aoeModifier": 2.15995646
     },
     {
-      "allowedEnhancements": [
-        "ToHit_Buff",
-        "Endurance_Discount",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Buff_ToHit",
@@ -758,7 +807,8 @@
               "variableModified": true,
               "effectType": "ToHit",
               "stacking": 1,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Aim"
             }
           ]
@@ -775,7 +825,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Aim",
               "damageType": "Smashing"
             },
@@ -788,7 +838,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Aim",
               "damageType": "Lethal"
             },
@@ -801,7 +851,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Aim",
               "damageType": "Fire"
             },
@@ -814,7 +864,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Aim",
               "damageType": "Cold"
             },
@@ -827,7 +877,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Aim",
               "damageType": "Energy"
             },
@@ -840,7 +890,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Aim",
               "damageType": "Negative"
             },
@@ -853,7 +903,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Aim",
               "damageType": "Toxic"
             },
@@ -866,13 +916,21 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Aim",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "ToHit_Buff",
+        "Endurance_Discount",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Ranged.Ice_Blast.Aim",
+      "archetypeOrder": "primary",
       "powerIndex": 3,
       "castTimeReal": 1.17,
       "toggleCost": 5.2,
@@ -907,16 +965,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Hold",
-        "Range",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Damage",
@@ -930,8 +978,9 @@
               "effectType": "Damage",
               "ticks": 10,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Freeze_Ray",
               "damageType": "Cold"
             }
@@ -948,8 +997,9 @@
               "duration": 9.536,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Blaster_Ranged.Ice_Blast.Freeze_Ray",
               "mezType": "Hold"
@@ -967,8 +1017,9 @@
               "duration": 2,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Blaster_Ranged.Ice_Blast.Freeze_Ray",
               "mezType": "Hold"
@@ -981,7 +1032,7 @@
               "duration": 10,
               "effectType": "MezResist",
               "stacking": 1,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Freeze_Ray",
               "mezType": "Knockback"
             },
@@ -993,7 +1044,7 @@
               "duration": 10,
               "effectType": "MezResist",
               "stacking": 1,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Freeze_Ray",
               "mezType": "Knockup"
             },
@@ -1005,7 +1056,8 @@
               "duration": 10,
               "effectType": "Mez",
               "stacking": 1,
-              "toWho": "Target",
+              "buffable": true,
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Freeze_Ray",
               "mezType": "Knockback"
             },
@@ -1017,7 +1069,8 @@
               "duration": 10,
               "effectType": "Mez",
               "stacking": 1,
-              "toWho": "Target",
+              "buffable": true,
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Freeze_Ray",
               "mezType": "Knockup"
             },
@@ -1031,7 +1084,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Freeze_Ray",
               "damageType": "Smashing"
             },
@@ -1045,7 +1098,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Freeze_Ray",
               "damageType": "Lethal"
             },
@@ -1059,7 +1112,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Freeze_Ray",
               "damageType": "Fire"
             },
@@ -1073,7 +1126,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Freeze_Ray",
               "damageType": "Cold"
             },
@@ -1087,7 +1140,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Freeze_Ray",
               "damageType": "Energy"
             },
@@ -1101,7 +1154,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Freeze_Ray",
               "damageType": "Negative"
             },
@@ -1115,7 +1168,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Freeze_Ray",
               "damageType": "Toxic"
             },
@@ -1129,13 +1182,24 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Freeze_Ray",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Hold",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Ranged.Ice_Blast.Freeze_Ray",
+      "archetypeOrder": "primary",
       "powerIndex": 4,
       "castTimeReal": 1,
       "toggleCost": 6.864,
@@ -1174,16 +1238,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Range",
-        "Recharge",
-        "Slow"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Level",
@@ -1196,8 +1250,9 @@
               "duration": 15,
               "effectType": "EntCreate",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "All",
+              "toWho": "all",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Freezing_Rain"
             }
           ]
@@ -1213,7 +1268,7 @@
               "duration": 9.53,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Freezing_Rain",
               "damageType": "Smashing"
             },
@@ -1225,7 +1280,7 @@
               "duration": 9.53,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Freezing_Rain",
               "damageType": "Lethal"
             },
@@ -1237,7 +1292,7 @@
               "duration": 9.53,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Freezing_Rain",
               "damageType": "Fire"
             },
@@ -1249,7 +1304,7 @@
               "duration": 9.53,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Freezing_Rain",
               "damageType": "Cold"
             },
@@ -1261,7 +1316,7 @@
               "duration": 9.53,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Freezing_Rain",
               "damageType": "Energy"
             },
@@ -1273,7 +1328,7 @@
               "duration": 9.53,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Freezing_Rain",
               "damageType": "Negative"
             },
@@ -1285,7 +1340,7 @@
               "duration": 9.53,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Freezing_Rain",
               "damageType": "Toxic"
             },
@@ -1297,13 +1352,24 @@
               "duration": 9.53,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Freezing_Rain",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Range",
+        "Recharge",
+        "Slow"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Ranged.Ice_Blast.Freezing_Rain",
+      "archetypeOrder": "primary",
       "powerIndex": 5,
       "castTimeReal": 2.03,
       "toggleCost": 15.6,
@@ -1343,17 +1409,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "ToHit_Debuff",
-        "Endurance_Discount",
-        "Range",
-        "Recharge",
-        "Slow"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Damage",
@@ -1365,8 +1420,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Bitter_Ice_Blast",
               "damageType": "Smashing"
             },
@@ -1378,8 +1434,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Bitter_Ice_Blast",
               "damageType": "Cold"
             }
@@ -1396,8 +1453,9 @@
               "duration": 6,
               "effectType": "ToHit",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Bitter_Ice_Blast"
             }
           ]
@@ -1406,16 +1464,16 @@
           "effectType": "Slow",
           "values": [
             {
+              "etModifies": "JumpHeight",
               "mag": {
                 "pve": -0.2
               },
               "probability": 1,
               "duration": 12,
               "effectType": "Enhancement",
-              "eTModifies": 16,
               "stacking": 1,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Bitter_Ice_Blast"
             },
             {
@@ -1426,8 +1484,22 @@
               "duration": 12,
               "effectType": "SpeedJumping",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Ice_Blast.Bitter_Ice_Blast"
+            },
+            {
+              "etModifies": "RechargeTime",
+              "mag": {
+                "pve": -0.2
+              },
+              "probability": 1,
+              "duration": 12,
+              "effectType": "Enhancement",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Bitter_Ice_Blast"
             },
             {
@@ -1438,8 +1510,9 @@
               "duration": 12,
               "effectType": "SpeedRunning",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Bitter_Ice_Blast"
             },
             {
@@ -1450,8 +1523,9 @@
               "duration": 12,
               "effectType": "SpeedFlying",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Bitter_Ice_Blast"
             }
           ]
@@ -1469,7 +1543,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Bitter_Ice_Blast",
               "damageType": "Smashing"
             },
@@ -1483,7 +1557,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Bitter_Ice_Blast",
               "damageType": "Lethal"
             },
@@ -1497,7 +1571,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Bitter_Ice_Blast",
               "damageType": "Fire"
             },
@@ -1511,7 +1585,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Bitter_Ice_Blast",
               "damageType": "Cold"
             },
@@ -1525,7 +1599,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Bitter_Ice_Blast",
               "damageType": "Energy"
             },
@@ -1539,7 +1613,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Bitter_Ice_Blast",
               "damageType": "Negative"
             },
@@ -1553,7 +1627,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Bitter_Ice_Blast",
               "damageType": "Toxic"
             },
@@ -1567,13 +1641,25 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Bitter_Ice_Blast",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "ToHit_Debuff",
+        "Endurance_Discount",
+        "Range",
+        "Recharge",
+        "Slow"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Ranged.Ice_Blast.Bitter_Ice_Blast",
+      "archetypeOrder": "primary",
       "powerIndex": 6,
       "castTimeReal": 1.07,
       "toggleCost": 13,
@@ -1614,17 +1700,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Hold",
-        "Range",
-        "Recharge",
-        "Slow"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Damage",
@@ -1637,8 +1712,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Bitter_Freeze_Ray",
               "damageType": "Cold"
             }
@@ -1648,16 +1724,16 @@
           "effectType": "Slow",
           "values": [
             {
+              "etModifies": "RechargeTime",
               "mag": {
                 "pve": -0.2
               },
               "probability": 1,
               "duration": 18,
               "effectType": "Enhancement",
-              "eTModifies": 25,
               "stacking": 1,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Bitter_Freeze_Ray"
             },
             {
@@ -1668,8 +1744,9 @@
               "duration": 18,
               "effectType": "SpeedRunning",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Bitter_Freeze_Ray"
             },
             {
@@ -1680,8 +1757,22 @@
               "duration": 18,
               "effectType": "SpeedFlying",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Ice_Blast.Bitter_Freeze_Ray"
+            },
+            {
+              "etModifies": "JumpHeight",
+              "mag": {
+                "pve": -0.2
+              },
+              "probability": 1,
+              "duration": 18,
+              "effectType": "Enhancement",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Bitter_Freeze_Ray"
             },
             {
@@ -1692,8 +1783,9 @@
               "duration": 18,
               "effectType": "SpeedJumping",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Bitter_Freeze_Ray"
             }
           ]
@@ -1709,8 +1801,9 @@
               "duration": 9.536,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Blaster_Ranged.Ice_Blast.Bitter_Freeze_Ray",
               "mezType": "Hold"
@@ -1728,8 +1821,9 @@
               "duration": 2,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Blaster_Ranged.Ice_Blast.Bitter_Freeze_Ray",
               "mezType": "Hold"
@@ -1742,7 +1836,7 @@
               "duration": 10,
               "effectType": "MezResist",
               "stacking": 1,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Bitter_Freeze_Ray",
               "mezType": "Knockback"
             },
@@ -1754,7 +1848,7 @@
               "duration": 10,
               "effectType": "MezResist",
               "stacking": 1,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Bitter_Freeze_Ray",
               "mezType": "Knockup"
             },
@@ -1766,7 +1860,8 @@
               "duration": 10,
               "effectType": "Mez",
               "stacking": 1,
-              "toWho": "Target",
+              "buffable": true,
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Bitter_Freeze_Ray",
               "mezType": "Knockback"
             },
@@ -1778,7 +1873,8 @@
               "duration": 10,
               "effectType": "Mez",
               "stacking": 1,
-              "toWho": "Target",
+              "buffable": true,
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Bitter_Freeze_Ray",
               "mezType": "Knockup"
             },
@@ -1792,7 +1888,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Bitter_Freeze_Ray",
               "damageType": "Smashing"
             },
@@ -1806,7 +1902,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Bitter_Freeze_Ray",
               "damageType": "Lethal"
             },
@@ -1820,7 +1916,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Bitter_Freeze_Ray",
               "damageType": "Fire"
             },
@@ -1834,7 +1930,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Bitter_Freeze_Ray",
               "damageType": "Cold"
             },
@@ -1848,7 +1944,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Bitter_Freeze_Ray",
               "damageType": "Energy"
             },
@@ -1862,7 +1958,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Bitter_Freeze_Ray",
               "damageType": "Negative"
             },
@@ -1876,7 +1972,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Bitter_Freeze_Ray",
               "damageType": "Toxic"
             },
@@ -1890,13 +1986,25 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Bitter_Freeze_Ray",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Hold",
+        "Range",
+        "Recharge",
+        "Slow"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Ranged.Ice_Blast.Bitter_Freeze_Ray",
+      "archetypeOrder": "primary",
       "powerIndex": 7,
       "castTimeReal": 2.5,
       "toggleCost": 14.352,
@@ -1936,17 +2044,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "ToHit_Debuff",
-        "Endurance_Discount",
-        "Range",
-        "Recharge",
-        "Slow"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Level",
@@ -1959,8 +2056,9 @@
               "duration": 15,
               "effectType": "EntCreate",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "All",
+              "toWho": "all",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Blizzard"
             }
           ]
@@ -1976,7 +2074,7 @@
               "duration": 9.53,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Blizzard",
               "damageType": "Smashing"
             },
@@ -1988,7 +2086,7 @@
               "duration": 9.53,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Blizzard",
               "damageType": "Lethal"
             },
@@ -2000,7 +2098,7 @@
               "duration": 9.53,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Blizzard",
               "damageType": "Fire"
             },
@@ -2012,7 +2110,7 @@
               "duration": 9.53,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Blizzard",
               "damageType": "Cold"
             },
@@ -2024,7 +2122,7 @@
               "duration": 9.53,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Blizzard",
               "damageType": "Energy"
             },
@@ -2036,7 +2134,7 @@
               "duration": 9.53,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Blizzard",
               "damageType": "Negative"
             },
@@ -2048,7 +2146,7 @@
               "duration": 9.53,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Blizzard",
               "damageType": "Toxic"
             },
@@ -2060,13 +2158,25 @@
               "duration": 9.53,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Ice_Blast.Blizzard",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "ToHit_Debuff",
+        "Endurance_Discount",
+        "Range",
+        "Recharge",
+        "Slow"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Ranged.Ice_Blast.Blizzard",
+      "archetypeOrder": "primary",
       "powerIndex": 8,
       "castTimeReal": 2.03,
       "toggleCost": 27.716,

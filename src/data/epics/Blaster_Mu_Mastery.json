@@ -6,16 +6,6 @@
   "displayName": "Mu Mastery",
   "powers": [
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Range",
-        "Recharge",
-        "Endurance_Modification"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Damage",
@@ -28,8 +18,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Blaster_Mu_Mastery.Static_Discharge",
               "damageType": "Energy"
             }
@@ -45,8 +36,9 @@
               "probability": 1,
               "effectType": "Endurance",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Blaster_Mu_Mastery.Static_Discharge"
             },
             {
@@ -57,8 +49,9 @@
               "duration": 4,
               "effectType": "Recovery",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Blaster_Mu_Mastery.Static_Discharge"
             },
             {
@@ -67,7 +60,8 @@
               },
               "probability": 0.1,
               "effectType": "Endurance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Blaster_Mu_Mastery.Static_Discharge"
             }
           ]
@@ -82,13 +76,25 @@
               "probability": 1,
               "effectType": "Endurance",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Blaster_Mu_Mastery.Static_Discharge"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Range",
+        "Recharge",
+        "Endurance_Modification"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Blaster_Mu_Mastery.Static_Discharge",
+      "archetypeOrder": "epicPool",
       "powerIndex": 0,
       "castTimeReal": 2.07,
       "toggleCost": 18.98,
@@ -129,13 +135,6 @@
       "aoeModifier": 2.37995839
     },
     {
-      "allowedEnhancements": [
-        "Endurance_Discount",
-        "Recharge",
-        "Res_Damage"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Res_Dmg",
@@ -148,7 +147,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Blaster_Mu_Mastery.Charged_Armor",
               "damageType": "Smashing"
             },
@@ -160,7 +160,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Blaster_Mu_Mastery.Charged_Armor",
               "damageType": "Lethal"
             },
@@ -172,7 +173,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Blaster_Mu_Mastery.Charged_Armor",
               "damageType": "Energy"
             },
@@ -183,7 +185,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Blaster_Mu_Mastery.Charged_Armor",
               "damageType": "Fire"
             },
@@ -194,7 +197,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Blaster_Mu_Mastery.Charged_Armor",
               "damageType": "Cold"
             },
@@ -205,7 +209,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Blaster_Mu_Mastery.Charged_Armor",
               "damageType": "Negative"
             },
@@ -216,7 +221,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Blaster_Mu_Mastery.Charged_Armor",
               "damageType": "Toxic"
             },
@@ -227,13 +233,22 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Blaster_Mu_Mastery.Charged_Armor",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Endurance_Discount",
+        "Recharge",
+        "Res_Damage"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Blaster_Mu_Mastery.Charged_Armor",
+      "archetypeOrder": "epicPool",
       "powerIndex": 1,
       "castTimeReal": 0.67,
       "toggleCost": 0.325,
@@ -270,17 +285,6 @@
       "powerType": "Toggle"
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Immobilize",
-        "Range",
-        "Recharge",
-        "Endurance_Modification"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Damage",
@@ -295,8 +299,9 @@
               "effectType": "Damage",
               "ticks": 8,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Blaster_Mu_Mastery.Electrifying_Fences",
               "damageType": "Energy"
             }
@@ -313,11 +318,12 @@
               "duration": 17.8800011,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.Blaster_Mu_Mastery.Electrifying_Fences",
-              "mezType": "Immobilization"
+              "mezType": "Immob"
             }
           ]
         },
@@ -332,11 +338,12 @@
               "duration": 2,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.Blaster_Mu_Mastery.Electrifying_Fences",
-              "mezType": "Immobilization"
+              "mezType": "Immob"
             },
             {
               "mag": {
@@ -347,8 +354,9 @@
               "effectType": "Endurance",
               "ticks": 4,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Blaster_Mu_Mastery.Electrifying_Fences"
             },
             {
@@ -359,7 +367,7 @@
               "duration": 15,
               "effectType": "MezResist",
               "stacking": 1,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Blaster_Mu_Mastery.Electrifying_Fences",
               "mezType": "Knockback"
             },
@@ -371,7 +379,7 @@
               "duration": 15,
               "effectType": "MezResist",
               "stacking": 1,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Blaster_Mu_Mastery.Electrifying_Fences",
               "mezType": "Knockup"
             },
@@ -383,7 +391,8 @@
               "duration": 15,
               "effectType": "Mez",
               "stacking": 1,
-              "toWho": "Target",
+              "buffable": true,
+              "toWho": "target",
               "powerFullName": "Epic.Blaster_Mu_Mastery.Electrifying_Fences",
               "mezType": "Knockback"
             },
@@ -395,7 +404,8 @@
               "duration": 15,
               "effectType": "Mez",
               "stacking": 1,
-              "toWho": "Target",
+              "buffable": true,
+              "toWho": "target",
               "powerFullName": "Epic.Blaster_Mu_Mastery.Electrifying_Fences",
               "mezType": "Knockup"
             },
@@ -407,8 +417,9 @@
               "duration": 2,
               "effectType": "Recovery",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Blaster_Mu_Mastery.Electrifying_Fences"
             }
           ]
@@ -425,22 +436,35 @@
               "effectType": "Endurance",
               "ticks": 4,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Blaster_Mu_Mastery.Electrifying_Fences"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Immobilize",
+        "Range",
+        "Recharge",
+        "Endurance_Modification"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Blaster_Mu_Mastery.Electrifying_Fences",
+      "archetypeOrder": "epicPool",
       "powerIndex": 2,
       "castTimeReal": 1.17,
       "toggleCost": 12.74,
+      "isEpic": true,
       "fullName": "Epic_Mu_Mastery_Electrifying_Fences",
       "displayName": "Electrifying Fences",
       "requires": {
         "powers": {
-          "Epic_Mu_Mastery_Static_Discharge": true,
-          "Epic_Mu_Mastery_Charged_Armor": true
+          "Epic.Blaster_Mu_Mastery.Electrifying_Fences": true
         },
         "count": 1
       },
@@ -475,18 +499,6 @@
       "aoeModifier": 2.5
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Heal",
-        "Hold",
-        "Recharge",
-        "Endurance_Modification",
-        "Sleep"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Ones",
@@ -498,21 +510,34 @@
               "probability": 1,
               "duration": 240,
               "effectType": "EntCreate",
-              "toWho": "All",
+              "toWho": "all",
               "powerFullName": "Epic.Blaster_Mu_Mastery.Thunder_Strike"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Heal",
+        "Hold",
+        "Recharge",
+        "Endurance_Modification",
+        "Sleep"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Blaster_Mu_Mastery.Thunder_Strike",
+      "archetypeOrder": "epicPool",
       "powerIndex": 3,
       "castTimeReal": 1.17,
       "toggleCost": 26,
+      "isEpic": true,
       "fullName": "Epic_Mu_Mastery_Summon_Adept",
       "displayName": "Summon Adept",
       "requires": {
         "powers": {
-          "Epic_Mu_Mastery_Static_Discharge": true,
-          "Epic_Mu_Mastery_Charged_Armor": true
+          "Epic.Blaster_Mu_Mastery.Thunder_Strike": true
         },
         "count": 1
       },
@@ -544,17 +569,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Hold",
-        "Range",
-        "Recharge",
-        "Endurance_Modification"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Ones",
@@ -568,8 +582,9 @@
               "duration": 8,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.Blaster_Mu_Mastery.Electric_Shackles",
               "mezType": "Hold"
@@ -581,8 +596,9 @@
               "probability": 1,
               "effectType": "Endurance",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Blaster_Mu_Mastery.Electric_Shackles"
             },
             {
@@ -593,8 +609,9 @@
               "duration": 8,
               "effectType": "Recovery",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Blaster_Mu_Mastery.Electric_Shackles"
             },
             {
@@ -605,7 +622,8 @@
               "variableModified": true,
               "effectType": "Endurance",
               "stacking": 1,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Blaster_Mu_Mastery.Electric_Shackles"
             }
           ]
@@ -623,8 +641,9 @@
               "effectType": "Damage",
               "ticks": 7,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Blaster_Mu_Mastery.Electric_Shackles",
               "damageType": "Energy"
             }
@@ -640,24 +659,35 @@
               "probability": 1,
               "effectType": "Endurance",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Blaster_Mu_Mastery.Electric_Shackles"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Hold",
+        "Range",
+        "Recharge",
+        "Endurance_Modification"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Blaster_Mu_Mastery.Electric_Shackles",
+      "archetypeOrder": "epicPool",
       "powerIndex": 4,
       "castTimeReal": 2.17,
       "toggleCost": 8.58,
+      "isEpic": true,
       "fullName": "Epic_Mu_Mastery_Electric_Shackles",
       "displayName": "Electric Shackles",
       "requires": {
         "powers": {
-          "Epic_Mu_Mastery_Static_Discharge": true,
-          "Epic_Mu_Mastery_Charged_Armor": true,
-          "Epic_Mu_Mastery_Electrifying_Fences": true,
-          "Epic_Mu_Mastery_Summon_Adept": true
+          "Epic.Blaster_Mu_Mastery.Electric_Shackles": true
         },
         "count": 2
       },

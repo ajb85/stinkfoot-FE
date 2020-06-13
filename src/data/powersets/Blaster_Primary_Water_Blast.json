@@ -6,16 +6,6 @@
   "displayName": "Water Blast",
   "powers": [
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Defense_Debuff",
-        "Endurance_Discount",
-        "Range",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Damage",
@@ -28,8 +18,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Water_Blast.Aqua_Bolt",
               "damageType": "Smashing"
             },
@@ -41,8 +32,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Water_Blast.Aqua_Bolt",
               "damageType": "Cold"
             }
@@ -59,8 +51,9 @@
               "duration": 8,
               "effectType": "Defense",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Water_Blast.Aqua_Bolt"
             }
           ]
@@ -74,7 +67,7 @@
               },
               "probability": 1,
               "effectType": "GrantPower",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Water_Blast.Aqua_Bolt"
             },
             {
@@ -87,7 +80,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Water_Blast.Aqua_Bolt",
               "damageType": "Smashing"
             },
@@ -101,7 +94,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Water_Blast.Aqua_Bolt",
               "damageType": "Lethal"
             },
@@ -115,7 +108,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Water_Blast.Aqua_Bolt",
               "damageType": "Fire"
             },
@@ -129,7 +122,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Water_Blast.Aqua_Bolt",
               "damageType": "Cold"
             },
@@ -143,7 +136,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Water_Blast.Aqua_Bolt",
               "damageType": "Energy"
             },
@@ -157,7 +150,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Water_Blast.Aqua_Bolt",
               "damageType": "Negative"
             },
@@ -171,7 +164,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Water_Blast.Aqua_Bolt",
               "damageType": "Toxic"
             },
@@ -185,13 +178,24 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Water_Blast.Aqua_Bolt",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Defense_Debuff",
+        "Endurance_Discount",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Ranged.Water_Blast.Aqua_Bolt",
+      "archetypeOrder": "primary",
       "powerIndex": 0,
       "castTimeReal": 1,
       "toggleCost": 4.368,
@@ -233,17 +237,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Knockback",
-        "Range",
-        "Recharge",
-        "Slow"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Damage",
@@ -256,8 +249,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Water_Blast.Hydro_Blast",
               "damageType": "Smashing"
             },
@@ -269,8 +263,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Water_Blast.Hydro_Blast",
               "damageType": "Cold"
             }
@@ -280,16 +275,16 @@
           "effectType": "Slow",
           "values": [
             {
+              "etModifies": "JumpHeight",
               "mag": {
                 "pve": -0.2
               },
               "probability": 1,
               "duration": 10,
               "effectType": "Enhancement",
-              "eTModifies": 16,
               "stacking": 1,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Water_Blast.Hydro_Blast"
             },
             {
@@ -300,8 +295,9 @@
               "duration": 10,
               "effectType": "SpeedJumping",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Water_Blast.Hydro_Blast"
             },
             {
@@ -312,8 +308,9 @@
               "duration": 10,
               "effectType": "SpeedRunning",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Water_Blast.Hydro_Blast"
             },
             {
@@ -324,8 +321,9 @@
               "duration": 10,
               "effectType": "SpeedFlying",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Water_Blast.Hydro_Blast"
             }
           ]
@@ -341,8 +339,9 @@
               "probability": 0.2,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Water_Blast.Hydro_Blast",
               "mezType": "Knockback"
             },
@@ -352,7 +351,7 @@
               },
               "probability": 1,
               "effectType": "GrantPower",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Water_Blast.Hydro_Blast"
             },
             {
@@ -365,7 +364,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Water_Blast.Hydro_Blast",
               "damageType": "Smashing"
             },
@@ -379,7 +378,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Water_Blast.Hydro_Blast",
               "damageType": "Lethal"
             },
@@ -393,7 +392,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Water_Blast.Hydro_Blast",
               "damageType": "Fire"
             },
@@ -407,7 +406,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Water_Blast.Hydro_Blast",
               "damageType": "Cold"
             },
@@ -421,7 +420,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Water_Blast.Hydro_Blast",
               "damageType": "Energy"
             },
@@ -435,7 +434,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Water_Blast.Hydro_Blast",
               "damageType": "Negative"
             },
@@ -449,7 +448,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Water_Blast.Hydro_Blast",
               "damageType": "Toxic"
             },
@@ -463,13 +462,25 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Water_Blast.Hydro_Blast",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Knockback",
+        "Range",
+        "Recharge",
+        "Slow"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Ranged.Water_Blast.Hydro_Blast",
+      "archetypeOrder": "primary",
       "powerIndex": 1,
       "castTimeReal": 1.67,
       "toggleCost": 7.696,
@@ -511,17 +522,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Knockback",
-        "Range",
-        "Recharge",
-        "Slow"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Damage",
@@ -534,8 +534,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Water_Blast.Water_Burst",
               "damageType": "Smashing"
             },
@@ -547,8 +548,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Water_Blast.Water_Burst",
               "damageType": "Cold"
             }
@@ -558,16 +560,16 @@
           "effectType": "Slow",
           "values": [
             {
+              "etModifies": "JumpHeight",
               "mag": {
                 "pve": -0.3
               },
               "probability": 1,
               "duration": 10,
               "effectType": "Enhancement",
-              "eTModifies": 16,
               "stacking": 1,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Water_Blast.Water_Burst"
             },
             {
@@ -578,8 +580,9 @@
               "duration": 10,
               "effectType": "SpeedJumping",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Water_Blast.Water_Burst"
             },
             {
@@ -590,8 +593,9 @@
               "duration": 10,
               "effectType": "SpeedRunning",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Water_Blast.Water_Burst"
             },
             {
@@ -602,8 +606,9 @@
               "duration": 10,
               "effectType": "SpeedFlying",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Water_Blast.Water_Burst"
             }
           ]
@@ -619,9 +624,10 @@
               "probability": 0.33,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 21,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Water_Blast.Water_Burst",
               "mezType": "Knockback"
             },
@@ -631,7 +637,7 @@
               },
               "probability": 1,
               "effectType": "RevokePower",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Water_Blast.Water_Burst"
             },
             {
@@ -642,7 +648,7 @@
               "duration": 9.23,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Water_Blast.Water_Burst",
               "damageType": "Smashing"
             },
@@ -654,7 +660,7 @@
               "duration": 9.23,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Water_Blast.Water_Burst",
               "damageType": "Lethal"
             },
@@ -666,7 +672,7 @@
               "duration": 9.23,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Water_Blast.Water_Burst",
               "damageType": "Fire"
             },
@@ -678,7 +684,7 @@
               "duration": 9.23,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Water_Blast.Water_Burst",
               "damageType": "Cold"
             },
@@ -690,7 +696,7 @@
               "duration": 9.23,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Water_Blast.Water_Burst",
               "damageType": "Energy"
             },
@@ -702,7 +708,7 @@
               "duration": 9.23,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Water_Blast.Water_Burst",
               "damageType": "Negative"
             },
@@ -714,7 +720,7 @@
               "duration": 9.23,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Water_Blast.Water_Burst",
               "damageType": "Toxic"
             },
@@ -726,13 +732,25 @@
               "duration": 9.23,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Water_Blast.Water_Burst",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Knockback",
+        "Range",
+        "Recharge",
+        "Slow"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Ranged.Water_Blast.Water_Burst",
+      "archetypeOrder": "primary",
       "powerIndex": 2,
       "castTimeReal": 1.73,
       "toggleCost": 15.184,
@@ -774,17 +792,6 @@
       "aoeModifier": 3.25
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Defense_Debuff",
-        "Endurance_Discount",
-        "Range",
-        "Recharge",
-        "Slow"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Level",
@@ -797,8 +804,9 @@
               "duration": 15,
               "effectType": "EntCreate",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "All",
+              "toWho": "all",
               "powerFullName": "Blaster_Ranged.Water_Blast.Whirlpool"
             }
           ]
@@ -812,7 +820,7 @@
               },
               "probability": 1,
               "effectType": "GrantPower",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Water_Blast.Whirlpool"
             },
             {
@@ -823,7 +831,7 @@
               "duration": 9.53,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Water_Blast.Whirlpool",
               "damageType": "Smashing"
             },
@@ -835,7 +843,7 @@
               "duration": 9.53,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Water_Blast.Whirlpool",
               "damageType": "Lethal"
             },
@@ -847,7 +855,7 @@
               "duration": 9.53,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Water_Blast.Whirlpool",
               "damageType": "Fire"
             },
@@ -859,7 +867,7 @@
               "duration": 9.53,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Water_Blast.Whirlpool",
               "damageType": "Cold"
             },
@@ -871,7 +879,7 @@
               "duration": 9.53,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Water_Blast.Whirlpool",
               "damageType": "Energy"
             },
@@ -883,7 +891,7 @@
               "duration": 9.53,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Water_Blast.Whirlpool",
               "damageType": "Negative"
             },
@@ -895,7 +903,7 @@
               "duration": 9.53,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Water_Blast.Whirlpool",
               "damageType": "Toxic"
             },
@@ -907,13 +915,25 @@
               "duration": 9.53,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Water_Blast.Whirlpool",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Defense_Debuff",
+        "Endurance_Discount",
+        "Range",
+        "Recharge",
+        "Slow"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Ranged.Water_Blast.Whirlpool",
+      "archetypeOrder": "primary",
       "powerIndex": 3,
       "castTimeReal": 2.03,
       "toggleCost": 15.6,
@@ -956,13 +976,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "ToHit_Buff",
-        "Endurance_Discount",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Buff_ToHit",
@@ -976,7 +989,8 @@
               "variableModified": true,
               "effectType": "ToHit",
               "stacking": 1,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Water_Blast.Tidal_Forces"
             }
           ]
@@ -994,7 +1008,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Water_Blast.Tidal_Forces",
               "damageType": "Smashing"
             },
@@ -1008,7 +1022,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Water_Blast.Tidal_Forces",
               "damageType": "Lethal"
             },
@@ -1022,7 +1036,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Water_Blast.Tidal_Forces",
               "damageType": "Fire"
             },
@@ -1036,7 +1050,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Water_Blast.Tidal_Forces",
               "damageType": "Cold"
             },
@@ -1050,7 +1064,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Water_Blast.Tidal_Forces",
               "damageType": "Energy"
             },
@@ -1064,7 +1078,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Water_Blast.Tidal_Forces",
               "damageType": "Negative"
             },
@@ -1078,7 +1092,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Water_Blast.Tidal_Forces",
               "damageType": "Toxic"
             },
@@ -1092,7 +1106,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Water_Blast.Tidal_Forces",
               "damageType": "Psionic"
             }
@@ -1107,12 +1121,20 @@
               },
               "probability": 1,
               "effectType": "GrantPower",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Water_Blast.Tidal_Forces"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "ToHit_Buff",
+        "Endurance_Discount",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Ranged.Water_Blast.Tidal_Forces",
+      "archetypeOrder": "primary",
       "powerIndex": 4,
       "castTimeReal": 1.17,
       "toggleCost": 5.2,
@@ -1148,18 +1170,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Defense_Debuff",
-        "Endurance_Discount",
-        "Heal",
-        "Range",
-        "Recharge",
-        "Slow"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Damage",
@@ -1172,8 +1182,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Water_Blast.Dehydrate",
               "damageType": "Smashing"
             },
@@ -1185,8 +1196,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Water_Blast.Dehydrate",
               "damageType": "Cold"
             }
@@ -1196,16 +1208,16 @@
           "effectType": "Slow",
           "values": [
             {
+              "etModifies": "JumpHeight",
               "mag": {
                 "pve": -0.2
               },
               "probability": 1,
               "duration": 8,
               "effectType": "Enhancement",
-              "eTModifies": 16,
               "stacking": 1,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Water_Blast.Dehydrate"
             },
             {
@@ -1216,8 +1228,9 @@
               "duration": 8,
               "effectType": "SpeedJumping",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Water_Blast.Dehydrate"
             },
             {
@@ -1228,8 +1241,9 @@
               "duration": 8,
               "effectType": "SpeedRunning",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Water_Blast.Dehydrate"
             },
             {
@@ -1240,8 +1254,9 @@
               "duration": 8,
               "effectType": "SpeedFlying",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Water_Blast.Dehydrate"
             }
           ]
@@ -1257,8 +1272,9 @@
               "duration": 8,
               "effectType": "Defense",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Water_Blast.Dehydrate"
             }
           ]
@@ -1276,9 +1292,10 @@
               "effectType": "Heal",
               "ticks": 4,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 42,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Water_Blast.Dehydrate"
             }
           ]
@@ -1293,8 +1310,9 @@
               "probability": 1,
               "duration": 30,
               "effectType": "Regeneration",
+              "buffable": true,
               "specialCase": 42,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Water_Blast.Dehydrate"
             },
             {
@@ -1304,7 +1322,7 @@
               "probability": 1,
               "effectType": "GrantPower",
               "specialCase": 42,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Water_Blast.Dehydrate"
             },
             {
@@ -1314,7 +1332,7 @@
               "probability": 1,
               "effectType": "RevokePower",
               "specialCase": 24,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Water_Blast.Dehydrate"
             },
             {
@@ -1327,7 +1345,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Water_Blast.Dehydrate",
               "damageType": "Smashing"
             },
@@ -1341,7 +1359,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Water_Blast.Dehydrate",
               "damageType": "Lethal"
             },
@@ -1355,7 +1373,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Water_Blast.Dehydrate",
               "damageType": "Fire"
             },
@@ -1369,7 +1387,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Water_Blast.Dehydrate",
               "damageType": "Cold"
             },
@@ -1383,7 +1401,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Water_Blast.Dehydrate",
               "damageType": "Energy"
             },
@@ -1397,7 +1415,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Water_Blast.Dehydrate",
               "damageType": "Negative"
             },
@@ -1411,7 +1429,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Water_Blast.Dehydrate",
               "damageType": "Toxic"
             },
@@ -1425,13 +1443,26 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Water_Blast.Dehydrate",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Defense_Debuff",
+        "Endurance_Discount",
+        "Heal",
+        "Range",
+        "Recharge",
+        "Slow"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Ranged.Water_Blast.Dehydrate",
+      "archetypeOrder": "primary",
       "powerIndex": 5,
       "castTimeReal": 1.87,
       "toggleCost": 8.528,
@@ -1475,16 +1506,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Range",
-        "Recharge",
-        "Slow"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Ones",
@@ -1498,7 +1519,7 @@
               "effectType": "PowerRedirect",
               "stacking": 1,
               "specialCase": 24,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Water_Blast.Water_Jet"
             },
             {
@@ -1507,7 +1528,7 @@
               },
               "probability": 1,
               "effectType": "GrantPower",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Water_Blast.Water_Jet"
             },
             {
@@ -1520,7 +1541,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Water_Blast.Water_Jet",
               "damageType": "Smashing"
             },
@@ -1534,7 +1555,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Water_Blast.Water_Jet",
               "damageType": "Lethal"
             },
@@ -1548,7 +1569,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Water_Blast.Water_Jet",
               "damageType": "Fire"
             },
@@ -1562,7 +1583,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Water_Blast.Water_Jet",
               "damageType": "Cold"
             },
@@ -1576,7 +1597,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Water_Blast.Water_Jet",
               "damageType": "Energy"
             },
@@ -1590,7 +1611,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Water_Blast.Water_Jet",
               "damageType": "Negative"
             },
@@ -1604,7 +1625,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Water_Blast.Water_Jet",
               "damageType": "Toxic"
             },
@@ -1618,7 +1639,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Water_Blast.Water_Jet",
               "damageType": "Psionic"
             }
@@ -1635,8 +1656,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Water_Blast.Water_Jet",
               "damageType": "Smashing"
             },
@@ -1648,8 +1670,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Water_Blast.Water_Jet",
               "damageType": "Cold"
             }
@@ -1659,16 +1682,16 @@
           "effectType": "Slow",
           "values": [
             {
+              "etModifies": "JumpHeight",
               "mag": {
                 "pve": -0.2
               },
               "probability": 1,
               "duration": 8,
               "effectType": "Enhancement",
-              "eTModifies": 16,
               "stacking": 1,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Water_Blast.Water_Jet"
             },
             {
@@ -1679,8 +1702,9 @@
               "duration": 8,
               "effectType": "SpeedJumping",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Water_Blast.Water_Jet"
             },
             {
@@ -1691,8 +1715,9 @@
               "duration": 8,
               "effectType": "SpeedRunning",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Water_Blast.Water_Jet"
             },
             {
@@ -1703,13 +1728,25 @@
               "duration": 8,
               "effectType": "SpeedFlying",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Water_Blast.Water_Jet"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Range",
+        "Recharge",
+        "Slow"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Ranged.Water_Blast.Water_Jet",
+      "archetypeOrder": "primary",
       "powerIndex": 6,
       "castTimeReal": 1.43,
       "toggleCost": 10.192,
@@ -1750,16 +1787,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Defense_Debuff",
-        "Endurance_Discount",
-        "Range",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Damage",
@@ -1774,8 +1801,9 @@
               "effectType": "Damage",
               "ticks": 2,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Water_Blast.Steam_Spray",
               "damageType": "Fire"
             }
@@ -1792,8 +1820,9 @@
               "duration": 8,
               "effectType": "Defense",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Water_Blast.Steam_Spray"
             }
           ]
@@ -1807,7 +1836,7 @@
               },
               "probability": 1,
               "effectType": "GrantPower",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Water_Blast.Steam_Spray"
             },
             {
@@ -1818,7 +1847,7 @@
               "duration": 10.03,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Water_Blast.Steam_Spray",
               "damageType": "Smashing"
             },
@@ -1830,7 +1859,7 @@
               "duration": 10.03,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Water_Blast.Steam_Spray",
               "damageType": "Lethal"
             },
@@ -1842,7 +1871,7 @@
               "duration": 10.03,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Water_Blast.Steam_Spray",
               "damageType": "Fire"
             },
@@ -1854,7 +1883,7 @@
               "duration": 10.03,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Water_Blast.Steam_Spray",
               "damageType": "Cold"
             },
@@ -1866,7 +1895,7 @@
               "duration": 10.03,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Water_Blast.Steam_Spray",
               "damageType": "Energy"
             },
@@ -1878,7 +1907,7 @@
               "duration": 10.03,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Water_Blast.Steam_Spray",
               "damageType": "Negative"
             },
@@ -1890,7 +1919,7 @@
               "duration": 10.03,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Water_Blast.Steam_Spray",
               "damageType": "Toxic"
             },
@@ -1902,13 +1931,24 @@
               "duration": 10.03,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Water_Blast.Steam_Spray",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Defense_Debuff",
+        "Endurance_Discount",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Ranged.Water_Blast.Steam_Spray",
+      "archetypeOrder": "primary",
       "powerIndex": 7,
       "castTimeReal": 2.53,
       "toggleCost": 18.512,
@@ -1952,18 +1992,6 @@
       "aoeModifier": 2.45329237
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Knockback",
-        "Range",
-        "Recharge",
-        "Slow",
-        "Stun"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Damage",
@@ -1976,8 +2004,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Water_Blast.Geyser",
               "damageType": "Smashing"
             },
@@ -1989,8 +2018,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Water_Blast.Geyser",
               "damageType": "Fire"
             }
@@ -2000,16 +2030,16 @@
           "effectType": "Slow",
           "values": [
             {
+              "etModifies": "JumpHeight",
               "mag": {
                 "pve": -0.33
               },
               "probability": 1,
               "duration": 10,
               "effectType": "Enhancement",
-              "eTModifies": 16,
               "stacking": 1,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Water_Blast.Geyser"
             },
             {
@@ -2020,8 +2050,9 @@
               "duration": 10,
               "effectType": "SpeedJumping",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Water_Blast.Geyser"
             },
             {
@@ -2032,8 +2063,9 @@
               "duration": 10,
               "effectType": "SpeedRunning",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Water_Blast.Geyser"
             },
             {
@@ -2044,8 +2076,9 @@
               "duration": 10,
               "effectType": "SpeedFlying",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Water_Blast.Geyser"
             }
           ]
@@ -2061,8 +2094,9 @@
               "probability": 0.67,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Water_Blast.Geyser",
               "mezType": "Knockup"
             },
@@ -2074,9 +2108,10 @@
               "duration": 2,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 22,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Blaster_Ranged.Water_Blast.Geyser",
               "mezType": "Stun"
@@ -2087,7 +2122,7 @@
               },
               "probability": 1,
               "effectType": "RevokePower",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Water_Blast.Geyser"
             },
             {
@@ -2098,7 +2133,7 @@
               "duration": 10.43,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Water_Blast.Geyser",
               "damageType": "Smashing"
             },
@@ -2110,7 +2145,7 @@
               "duration": 10.43,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Water_Blast.Geyser",
               "damageType": "Lethal"
             },
@@ -2122,7 +2157,7 @@
               "duration": 10.43,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Water_Blast.Geyser",
               "damageType": "Fire"
             },
@@ -2134,7 +2169,7 @@
               "duration": 10.43,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Water_Blast.Geyser",
               "damageType": "Cold"
             },
@@ -2146,7 +2181,7 @@
               "duration": 10.43,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Water_Blast.Geyser",
               "damageType": "Energy"
             },
@@ -2158,7 +2193,7 @@
               "duration": 10.43,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Water_Blast.Geyser",
               "damageType": "Negative"
             },
@@ -2170,7 +2205,7 @@
               "duration": 10.43,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Water_Blast.Geyser",
               "damageType": "Toxic"
             },
@@ -2182,7 +2217,7 @@
               "duration": 10.43,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Water_Blast.Geyser",
               "damageType": "Psionic"
             }
@@ -2199,9 +2234,10 @@
               "duration": 5.96,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 22,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Blaster_Ranged.Water_Blast.Geyser",
               "mezType": "Stun"
@@ -2209,6 +2245,19 @@
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Knockback",
+        "Range",
+        "Recharge",
+        "Slow",
+        "Stun"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Ranged.Water_Blast.Geyser",
+      "archetypeOrder": "primary",
       "powerIndex": 8,
       "castTimeReal": 2.93,
       "toggleCost": 20.8,

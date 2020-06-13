@@ -6,16 +6,6 @@
   "displayName": "Titan Weapons",
   "powers": [
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Defense_Buff",
-        "Damage",
-        "Endurance_Discount",
-        "Recharge",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Ones",
@@ -29,7 +19,7 @@
               "effectType": "PowerRedirect",
               "stacking": 1,
               "specialCase": 25,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Titan_Weapons.Defensive_Sweep"
             },
             {
@@ -41,7 +31,7 @@
               "effectType": "Rage",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Titan_Weapons.Defensive_Sweep"
             },
             {
@@ -51,7 +41,7 @@
               "probability": 1,
               "duration": 5,
               "effectType": "SetMode",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Titan_Weapons.Defensive_Sweep"
             },
             {
@@ -61,7 +51,7 @@
               "probability": 1,
               "duration": 5,
               "effectType": "DesignerStatus",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Titan_Weapons.Defensive_Sweep"
             }
           ]
@@ -77,8 +67,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Titan_Weapons.Defensive_Sweep",
               "damageType": "Smashing"
             }
@@ -96,7 +87,8 @@
               "variableModified": true,
               "effectType": "Defense",
               "stacking": 1,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Titan_Weapons.Defensive_Sweep",
               "damageType": "Melee"
             },
@@ -109,7 +101,8 @@
               "variableModified": true,
               "effectType": "Defense",
               "stacking": 1,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Titan_Weapons.Defensive_Sweep",
               "damageType": "Smashing"
             }
@@ -124,8 +117,9 @@
               },
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Titan_Weapons.Defensive_Sweep",
               "damageType": "Fire"
             }
@@ -143,9 +137,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Titan_Weapons.Defensive_Sweep",
               "requiresToHitCheck": true,
@@ -154,6 +149,17 @@
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Defense_Buff",
+        "Damage",
+        "Endurance_Discount",
+        "Recharge",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Titan_Weapons.Defensive_Sweep",
+      "archetypeOrder": "primary",
       "powerIndex": 0,
       "castTimeReal": 2.2,
       "toggleCost": 5.356,
@@ -203,16 +209,6 @@
       "aoeModifier": 1.61999214
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Defense_Debuff",
-        "Endurance_Discount",
-        "Recharge",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Ones",
@@ -226,7 +222,7 @@
               "effectType": "PowerRedirect",
               "stacking": 1,
               "specialCase": 25,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Titan_Weapons.Crushing_Blow"
             },
             {
@@ -238,7 +234,7 @@
               "effectType": "Rage",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Titan_Weapons.Crushing_Blow"
             },
             {
@@ -248,7 +244,7 @@
               "probability": 1,
               "duration": 5,
               "effectType": "SetMode",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Titan_Weapons.Crushing_Blow"
             },
             {
@@ -258,7 +254,7 @@
               "probability": 1,
               "duration": 5,
               "effectType": "DesignerStatus",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Titan_Weapons.Crushing_Blow"
             }
           ]
@@ -274,8 +270,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Titan_Weapons.Crushing_Blow",
               "damageType": "Smashing"
             }
@@ -292,8 +289,9 @@
               "duration": 10,
               "effectType": "Defense",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Titan_Weapons.Crushing_Blow"
             }
           ]
@@ -307,8 +305,9 @@
               },
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Titan_Weapons.Crushing_Blow",
               "damageType": "Fire"
             }
@@ -326,9 +325,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Titan_Weapons.Crushing_Blow",
               "requiresToHitCheck": true,
@@ -337,6 +337,17 @@
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Defense_Debuff",
+        "Endurance_Discount",
+        "Recharge",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Titan_Weapons.Crushing_Blow",
+      "archetypeOrder": "primary",
       "powerIndex": 1,
       "castTimeReal": 2,
       "toggleCost": 8.78384,
@@ -380,16 +391,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Knockback",
-        "Recharge",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Ones",
@@ -403,7 +404,7 @@
               "effectType": "PowerRedirect",
               "stacking": 1,
               "specialCase": 25,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Titan_Weapons.Sweeping_Strike"
             },
             {
@@ -414,8 +415,9 @@
               "probability": 0.66,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Titan_Weapons.Sweeping_Strike",
               "mezType": "Knockback"
             },
@@ -428,7 +430,7 @@
               "effectType": "Rage",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Titan_Weapons.Sweeping_Strike"
             },
             {
@@ -438,7 +440,7 @@
               "probability": 1,
               "duration": 5,
               "effectType": "SetMode",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Titan_Weapons.Sweeping_Strike"
             },
             {
@@ -448,7 +450,7 @@
               "probability": 1,
               "duration": 5,
               "effectType": "DesignerStatus",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Titan_Weapons.Sweeping_Strike"
             }
           ]
@@ -464,8 +466,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Titan_Weapons.Sweeping_Strike",
               "damageType": "Smashing"
             }
@@ -480,8 +483,9 @@
               },
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Titan_Weapons.Sweeping_Strike",
               "damageType": "Fire"
             }
@@ -499,9 +503,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Titan_Weapons.Sweeping_Strike",
               "requiresToHitCheck": true,
@@ -510,6 +515,17 @@
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Knockback",
+        "Recharge",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Titan_Weapons.Sweeping_Strike",
+      "archetypeOrder": "primary",
       "powerIndex": 2,
       "castTimeReal": 2.43,
       "toggleCost": 10.49776,
@@ -555,13 +571,6 @@
       "aoeModifier": 1.61999214
     },
     {
-      "allowedEnhancements": [
-        "ToHit_Buff",
-        "Endurance_Discount",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Buff_ToHit",
@@ -575,7 +584,8 @@
               "variableModified": true,
               "effectType": "ToHit",
               "stacking": 1,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Titan_Weapons.Build_Up"
             }
           ]
@@ -592,7 +602,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Titan_Weapons.Build_Up",
               "damageType": "Smashing"
             },
@@ -605,7 +615,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Titan_Weapons.Build_Up",
               "damageType": "Lethal"
             },
@@ -618,7 +628,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Titan_Weapons.Build_Up",
               "damageType": "Fire"
             },
@@ -631,7 +641,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Titan_Weapons.Build_Up",
               "damageType": "Cold"
             },
@@ -644,7 +654,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Titan_Weapons.Build_Up",
               "damageType": "Energy"
             },
@@ -657,7 +667,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Titan_Weapons.Build_Up",
               "damageType": "Negative"
             },
@@ -670,7 +680,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Titan_Weapons.Build_Up",
               "damageType": "Toxic"
             },
@@ -683,7 +693,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Titan_Weapons.Build_Up",
               "damageType": "Psionic"
             }
@@ -699,7 +709,7 @@
               "probability": 1,
               "duration": 10,
               "effectType": "SetMode",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Titan_Weapons.Build_Up"
             },
             {
@@ -709,12 +719,20 @@
               "probability": 1,
               "duration": 10,
               "effectType": "DesignerStatus",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Titan_Weapons.Build_Up"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "ToHit_Buff",
+        "Endurance_Discount",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Titan_Weapons.Build_Up",
+      "archetypeOrder": "primary",
       "powerIndex": 3,
       "castTimeReal": 1.17,
       "toggleCost": 5.2,
@@ -749,17 +767,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Knockback",
-        "Recharge",
-        "Stun",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Damage",
@@ -772,8 +779,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Titan_Weapons.Follow_Through",
               "damageType": "Smashing"
             },
@@ -787,8 +795,9 @@
               "effectType": "Damage",
               "ticks": 4,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Titan_Weapons.Follow_Through",
               "damageType": "Lethal"
             }
@@ -805,8 +814,9 @@
               "probability": 1,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Titan_Weapons.Follow_Through",
               "mezType": "Knockback"
             },
@@ -819,7 +829,7 @@
               "effectType": "Rage",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Titan_Weapons.Follow_Through"
             }
           ]
@@ -836,8 +846,9 @@
               "duration": 4.768,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Titan_Weapons.Follow_Through",
               "mezType": "Stun"
@@ -856,9 +867,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Titan_Weapons.Follow_Through",
               "requiresToHitCheck": true,
@@ -875,14 +887,27 @@
               },
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Titan_Weapons.Follow_Through",
               "damageType": "Fire"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Knockback",
+        "Recharge",
+        "Stun",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Titan_Weapons.Follow_Through",
+      "archetypeOrder": "primary",
       "powerIndex": 4,
       "castTimeReal": 1,
       "toggleCost": 10.49776,
@@ -925,14 +950,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Range",
-        "Recharge",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Taunt",
@@ -946,8 +963,9 @@
               "duration": 20.5999985,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Titan_Weapons.Taunt",
               "mezType": "Taunt"
@@ -958,16 +976,16 @@
           "effectType": "Ones",
           "values": [
             {
+              "etModifies": "Range",
               "mag": {
                 "pve": -0.75
               },
               "probability": 1,
               "duration": 12,
               "effectType": "Enhancement",
-              "eTModifies": 24,
               "stacking": 1,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Titan_Weapons.Taunt"
             },
             {
@@ -977,14 +995,24 @@
               "probability": 1,
               "effectType": "Null",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Titan_Weapons.Taunt",
               "requiresToHitCheck": true
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Range",
+        "Recharge",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Titan_Weapons.Taunt",
+      "archetypeOrder": "primary",
       "powerIndex": 5,
       "castTimeReal": 1.93,
       "fullName": "Brute_Primary_Titan_Weapons_Taunt",
@@ -1020,16 +1048,6 @@
       "aoeModifier": 3.25
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Defense_Debuff",
-        "Endurance_Discount",
-        "Recharge",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Ones",
@@ -1043,7 +1061,7 @@
               "effectType": "PowerRedirect",
               "stacking": 1,
               "specialCase": 25,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Titan_Weapons.Shatter_Armor"
             },
             {
@@ -1055,7 +1073,7 @@
               "effectType": "Rage",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Titan_Weapons.Shatter_Armor"
             },
             {
@@ -1065,7 +1083,7 @@
               "probability": 1,
               "duration": 5,
               "effectType": "SetMode",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Titan_Weapons.Shatter_Armor"
             },
             {
@@ -1075,7 +1093,7 @@
               "probability": 1,
               "duration": 5,
               "effectType": "DesignerStatus",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Titan_Weapons.Shatter_Armor"
             }
           ]
@@ -1091,8 +1109,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Titan_Weapons.Shatter_Armor",
               "damageType": "Smashing"
             }
@@ -1110,8 +1129,9 @@
               "duration": 10,
               "effectType": "Defense",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Titan_Weapons.Shatter_Armor"
             }
           ]
@@ -1127,7 +1147,7 @@
               "duration": 8,
               "effectType": "Resistance",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Titan_Weapons.Shatter_Armor",
               "damageType": "Smashing"
             },
@@ -1139,7 +1159,7 @@
               "duration": 8,
               "effectType": "Resistance",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Titan_Weapons.Shatter_Armor",
               "damageType": "Lethal"
             },
@@ -1151,7 +1171,7 @@
               "duration": 8,
               "effectType": "Resistance",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Titan_Weapons.Shatter_Armor",
               "damageType": "Fire"
             },
@@ -1163,7 +1183,7 @@
               "duration": 8,
               "effectType": "Resistance",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Titan_Weapons.Shatter_Armor",
               "damageType": "Cold"
             },
@@ -1175,7 +1195,7 @@
               "duration": 8,
               "effectType": "Resistance",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Titan_Weapons.Shatter_Armor",
               "damageType": "Energy"
             },
@@ -1187,7 +1207,7 @@
               "duration": 8,
               "effectType": "Resistance",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Titan_Weapons.Shatter_Armor",
               "damageType": "Negative"
             },
@@ -1199,7 +1219,7 @@
               "duration": 8,
               "effectType": "Resistance",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Titan_Weapons.Shatter_Armor",
               "damageType": "Psionic"
             },
@@ -1211,7 +1231,7 @@
               "duration": 8,
               "effectType": "Resistance",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Titan_Weapons.Shatter_Armor",
               "damageType": "Toxic"
             }
@@ -1226,8 +1246,9 @@
               },
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Titan_Weapons.Shatter_Armor",
               "damageType": "Fire"
             }
@@ -1245,9 +1266,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Titan_Weapons.Shatter_Armor",
               "requiresToHitCheck": true,
@@ -1256,6 +1278,17 @@
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Defense_Debuff",
+        "Endurance_Discount",
+        "Recharge",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Titan_Weapons.Shatter_Armor",
+      "archetypeOrder": "primary",
       "powerIndex": 6,
       "castTimeReal": 2.3,
       "toggleCost": 15.63952,
@@ -1299,16 +1332,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Knockback",
-        "Recharge",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Damage",
@@ -1321,8 +1344,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Titan_Weapons.Whirling_Slice",
               "damageType": "Smashing"
             },
@@ -1336,8 +1360,9 @@
               "effectType": "Damage",
               "ticks": 3,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Titan_Weapons.Whirling_Slice",
               "damageType": "Lethal"
             }
@@ -1354,8 +1379,9 @@
               "probability": 0.75,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Titan_Weapons.Whirling_Slice",
               "mezType": "Knockback"
             },
@@ -1368,7 +1394,7 @@
               "effectType": "Rage",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Titan_Weapons.Whirling_Slice"
             }
           ]
@@ -1385,9 +1411,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Titan_Weapons.Whirling_Slice",
               "requiresToHitCheck": true,
@@ -1404,14 +1431,26 @@
               },
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Titan_Weapons.Whirling_Slice",
               "damageType": "Fire"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Knockback",
+        "Recharge",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Titan_Weapons.Whirling_Slice",
+      "archetypeOrder": "primary",
       "powerIndex": 7,
       "castTimeReal": 1,
       "toggleCost": 13.9256,
@@ -1454,16 +1493,6 @@
       "aoeModifier": 3.25
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Knockback",
-        "Recharge",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Ones",
@@ -1477,7 +1506,7 @@
               "effectType": "PowerRedirect",
               "stacking": 1,
               "specialCase": 25,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Titan_Weapons.Arc_of_Destruction"
             },
             {
@@ -1488,8 +1517,9 @@
               "probability": 0.75,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Titan_Weapons.Arc_of_Destruction",
               "mezType": "Knockback"
             },
@@ -1502,7 +1532,7 @@
               "effectType": "Rage",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Titan_Weapons.Arc_of_Destruction"
             },
             {
@@ -1512,7 +1542,7 @@
               "probability": 1,
               "duration": 5,
               "effectType": "SetMode",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Titan_Weapons.Arc_of_Destruction"
             },
             {
@@ -1522,7 +1552,7 @@
               "probability": 1,
               "duration": 5,
               "effectType": "DesignerStatus",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Titan_Weapons.Arc_of_Destruction"
             }
           ]
@@ -1538,8 +1568,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Titan_Weapons.Arc_of_Destruction",
               "damageType": "Smashing"
             }
@@ -1554,8 +1585,9 @@
               },
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Titan_Weapons.Arc_of_Destruction",
               "damageType": "Fire"
             }
@@ -1573,9 +1605,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Titan_Weapons.Arc_of_Destruction",
               "requiresToHitCheck": true,
@@ -1584,6 +1617,17 @@
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Knockback",
+        "Recharge",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Titan_Weapons.Arc_of_Destruction",
+      "archetypeOrder": "primary",
       "powerIndex": 8,
       "castTimeReal": 2.7,
       "toggleCost": 19.06736,

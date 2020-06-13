@@ -2,280 +2,181 @@
   "fullName": "IOSet.Call_of_the_Sandman",
   "enhancements": [
     {
-      "effects": [
-        {
-          "effectType": "Recharge",
-          "values": [
-            {
-              "etModifies": "RechargeTime",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Call_of_the_Sandman_A.Attuned_Call_of_the_Sandman_A"
-            }
-          ]
-        },
-        {
-          "effectType": "Accuracy",
-          "values": [
-            {
-              "etModifies": "Accuracy",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Call_of_the_Sandman_A.Attuned_Call_of_the_Sandman_A"
-            }
-          ]
-        }
-      ],
+      "type": "set",
+      "fullName": "Boosts.Attuned_Call_of_the_Sandman_A.Attuned_Call_of_the_Sandman_A",
+      "displayName": "Accuracy/Recharge",
       "description": {
         "short": "+ACC, +Rech",
         "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}%."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Call_of_the_Sandman_A.Attuned_Call_of_the_Sandman_A",
-      "setName": "Call_of_the_Sandman",
-      "displayName": "Accuracy/Recharge"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Endurance",
-          "values": [
-            {
-              "etModifies": "EnduranceDiscount",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Call_of_the_Sandman_B.Attuned_Call_of_the_Sandman_B"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
+          },
+          "stat": "Accuracy",
+          "toWho": "self"
         },
         {
-          "effectType": "Sleep",
-          "values": [
-            {
-              "etModifies": "Mez",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Call_of_the_Sandman_B.Attuned_Call_of_the_Sandman_B",
-              "mezType": "Sleep"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
+          },
+          "stat": "Recharge",
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Call_of_the_Sandman_B.Attuned_Call_of_the_Sandman_B",
+      "displayName": "Endurance/Sleep",
       "description": {
         "short": "-End Cost, +Sleep",
         "long": "Enhances the sleep duration of a power by {Boost.Attrib.Sleep.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Call_of_the_Sandman_B.Attuned_Call_of_the_Sandman_B",
-      "setName": "Call_of_the_Sandman",
-      "displayName": "Endurance/Sleep"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Accuracy",
-          "values": [
-            {
-              "etModifies": "Accuracy",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Call_of_the_Sandman_C.Attuned_Call_of_the_Sandman_C"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self"
         },
         {
-          "effectType": "Endurance",
-          "values": [
-            {
-              "etModifies": "EnduranceDiscount",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Call_of_the_Sandman_C.Attuned_Call_of_the_Sandman_C"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
+          },
+          "mezType": 9,
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Call_of_the_Sandman_C.Attuned_Call_of_the_Sandman_C",
+      "displayName": "Accuracy/Endurance",
       "description": {
         "short": "+ACC, -End Cost",
         "long": "Enhances the accuracy by {Boost.Attrib.Accuracy.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Call_of_the_Sandman_C.Attuned_Call_of_the_Sandman_C",
-      "setName": "Call_of_the_Sandman",
-      "displayName": "Accuracy/Endurance"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Sleep",
-          "values": [
-            {
-              "etModifies": "Mez",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Call_of_the_Sandman_D.Attuned_Call_of_the_Sandman_D",
-              "mezType": "Sleep"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
+          },
+          "stat": "Accuracy",
+          "toWho": "self"
         },
         {
-          "effectType": "Range",
-          "values": [
-            {
-              "etModifies": "Range",
-              "mag": {
-                "pve": 0.159375
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Call_of_the_Sandman_D.Attuned_Call_of_the_Sandman_D"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Call_of_the_Sandman_D.Attuned_Call_of_the_Sandman_D",
+      "displayName": "Sleep/Range",
       "description": {
         "short": "+Range, +Sleep",
         "long": "Enhances the range of a power by {Boost.Attrib.Range.Scale}% and sleep duration by {Boost.Attrib.sleep.Scale}%."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Call_of_the_Sandman_D.Attuned_Call_of_the_Sandman_D",
-      "setName": "Call_of_the_Sandman",
-      "displayName": "Sleep/Range"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Sleep",
-          "values": [
-            {
-              "etModifies": "Mez",
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Call_of_the_Sandman_E.Attuned_Call_of_the_Sandman_E",
-              "mezType": "Sleep"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
-        },
-        {
-          "effectType": "Accuracy",
-          "values": [
-            {
-              "etModifies": "Accuracy",
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Call_of_the_Sandman_E.Attuned_Call_of_the_Sandman_E"
-            }
-          ]
-        },
-        {
-          "effectType": "Recharge",
-          "values": [
-            {
-              "etModifies": "RechargeTime",
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Call_of_the_Sandman_E.Attuned_Call_of_the_Sandman_E"
-            }
-          ]
+          },
+          "mezType": 9,
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Call_of_the_Sandman_E.Attuned_Call_of_the_Sandman_E",
+      "displayName": "Accuracy/Sleep/Recharge",
       "description": {
         "short": "+ACC, +Rech, +Sleep",
         "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}%, sleep duration by {Boost.Attrib.Sleep.Scale}% and reduces the attack rate by {Boost.Attrib.Recharge.Scale}%."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Call_of_the_Sandman_E.Attuned_Call_of_the_Sandman_E",
-      "setName": "Call_of_the_Sandman",
-      "displayName": "Accuracy/Sleep/Recharge"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Heal",
-          "values": [
-            {
-              "mag": {
-                "pve": 60.23795
-              },
-              "procsPerMinute": 2,
-              "cancelOnMiss": true,
-              "variableModified": true,
-              "effectType": "Heal",
-              "delayedTime": 0.25,
-              "stacking": 1,
-              "resistible": true,
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Call_of_the_Sandman_F.Attuned_Call_of_the_Sandman_F"
+          "mag": {
+            "IO": {
+              "cap": 0.212
             }
-          ]
+          },
+          "stat": "Accuracy",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.212
+            }
+          },
+          "stat": "Recharge",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.212
+            }
+          },
+          "mezType": 9,
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Call_of_the_Sandman_F.Attuned_Call_of_the_Sandman_F",
+      "displayName": "Chance to Heal Self",
       "description": {
         "short": "Chance to Heal Self",
         "long": "Gives a chance to Heal yourself by 5%.  This effect will trigger roughly 2 times per minute."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Call_of_the_Sandman_F.Attuned_Call_of_the_Sandman_F",
-      "setName": "Call_of_the_Sandman",
-      "displayName": "Chance to Heal Self"
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 60.23795
+            }
+          },
+          "stat": "Chance to Heal Self",
+          "procsPerMinute": 2,
+          "cancelOnMiss": true,
+          "variableModified": true,
+          "delayedTime": 0.25,
+          "stacking": 1,
+          "resistible": true,
+          "toWho": "self"
+        }
+      ]
     }
   ],
   "levels": {

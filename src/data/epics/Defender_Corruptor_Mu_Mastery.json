@@ -6,14 +6,6 @@
   "displayName": "Mu Mastery",
   "powers": [
     {
-      "allowedEnhancements": [
-        "Endurance_Discount",
-        "Recharge",
-        "Endurance_Modification",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Ones",
@@ -25,8 +17,9 @@
               "probability": 1,
               "effectType": "Endurance",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Corruptor_Mu_Mastery.Power_Sink"
             },
             {
@@ -37,8 +30,9 @@
               "duration": 4,
               "effectType": "Recovery",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Corruptor_Mu_Mastery.Power_Sink"
             },
             {
@@ -50,7 +44,8 @@
               "effectType": "Endurance",
               "delayedTime": 0.25,
               "stacking": 1,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Corruptor_Mu_Mastery.Power_Sink"
             }
           ]
@@ -65,13 +60,23 @@
               "probability": 1,
               "effectType": "Endurance",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Corruptor_Mu_Mastery.Power_Sink"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Endurance_Discount",
+        "Recharge",
+        "Endurance_Modification",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Corruptor_Mu_Mastery.Power_Sink",
+      "archetypeOrder": "epicPool",
       "powerIndex": 0,
       "castTimeReal": 3.828,
       "toggleCost": 16.25,
@@ -112,13 +117,6 @@
       "aoeModifier": 2.5
     },
     {
-      "allowedEnhancements": [
-        "Endurance_Discount",
-        "Recharge",
-        "Res_Damage"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Res_Dmg",
@@ -131,7 +129,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Corruptor_Mu_Mastery.Charged_Armor",
               "damageType": "Smashing"
             },
@@ -143,7 +142,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Corruptor_Mu_Mastery.Charged_Armor",
               "damageType": "Lethal"
             },
@@ -155,7 +155,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Corruptor_Mu_Mastery.Charged_Armor",
               "damageType": "Energy"
             },
@@ -166,7 +167,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Corruptor_Mu_Mastery.Charged_Armor",
               "damageType": "Fire"
             },
@@ -177,7 +179,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Corruptor_Mu_Mastery.Charged_Armor",
               "damageType": "Cold"
             },
@@ -188,7 +191,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Corruptor_Mu_Mastery.Charged_Armor",
               "damageType": "Negative"
             },
@@ -199,7 +203,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Corruptor_Mu_Mastery.Charged_Armor",
               "damageType": "Toxic"
             },
@@ -210,13 +215,22 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Corruptor_Mu_Mastery.Charged_Armor",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Endurance_Discount",
+        "Recharge",
+        "Res_Damage"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Corruptor_Mu_Mastery.Charged_Armor",
+      "archetypeOrder": "epicPool",
       "powerIndex": 1,
       "castTimeReal": 0.67,
       "toggleCost": 0.325,
@@ -253,17 +267,12 @@
       "powerType": "Toggle"
     },
     {
-      "allowedEnhancements": [
-        "Endurance_Discount",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Stun",
           "values": [
             {
+              "etModifies": "EnduranceDiscount",
               "mag": {
                 "pve": 1.192
               },
@@ -271,9 +280,8 @@
               "duration": 90,
               "variableModified": true,
               "effectType": "Enhancement",
-              "eTModifies": 8,
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Epic.Corruptor_Mu_Mastery.Conserve_Power"
             }
           ]
@@ -288,21 +296,28 @@
               "variableModified": true,
               "effectType": "Null",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Epic.Corruptor_Mu_Mastery.Conserve_Power"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Endurance_Discount",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Corruptor_Mu_Mastery.Conserve_Power",
+      "archetypeOrder": "epicPool",
       "powerIndex": 2,
       "castTimeReal": 1.17,
       "toggleCost": 9.75,
+      "isEpic": true,
       "fullName": "Epic_Mu_Mastery_Conserve_Power",
       "displayName": "Conserve Power",
       "requires": {
         "powers": {
-          "Epic_Mu_Mastery_Power_Sink": true,
-          "Epic_Mu_Mastery_Charged_Armor": true
+          "Epic.Corruptor_Mu_Mastery.Conserve_Power": true
         },
         "count": 1
       },
@@ -329,17 +344,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Hold",
-        "Range",
-        "Recharge",
-        "Endurance_Modification"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Ones",
@@ -353,8 +357,9 @@
               "duration": 8,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.Corruptor_Mu_Mastery.Electric_Shackles",
               "mezType": "Hold"
@@ -366,8 +371,9 @@
               "probability": 1,
               "effectType": "Endurance",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Corruptor_Mu_Mastery.Electric_Shackles"
             },
             {
@@ -378,8 +384,9 @@
               "duration": 8,
               "effectType": "Recovery",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Corruptor_Mu_Mastery.Electric_Shackles"
             },
             {
@@ -390,7 +397,8 @@
               "variableModified": true,
               "effectType": "Endurance",
               "stacking": 1,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Corruptor_Mu_Mastery.Electric_Shackles"
             }
           ]
@@ -408,8 +416,9 @@
               "effectType": "Damage",
               "ticks": 7,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Corruptor_Mu_Mastery.Electric_Shackles",
               "damageType": "Energy"
             }
@@ -425,22 +434,35 @@
               "probability": 1,
               "effectType": "Endurance",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Corruptor_Mu_Mastery.Electric_Shackles"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Hold",
+        "Range",
+        "Recharge",
+        "Endurance_Modification"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Corruptor_Mu_Mastery.Electric_Shackles",
+      "archetypeOrder": "epicPool",
       "powerIndex": 3,
       "castTimeReal": 2.17,
       "toggleCost": 8.58,
+      "isEpic": true,
       "fullName": "Epic_Mu_Mastery_Electric_Shackles",
       "displayName": "Electric Shackles",
       "requires": {
         "powers": {
-          "Epic_Mu_Mastery_Power_Sink": true,
-          "Epic_Mu_Mastery_Charged_Armor": true
+          "Epic.Corruptor_Mu_Mastery.Electric_Shackles": true
         },
         "count": 1
       },
@@ -473,18 +495,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Heal",
-        "Hold",
-        "Recharge",
-        "Endurance_Modification",
-        "Sleep"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Ones",
@@ -496,23 +506,34 @@
               "probability": 1,
               "duration": 240,
               "effectType": "EntCreate",
-              "toWho": "All",
+              "toWho": "all",
               "powerFullName": "Epic.Corruptor_Mu_Mastery.Summon_Adept"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Heal",
+        "Hold",
+        "Recharge",
+        "Endurance_Modification",
+        "Sleep"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Corruptor_Mu_Mastery.Summon_Adept",
+      "archetypeOrder": "epicPool",
       "powerIndex": 4,
       "castTimeReal": 1.17,
       "toggleCost": 26,
+      "isEpic": true,
       "fullName": "Epic_Mu_Mastery_Summon_Adept",
       "displayName": "Summon Adept",
       "requires": {
         "powers": {
-          "Epic_Mu_Mastery_Power_Sink": true,
-          "Epic_Mu_Mastery_Charged_Armor": true,
-          "Epic_Mu_Mastery_Conserve_Power": true,
-          "Epic_Mu_Mastery_Electric_Shackles": true
+          "Epic.Corruptor_Mu_Mastery.Summon_Adept": true
         },
         "count": 2
       },

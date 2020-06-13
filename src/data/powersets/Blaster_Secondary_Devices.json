@@ -6,16 +6,6 @@
   "displayName": "Devices",
   "powers": [
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Endurance_Discount",
-        "Immobilize",
-        "Range",
-        "Recharge",
-        "Slow"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Immobilize",
@@ -28,11 +18,12 @@
               "duration": 17.8800011,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Blaster_Support.Gadgets.Web_Grenade",
-              "mezType": "Immobilization"
+              "mezType": "Immob"
             }
           ]
         },
@@ -47,11 +38,12 @@
               "duration": 2,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Blaster_Support.Gadgets.Web_Grenade",
-              "mezType": "Immobilization"
+              "mezType": "Immob"
             },
             {
               "mag": {
@@ -61,7 +53,8 @@
               "duration": 15,
               "effectType": "MezResist",
               "stacking": 1,
-              "toWho": "Target",
+              "buffable": true,
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Gadgets.Web_Grenade",
               "mezType": "Knockback"
             },
@@ -73,7 +66,8 @@
               "duration": 15,
               "effectType": "MezResist",
               "stacking": 1,
-              "toWho": "Target",
+              "buffable": true,
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Gadgets.Web_Grenade",
               "mezType": "Knockup"
             },
@@ -85,7 +79,8 @@
               "duration": 15,
               "effectType": "Mez",
               "stacking": 1,
-              "toWho": "Target",
+              "buffable": true,
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Gadgets.Web_Grenade",
               "mezType": "Knockback"
             },
@@ -97,7 +92,8 @@
               "duration": 15,
               "effectType": "Mez",
               "stacking": 1,
-              "toWho": "Target",
+              "buffable": true,
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Gadgets.Web_Grenade",
               "mezType": "Knockup"
             },
@@ -109,7 +105,8 @@
               "duration": 15,
               "effectType": "JumpHeight",
               "stacking": 1,
-              "toWho": "Target",
+              "buffable": true,
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Gadgets.Web_Grenade"
             },
             {
@@ -120,7 +117,8 @@
               "duration": 15,
               "effectType": "Fly",
               "stacking": 1,
-              "toWho": "Target",
+              "buffable": true,
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Gadgets.Web_Grenade"
             },
             {
@@ -133,8 +131,9 @@
               "effectType": "Damage",
               "ticks": 5,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "",
               "damageType": "Toxic"
             }
@@ -144,15 +143,15 @@
           "effectType": "Slow",
           "values": [
             {
+              "etModifies": "RechargeTime",
               "mag": {
                 "pve": -0.5
               },
               "probability": 1,
               "duration": 15,
               "effectType": "Enhancement",
-              "eTModifies": 25,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Gadgets.Web_Grenade",
               "nearGround": true
             },
@@ -163,8 +162,9 @@
               "probability": 1,
               "duration": 15,
               "effectType": "SpeedRunning",
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Gadgets.Web_Grenade",
               "nearGround": true
             },
@@ -175,8 +175,9 @@
               "probability": 1,
               "duration": 15,
               "effectType": "SpeedFlying",
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Gadgets.Web_Grenade",
               "nearGround": true
             }
@@ -195,7 +196,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Gadgets.Web_Grenade",
               "damageType": "Smashing"
             },
@@ -209,7 +210,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Gadgets.Web_Grenade",
               "damageType": "Lethal"
             },
@@ -223,7 +224,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Gadgets.Web_Grenade",
               "damageType": "Fire"
             },
@@ -237,7 +238,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Gadgets.Web_Grenade",
               "damageType": "Cold"
             },
@@ -251,7 +252,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Gadgets.Web_Grenade",
               "damageType": "Energy"
             },
@@ -265,7 +266,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Gadgets.Web_Grenade",
               "damageType": "Negative"
             },
@@ -279,7 +280,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Gadgets.Web_Grenade",
               "damageType": "Toxic"
             },
@@ -293,13 +294,24 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Gadgets.Web_Grenade",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Endurance_Discount",
+        "Immobilize",
+        "Range",
+        "Recharge",
+        "Slow"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Support.Gadgets.Web_Grenade",
+      "archetypeOrder": "secondary",
       "powerIndex": 0,
       "castTimeReal": 1.37,
       "toggleCost": 7.8,
@@ -339,15 +351,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Damage",
-        "Endurance_Discount",
-        "Range",
-        "Recharge",
-        "Slow"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Level",
@@ -360,8 +363,9 @@
               "duration": 45,
               "effectType": "EntCreate",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "All",
+              "toWho": "all",
               "powerFullName": "Blaster_Support.Gadgets.Caltrops"
             }
           ]
@@ -377,7 +381,7 @@
               "duration": 8.57,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Gadgets.Caltrops",
               "damageType": "Smashing"
             },
@@ -389,7 +393,7 @@
               "duration": 8.57,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Gadgets.Caltrops",
               "damageType": "Lethal"
             },
@@ -401,7 +405,7 @@
               "duration": 8.57,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Gadgets.Caltrops",
               "damageType": "Fire"
             },
@@ -413,7 +417,7 @@
               "duration": 8.57,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Gadgets.Caltrops",
               "damageType": "Cold"
             },
@@ -425,7 +429,7 @@
               "duration": 8.57,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Gadgets.Caltrops",
               "damageType": "Energy"
             },
@@ -437,7 +441,7 @@
               "duration": 8.57,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Gadgets.Caltrops",
               "damageType": "Negative"
             },
@@ -449,7 +453,7 @@
               "duration": 8.57,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Gadgets.Caltrops",
               "damageType": "Toxic"
             },
@@ -461,13 +465,23 @@
               "duration": 8.57,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Gadgets.Caltrops",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Damage",
+        "Endurance_Discount",
+        "Range",
+        "Recharge",
+        "Slow"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Support.Gadgets.Caltrops",
+      "archetypeOrder": "secondary",
       "powerIndex": 1,
       "castTimeReal": 1.07,
       "toggleCost": 7.8,
@@ -508,15 +522,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Recharge",
-        "Stun"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Damage",
@@ -528,8 +533,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Gadgets.Taser",
               "damageType": "Energy"
             }
@@ -546,8 +552,9 @@
               "duration": 5.96,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Blaster_Support.Gadgets.Taser",
               "mezType": "Stun"
@@ -565,8 +572,9 @@
               "duration": 2,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Blaster_Support.Gadgets.Taser",
               "mezType": "Stun"
@@ -586,7 +594,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Gadgets.Taser",
               "damageType": "Smashing"
             },
@@ -600,7 +608,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Gadgets.Taser",
               "damageType": "Lethal"
             },
@@ -614,7 +622,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Gadgets.Taser",
               "damageType": "Fire"
             },
@@ -628,7 +636,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Gadgets.Taser",
               "damageType": "Cold"
             },
@@ -642,7 +650,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Gadgets.Taser",
               "damageType": "Energy"
             },
@@ -656,7 +664,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Gadgets.Taser",
               "damageType": "Negative"
             },
@@ -670,7 +678,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Gadgets.Taser",
               "damageType": "Toxic"
             },
@@ -684,13 +692,23 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Gadgets.Taser",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Recharge",
+        "Stun"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Support.Gadgets.Taser",
+      "archetypeOrder": "secondary",
       "powerIndex": 2,
       "castTimeReal": 1,
       "toggleCost": 10.192,
@@ -729,13 +747,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "ToHit_Buff",
-        "Endurance_Discount",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Buff_ToHit",
@@ -747,7 +758,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "ToHit",
-              "toWho": "All",
+              "buffable": true,
+              "toWho": "all",
               "powerFullName": "Blaster_Support.Gadgets.Targeting_Drone"
             }
           ]
@@ -756,14 +768,14 @@
           "effectType": "Res_Boolean",
           "values": [
             {
+              "etModifies": "ToHit",
               "mag": {
                 "pve": 0.5536
               },
               "probability": 1,
               "duration": 0.75,
               "effectType": "ResEffect",
-              "eTModifies": 40,
-              "toWho": "All",
+              "toWho": "all",
               "powerFullName": "Blaster_Support.Gadgets.Targeting_Drone"
             }
           ]
@@ -772,14 +784,14 @@
           "effectType": "Ones",
           "values": [
             {
+              "etModifies": "PerceptionRadius",
               "mag": {
                 "pve": 0.6
               },
               "probability": 1,
               "duration": 0.75,
               "effectType": "ResEffect",
-              "eTModifies": 23,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Gadgets.Targeting_Drone"
             },
             {
@@ -789,7 +801,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "PerceptionRadius",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Gadgets.Targeting_Drone"
             },
             {
@@ -799,7 +812,7 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "SetMode",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Gadgets.Targeting_Drone"
             }
           ]
@@ -814,12 +827,20 @@
               "probability": 1,
               "effectType": "DamageBuff",
               "specialCase": 12,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": ""
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "ToHit_Buff",
+        "Endurance_Discount",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Support.Gadgets.Targeting_Drone",
+      "archetypeOrder": "secondary",
       "powerIndex": 3,
       "castTimeReal": 1.17,
       "toggleCost": 0.312,
@@ -855,14 +876,6 @@
       "powerType": "Toggle"
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "ToHit_Debuff",
-        "Endurance_Discount",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Ones",
@@ -875,8 +888,9 @@
               "probability": 1,
               "duration": 60,
               "effectType": "PerceptionRadius",
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Gadgets.Smoke_Grenade"
             }
           ]
@@ -892,8 +906,9 @@
               "probability": 1,
               "duration": 60,
               "effectType": "ToHit",
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Gadgets.Smoke_Grenade",
               "requiresToHitCheck": true
             }
@@ -910,7 +925,7 @@
               "duration": 8.87,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Gadgets.Smoke_Grenade",
               "damageType": "Smashing"
             },
@@ -922,7 +937,7 @@
               "duration": 8.87,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Gadgets.Smoke_Grenade",
               "damageType": "Lethal"
             },
@@ -934,7 +949,7 @@
               "duration": 8.87,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Gadgets.Smoke_Grenade",
               "damageType": "Fire"
             },
@@ -946,7 +961,7 @@
               "duration": 8.87,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Gadgets.Smoke_Grenade",
               "damageType": "Cold"
             },
@@ -958,7 +973,7 @@
               "duration": 8.87,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Gadgets.Smoke_Grenade",
               "damageType": "Energy"
             },
@@ -970,7 +985,7 @@
               "duration": 8.87,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Gadgets.Smoke_Grenade",
               "damageType": "Negative"
             },
@@ -982,7 +997,7 @@
               "duration": 8.87,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Gadgets.Smoke_Grenade",
               "damageType": "Toxic"
             },
@@ -994,13 +1009,22 @@
               "duration": 8.87,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Gadgets.Smoke_Grenade",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "ToHit_Debuff",
+        "Endurance_Discount",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Support.Gadgets.Smoke_Grenade",
+      "archetypeOrder": "secondary",
       "powerIndex": 4,
       "castTimeReal": 1.37,
       "toggleCost": 7.8,
@@ -1039,14 +1063,6 @@
       "aoeModifier": 6.25
     },
     {
-      "allowedEnhancements": [
-        "Defense_Buff",
-        "Heal",
-        "Recharge",
-        "Endurance_Modification"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Ones",
@@ -1058,7 +1074,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "StealthRadius",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Gadgets.Cloaking_Device"
             },
             {
@@ -1068,7 +1085,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "StealthRadiusPlayer",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Gadgets.Cloaking_Device"
             },
             {
@@ -1078,7 +1096,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Regeneration",
-              "toWho": "All",
+              "buffable": true,
+              "toWho": "all",
               "powerFullName": "Blaster_Support.Gadgets.Cloaking_Device"
             },
             {
@@ -1088,7 +1107,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Recovery",
-              "toWho": "All",
+              "buffable": true,
+              "toWho": "all",
               "powerFullName": "Blaster_Support.Gadgets.Cloaking_Device"
             },
             {
@@ -1098,7 +1118,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Translucency",
-              "toWho": "All",
+              "buffable": true,
+              "toWho": "all",
               "powerFullName": "Blaster_Support.Gadgets.Cloaking_Device"
             }
           ]
@@ -1113,7 +1134,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Gadgets.Cloaking_Device",
               "damageType": "Melee"
             },
@@ -1124,7 +1146,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Gadgets.Cloaking_Device",
               "damageType": "Ranged"
             },
@@ -1135,7 +1158,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Gadgets.Cloaking_Device",
               "damageType": "AoE"
             },
@@ -1146,7 +1170,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Gadgets.Cloaking_Device",
               "damageType": "Smashing"
             },
@@ -1157,7 +1182,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Gadgets.Cloaking_Device",
               "damageType": "Lethal"
             },
@@ -1168,7 +1194,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Gadgets.Cloaking_Device",
               "damageType": "Fire"
             },
@@ -1179,7 +1206,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Gadgets.Cloaking_Device",
               "damageType": "Cold"
             },
@@ -1190,7 +1218,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Gadgets.Cloaking_Device",
               "damageType": "Energy"
             },
@@ -1201,7 +1230,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Gadgets.Cloaking_Device",
               "damageType": "Negative"
             },
@@ -1212,13 +1242,23 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Gadgets.Cloaking_Device",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Defense_Buff",
+        "Heal",
+        "Recharge",
+        "Endurance_Modification"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Support.Gadgets.Cloaking_Device",
+      "archetypeOrder": "secondary",
       "powerIndex": 5,
       "castTimeReal": 0.73,
       "fullName": "Blaster_Secondary_Devices_Field_Operative",
@@ -1254,15 +1294,6 @@
       "powerType": "Toggle"
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Knockback",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Level",
@@ -1275,8 +1306,9 @@
               "duration": 260,
               "effectType": "EntCreate",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "All",
+              "toWho": "all",
               "powerFullName": "Blaster_Support.Gadgets.Trip_Mine"
             }
           ]
@@ -1294,7 +1326,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Gadgets.Trip_Mine",
               "damageType": "Smashing"
             },
@@ -1308,7 +1340,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Gadgets.Trip_Mine",
               "damageType": "Lethal"
             },
@@ -1322,7 +1354,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Gadgets.Trip_Mine",
               "damageType": "Fire"
             },
@@ -1336,7 +1368,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Gadgets.Trip_Mine",
               "damageType": "Cold"
             },
@@ -1350,7 +1382,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Gadgets.Trip_Mine",
               "damageType": "Energy"
             },
@@ -1364,7 +1396,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Gadgets.Trip_Mine",
               "damageType": "Negative"
             },
@@ -1378,7 +1410,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Gadgets.Trip_Mine",
               "damageType": "Toxic"
             },
@@ -1392,13 +1424,23 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Gadgets.Trip_Mine",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Knockback",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Support.Gadgets.Trip_Mine",
+      "archetypeOrder": "secondary",
       "powerIndex": 6,
       "castTimeReal": 2.77,
       "toggleCost": 13,
@@ -1439,15 +1481,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Knockback",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Level",
@@ -1460,8 +1493,9 @@
               "duration": 11,
               "effectType": "EntCreate",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "All",
+              "toWho": "all",
               "powerFullName": "Blaster_Support.Gadgets.Time_Bomb"
             }
           ]
@@ -1479,7 +1513,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Gadgets.Time_Bomb",
               "damageType": "Smashing"
             },
@@ -1493,7 +1527,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Gadgets.Time_Bomb",
               "damageType": "Lethal"
             },
@@ -1507,7 +1541,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Gadgets.Time_Bomb",
               "damageType": "Fire"
             },
@@ -1521,7 +1555,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Gadgets.Time_Bomb",
               "damageType": "Cold"
             },
@@ -1535,7 +1569,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Gadgets.Time_Bomb",
               "damageType": "Energy"
             },
@@ -1549,7 +1583,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Gadgets.Time_Bomb",
               "damageType": "Negative"
             },
@@ -1563,7 +1597,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Gadgets.Time_Bomb",
               "damageType": "Toxic"
             },
@@ -1577,13 +1611,23 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Gadgets.Time_Bomb",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Knockback",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Support.Gadgets.Time_Bomb",
+      "archetypeOrder": "secondary",
       "powerIndex": 7,
       "castTimeReal": 2.77,
       "toggleCost": 26,
@@ -1624,14 +1668,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Level",
@@ -1644,8 +1680,9 @@
               "duration": 90,
               "effectType": "EntCreate",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "All",
+              "toWho": "all",
               "powerFullName": "Blaster_Support.Gadgets.Auto_Turret"
             }
           ]
@@ -1663,7 +1700,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Gadgets.Auto_Turret",
               "damageType": "Smashing"
             },
@@ -1677,7 +1714,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Gadgets.Auto_Turret",
               "damageType": "Lethal"
             },
@@ -1691,7 +1728,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Gadgets.Auto_Turret",
               "damageType": "Fire"
             },
@@ -1705,7 +1742,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Gadgets.Auto_Turret",
               "damageType": "Cold"
             },
@@ -1719,7 +1756,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Gadgets.Auto_Turret",
               "damageType": "Energy"
             },
@@ -1733,7 +1770,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Gadgets.Auto_Turret",
               "damageType": "Negative"
             },
@@ -1747,7 +1784,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Gadgets.Auto_Turret",
               "damageType": "Toxic"
             },
@@ -1761,13 +1798,22 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Gadgets.Auto_Turret",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Support.Gadgets.Auto_Turret",
+      "archetypeOrder": "secondary",
       "powerIndex": 8,
       "castTimeReal": 1,
       "toggleCost": 39,

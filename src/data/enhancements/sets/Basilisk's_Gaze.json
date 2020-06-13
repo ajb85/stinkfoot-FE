@@ -2,309 +2,204 @@
   "fullName": "IOSet.Basilisk's_Gaze",
   "enhancements": [
     {
-      "effects": [
-        {
-          "effectType": "Hold",
-          "values": [
-            {
-              "etModifies": "Mez",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Basilisks_Gaze_A.Attuned_Basilisks_Gaze_A",
-              "mezType": "Hold"
-            }
-          ]
-        },
-        {
-          "effectType": "Accuracy",
-          "values": [
-            {
-              "etModifies": "Accuracy",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Basilisks_Gaze_A.Attuned_Basilisks_Gaze_A"
-            }
-          ]
-        }
-      ],
+      "type": "set",
+      "fullName": "Boosts.Attuned_Basilisks_Gaze_A.Attuned_Basilisks_Gaze_A",
+      "displayName": "Accuracy/Hold",
       "description": {
         "short": "+ACC, +Hold",
         "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and hold duration of a power by {Boost.Attrib.Hold.Scale}%."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Basilisks_Gaze_A.Attuned_Basilisks_Gaze_A",
-      "setName": "Basilisk's_Gaze",
-      "displayName": "Accuracy/Hold"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Accuracy",
-          "values": [
-            {
-              "etModifies": "Accuracy",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Basilisks_Gaze_B.Attuned_Basilisks_Gaze_B"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
+          },
+          "stat": "Accuracy",
+          "toWho": "self"
         },
         {
-          "effectType": "Recharge",
-          "values": [
-            {
-              "etModifies": "RechargeTime",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Basilisks_Gaze_B.Attuned_Basilisks_Gaze_B"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
+          },
+          "mezType": 2,
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Basilisks_Gaze_B.Attuned_Basilisks_Gaze_B",
+      "displayName": "Accuracy/Recharge",
       "description": {
         "short": "+ACC, +Rech",
         "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and reduces the attack rate by {Boost.Attrib.Recharge.Scale}%."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Basilisks_Gaze_B.Attuned_Basilisks_Gaze_B",
-      "setName": "Basilisk's_Gaze",
-      "displayName": "Accuracy/Recharge"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Hold",
-          "values": [
-            {
-              "etModifies": "Mez",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Basilisks_Gaze_C.Attuned_Basilisks_Gaze_C",
-              "mezType": "Hold"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
+          },
+          "stat": "Accuracy",
+          "toWho": "self"
         },
         {
-          "effectType": "Recharge",
-          "values": [
-            {
-              "etModifies": "RechargeTime",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Basilisks_Gaze_C.Attuned_Basilisks_Gaze_C"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
+          },
+          "stat": "Recharge",
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Basilisks_Gaze_C.Attuned_Basilisks_Gaze_C",
+      "displayName": "Recharge/Hold",
       "description": {
         "short": "+Rech, +Hold",
         "long": "Reduces the attack rate by {Boost.Attrib.Recharge.Scale}% and hold duration of a power by {Boost.Attrib.Hold.Scale}%."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Basilisks_Gaze_C.Attuned_Basilisks_Gaze_C",
-      "setName": "Basilisk's_Gaze",
-      "displayName": "Recharge/Hold"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Hold",
-          "values": [
-            {
-              "etModifies": "Mez",
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Basilisks_Gaze_D.Attuned_Basilisks_Gaze_D",
-              "mezType": "Hold"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
+          },
+          "stat": "Recharge",
+          "toWho": "self"
         },
         {
-          "effectType": "Endurance",
-          "values": [
-            {
-              "etModifies": "EnduranceDiscount",
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Basilisks_Gaze_D.Attuned_Basilisks_Gaze_D"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
-        },
-        {
-          "effectType": "Recharge",
-          "values": [
-            {
-              "etModifies": "RechargeTime",
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Basilisks_Gaze_D.Attuned_Basilisks_Gaze_D"
-            }
-          ]
+          },
+          "mezType": 2,
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Basilisks_Gaze_D.Attuned_Basilisks_Gaze_D",
+      "displayName": "Endurance Reduction/Recharge/Hold",
       "description": {
         "short": "-End Cost, +Rech, +Hold",
         "long": "Reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%, reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}% and increases the hold duration of a power by {Boost.Attrib.Hold.Scale}%."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Basilisks_Gaze_D.Attuned_Basilisks_Gaze_D",
-      "setName": "Basilisk's_Gaze",
-      "displayName": "Endurance Reduction/Recharge/Hold"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Accuracy",
-          "values": [
-            {
-              "etModifies": "Accuracy",
-              "mag": {
-                "pve": 0.1855
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Basilisks_Gaze_E.Attuned_Basilisks_Gaze_E"
+          "mag": {
+            "IO": {
+              "cap": 0.212
             }
-          ]
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self"
         },
         {
-          "effectType": "Hold",
-          "values": [
-            {
-              "etModifies": "Mez",
-              "mag": {
-                "pve": 0.1855
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Basilisks_Gaze_E.Attuned_Basilisks_Gaze_E",
-              "mezType": "Hold"
+          "mag": {
+            "IO": {
+              "cap": 0.212
             }
-          ]
+          },
+          "stat": "Recharge",
+          "toWho": "self"
         },
         {
-          "effectType": "Endurance",
-          "values": [
-            {
-              "etModifies": "EnduranceDiscount",
-              "mag": {
-                "pve": 0.1855
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Basilisks_Gaze_E.Attuned_Basilisks_Gaze_E"
+          "mag": {
+            "IO": {
+              "cap": 0.212
             }
-          ]
-        },
-        {
-          "effectType": "Recharge",
-          "values": [
-            {
-              "etModifies": "RechargeTime",
-              "mag": {
-                "pve": 0.1855
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Basilisks_Gaze_E.Attuned_Basilisks_Gaze_E"
-            }
-          ]
+          },
+          "mezType": 2,
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Basilisks_Gaze_E.Attuned_Basilisks_Gaze_E",
+      "displayName": "Accuracy/Endurance Reduction/Recharge/Hold",
       "description": {
         "short": "+Acc, -End Cost, +Rech, +Hold",
         "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}%, reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%, reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}% and increases the hold duration of a power by {Boost.Attrib.Hold.Scale}%."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Basilisks_Gaze_E.Attuned_Basilisks_Gaze_E",
-      "setName": "Basilisk's_Gaze",
-      "displayName": "Accuracy/Endurance Reduction/Recharge/Hold"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Recharge",
-          "values": [
-            {
-              "etModifies": "RechargeTime",
-              "mag": {},
-              "procsPerMinute": 3.5,
-              "duration": 20,
-              "effectType": "Enhancement",
-              "resistible": true,
-              "toWho": "all",
-              "powerFullName": "Boosts.Attuned_Basilisks_Gaze_F.Attuned_Basilisks_Gaze_F"
+          "mag": {
+            "IO": {
+              "cap": 0.1855
             }
-          ]
+          },
+          "stat": "Accuracy",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.1855
+            }
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.1855
+            }
+          },
+          "stat": "Recharge",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.1855
+            }
+          },
+          "mezType": 2,
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Basilisks_Gaze_F.Attuned_Basilisks_Gaze_F",
+      "displayName": "Chance for Recharge Slow",
       "description": {
         "short": "Chance for -Rech",
         "long": "Gives a chance to slow your foes recharge rate by 25%.  This effect will trigger roughly 3.5 times per minute."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Basilisks_Gaze_F.Attuned_Basilisks_Gaze_F",
-      "setName": "Basilisk's_Gaze",
-      "displayName": "Chance for Recharge Slow"
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": -0.25
+            }
+          },
+          "stat": "Chance for Recharge Slow",
+          "procsPerMinute": 3.5,
+          "resistible": true,
+          "toWho": "all"
+        }
+      ]
     }
   ],
   "levels": {

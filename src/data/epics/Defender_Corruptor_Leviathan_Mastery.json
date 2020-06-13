@@ -6,16 +6,6 @@
   "displayName": "Leviathan Mastery",
   "powers": [
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Immobilize",
-        "Range",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Damage",
@@ -28,8 +18,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Corruptor_Leviathan_Mastery.School_of_Sharks",
               "nearGround": true,
               "damageType": "Negative"
@@ -41,8 +32,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Corruptor_Leviathan_Mastery.School_of_Sharks",
               "damageType": "Lethal"
             }
@@ -59,11 +51,12 @@
               "duration": 17.8800011,
               "effectType": "Mez",
               "stacking": 1,
-              "toWho": "Target",
+              "buffable": true,
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.Corruptor_Leviathan_Mastery.School_of_Sharks",
               "nearGround": true,
-              "mezType": "Immobilization"
+              "mezType": "Immob"
             }
           ]
         },
@@ -78,15 +71,27 @@
               "duration": 2,
               "effectType": "Mez",
               "stacking": 1,
-              "toWho": "Target",
+              "buffable": true,
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.Corruptor_Leviathan_Mastery.School_of_Sharks",
               "nearGround": true,
-              "mezType": "Immobilization"
+              "mezType": "Immob"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Immobilize",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Corruptor_Leviathan_Mastery.School_of_Sharks",
+      "archetypeOrder": "epicPool",
       "powerIndex": 0,
       "castTimeReal": 2.37,
       "toggleCost": 12.74,
@@ -128,13 +133,6 @@
       "aoeModifier": 2.44994545
     },
     {
-      "allowedEnhancements": [
-        "Endurance_Discount",
-        "Recharge",
-        "Res_Damage"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Res_Dmg",
@@ -147,7 +145,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Corruptor_Leviathan_Mastery.Shark_Skin",
               "damageType": "Smashing"
             },
@@ -159,7 +158,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Corruptor_Leviathan_Mastery.Shark_Skin",
               "damageType": "Lethal"
             },
@@ -171,7 +171,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Corruptor_Leviathan_Mastery.Shark_Skin",
               "damageType": "Cold"
             },
@@ -182,7 +183,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Corruptor_Leviathan_Mastery.Shark_Skin",
               "damageType": "Fire"
             },
@@ -193,7 +195,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Corruptor_Leviathan_Mastery.Shark_Skin",
               "damageType": "Energy"
             },
@@ -204,7 +207,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Corruptor_Leviathan_Mastery.Shark_Skin",
               "damageType": "Negative"
             },
@@ -215,7 +219,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Corruptor_Leviathan_Mastery.Shark_Skin",
               "damageType": "Toxic"
             },
@@ -226,13 +231,22 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Corruptor_Leviathan_Mastery.Shark_Skin",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Endurance_Discount",
+        "Recharge",
+        "Res_Damage"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Corruptor_Leviathan_Mastery.Shark_Skin",
+      "archetypeOrder": "epicPool",
       "powerIndex": 1,
       "castTimeReal": 0.67,
       "toggleCost": 0.325,
@@ -269,14 +283,6 @@
       "powerType": "Toggle"
     },
     {
-      "allowedEnhancements": [
-        "Endurance_Discount",
-        "Heal",
-        "Recharge",
-        "Endurance_Modification"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Ones",
@@ -288,7 +294,7 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "MezResist",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Epic.Corruptor_Leviathan_Mastery.Hibernate",
               "mezType": "Knockback"
             },
@@ -299,7 +305,7 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "MezResist",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Epic.Corruptor_Leviathan_Mastery.Hibernate",
               "mezType": "Knockup"
             },
@@ -310,7 +316,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Mez",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Corruptor_Leviathan_Mastery.Hibernate",
               "mezType": "Knockback"
             },
@@ -321,7 +328,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Mez",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Corruptor_Leviathan_Mastery.Hibernate",
               "mezType": "Knockup"
             },
@@ -332,7 +340,7 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Mez",
-              "toWho": "Self",
+              "toWho": "self",
               "attribType": 1,
               "powerFullName": "Epic.Corruptor_Leviathan_Mastery.Hibernate",
               "mezType": "Untouchable"
@@ -344,10 +352,10 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Mez",
-              "toWho": "Self",
+              "toWho": "self",
               "attribType": 1,
               "powerFullName": "Epic.Corruptor_Leviathan_Mastery.Hibernate",
-              "mezType": "Immobilization"
+              "mezType": "Immob"
             },
             {
               "mag": {
@@ -356,10 +364,10 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Mez",
-              "toWho": "Self",
+              "toWho": "self",
               "attribType": 1,
               "powerFullName": "Epic.Corruptor_Leviathan_Mastery.Hibernate",
-              "mezType": "OnlyAffectsSelf"
+              "mezType": "Only Affects Self"
             },
             {
               "mag": {
@@ -368,7 +376,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Regeneration",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Corruptor_Leviathan_Mastery.Hibernate"
             },
             {
@@ -378,7 +387,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Recovery",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Corruptor_Leviathan_Mastery.Hibernate"
             },
             {
@@ -387,21 +397,30 @@
               },
               "probability": 1,
               "effectType": "GrantPower",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Epic.Corruptor_Leviathan_Mastery.Hibernate"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Endurance_Discount",
+        "Heal",
+        "Recharge",
+        "Endurance_Modification"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Corruptor_Leviathan_Mastery.Hibernate",
+      "archetypeOrder": "epicPool",
       "powerIndex": 2,
       "castTimeReal": 0.07,
       "toggleCost": 0.325,
+      "isEpic": true,
       "fullName": "Epic_Leviathan_Mastery_Hibernate",
       "displayName": "Hibernate",
       "requires": {
         "powers": {
-          "Epic_Leviathan_Mastery_School_of_Sharks": true,
-          "Epic_Leviathan_Mastery_Shark_Skin": true
+          "Epic.Corruptor_Leviathan_Mastery.Hibernate": true
         },
         "count": 1
       },
@@ -433,16 +452,6 @@
       "powerType": "Toggle"
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Hold",
-        "Range",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Immobilize",
@@ -455,8 +464,9 @@
               "duration": 11.92,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.Corruptor_Leviathan_Mastery.Spirit_Shark_Jaws",
               "mezType": "Hold"
@@ -474,8 +484,9 @@
               "duration": 2,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.Corruptor_Leviathan_Mastery.Spirit_Shark_Jaws",
               "mezType": "Hold"
@@ -488,7 +499,8 @@
               "duration": 15,
               "effectType": "Fly",
               "stacking": 1,
-              "toWho": "Target",
+              "buffable": true,
+              "toWho": "target",
               "powerFullName": "Epic.Corruptor_Leviathan_Mastery.Spirit_Shark_Jaws"
             }
           ]
@@ -504,23 +516,35 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Corruptor_Leviathan_Mastery.Spirit_Shark_Jaws",
               "damageType": "Lethal"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Hold",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Corruptor_Leviathan_Mastery.Spirit_Shark_Jaws",
+      "archetypeOrder": "epicPool",
       "powerIndex": 3,
       "castTimeReal": 1.87,
       "toggleCost": 10.66,
+      "isEpic": true,
       "fullName": "Epic_Leviathan_Mastery_Spirit_Shark_Jaws",
       "displayName": "Spirit Shark Jaws",
       "requires": {
         "powers": {
-          "Epic_Leviathan_Mastery_School_of_Sharks": true,
-          "Epic_Leviathan_Mastery_Shark_Skin": true
+          "Epic.Corruptor_Leviathan_Mastery.Spirit_Shark_Jaws": true
         },
         "count": 1
       },
@@ -552,6 +576,23 @@
       "aoeModifier": 1
     },
     {
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": -1
+              },
+              "probability": 1,
+              "duration": 240,
+              "effectType": "EntCreate",
+              "toWho": "all",
+              "powerFullName": "Epic.Corruptor_Leviathan_Mastery.Summon_Coralax"
+            }
+          ]
+        }
+      ],
       "allowedEnhancements": [
         "Accuracy",
         "Damage",
@@ -564,35 +605,17 @@
         "Stun"
       ],
       "enhancementCount": 6,
+      "ogFullName": "Epic.Corruptor_Leviathan_Mastery.Summon_Coralax",
       "archetypeOrder": "epicPool",
-      "effects": [
-        {
-          "effectType": "Ones",
-          "values": [
-            {
-              "mag": {
-                "pve": -1
-              },
-              "probability": 1,
-              "duration": 240,
-              "effectType": "EntCreate",
-              "toWho": "All",
-              "powerFullName": "Epic.Corruptor_Leviathan_Mastery.Summon_Coralax"
-            }
-          ]
-        }
-      ],
       "powerIndex": 4,
       "castTimeReal": 3.2,
       "toggleCost": 26,
+      "isEpic": true,
       "fullName": "Epic_Leviathan_Mastery_Summon_Coralax",
       "displayName": "Summon Coralax",
       "requires": {
         "powers": {
-          "Epic_Leviathan_Mastery_School_of_Sharks": true,
-          "Epic_Leviathan_Mastery_Shark_Skin": true,
-          "Epic_Leviathan_Mastery_Hibernate": true,
-          "Epic_Leviathan_Mastery_Spirit_Shark_Jaws": true
+          "Epic.Corruptor_Leviathan_Mastery.Summon_Coralax": true
         },
         "count": 2
       },

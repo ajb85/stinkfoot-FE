@@ -6,16 +6,6 @@
   "displayName": "Field Mastery",
   "powers": [
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Knockback",
-        "Range",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Damage",
@@ -28,8 +18,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Field_Mastery.Power_Blast",
               "damageType": "Smashing"
             },
@@ -41,8 +32,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Field_Mastery.Power_Blast",
               "damageType": "Energy"
             }
@@ -59,14 +51,26 @@
               "probability": 0.3,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Field_Mastery.Power_Blast",
               "mezType": "Knockback"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Knockback",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Field_Mastery.Power_Blast",
+      "archetypeOrder": "epicPool",
       "powerIndex": 0,
       "castTimeReal": 1.67,
       "toggleCost": 10.66,
@@ -104,13 +108,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Endurance_Discount",
-        "Recharge",
-        "Res_Damage"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Res_Dmg",
@@ -123,7 +120,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Field_Mastery.Personal_Force_Field",
               "damageType": "Smashing"
             },
@@ -135,7 +133,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Field_Mastery.Personal_Force_Field",
               "damageType": "Lethal"
             },
@@ -146,7 +145,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Field_Mastery.Personal_Force_Field",
               "damageType": "Fire"
             },
@@ -157,7 +157,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Field_Mastery.Personal_Force_Field",
               "damageType": "Cold"
             },
@@ -168,7 +169,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Field_Mastery.Personal_Force_Field",
               "damageType": "Energy"
             },
@@ -179,7 +181,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Field_Mastery.Personal_Force_Field",
               "damageType": "Negative"
             },
@@ -190,7 +193,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Field_Mastery.Personal_Force_Field",
               "damageType": "Toxic"
             },
@@ -201,13 +205,22 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Field_Mastery.Personal_Force_Field",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Endurance_Discount",
+        "Recharge",
+        "Res_Damage"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Field_Mastery.Personal_Force_Field",
+      "archetypeOrder": "epicPool",
       "powerIndex": 1,
       "castTimeReal": 0.67,
       "toggleCost": 0.325,
@@ -244,16 +257,6 @@
       "powerType": "Toggle"
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Knockback",
-        "Range",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Damage",
@@ -266,8 +269,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Field_Mastery.Energy_Torrent",
               "damageType": "Smashing"
             },
@@ -279,8 +283,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Field_Mastery.Energy_Torrent",
               "damageType": "Energy"
             }
@@ -297,23 +302,35 @@
               "probability": 0.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Field_Mastery.Energy_Torrent",
               "mezType": "Knockback"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Knockback",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Field_Mastery.Energy_Torrent",
+      "archetypeOrder": "epicPool",
       "powerIndex": 2,
       "castTimeReal": 1.07,
       "toggleCost": 14.82,
+      "isEpic": true,
       "fullName": "Epic_Field_Mastery_Energy_Torrent",
       "displayName": "Energy Torrent",
       "requires": {
         "powers": {
-          "Epic_Field_Mastery_Power_Blast": true,
-          "Epic_Field_Mastery_Temp_Invulnerability": true
+          "Epic.Field_Mastery.Energy_Torrent": true
         },
         "count": 1
       },
@@ -348,16 +365,6 @@
       "aoeModifier": 2.37995839
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Knockback",
-        "Range",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Damage",
@@ -369,8 +376,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Field_Mastery.Repulsion_Bomb",
               "damageType": "Smashing"
             },
@@ -382,8 +390,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Field_Mastery.Repulsion_Bomb",
               "damageType": "Energy"
             }
@@ -400,8 +409,9 @@
               "probability": 0.5,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Field_Mastery.Repulsion_Bomb",
               "mezType": "Knockback"
             }
@@ -419,8 +429,9 @@
               "effectType": "Mez",
               "delayedTime": 0.125,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.Field_Mastery.Repulsion_Bomb",
               "nearGround": true,
@@ -429,15 +440,26 @@
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Knockback",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Field_Mastery.Repulsion_Bomb",
+      "archetypeOrder": "epicPool",
       "powerIndex": 3,
       "castTimeReal": 1.67,
       "toggleCost": 18.98,
+      "isEpic": true,
       "fullName": "Epic_Field_Mastery_Explosive_Blast",
       "displayName": "Explosive Blast",
       "requires": {
         "powers": {
-          "Epic_Field_Mastery_Power_Blast": true,
-          "Epic_Field_Mastery_Temp_Invulnerability": true
+          "Epic.Field_Mastery.Repulsion_Bomb": true
         },
         "count": 1
       },
@@ -471,14 +493,6 @@
       "aoeModifier": 3.25
     },
     {
-      "allowedEnhancements": [
-        "Endurance_Discount",
-        "Recharge",
-        "Endurance_Modification",
-        "Res_Damage"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Res_Dmg",
@@ -492,7 +506,8 @@
               "variableModified": true,
               "effectType": "Resistance",
               "stacking": 1,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Field_Mastery.Foce_of_Nature",
               "damageType": "Smashing"
             },
@@ -505,7 +520,8 @@
               "variableModified": true,
               "effectType": "Resistance",
               "stacking": 1,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Field_Mastery.Foce_of_Nature",
               "damageType": "Lethal"
             },
@@ -518,7 +534,8 @@
               "variableModified": true,
               "effectType": "Resistance",
               "stacking": 1,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Field_Mastery.Foce_of_Nature",
               "damageType": "Fire"
             },
@@ -531,7 +548,8 @@
               "variableModified": true,
               "effectType": "Resistance",
               "stacking": 1,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Field_Mastery.Foce_of_Nature",
               "damageType": "Cold"
             },
@@ -544,7 +562,8 @@
               "variableModified": true,
               "effectType": "Resistance",
               "stacking": 1,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Field_Mastery.Foce_of_Nature",
               "damageType": "Energy"
             },
@@ -557,7 +576,8 @@
               "variableModified": true,
               "effectType": "Resistance",
               "stacking": 1,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Field_Mastery.Foce_of_Nature",
               "damageType": "Negative"
             },
@@ -570,7 +590,8 @@
               "variableModified": true,
               "effectType": "Resistance",
               "stacking": 1,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Field_Mastery.Foce_of_Nature",
               "damageType": "Toxic"
             }
@@ -588,7 +609,8 @@
               "variableModified": true,
               "effectType": "Recovery",
               "stacking": 1,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Field_Mastery.Foce_of_Nature"
             },
             {
@@ -598,7 +620,7 @@
               "probability": 1,
               "duration": 30,
               "effectType": "GlobalChanceMod",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Epic.Field_Mastery.Foce_of_Nature"
             }
           ]
@@ -616,7 +638,7 @@
               "effectType": "Recovery",
               "delayedTime": 120,
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Epic.Field_Mastery.Foce_of_Nature"
             },
             {
@@ -628,23 +650,30 @@
               "effectType": "Endurance",
               "delayedTime": 120,
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Epic.Field_Mastery.Foce_of_Nature"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Endurance_Discount",
+        "Recharge",
+        "Endurance_Modification",
+        "Res_Damage"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Field_Mastery.Foce_of_Nature",
+      "archetypeOrder": "epicPool",
       "powerIndex": 4,
       "castTimeReal": 3.1,
       "toggleCost": 3.25,
+      "isEpic": true,
       "fullName": "Epic_Field_Mastery_Force_of_Nature",
       "displayName": "Force of Nature",
       "requires": {
         "powers": {
-          "Epic_Field_Mastery_Temp_Invulnerability": true,
-          "Epic_Field_Mastery_Power_Blast": true,
-          "Epic_Field_Mastery_Energy_Torrent": true,
-          "Epic_Field_Mastery_Explosive_Blast": true
+          "Epic.Field_Mastery.Foce_of_Nature": true
         },
         "count": 2
       },

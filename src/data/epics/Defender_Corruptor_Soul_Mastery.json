@@ -6,15 +6,6 @@
   "displayName": "Soul Mastery",
   "powers": [
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "ToHit_Buff",
-        "Damage",
-        "Endurance_Discount",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Damage",
@@ -27,8 +18,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Corruptor_Soul_Mastery.Soul_Drain",
               "damageType": "Negative"
             }
@@ -46,7 +38,8 @@
               "variableModified": true,
               "effectType": "ToHit",
               "stacking": 1,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Corruptor_Soul_Mastery.Soul_Drain"
             }
           ]
@@ -63,7 +56,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Epic.Corruptor_Soul_Mastery.Soul_Drain",
               "damageType": "Smashing"
             },
@@ -76,7 +69,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Epic.Corruptor_Soul_Mastery.Soul_Drain",
               "damageType": "Lethal"
             },
@@ -89,7 +82,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Epic.Corruptor_Soul_Mastery.Soul_Drain",
               "damageType": "Fire"
             },
@@ -102,7 +95,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Epic.Corruptor_Soul_Mastery.Soul_Drain",
               "damageType": "Cold"
             },
@@ -115,7 +108,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Epic.Corruptor_Soul_Mastery.Soul_Drain",
               "damageType": "Energy"
             },
@@ -128,7 +121,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Epic.Corruptor_Soul_Mastery.Soul_Drain",
               "damageType": "Negative"
             },
@@ -141,7 +134,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Epic.Corruptor_Soul_Mastery.Soul_Drain",
               "damageType": "Toxic"
             },
@@ -154,13 +147,23 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Epic.Corruptor_Soul_Mastery.Soul_Drain",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "ToHit_Buff",
+        "Damage",
+        "Endurance_Discount",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Corruptor_Soul_Mastery.Soul_Drain",
+      "archetypeOrder": "epicPool",
       "powerIndex": 0,
       "castTimeReal": 4.092,
       "toggleCost": 19.5,
@@ -204,13 +207,6 @@
       "aoeModifier": 2.5
     },
     {
-      "allowedEnhancements": [
-        "Endurance_Discount",
-        "Recharge",
-        "Res_Damage"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Res_Dmg",
@@ -223,7 +219,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Corruptor_Soul_Mastery.Dark_Embrace",
               "damageType": "Smashing"
             },
@@ -235,7 +232,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Corruptor_Soul_Mastery.Dark_Embrace",
               "damageType": "Lethal"
             },
@@ -247,7 +245,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Corruptor_Soul_Mastery.Dark_Embrace",
               "damageType": "Toxic"
             },
@@ -259,7 +258,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Corruptor_Soul_Mastery.Dark_Embrace",
               "damageType": "Negative"
             },
@@ -270,7 +270,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Corruptor_Soul_Mastery.Dark_Embrace",
               "damageType": "Energy"
             },
@@ -281,7 +282,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Corruptor_Soul_Mastery.Dark_Embrace",
               "damageType": "Fire"
             },
@@ -292,7 +294,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Corruptor_Soul_Mastery.Dark_Embrace",
               "damageType": "Cold"
             },
@@ -303,13 +306,22 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Corruptor_Soul_Mastery.Dark_Embrace",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Endurance_Discount",
+        "Recharge",
+        "Res_Damage"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Corruptor_Soul_Mastery.Dark_Embrace",
+      "archetypeOrder": "epicPool",
       "powerIndex": 1,
       "castTimeReal": 0.67,
       "toggleCost": 0.325,
@@ -346,111 +358,191 @@
       "powerType": "Toggle"
     },
     {
-      "allowedEnhancements": [
-        "Endurance_Discount",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Stun",
           "values": [
             {
+              "etModifies": "Mez",
               "mag": {
                 "pve": 0.786720037
               },
               "probability": 1,
               "duration": 15,
               "effectType": "Enhancement",
-              "eTModifies": 19,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Corruptor_Soul_Mastery.Power_Boost",
               "mezType": "Stun"
             },
             {
+              "etModifies": "Mez",
               "mag": {
                 "pve": 0.786720037
               },
               "probability": 1,
               "duration": 15,
               "effectType": "Enhancement",
-              "eTModifies": 19,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Corruptor_Soul_Mastery.Power_Boost",
               "mezType": "Sleep"
             },
             {
+              "etModifies": "Mez",
               "mag": {
                 "pve": 0.786720037
               },
               "probability": 1,
               "duration": 15,
               "effectType": "Enhancement",
-              "eTModifies": 19,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Corruptor_Soul_Mastery.Power_Boost",
               "mezType": "Confuse"
             },
             {
+              "etModifies": "Mez",
               "mag": {
                 "pve": 0.786720037
               },
               "probability": 1,
               "duration": 15,
               "effectType": "Enhancement",
-              "eTModifies": 19,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Corruptor_Soul_Mastery.Power_Boost",
-              "mezType": "Terrorize"
+              "mezType": "Terror"
             },
             {
+              "etModifies": "Mez",
               "mag": {
                 "pve": 0.786720037
               },
               "probability": 1,
               "duration": 15,
               "effectType": "Enhancement",
-              "eTModifies": 19,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Corruptor_Soul_Mastery.Power_Boost",
-              "mezType": "Immobilization"
+              "mezType": "Immob"
             },
             {
+              "etModifies": "Mez",
               "mag": {
                 "pve": 0.786720037
               },
               "probability": 1,
               "duration": 15,
               "effectType": "Enhancement",
-              "eTModifies": 19,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Corruptor_Soul_Mastery.Power_Boost",
               "mezType": "Hold"
             },
             {
+              "etModifies": "SpeedRunning",
               "mag": {
                 "pve": 0.786720037
               },
               "probability": 1,
               "duration": 15,
               "effectType": "Enhancement",
-              "eTModifies": 32,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Epic.Corruptor_Soul_Mastery.Power_Boost"
+            },
+            {
+              "etModifies": "SpeedFlying",
+              "mag": {
+                "pve": 0.786720037
+              },
+              "probability": 1,
+              "duration": 15,
+              "effectType": "Enhancement",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Epic.Corruptor_Soul_Mastery.Power_Boost"
+            },
+            {
+              "etModifies": "Defense",
+              "mag": {
+                "pve": 0.786720037
+              },
+              "probability": 1,
+              "duration": 15,
+              "effectType": "Enhancement",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Epic.Corruptor_Soul_Mastery.Power_Boost"
+            },
+            {
+              "etModifies": "Heal",
+              "mag": {
+                "pve": 0.786720037
+              },
+              "probability": 1,
+              "duration": 15,
+              "effectType": "Enhancement",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Epic.Corruptor_Soul_Mastery.Power_Boost"
+            },
+            {
+              "etModifies": "Absorb",
+              "mag": {
+                "pve": 0.786720037
+              },
+              "probability": 1,
+              "duration": 15,
+              "effectType": "Enhancement",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Epic.Corruptor_Soul_Mastery.Power_Boost"
+            },
+            {
+              "etModifies": "ToHit",
+              "mag": {
+                "pve": 0.786720037
+              },
+              "probability": 1,
+              "duration": 15,
+              "effectType": "Enhancement",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Epic.Corruptor_Soul_Mastery.Power_Boost"
+            },
+            {
+              "etModifies": "Endurance",
+              "mag": {
+                "pve": 0.786720037
+              },
+              "probability": 1,
+              "duration": 15,
+              "effectType": "Enhancement",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Corruptor_Soul_Mastery.Power_Boost"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Endurance_Discount",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Corruptor_Soul_Mastery.Power_Boost",
+      "archetypeOrder": "epicPool",
       "powerIndex": 2,
       "castTimeReal": 1.17,
       "toggleCost": 9.75,
+      "isEpic": true,
       "fullName": "Epic_Soul_Mastery_Power_Boost",
       "displayName": "Power Boost",
       "requires": {
         "powers": {
-          "Epic_Soul_Mastery_Soul_Drain": true,
-          "Epic_Soul_Mastery_Dark_Embrace": true
+          "Epic.Corruptor_Soul_Mastery.Power_Boost": true
         },
         "count": 1
       },
@@ -477,16 +569,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Hold",
-        "Range",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Immobilize",
@@ -499,8 +581,9 @@
               "duration": 11.92,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.Corruptor_Soul_Mastery.Soul_Storm",
               "mezType": "Hold"
@@ -518,8 +601,9 @@
               "duration": 2,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.Corruptor_Soul_Mastery.Soul_Storm",
               "mezType": "Hold"
@@ -539,23 +623,35 @@
               "effectType": "Damage",
               "ticks": 11,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Corruptor_Soul_Mastery.Soul_Storm",
               "damageType": "Negative"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Hold",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Corruptor_Soul_Mastery.Soul_Storm",
+      "archetypeOrder": "epicPool",
       "powerIndex": 3,
       "castTimeReal": 2.17,
       "toggleCost": 10.66,
+      "isEpic": true,
       "fullName": "Epic_Soul_Mastery_Soul_Storm",
       "displayName": "Soul Storm",
       "requires": {
         "powers": {
-          "Epic_Soul_Mastery_Soul_Drain": true,
-          "Epic_Soul_Mastery_Dark_Embrace": true
+          "Epic.Corruptor_Soul_Mastery.Soul_Storm": true
         },
         "count": 1
       },
@@ -587,6 +683,23 @@
       "aoeModifier": 1
     },
     {
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": -1
+              },
+              "probability": 1,
+              "duration": 240,
+              "effectType": "EntCreate",
+              "toWho": "all",
+              "powerFullName": "Epic.Corruptor_Soul_Mastery.Summon_Mistress"
+            }
+          ]
+        }
+      ],
       "allowedEnhancements": [
         "Accuracy",
         "Damage",
@@ -599,35 +712,17 @@
         "Stun"
       ],
       "enhancementCount": 6,
+      "ogFullName": "Epic.Corruptor_Soul_Mastery.Summon_Mistress",
       "archetypeOrder": "epicPool",
-      "effects": [
-        {
-          "effectType": "Ones",
-          "values": [
-            {
-              "mag": {
-                "pve": -1
-              },
-              "probability": 1,
-              "duration": 240,
-              "effectType": "EntCreate",
-              "toWho": "All",
-              "powerFullName": "Epic.Corruptor_Soul_Mastery.Summon_Mistress"
-            }
-          ]
-        }
-      ],
       "powerIndex": 4,
       "castTimeReal": 3.2,
       "toggleCost": 26,
+      "isEpic": true,
       "fullName": "Epic_Soul_Mastery_Summon_Mistress",
       "displayName": "Summon Mistress",
       "requires": {
         "powers": {
-          "Epic_Soul_Mastery_Soul_Drain": true,
-          "Epic_Soul_Mastery_Dark_Embrace": true,
-          "Epic_Soul_Mastery_Power_Boost": true,
-          "Epic_Soul_Mastery_Soul_Storm": true
+          "Epic.Corruptor_Soul_Mastery.Summon_Mistress": true
         },
         "count": 2
       },

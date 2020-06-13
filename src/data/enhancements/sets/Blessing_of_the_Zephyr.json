@@ -2,235 +2,93 @@
   "fullName": "IOSet.Blessing_of_the_Zephyr",
   "enhancements": [
     {
-      "effects": [
-        {
-          "effectType": "Range",
-          "values": [
-            {
-              "etModifies": "Range",
-              "mag": {
-                "pve": 0.255
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Blessing_of_the_Zephyr_A.Attuned_Blessing_of_the_Zephyr_A"
-            }
-          ]
-        },
-        {
-          "effectType": "Fly",
-          "values": [
-            {
-              "etModifies": "SpeedFlying",
-              "mag": {
-                "pve": 0.424
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Blessing_of_the_Zephyr_A.Attuned_Blessing_of_the_Zephyr_A"
-            }
-          ]
-        },
-        {
-          "effectType": "Jump",
-          "values": [
-            {
-              "etModifies": "SpeedJumping",
-              "mag": {
-                "pve": 0.424
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Blessing_of_the_Zephyr_A.Attuned_Blessing_of_the_Zephyr_A"
-            }
-          ]
-        },
-        {
-          "effectType": "Boosts_33",
-          "values": [
-            {
-              "etModifies": "JumpHeight",
-              "mag": {
-                "pve": 0.424
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Blessing_of_the_Zephyr_A.Attuned_Blessing_of_the_Zephyr_A"
-            }
-          ]
-        },
-        {
-          "effectType": "Run",
-          "values": [
-            {
-              "etModifies": "SpeedRunning",
-              "mag": {
-                "pve": 0.424
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Blessing_of_the_Zephyr_A.Attuned_Blessing_of_the_Zephyr_A"
-            }
-          ]
-        }
-      ],
+      "type": "set",
+      "fullName": "Boosts.Attuned_Blessing_of_the_Zephyr_A.Attuned_Blessing_of_the_Zephyr_A",
+      "displayName": "Run Speed, Jump, Flight Speed, Range",
       "description": {
         "short": "+Run Speed, +Jump, +Flight Speed, +Range",
         "long": "Enhances the range of a teleport power by {Boost.Attrib.Range.Scale}%, the flight speed of a power by {Boost.Attrib.Fly.Scale}%, the jumping ability of a power by {Boost.Attrib.Jump.Scale}% and the run speed of a power by {Boost.Attrib.Run.Scale}%.  NOTE: This enhancement can be slotted into any travel power and will enhance run speed, jumping, flight speed and teleport range."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Blessing_of_the_Zephyr_A.Attuned_Blessing_of_the_Zephyr_A",
-      "setName": "Blessing_of_the_Zephyr",
-      "displayName": "Run Speed, Jump, Flight Speed, Range"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Range",
-          "values": [
-            {
-              "etModifies": "Range",
-              "mag": {
-                "pve": 0.159375
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Blessing_of_the_Zephyr_B.Attuned_Blessing_of_the_Zephyr_B"
+          "mag": {
+            "IO": {
+              "cap": 0.255
             }
-          ]
+          },
+          "stat": "+Travel",
+          "toWho": "self"
         },
         {
-          "effectType": "Fly",
-          "values": [
-            {
-              "etModifies": "SpeedFlying",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Blessing_of_the_Zephyr_B.Attuned_Blessing_of_the_Zephyr_B"
+          "mag": {
+            "IO": {
+              "cap": 0.424
             }
-          ]
-        },
-        {
-          "effectType": "Jump",
-          "values": [
-            {
-              "etModifies": "SpeedJumping",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Blessing_of_the_Zephyr_B.Attuned_Blessing_of_the_Zephyr_B"
-            }
-          ]
-        },
-        {
-          "effectType": "Boosts_33",
-          "values": [
-            {
-              "etModifies": "JumpHeight",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Blessing_of_the_Zephyr_B.Attuned_Blessing_of_the_Zephyr_B"
-            }
-          ]
-        },
-        {
-          "effectType": "Run",
-          "values": [
-            {
-              "etModifies": "SpeedRunning",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Blessing_of_the_Zephyr_B.Attuned_Blessing_of_the_Zephyr_B"
-            }
-          ]
-        },
-        {
-          "effectType": "Endurance",
-          "values": [
-            {
-              "etModifies": "EnduranceDiscount",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Blessing_of_the_Zephyr_B.Attuned_Blessing_of_the_Zephyr_B"
-            }
-          ]
+          },
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Blessing_of_the_Zephyr_B.Attuned_Blessing_of_the_Zephyr_B",
+      "displayName": "Run Speed, Jump, Flight Speed, Range/Endurance",
       "description": {
         "short": "+Run Speed, +Jump, +Flight Speed, +Range, -End Cost",
         "long": "Enhances the range of a teleport power by {Boost.Attrib.Range.Scale}%, the flight speed of a power by {Boost.Attrib.Fly.Scale}%, the jumping ability of a power by {Boost.Attrib.Jump.Scale}%, the run speed of a power by {Boost.Attrib.Run.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%.  NOTE: This enhancement can be slotted into any travel power and will enhance run speed, jumping, flight speed and teleport range."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Blessing_of_the_Zephyr_B.Attuned_Blessing_of_the_Zephyr_B",
-      "setName": "Blessing_of_the_Zephyr",
-      "displayName": "Run Speed, Jump, Flight Speed, Range/Endurance"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Knockback",
-          "values": [
-            {
-              "mag": {
-                "pve": -4
-              },
-              "cancelOnMiss": true,
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Null",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Blessing_of_the_Zephyr_C.Attuned_Blessing_of_the_Zephyr_C"
+          "mag": {
+            "IO": {
+              "cap": 0.159375
             }
-          ]
+          },
+          "stat": "+Travel",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Blessing_of_the_Zephyr_C.Attuned_Blessing_of_the_Zephyr_C",
+      "displayName": "Knockback Reduction (4 points)",
       "description": {
         "short": "-Knockback",
         "long": "Reduces Knockback effects by -4.  NOTE: This enhancement can be slotted into any travel power."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Blessing_of_the_Zephyr_C.Attuned_Blessing_of_the_Zephyr_C",
-      "setName": "Blessing_of_the_Zephyr",
-      "displayName": "Knockback Reduction (4 points)"
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": -4
+            }
+          },
+          "stat": "Knockback Reduction",
+          "cancelOnMiss": true,
+          "toWho": "self"
+        }
+      ]
     }
   ],
   "levels": {

@@ -6,16 +6,6 @@
   "displayName": "Soul Mastery",
   "powers": [
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "ToHit_Debuff",
-        "Endurance_Discount",
-        "Range",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Damage",
@@ -30,8 +20,9 @@
               "effectType": "Damage",
               "ticks": 8,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Brute_Soul_Mastery.Gloom",
               "damageType": "Negative"
             }
@@ -48,8 +39,9 @@
               "duration": 10,
               "effectType": "ToHit",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Brute_Soul_Mastery.Gloom"
             }
           ]
@@ -66,7 +58,7 @@
               "effectType": "Rage",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Epic.Brute_Soul_Mastery.Gloom"
             }
           ]
@@ -83,9 +75,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.Brute_Soul_Mastery.Gloom",
               "requiresToHitCheck": true,
@@ -104,14 +97,26 @@
               "effectType": "Damage",
               "ticks": 8,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Brute_Soul_Mastery.Gloom",
               "damageType": "Fire"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "ToHit_Debuff",
+        "Endurance_Discount",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Brute_Soul_Mastery.Gloom",
+      "archetypeOrder": "epicPool",
       "powerIndex": 0,
       "castTimeReal": 1.1,
       "toggleCost": 10.66,
@@ -150,16 +155,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Immobilize",
-        "Range",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Damage",
@@ -175,8 +170,9 @@
               "ticks": 8,
               "delayedTime": 1,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Brute_Soul_Mastery.Soul_Tentacles",
               "damageType": "Smashing"
             },
@@ -188,8 +184,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Brute_Soul_Mastery.Soul_Tentacles",
               "damageType": "Negative"
             }
@@ -206,10 +203,11 @@
               "duration": 17.8800011,
               "effectType": "Mez",
               "stacking": 1,
-              "toWho": "Target",
+              "buffable": true,
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.Brute_Soul_Mastery.Soul_Tentacles",
-              "mezType": "Immobilization"
+              "mezType": "Immob"
             }
           ]
         },
@@ -224,11 +222,12 @@
               "duration": 2,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.Brute_Soul_Mastery.Soul_Tentacles",
-              "mezType": "Immobilization"
+              "mezType": "Immob"
             },
             {
               "mag": {
@@ -239,7 +238,7 @@
               "effectType": "Rage",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Epic.Brute_Soul_Mastery.Soul_Tentacles"
             }
           ]
@@ -256,9 +255,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.Brute_Soul_Mastery.Soul_Tentacles",
               "requiresToHitCheck": true,
@@ -278,14 +278,26 @@
               "ticks": 8,
               "delayedTime": 1,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Brute_Soul_Mastery.Soul_Tentacles",
               "damageType": "Fire"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Immobilize",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Brute_Soul_Mastery.Soul_Tentacles",
+      "archetypeOrder": "epicPool",
       "powerIndex": 1,
       "castTimeReal": 1.67,
       "toggleCost": 12.74,
@@ -326,14 +338,6 @@
       "aoeModifier": 2.08662224
     },
     {
-      "allowedEnhancements": [
-        "ToHit_Debuff",
-        "Endurance_Discount",
-        "Range",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Debuff_Dam",
@@ -347,7 +351,7 @@
               "duration": 0.75,
               "effectType": "DamageBuff",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Brute_Soul_Mastery.Darkest_Night",
               "damageType": "Smashing"
             },
@@ -360,7 +364,7 @@
               "duration": 0.75,
               "effectType": "DamageBuff",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Brute_Soul_Mastery.Darkest_Night",
               "damageType": "Lethal"
             },
@@ -373,7 +377,7 @@
               "duration": 0.75,
               "effectType": "DamageBuff",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Brute_Soul_Mastery.Darkest_Night",
               "damageType": "Fire"
             },
@@ -386,7 +390,7 @@
               "duration": 0.75,
               "effectType": "DamageBuff",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Brute_Soul_Mastery.Darkest_Night",
               "damageType": "Cold"
             },
@@ -399,7 +403,7 @@
               "duration": 0.75,
               "effectType": "DamageBuff",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Brute_Soul_Mastery.Darkest_Night",
               "damageType": "Energy"
             },
@@ -412,7 +416,7 @@
               "duration": 0.75,
               "effectType": "DamageBuff",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Brute_Soul_Mastery.Darkest_Night",
               "damageType": "Negative"
             },
@@ -425,7 +429,7 @@
               "duration": 0.75,
               "effectType": "DamageBuff",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Brute_Soul_Mastery.Darkest_Night",
               "damageType": "Toxic"
             },
@@ -438,7 +442,7 @@
               "duration": 0.75,
               "effectType": "DamageBuff",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Brute_Soul_Mastery.Darkest_Night",
               "damageType": "Psionic"
             }
@@ -454,22 +458,32 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "ToHit",
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Brute_Soul_Mastery.Darkest_Night"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "ToHit_Debuff",
+        "Endurance_Discount",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Brute_Soul_Mastery.Darkest_Night",
+      "archetypeOrder": "epicPool",
       "powerIndex": 2,
       "castTimeReal": 2.37,
       "toggleCost": 0.65,
+      "isEpic": true,
       "fullName": "Epic_Soul_Mastery_Darkest_Night",
       "displayName": "Darkest Night",
       "requires": {
         "powers": {
-          "Epic_Soul_Mastery_Gloom": true,
-          "Epic_Soul_Mastery_Soul_Tentacles": true
+          "Epic.Brute_Soul_Mastery.Darkest_Night": true
         },
         "count": 1
       },
@@ -503,16 +517,6 @@
       "powerType": "Toggle"
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "ToHit_Debuff",
-        "Endurance_Discount",
-        "Range",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Damage",
@@ -525,8 +529,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Brute_Soul_Mastery.Dark_Obliteration",
               "damageType": "Negative"
             }
@@ -543,8 +548,9 @@
               "duration": 10,
               "effectType": "ToHit",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Brute_Soul_Mastery.Dark_Obliteration"
             }
           ]
@@ -561,7 +567,7 @@
               "effectType": "Rage",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Epic.Brute_Soul_Mastery.Dark_Obliteration"
             }
           ]
@@ -578,9 +584,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.Brute_Soul_Mastery.Dark_Obliteration",
               "requiresToHitCheck": true,
@@ -597,23 +604,35 @@
               },
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Brute_Soul_Mastery.Dark_Obliteration",
               "damageType": "Fire"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "ToHit_Debuff",
+        "Endurance_Discount",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Brute_Soul_Mastery.Dark_Obliteration",
+      "archetypeOrder": "epicPool",
       "powerIndex": 3,
       "castTimeReal": 1,
       "toggleCost": 18.98,
+      "isEpic": true,
       "fullName": "Epic_Soul_Mastery_Dark_Obliteration",
       "displayName": "Dark Obliteration",
       "requires": {
         "powers": {
-          "Epic_Soul_Mastery_Gloom": true,
-          "Epic_Soul_Mastery_Soul_Tentacles": true
+          "Epic.Brute_Soul_Mastery.Dark_Obliteration": true
         },
         "count": 1
       },
@@ -648,15 +667,6 @@
       "aoeModifier": 3.25
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Range",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Ones",
@@ -668,23 +678,31 @@
               "probability": 1,
               "duration": 240,
               "effectType": "EntCreate",
-              "toWho": "All",
+              "toWho": "all",
               "powerFullName": "Epic.Brute_Soul_Mastery.Summon_Widow"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Brute_Soul_Mastery.Summon_Widow",
+      "archetypeOrder": "epicPool",
       "powerIndex": 4,
       "castTimeReal": 3.2,
       "toggleCost": 26,
+      "isEpic": true,
       "fullName": "Epic_Soul_Mastery_Summon_Widow",
       "displayName": "Summon Widow",
       "requires": {
         "powers": {
-          "Epic_Soul_Mastery_Gloom": true,
-          "Epic_Soul_Mastery_Soul_Tentacles": true,
-          "Epic_Soul_Mastery_Darkest_Night": true,
-          "Epic_Soul_Mastery_Dark_Obliteration": true
+          "Epic.Brute_Soul_Mastery.Summon_Widow": true
         },
         "count": 2
       },

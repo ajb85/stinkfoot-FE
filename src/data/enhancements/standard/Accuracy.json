@@ -5,21 +5,27 @@
   "fullName": "Enhancement_Accuracy",
   "isUnique": false,
   "imageName": "Accuracy.png",
-  "effects": {
-    "TO": [{ "mag": 0.0833, "effectId": "Accuracy" }],
-    "SO": [{ "mag": 0.3333, "effectId": "Accuracy" }],
-    "DO": [{ "mag": 0.1666, "effectId": "Accuracy" }],
-    "IO": {
-      "10": [{ "mag": 0.1, "effectId": "Accuracy" }],
-      "15": [{ "mag": 0.15, "effectId": "Accuracy" }],
-      "20": [{ "mag": 0.2, "effectId": "Accuracy" }],
-      "25": [{ "mag": 0.25, "effectId": "Accuracy" }],
-      "30": [{ "mag": 0.3, "effectId": "Accuracy" }],
-      "35": [{ "mag": 0.325, "effectId": "Accuracy" }],
-      "40": [{ "mag": 0.35, "effectId": "Accuracy" }],
-      "45": [{ "mag": 0.375, "effectId": "Accuracy" }],
-      "50": [{ "mag": 0.4, "effectId": "Accuracy" }],
-      "cap": [{ "mag": 0.424, "effectId": "Accuracy" }]
+  "effects": [
+    {
+      "mag": {
+        "TO": 0.0833,
+        "SO": 0.3333,
+        "DO": 0.1666,
+        "IO": {
+          "10": 0.1,
+          "15": 0.15,
+          "20": 0.2,
+          "25": 0.25,
+          "30": 0.3,
+          "35": 0.325,
+          "40": 0.35,
+          "45": 0.375,
+          "50": 0.4,
+          "cap": 0.424
+        }
+      },
+      "stat": "Accuracy",
+      "toWho": "self"
     }
-  }
+  ]
 }

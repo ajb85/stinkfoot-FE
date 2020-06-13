@@ -6,16 +6,6 @@
   "displayName": "Mace Mastery",
   "powers": [
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Endurance_Discount",
-        "Immobilize",
-        "Range",
-        "Recharge",
-        "Slow"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Immobilize",
@@ -28,11 +18,12 @@
               "duration": 17.8800011,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.Mastermind_Mace_Mastery.Web_Envelope",
-              "mezType": "Immobilization"
+              "mezType": "Immob"
             }
           ]
         },
@@ -47,11 +38,12 @@
               "duration": 2,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.Mastermind_Mace_Mastery.Web_Envelope",
-              "mezType": "Immobilization"
+              "mezType": "Immob"
             },
             {
               "mag": {
@@ -61,7 +53,8 @@
               "duration": 15,
               "effectType": "JumpHeight",
               "stacking": 1,
-              "toWho": "Target",
+              "buffable": true,
+              "toWho": "target",
               "powerFullName": "Epic.Mastermind_Mace_Mastery.Web_Envelope"
             },
             {
@@ -72,7 +65,8 @@
               "duration": 15,
               "effectType": "Fly",
               "stacking": 1,
-              "toWho": "Target",
+              "buffable": true,
+              "toWho": "target",
               "powerFullName": "Epic.Mastermind_Mace_Mastery.Web_Envelope"
             }
           ]
@@ -81,15 +75,15 @@
           "effectType": "Slow",
           "values": [
             {
+              "etModifies": "RechargeTime",
               "mag": {
                 "pve": -0.2
               },
               "probability": 1,
               "duration": 15,
               "effectType": "Enhancement",
-              "eTModifies": 25,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Mastermind_Mace_Mastery.Web_Envelope",
               "nearGround": true
             },
@@ -100,8 +94,9 @@
               "probability": 1,
               "duration": 15,
               "effectType": "SpeedRunning",
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Mastermind_Mace_Mastery.Web_Envelope",
               "nearGround": true
             },
@@ -112,14 +107,26 @@
               "probability": 1,
               "duration": 15,
               "effectType": "SpeedFlying",
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Mastermind_Mace_Mastery.Web_Envelope",
               "nearGround": true
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Endurance_Discount",
+        "Immobilize",
+        "Range",
+        "Recharge",
+        "Slow"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Mastermind_Mace_Mastery.Web_Envelope",
+      "archetypeOrder": "epicPool",
       "powerIndex": 0,
       "castTimeReal": 2,
       "toggleCost": 12.74,
@@ -157,13 +164,6 @@
       "aoeModifier": 3.25
     },
     {
-      "allowedEnhancements": [
-        "Defense_Buff",
-        "Endurance_Discount",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Buff_Def",
@@ -176,7 +176,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Mastermind_Mace_Mastery.Scorpion_Shield",
               "damageType": "Smashing"
             },
@@ -188,7 +189,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Mastermind_Mace_Mastery.Scorpion_Shield",
               "damageType": "Lethal"
             },
@@ -200,7 +202,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Mastermind_Mace_Mastery.Scorpion_Shield",
               "damageType": "Energy"
             },
@@ -211,7 +214,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Mastermind_Mace_Mastery.Scorpion_Shield",
               "damageType": "Cold"
             },
@@ -222,7 +226,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Mastermind_Mace_Mastery.Scorpion_Shield",
               "damageType": "Fire"
             },
@@ -233,7 +238,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Mastermind_Mace_Mastery.Scorpion_Shield",
               "damageType": "Psionic"
             },
@@ -244,7 +250,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Mastermind_Mace_Mastery.Scorpion_Shield",
               "damageType": "Negative"
             }
@@ -261,7 +268,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Mastermind_Mace_Mastery.Scorpion_Shield",
               "damageType": "Toxic"
             }
@@ -277,7 +285,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Elusivity",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Mastermind_Mace_Mastery.Scorpion_Shield",
               "damageType": "Smashing"
             },
@@ -288,7 +297,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Elusivity",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Mastermind_Mace_Mastery.Scorpion_Shield",
               "damageType": "Lethal"
             },
@@ -299,7 +309,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Elusivity",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Mastermind_Mace_Mastery.Scorpion_Shield",
               "damageType": "Cold"
             },
@@ -310,7 +321,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Elusivity",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Mastermind_Mace_Mastery.Scorpion_Shield",
               "damageType": "Fire"
             },
@@ -321,7 +333,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Elusivity",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Mastermind_Mace_Mastery.Scorpion_Shield",
               "damageType": "Psionic"
             },
@@ -332,7 +345,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Elusivity",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Mastermind_Mace_Mastery.Scorpion_Shield",
               "damageType": "Energy"
             },
@@ -342,12 +356,21 @@
               },
               "probability": 1,
               "duration": 0.75,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Mastermind_Mace_Mastery.Scorpion_Shield"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Defense_Buff",
+        "Endurance_Discount",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Mastermind_Mace_Mastery.Scorpion_Shield",
+      "archetypeOrder": "epicPool",
       "powerIndex": 1,
       "castTimeReal": 2,
       "toggleCost": 0.325,
@@ -384,16 +407,6 @@
       "powerType": "Toggle"
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Knockback",
-        "Range",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Damage",
@@ -406,8 +419,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Mastermind_Mace_Mastery.Mace_Beam_Volley",
               "damageType": "Smashing"
             },
@@ -419,8 +433,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Mastermind_Mace_Mastery.Mace_Beam_Volley",
               "damageType": "Energy"
             }
@@ -437,23 +452,35 @@
               "probability": 0.3,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Mastermind_Mace_Mastery.Mace_Beam_Volley",
               "mezType": "Knockback"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Knockback",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Mastermind_Mace_Mastery.Mace_Beam_Volley",
+      "archetypeOrder": "epicPool",
       "powerIndex": 2,
       "castTimeReal": 2,
       "toggleCost": 18.98,
+      "isEpic": true,
       "fullName": "Epic_Mace_Mastery_Mace_Beam_Volley",
       "displayName": "Mace Beam Volley",
       "requires": {
         "powers": {
-          "Epic_Mace_Mastery_Web_Envelope": true,
-          "Epic_Mace_Mastery_Scorpion_Shield": true
+          "Epic.Mastermind_Mace_Mastery.Mace_Beam_Volley": true
         },
         "count": 1
       },
@@ -488,111 +515,191 @@
       "aoeModifier": 2.54161286
     },
     {
-      "allowedEnhancements": [
-        "Endurance_Discount",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Stun",
           "values": [
             {
+              "etModifies": "Mez",
               "mag": {
                 "pve": 0.52448
               },
               "probability": 1,
               "duration": 15,
               "effectType": "Enhancement",
-              "eTModifies": 19,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Mastermind_Mace_Mastery.Power_Boost",
               "mezType": "Stun"
             },
             {
+              "etModifies": "Mez",
               "mag": {
                 "pve": 0.52448
               },
               "probability": 1,
               "duration": 15,
               "effectType": "Enhancement",
-              "eTModifies": 19,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Mastermind_Mace_Mastery.Power_Boost",
               "mezType": "Sleep"
             },
             {
+              "etModifies": "Mez",
               "mag": {
                 "pve": 0.52448
               },
               "probability": 1,
               "duration": 15,
               "effectType": "Enhancement",
-              "eTModifies": 19,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Mastermind_Mace_Mastery.Power_Boost",
               "mezType": "Confuse"
             },
             {
+              "etModifies": "Mez",
               "mag": {
                 "pve": 0.52448
               },
               "probability": 1,
               "duration": 15,
               "effectType": "Enhancement",
-              "eTModifies": 19,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Mastermind_Mace_Mastery.Power_Boost",
-              "mezType": "Terrorize"
+              "mezType": "Terror"
             },
             {
+              "etModifies": "Mez",
               "mag": {
                 "pve": 0.52448
               },
               "probability": 1,
               "duration": 15,
               "effectType": "Enhancement",
-              "eTModifies": 19,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Mastermind_Mace_Mastery.Power_Boost",
-              "mezType": "Immobilization"
+              "mezType": "Immob"
             },
             {
+              "etModifies": "Mez",
               "mag": {
                 "pve": 0.52448
               },
               "probability": 1,
               "duration": 15,
               "effectType": "Enhancement",
-              "eTModifies": 19,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Mastermind_Mace_Mastery.Power_Boost",
               "mezType": "Hold"
             },
             {
+              "etModifies": "SpeedRunning",
               "mag": {
                 "pve": 0.52448
               },
               "probability": 1,
               "duration": 15,
               "effectType": "Enhancement",
-              "eTModifies": 32,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Epic.Mastermind_Mace_Mastery.Power_Boost"
+            },
+            {
+              "etModifies": "SpeedFlying",
+              "mag": {
+                "pve": 0.52448
+              },
+              "probability": 1,
+              "duration": 15,
+              "effectType": "Enhancement",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Epic.Mastermind_Mace_Mastery.Power_Boost"
+            },
+            {
+              "etModifies": "Defense",
+              "mag": {
+                "pve": 0.52448
+              },
+              "probability": 1,
+              "duration": 15,
+              "effectType": "Enhancement",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Epic.Mastermind_Mace_Mastery.Power_Boost"
+            },
+            {
+              "etModifies": "Heal",
+              "mag": {
+                "pve": 0.52448
+              },
+              "probability": 1,
+              "duration": 15,
+              "effectType": "Enhancement",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Epic.Mastermind_Mace_Mastery.Power_Boost"
+            },
+            {
+              "etModifies": "Absorb",
+              "mag": {
+                "pve": 0.52448
+              },
+              "probability": 1,
+              "duration": 15,
+              "effectType": "Enhancement",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Epic.Mastermind_Mace_Mastery.Power_Boost"
+            },
+            {
+              "etModifies": "ToHit",
+              "mag": {
+                "pve": 0.52448
+              },
+              "probability": 1,
+              "duration": 15,
+              "effectType": "Enhancement",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Epic.Mastermind_Mace_Mastery.Power_Boost"
+            },
+            {
+              "etModifies": "Endurance",
+              "mag": {
+                "pve": 0.52448
+              },
+              "probability": 1,
+              "duration": 15,
+              "effectType": "Enhancement",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Mastermind_Mace_Mastery.Power_Boost"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Endurance_Discount",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Mastermind_Mace_Mastery.Power_Boost",
+      "archetypeOrder": "epicPool",
       "powerIndex": 3,
       "castTimeReal": 1.17,
       "toggleCost": 9.75,
+      "isEpic": true,
       "fullName": "Epic_Mace_Mastery_Power_Boost",
       "displayName": "Power Boost",
       "requires": {
         "powers": {
-          "Epic_Mace_Mastery_Web_Envelope": true,
-          "Epic_Mace_Mastery_Scorpion_Shield": true
+          "Epic.Mastermind_Mace_Mastery.Power_Boost": true
         },
         "count": 1
       },
@@ -619,16 +726,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Endurance_Discount",
-        "Hold",
-        "Range",
-        "Recharge",
-        "Slow"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Immobilize",
@@ -641,8 +738,9 @@
               "duration": 11.92,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.Mastermind_Mace_Mastery.Web_Cocoon",
               "mezType": "Hold"
@@ -660,8 +758,9 @@
               "duration": 2,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.Mastermind_Mace_Mastery.Web_Cocoon",
               "mezType": "Hold"
@@ -674,7 +773,8 @@
               "duration": 15,
               "effectType": "JumpHeight",
               "stacking": 1,
-              "toWho": "Target",
+              "buffable": true,
+              "toWho": "target",
               "powerFullName": "Epic.Mastermind_Mace_Mastery.Web_Cocoon"
             },
             {
@@ -685,7 +785,8 @@
               "duration": 15,
               "effectType": "Fly",
               "stacking": 1,
-              "toWho": "Target",
+              "buffable": true,
+              "toWho": "target",
               "powerFullName": "Epic.Mastermind_Mace_Mastery.Web_Cocoon"
             }
           ]
@@ -694,15 +795,15 @@
           "effectType": "Slow",
           "values": [
             {
+              "etModifies": "RechargeTime",
               "mag": {
                 "pve": -0.5
               },
               "probability": 1,
               "duration": 15,
               "effectType": "Enhancement",
-              "eTModifies": 25,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Mastermind_Mace_Mastery.Web_Cocoon",
               "nearGround": true
             },
@@ -713,8 +814,9 @@
               "probability": 1,
               "duration": 15,
               "effectType": "SpeedRunning",
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Mastermind_Mace_Mastery.Web_Cocoon",
               "nearGround": true
             },
@@ -725,25 +827,35 @@
               "probability": 1,
               "duration": 15,
               "effectType": "SpeedFlying",
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Mastermind_Mace_Mastery.Web_Cocoon",
               "nearGround": true
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Endurance_Discount",
+        "Hold",
+        "Range",
+        "Recharge",
+        "Slow"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Mastermind_Mace_Mastery.Web_Cocoon",
+      "archetypeOrder": "epicPool",
       "powerIndex": 4,
       "castTimeReal": 2,
       "toggleCost": 10.66,
+      "isEpic": true,
       "fullName": "Epic_Mace_Mastery_Web_Cocoon",
       "displayName": "Web Cocoon",
       "requires": {
         "powers": {
-          "Epic_Mace_Mastery_Web_Envelope": true,
-          "Epic_Mace_Mastery_Scorpion_Shield": true,
-          "Epic_Mace_Mastery_Mace_Beam_Volley": true,
-          "Epic_Mace_Mastery_Power_Boost": true
+          "Epic.Mastermind_Mace_Mastery.Web_Cocoon": true
         },
         "count": 2
       },
