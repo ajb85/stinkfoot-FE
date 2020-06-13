@@ -3,13 +3,14 @@ import React from 'react';
 import { usePlannerState } from 'Providers/PlannerStateManagement.js';
 import StandardEnhancements from '../Enhancements/Standards.js';
 import IOSetEnhancements from '../Enhancements/IOSets.js';
+import { getPowerStats } from '../../../js/powerCalculations.js';
 
 import styles from '../styles.module.scss';
 
 function PowerSlot({ slot, selectionState }) {
   const [enhNavigation, setEnhNavigation] = selectionState;
   const stateManager = usePlannerState();
-  const { getPower } = stateManager;
+  const { getPower, getState } = stateManager;
   const { level, power, enhSlots, powerSlotIndex } = slot;
 
   const isToggled = stateManager.toggledPowerSlotIndex === powerSlotIndex;
@@ -18,7 +19,7 @@ function PowerSlot({ slot, selectionState }) {
     stateManager.getFromState('powerSlots').length * 2 - powerSlotIndex * 2;
   const { togglePowerSlot, removeSlots } = stateManager;
 
-  const handlePillClick = (e, psIndex) => {
+  const handlePillClick = (psIndex) => (e) => {
     const { className } = e.target;
     if (
       className === 'pillText' ||
@@ -54,12 +55,14 @@ function PowerSlot({ slot, selectionState }) {
     sets: IOSetEnhancements,
   };
 
-  const Enhancements = enhancementComps[enhNavigation.section];
+  const powerStats = getPowerStats(getState())(power);
+  console.log('STATS: ', powerStats);
+  const EnhancementSelection = enhancementComps[enhNavigation.section];
 
   return (
     <div
       className={styles.powerContainer}
-      onClick={(e) => handlePillClick(e, powerSlotIndex)}
+      onClick={handlePillClick(powerSlotIndex)}
       key={powerSlotIndex}
     >
       <div
@@ -74,7 +77,7 @@ function PowerSlot({ slot, selectionState }) {
           ({level}) {p.displayName}
         </p>
 
-        {/* Select Enhancement Menu */}
+        {/* Open-Up Enhancement Menu */}
         <div className={styles.selectEnhancements}>
           <div className={styles.EnhSectionSelect}>
             <p
@@ -102,15 +105,25 @@ function PowerSlot({ slot, selectionState }) {
               Sets
             </p>
           </div>
-          <Enhancements
+          <EnhancementSelection
             selectionState={selectionState}
             powerSlotIndex={powerSlotIndex}
             power={p}
           />
+
+          {/* Power Stats */}
+          <div className={styles.powerStats}>
+            {powerStats.map(({ display, value }) => (
+              <div key={display}>
+                <p>{display}</p>
+                <p>{value.sum}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 
-      {/* Selected Enhancements Render */}
+      {/* Hover/Selected Enhancements */}
       <div
         style={{ zIndex: zIndex + 1 }}
         className={styles.enhancementsContainer}

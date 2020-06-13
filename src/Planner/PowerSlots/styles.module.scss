@@ -44,7 +44,7 @@ section.PowerSlots {
 
     &.toggled {
       cursor: default;
-      height: 12 * $lh;
+      height: 14 * $lh;
       border-radius: 0;
       overflow: visible;
     }
@@ -171,16 +171,10 @@ section.PowerSlots {
 
   .menu {
     position: absolute;
-    left: $lh;
-    top: -2 * $lh;
     cursor: default;
-
-    // height: 100px;
-
     width: 300px;
     background-color: $accent2;
     border: 1px solid white;
-    // padding: $lh/2;
 
     $textColor: $secondary;
 
@@ -304,5 +298,24 @@ section.PowerSlots {
         }
       }
     }
+  }
+}
+
+.powerStats {
+  padding: $lh/2;
+
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+
+  p {
+    text-align: center;
+  }
+  p:first-of-type {
+    font-size: 10px;
+  }
+
+  p:nth-of-type(2) {
+    font-size: 12px;
   }
 }
