@@ -6,15 +6,6 @@
   "displayName": "Psychic Blast",
   "powers": [
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Range",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Damage",
@@ -27,8 +18,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Psychic_Blast.Psionic_Dart",
               "damageType": "Psionic"
             }
@@ -38,16 +30,16 @@
           "effectType": "Slow",
           "values": [
             {
+              "etModifies": "RechargeTime",
               "mag": {
                 "pve": -0.3
               },
               "probability": 1,
               "duration": 6,
               "effectType": "Enhancement",
-              "eTModifies": 25,
               "stacking": 1,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Psychic_Blast.Psionic_Dart"
             }
           ]
@@ -65,7 +57,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Psychic_Blast.Psionic_Dart",
               "damageType": "Smashing"
             },
@@ -79,7 +71,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Psychic_Blast.Psionic_Dart",
               "damageType": "Lethal"
             },
@@ -93,7 +85,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Psychic_Blast.Psionic_Dart",
               "damageType": "Fire"
             },
@@ -107,7 +99,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Psychic_Blast.Psionic_Dart",
               "damageType": "Cold"
             },
@@ -121,7 +113,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Psychic_Blast.Psionic_Dart",
               "damageType": "Energy"
             },
@@ -135,7 +127,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Psychic_Blast.Psionic_Dart",
               "damageType": "Negative"
             },
@@ -149,7 +141,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Psychic_Blast.Psionic_Dart",
               "damageType": "Toxic"
             },
@@ -163,13 +155,23 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Psychic_Blast.Psionic_Dart",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Ranged.Psychic_Blast.Psionic_Dart",
+      "archetypeOrder": "primary",
       "powerIndex": 0,
       "castTimeReal": 1,
       "toggleCost": 5.2,
@@ -208,15 +210,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Range",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Damage",
@@ -229,8 +222,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Psychic_Blast.Mental_Blast",
               "damageType": "Psionic"
             }
@@ -240,16 +234,16 @@
           "effectType": "Slow",
           "values": [
             {
+              "etModifies": "RechargeTime",
               "mag": {
                 "pve": -0.3
               },
               "probability": 1,
               "duration": 6,
               "effectType": "Enhancement",
-              "eTModifies": 25,
               "stacking": 1,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Psychic_Blast.Mental_Blast"
             }
           ]
@@ -267,7 +261,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Psychic_Blast.Mental_Blast",
               "damageType": "Smashing"
             },
@@ -281,7 +275,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Psychic_Blast.Mental_Blast",
               "damageType": "Lethal"
             },
@@ -295,7 +289,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Psychic_Blast.Mental_Blast",
               "damageType": "Fire"
             },
@@ -309,7 +303,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Psychic_Blast.Mental_Blast",
               "damageType": "Cold"
             },
@@ -323,7 +317,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Psychic_Blast.Mental_Blast",
               "damageType": "Energy"
             },
@@ -337,7 +331,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Psychic_Blast.Mental_Blast",
               "damageType": "Negative"
             },
@@ -351,7 +345,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Psychic_Blast.Mental_Blast",
               "damageType": "Toxic"
             },
@@ -365,13 +359,23 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Psychic_Blast.Mental_Blast",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Ranged.Psychic_Blast.Mental_Blast",
+      "archetypeOrder": "primary",
       "powerIndex": 1,
       "castTimeReal": 1.67,
       "toggleCost": 8.528,
@@ -410,16 +414,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Knockback",
-        "Range",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Damage",
@@ -431,8 +425,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Psychic_Blast.Telekinetic_Blast",
               "damageType": "Smashing"
             },
@@ -444,8 +439,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Psychic_Blast.Telekinetic_Blast",
               "damageType": "Psionic"
             }
@@ -462,8 +458,9 @@
               "probability": 0.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Psychic_Blast.Telekinetic_Blast",
               "mezType": "Knockback"
             }
@@ -482,7 +479,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Psychic_Blast.Telekinetic_Blast",
               "damageType": "Smashing"
             },
@@ -496,7 +493,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Psychic_Blast.Telekinetic_Blast",
               "damageType": "Lethal"
             },
@@ -510,7 +507,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Psychic_Blast.Telekinetic_Blast",
               "damageType": "Fire"
             },
@@ -524,7 +521,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Psychic_Blast.Telekinetic_Blast",
               "damageType": "Cold"
             },
@@ -538,7 +535,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Psychic_Blast.Telekinetic_Blast",
               "damageType": "Energy"
             },
@@ -552,7 +549,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Psychic_Blast.Telekinetic_Blast",
               "damageType": "Negative"
             },
@@ -566,7 +563,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Psychic_Blast.Telekinetic_Blast",
               "damageType": "Toxic"
             },
@@ -580,13 +577,24 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Psychic_Blast.Telekinetic_Blast",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Knockback",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Ranged.Psychic_Blast.Telekinetic_Blast",
+      "archetypeOrder": "primary",
       "powerIndex": 2,
       "castTimeReal": 1,
       "toggleCost": 10.192,
@@ -625,13 +633,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "ToHit_Buff",
-        "Endurance_Discount",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Buff_ToHit",
@@ -645,7 +646,8 @@
               "variableModified": true,
               "effectType": "ToHit",
               "stacking": 1,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Psychic_Blast.Aim"
             }
           ]
@@ -662,7 +664,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Psychic_Blast.Aim",
               "damageType": "Smashing"
             },
@@ -675,7 +677,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Psychic_Blast.Aim",
               "damageType": "Lethal"
             },
@@ -688,7 +690,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Psychic_Blast.Aim",
               "damageType": "Fire"
             },
@@ -701,7 +703,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Psychic_Blast.Aim",
               "damageType": "Cold"
             },
@@ -714,7 +716,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Psychic_Blast.Aim",
               "damageType": "Energy"
             },
@@ -727,7 +729,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Psychic_Blast.Aim",
               "damageType": "Negative"
             },
@@ -740,7 +742,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Psychic_Blast.Aim",
               "damageType": "Toxic"
             },
@@ -753,13 +755,21 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Psychic_Blast.Aim",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "ToHit_Buff",
+        "Endurance_Discount",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Ranged.Psychic_Blast.Aim",
+      "archetypeOrder": "primary",
       "powerIndex": 3,
       "castTimeReal": 1.17,
       "toggleCost": 5.2,
@@ -794,16 +804,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Range",
-        "Recharge",
-        "Sleep"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Damage",
@@ -816,8 +816,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Psychic_Blast.Will_Domination",
               "damageType": "Psionic"
             }
@@ -836,8 +837,9 @@
               "effectType": "Mez",
               "delayedTime": 0.25,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Blaster_Ranged.Psychic_Blast.Will_Domination",
               "mezType": "Sleep"
@@ -857,8 +859,9 @@
               "effectType": "Mez",
               "delayedTime": 0.25,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Blaster_Ranged.Psychic_Blast.Will_Domination",
               "mezType": "Sleep"
@@ -873,7 +876,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Psychic_Blast.Will_Domination",
               "damageType": "Smashing"
             },
@@ -887,7 +890,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Psychic_Blast.Will_Domination",
               "damageType": "Lethal"
             },
@@ -901,7 +904,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Psychic_Blast.Will_Domination",
               "damageType": "Fire"
             },
@@ -915,7 +918,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Psychic_Blast.Will_Domination",
               "damageType": "Cold"
             },
@@ -929,7 +932,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Psychic_Blast.Will_Domination",
               "damageType": "Energy"
             },
@@ -943,7 +946,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Psychic_Blast.Will_Domination",
               "damageType": "Negative"
             },
@@ -957,7 +960,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Psychic_Blast.Will_Domination",
               "damageType": "Toxic"
             },
@@ -971,13 +974,24 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Psychic_Blast.Will_Domination",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Range",
+        "Recharge",
+        "Sleep"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Ranged.Psychic_Blast.Will_Domination",
+      "archetypeOrder": "primary",
       "powerIndex": 4,
       "castTimeReal": 1.1,
       "toggleCost": 10.192,
@@ -1016,16 +1030,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Interrupt",
-        "Range",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Damage",
@@ -1038,8 +1042,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Psychic_Blast.Psionic_Lance",
               "damageType": "Psionic"
             }
@@ -1049,16 +1054,16 @@
           "effectType": "Slow",
           "values": [
             {
+              "etModifies": "RechargeTime",
               "mag": {
                 "pve": -0.15
               },
               "probability": 1,
               "duration": 10,
               "effectType": "Enhancement",
-              "eTModifies": 25,
               "stacking": 1,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Psychic_Blast.Psionic_Lance"
             }
           ]
@@ -1075,7 +1080,7 @@
               "effectType": "PowerRedirect",
               "stacking": 1,
               "specialCase": 43,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Psychic_Blast.Psionic_Lance"
             },
             {
@@ -1088,7 +1093,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Psychic_Blast.Psionic_Lance",
               "damageType": "Smashing"
             },
@@ -1102,7 +1107,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Psychic_Blast.Psionic_Lance",
               "damageType": "Lethal"
             },
@@ -1116,7 +1121,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Psychic_Blast.Psionic_Lance",
               "damageType": "Fire"
             },
@@ -1130,7 +1135,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Psychic_Blast.Psionic_Lance",
               "damageType": "Cold"
             },
@@ -1144,7 +1149,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Psychic_Blast.Psionic_Lance",
               "damageType": "Energy"
             },
@@ -1158,7 +1163,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Psychic_Blast.Psionic_Lance",
               "damageType": "Negative"
             },
@@ -1172,7 +1177,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Psychic_Blast.Psionic_Lance",
               "damageType": "Toxic"
             },
@@ -1186,24 +1191,35 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Psychic_Blast.Psionic_Lance",
               "damageType": "Psionic"
             },
             {
+              "etModifies": "Range",
               "mag": {
                 "pve": 0.5
               },
               "probability": 1,
               "duration": 10,
               "effectType": "Enhancement",
-              "eTModifies": 24,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Psychic_Blast.Psionic_Lance"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Interrupt",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Ranged.Psychic_Blast.Psionic_Lance",
+      "archetypeOrder": "primary",
       "powerIndex": 5,
       "castTimeReal": 4,
       "toggleCost": 14.352,
@@ -1244,16 +1260,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Knockback",
-        "Range",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Damage",
@@ -1268,8 +1274,9 @@
               "effectType": "Damage",
               "ticks": 5,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Psychic_Blast.Psionic_Tornado",
               "damageType": "Psionic"
             }
@@ -1279,16 +1286,16 @@
           "effectType": "Slow",
           "values": [
             {
+              "etModifies": "RechargeTime",
               "mag": {
                 "pve": -0.3
               },
               "probability": 1,
               "duration": 10,
               "effectType": "Enhancement",
-              "eTModifies": 25,
               "stacking": 1,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Psychic_Blast.Psionic_Tornado"
             }
           ]
@@ -1303,8 +1310,9 @@
               "probability": 0.5,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Psychic_Blast.Psionic_Tornado",
               "mezType": "Knockup"
             },
@@ -1316,7 +1324,7 @@
               "duration": 9.87,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Psychic_Blast.Psionic_Tornado",
               "damageType": "Smashing"
             },
@@ -1328,7 +1336,7 @@
               "duration": 9.87,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Psychic_Blast.Psionic_Tornado",
               "damageType": "Lethal"
             },
@@ -1340,7 +1348,7 @@
               "duration": 9.87,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Psychic_Blast.Psionic_Tornado",
               "damageType": "Fire"
             },
@@ -1352,7 +1360,7 @@
               "duration": 9.87,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Psychic_Blast.Psionic_Tornado",
               "damageType": "Cold"
             },
@@ -1364,7 +1372,7 @@
               "duration": 9.87,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Psychic_Blast.Psionic_Tornado",
               "damageType": "Energy"
             },
@@ -1376,7 +1384,7 @@
               "duration": 9.87,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Psychic_Blast.Psionic_Tornado",
               "damageType": "Negative"
             },
@@ -1388,7 +1396,7 @@
               "duration": 9.87,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Psychic_Blast.Psionic_Tornado",
               "damageType": "Toxic"
             },
@@ -1400,13 +1408,24 @@
               "duration": 9.87,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Psychic_Blast.Psionic_Tornado",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Knockback",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Ranged.Psychic_Blast.Psionic_Tornado",
+      "archetypeOrder": "primary",
       "powerIndex": 6,
       "castTimeReal": 2.37,
       "toggleCost": 18.512,
@@ -1447,16 +1466,6 @@
       "aoeModifier": 4
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Range",
-        "Recharge",
-        "Stun"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Damage",
@@ -1469,8 +1478,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Psychic_Blast.Scramble_Thoughts",
               "damageType": "Psionic"
             }
@@ -1488,8 +1498,9 @@
               "duration": 11.92,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Blaster_Ranged.Psychic_Blast.Scramble_Thoughts",
               "mezType": "Stun"
@@ -1508,8 +1519,9 @@
               "duration": 2,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Blaster_Ranged.Psychic_Blast.Scramble_Thoughts",
               "mezType": "Stun"
@@ -1524,7 +1536,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Psychic_Blast.Scramble_Thoughts",
               "damageType": "Smashing"
             },
@@ -1538,7 +1550,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Psychic_Blast.Scramble_Thoughts",
               "damageType": "Lethal"
             },
@@ -1552,7 +1564,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Psychic_Blast.Scramble_Thoughts",
               "damageType": "Fire"
             },
@@ -1566,7 +1578,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Psychic_Blast.Scramble_Thoughts",
               "damageType": "Cold"
             },
@@ -1580,7 +1592,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Psychic_Blast.Scramble_Thoughts",
               "damageType": "Energy"
             },
@@ -1594,7 +1606,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Psychic_Blast.Scramble_Thoughts",
               "damageType": "Negative"
             },
@@ -1608,7 +1620,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Psychic_Blast.Scramble_Thoughts",
               "damageType": "Toxic"
             },
@@ -1622,13 +1634,24 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Psychic_Blast.Scramble_Thoughts",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Range",
+        "Recharge",
+        "Stun"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Ranged.Psychic_Blast.Scramble_Thoughts",
+      "archetypeOrder": "primary",
       "powerIndex": 7,
       "castTimeReal": 3,
       "toggleCost": 10.4,
@@ -1667,15 +1690,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Recharge",
-        "Stun"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Damage",
@@ -1688,8 +1702,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Psychic_Blast.Psychic_Wail",
               "damageType": "Psionic"
             }
@@ -1706,8 +1721,9 @@
               "duration": 11.92,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Blaster_Ranged.Psychic_Blast.Psychic_Wail",
               "mezType": "Stun"
@@ -1725,8 +1741,9 @@
               "duration": 2,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Blaster_Ranged.Psychic_Blast.Psychic_Wail",
               "mezType": "Stun"
@@ -1739,7 +1756,7 @@
               "duration": 9.47,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Psychic_Blast.Psychic_Wail",
               "damageType": "Smashing"
             },
@@ -1751,7 +1768,7 @@
               "duration": 9.47,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Psychic_Blast.Psychic_Wail",
               "damageType": "Lethal"
             },
@@ -1763,7 +1780,7 @@
               "duration": 9.47,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Psychic_Blast.Psychic_Wail",
               "damageType": "Fire"
             },
@@ -1775,7 +1792,7 @@
               "duration": 9.47,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Psychic_Blast.Psychic_Wail",
               "damageType": "Cold"
             },
@@ -1787,7 +1804,7 @@
               "duration": 9.47,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Psychic_Blast.Psychic_Wail",
               "damageType": "Energy"
             },
@@ -1799,7 +1816,7 @@
               "duration": 9.47,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Psychic_Blast.Psychic_Wail",
               "damageType": "Negative"
             },
@@ -1811,7 +1828,7 @@
               "duration": 9.47,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Psychic_Blast.Psychic_Wail",
               "damageType": "Toxic"
             },
@@ -1823,7 +1840,7 @@
               "duration": 9.47,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Ranged.Psychic_Blast.Psychic_Wail",
               "damageType": "Psionic"
             }
@@ -1833,21 +1850,31 @@
           "effectType": "Slow",
           "values": [
             {
+              "etModifies": "RechargeTime",
               "mag": {
                 "pve": -0.7
               },
               "probability": 1,
               "duration": 20,
               "effectType": "Enhancement",
-              "eTModifies": 25,
               "stacking": 1,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Ranged.Psychic_Blast.Psychic_Wail"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Recharge",
+        "Stun"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Ranged.Psychic_Blast.Psychic_Wail",
+      "archetypeOrder": "primary",
       "powerIndex": 8,
       "castTimeReal": 1.97,
       "toggleCost": 27.716,

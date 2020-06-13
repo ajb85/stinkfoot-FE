@@ -2,617 +2,234 @@
   "fullName": "IOSet.Expedient_Reinforcement",
   "enhancements": [
     {
-      "effects": [
-        {
-          "effectType": "Accuracy",
-          "values": [
-            {
-              "etModifies": "Accuracy",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Expedient_Reinforcement_A.Attuned_Expedient_Reinforcement_A"
-            }
-          ]
-        },
-        {
-          "effectType": "Recharge",
-          "values": [
-            {
-              "etModifies": "RechargeTime",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Expedient_Reinforcement_A.Attuned_Expedient_Reinforcement_A"
-            }
-          ]
-        }
-      ],
+      "type": "set",
+      "fullName": "Boosts.Attuned_Expedient_Reinforcement_A.Attuned_Expedient_Reinforcement_A",
+      "displayName": "Accuracy/Recharge",
       "description": {
         "short": "+ACC, +Rech",
         "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and reduces the attack rate by {Boost.Attrib.Recharge.Scale}%.  NOTE: This enhancement cannot be slotted into a mastermind pet, or pet that doesn't benefit from recharge enhancements."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Expedient_Reinforcement_A.Attuned_Expedient_Reinforcement_A",
-      "setName": "Expedient_Reinforcement",
-      "displayName": "Accuracy/Recharge"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Accuracy",
-          "values": [
-            {
-              "etModifies": "Accuracy",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Expedient_Reinforcement_B.Attuned_Expedient_Reinforcement_B"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
+          },
+          "stat": "Accuracy",
+          "toWho": "self"
         },
         {
-          "effectType": "Damage",
-          "values": [
-            {
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Expedient_Reinforcement_B.Attuned_Expedient_Reinforcement_B",
-              "damageType": "Smashing"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
-        },
-        {
-          "effectType": "Boosts_33",
-          "values": [
-            {
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Expedient_Reinforcement_B.Attuned_Expedient_Reinforcement_B",
-              "damageType": "Lethal"
-            },
-            {
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Expedient_Reinforcement_B.Attuned_Expedient_Reinforcement_B",
-              "damageType": "Fire"
-            },
-            {
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Expedient_Reinforcement_B.Attuned_Expedient_Reinforcement_B",
-              "damageType": "Cold"
-            },
-            {
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Expedient_Reinforcement_B.Attuned_Expedient_Reinforcement_B",
-              "damageType": "Energy"
-            },
-            {
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Expedient_Reinforcement_B.Attuned_Expedient_Reinforcement_B",
-              "damageType": "Negative"
-            },
-            {
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Expedient_Reinforcement_B.Attuned_Expedient_Reinforcement_B",
-              "damageType": "Toxic"
-            },
-            {
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Expedient_Reinforcement_B.Attuned_Expedient_Reinforcement_B",
-              "damageType": "Psionic"
-            }
-          ]
+          },
+          "stat": "Recharge",
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Expedient_Reinforcement_B.Attuned_Expedient_Reinforcement_B",
+      "displayName": "Accuracy/Damage",
       "description": {
         "short": "+ACC, +DMG",
         "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and damage of a power by {Boost.Attrib.Damage.Scale}%.  NOTE: This enhancement cannot be slotted into a mastermind pet, or pet that doesn't benefit from recharge enhancements."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Expedient_Reinforcement_B.Attuned_Expedient_Reinforcement_B",
-      "setName": "Expedient_Reinforcement",
-      "displayName": "Accuracy/Damage"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Endurance",
-          "values": [
-            {
-              "etModifies": "EnduranceDiscount",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Expedient_Reinforcement_C.Attuned_Expedient_Reinforcement_C"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
+          },
+          "stat": "Accuracy",
+          "toWho": "self"
         },
         {
-          "effectType": "Damage",
-          "values": [
-            {
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Expedient_Reinforcement_C.Attuned_Expedient_Reinforcement_C",
-              "damageType": "Smashing"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
-        },
-        {
-          "effectType": "Boosts_33",
-          "values": [
-            {
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Expedient_Reinforcement_C.Attuned_Expedient_Reinforcement_C",
-              "damageType": "Lethal"
-            },
-            {
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Expedient_Reinforcement_C.Attuned_Expedient_Reinforcement_C",
-              "damageType": "Fire"
-            },
-            {
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Expedient_Reinforcement_C.Attuned_Expedient_Reinforcement_C",
-              "damageType": "Cold"
-            },
-            {
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Expedient_Reinforcement_C.Attuned_Expedient_Reinforcement_C",
-              "damageType": "Energy"
-            },
-            {
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Expedient_Reinforcement_C.Attuned_Expedient_Reinforcement_C",
-              "damageType": "Negative"
-            },
-            {
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Expedient_Reinforcement_C.Attuned_Expedient_Reinforcement_C",
-              "damageType": "Toxic"
-            },
-            {
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Expedient_Reinforcement_C.Attuned_Expedient_Reinforcement_C",
-              "damageType": "Psionic"
-            }
-          ]
+          },
+          "stat": "Damage",
+          "damageType": [
+            "Smashing",
+            "Lethal",
+            "Fire",
+            "Cold",
+            "Energy",
+            "Negative",
+            "Toxic",
+            "Psionic"
+          ],
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Expedient_Reinforcement_C.Attuned_Expedient_Reinforcement_C",
+      "displayName": "Damage/Endurance",
       "description": {
         "short": "+DMG, -End Cost",
         "long": "Enhances the damage of a power by {Boost.Attrib.Damage.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%.  NOTE: This enhancement cannot be slotted into a mastermind pet, or pet that doesn't benefit from recharge enhancements."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Expedient_Reinforcement_C.Attuned_Expedient_Reinforcement_C",
-      "setName": "Expedient_Reinforcement",
-      "displayName": "Damage/Endurance"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Damage",
-          "values": [
-            {
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Expedient_Reinforcement_D.Attuned_Expedient_Reinforcement_D",
-              "damageType": "Smashing"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
+          },
+          "stat": "Damage",
+          "damageType": [
+            "Smashing",
+            "Lethal",
+            "Fire",
+            "Cold",
+            "Energy",
+            "Negative",
+            "Toxic",
+            "Psionic"
+          ],
+          "toWho": "self"
         },
         {
-          "effectType": "Boosts_33",
-          "values": [
-            {
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Expedient_Reinforcement_D.Attuned_Expedient_Reinforcement_D",
-              "damageType": "Lethal"
-            },
-            {
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Expedient_Reinforcement_D.Attuned_Expedient_Reinforcement_D",
-              "damageType": "Fire"
-            },
-            {
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Expedient_Reinforcement_D.Attuned_Expedient_Reinforcement_D",
-              "damageType": "Cold"
-            },
-            {
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Expedient_Reinforcement_D.Attuned_Expedient_Reinforcement_D",
-              "damageType": "Energy"
-            },
-            {
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Expedient_Reinforcement_D.Attuned_Expedient_Reinforcement_D",
-              "damageType": "Negative"
-            },
-            {
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Expedient_Reinforcement_D.Attuned_Expedient_Reinforcement_D",
-              "damageType": "Toxic"
-            },
-            {
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Expedient_Reinforcement_D.Attuned_Expedient_Reinforcement_D",
-              "damageType": "Psionic"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
-        },
-        {
-          "effectType": "Recharge",
-          "values": [
-            {
-              "etModifies": "RechargeTime",
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Expedient_Reinforcement_D.Attuned_Expedient_Reinforcement_D"
-            }
-          ]
-        },
-        {
-          "effectType": "Accuracy",
-          "values": [
-            {
-              "etModifies": "Accuracy",
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Expedient_Reinforcement_D.Attuned_Expedient_Reinforcement_D"
-            }
-          ]
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Expedient_Reinforcement_D.Attuned_Expedient_Reinforcement_D",
+      "displayName": "Accuracy/Damage/Recharge",
       "description": {
         "short": "+ACC, +DMG, +Rech",
         "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}%, enhances the damage of a power by {Boost.Attrib.Damage.Scale}% and reduces the attack rate by {Boost.Attrib.Recharge.Scale}%.  NOTE: This enhancement cannot be slotted into a mastermind pet, or pet that doesn't benefit from recharge enhancements."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Expedient_Reinforcement_D.Attuned_Expedient_Reinforcement_D",
-      "setName": "Expedient_Reinforcement",
-      "displayName": "Accuracy/Damage/Recharge"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Damage",
-          "values": [
-            {
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Expedient_Reinforcement_E.Attuned_Expedient_Reinforcement_E",
-              "damageType": "Smashing"
+          "mag": {
+            "IO": {
+              "cap": 0.212
             }
-          ]
+          },
+          "stat": "Accuracy",
+          "toWho": "self"
         },
         {
-          "effectType": "Boosts_33",
-          "values": [
-            {
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Expedient_Reinforcement_E.Attuned_Expedient_Reinforcement_E",
-              "damageType": "Lethal"
-            },
-            {
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Expedient_Reinforcement_E.Attuned_Expedient_Reinforcement_E",
-              "damageType": "Fire"
-            },
-            {
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Expedient_Reinforcement_E.Attuned_Expedient_Reinforcement_E",
-              "damageType": "Cold"
-            },
-            {
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Expedient_Reinforcement_E.Attuned_Expedient_Reinforcement_E",
-              "damageType": "Energy"
-            },
-            {
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Expedient_Reinforcement_E.Attuned_Expedient_Reinforcement_E",
-              "damageType": "Negative"
-            },
-            {
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Expedient_Reinforcement_E.Attuned_Expedient_Reinforcement_E",
-              "damageType": "Toxic"
-            },
-            {
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Expedient_Reinforcement_E.Attuned_Expedient_Reinforcement_E",
-              "damageType": "Psionic"
+          "mag": {
+            "IO": {
+              "cap": 0.212
             }
-          ]
+          },
+          "stat": "Damage",
+          "damageType": [
+            "Smashing",
+            "Lethal",
+            "Fire",
+            "Cold",
+            "Energy",
+            "Negative",
+            "Toxic",
+            "Psionic"
+          ],
+          "toWho": "self"
         },
         {
-          "effectType": "Recharge",
-          "values": [
-            {
-              "etModifies": "RechargeTime",
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Expedient_Reinforcement_E.Attuned_Expedient_Reinforcement_E"
+          "mag": {
+            "IO": {
+              "cap": 0.212
             }
-          ]
-        },
-        {
-          "effectType": "Endurance",
-          "values": [
-            {
-              "etModifies": "EnduranceDiscount",
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Expedient_Reinforcement_E.Attuned_Expedient_Reinforcement_E"
-            }
-          ]
+          },
+          "stat": "Recharge",
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Expedient_Reinforcement_E.Attuned_Expedient_Reinforcement_E",
+      "displayName": "Endurance/Damage/Recharge",
       "description": {
         "short": "-End Cost, +DMG, +Rech",
         "long": "Reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%, enhances the damage of a power by {Boost.Attrib.Damage.Scale}% and reduces the attack rate by {Boost.Attrib.Recharge.Scale}%.  NOTE: This enhancement cannot be slotted into a mastermind pet, or pet that doesn't benefit from recharge enhancements."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Expedient_Reinforcement_E.Attuned_Expedient_Reinforcement_E",
-      "setName": "Expedient_Reinforcement",
-      "displayName": "Endurance/Damage/Recharge"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Resist",
-          "values": [
-            {
-              "mag": {
-                "pve": 1
-              },
-              "cancelOnMiss": true,
-              "probability": 1,
-              "effectType": "Null",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Expedient_Reinforcement_F.Attuned_Expedient_Reinforcement_F"
+          "mag": {
+            "IO": {
+              "cap": 0.212
             }
-          ]
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.212
+            }
+          },
+          "stat": "Damage",
+          "damageType": [
+            "Smashing",
+            "Lethal",
+            "Fire",
+            "Cold",
+            "Energy",
+            "Negative",
+            "Toxic",
+            "Psionic"
+          ],
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.212
+            }
+          },
+          "stat": "Recharge",
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Expedient_Reinforcement_F.Attuned_Expedient_Reinforcement_F",
+      "displayName": "Resist Bonus Aura for Pets",
       "description": {
         "short": "+RES DMG (all but Psi) for Henchmen",
         "long": "UNIQUE -- No more than 1 enhancement of this type may be slotted by a character.  Grants you a 20' radius aura which increases your Henchmen's Damage Resistance to all but psionics by 10%.  NOTE: This enhancement cannot be slotted into a mastermind pet, or pet that doesn't benefit from recharge enhancements."
       },
-      "isUnique": true,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Expedient_Reinforcement_F.Attuned_Expedient_Reinforcement_F",
-      "setName": "Expedient_Reinforcement",
-      "displayName": " Resist Bonus Aura for Pets"
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 1
+            }
+          },
+          "stat": "Resist Bonus Aura for Pets",
+          "cancelOnMiss": true,
+          "toWho": "self"
+        }
+      ]
     }
   ],
   "levels": {

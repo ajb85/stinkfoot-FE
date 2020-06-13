@@ -2,657 +2,215 @@
   "fullName": "IOSet.Aegis",
   "enhancements": [
     {
-      "effects": [
-        {
-          "effectType": "Resist",
-          "values": [
-            {
-              "mag": {
-                "pve": 0.159375
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Aegis_A.Attuned_Aegis_A",
-              "damageType": "Smashing"
-            }
-          ]
-        },
-        {
-          "effectType": "Boosts_20",
-          "values": [
-            {
-              "mag": {
-                "pve": 0.159375
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Aegis_A.Attuned_Aegis_A",
-              "damageType": "Lethal"
-            },
-            {
-              "mag": {
-                "pve": 0.159375
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Aegis_A.Attuned_Aegis_A",
-              "damageType": "Fire"
-            },
-            {
-              "mag": {
-                "pve": 0.159375
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Aegis_A.Attuned_Aegis_A",
-              "damageType": "Cold"
-            },
-            {
-              "mag": {
-                "pve": 0.159375
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Aegis_A.Attuned_Aegis_A",
-              "damageType": "Energy"
-            },
-            {
-              "mag": {
-                "pve": 0.159375
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Aegis_A.Attuned_Aegis_A",
-              "damageType": "Negative"
-            },
-            {
-              "mag": {
-                "pve": 0.159375
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Aegis_A.Attuned_Aegis_A",
-              "damageType": "Toxic"
-            },
-            {
-              "mag": {
-                "pve": 0.159375
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Aegis_A.Attuned_Aegis_A",
-              "damageType": "Psionic"
-            }
-          ]
-        },
-        {
-          "effectType": "Endurance",
-          "values": [
-            {
-              "etModifies": "EnduranceDiscount",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Aegis_A.Attuned_Aegis_A"
-            }
-          ]
-        }
-      ],
+      "type": "set",
+      "fullName": "Boosts.Attuned_Aegis_A.Attuned_Aegis_A",
+      "displayName": "Resistance/Endurance",
       "description": {
         "short": "+RES (all), Reduces End cost",
         "long": "Enhances the damage resistance of a power by {Boost.Attrib.Resist.Scale}% and reduces endurance cost by {Boost.Attrib.Endurance.Scale}%"
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Aegis_A.Attuned_Aegis_A",
-      "setName": "Aegis",
-      "displayName": "Resistance/Endurance"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Resist",
-          "values": [
-            {
-              "mag": {
-                "pve": 0.159375
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Aegis_B.Attuned_Aegis_B",
-              "damageType": "Smashing"
+          "mag": {
+            "IO": {
+              "cap": 0.159375
             }
-          ]
+          },
+          "stat": "Res_Damage",
+          "damageType": [
+            "Smashing",
+            "Lethal",
+            "Fire",
+            "Cold",
+            "Energy",
+            "Negative",
+            "Toxic",
+            "Psionic"
+          ],
+          "toWho": "self"
         },
         {
-          "effectType": "Boosts_20",
-          "values": [
-            {
-              "mag": {
-                "pve": 0.159375
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Aegis_B.Attuned_Aegis_B",
-              "damageType": "Lethal"
-            },
-            {
-              "mag": {
-                "pve": 0.159375
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Aegis_B.Attuned_Aegis_B",
-              "damageType": "Fire"
-            },
-            {
-              "mag": {
-                "pve": 0.159375
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Aegis_B.Attuned_Aegis_B",
-              "damageType": "Cold"
-            },
-            {
-              "mag": {
-                "pve": 0.159375
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Aegis_B.Attuned_Aegis_B",
-              "damageType": "Energy"
-            },
-            {
-              "mag": {
-                "pve": 0.159375
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Aegis_B.Attuned_Aegis_B",
-              "damageType": "Negative"
-            },
-            {
-              "mag": {
-                "pve": 0.159375
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Aegis_B.Attuned_Aegis_B",
-              "damageType": "Toxic"
-            },
-            {
-              "mag": {
-                "pve": 0.159375
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Aegis_B.Attuned_Aegis_B",
-              "damageType": "Psionic"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
-        },
-        {
-          "effectType": "recharge",
-          "values": [
-            {
-              "etModifies": "RechargeTime",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Aegis_B.Attuned_Aegis_B"
-            }
-          ]
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Aegis_B.Attuned_Aegis_B",
+      "displayName": "Resistance/Recharge",
       "description": {
         "short": "+RES (all), +Rech",
         "long": "Enhances the damage resistance of a power by {Boost.Attrib.Resist.Scale}% and reduces recharge time by {Boost.Attrib.Recharge.Scale}%"
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Aegis_B.Attuned_Aegis_B",
-      "setName": "Aegis",
-      "displayName": "Resistance/Recharge"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Endurance",
-          "values": [
-            {
-              "etModifies": "EnduranceDiscount",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Aegis_C.Attuned_Aegis_C"
+          "mag": {
+            "IO": {
+              "cap": 0.159375
             }
-          ]
+          },
+          "stat": "Res_Damage",
+          "damageType": [
+            "Smashing",
+            "Lethal",
+            "Fire",
+            "Cold",
+            "Energy",
+            "Negative",
+            "Toxic",
+            "Psionic"
+          ],
+          "toWho": "self"
         },
         {
-          "effectType": "recharge",
-          "values": [
-            {
-              "etModifies": "RechargeTime",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Aegis_C.Attuned_Aegis_C"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
+          },
+          "stat": "Recharge",
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Aegis_C.Attuned_Aegis_C",
+      "displayName": "Endurance/Recharge",
       "description": {
         "short": "Reduces Endurance Cost and Increases Attack Rate",
         "long": "Reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}% and recharge time by {Boost.Attrib.Recharge.Scale}%"
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Aegis_C.Attuned_Aegis_C",
-      "setName": "Aegis",
-      "displayName": "Endurance/Recharge"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Resist",
-          "values": [
-            {
-              "mag": {
-                "pve": 0.1275
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Aegis_D.Attuned_Aegis_D",
-              "damageType": "Smashing"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self"
         },
         {
-          "effectType": "Boosts_20",
-          "values": [
-            {
-              "mag": {
-                "pve": 0.1275
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Aegis_D.Attuned_Aegis_D",
-              "damageType": "Lethal"
-            },
-            {
-              "mag": {
-                "pve": 0.1275
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Aegis_D.Attuned_Aegis_D",
-              "damageType": "Fire"
-            },
-            {
-              "mag": {
-                "pve": 0.1275
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Aegis_D.Attuned_Aegis_D",
-              "damageType": "Cold"
-            },
-            {
-              "mag": {
-                "pve": 0.1275
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Aegis_D.Attuned_Aegis_D",
-              "damageType": "Energy"
-            },
-            {
-              "mag": {
-                "pve": 0.1275
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Aegis_D.Attuned_Aegis_D",
-              "damageType": "Negative"
-            },
-            {
-              "mag": {
-                "pve": 0.1275
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Aegis_D.Attuned_Aegis_D",
-              "damageType": "Toxic"
-            },
-            {
-              "mag": {
-                "pve": 0.1275
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Aegis_D.Attuned_Aegis_D",
-              "damageType": "Psionic"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
-        },
-        {
-          "effectType": "Endurance",
-          "values": [
-            {
-              "etModifies": "EnduranceDiscount",
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Aegis_D.Attuned_Aegis_D"
-            }
-          ]
-        },
-        {
-          "effectType": "recharge",
-          "values": [
-            {
-              "etModifies": "RechargeTime",
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Aegis_D.Attuned_Aegis_D"
-            }
-          ]
+          },
+          "stat": "Recharge",
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Aegis_D.Attuned_Aegis_D",
+      "displayName": "Resistance/Endurance/Recharge",
       "description": {
         "short": "Enhances Resistance, Reduces Endurance Cost and Increases Attack Rate",
         "long": "Enhances the damage resistance of a power by {Boost.Attrib.Resist.Scale}%, reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%and recharge time by {Boost.Attrib.Recharge.Scale}%"
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Aegis_D.Attuned_Aegis_D",
-      "setName": "Aegis",
-      "displayName": "Resistance/Endurance/Recharge"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Resist",
-          "values": [
-            {
-              "mag": {
-                "pve": 0.255
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Aegis_E.Attuned_Aegis_E",
-              "damageType": "Smashing"
+          "mag": {
+            "IO": {
+              "cap": 0.1275
             }
-          ]
+          },
+          "stat": "Res_Damage",
+          "damageType": [
+            "Smashing",
+            "Lethal",
+            "Fire",
+            "Cold",
+            "Energy",
+            "Negative",
+            "Toxic",
+            "Psionic"
+          ],
+          "toWho": "self"
         },
         {
-          "effectType": "Boosts_20",
-          "values": [
-            {
-              "mag": {
-                "pve": 0.255
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Aegis_E.Attuned_Aegis_E",
-              "damageType": "Lethal"
-            },
-            {
-              "mag": {
-                "pve": 0.255
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Aegis_E.Attuned_Aegis_E",
-              "damageType": "Fire"
-            },
-            {
-              "mag": {
-                "pve": 0.255
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Aegis_E.Attuned_Aegis_E",
-              "damageType": "Cold"
-            },
-            {
-              "mag": {
-                "pve": 0.255
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Aegis_E.Attuned_Aegis_E",
-              "damageType": "Energy"
-            },
-            {
-              "mag": {
-                "pve": 0.255
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Aegis_E.Attuned_Aegis_E",
-              "damageType": "Negative"
-            },
-            {
-              "mag": {
-                "pve": 0.255
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Aegis_E.Attuned_Aegis_E",
-              "damageType": "Toxic"
-            },
-            {
-              "mag": {
-                "pve": 0.255
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Aegis_E.Attuned_Aegis_E",
-              "damageType": "Psionic"
+          "mag": {
+            "IO": {
+              "cap": 0.212
             }
-          ]
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.212
+            }
+          },
+          "stat": "Recharge",
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Aegis_E.Attuned_Aegis_E",
+      "displayName": "Resistance",
       "description": {
         "short": "+RES (all)",
         "long": "Enhances the damage resistance of a power by {Boost.Attrib.Resist.Scale}%."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Aegis_E.Attuned_Aegis_E",
-      "setName": "Aegis",
-      "displayName": "Resistance"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Psionic",
-          "values": [
-            {
-              "etModifies": "Null",
-              "mag": {
-                "pve": 0.035
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "ResEffect",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Aegis_F.Attuned_Aegis_F"
+          "mag": {
+            "IO": {
+              "cap": 0.255
             }
-          ]
-        },
-        {
-          "effectType": "Ones",
-          "values": [
-            {
-              "mag": {
-                "pve": 0.2
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "MezResist",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Aegis_F.Attuned_Aegis_F",
-              "mezType": "Immob"
-            },
-            {
-              "mag": {
-                "pve": 0.2
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "MezResist",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Aegis_F.Attuned_Aegis_F",
-              "mezType": "Hold"
-            },
-            {
-              "mag": {
-                "pve": 0.2
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "MezResist",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Aegis_F.Attuned_Aegis_F",
-              "mezType": "Stun"
-            },
-            {
-              "mag": {
-                "pve": 0.2
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "MezResist",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Aegis_F.Attuned_Aegis_F",
-              "mezType": "Sleep"
-            },
-            {
-              "mag": {
-                "pve": 0.2
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "MezResist",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Aegis_F.Attuned_Aegis_F",
-              "mezType": "Terror"
-            },
-            {
-              "mag": {
-                "pve": 0.2
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "MezResist",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Aegis_F.Attuned_Aegis_F",
-              "mezType": "Confuse"
-            }
-          ]
+          },
+          "stat": "Res_Damage",
+          "damageType": [
+            "Smashing",
+            "Lethal",
+            "Fire",
+            "Cold",
+            "Energy",
+            "Negative",
+            "Toxic",
+            "Psionic"
+          ],
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Aegis_F.Attuned_Aegis_F",
+      "displayName": "Psionic/Status Resistance",
       "description": {
         "short": "+RES (Psionic, Status Effects)",
         "long": "UNIQUE -- No more than 1 enhancement of this type may be slotted by a character.  Gives a 5% bonus to psionic resistance and reduces the duration of all status effects by 20%."
       },
-      "isUnique": true,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Aegis_F.Attuned_Aegis_F",
-      "setName": "Aegis",
-      "displayName": "Psionic/Status Resistance"
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.035
+            }
+          },
+          "stat": "Status Resistance",
+          "toWho": "self"
+        }
+      ]
     }
   ],
   "levels": {

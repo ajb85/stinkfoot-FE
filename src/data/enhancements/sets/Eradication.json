@@ -2,637 +2,239 @@
   "fullName": "IOSet.Eradication",
   "enhancements": [
     {
-      "effects": [
-        {
-          "effectType": "Damage",
-          "values": [
-            {
-              "mag": {
-                "pve": 0.424
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Eradication_A.Attuned_Eradication_A",
-              "damageType": "Smashing"
-            }
-          ]
-        },
-        {
-          "effectType": "Boosts_33",
-          "values": [
-            {
-              "mag": {
-                "pve": 0.424
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Eradication_A.Attuned_Eradication_A",
-              "damageType": "Lethal"
-            },
-            {
-              "mag": {
-                "pve": 0.424
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Eradication_A.Attuned_Eradication_A",
-              "damageType": "Fire"
-            },
-            {
-              "mag": {
-                "pve": 0.424
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Eradication_A.Attuned_Eradication_A",
-              "damageType": "Cold"
-            },
-            {
-              "mag": {
-                "pve": 0.424
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Eradication_A.Attuned_Eradication_A",
-              "damageType": "Energy"
-            },
-            {
-              "mag": {
-                "pve": 0.424
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Eradication_A.Attuned_Eradication_A",
-              "damageType": "Negative"
-            },
-            {
-              "mag": {
-                "pve": 0.424
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Eradication_A.Attuned_Eradication_A",
-              "damageType": "Toxic"
-            },
-            {
-              "mag": {
-                "pve": 0.424
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Eradication_A.Attuned_Eradication_A",
-              "damageType": "Psionic"
-            }
-          ]
-        }
-      ],
+      "type": "set",
+      "fullName": "Boosts.Attuned_Eradication_A.Attuned_Eradication_A",
+      "displayName": "Damage",
       "description": {
         "short": "+DMG",
         "long": "Enhances the damage of a power by {Boost.Attrib.Damage.Scale}%."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Eradication_A.Attuned_Eradication_A",
-      "setName": "Eradication",
-      "displayName": "Damage"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Accuracy",
-          "values": [
-            {
-              "etModifies": "Accuracy",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Eradication_B.Attuned_Eradication_B"
+          "mag": {
+            "IO": {
+              "cap": 0.424
             }
-          ]
-        },
-        {
-          "effectType": "Recharge",
-          "values": [
-            {
-              "etModifies": "RechargeTime",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Eradication_B.Attuned_Eradication_B"
-            }
-          ]
+          },
+          "stat": "Damage",
+          "damageType": [
+            "Smashing",
+            "Lethal",
+            "Fire",
+            "Cold",
+            "Energy",
+            "Negative",
+            "Toxic",
+            "Psionic"
+          ],
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Eradication_B.Attuned_Eradication_B",
+      "displayName": "Accuracy/Recharge",
       "description": {
         "short": "+ACC, +Rech",
         "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and reduces recharge time by {Boost.Attrib.Recharge.Scale}%."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Eradication_B.Attuned_Eradication_B",
-      "setName": "Eradication",
-      "displayName": "Accuracy/Recharge"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Damage",
-          "values": [
-            {
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Eradication_C.Attuned_Eradication_C",
-              "damageType": "Smashing"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
+          },
+          "stat": "Accuracy",
+          "toWho": "self"
         },
         {
-          "effectType": "Boosts_33",
-          "values": [
-            {
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Eradication_C.Attuned_Eradication_C",
-              "damageType": "Lethal"
-            },
-            {
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Eradication_C.Attuned_Eradication_C",
-              "damageType": "Fire"
-            },
-            {
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Eradication_C.Attuned_Eradication_C",
-              "damageType": "Cold"
-            },
-            {
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Eradication_C.Attuned_Eradication_C",
-              "damageType": "Energy"
-            },
-            {
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Eradication_C.Attuned_Eradication_C",
-              "damageType": "Negative"
-            },
-            {
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Eradication_C.Attuned_Eradication_C",
-              "damageType": "Toxic"
-            },
-            {
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Eradication_C.Attuned_Eradication_C",
-              "damageType": "Psionic"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
-        },
-        {
-          "effectType": "Recharge",
-          "values": [
-            {
-              "etModifies": "RechargeTime",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Eradication_C.Attuned_Eradication_C"
-            }
-          ]
+          },
+          "stat": "Recharge",
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Eradication_C.Attuned_Eradication_C",
+      "displayName": "Damage/Recharge",
       "description": {
         "short": "+DMG, +Rech",
         "long": "Enhances the damage of a power by {Boost.Attrib.Damage.Scale}% and reduces recharge time by {Boost.Attrib.Recharge.Scale}%"
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Eradication_C.Attuned_Eradication_C",
-      "setName": "Eradication",
-      "displayName": "Damage/Recharge"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Damage",
-          "values": [
-            {
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Eradication_D.Attuned_Eradication_D",
-              "damageType": "Smashing"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
+          },
+          "stat": "Damage",
+          "damageType": [
+            "Smashing",
+            "Lethal",
+            "Fire",
+            "Cold",
+            "Energy",
+            "Negative",
+            "Toxic",
+            "Psionic"
+          ],
+          "toWho": "self"
         },
         {
-          "effectType": "Boosts_33",
-          "values": [
-            {
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Eradication_D.Attuned_Eradication_D",
-              "damageType": "Lethal"
-            },
-            {
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Eradication_D.Attuned_Eradication_D",
-              "damageType": "Fire"
-            },
-            {
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Eradication_D.Attuned_Eradication_D",
-              "damageType": "Cold"
-            },
-            {
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Eradication_D.Attuned_Eradication_D",
-              "damageType": "Energy"
-            },
-            {
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Eradication_D.Attuned_Eradication_D",
-              "damageType": "Negative"
-            },
-            {
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Eradication_D.Attuned_Eradication_D",
-              "damageType": "Toxic"
-            },
-            {
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Eradication_D.Attuned_Eradication_D",
-              "damageType": "Psionic"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
-        },
-        {
-          "effectType": "Accuracy",
-          "values": [
-            {
-              "etModifies": "Accuracy",
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Eradication_D.Attuned_Eradication_D"
-            }
-          ]
-        },
-        {
-          "effectType": "Recharge",
-          "values": [
-            {
-              "etModifies": "RechargeTime",
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Eradication_D.Attuned_Eradication_D"
-            }
-          ]
+          },
+          "stat": "Recharge",
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Eradication_D.Attuned_Eradication_D",
+      "displayName": "Accuracy/Damage/Recharge",
       "description": {
         "short": "+ACC, +DMG, +Rech",
         "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and damage by {Boost.Attrib.Damage.Scale}% and reduces recharge time by {Boost.Attrib.Recharge.Scale}% ."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Eradication_D.Attuned_Eradication_D",
-      "setName": "Eradication",
-      "displayName": "Accuracy/Damage/Recharge"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Damage",
-          "values": [
-            {
-              "mag": {
-                "pve": 0.1855
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Eradication_E.Attuned_Eradication_E",
-              "damageType": "Smashing"
+          "mag": {
+            "IO": {
+              "cap": 0.212
             }
-          ]
+          },
+          "stat": "Accuracy",
+          "toWho": "self"
         },
         {
-          "effectType": "Boosts_33",
-          "values": [
-            {
-              "mag": {
-                "pve": 0.1855
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Eradication_E.Attuned_Eradication_E",
-              "damageType": "Lethal"
-            },
-            {
-              "mag": {
-                "pve": 0.1855
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Eradication_E.Attuned_Eradication_E",
-              "damageType": "Fire"
-            },
-            {
-              "mag": {
-                "pve": 0.1855
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Eradication_E.Attuned_Eradication_E",
-              "damageType": "Cold"
-            },
-            {
-              "mag": {
-                "pve": 0.1855
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Eradication_E.Attuned_Eradication_E",
-              "damageType": "Energy"
-            },
-            {
-              "mag": {
-                "pve": 0.1855
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Eradication_E.Attuned_Eradication_E",
-              "damageType": "Negative"
-            },
-            {
-              "mag": {
-                "pve": 0.1855
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Eradication_E.Attuned_Eradication_E",
-              "damageType": "Toxic"
-            },
-            {
-              "mag": {
-                "pve": 0.1855
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Eradication_E.Attuned_Eradication_E",
-              "damageType": "Psionic"
+          "mag": {
+            "IO": {
+              "cap": 0.212
             }
-          ]
+          },
+          "stat": "Damage",
+          "damageType": [
+            "Smashing",
+            "Lethal",
+            "Fire",
+            "Cold",
+            "Energy",
+            "Negative",
+            "Toxic",
+            "Psionic"
+          ],
+          "toWho": "self"
         },
         {
-          "effectType": "Accuracy",
-          "values": [
-            {
-              "etModifies": "Accuracy",
-              "mag": {
-                "pve": 0.1855
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Eradication_E.Attuned_Eradication_E"
+          "mag": {
+            "IO": {
+              "cap": 0.212
             }
-          ]
-        },
-        {
-          "effectType": "Recharge",
-          "values": [
-            {
-              "etModifies": "RechargeTime",
-              "mag": {
-                "pve": 0.1855
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Eradication_E.Attuned_Eradication_E"
-            }
-          ]
-        },
-        {
-          "effectType": "Endurance",
-          "values": [
-            {
-              "etModifies": "EnduranceDiscount",
-              "mag": {
-                "pve": 0.1855
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Eradication_E.Attuned_Eradication_E"
-            }
-          ]
+          },
+          "stat": "Recharge",
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Eradication_E.Attuned_Eradication_E",
+      "displayName": "Accuracy/Damage/Endurance/Recharge",
       "description": {
         "short": "+ACC, +DMG, -End Cost, +Rech",
         "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}%, damage by {Boost.Attrib.Damage.Scale}%, reduces endurance cost by {Boost.Attrib.Endurance.Scale}% and reduces recharge time by {Boost.Attrib.Recharge.Scale}%."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Eradication_E.Attuned_Eradication_E",
-      "setName": "Eradication",
-      "displayName": "Accuracy/Damage/Endurance/Recharge"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Damage",
-          "values": [
-            {
-              "mag": {
-                "pve": 71.7501
-              },
-              "procsPerMinute": 3.5,
-              "cancelOnMiss": true,
-              "effectType": "Damage",
-              "stacking": 1,
-              "resistible": true,
-              "toWho": "all",
-              "powerFullName": "Boosts.Attuned_Eradication_F.Attuned_Eradication_F",
-              "damageType": "Energy"
+          "mag": {
+            "IO": {
+              "cap": 0.1855
             }
-          ]
+          },
+          "stat": "Accuracy",
+          "toWho": "self"
         },
         {
-          "effectType": "TempDamage",
-          "values": [
-            {
-              "mag": {
-                "pvp": 71.7501
-              },
-              "procsPerMinute": 3.5,
-              "cancelOnMiss": true,
-              "effectType": "Damage",
-              "stacking": 1,
-              "toWho": "all",
-              "powerFullName": "Boosts.Attuned_Eradication_F.Attuned_Eradication_F",
-              "damageType": "Energy"
+          "mag": {
+            "IO": {
+              "cap": 0.1855
             }
-          ]
+          },
+          "stat": "Damage",
+          "damageType": [
+            "Smashing",
+            "Lethal",
+            "Fire",
+            "Cold",
+            "Energy",
+            "Negative",
+            "Toxic",
+            "Psionic"
+          ],
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.1855
+            }
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.1855
+            }
+          },
+          "stat": "Recharge",
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Eradication_F.Attuned_Eradication_F",
+      "displayName": "Chance for Energy Damage",
       "description": {
         "short": "Chance for Minor DMG (Energy)",
         "long": "Provides a chance to cause minor energy damage to your targets.  This effect will trigger roughly 3.5 times per minute."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Eradication_F.Attuned_Eradication_F",
-      "setName": "Eradication",
-      "displayName": "Chance for Energy Damage"
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 71.7501
+            }
+          },
+          "stat": "Chance for Energy Damage",
+          "procsPerMinute": 3.5,
+          "cancelOnMiss": true,
+          "damageType": "Energy",
+          "stacking": 1,
+          "resistible": true,
+          "pvMode": 1,
+          "toWho": "all"
+        }
+      ]
     }
   ],
   "levels": {

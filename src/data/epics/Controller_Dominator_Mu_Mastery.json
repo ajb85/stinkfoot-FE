@@ -6,14 +6,6 @@
   "displayName": "Mu Mastery",
   "powers": [
     {
-      "allowedEnhancements": [
-        "Endurance_Discount",
-        "Recharge",
-        "Endurance_Modification",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Ones",
@@ -25,8 +17,9 @@
               "probability": 1,
               "effectType": "Endurance",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Dominator_Mu_Mastery.Power_Sink"
             },
             {
@@ -37,8 +30,9 @@
               "duration": 4,
               "effectType": "Recovery",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Dominator_Mu_Mastery.Power_Sink"
             },
             {
@@ -50,7 +44,8 @@
               "effectType": "Endurance",
               "delayedTime": 0.25,
               "stacking": 1,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Dominator_Mu_Mastery.Power_Sink"
             }
           ]
@@ -65,13 +60,23 @@
               "probability": 1,
               "effectType": "Endurance",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Dominator_Mu_Mastery.Power_Sink"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Endurance_Discount",
+        "Recharge",
+        "Endurance_Modification",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Dominator_Mu_Mastery.Power_Sink",
+      "archetypeOrder": "epicPool",
       "powerIndex": 0,
       "castTimeReal": 2.03,
       "toggleCost": 16.25,
@@ -111,13 +116,6 @@
       "aoeModifier": 2.5
     },
     {
-      "allowedEnhancements": [
-        "Endurance_Discount",
-        "Recharge",
-        "Res_Damage"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Res_Dmg",
@@ -130,7 +128,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Dominator_Mu_Mastery.Charged_Armor",
               "damageType": "Smashing"
             },
@@ -142,7 +141,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Dominator_Mu_Mastery.Charged_Armor",
               "damageType": "Lethal"
             },
@@ -154,7 +154,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Dominator_Mu_Mastery.Charged_Armor",
               "damageType": "Energy"
             },
@@ -165,7 +166,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Dominator_Mu_Mastery.Charged_Armor",
               "damageType": "Fire"
             },
@@ -176,7 +178,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Dominator_Mu_Mastery.Charged_Armor",
               "damageType": "Cold"
             },
@@ -187,7 +190,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Dominator_Mu_Mastery.Charged_Armor",
               "damageType": "Negative"
             },
@@ -198,7 +202,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Dominator_Mu_Mastery.Charged_Armor",
               "damageType": "Toxic"
             },
@@ -209,13 +214,22 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Dominator_Mu_Mastery.Charged_Armor",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Endurance_Discount",
+        "Recharge",
+        "Res_Damage"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Dominator_Mu_Mastery.Charged_Armor",
+      "archetypeOrder": "epicPool",
       "powerIndex": 1,
       "castTimeReal": 0.67,
       "toggleCost": 0.325,
@@ -252,16 +266,6 @@
       "powerType": "Toggle"
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Range",
-        "Recharge",
-        "Endurance_Modification"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Damage",
@@ -274,8 +278,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Dominator_Mu_Mastery.Ball_Lightning",
               "damageType": "Energy"
             }
@@ -291,8 +296,9 @@
               "probability": 1,
               "effectType": "Endurance",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Dominator_Mu_Mastery.Ball_Lightning"
             },
             {
@@ -303,8 +309,9 @@
               "duration": 4,
               "effectType": "Recovery",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Dominator_Mu_Mastery.Ball_Lightning"
             }
           ]
@@ -319,22 +326,34 @@
               "probability": 1,
               "effectType": "Endurance",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Dominator_Mu_Mastery.Ball_Lightning"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Range",
+        "Recharge",
+        "Endurance_Modification"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Dominator_Mu_Mastery.Ball_Lightning",
+      "archetypeOrder": "epicPool",
       "powerIndex": 2,
       "castTimeReal": 1.07,
       "toggleCost": 18.98,
+      "isEpic": true,
       "fullName": "Epic_Mu_Mastery_Ball_Lightning",
       "displayName": "Ball Lightning",
       "requires": {
         "powers": {
-          "Epic_Mu_Mastery_Power_Sink": true,
-          "Epic_Mu_Mastery_Charged_Armor": true
+          "Epic.Dominator_Mu_Mastery.Ball_Lightning": true
         },
         "count": 1
       },
@@ -368,14 +387,6 @@
       "aoeModifier": 3.25
     },
     {
-      "allowedEnhancements": [
-        "Endurance_Discount",
-        "Recharge",
-        "Endurance_Modification",
-        "Res_Damage"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Res_Dmg",
@@ -387,7 +398,8 @@
               "probability": 1,
               "duration": 120,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Dominator_Mu_Mastery.Surge_of_Power",
               "damageType": "Smashing"
             },
@@ -398,7 +410,8 @@
               "probability": 1,
               "duration": 120,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Dominator_Mu_Mastery.Surge_of_Power",
               "damageType": "Lethal"
             },
@@ -409,7 +422,8 @@
               "probability": 1,
               "duration": 120,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Dominator_Mu_Mastery.Surge_of_Power",
               "damageType": "Fire"
             },
@@ -420,7 +434,8 @@
               "probability": 1,
               "duration": 120,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Dominator_Mu_Mastery.Surge_of_Power",
               "damageType": "Cold"
             },
@@ -431,7 +446,8 @@
               "probability": 1,
               "duration": 120,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Dominator_Mu_Mastery.Surge_of_Power",
               "damageType": "Energy"
             },
@@ -442,7 +458,8 @@
               "probability": 1,
               "duration": 120,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Dominator_Mu_Mastery.Surge_of_Power",
               "damageType": "Negative"
             },
@@ -453,7 +470,8 @@
               "probability": 1,
               "duration": 120,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Dominator_Mu_Mastery.Surge_of_Power",
               "damageType": "Toxic"
             }
@@ -469,7 +487,7 @@
               "probability": 1,
               "duration": 120,
               "effectType": "Recovery",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Epic.Dominator_Mu_Mastery.Surge_of_Power"
             },
             {
@@ -477,7 +495,7 @@
               "probability": 1,
               "duration": 120,
               "effectType": "Translucency",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Epic.Dominator_Mu_Mastery.Surge_of_Power"
             },
             {
@@ -488,7 +506,7 @@
               "duration": 5,
               "effectType": "Null",
               "delayedTime": 120,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Epic.Dominator_Mu_Mastery.Surge_of_Power"
             },
             {
@@ -498,7 +516,7 @@
               "probability": 1,
               "duration": 30,
               "effectType": "GlobalChanceMod",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Epic.Dominator_Mu_Mastery.Surge_of_Power"
             }
           ]
@@ -513,7 +531,7 @@
               "probability": 1,
               "effectType": "Endurance",
               "delayedTime": 120,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Epic.Dominator_Mu_Mastery.Surge_of_Power"
             },
             {
@@ -524,21 +542,30 @@
               "duration": 15,
               "effectType": "Recovery",
               "delayedTime": 120,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Epic.Dominator_Mu_Mastery.Surge_of_Power"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Endurance_Discount",
+        "Recharge",
+        "Endurance_Modification",
+        "Res_Damage"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Dominator_Mu_Mastery.Surge_of_Power",
+      "archetypeOrder": "epicPool",
       "powerIndex": 3,
       "castTimeReal": 1.96,
       "toggleCost": 3.25,
+      "isEpic": true,
       "fullName": "Epic_Mu_Mastery_Surge_of_Power",
       "displayName": "Surge of Power",
       "requires": {
         "powers": {
-          "Epic_Mu_Mastery_Power_Sink": true,
-          "Epic_Mu_Mastery_Charged_Armor": true
+          "Epic.Dominator_Mu_Mastery.Surge_of_Power": true
         },
         "count": 1
       },
@@ -569,17 +596,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Heal",
-        "Hold",
-        "Recharge",
-        "Endurance_Modification"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Ones",
@@ -591,23 +607,33 @@
               "probability": 1,
               "duration": 240,
               "effectType": "EntCreate",
-              "toWho": "All",
+              "toWho": "all",
               "powerFullName": "Epic.Dominator_Mu_Mastery.Summon_Guardian"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Heal",
+        "Hold",
+        "Recharge",
+        "Endurance_Modification"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Dominator_Mu_Mastery.Summon_Guardian",
+      "archetypeOrder": "epicPool",
       "powerIndex": 4,
       "castTimeReal": 1.17,
       "toggleCost": 26,
+      "isEpic": true,
       "fullName": "Epic_Mu_Mastery_Summon_Guardian",
       "displayName": "Summon Guardian",
       "requires": {
         "powers": {
-          "Epic_Mu_Mastery_Power_Sink": true,
-          "Epic_Mu_Mastery_Charged_Armor": true,
-          "Epic_Mu_Mastery_Ball_Lightning": true,
-          "Epic_Mu_Mastery_Surge_of_Power": true
+          "Epic.Dominator_Mu_Mastery.Summon_Guardian": true
         },
         "count": 2
       },

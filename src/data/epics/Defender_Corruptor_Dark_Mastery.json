@@ -6,14 +6,6 @@
   "displayName": "Dark Mastery",
   "powers": [
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Endurance_Discount",
-        "Recharge",
-        "Stun"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Stun",
@@ -26,8 +18,9 @@
               "probability": 1,
               "duration": 7.15200043,
               "effectType": "Mez",
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.Dark_Mastery.Oppressive_Gloom",
               "mezType": "Stun"
@@ -45,7 +38,7 @@
               "variableModified": true,
               "effectType": "Damage",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Epic.Dark_Mastery.Oppressive_Gloom",
               "damageType": "Special"
             }
@@ -62,8 +55,9 @@
               "probability": 1,
               "duration": 2,
               "effectType": "Mez",
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.Dark_Mastery.Oppressive_Gloom",
               "mezType": "Stun"
@@ -71,6 +65,15 @@
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Endurance_Discount",
+        "Recharge",
+        "Stun"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Dark_Mastery.Oppressive_Gloom",
+      "archetypeOrder": "epicPool",
       "powerIndex": 0,
       "castTimeReal": 1.17,
       "toggleCost": 0.0975,
@@ -109,14 +112,6 @@
       "powerType": "Toggle"
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Recharge",
-        "Endurance_Modification"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Damage",
@@ -128,8 +123,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Dark_Mastery.Dark_Consumption",
               "damageType": "Negative"
             }
@@ -147,12 +143,22 @@
               "effectType": "Endurance",
               "delayedTime": 0.25,
               "stacking": 1,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Dark_Mastery.Dark_Consumption"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Recharge",
+        "Endurance_Modification"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Dark_Mastery.Dark_Consumption",
+      "archetypeOrder": "epicPool",
       "powerIndex": 1,
       "castTimeReal": 1.03,
       "toggleCost": 0.65,
@@ -194,13 +200,6 @@
       "aoeModifier": 2.2
     },
     {
-      "allowedEnhancements": [
-        "Endurance_Discount",
-        "Recharge",
-        "Res_Damage"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Res_Dmg",
@@ -213,7 +212,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Dark_Mastery.Dark_Embrace",
               "damageType": "Smashing"
             },
@@ -225,7 +225,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Dark_Mastery.Dark_Embrace",
               "damageType": "Lethal"
             },
@@ -237,7 +238,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Dark_Mastery.Dark_Embrace",
               "damageType": "Toxic"
             },
@@ -249,7 +251,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Dark_Mastery.Dark_Embrace",
               "damageType": "Negative"
             },
@@ -260,7 +263,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Dark_Mastery.Dark_Embrace",
               "damageType": "Energy"
             },
@@ -271,7 +275,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Dark_Mastery.Dark_Embrace",
               "damageType": "Fire"
             },
@@ -282,7 +287,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Dark_Mastery.Dark_Embrace",
               "damageType": "Cold"
             },
@@ -293,22 +299,31 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Dark_Mastery.Dark_Embrace",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Endurance_Discount",
+        "Recharge",
+        "Res_Damage"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Dark_Mastery.Dark_Embrace",
+      "archetypeOrder": "epicPool",
       "powerIndex": 2,
       "castTimeReal": 0.67,
       "toggleCost": 0.325,
+      "isEpic": true,
       "fullName": "Epic_Dark_Mastery_Dark_Embrace",
       "displayName": "Dark Embrace",
       "requires": {
         "powers": {
-          "Epic_Dark_Mastery_Oppressive_Gloom": true,
-          "Epic_Dark_Mastery_Dark_Consumption": true
+          "Epic.Dark_Mastery.Dark_Embrace": true
         },
         "count": 1
       },
@@ -340,15 +355,6 @@
       "powerType": "Toggle"
     },
     {
-      "allowedEnhancements": [
-        "Damage",
-        "Heal",
-        "Recharge",
-        "Endurance_Modification",
-        "Stun"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Damage",
@@ -360,8 +366,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Dark_Mastery.Soul_Transfer",
               "damageType": "Negative"
             }
@@ -379,8 +386,9 @@
               "duration": 9.536,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.Dark_Mastery.Soul_Transfer",
               "mezType": "Stun"
@@ -400,7 +408,8 @@
               "effectType": "Heal",
               "ticks": 1,
               "stacking": 1,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Dark_Mastery.Soul_Transfer"
             }
           ]
@@ -415,7 +424,7 @@
               "probability": 1,
               "duration": 15,
               "effectType": "Mez",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Epic.Dark_Mastery.Soul_Transfer",
               "mezType": "Untouchable"
             },
@@ -428,7 +437,8 @@
               "effectType": "Endurance",
               "delayedTime": 0.25,
               "stacking": 1,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Dark_Mastery.Soul_Transfer"
             },
             {
@@ -440,10 +450,10 @@
               "variableModified": true,
               "effectType": "Mez",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "attribType": 1,
               "powerFullName": "Epic.Dark_Mastery.Soul_Transfer",
-              "mezType": "Immobilization"
+              "mezType": "Immob"
             },
             {
               "mag": {
@@ -452,20 +462,30 @@
               "probability": 1,
               "duration": 90,
               "effectType": "XPDebtProtection",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Epic.Dark_Mastery.Soul_Transfer"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Damage",
+        "Heal",
+        "Recharge",
+        "Endurance_Modification",
+        "Stun"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Dark_Mastery.Soul_Transfer",
+      "archetypeOrder": "epicPool",
       "powerIndex": 3,
       "castTimeReal": 1.17,
+      "isEpic": true,
       "fullName": "Epic_Dark_Mastery_Soul_Transfer",
       "displayName": "Soul Transfer",
       "requires": {
         "powers": {
-          "Epic_Dark_Mastery_Oppressive_Gloom": true,
-          "Epic_Dark_Mastery_Dark_Consumption": true
+          "Epic.Dark_Mastery.Soul_Transfer": true
         },
         "count": 1
       },
@@ -500,15 +520,6 @@
       "aoeModifier": 4.75
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "ToHit_Buff",
-        "Damage",
-        "Endurance_Discount",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Damage",
@@ -520,8 +531,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Dark_Mastery.Soul_Drain",
               "damageType": "Negative"
             }
@@ -539,7 +551,8 @@
               "variableModified": true,
               "effectType": "ToHit",
               "stacking": 1,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Dark_Mastery.Soul_Drain"
             }
           ]
@@ -556,7 +569,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Epic.Dark_Mastery.Soul_Drain",
               "damageType": "Smashing"
             },
@@ -569,7 +582,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Epic.Dark_Mastery.Soul_Drain",
               "damageType": "Lethal"
             },
@@ -582,7 +595,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Epic.Dark_Mastery.Soul_Drain",
               "damageType": "Fire"
             },
@@ -595,7 +608,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Epic.Dark_Mastery.Soul_Drain",
               "damageType": "Cold"
             },
@@ -608,7 +621,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Epic.Dark_Mastery.Soul_Drain",
               "damageType": "Energy"
             },
@@ -621,7 +634,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Epic.Dark_Mastery.Soul_Drain",
               "damageType": "Negative"
             },
@@ -634,7 +647,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Epic.Dark_Mastery.Soul_Drain",
               "damageType": "Toxic"
             },
@@ -647,24 +660,32 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Epic.Dark_Mastery.Soul_Drain",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "ToHit_Buff",
+        "Damage",
+        "Endurance_Discount",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Dark_Mastery.Soul_Drain",
+      "archetypeOrder": "epicPool",
       "powerIndex": 4,
       "castTimeReal": 2.37,
       "toggleCost": 19.5,
+      "isEpic": true,
       "fullName": "Epic_Dark_Mastery_Soul_Drain",
       "displayName": "Soul Drain",
       "requires": {
         "powers": {
-          "Epic_Dark_Mastery_Oppressive_Gloom": true,
-          "Epic_Dark_Mastery_Dark_Consumption": true,
-          "Epic_Dark_Mastery_Dark_Embrace": true,
-          "Epic_Dark_Mastery_Soul_Transfer": true
+          "Epic.Dark_Mastery.Soul_Drain": true
         },
         "count": 2
       },

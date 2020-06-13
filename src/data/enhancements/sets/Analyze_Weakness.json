@@ -2,276 +2,188 @@
   "fullName": "IOSet.Analyze_Weakness",
   "enhancements": [
     {
-      "effects": [
-        {
-          "effectType": "DefenseDebuff",
-          "values": [
-            {
-              "etModifies": "Defense",
-              "mag": {
-                "pve": 0.424
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Analyze_Weakness_A.Attuned_Analyze_Weakness_A"
-            }
-          ]
-        }
-      ],
+      "type": "set",
+      "fullName": "Boosts.Attuned_Analyze_Weakness_A.Attuned_Analyze_Weakness_A",
+      "displayName": "Defense Debuff",
       "description": {
         "short": "+Defense Debuff",
         "long": "Enhances the defense debuff potential of a power by {Boost.Attrib.DefenseDebuff.Scale}%.  NOTE: This enhancement can only be slotted into defense debuff powers that require a To Hit check."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Analyze_Weakness_A.Attuned_Analyze_Weakness_A",
-      "setName": "Analyze_Weakness",
-      "displayName": "Defense Debuff"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Accuracy",
-          "values": [
-            {
-              "etModifies": "Accuracy",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Analyze_Weakness_B.Attuned_Analyze_Weakness_B"
+          "mag": {
+            "IO": {
+              "cap": 0.424
             }
-          ]
-        },
-        {
-          "effectType": "DefenseDebuff",
-          "values": [
-            {
-              "etModifies": "Defense",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Analyze_Weakness_B.Attuned_Analyze_Weakness_B"
-            }
-          ]
+          },
+          "stat": "Defense_Debuff",
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Analyze_Weakness_B.Attuned_Analyze_Weakness_B",
+      "displayName": "Accuracy/Defense Debuff",
       "description": {
         "short": "+ACC, +Defense Debuff",
         "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and defense debuff potential of a power by {Boost.Attrib.DefenseDebuff.Scale}%.  NOTE: This enhancement can only be slotted into defense debuff powers that require a To Hit check."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Analyze_Weakness_B.Attuned_Analyze_Weakness_B",
-      "setName": "Analyze_Weakness",
-      "displayName": "Accuracy/Defense Debuff"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Recharge",
-          "values": [
-            {
-              "etModifies": "RechargeTime",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Analyze_Weakness_C.Attuned_Analyze_Weakness_C"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
+          },
+          "stat": "Accuracy",
+          "toWho": "self"
         },
         {
-          "effectType": "Accuracy",
-          "values": [
-            {
-              "etModifies": "Accuracy",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Analyze_Weakness_C.Attuned_Analyze_Weakness_C"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
+          },
+          "stat": "Defense_Debuff",
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Analyze_Weakness_C.Attuned_Analyze_Weakness_C",
+      "displayName": "Accuracy/Recharge",
       "description": {
         "short": "+ACC, +Rech",
         "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and and reduces recharge time by {Boost.Attrib.Recharge.Scale}%.  NOTE: This enhancement can only be slotted into defense debuff powers that require a To Hit check."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Analyze_Weakness_C.Attuned_Analyze_Weakness_C",
-      "setName": "Analyze_Weakness",
-      "displayName": "Accuracy/Recharge"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Recharge",
-          "values": [
-            {
-              "etModifies": "RechargeTime",
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Analyze_Weakness_D.Attuned_Analyze_Weakness_D"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
+          },
+          "stat": "Accuracy",
+          "toWho": "self"
         },
         {
-          "effectType": "DefenseDebuff",
-          "values": [
-            {
-              "etModifies": "Defense",
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Analyze_Weakness_D.Attuned_Analyze_Weakness_D"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
-        },
-        {
-          "effectType": "Endurance",
-          "values": [
-            {
-              "etModifies": "EnduranceDiscount",
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Analyze_Weakness_D.Attuned_Analyze_Weakness_D"
-            }
-          ]
+          },
+          "stat": "Recharge",
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Analyze_Weakness_D.Attuned_Analyze_Weakness_D",
+      "displayName": "Defense Debuff/Endurance/Recharge",
       "description": {
         "short": "+Defense Debuff, -End Cost, +Rech",
         "long": "Enhances the defense debuff potential of a power by {Boost.Attrib.DefenseDebuff.Scale}%, reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}% and reduces recharge time by {Boost.Attrib.Recharge.Scale}%  NOTE: This enhancement can only be slotted into defense debuff powers that require a To Hit check."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Analyze_Weakness_D.Attuned_Analyze_Weakness_D",
-      "setName": "Analyze_Weakness",
-      "displayName": "Defense Debuff/Endurance/Recharge"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Recharge",
-          "values": [
-            {
-              "etModifies": "RechargeTime",
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Analyze_Weakness_E.Attuned_Analyze_Weakness_E"
+          "mag": {
+            "IO": {
+              "cap": 0.212
             }
-          ]
+          },
+          "stat": "Defense_Debuff",
+          "toWho": "self"
         },
         {
-          "effectType": "Accuracy",
-          "values": [
-            {
-              "etModifies": "Accuracy",
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Analyze_Weakness_E.Attuned_Analyze_Weakness_E"
+          "mag": {
+            "IO": {
+              "cap": 0.212
             }
-          ]
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self"
         },
         {
-          "effectType": "Endurance",
-          "values": [
-            {
-              "etModifies": "EnduranceDiscount",
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Analyze_Weakness_E.Attuned_Analyze_Weakness_E"
+          "mag": {
+            "IO": {
+              "cap": 0.212
             }
-          ]
+          },
+          "stat": "Recharge",
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Analyze_Weakness_E.Attuned_Analyze_Weakness_E",
+      "displayName": "Accuracy/Endurance/Recharge",
       "description": {
         "short": "+ACC, -End Cost, +Rech",
         "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}%, reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}% and reduces recharge time by {Boost.Attrib.Recharge.Scale}%.  NOTE: This enhancement can only be slotted into defense debuff powers that require a To Hit check."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Analyze_Weakness_E.Attuned_Analyze_Weakness_E",
-      "setName": "Analyze_Weakness",
-      "displayName": "Accuracy/Endurance/Recharge"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Boost",
-          "values": [
-            {
-              "mag": {
-                "pve": 1
-              },
-              "procsPerMinute": 2,
-              "cancelOnMiss": true,
-              "duration": 10,
-              "effectType": "GrantPower",
-              "ticks": 1,
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Analyze_Weakness_F.Attuned_Analyze_Weakness_F"
+          "mag": {
+            "IO": {
+              "cap": 0.212
             }
-          ]
+          },
+          "stat": "Accuracy",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.212
+            }
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.212
+            }
+          },
+          "stat": "Recharge",
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Analyze_Weakness_F.Attuned_Analyze_Weakness_F",
+      "displayName": "Chance for +To Hit",
       "description": {
         "short": "Chance for +To Hit",
         "long": "Gives a chance to boost the user's chance to hit.  This effect will trigger roughly 2times per minute.  NOTE: This enhancement can only be slotted into defense debuff powers that require a to hit check."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Analyze_Weakness_F.Attuned_Analyze_Weakness_F",
-      "setName": "Analyze_Weakness",
-      "displayName": "Chance for +To Hit",
-      "hasGrantPowerEffect": true
+      "hasGrantPowerEffect": true,
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 1
+            }
+          },
+          "stat": "Chance for +To Hit",
+          "procsPerMinute": 2,
+          "cancelOnMiss": true,
+          "ticks": 1,
+          "toWho": "self"
+        }
+      ]
     }
   ],
   "levels": {

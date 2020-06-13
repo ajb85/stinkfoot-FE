@@ -2,794 +2,292 @@
   "fullName": "IOSet.Will_of_the_Controller",
   "enhancements": [
     {
-      "effects": [
-        {
-          "effectType": "Hold",
-          "values": [
-            {
-              "etModifies": "Mez",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Will_of_the_Controller_A.Attuned_Will_of_the_Controller_A",
-              "mezType": "Hold",
-              "magSuperior": {
-                "pve": 0.3312712
-              }
-            }
-          ]
-        },
-        {
-          "effectType": "Stun",
-          "values": [
-            {
-              "etModifies": "Mez",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Will_of_the_Controller_A.Attuned_Will_of_the_Controller_A",
-              "mezType": "Stun",
-              "magSuperior": {
-                "pve": 0.3312712
-              }
-            }
-          ]
-        },
-        {
-          "effectType": "Immobilize",
-          "values": [
-            {
-              "etModifies": "Mez",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Will_of_the_Controller_A.Attuned_Will_of_the_Controller_A",
-              "mezType": "Immob",
-              "magSuperior": {
-                "pve": 0.3312712
-              }
-            }
-          ]
-        },
-        {
-          "effectType": "Sleep",
-          "values": [
-            {
-              "etModifies": "Mez",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Will_of_the_Controller_A.Attuned_Will_of_the_Controller_A",
-              "mezType": "Sleep",
-              "magSuperior": {
-                "pve": 0.3312712
-              }
-            }
-          ]
-        },
-        {
-          "effectType": "Confused",
-          "values": [
-            {
-              "etModifies": "Mez",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Will_of_the_Controller_A.Attuned_Will_of_the_Controller_A",
-              "mezType": "Confuse",
-              "magSuperior": {
-                "pve": 0.3312712
-              }
-            }
-          ]
-        },
-        {
-          "effectType": "Terrorized",
-          "values": [
-            {
-              "etModifies": "Mez",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Will_of_the_Controller_A.Attuned_Will_of_the_Controller_A",
-              "mezType": "Terror",
-              "magSuperior": {
-                "pve": 0.3312712
-              }
-            }
-          ]
-        },
-        {
-          "effectType": "Accuracy",
-          "values": [
-            {
-              "etModifies": "Accuracy",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Will_of_the_Controller_A.Attuned_Will_of_the_Controller_A",
-              "magSuperior": {
-                "pve": 0.3312712
-              }
-            }
-          ]
-        }
-      ],
+      "type": "attuned",
+      "fullName": "Boosts.Attuned_Will_of_the_Controller_A.Attuned_Will_of_the_Controller_A",
+      "displayName": "Accuracy/Control Duration",
       "description": {
         "short": "Enhances Accuracy and Control Duration",
         "long": "UNIQUE -- No more than 1 enhancement of this type may be slotted by a character.  Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}%, enhances the hold duration of a power by {Boost.Attrib.Hold.Scale}%, the hold duration by {Boost.Attrib.Stun.Scale}%, the immobilization duration by {Boost.Attrib.Immobilize.Scale}%, the sleep duration by {Boost.Attrib.Sleep.Scale}%, the fear duration by {Boost.Attrib.Terrorized.Scale}% and the confuse duration by {Boost.Attrib.Confused.Scale}%.  This enhancement can only be slotted by Controllers and may be slotted into most control powers."
       },
-      "isUnique": true,
-      "type": "attuned",
-      "fullName": "Boosts.Attuned_Will_of_the_Controller_A.Attuned_Will_of_the_Controller_A",
-      "setName": "Will_of_the_Controller",
-      "displayName": "Accuracy/Control Duration"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Hold",
-          "values": [
-            {
-              "etModifies": "Mez",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Will_of_the_Controller_B.Attuned_Will_of_the_Controller_B",
-              "mezType": "Hold",
-              "magSuperior": {
-                "pve": 0.3312712
-              }
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
+          },
+          "stat": "Accuracy",
+          "toWho": "self",
+          "magSuperior": {
+            "IO": {
+              "cap": 0.3312712
+            }
+          }
         },
         {
-          "effectType": "Stun",
-          "values": [
-            {
-              "etModifies": "Mez",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Will_of_the_Controller_B.Attuned_Will_of_the_Controller_B",
-              "mezType": "Stun",
-              "magSuperior": {
-                "pve": 0.3312712
-              }
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
-        },
-        {
-          "effectType": "Immobilize",
-          "values": [
-            {
-              "etModifies": "Mez",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Will_of_the_Controller_B.Attuned_Will_of_the_Controller_B",
-              "mezType": "Immob",
-              "magSuperior": {
-                "pve": 0.3312712
-              }
+          },
+          "stat": "Mez",
+          "mezType": 2,
+          "toWho": "self",
+          "magSuperior": {
+            "IO": {
+              "cap": 0.3312712
             }
-          ]
-        },
-        {
-          "effectType": "Sleep",
-          "values": [
-            {
-              "etModifies": "Mez",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Will_of_the_Controller_B.Attuned_Will_of_the_Controller_B",
-              "mezType": "Sleep",
-              "magSuperior": {
-                "pve": 0.3312712
-              }
-            }
-          ]
-        },
-        {
-          "effectType": "Confused",
-          "values": [
-            {
-              "etModifies": "Mez",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Will_of_the_Controller_B.Attuned_Will_of_the_Controller_B",
-              "mezType": "Confuse",
-              "magSuperior": {
-                "pve": 0.3312712
-              }
-            }
-          ]
-        },
-        {
-          "effectType": "Terrorized",
-          "values": [
-            {
-              "etModifies": "Mez",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Will_of_the_Controller_B.Attuned_Will_of_the_Controller_B",
-              "mezType": "Terror",
-              "magSuperior": {
-                "pve": 0.3312712
-              }
-            }
-          ]
-        },
-        {
-          "effectType": "Recharge",
-          "values": [
-            {
-              "etModifies": "RechargeTime",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Will_of_the_Controller_B.Attuned_Will_of_the_Controller_B",
-              "magSuperior": {
-                "pve": 0.3312712
-              }
-            }
-          ]
+          }
         }
-      ],
+      ]
+    },
+    {
+      "type": "attuned",
+      "fullName": "Boosts.Attuned_Will_of_the_Controller_B.Attuned_Will_of_the_Controller_B",
+      "displayName": "Control Duration/Recharge",
       "description": {
         "short": "Enhances Control Duration and Recharge",
         "long": "UNIQUE -- No more than 1 enhancement of this type may be slotted by a character.  Enhances the hold duration of a power by {Boost.Attrib.Hold.Scale}%, the hold duration by {Boost.Attrib.Stun.Scale}%, the immobilization duration by {Boost.Attrib.Immobilize.Scale}%, the sleep duration by {Boost.Attrib.Sleep.Scale}%, the fear duration by {Boost.Attrib.Terrorized.Scale}% and the confuse duration by {Boost.Attrib.Confused.Scale}% and reduces recharge time by {Boost.Attrib.Recharge.Scale}%.  This enhancement can only be slotted by Controllers and may be slotted into most control powers."
       },
-      "isUnique": true,
-      "type": "attuned",
-      "fullName": "Boosts.Attuned_Will_of_the_Controller_B.Attuned_Will_of_the_Controller_B",
-      "setName": "Will_of_the_Controller",
-      "displayName": "Control Duration/Recharge"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Endurance",
-          "values": [
-            {
-              "etModifies": "EnduranceDiscount",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Will_of_the_Controller_C.Attuned_Will_of_the_Controller_C",
-              "magSuperior": {
-                "pve": 0.3312712
-              }
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
+          },
+          "stat": "Mez",
+          "mezType": 2,
+          "toWho": "self",
+          "magSuperior": {
+            "IO": {
+              "cap": 0.3312712
+            }
+          }
         },
         {
-          "effectType": "Recharge",
-          "values": [
-            {
-              "etModifies": "RechargeTime",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Will_of_the_Controller_C.Attuned_Will_of_the_Controller_C",
-              "magSuperior": {
-                "pve": 0.3312712
-              }
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
+          },
+          "stat": "Recharge",
+          "toWho": "self",
+          "magSuperior": {
+            "IO": {
+              "cap": 0.3312712
+            }
+          }
         }
-      ],
+      ]
+    },
+    {
+      "type": "attuned",
+      "fullName": "Boosts.Attuned_Will_of_the_Controller_C.Attuned_Will_of_the_Controller_C",
+      "displayName": "Endurance/Recharge",
       "description": {
         "short": "Reduces Endurance Cost and Increases Attack Rate",
         "long": "UNIQUE -- No more than 1 enhancement of this type may be slotted by a character.  Reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}% and reduces recharge time by {Boost.Attrib.Recharge.Scale}%.  This enhancement can only be slotted by Controllers and may be slotted into most control powers."
       },
-      "isUnique": true,
-      "type": "attuned",
-      "fullName": "Boosts.Attuned_Will_of_the_Controller_C.Attuned_Will_of_the_Controller_C",
-      "setName": "Will_of_the_Controller",
-      "displayName": "Endurance/Recharge"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Hold",
-          "values": [
-            {
-              "etModifies": "Mez",
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Will_of_the_Controller_D.Attuned_Will_of_the_Controller_D",
-              "mezType": "Hold",
-              "magSuperior": {
-                "pve": 0.2612688
-              }
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self",
+          "magSuperior": {
+            "IO": {
+              "cap": 0.3312712
+            }
+          }
         },
         {
-          "effectType": "Stun",
-          "values": [
-            {
-              "etModifies": "Mez",
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Will_of_the_Controller_D.Attuned_Will_of_the_Controller_D",
-              "mezType": "Stun",
-              "magSuperior": {
-                "pve": 0.2612688
-              }
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
-        },
-        {
-          "effectType": "Immobilize",
-          "values": [
-            {
-              "etModifies": "Mez",
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Will_of_the_Controller_D.Attuned_Will_of_the_Controller_D",
-              "mezType": "Immob",
-              "magSuperior": {
-                "pve": 0.2612688
-              }
+          },
+          "stat": "Recharge",
+          "toWho": "self",
+          "magSuperior": {
+            "IO": {
+              "cap": 0.3312712
             }
-          ]
-        },
-        {
-          "effectType": "Sleep",
-          "values": [
-            {
-              "etModifies": "Mez",
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Will_of_the_Controller_D.Attuned_Will_of_the_Controller_D",
-              "mezType": "Sleep",
-              "magSuperior": {
-                "pve": 0.2612688
-              }
-            }
-          ]
-        },
-        {
-          "effectType": "Confused",
-          "values": [
-            {
-              "etModifies": "Mez",
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Will_of_the_Controller_D.Attuned_Will_of_the_Controller_D",
-              "mezType": "Confuse",
-              "magSuperior": {
-                "pve": 0.2612688
-              }
-            }
-          ]
-        },
-        {
-          "effectType": "Terrorized",
-          "values": [
-            {
-              "etModifies": "Mez",
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Will_of_the_Controller_D.Attuned_Will_of_the_Controller_D",
-              "mezType": "Terror",
-              "magSuperior": {
-                "pve": 0.2612688
-              }
-            }
-          ]
-        },
-        {
-          "effectType": "Accuracy",
-          "values": [
-            {
-              "etModifies": "Accuracy",
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Will_of_the_Controller_D.Attuned_Will_of_the_Controller_D",
-              "magSuperior": {
-                "pve": 0.2612688
-              }
-            }
-          ]
-        },
-        {
-          "effectType": "Endurance",
-          "values": [
-            {
-              "etModifies": "EnduranceDiscount",
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Will_of_the_Controller_D.Attuned_Will_of_the_Controller_D",
-              "magSuperior": {
-                "pve": 0.2612688
-              }
-            }
-          ]
+          }
         }
-      ],
+      ]
+    },
+    {
+      "type": "attuned",
+      "fullName": "Boosts.Attuned_Will_of_the_Controller_D.Attuned_Will_of_the_Controller_D",
+      "displayName": "Accuracy/Control Duration/Endurance",
       "description": {
         "short": "Enhances Accuracy, Control Duration, and Reduces Endurance Cost",
         "long": "UNIQUE -- No more than 1 enhancement of this type may be slotted by a character.  Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}%, enhances the hold duration of a power by {Boost.Attrib.Hold.Scale}%, the hold duration by {Boost.Attrib.Stun.Scale}%, the immobilization duration by {Boost.Attrib.Immobilize.Scale}%, the sleep duration by {Boost.Attrib.Sleep.Scale}%, the fear duration by {Boost.Attrib.Terrorized.Scale}% and the confuse duration by {Boost.Attrib.Confused.Scale}% and reduces endurance cost by {Boost.Attrib.Endurance.Scale}%.  This enhancement can only be slotted by Controllers and may be slotted into most control powers."
       },
-      "isUnique": true,
-      "type": "attuned",
-      "fullName": "Boosts.Attuned_Will_of_the_Controller_D.Attuned_Will_of_the_Controller_D",
-      "setName": "Will_of_the_Controller",
-      "displayName": "Accuracy/Control Duration/Endurance"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Hold",
-          "values": [
-            {
-              "etModifies": "Mez",
-              "mag": {
-                "pve": 0.1855
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Will_of_the_Controller_E.Attuned_Will_of_the_Controller_E",
-              "mezType": "Hold",
-              "magSuperior": {
-                "pve": 0.231885582
-              }
+          "mag": {
+            "IO": {
+              "cap": 0.212
             }
-          ]
+          },
+          "stat": "Accuracy",
+          "toWho": "self",
+          "magSuperior": {
+            "IO": {
+              "cap": 0.2612688
+            }
+          }
         },
         {
-          "effectType": "Stun",
-          "values": [
-            {
-              "etModifies": "Mez",
-              "mag": {
-                "pve": 0.1855
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Will_of_the_Controller_E.Attuned_Will_of_the_Controller_E",
-              "mezType": "Stun",
-              "magSuperior": {
-                "pve": 0.231885582
-              }
+          "mag": {
+            "IO": {
+              "cap": 0.212
             }
-          ]
+          },
+          "stat": "Mez",
+          "mezType": 2,
+          "toWho": "self",
+          "magSuperior": {
+            "IO": {
+              "cap": 0.2612688
+            }
+          }
         },
         {
-          "effectType": "Immobilize",
-          "values": [
-            {
-              "etModifies": "Mez",
-              "mag": {
-                "pve": 0.1855
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Will_of_the_Controller_E.Attuned_Will_of_the_Controller_E",
-              "mezType": "Immob",
-              "magSuperior": {
-                "pve": 0.231885582
-              }
+          "mag": {
+            "IO": {
+              "cap": 0.212
             }
-          ]
-        },
-        {
-          "effectType": "Sleep",
-          "values": [
-            {
-              "etModifies": "Mez",
-              "mag": {
-                "pve": 0.1855
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Will_of_the_Controller_E.Attuned_Will_of_the_Controller_E",
-              "mezType": "Sleep",
-              "magSuperior": {
-                "pve": 0.231885582
-              }
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self",
+          "magSuperior": {
+            "IO": {
+              "cap": 0.2612688
             }
-          ]
-        },
-        {
-          "effectType": "Confused",
-          "values": [
-            {
-              "etModifies": "Mez",
-              "mag": {
-                "pve": 0.1855
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Will_of_the_Controller_E.Attuned_Will_of_the_Controller_E",
-              "mezType": "Confuse",
-              "magSuperior": {
-                "pve": 0.231885582
-              }
-            }
-          ]
-        },
-        {
-          "effectType": "Terrorized",
-          "values": [
-            {
-              "etModifies": "Mez",
-              "mag": {
-                "pve": 0.1855
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Will_of_the_Controller_E.Attuned_Will_of_the_Controller_E",
-              "mezType": "Terror",
-              "magSuperior": {
-                "pve": 0.231885582
-              }
-            }
-          ]
-        },
-        {
-          "effectType": "Accuracy",
-          "values": [
-            {
-              "etModifies": "Accuracy",
-              "mag": {
-                "pve": 0.1855
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Will_of_the_Controller_E.Attuned_Will_of_the_Controller_E",
-              "magSuperior": {
-                "pve": 0.231885582
-              }
-            }
-          ]
-        },
-        {
-          "effectType": "Recharge",
-          "values": [
-            {
-              "etModifies": "RechargeTime",
-              "mag": {
-                "pve": 0.1855
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Will_of_the_Controller_E.Attuned_Will_of_the_Controller_E",
-              "magSuperior": {
-                "pve": 0.231885582
-              }
-            }
-          ]
-        },
-        {
-          "effectType": "Endurance",
-          "values": [
-            {
-              "etModifies": "EnduranceDiscount",
-              "mag": {
-                "pve": 0.1855
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Will_of_the_Controller_E.Attuned_Will_of_the_Controller_E",
-              "magSuperior": {
-                "pve": 0.231885582
-              }
-            }
-          ]
+          }
         }
-      ],
+      ]
+    },
+    {
+      "type": "attuned",
+      "fullName": "Boosts.Attuned_Will_of_the_Controller_E.Attuned_Will_of_the_Controller_E",
+      "displayName": "Accuracy/Control Duration/Endurance/Recharge",
       "description": {
         "short": "Enhances Accuracy and Control Duration, Increases Attack Rate, and Reduces Endurance Cost",
         "long": "UNIQUE -- No more than 1 enhancement of this type may be slotted by a character.  Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}%, enhances the hold duration of a power by {Boost.Attrib.Hold.Scale}%, the hold duration by {Boost.Attrib.Stun.Scale}%, the immobilization duration by {Boost.Attrib.Immobilize.Scale}%, the sleep duration by {Boost.Attrib.Sleep.Scale}%, the fear duration by {Boost.Attrib.Terrorized.Scale}% and the confuse duration by {Boost.Attrib.Confused.Scale}%, reduces endurance cost by {Boost.Attrib.Endurance.Scale}% and reduces recharge time by {Boost.Attrib.Recharge.Scale}%.  This enhancement can only be slotted by Controllers and may be slotted into most control powers."
       },
-      "isUnique": true,
-      "type": "attuned",
-      "fullName": "Boosts.Attuned_Will_of_the_Controller_E.Attuned_Will_of_the_Controller_E",
-      "setName": "Will_of_the_Controller",
-      "displayName": "Accuracy/Control Duration/Endurance/Recharge"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Damage",
-          "values": [
-            {
-              "mag": {
-                "pve": 71.7501
-              },
-              "procsPerMinute": 4,
-              "cancelOnMiss": true,
-              "effectType": "Damage",
-              "stacking": 1,
-              "resistible": true,
-              "toWho": "all",
-              "powerFullName": "Boosts.Attuned_Will_of_the_Controller_F.Attuned_Will_of_the_Controller_F",
-              "damageType": "Psionic",
-              "magSuperior": {
-                "pve": 107.0897
-              }
+          "mag": {
+            "IO": {
+              "cap": 0.1855
             }
-          ]
+          },
+          "stat": "Accuracy",
+          "toWho": "self",
+          "magSuperior": {
+            "IO": {
+              "cap": 0.231885582
+            }
+          }
         },
         {
-          "effectType": "TempDamage",
-          "values": [
-            {
-              "mag": {
-                "pvp": 71.7501
-              },
-              "procsPerMinute": 4,
-              "cancelOnMiss": true,
-              "effectType": "Damage",
-              "stacking": 1,
-              "toWho": "all",
-              "powerFullName": "Boosts.Attuned_Will_of_the_Controller_F.Attuned_Will_of_the_Controller_F",
-              "damageType": "Psionic",
-              "magSuperior": {
-                "pvp": 107.0897
-              }
+          "mag": {
+            "IO": {
+              "cap": 0.1855
             }
-          ]
+          },
+          "stat": "Mez",
+          "mezType": 2,
+          "toWho": "self",
+          "magSuperior": {
+            "IO": {
+              "cap": 0.231885582
+            }
+          }
         },
         {
-          "effectType": "Recharge",
-          "values": [
-            {
-              "etModifies": "RechargeTime",
-              "mag": {
-                "pve": 0.1855
-              },
-              "procsPerMinute": 4,
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Will_of_the_Controller_F.Attuned_Will_of_the_Controller_F",
-              "magSuperior": {
-                "pve": 0.231885582
-              }
+          "mag": {
+            "IO": {
+              "cap": 0.1855
             }
-          ]
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self",
+          "magSuperior": {
+            "IO": {
+              "cap": 0.231885582
+            }
+          }
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.1855
+            }
+          },
+          "stat": "Recharge",
+          "toWho": "self",
+          "magSuperior": {
+            "IO": {
+              "cap": 0.231885582
+            }
+          }
         }
-      ],
+      ]
+    },
+    {
+      "type": "attuned",
+      "fullName": "Boosts.Attuned_Will_of_the_Controller_F.Attuned_Will_of_the_Controller_F",
+      "displayName": "Recharge/Chance for Psionic Damage",
       "description": {
         "short": "Increases Attack Rate, Chance for Psionic Damage",
         "long": "UNIQUE -- No more than 1 enhancement of this type may be slotted by a character.  Gives the slotted power a chance to inflict minor psionic damage and reduces recharge time by {Boost.Attrib.Recharge.Scale}%.  This enhancement's chance to trigger is equal to approximately 4 times per minute.  This enhancement can only be slotted by Controllers and may be slotted into most control powers."
       },
-      "isUnique": true,
-      "type": "attuned",
-      "fullName": "Boosts.Attuned_Will_of_the_Controller_F.Attuned_Will_of_the_Controller_F",
-      "setName": "Will_of_the_Controller",
-      "displayName": "Recharge/Chance for Psionic Damage"
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.1855
+            }
+          },
+          "stat": "Recharge",
+          "procsPerMinute": 4,
+          "toWho": "self",
+          "magSuperior": {
+            "IO": {
+              "cap": 0.231885582
+            }
+          }
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 71.7501
+            }
+          },
+          "stat": "Chance for Psionic Damage",
+          "procsPerMinute": 4,
+          "cancelOnMiss": true,
+          "damageType": "Psionic",
+          "stacking": 1,
+          "resistible": true,
+          "pvMode": 1,
+          "toWho": "all"
+        }
+      ]
     }
   ],
   "levels": {

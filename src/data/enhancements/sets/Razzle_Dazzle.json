@@ -2,301 +2,182 @@
   "fullName": "IOSet.Razzle_Dazzle",
   "enhancements": [
     {
-      "effects": [
-        {
-          "effectType": "Recharge",
-          "values": [
-            {
-              "etModifies": "RechargeTime",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Razzle_Dazzle_A.Attuned_Razzle_Dazzle_A"
-            }
-          ]
-        },
-        {
-          "effectType": "Accuracy",
-          "values": [
-            {
-              "etModifies": "Accuracy",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Razzle_Dazzle_A.Attuned_Razzle_Dazzle_A"
-            }
-          ]
-        }
-      ],
+      "type": "set",
+      "fullName": "Boosts.Attuned_Razzle_Dazzle_A.Attuned_Razzle_Dazzle_A",
+      "displayName": "Accuracy/Recharge",
       "description": {
         "short": "+ACC, +Rech",
         "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}%."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Razzle_Dazzle_A.Attuned_Razzle_Dazzle_A",
-      "setName": "Razzle_Dazzle",
-      "displayName": "Accuracy/Recharge"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Endurance",
-          "values": [
-            {
-              "etModifies": "EnduranceDiscount",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Razzle_Dazzle_B.Attuned_Razzle_Dazzle_B"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
+          },
+          "stat": "Accuracy",
+          "toWho": "self"
         },
         {
-          "effectType": "Stun",
-          "values": [
-            {
-              "etModifies": "Mez",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Razzle_Dazzle_B.Attuned_Razzle_Dazzle_B",
-              "mezType": "Stun"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
+          },
+          "stat": "Recharge",
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Razzle_Dazzle_B.Attuned_Razzle_Dazzle_B",
+      "displayName": "Endurance/Stun",
       "description": {
         "short": "+End, +Stun",
         "long": "Enhances the Stun duration of a power by {Boost.Attrib.Stun.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Razzle_Dazzle_B.Attuned_Razzle_Dazzle_B",
-      "setName": "Razzle_Dazzle",
-      "displayName": "Endurance/Stun"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Accuracy",
-          "values": [
-            {
-              "etModifies": "Accuracy",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Razzle_Dazzle_C.Attuned_Razzle_Dazzle_C"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self"
         },
         {
-          "effectType": "Endurance",
-          "values": [
-            {
-              "etModifies": "EnduranceDiscount",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Razzle_Dazzle_C.Attuned_Razzle_Dazzle_C"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
+          },
+          "mezType": 10,
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Razzle_Dazzle_C.Attuned_Razzle_Dazzle_C",
+      "displayName": "Accuracy/Endurance",
       "description": {
         "short": "+ACC, -End Cost",
         "long": "Enhances the accuracy by {Boost.Attrib.Accuracy.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Razzle_Dazzle_C.Attuned_Razzle_Dazzle_C",
-      "setName": "Razzle_Dazzle",
-      "displayName": "Accuracy/Endurance"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Stun",
-          "values": [
-            {
-              "etModifies": "Mez",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Razzle_Dazzle_D.Attuned_Razzle_Dazzle_D",
-              "mezType": "Stun"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
+          },
+          "stat": "Accuracy",
+          "toWho": "self"
         },
         {
-          "effectType": "Range",
-          "values": [
-            {
-              "etModifies": "Range",
-              "mag": {
-                "pve": 0.159375
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Razzle_Dazzle_D.Attuned_Razzle_Dazzle_D"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Razzle_Dazzle_D.Attuned_Razzle_Dazzle_D",
+      "displayName": "Stun/Range",
       "description": {
         "short": "+Range, +Stun",
         "long": "Enhances the range of a power by {Boost.Attrib.Range.Scale}% and stun duration by {Boost.Attrib.Stun.Scale}%."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Razzle_Dazzle_D.Attuned_Razzle_Dazzle_D",
-      "setName": "Razzle_Dazzle",
-      "displayName": "Stun/Range"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Accuracy",
-          "values": [
-            {
-              "etModifies": "Accuracy",
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Razzle_Dazzle_E.Attuned_Razzle_Dazzle_E"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
-        },
-        {
-          "effectType": "Stun",
-          "values": [
-            {
-              "etModifies": "Mez",
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Razzle_Dazzle_E.Attuned_Razzle_Dazzle_E",
-              "mezType": "Stun"
-            }
-          ]
-        },
-        {
-          "effectType": "Recharge",
-          "values": [
-            {
-              "etModifies": "RechargeTime",
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Razzle_Dazzle_E.Attuned_Razzle_Dazzle_E"
-            }
-          ]
+          },
+          "mezType": 10,
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Razzle_Dazzle_E.Attuned_Razzle_Dazzle_E",
+      "displayName": "Accuracy/Stun/Recharge",
       "description": {
         "short": "+ACC, +Rech, +Stun",
         "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}%, stun duration by {Boost.Attrib.Stun.Scale}% and reduces the attack rate by {Boost.Attrib.Recharge.Scale}%."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Razzle_Dazzle_E.Attuned_Razzle_Dazzle_E",
-      "setName": "Razzle_Dazzle",
-      "displayName": "Accuracy/Stun/Recharge"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Immobilize",
-          "values": [
-            {
-              "mag": {
-                "pve": 2
-              },
-              "procsPerMinute": 3.5,
-              "cancelOnMiss": true,
-              "duration": 8,
-              "effectType": "Mez",
-              "stacking": 1,
-              "resistible": true,
-              "toWho": "all",
-              "attribType": 1,
-              "powerFullName": "Boosts.Attuned_Razzle_Dazzle_F.Attuned_Razzle_Dazzle_F",
-              "mezType": "Immob"
+          "mag": {
+            "IO": {
+              "cap": 0.212
             }
-          ]
+          },
+          "stat": "Accuracy",
+          "toWho": "self"
         },
         {
-          "effectType": "Ones",
-          "values": [
-            {
-              "mag": {
-                "pvp": 2
-              },
-              "procsPerMinute": 3.5,
-              "cancelOnMiss": true,
-              "duration": 5.336,
-              "effectType": "Mez",
-              "stacking": 1,
-              "resistible": true,
-              "toWho": "all",
-              "attribType": 1,
-              "powerFullName": "Boosts.Attuned_Razzle_Dazzle_F.Attuned_Razzle_Dazzle_F",
-              "mezType": "Immob"
+          "mag": {
+            "IO": {
+              "cap": 0.212
             }
-          ]
+          },
+          "stat": "Recharge",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.212
+            }
+          },
+          "mezType": 10,
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Razzle_Dazzle_F.Attuned_Razzle_Dazzle_F",
+      "displayName": "Chance for Immobilize",
       "description": {
         "short": "Chance for Immobilize",
         "long": "Gives a chance of immobilizing the target.  This effect will trigger roughly 3.5 times per minute."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Razzle_Dazzle_F.Attuned_Razzle_Dazzle_F",
-      "setName": "Razzle_Dazzle",
-      "displayName": "Chance for Immobilize"
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 2
+            }
+          },
+          "stat": "Chance for Immobilize",
+          "procsPerMinute": 3.5,
+          "cancelOnMiss": true,
+          "mezType": 3,
+          "stacking": 1,
+          "resistible": true,
+          "pvMode": 1,
+          "toWho": "all",
+          "attribType": 1
+        }
+      ]
     }
   ],
   "levels": {

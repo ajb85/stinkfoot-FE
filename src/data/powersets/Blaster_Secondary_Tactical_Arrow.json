@@ -6,17 +6,6 @@
   "displayName": "Tactical Arrow",
   "powers": [
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Immobilize",
-        "Range",
-        "Recharge",
-        "Slow"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Immobilize",
@@ -29,11 +18,12 @@
               "duration": 17.8800011,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Blaster_Support.Tactical_Arrow.Electrified_Net_Arrow",
-              "mezType": "Immobilization"
+              "mezType": "Immob"
             }
           ]
         },
@@ -47,7 +37,7 @@
               "probability": 1,
               "duration": 15,
               "effectType": "MezResist",
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Tactical_Arrow.Electrified_Net_Arrow",
               "mezType": "Knockback"
             },
@@ -58,7 +48,7 @@
               "probability": 1,
               "duration": 15,
               "effectType": "MezResist",
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Tactical_Arrow.Electrified_Net_Arrow",
               "mezType": "Knockup"
             },
@@ -69,7 +59,8 @@
               "probability": 1,
               "duration": 15,
               "effectType": "Mez",
-              "toWho": "Target",
+              "buffable": true,
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Tactical_Arrow.Electrified_Net_Arrow",
               "mezType": "Knockback"
             },
@@ -80,7 +71,8 @@
               "probability": 1,
               "duration": 15,
               "effectType": "Mez",
-              "toWho": "Target",
+              "buffable": true,
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Tactical_Arrow.Electrified_Net_Arrow",
               "mezType": "Knockup"
             },
@@ -91,7 +83,8 @@
               "probability": 1,
               "duration": 15,
               "effectType": "JumpHeight",
-              "toWho": "Target",
+              "buffable": true,
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Tactical_Arrow.Electrified_Net_Arrow"
             },
             {
@@ -101,7 +94,8 @@
               "probability": 1,
               "duration": 15,
               "effectType": "Fly",
-              "toWho": "Target",
+              "buffable": true,
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Tactical_Arrow.Electrified_Net_Arrow"
             },
             {
@@ -112,11 +106,12 @@
               "duration": 2,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Blaster_Support.Tactical_Arrow.Electrified_Net_Arrow",
-              "mezType": "Immobilization"
+              "mezType": "Immob"
             }
           ]
         },
@@ -124,15 +119,15 @@
           "effectType": "Slow",
           "values": [
             {
+              "etModifies": "RechargeTime",
               "mag": {
                 "pve": -0.1
               },
               "probability": 1,
               "duration": 15,
               "effectType": "Enhancement",
-              "eTModifies": 25,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Tactical_Arrow.Electrified_Net_Arrow"
             },
             {
@@ -142,8 +137,9 @@
               "probability": 1,
               "duration": 15,
               "effectType": "SpeedRunning",
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Tactical_Arrow.Electrified_Net_Arrow"
             },
             {
@@ -153,8 +149,9 @@
               "probability": 1,
               "duration": 15,
               "effectType": "SpeedFlying",
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Tactical_Arrow.Electrified_Net_Arrow"
             }
           ]
@@ -170,7 +167,7 @@
               "duration": 0.75,
               "effectType": "SpeedRunning",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Tactical_Arrow.Electrified_Net_Arrow"
             }
           ]
@@ -188,8 +185,9 @@
               "effectType": "Damage",
               "ticks": 5,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Tactical_Arrow.Electrified_Net_Arrow",
               "damageType": "Energy"
             }
@@ -208,7 +206,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Tactical_Arrow.Electrified_Net_Arrow",
               "damageType": "Smashing"
             },
@@ -222,7 +220,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Tactical_Arrow.Electrified_Net_Arrow",
               "damageType": "Lethal"
             },
@@ -236,7 +234,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Tactical_Arrow.Electrified_Net_Arrow",
               "damageType": "Fire"
             },
@@ -250,7 +248,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Tactical_Arrow.Electrified_Net_Arrow",
               "damageType": "Cold"
             },
@@ -264,7 +262,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Tactical_Arrow.Electrified_Net_Arrow",
               "damageType": "Energy"
             },
@@ -278,7 +276,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Tactical_Arrow.Electrified_Net_Arrow",
               "damageType": "Negative"
             },
@@ -292,7 +290,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Tactical_Arrow.Electrified_Net_Arrow",
               "damageType": "Toxic"
             },
@@ -306,13 +304,25 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Tactical_Arrow.Electrified_Net_Arrow",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Immobilize",
+        "Range",
+        "Recharge",
+        "Slow"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Support.Tactical_Arrow.Electrified_Net_Arrow",
+      "archetypeOrder": "secondary",
       "powerIndex": 0,
       "castTimeReal": 1,
       "toggleCost": 5.2,
@@ -353,16 +363,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Range",
-        "Recharge",
-        "Slow"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Ones",
@@ -375,7 +375,7 @@
               "variableModified": true,
               "effectType": "EntCreate",
               "stacking": 1,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Tactical_Arrow.Glue_Arrow"
             }
           ]
@@ -392,7 +392,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Tactical_Arrow.Glue_Arrow",
               "damageType": "Smashing"
             },
@@ -405,7 +405,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Tactical_Arrow.Glue_Arrow",
               "damageType": "Lethal"
             },
@@ -418,7 +418,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Tactical_Arrow.Glue_Arrow",
               "damageType": "Fire"
             },
@@ -431,7 +431,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Tactical_Arrow.Glue_Arrow",
               "damageType": "Cold"
             },
@@ -444,7 +444,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Tactical_Arrow.Glue_Arrow",
               "damageType": "Energy"
             },
@@ -457,7 +457,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Tactical_Arrow.Glue_Arrow",
               "damageType": "Negative"
             },
@@ -470,7 +470,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Tactical_Arrow.Glue_Arrow",
               "damageType": "Toxic"
             },
@@ -483,13 +483,24 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Tactical_Arrow.Glue_Arrow",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Range",
+        "Recharge",
+        "Slow"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Support.Tactical_Arrow.Glue_Arrow",
+      "archetypeOrder": "secondary",
       "powerIndex": 1,
       "castTimeReal": 1.16,
       "toggleCost": 7.8,
@@ -531,17 +542,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Hold",
-        "Range",
-        "Recharge",
-        "Slow"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Immobilize",
@@ -554,8 +554,9 @@
               "duration": 11.92,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Blaster_Support.Tactical_Arrow.Ice_Arrow",
               "mezType": "Hold"
@@ -573,8 +574,9 @@
               "duration": 10,
               "effectType": "SpeedRunning",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Tactical_Arrow.Ice_Arrow"
             },
             {
@@ -585,21 +587,34 @@
               "duration": 10,
               "effectType": "SpeedFlying",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Tactical_Arrow.Ice_Arrow"
             },
             {
+              "etModifies": "RechargeTime",
+              "mag": {
+                "pve": -0.1
+              },
+              "probability": 1,
+              "duration": 10,
+              "effectType": "Enhancement",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Support.Tactical_Arrow.Ice_Arrow"
+            },
+            {
+              "etModifies": "JumpHeight",
               "mag": {
                 "pve": -0.3
               },
               "probability": 1,
               "duration": 10,
               "effectType": "Enhancement",
-              "eTModifies": 25,
-              "stacking": 1,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Tactical_Arrow.Ice_Arrow"
             },
             {
@@ -609,8 +624,9 @@
               "probability": 1,
               "duration": 10,
               "effectType": "SpeedJumping",
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Tactical_Arrow.Ice_Arrow"
             }
           ]
@@ -625,7 +641,7 @@
               "probability": 1,
               "duration": 10,
               "effectType": "MezResist",
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Tactical_Arrow.Ice_Arrow",
               "mezType": "Knockback"
             },
@@ -636,7 +652,7 @@
               "probability": 1,
               "duration": 10,
               "effectType": "MezResist",
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Tactical_Arrow.Ice_Arrow",
               "mezType": "Knockup"
             },
@@ -647,7 +663,8 @@
               "probability": 1,
               "duration": 10,
               "effectType": "Mez",
-              "toWho": "Target",
+              "buffable": true,
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Tactical_Arrow.Ice_Arrow",
               "mezType": "Knockback"
             },
@@ -658,7 +675,8 @@
               "probability": 1,
               "duration": 10,
               "effectType": "Mez",
-              "toWho": "Target",
+              "buffable": true,
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Tactical_Arrow.Ice_Arrow",
               "mezType": "Knockup"
             },
@@ -670,8 +688,9 @@
               "duration": 2,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Blaster_Support.Tactical_Arrow.Ice_Arrow",
               "mezType": "Hold"
@@ -690,8 +709,9 @@
               "effectType": "Damage",
               "ticks": 9,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Tactical_Arrow.Ice_Arrow",
               "damageType": "Cold"
             }
@@ -710,7 +730,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Tactical_Arrow.Ice_Arrow",
               "damageType": "Smashing"
             },
@@ -724,7 +744,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Tactical_Arrow.Ice_Arrow",
               "damageType": "Lethal"
             },
@@ -738,7 +758,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Tactical_Arrow.Ice_Arrow",
               "damageType": "Fire"
             },
@@ -752,7 +772,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Tactical_Arrow.Ice_Arrow",
               "damageType": "Cold"
             },
@@ -766,7 +786,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Tactical_Arrow.Ice_Arrow",
               "damageType": "Energy"
             },
@@ -780,7 +800,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Tactical_Arrow.Ice_Arrow",
               "damageType": "Negative"
             },
@@ -794,7 +814,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Tactical_Arrow.Ice_Arrow",
               "damageType": "Toxic"
             },
@@ -808,13 +828,25 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Tactical_Arrow.Ice_Arrow",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Hold",
+        "Range",
+        "Recharge",
+        "Slow"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Support.Tactical_Arrow.Ice_Arrow",
+      "archetypeOrder": "secondary",
       "powerIndex": 2,
       "castTimeReal": 1.67,
       "toggleCost": 8.528,
@@ -854,13 +886,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "ToHit_Buff",
-        "Endurance_Discount",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Buff_ToHit",
@@ -874,7 +899,8 @@
               "variableModified": true,
               "effectType": "ToHit",
               "stacking": 1,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Tactical_Arrow.Upshot"
             }
           ]
@@ -891,7 +917,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Tactical_Arrow.Upshot",
               "damageType": "Smashing"
             },
@@ -904,7 +930,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Tactical_Arrow.Upshot",
               "damageType": "Lethal"
             },
@@ -917,7 +943,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Tactical_Arrow.Upshot",
               "damageType": "Fire"
             },
@@ -930,7 +956,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Tactical_Arrow.Upshot",
               "damageType": "Cold"
             },
@@ -943,7 +969,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Tactical_Arrow.Upshot",
               "damageType": "Energy"
             },
@@ -956,7 +982,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Tactical_Arrow.Upshot",
               "damageType": "Negative"
             },
@@ -969,7 +995,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Tactical_Arrow.Upshot",
               "damageType": "Toxic"
             },
@@ -982,7 +1008,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Tactical_Arrow.Upshot",
               "damageType": "Psionic"
             }
@@ -992,19 +1018,27 @@
           "effectType": "Ones",
           "values": [
             {
+              "etModifies": "RechargeTime",
               "mag": {
                 "pve": 0.3
               },
               "probability": 1,
               "duration": 10,
               "effectType": "Enhancement",
-              "eTModifies": 25,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Tactical_Arrow.Upshot"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "ToHit_Buff",
+        "Endurance_Discount",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Support.Tactical_Arrow.Upshot",
+      "archetypeOrder": "secondary",
       "powerIndex": 3,
       "castTimeReal": 1.17,
       "toggleCost": 5.2,
@@ -1039,14 +1073,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "ToHit_Debuff",
-        "Endurance_Discount",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Ones",
@@ -1059,7 +1085,8 @@
               "probability": 1,
               "duration": 60,
               "effectType": "PerceptionRadius",
-              "toWho": "Target",
+              "buffable": true,
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Tactical_Arrow.Flash_Arrow"
             }
           ]
@@ -1075,7 +1102,8 @@
               "probability": 1,
               "duration": 60,
               "effectType": "ToHit",
-              "toWho": "Target",
+              "buffable": true,
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Tactical_Arrow.Flash_Arrow"
             }
           ]
@@ -1091,7 +1119,7 @@
               "duration": 8.5,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Tactical_Arrow.Flash_Arrow",
               "damageType": "Smashing"
             },
@@ -1103,7 +1131,7 @@
               "duration": 8.5,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Tactical_Arrow.Flash_Arrow",
               "damageType": "Lethal"
             },
@@ -1115,7 +1143,7 @@
               "duration": 8.5,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Tactical_Arrow.Flash_Arrow",
               "damageType": "Fire"
             },
@@ -1127,7 +1155,7 @@
               "duration": 8.5,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Tactical_Arrow.Flash_Arrow",
               "damageType": "Cold"
             },
@@ -1139,7 +1167,7 @@
               "duration": 8.5,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Tactical_Arrow.Flash_Arrow",
               "damageType": "Energy"
             },
@@ -1151,7 +1179,7 @@
               "duration": 8.5,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Tactical_Arrow.Flash_Arrow",
               "damageType": "Negative"
             },
@@ -1163,7 +1191,7 @@
               "duration": 8.5,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Tactical_Arrow.Flash_Arrow",
               "damageType": "Toxic"
             },
@@ -1175,13 +1203,22 @@
               "duration": 8.5,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Tactical_Arrow.Flash_Arrow",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "ToHit_Debuff",
+        "Endurance_Discount",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Support.Tactical_Arrow.Flash_Arrow",
+      "archetypeOrder": "secondary",
       "powerIndex": 4,
       "castTimeReal": 1,
       "toggleCost": 7.8,
@@ -1221,27 +1258,19 @@
       "aoeModifier": 6.25
     },
     {
-      "allowedEnhancements": [
-        "Endurance_Discount",
-        "Heal",
-        "Recharge",
-        "Endurance_Modification"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Res_Boolean",
           "values": [
             {
+              "etModifies": "ToHit",
               "mag": {
                 "pve": 0.5536
               },
               "probability": 1,
               "duration": 0.75,
               "effectType": "ResEffect",
-              "eTModifies": 40,
-              "toWho": "All",
+              "toWho": "all",
               "powerFullName": "Blaster_Support.Tactical_Arrow.Eagle_Eye"
             }
           ]
@@ -1250,25 +1279,25 @@
           "effectType": "Ones",
           "values": [
             {
+              "etModifies": "Accuracy",
               "mag": {
                 "pve": 0.2
               },
               "probability": 1,
               "duration": 0.75,
               "effectType": "Enhancement",
-              "eTModifies": 1,
-              "toWho": "All",
+              "toWho": "all",
               "powerFullName": "Blaster_Support.Tactical_Arrow.Eagle_Eye"
             },
             {
+              "etModifies": "PerceptionRadius",
               "mag": {
                 "pve": 0.6
               },
               "probability": 1,
               "duration": 0.75,
               "effectType": "ResEffect",
-              "eTModifies": 23,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Tactical_Arrow.Eagle_Eye"
             },
             {
@@ -1278,7 +1307,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "PerceptionRadius",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Tactical_Arrow.Eagle_Eye"
             },
             {
@@ -1288,7 +1318,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Regeneration",
-              "toWho": "All",
+              "buffable": true,
+              "toWho": "all",
               "powerFullName": "Blaster_Support.Tactical_Arrow.Eagle_Eye"
             },
             {
@@ -1298,12 +1329,22 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Recovery",
-              "toWho": "All",
+              "buffable": true,
+              "toWho": "all",
               "powerFullName": "Blaster_Support.Tactical_Arrow.Eagle_Eye"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Endurance_Discount",
+        "Heal",
+        "Recharge",
+        "Endurance_Modification"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Support.Tactical_Arrow.Eagle_Eye",
+      "archetypeOrder": "secondary",
       "powerIndex": 5,
       "castTimeReal": 1.17,
       "fullName": "Blaster_Secondary_Tactical_Arrow_Eagle_Eye",
@@ -1338,36 +1379,52 @@
       "powerType": "Toggle"
     },
     {
-      "allowedEnhancements": [
-        "Fly",
-        "Run"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Ones",
           "values": [
             {
+              "etModifies": "RechargeTime",
               "mag": {
                 "pve": 0.2
               },
               "probability": 1,
               "duration": 10.25,
               "effectType": "Enhancement",
-              "eTModifies": 25,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Tactical_Arrow.Quickness"
             },
             {
+              "etModifies": "SpeedRunning",
               "mag": {
                 "pve": 0.4
               },
               "probability": 1,
               "duration": 10.25,
               "effectType": "ResEffect",
-              "eTModifies": 32,
-              "toWho": "Self",
+              "toWho": "self",
+              "powerFullName": "Blaster_Support.Tactical_Arrow.Quickness"
+            },
+            {
+              "etModifies": "RechargeTime",
+              "mag": {
+                "pve": 0.4
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "ResEffect",
+              "toWho": "self",
+              "powerFullName": "Blaster_Support.Tactical_Arrow.Quickness"
+            },
+            {
+              "etModifies": "SpeedFlying",
+              "mag": {
+                "pve": 0.4
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "ResEffect",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Tactical_Arrow.Quickness"
             }
           ]
@@ -1382,7 +1439,8 @@
               "probability": 1,
               "duration": 10.25,
               "effectType": "SpeedRunning",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Tactical_Arrow.Quickness"
             }
           ]
@@ -1397,12 +1455,20 @@
               "probability": 1,
               "duration": 10.25,
               "effectType": "SpeedFlying",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Tactical_Arrow.Quickness"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Fly",
+        "Run"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Support.Tactical_Arrow.Quickness",
+      "archetypeOrder": "secondary",
       "powerIndex": 6,
       "fullName": "Blaster_Secondary_Tactical_Arrow_Agility",
       "displayName": "Agility",
@@ -1431,15 +1497,6 @@
       "powerType": "Auto"
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Endurance_Discount",
-        "Hold",
-        "Recharge",
-        "Endurance_Modification"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Immobilize",
@@ -1453,8 +1510,9 @@
               "duration": 9.536,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Blaster_Support.Tactical_Arrow.EMP_Arrow",
               "mezType": "Hold"
@@ -1473,8 +1531,9 @@
               "duration": 2,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Blaster_Support.Tactical_Arrow.EMP_Arrow",
               "mezType": "Hold"
@@ -1486,8 +1545,9 @@
               "probability": 1,
               "effectType": "Endurance",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Tactical_Arrow.EMP_Arrow"
             }
           ]
@@ -1502,8 +1562,9 @@
               "probability": 1,
               "effectType": "Endurance",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Tactical_Arrow.EMP_Arrow"
             }
           ]
@@ -1518,9 +1579,10 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 8,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Tactical_Arrow.EMP_Arrow",
               "damageType": "Energy"
             }
@@ -1537,7 +1599,7 @@
               "duration": 9.33,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Tactical_Arrow.EMP_Arrow",
               "damageType": "Smashing"
             },
@@ -1549,7 +1611,7 @@
               "duration": 9.33,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Tactical_Arrow.EMP_Arrow",
               "damageType": "Lethal"
             },
@@ -1561,7 +1623,7 @@
               "duration": 9.33,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Tactical_Arrow.EMP_Arrow",
               "damageType": "Fire"
             },
@@ -1573,7 +1635,7 @@
               "duration": 9.33,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Tactical_Arrow.EMP_Arrow",
               "damageType": "Cold"
             },
@@ -1585,7 +1647,7 @@
               "duration": 9.33,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Tactical_Arrow.EMP_Arrow",
               "damageType": "Energy"
             },
@@ -1597,7 +1659,7 @@
               "duration": 9.33,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Tactical_Arrow.EMP_Arrow",
               "damageType": "Negative"
             },
@@ -1609,7 +1671,7 @@
               "duration": 9.33,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Tactical_Arrow.EMP_Arrow",
               "damageType": "Toxic"
             },
@@ -1621,13 +1683,23 @@
               "duration": 9.33,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Tactical_Arrow.EMP_Arrow",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Endurance_Discount",
+        "Hold",
+        "Recharge",
+        "Endurance_Modification"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Support.Tactical_Arrow.EMP_Arrow",
+      "archetypeOrder": "secondary",
       "powerIndex": 7,
       "castTimeReal": 1.83,
       "toggleCost": 13,
@@ -1666,13 +1738,6 @@
       "aoeModifier": 4
     },
     {
-      "allowedEnhancements": [
-        "Defense_Buff",
-        "Endurance_Discount",
-        "Jump"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Ones",
@@ -1684,7 +1749,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "JumpHeight",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Tactical_Arrow.Gymnastics"
             },
             {
@@ -1694,7 +1760,7 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Mez",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Tactical_Arrow.Gymnastics",
               "mezType": "Knockback"
             },
@@ -1705,7 +1771,7 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Mez",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Tactical_Arrow.Gymnastics",
               "mezType": "Knockup"
             },
@@ -1716,7 +1782,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "SpeedJumping",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Tactical_Arrow.Gymnastics"
             },
             {
@@ -1726,7 +1793,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "MovementFriction",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Tactical_Arrow.Gymnastics"
             }
           ]
@@ -1742,7 +1810,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Tactical_Arrow.Gymnastics",
               "damageType": "Melee"
             },
@@ -1754,7 +1823,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Tactical_Arrow.Gymnastics",
               "damageType": "Ranged"
             },
@@ -1766,7 +1836,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Tactical_Arrow.Gymnastics",
               "damageType": "AoE"
             },
@@ -1778,7 +1849,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Tactical_Arrow.Gymnastics",
               "damageType": "Smashing"
             },
@@ -1790,7 +1862,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Tactical_Arrow.Gymnastics",
               "damageType": "Lethal"
             },
@@ -1802,7 +1875,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Tactical_Arrow.Gymnastics",
               "damageType": "Fire"
             },
@@ -1814,7 +1888,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Tactical_Arrow.Gymnastics",
               "damageType": "Cold"
             },
@@ -1826,7 +1901,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Tactical_Arrow.Gymnastics",
               "damageType": "Energy"
             },
@@ -1838,7 +1914,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Tactical_Arrow.Gymnastics",
               "damageType": "Negative"
             },
@@ -1850,7 +1927,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Tactical_Arrow.Gymnastics",
               "damageType": "Psionic"
             }
@@ -1866,7 +1944,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "MovementControl",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Tactical_Arrow.Gymnastics"
             }
           ]
@@ -1881,9 +1960,10 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Mez",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Tactical_Arrow.Gymnastics",
-              "mezType": "Immobilization"
+              "mezType": "Immob"
             },
             {
               "mag": {
@@ -1892,9 +1972,10 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "MezResist",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Tactical_Arrow.Gymnastics",
-              "mezType": "Immobilization"
+              "mezType": "Immob"
             },
             {
               "mag": {
@@ -1903,7 +1984,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "MezResist",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Tactical_Arrow.Gymnastics",
               "mezType": "Hold"
             },
@@ -1914,13 +1996,22 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "MezResist",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Tactical_Arrow.Gymnastics",
               "mezType": "Stun"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Defense_Buff",
+        "Endurance_Discount",
+        "Jump"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Support.Tactical_Arrow.Gymnastics",
+      "archetypeOrder": "secondary",
       "powerIndex": 8,
       "toggleCost": 0.26,
       "fullName": "Blaster_Secondary_Tactical_Arrow_Gymnastics",

@@ -2,286 +2,105 @@
   "fullName": "IOSet.Steadfast_Protection",
   "enhancements": [
     {
-      "effects": [
-        {
-          "effectType": "Resist",
-          "values": [
-            {
-              "mag": {
-                "pve": 0.159375
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Steadfast_Protection_A.Attuned_Steadfast_Protection_A",
-              "damageType": "Smashing"
-            }
-          ]
-        },
-        {
-          "effectType": "Boosts_20",
-          "values": [
-            {
-              "mag": {
-                "pve": 0.159375
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Steadfast_Protection_A.Attuned_Steadfast_Protection_A",
-              "damageType": "Lethal"
-            },
-            {
-              "mag": {
-                "pve": 0.159375
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Steadfast_Protection_A.Attuned_Steadfast_Protection_A",
-              "damageType": "Fire"
-            },
-            {
-              "mag": {
-                "pve": 0.159375
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Steadfast_Protection_A.Attuned_Steadfast_Protection_A",
-              "damageType": "Cold"
-            },
-            {
-              "mag": {
-                "pve": 0.159375
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Steadfast_Protection_A.Attuned_Steadfast_Protection_A",
-              "damageType": "Energy"
-            },
-            {
-              "mag": {
-                "pve": 0.159375
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Steadfast_Protection_A.Attuned_Steadfast_Protection_A",
-              "damageType": "Negative"
-            },
-            {
-              "mag": {
-                "pve": 0.159375
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Steadfast_Protection_A.Attuned_Steadfast_Protection_A",
-              "damageType": "Toxic"
-            },
-            {
-              "mag": {
-                "pve": 0.159375
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Steadfast_Protection_A.Attuned_Steadfast_Protection_A",
-              "damageType": "Psionic"
-            }
-          ]
-        },
-        {
-          "effectType": "Endurance",
-          "values": [
-            {
-              "etModifies": "EnduranceDiscount",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Steadfast_Protection_A.Attuned_Steadfast_Protection_A"
-            }
-          ]
-        }
-      ],
+      "type": "set",
+      "fullName": "Boosts.Attuned_Steadfast_Protection_A.Attuned_Steadfast_Protection_A",
+      "displayName": "Resistance/Endurance",
       "description": {
         "short": "+RES (all), Reduces End cost",
         "long": "Enhances the damage resistance of a power by {Boost.Attrib.Resist.Scale}% and reduces endurance cost by {Boost.Attrib.Endurance.Scale}%"
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Steadfast_Protection_A.Attuned_Steadfast_Protection_A",
-      "setName": "Steadfast_Protection",
-      "displayName": "Resistance/Endurance"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Resist",
-          "values": [
-            {
-              "mag": {
-                "pve": 0.159375
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Steadfast_Protection_B.Attuned_Steadfast_Protection_B",
-              "damageType": "Smashing"
+          "mag": {
+            "IO": {
+              "cap": 0.159375
             }
-          ]
+          },
+          "stat": "Res_Damage",
+          "damageType": [
+            "Smashing",
+            "Lethal",
+            "Fire",
+            "Cold",
+            "Energy",
+            "Negative",
+            "Toxic",
+            "Psionic"
+          ],
+          "toWho": "self"
         },
         {
-          "effectType": "Boosts_20",
-          "values": [
-            {
-              "mag": {
-                "pve": 0.159375
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Steadfast_Protection_B.Attuned_Steadfast_Protection_B",
-              "damageType": "Lethal"
-            },
-            {
-              "mag": {
-                "pve": 0.159375
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Steadfast_Protection_B.Attuned_Steadfast_Protection_B",
-              "damageType": "Fire"
-            },
-            {
-              "mag": {
-                "pve": 0.159375
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Steadfast_Protection_B.Attuned_Steadfast_Protection_B",
-              "damageType": "Cold"
-            },
-            {
-              "mag": {
-                "pve": 0.159375
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Steadfast_Protection_B.Attuned_Steadfast_Protection_B",
-              "damageType": "Energy"
-            },
-            {
-              "mag": {
-                "pve": 0.159375
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Steadfast_Protection_B.Attuned_Steadfast_Protection_B",
-              "damageType": "Negative"
-            },
-            {
-              "mag": {
-                "pve": 0.159375
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Steadfast_Protection_B.Attuned_Steadfast_Protection_B",
-              "damageType": "Toxic"
-            },
-            {
-              "mag": {
-                "pve": 0.159375
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Steadfast_Protection_B.Attuned_Steadfast_Protection_B",
-              "damageType": "Psionic"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
-        },
-        {
-          "effectType": "Defense",
-          "values": [
-            {
-              "mag": {
-                "pve": 0.03
-              },
-              "probability": 1,
-              "duration": 120,
-              "effectType": "Null",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Steadfast_Protection_B.Attuned_Steadfast_Protection_B"
-            }
-          ]
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Steadfast_Protection_B.Attuned_Steadfast_Protection_B",
+      "displayName": "Resistance/Defense",
       "description": {
         "short": "+Res (all) +Def (All)",
         "long": "UNIQUE -- No more than 1 enhancement of this type may be slotted by a character.  Enhances the damage resistance of a power by {Boost.Attrib.Resist.Scale}% and increases overall defense by {Boost.Attrib.Defense.Scale}%."
       },
-      "isUnique": true,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Steadfast_Protection_B.Attuned_Steadfast_Protection_B",
-      "setName": "Steadfast_Protection",
-      "displayName": "Resistance/Defense"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Knockback",
-          "values": [
-            {
-              "mag": {
-                "pve": -4
-              },
-              "cancelOnMiss": true,
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Null",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Steadfast_Protection_C.Attuned_Steadfast_Protection_C"
+          "mag": {
+            "IO": {
+              "cap": 0.159375
             }
-          ]
+          },
+          "stat": "Res_Damage",
+          "damageType": [
+            "Smashing",
+            "Lethal",
+            "Fire",
+            "Cold",
+            "Energy",
+            "Negative",
+            "Toxic",
+            "Psionic"
+          ],
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.03
+            }
+          },
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Steadfast_Protection_C.Attuned_Steadfast_Protection_C",
+      "displayName": "Knockback Protection",
       "description": {
         "short": "-KB",
         "long": "Reduces Knockback effects by -4."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Steadfast_Protection_C.Attuned_Steadfast_Protection_C",
-      "setName": "Steadfast_Protection",
-      "displayName": "Knockback Protection"
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": -4
+            }
+          },
+          "stat": "Knockback Protection",
+          "cancelOnMiss": true,
+          "toWho": "self"
+        }
+      ]
     }
   ],
   "levels": {

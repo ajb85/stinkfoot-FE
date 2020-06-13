@@ -6,14 +6,6 @@
   "displayName": "Shield Defense",
   "powers": [
     {
-      "allowedEnhancements": [
-        "Defense_Buff",
-        "Endurance_Discount",
-        "Recharge",
-        "Res_Damage"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Buff_Def",
@@ -26,7 +18,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Shield_Defense.Active_Defense",
               "damageType": "Melee"
             },
@@ -37,7 +30,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Shield_Defense.Active_Defense",
               "damageType": "Psionic"
             }
@@ -54,7 +48,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Shield_Defense.Active_Defense",
               "damageType": "Smashing"
             },
@@ -66,7 +61,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Shield_Defense.Active_Defense",
               "damageType": "Lethal"
             }
@@ -82,7 +78,7 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Elusivity",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Shield_Defense.Active_Defense",
               "damageType": "Melee"
             },
@@ -93,13 +89,22 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Elusivity",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Shield_Defense.Active_Defense",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Defense_Buff",
+        "Endurance_Discount",
+        "Recharge",
+        "Res_Damage"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Defense.Shield_Defense.Active_Defense",
+      "archetypeOrder": "secondary",
       "powerIndex": 0,
       "castTimeReal": 1.5,
       "toggleCost": 0.208,
@@ -107,8 +112,7 @@
       "displayName": "Deflection",
       "requires": {
         "powers": {
-          "BRUTE_MELEE.DUAL_BLADES": true,
-          "BRUTE_MELEE.CLAWS": true
+          "Brute_Defense.Shield_Defense.Active_Defense": true
         },
         "count": 1
       },
@@ -141,13 +145,6 @@
       "powerType": "Toggle"
     },
     {
-      "allowedEnhancements": [
-        "Defense_Buff",
-        "Endurance_Discount",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Buff_Def",
@@ -160,7 +157,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Shield_Defense.Deflection",
               "damageType": "Ranged"
             },
@@ -172,7 +170,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Shield_Defense.Deflection",
               "damageType": "AoE"
             }
@@ -188,7 +187,7 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Elusivity",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Shield_Defense.Deflection",
               "damageType": "Ranged"
             },
@@ -199,7 +198,7 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Elusivity",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Shield_Defense.Deflection",
               "damageType": "AoE"
             }
@@ -209,19 +208,28 @@
           "effectType": "Res_Boolean",
           "values": [
             {
+              "etModifies": "Defense",
               "mag": {
                 "pve": 0.11072
               },
               "probability": 1,
               "duration": 0.75,
               "effectType": "ResEffect",
-              "eTModifies": 5,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Shield_Defense.Deflection"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Defense_Buff",
+        "Endurance_Discount",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Defense.Shield_Defense.Deflection",
+      "archetypeOrder": "secondary",
       "powerIndex": 1,
       "castTimeReal": 1.5,
       "toggleCost": 0.208,
@@ -258,12 +266,6 @@
       "powerType": "Toggle"
     },
     {
-      "allowedEnhancements": [
-        "Heal",
-        "Res_Damage"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "HealSelf",
@@ -275,7 +277,8 @@
               "probability": 1,
               "duration": 10.25,
               "effectType": "HitPoints",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Shield_Defense.True_Grit"
             }
           ]
@@ -290,7 +293,8 @@
               "probability": 1,
               "duration": 10.25,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Shield_Defense.True_Grit",
               "damageType": "Fire"
             },
@@ -301,7 +305,8 @@
               "probability": 1,
               "duration": 10.25,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Shield_Defense.True_Grit",
               "damageType": "Cold"
             },
@@ -312,7 +317,8 @@
               "probability": 1,
               "duration": 10.25,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Shield_Defense.True_Grit",
               "damageType": "Energy"
             },
@@ -323,7 +329,8 @@
               "probability": 1,
               "duration": 10.25,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Shield_Defense.True_Grit",
               "damageType": "Negative"
             },
@@ -334,13 +341,21 @@
               "probability": 1,
               "duration": 10.25,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Shield_Defense.True_Grit",
               "damageType": "Toxic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Heal",
+        "Res_Damage"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Defense.Shield_Defense.True_Grit",
+      "archetypeOrder": "secondary",
       "powerIndex": 2,
       "fullName": "Brute_Secondary_Shield_Defense_True_Grit",
       "displayName": "True Grit",
@@ -373,12 +388,6 @@
       "powerType": "Auto"
     },
     {
-      "allowedEnhancements": [
-        "Endurance_Discount",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Res_Boolean",
@@ -392,7 +401,7 @@
               "variableModified": true,
               "effectType": "Mez",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Shield_Defense.Battle_Agility",
               "mezType": "Stun"
             },
@@ -405,7 +414,7 @@
               "variableModified": true,
               "effectType": "Mez",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Shield_Defense.Battle_Agility",
               "mezType": "Sleep"
             },
@@ -418,7 +427,7 @@
               "variableModified": true,
               "effectType": "Mez",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Shield_Defense.Battle_Agility",
               "mezType": "Hold"
             },
@@ -431,7 +440,7 @@
               "variableModified": true,
               "effectType": "Mez",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Shield_Defense.Battle_Agility",
               "mezType": "Confuse"
             },
@@ -444,9 +453,9 @@
               "variableModified": true,
               "effectType": "Mez",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Shield_Defense.Battle_Agility",
-              "mezType": "Terrorize"
+              "mezType": "Terror"
             },
             {
               "mag": {
@@ -457,9 +466,10 @@
               "variableModified": true,
               "effectType": "Mez",
               "stacking": 1,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Shield_Defense.Battle_Agility",
-              "mezType": "Immobilization"
+              "mezType": "Immob"
             },
             {
               "mag": {
@@ -470,7 +480,7 @@
               "variableModified": true,
               "effectType": "MezResist",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Shield_Defense.Battle_Agility",
               "mezType": "Stun"
             },
@@ -483,7 +493,7 @@
               "variableModified": true,
               "effectType": "MezResist",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Shield_Defense.Battle_Agility",
               "mezType": "Sleep"
             },
@@ -496,7 +506,7 @@
               "variableModified": true,
               "effectType": "MezResist",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Shield_Defense.Battle_Agility",
               "mezType": "Hold"
             },
@@ -509,7 +519,7 @@
               "variableModified": true,
               "effectType": "MezResist",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Shield_Defense.Battle_Agility",
               "mezType": "Confuse"
             },
@@ -522,9 +532,9 @@
               "variableModified": true,
               "effectType": "MezResist",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Shield_Defense.Battle_Agility",
-              "mezType": "Terrorize"
+              "mezType": "Terror"
             },
             {
               "mag": {
@@ -535,11 +545,12 @@
               "variableModified": true,
               "effectType": "MezResist",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Shield_Defense.Battle_Agility",
-              "mezType": "Immobilization"
+              "mezType": "Immob"
             },
             {
+              "etModifies": "Defense",
               "mag": {
                 "pve": 0.1384
               },
@@ -547,9 +558,9 @@
               "duration": 120,
               "variableModified": true,
               "effectType": "ResEffect",
-              "eTModifies": 5,
               "stacking": 1,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Shield_Defense.Battle_Agility"
             }
           ]
@@ -567,7 +578,7 @@
               "variableModified": true,
               "effectType": "MezResist",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Shield_Defense.Battle_Agility",
               "mezType": "Knockback"
             },
@@ -581,7 +592,7 @@
               "variableModified": true,
               "effectType": "MezResist",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Shield_Defense.Battle_Agility",
               "mezType": "Knockup"
             },
@@ -595,7 +606,8 @@
               "variableModified": true,
               "effectType": "Mez",
               "stacking": 1,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Shield_Defense.Battle_Agility",
               "mezType": "Knockback"
             },
@@ -609,7 +621,8 @@
               "variableModified": true,
               "effectType": "Mez",
               "stacking": 1,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Shield_Defense.Battle_Agility",
               "mezType": "Knockup"
             },
@@ -623,7 +636,7 @@
               "variableModified": true,
               "effectType": "MezResist",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Shield_Defense.Battle_Agility",
               "mezType": "Repel"
             },
@@ -637,24 +650,98 @@
               "variableModified": true,
               "effectType": "Mez",
               "stacking": 1,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Shield_Defense.Battle_Agility",
               "mezType": "Repel"
             },
             {
+              "etModifies": "Defense",
+              "mag": {
+                "pvp": 0.3
+              },
+              "probability": 1,
+              "duration": 120,
+              "effectType": "ResEffect",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Shield_Defense.Battle_Agility"
+            },
+            {
+              "etModifies": "ToHit",
+              "mag": {
+                "pvp": 0.3
+              },
+              "probability": 1,
+              "duration": 120,
+              "effectType": "ResEffect",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Shield_Defense.Battle_Agility"
+            },
+            {
+              "etModifies": "RechargeTime",
+              "mag": {
+                "pvp": 0.3
+              },
+              "probability": 1,
+              "duration": 120,
+              "effectType": "ResEffect",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Shield_Defense.Battle_Agility"
+            },
+            {
+              "etModifies": "SpeedRunning",
               "mag": {
                 "pvp": 0.5
               },
               "probability": 1,
               "duration": 120,
               "effectType": "ResEffect",
-              "eTModifies": 5,
-              "toWho": "Self",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Shield_Defense.Battle_Agility"
+            },
+            {
+              "etModifies": "SpeedFlying",
+              "mag": {
+                "pvp": 0.5
+              },
+              "probability": 1,
+              "duration": 120,
+              "effectType": "ResEffect",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Shield_Defense.Battle_Agility"
+            },
+            {
+              "etModifies": "JumpHeight",
+              "mag": {
+                "pvp": 0.5
+              },
+              "probability": 1,
+              "duration": 120,
+              "effectType": "ResEffect",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Shield_Defense.Battle_Agility"
+            },
+            {
+              "etModifies": "SpeedJumping",
+              "mag": {
+                "pvp": 0.5
+              },
+              "probability": 1,
+              "duration": 120,
+              "effectType": "ResEffect",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Shield_Defense.Battle_Agility"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Endurance_Discount",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Defense.Shield_Defense.Battle_Agility",
+      "archetypeOrder": "secondary",
       "powerIndex": 3,
       "castTimeReal": 1.5,
       "toggleCost": 10.4,
@@ -687,13 +774,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Endurance_Discount",
-        "Recharge",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "InherentTaunt",
@@ -706,9 +786,10 @@
               "probability": 1,
               "duration": 17,
               "effectType": "Mez",
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Defense.Shield_Defense.Against_all_Odds",
               "requiresToHitCheck": true,
@@ -726,7 +807,7 @@
               "probability": 1,
               "duration": 1.25,
               "effectType": "DamageBuff",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Shield_Defense.Against_all_Odds",
               "damageType": "Smashing"
             },
@@ -737,7 +818,7 @@
               "probability": 1,
               "duration": 1.25,
               "effectType": "DamageBuff",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Shield_Defense.Against_all_Odds",
               "damageType": "Lethal"
             },
@@ -748,7 +829,7 @@
               "probability": 1,
               "duration": 1.25,
               "effectType": "DamageBuff",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Shield_Defense.Against_all_Odds",
               "damageType": "Fire"
             },
@@ -759,7 +840,7 @@
               "probability": 1,
               "duration": 1.25,
               "effectType": "DamageBuff",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Shield_Defense.Against_all_Odds",
               "damageType": "Cold"
             },
@@ -770,7 +851,7 @@
               "probability": 1,
               "duration": 1.25,
               "effectType": "DamageBuff",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Shield_Defense.Against_all_Odds",
               "damageType": "Energy"
             },
@@ -781,7 +862,7 @@
               "probability": 1,
               "duration": 1.25,
               "effectType": "DamageBuff",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Shield_Defense.Against_all_Odds",
               "damageType": "Negative"
             },
@@ -792,7 +873,7 @@
               "probability": 1,
               "duration": 1.25,
               "effectType": "DamageBuff",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Shield_Defense.Against_all_Odds",
               "damageType": "Toxic"
             },
@@ -803,7 +884,7 @@
               "probability": 1,
               "duration": 1.25,
               "effectType": "DamageBuff",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Shield_Defense.Against_all_Odds",
               "damageType": "Psionic"
             }
@@ -820,7 +901,7 @@
               "duration": 1,
               "effectType": "DamageBuff",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Defense.Shield_Defense.Against_all_Odds",
               "damageType": "Smashing"
             },
@@ -832,7 +913,7 @@
               "duration": 1,
               "effectType": "DamageBuff",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Defense.Shield_Defense.Against_all_Odds",
               "damageType": "Psionic"
             },
@@ -844,7 +925,7 @@
               "duration": 1,
               "effectType": "DamageBuff",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Defense.Shield_Defense.Against_all_Odds",
               "damageType": "Toxic"
             },
@@ -856,7 +937,7 @@
               "duration": 1,
               "effectType": "DamageBuff",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Defense.Shield_Defense.Against_all_Odds",
               "damageType": "Lethal"
             },
@@ -868,7 +949,7 @@
               "duration": 1,
               "effectType": "DamageBuff",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Defense.Shield_Defense.Against_all_Odds",
               "damageType": "Fire"
             },
@@ -880,7 +961,7 @@
               "duration": 1,
               "effectType": "DamageBuff",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Defense.Shield_Defense.Against_all_Odds",
               "damageType": "Cold"
             },
@@ -892,7 +973,7 @@
               "duration": 1,
               "effectType": "DamageBuff",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Defense.Shield_Defense.Against_all_Odds",
               "damageType": "Energy"
             },
@@ -904,13 +985,21 @@
               "duration": 1,
               "effectType": "DamageBuff",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Defense.Shield_Defense.Against_all_Odds",
               "damageType": "Negative"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Endurance_Discount",
+        "Recharge",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Defense.Shield_Defense.Against_all_Odds",
+      "archetypeOrder": "secondary",
       "powerIndex": 4,
       "castTimeReal": 2.5,
       "toggleCost": 0.208,
@@ -951,11 +1040,6 @@
       "powerType": "Toggle"
     },
     {
-      "allowedEnhancements": [
-        "Defense_Buff"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Buff_Def",
@@ -969,7 +1053,8 @@
               "variableModified": true,
               "effectType": "Defense",
               "stacking": 1,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Shield_Defense.Phalanx_Fighting",
               "damageType": "Melee"
             },
@@ -982,7 +1067,8 @@
               "variableModified": true,
               "effectType": "Defense",
               "stacking": 1,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Shield_Defense.Phalanx_Fighting",
               "damageType": "Ranged"
             },
@@ -995,13 +1081,20 @@
               "variableModified": true,
               "effectType": "Defense",
               "stacking": 1,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Shield_Defense.Phalanx_Fighting",
               "damageType": "AoE"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Defense_Buff"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Defense.Shield_Defense.Phalanx_Fighting",
+      "archetypeOrder": "secondary",
       "powerIndex": 5,
       "castTimeReal": 1.716,
       "fullName": "Brute_Secondary_Shield_Defense_Phalanx_Fighting",
@@ -1039,13 +1132,6 @@
       "powerType": "Auto"
     },
     {
-      "allowedEnhancements": [
-        "Defense_Buff",
-        "Endurance_Discount",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Buff_Def",
@@ -1057,7 +1143,8 @@
               "probability": 1,
               "duration": 2.25,
               "effectType": "Defense",
-              "toWho": "Target",
+              "buffable": true,
+              "toWho": "target",
               "powerFullName": "Brute_Defense.Shield_Defense.Grant_Cover",
               "damageType": "Melee"
             },
@@ -1068,7 +1155,8 @@
               "probability": 1,
               "duration": 2.25,
               "effectType": "Defense",
-              "toWho": "Target",
+              "buffable": true,
+              "toWho": "target",
               "powerFullName": "Brute_Defense.Shield_Defense.Grant_Cover",
               "damageType": "Ranged"
             },
@@ -1079,7 +1167,8 @@
               "probability": 1,
               "duration": 2.25,
               "effectType": "Defense",
-              "toWho": "Target",
+              "buffable": true,
+              "toWho": "target",
               "powerFullName": "Brute_Defense.Shield_Defense.Grant_Cover",
               "damageType": "AoE"
             },
@@ -1090,7 +1179,8 @@
               "probability": 1,
               "duration": 2.25,
               "effectType": "Defense",
-              "toWho": "Target",
+              "buffable": true,
+              "toWho": "target",
               "powerFullName": "Brute_Defense.Shield_Defense.Grant_Cover",
               "damageType": "Smashing"
             },
@@ -1101,7 +1191,8 @@
               "probability": 1,
               "duration": 2.25,
               "effectType": "Defense",
-              "toWho": "Target",
+              "buffable": true,
+              "toWho": "target",
               "powerFullName": "Brute_Defense.Shield_Defense.Grant_Cover",
               "damageType": "Lethal"
             },
@@ -1112,7 +1203,8 @@
               "probability": 1,
               "duration": 2.25,
               "effectType": "Defense",
-              "toWho": "Target",
+              "buffable": true,
+              "toWho": "target",
               "powerFullName": "Brute_Defense.Shield_Defense.Grant_Cover",
               "damageType": "Fire"
             },
@@ -1123,7 +1215,8 @@
               "probability": 1,
               "duration": 2.25,
               "effectType": "Defense",
-              "toWho": "Target",
+              "buffable": true,
+              "toWho": "target",
               "powerFullName": "Brute_Defense.Shield_Defense.Grant_Cover",
               "damageType": "Cold"
             },
@@ -1134,7 +1227,8 @@
               "probability": 1,
               "duration": 2.25,
               "effectType": "Defense",
-              "toWho": "Target",
+              "buffable": true,
+              "toWho": "target",
               "powerFullName": "Brute_Defense.Shield_Defense.Grant_Cover",
               "damageType": "Energy"
             },
@@ -1145,7 +1239,8 @@
               "probability": 1,
               "duration": 2.25,
               "effectType": "Defense",
-              "toWho": "Target",
+              "buffable": true,
+              "toWho": "target",
               "powerFullName": "Brute_Defense.Shield_Defense.Grant_Cover",
               "damageType": "Negative"
             }
@@ -1155,14 +1250,14 @@
           "effectType": "Res_Boolean",
           "values": [
             {
+              "etModifies": "Defense",
               "mag": {
                 "pve": 0.11072
               },
               "probability": 1,
               "duration": 2.25,
               "effectType": "ResEffect",
-              "eTModifies": 5,
-              "toWho": "All",
+              "toWho": "all",
               "powerFullName": "Brute_Defense.Shield_Defense.Grant_Cover"
             }
           ]
@@ -1171,19 +1266,27 @@
           "effectType": "Ones",
           "values": [
             {
+              "etModifies": "RechargeTime",
               "mag": {
                 "pve": 0.3
               },
               "probability": 1,
               "duration": 2.25,
               "effectType": "ResEffect",
-              "eTModifies": 25,
-              "toWho": "All",
+              "toWho": "all",
               "powerFullName": "Brute_Defense.Shield_Defense.Grant_Cover"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Defense_Buff",
+        "Endurance_Discount",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Defense.Shield_Defense.Grant_Cover",
+      "archetypeOrder": "secondary",
       "powerIndex": 6,
       "castTimeReal": 2.5,
       "toggleCost": 0.156,
@@ -1223,17 +1326,6 @@
       "powerType": "Toggle"
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Knockback",
-        "Range",
-        "Recharge",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Ones",
@@ -1247,7 +1339,8 @@
               "effectType": "Mez",
               "delayedTime": 0.7,
               "stacking": 1,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Shield_Defense.Shield_Charge",
               "mezType": "Teleport"
             },
@@ -1259,12 +1352,24 @@
               "duration": 4,
               "effectType": "EntCreate",
               "delayedTime": 0.625,
-              "toWho": "All",
+              "toWho": "all",
               "powerFullName": "Brute_Defense.Shield_Defense.Shield_Charge"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Knockback",
+        "Range",
+        "Recharge",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Defense.Shield_Defense.Shield_Charge",
+      "archetypeOrder": "secondary",
       "powerIndex": 7,
       "castTimeReal": 1.5,
       "toggleCost": 13.52,
@@ -1305,14 +1410,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Endurance_Discount",
-        "Heal",
-        "Endurance_Modification",
-        "Res_Damage"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Res_DMG",
@@ -1324,7 +1421,8 @@
               "probability": 1,
               "duration": 120,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Shield_Defense.One_with_the_Shield",
               "damageType": "Smashing"
             },
@@ -1335,7 +1433,8 @@
               "probability": 1,
               "duration": 120,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Shield_Defense.One_with_the_Shield",
               "damageType": "Lethal"
             },
@@ -1346,7 +1445,8 @@
               "probability": 1,
               "duration": 120,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Shield_Defense.One_with_the_Shield",
               "damageType": "Fire"
             },
@@ -1357,7 +1457,8 @@
               "probability": 1,
               "duration": 120,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Shield_Defense.One_with_the_Shield",
               "damageType": "Cold"
             },
@@ -1368,7 +1469,8 @@
               "probability": 1,
               "duration": 120,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Shield_Defense.One_with_the_Shield",
               "damageType": "Energy"
             },
@@ -1379,7 +1481,8 @@
               "probability": 1,
               "duration": 120,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Shield_Defense.One_with_the_Shield",
               "damageType": "Negative"
             },
@@ -1390,7 +1493,8 @@
               "probability": 1,
               "duration": 120,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Shield_Defense.One_with_the_Shield",
               "damageType": "Toxic"
             }
@@ -1406,7 +1510,8 @@
               "probability": 1,
               "duration": 120,
               "effectType": "HitPoints",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Shield_Defense.One_with_the_Shield"
             }
           ]
@@ -1421,7 +1526,7 @@
               "probability": 1,
               "duration": 120,
               "effectType": "Mez",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Shield_Defense.One_with_the_Shield",
               "mezType": "Knockup"
             },
@@ -1432,7 +1537,7 @@
               "probability": 1,
               "duration": 120,
               "effectType": "MezResist",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Shield_Defense.One_with_the_Shield",
               "mezType": "Knockup"
             },
@@ -1443,7 +1548,7 @@
               "probability": 1,
               "duration": 120,
               "effectType": "Mez",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Shield_Defense.One_with_the_Shield",
               "mezType": "Knockback"
             },
@@ -1454,7 +1559,7 @@
               "probability": 1,
               "duration": 120,
               "effectType": "MezResist",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Shield_Defense.One_with_the_Shield",
               "mezType": "Knockback"
             },
@@ -1465,7 +1570,7 @@
               "probability": 1,
               "duration": 120,
               "effectType": "Mez",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Shield_Defense.One_with_the_Shield",
               "mezType": "Repel"
             },
@@ -1476,7 +1581,7 @@
               "probability": 1,
               "duration": 120,
               "effectType": "MezResist",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Shield_Defense.One_with_the_Shield",
               "mezType": "Repel"
             },
@@ -1487,7 +1592,8 @@
               "probability": 1,
               "duration": 120,
               "effectType": "Recovery",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Shield_Defense.One_with_the_Shield"
             },
             {
@@ -1497,7 +1603,7 @@
               "probability": 1,
               "duration": 30,
               "effectType": "GlobalChanceMod",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Shield_Defense.One_with_the_Shield"
             }
           ]
@@ -1512,7 +1618,8 @@
               "probability": 1,
               "duration": 120,
               "effectType": "Mez",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Shield_Defense.One_with_the_Shield",
               "mezType": "Stun"
             },
@@ -1523,7 +1630,8 @@
               "probability": 1,
               "duration": 120,
               "effectType": "Mez",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Shield_Defense.One_with_the_Shield",
               "mezType": "Hold"
             },
@@ -1534,7 +1642,8 @@
               "probability": 1,
               "duration": 120,
               "effectType": "Mez",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Shield_Defense.One_with_the_Shield",
               "mezType": "Sleep"
             },
@@ -1545,9 +1654,10 @@
               "probability": 1,
               "duration": 120,
               "effectType": "Mez",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Shield_Defense.One_with_the_Shield",
-              "mezType": "Immobilization"
+              "mezType": "Immob"
             },
             {
               "mag": {
@@ -1556,7 +1666,7 @@
               "probability": 1,
               "duration": 120,
               "effectType": "MezResist",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Shield_Defense.One_with_the_Shield",
               "mezType": "Stun"
             },
@@ -1567,7 +1677,7 @@
               "probability": 1,
               "duration": 120,
               "effectType": "MezResist",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Shield_Defense.One_with_the_Shield",
               "mezType": "Hold"
             },
@@ -1578,7 +1688,7 @@
               "probability": 1,
               "duration": 120,
               "effectType": "MezResist",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Shield_Defense.One_with_the_Shield",
               "mezType": "Sleep"
             },
@@ -1589,9 +1699,9 @@
               "probability": 1,
               "duration": 120,
               "effectType": "MezResist",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Shield_Defense.One_with_the_Shield",
-              "mezType": "Immobilization"
+              "mezType": "Immob"
             }
           ]
         },
@@ -1605,12 +1715,21 @@
               "probability": 1,
               "effectType": "Endurance",
               "delayedTime": 120,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Shield_Defense.One_with_the_Shield"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Endurance_Discount",
+        "Heal",
+        "Endurance_Modification",
+        "Res_Damage"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Defense.Shield_Defense.One_with_the_Shield",
+      "archetypeOrder": "secondary",
       "powerIndex": 8,
       "castTimeReal": 2.5,
       "toggleCost": 2.6,

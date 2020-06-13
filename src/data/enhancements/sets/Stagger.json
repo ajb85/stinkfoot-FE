@@ -2,248 +2,154 @@
   "fullName": "IOSet.Stagger",
   "enhancements": [
     {
-      "effects": [
-        {
-          "effectType": "Recharge",
-          "values": [
-            {
-              "etModifies": "RechargeTime",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Stagger_A.Attuned_Stagger_A"
-            }
-          ]
-        },
-        {
-          "effectType": "Accuracy",
-          "values": [
-            {
-              "etModifies": "Accuracy",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Stagger_A.Attuned_Stagger_A"
-            }
-          ]
-        }
-      ],
+      "type": "set",
+      "fullName": "Boosts.Attuned_Stagger_A.Attuned_Stagger_A",
+      "displayName": "Accuracy/Recharge",
       "description": {
         "short": "+ACC, +Rech",
         "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}%."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Stagger_A.Attuned_Stagger_A",
-      "setName": "Stagger",
-      "displayName": "Accuracy/Recharge"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Endurance",
-          "values": [
-            {
-              "etModifies": "EnduranceDiscount",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Stagger_B.Attuned_Stagger_B"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
+          },
+          "stat": "Accuracy",
+          "toWho": "self"
         },
         {
-          "effectType": "Stun",
-          "values": [
-            {
-              "etModifies": "Mez",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Stagger_B.Attuned_Stagger_B",
-              "mezType": "Stun"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
+          },
+          "stat": "Recharge",
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Stagger_B.Attuned_Stagger_B",
+      "displayName": "Endurance/Stun",
       "description": {
         "short": "+End, +Stun",
         "long": "Enhances the Stun duration of a power by {Boost.Attrib.Stun.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Stagger_B.Attuned_Stagger_B",
-      "setName": "Stagger",
-      "displayName": "Endurance/Stun"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Accuracy",
-          "values": [
-            {
-              "etModifies": "Accuracy",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Stagger_C.Attuned_Stagger_C"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self"
         },
         {
-          "effectType": "Endurance",
-          "values": [
-            {
-              "etModifies": "EnduranceDiscount",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Stagger_C.Attuned_Stagger_C"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
+          },
+          "mezType": 10,
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Stagger_C.Attuned_Stagger_C",
+      "displayName": "Accuracy/Endurance",
       "description": {
         "short": "+ACC, -End Cost",
         "long": "Enhances the accuracy by {Boost.Attrib.Accuracy.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Stagger_C.Attuned_Stagger_C",
-      "setName": "Stagger",
-      "displayName": "Accuracy/Endurance"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Stun",
-          "values": [
-            {
-              "etModifies": "Mez",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Stagger_D.Attuned_Stagger_D",
-              "mezType": "Stun"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
+          },
+          "stat": "Accuracy",
+          "toWho": "self"
         },
         {
-          "effectType": "Range",
-          "values": [
-            {
-              "etModifies": "Range",
-              "mag": {
-                "pve": 0.159375
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Stagger_D.Attuned_Stagger_D"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Stagger_D.Attuned_Stagger_D",
+      "displayName": "Stun/Range",
       "description": {
         "short": "+Range, +Stun",
         "long": "Enhances the range of a power by {Boost.Attrib.Range.Scale}% and stun duration by {Boost.Attrib.Stun.Scale}%."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Stagger_D.Attuned_Stagger_D",
-      "setName": "Stagger",
-      "displayName": "Stun/Range"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Accuracy",
-          "values": [
-            {
-              "etModifies": "Accuracy",
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Stagger_E.Attuned_Stagger_E"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
-        },
-        {
-          "effectType": "Stun",
-          "values": [
-            {
-              "etModifies": "Mez",
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Stagger_E.Attuned_Stagger_E",
-              "mezType": "Stun"
-            }
-          ]
-        },
-        {
-          "effectType": "Recharge",
-          "values": [
-            {
-              "etModifies": "RechargeTime",
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Stagger_E.Attuned_Stagger_E"
-            }
-          ]
+          },
+          "mezType": 10,
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Stagger_E.Attuned_Stagger_E",
+      "displayName": "Accuracy/Stun/Recharge",
       "description": {
         "short": "+ACC, +Rech, +Stun",
         "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}%, stun duration by {Boost.Attrib.Stun.Scale}% and reduces the attack rate by {Boost.Attrib.Recharge.Scale}%."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Stagger_E.Attuned_Stagger_E",
-      "setName": "Stagger",
-      "displayName": "Accuracy/Stun/Recharge"
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.212
+            }
+          },
+          "stat": "Accuracy",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.212
+            }
+          },
+          "stat": "Recharge",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.212
+            }
+          },
+          "mezType": 10,
+          "toWho": "self"
+        }
+      ]
     }
   ],
   "levels": {

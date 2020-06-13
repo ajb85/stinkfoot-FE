@@ -6,15 +6,6 @@
   "displayName": "Dual Blades",
   "powers": [
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Recharge",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Damage",
@@ -30,8 +21,9 @@
               "ticks": 2,
               "delayedTime": 0.125,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Dual_Blades.Light_Opening",
               "damageType": "Lethal"
             }
@@ -49,7 +41,7 @@
               "effectType": "Rage",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Dual_Blades.Light_Opening"
             },
             {
@@ -60,7 +52,7 @@
               "duration": 5,
               "effectType": "SetMode",
               "ticks": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Dual_Blades.Light_Opening"
             },
             {
@@ -71,7 +63,7 @@
               "variableModified": true,
               "effectType": "UnsetMode",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Dual_Blades.Light_Opening"
             }
           ]
@@ -88,9 +80,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Dual_Blades.Light_Opening",
               "requiresToHitCheck": true,
@@ -110,14 +103,25 @@
               "ticks": 2,
               "delayedTime": 0.13,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Dual_Blades.Light_Opening",
               "damageType": "Fire"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Recharge",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Dual_Blades.Light_Opening",
+      "archetypeOrder": "primary",
       "powerIndex": 0,
       "castTimeReal": 1.03,
       "toggleCost": 4.368,
@@ -158,15 +162,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Recharge",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Damage",
@@ -181,8 +176,9 @@
               "effectType": "Damage",
               "ticks": 3,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Dual_Blades.Moderate_Opening",
               "damageType": "Lethal"
             }
@@ -200,7 +196,7 @@
               "effectType": "Rage",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Dual_Blades.Moderate_Opening"
             },
             {
@@ -212,7 +208,7 @@
               "effectType": "SetMode",
               "ticks": 1,
               "specialCase": 13,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Dual_Blades.Moderate_Opening"
             },
             {
@@ -221,7 +217,7 @@
               },
               "probability": 1,
               "effectType": "UnsetMode",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Dual_Blades.Moderate_Opening"
             }
           ]
@@ -238,9 +234,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Dual_Blades.Moderate_Opening",
               "requiresToHitCheck": true,
@@ -259,14 +256,25 @@
               "effectType": "Damage",
               "ticks": 3,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Dual_Blades.Moderate_Opening",
               "damageType": "Fire"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Recharge",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Dual_Blades.Moderate_Opening",
+      "archetypeOrder": "primary",
       "powerIndex": 1,
       "castTimeReal": 1.4,
       "toggleCost": 6.032,
@@ -307,16 +315,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Defense_Debuff",
-        "Endurance_Discount",
-        "Recharge",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Damage",
@@ -332,8 +330,9 @@
               "ticks": 2,
               "delayedTime": 0.125,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Dual_Blades.Moderate_Bridge",
               "damageType": "Lethal"
             }
@@ -350,8 +349,9 @@
               "duration": 10,
               "effectType": "Defense",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Dual_Blades.Moderate_Bridge"
             }
           ]
@@ -368,7 +368,7 @@
               "effectType": "Rage",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Dual_Blades.Moderate_Bridge"
             },
             {
@@ -380,7 +380,7 @@
               "effectType": "SetMode",
               "ticks": 1,
               "specialCase": 13,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Dual_Blades.Moderate_Bridge"
             },
             {
@@ -392,7 +392,7 @@
               "effectType": "UnsetMode",
               "delayedTime": 0.25,
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Dual_Blades.Moderate_Bridge"
             }
           ]
@@ -409,9 +409,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Dual_Blades.Moderate_Bridge",
               "requiresToHitCheck": true,
@@ -431,14 +432,26 @@
               "ticks": 2,
               "delayedTime": 0.13,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Dual_Blades.Moderate_Bridge",
               "damageType": "Fire"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Defense_Debuff",
+        "Endurance_Discount",
+        "Recharge",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Dual_Blades.Moderate_Bridge",
+      "archetypeOrder": "primary",
       "powerIndex": 2,
       "castTimeReal": 1.03,
       "toggleCost": 6.864,
@@ -481,15 +494,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Recharge",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Damage",
@@ -504,8 +508,9 @@
               "effectType": "Damage",
               "ticks": 2,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Dual_Blades.AoE_Bridge",
               "damageType": "Lethal"
             }
@@ -523,7 +528,7 @@
               "effectType": "Rage",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Dual_Blades.AoE_Bridge"
             },
             {
@@ -534,9 +539,10 @@
               "probability": 1,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 13,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Dual_Blades.AoE_Bridge",
               "mezType": "Knockback"
             },
@@ -548,7 +554,7 @@
               "variableModified": true,
               "effectType": "UnsetMode",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Dual_Blades.AoE_Bridge"
             }
           ]
@@ -565,9 +571,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Dual_Blades.AoE_Bridge",
               "requiresToHitCheck": true,
@@ -587,9 +594,10 @@
               "duration": 20,
               "effectType": "Defense",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 13,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Dual_Blades.AoE_Bridge"
             }
           ]
@@ -605,9 +613,10 @@
               "duration": 20,
               "effectType": "ToHit",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 13,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Dual_Blades.AoE_Bridge"
             }
           ]
@@ -621,15 +630,26 @@
               },
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 13,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Dual_Blades.AoE_Bridge",
               "damageType": "Fire"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Recharge",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Dual_Blades.AoE_Bridge",
+      "archetypeOrder": "primary",
       "powerIndex": 3,
       "castTimeReal": 2.27,
       "toggleCost": 11.856,
@@ -671,16 +691,6 @@
       "aoeModifier": 2.2
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "ToHit_Buff",
-        "Damage",
-        "Endurance_Discount",
-        "Recharge",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Damage",
@@ -693,8 +703,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Dual_Blades.Follow_Up",
               "damageType": "Lethal"
             }
@@ -712,7 +723,7 @@
               "effectType": "Rage",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Dual_Blades.Follow_Up"
             },
             {
@@ -723,7 +734,7 @@
               "variableModified": true,
               "effectType": "UnsetMode",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Dual_Blades.Follow_Up"
             }
           ]
@@ -740,9 +751,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Dual_Blades.Follow_Up",
               "requiresToHitCheck": true,
@@ -763,7 +775,8 @@
               "effectType": "ToHit",
               "delayedTime": 0.2,
               "stacking": 1,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Dual_Blades.Follow_Up"
             }
           ]
@@ -781,7 +794,7 @@
               "effectType": "DamageBuff",
               "delayedTime": 0.2,
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Dual_Blades.Follow_Up",
               "damageType": "Smashing"
             },
@@ -795,7 +808,7 @@
               "effectType": "DamageBuff",
               "delayedTime": 0.2,
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Dual_Blades.Follow_Up",
               "damageType": "Lethal"
             },
@@ -809,7 +822,7 @@
               "effectType": "DamageBuff",
               "delayedTime": 0.2,
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Dual_Blades.Follow_Up",
               "damageType": "Fire"
             },
@@ -823,7 +836,7 @@
               "effectType": "DamageBuff",
               "delayedTime": 0.2,
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Dual_Blades.Follow_Up",
               "damageType": "Cold"
             },
@@ -837,7 +850,7 @@
               "effectType": "DamageBuff",
               "delayedTime": 0.2,
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Dual_Blades.Follow_Up",
               "damageType": "Energy"
             },
@@ -851,7 +864,7 @@
               "effectType": "DamageBuff",
               "delayedTime": 0.2,
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Dual_Blades.Follow_Up",
               "damageType": "Negative"
             },
@@ -865,7 +878,7 @@
               "effectType": "DamageBuff",
               "delayedTime": 0.2,
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Dual_Blades.Follow_Up",
               "damageType": "Toxic"
             },
@@ -879,7 +892,7 @@
               "effectType": "DamageBuff",
               "delayedTime": 0.2,
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Dual_Blades.Follow_Up",
               "damageType": "Psionic"
             }
@@ -894,14 +907,26 @@
               },
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Dual_Blades.Follow_Up",
               "damageType": "Fire"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "ToHit_Buff",
+        "Damage",
+        "Endurance_Discount",
+        "Recharge",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Dual_Blades.Follow_Up",
+      "archetypeOrder": "primary",
       "powerIndex": 4,
       "castTimeReal": 1.2,
       "toggleCost": 7.8,
@@ -948,14 +973,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Range",
-        "Recharge",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Taunt",
@@ -969,8 +986,9 @@
               "duration": 20.5999985,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Dual_Blades.Taunt",
               "mezType": "Taunt"
@@ -981,16 +999,16 @@
           "effectType": "Ones",
           "values": [
             {
+              "etModifies": "Range",
               "mag": {
                 "pve": -0.75
               },
               "probability": 1,
               "duration": 12,
               "effectType": "Enhancement",
-              "eTModifies": 24,
               "stacking": 1,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Dual_Blades.Taunt"
             },
             {
@@ -1000,14 +1018,24 @@
               "probability": 1,
               "effectType": "Null",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Dual_Blades.Taunt",
               "requiresToHitCheck": true
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Range",
+        "Recharge",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Dual_Blades.Taunt",
+      "archetypeOrder": "primary",
       "powerIndex": 5,
       "castTimeReal": 1.93,
       "fullName": "Brute_Primary_Dual_Blades_Taunt",
@@ -1043,16 +1071,6 @@
       "aoeModifier": 3.25
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Knockback",
-        "Recharge",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Damage",
@@ -1065,8 +1083,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Dual_Blades.Special_1",
               "damageType": "Lethal"
             }
@@ -1084,8 +1103,9 @@
               "effectType": "Mez",
               "delayedTime": 0.8,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Dual_Blades.Special_1",
               "mezType": "Knockback"
             },
@@ -1097,7 +1117,7 @@
               "variableModified": true,
               "effectType": "UnsetMode",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Dual_Blades.Special_1"
             },
             {
@@ -1109,7 +1129,7 @@
               "effectType": "SetMode",
               "ticks": 1,
               "specialCase": 13,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Dual_Blades.Special_1"
             }
           ]
@@ -1126,9 +1146,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Dual_Blades.Special_1",
               "requiresToHitCheck": true,
@@ -1145,14 +1166,26 @@
               },
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Dual_Blades.Special_1",
               "damageType": "Fire"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Knockback",
+        "Recharge",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Dual_Blades.Special_1",
+      "archetypeOrder": "primary",
       "powerIndex": 6,
       "castTimeReal": 2.43,
       "toggleCost": 6.8224,
@@ -1194,15 +1227,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Recharge",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Damage",
@@ -1215,8 +1239,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Dual_Blades.Special_2",
               "damageType": "Lethal"
             }
@@ -1234,7 +1259,7 @@
               "effectType": "Rage",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Dual_Blades.Special_2"
             },
             {
@@ -1245,7 +1270,7 @@
               "variableModified": true,
               "effectType": "UnsetMode",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Dual_Blades.Special_2"
             }
           ]
@@ -1262,9 +1287,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Dual_Blades.Special_2",
               "requiresToHitCheck": true,
@@ -1281,14 +1307,25 @@
               },
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Dual_Blades.Special_2",
               "damageType": "Fire"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Recharge",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Dual_Blades.Special_2",
+      "archetypeOrder": "primary",
       "powerIndex": 7,
       "castTimeReal": 1.23,
       "toggleCost": 11.024,
@@ -1332,16 +1369,6 @@
       "aoeModifier": 1.35699379
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Knockback",
-        "Recharge",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Damage",
@@ -1357,8 +1384,9 @@
               "ticks": 11,
               "delayedTime": 0.1,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Dual_Blades.High_Low",
               "damageType": "Lethal"
             }
@@ -1376,8 +1404,9 @@
               "effectType": "Mez",
               "delayedTime": 2.2,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Dual_Blades.High_Low",
               "mezType": "Knockback"
             },
@@ -1390,7 +1419,7 @@
               "effectType": "Rage",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Dual_Blades.High_Low"
             },
             {
@@ -1401,7 +1430,7 @@
               "variableModified": true,
               "effectType": "UnsetMode",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Dual_Blades.High_Low"
             },
             {
@@ -1412,7 +1441,7 @@
               "duration": 5,
               "effectType": "SetMode",
               "ticks": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Dual_Blades.High_Low"
             }
           ]
@@ -1429,9 +1458,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Dual_Blades.High_Low",
               "requiresToHitCheck": true,
@@ -1451,14 +1481,26 @@
               "ticks": 11,
               "delayedTime": 0.1,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Dual_Blades.High_Low",
               "damageType": "Fire"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Knockback",
+        "Recharge",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Dual_Blades.High_Low",
+      "archetypeOrder": "primary",
       "powerIndex": 8,
       "castTimeReal": 3.3,
       "toggleCost": 14.352,

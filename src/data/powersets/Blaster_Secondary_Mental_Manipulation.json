@@ -6,16 +6,6 @@
   "displayName": "Mental Manipulation",
   "powers": [
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Immobilize",
-        "Range",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Damage",
@@ -30,8 +20,9 @@
               "effectType": "Damage",
               "ticks": 5,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Mental_Manipulation.Subdual",
               "damageType": "Psionic"
             }
@@ -49,11 +40,12 @@
               "duration": 17.8800011,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Blaster_Support.Mental_Manipulation.Subdual",
-              "mezType": "Immobilization"
+              "mezType": "Immob"
             }
           ]
         },
@@ -69,11 +61,12 @@
               "duration": 2,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Blaster_Support.Mental_Manipulation.Subdual",
-              "mezType": "Immobilization"
+              "mezType": "Immob"
             }
           ]
         },
@@ -90,7 +83,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Mental_Manipulation.Subdual",
               "damageType": "Smashing"
             },
@@ -104,7 +97,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Mental_Manipulation.Subdual",
               "damageType": "Lethal"
             },
@@ -118,7 +111,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Mental_Manipulation.Subdual",
               "damageType": "Fire"
             },
@@ -132,7 +125,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Mental_Manipulation.Subdual",
               "damageType": "Cold"
             },
@@ -146,7 +139,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Mental_Manipulation.Subdual",
               "damageType": "Energy"
             },
@@ -160,7 +153,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Mental_Manipulation.Subdual",
               "damageType": "Negative"
             },
@@ -174,7 +167,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Mental_Manipulation.Subdual",
               "damageType": "Toxic"
             },
@@ -188,13 +181,24 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Mental_Manipulation.Subdual",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Immobilize",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Support.Mental_Manipulation.Subdual",
+      "archetypeOrder": "secondary",
       "powerIndex": 0,
       "castTimeReal": 1.67,
       "toggleCost": 8.528,
@@ -234,14 +238,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Damage",
@@ -254,8 +250,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Mental_Manipulation.Mind_Probe",
               "damageType": "Psionic"
             }
@@ -265,16 +262,16 @@
           "effectType": "Slow",
           "values": [
             {
+              "etModifies": "RechargeTime",
               "mag": {
                 "pve": -0.4
               },
               "probability": 1,
               "duration": 6,
               "effectType": "Enhancement",
-              "eTModifies": 25,
               "stacking": 1,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Mental_Manipulation.Mind_Probe"
             }
           ]
@@ -288,7 +285,7 @@
               },
               "effectType": "DropToggles",
               "stacking": 1,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Mental_Manipulation.Mind_Probe"
             }
           ]
@@ -306,7 +303,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Mental_Manipulation.Mind_Probe",
               "damageType": "Smashing"
             },
@@ -320,7 +317,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Mental_Manipulation.Mind_Probe",
               "damageType": "Lethal"
             },
@@ -334,7 +331,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Mental_Manipulation.Mind_Probe",
               "damageType": "Fire"
             },
@@ -348,7 +345,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Mental_Manipulation.Mind_Probe",
               "damageType": "Cold"
             },
@@ -362,7 +359,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Mental_Manipulation.Mind_Probe",
               "damageType": "Energy"
             },
@@ -376,7 +373,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Mental_Manipulation.Mind_Probe",
               "damageType": "Negative"
             },
@@ -390,7 +387,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Mental_Manipulation.Mind_Probe",
               "damageType": "Toxic"
             },
@@ -404,13 +401,22 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Mental_Manipulation.Mind_Probe",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Support.Mental_Manipulation.Mind_Probe",
+      "archetypeOrder": "secondary",
       "powerIndex": 1,
       "castTimeReal": 1.17,
       "toggleCost": 8.528,
@@ -448,15 +454,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Knockback",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Damage",
@@ -468,8 +465,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Mental_Manipulation.Telekinetic_Thrust",
               "damageType": "Smashing"
             },
@@ -481,8 +479,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Mental_Manipulation.Telekinetic_Thrust",
               "damageType": "Psionic"
             }
@@ -499,8 +498,9 @@
               "probability": 1,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Mental_Manipulation.Telekinetic_Thrust",
               "mezType": "Knockback"
             }
@@ -519,7 +519,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Mental_Manipulation.Telekinetic_Thrust",
               "damageType": "Smashing"
             },
@@ -533,7 +533,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Mental_Manipulation.Telekinetic_Thrust",
               "damageType": "Lethal"
             },
@@ -547,7 +547,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Mental_Manipulation.Telekinetic_Thrust",
               "damageType": "Fire"
             },
@@ -561,7 +561,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Mental_Manipulation.Telekinetic_Thrust",
               "damageType": "Cold"
             },
@@ -575,7 +575,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Mental_Manipulation.Telekinetic_Thrust",
               "damageType": "Energy"
             },
@@ -589,7 +589,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Mental_Manipulation.Telekinetic_Thrust",
               "damageType": "Negative"
             },
@@ -603,7 +603,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Mental_Manipulation.Telekinetic_Thrust",
               "damageType": "Toxic"
             },
@@ -617,13 +617,23 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Mental_Manipulation.Telekinetic_Thrust",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Knockback",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Support.Mental_Manipulation.Telekinetic_Thrust",
+      "archetypeOrder": "secondary",
       "powerIndex": 2,
       "castTimeReal": 2.07,
       "toggleCost": 6.864,
@@ -664,15 +674,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Range",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Damage",
@@ -685,8 +686,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Mental_Manipulation.Psychic_Scream",
               "damageType": "Psionic"
             }
@@ -696,16 +698,16 @@
           "effectType": "Slow",
           "values": [
             {
+              "etModifies": "RechargeTime",
               "mag": {
                 "pve": -0.5
               },
               "probability": 1,
               "duration": 10,
               "effectType": "Enhancement",
-              "eTModifies": 25,
               "stacking": 1,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Mental_Manipulation.Psychic_Scream"
             }
           ]
@@ -721,7 +723,7 @@
               "duration": 10.17,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Mental_Manipulation.Psychic_Scream",
               "damageType": "Smashing"
             },
@@ -733,7 +735,7 @@
               "duration": 10.17,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Mental_Manipulation.Psychic_Scream",
               "damageType": "Lethal"
             },
@@ -745,7 +747,7 @@
               "duration": 10.17,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Mental_Manipulation.Psychic_Scream",
               "damageType": "Fire"
             },
@@ -757,7 +759,7 @@
               "duration": 10.17,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Mental_Manipulation.Psychic_Scream",
               "damageType": "Cold"
             },
@@ -769,7 +771,7 @@
               "duration": 10.17,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Mental_Manipulation.Psychic_Scream",
               "damageType": "Energy"
             },
@@ -781,7 +783,7 @@
               "duration": 10.17,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Mental_Manipulation.Psychic_Scream",
               "damageType": "Negative"
             },
@@ -793,7 +795,7 @@
               "duration": 10.17,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Mental_Manipulation.Psychic_Scream",
               "damageType": "Toxic"
             },
@@ -805,13 +807,23 @@
               "duration": 10.17,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Mental_Manipulation.Psychic_Scream",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Support.Mental_Manipulation.Psychic_Scream",
+      "archetypeOrder": "secondary",
       "powerIndex": 3,
       "castTimeReal": 2.67,
       "toggleCost": 11.856,
@@ -852,13 +864,6 @@
       "aoeModifier": 2.73993444
     },
     {
-      "allowedEnhancements": [
-        "ToHit_Buff",
-        "Endurance_Discount",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Buff_ToHit",
@@ -872,7 +877,8 @@
               "variableModified": true,
               "effectType": "ToHit",
               "stacking": 1,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Mental_Manipulation.Build_Up"
             }
           ]
@@ -889,7 +895,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Mental_Manipulation.Build_Up",
               "damageType": "Smashing"
             },
@@ -902,7 +908,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Mental_Manipulation.Build_Up",
               "damageType": "Lethal"
             },
@@ -915,7 +921,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Mental_Manipulation.Build_Up",
               "damageType": "Fire"
             },
@@ -928,7 +934,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Mental_Manipulation.Build_Up",
               "damageType": "Cold"
             },
@@ -941,7 +947,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Mental_Manipulation.Build_Up",
               "damageType": "Energy"
             },
@@ -954,7 +960,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Mental_Manipulation.Build_Up",
               "damageType": "Negative"
             },
@@ -967,7 +973,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Mental_Manipulation.Build_Up",
               "damageType": "Toxic"
             },
@@ -980,13 +986,21 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Mental_Manipulation.Build_Up",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "ToHit_Buff",
+        "Endurance_Discount",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Support.Mental_Manipulation.Build_Up",
+      "archetypeOrder": "secondary",
       "powerIndex": 4,
       "castTimeReal": 1.17,
       "toggleCost": 5.2,
@@ -1021,15 +1035,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Endurance_Discount",
-        "Heal",
-        "Recharge",
-        "Endurance_Modification"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Ones",
@@ -1043,7 +1048,8 @@
               "variableModified": true,
               "effectType": "Regeneration",
               "stacking": 1,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Mental_Manipulation.Drain_Psyche"
             },
             {
@@ -1055,8 +1061,9 @@
               "duration": 30,
               "effectType": "Regeneration",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Mental_Manipulation.Drain_Psyche"
             },
             {
@@ -1068,7 +1075,8 @@
               "variableModified": true,
               "effectType": "Recovery",
               "stacking": 1,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Mental_Manipulation.Drain_Psyche"
             },
             {
@@ -1080,8 +1088,9 @@
               "duration": 30,
               "effectType": "Recovery",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Mental_Manipulation.Drain_Psyche"
             }
           ]
@@ -1097,7 +1106,7 @@
               "duration": 8.83,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Mental_Manipulation.Drain_Psyche",
               "damageType": "Smashing"
             },
@@ -1109,7 +1118,7 @@
               "duration": 8.83,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Mental_Manipulation.Drain_Psyche",
               "damageType": "Lethal"
             },
@@ -1121,7 +1130,7 @@
               "duration": 8.83,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Mental_Manipulation.Drain_Psyche",
               "damageType": "Fire"
             },
@@ -1133,7 +1142,7 @@
               "duration": 8.83,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Mental_Manipulation.Drain_Psyche",
               "damageType": "Cold"
             },
@@ -1145,7 +1154,7 @@
               "duration": 8.83,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Mental_Manipulation.Drain_Psyche",
               "damageType": "Energy"
             },
@@ -1157,7 +1166,7 @@
               "duration": 8.83,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Mental_Manipulation.Drain_Psyche",
               "damageType": "Negative"
             },
@@ -1169,7 +1178,7 @@
               "duration": 8.83,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Mental_Manipulation.Drain_Psyche",
               "damageType": "Toxic"
             },
@@ -1181,13 +1190,23 @@
               "duration": 8.83,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Mental_Manipulation.Drain_Psyche",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Endurance_Discount",
+        "Heal",
+        "Recharge",
+        "Endurance_Modification"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Support.Mental_Manipulation.Drain_Psyche",
+      "archetypeOrder": "secondary",
       "powerIndex": 5,
       "castTimeReal": 1.33,
       "toggleCost": 13,
@@ -1230,15 +1249,6 @@
       "aoeModifier": 2.5
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Confuse",
-        "Damage",
-        "Endurance_Discount",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Ones",
@@ -1251,8 +1261,9 @@
               "duration": 1.5,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Blaster_Support.Mental_Manipulation.World_of_Confusion",
               "requiresToHitCheck": true,
@@ -1271,14 +1282,25 @@
               "effectType": "Damage",
               "ticks": 1,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Mental_Manipulation.World_of_Confusion",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Confuse",
+        "Damage",
+        "Endurance_Discount",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Support.Mental_Manipulation.World_of_Confusion",
+      "archetypeOrder": "secondary",
       "powerIndex": 6,
       "castTimeReal": 1.67,
       "toggleCost": 0.13,
@@ -1321,15 +1343,6 @@
       "powerType": "Toggle"
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Endurance_Discount",
-        "Fear",
-        "Range",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Fear",
@@ -1342,11 +1355,12 @@
               "duration": 11.92,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Blaster_Support.Mental_Manipulation.Scare",
-              "mezType": "Terrorize"
+              "mezType": "Terror"
             }
           ]
         },
@@ -1361,11 +1375,12 @@
               "duration": 2,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Blaster_Support.Mental_Manipulation.Scare",
-              "mezType": "Terrorize"
+              "mezType": "Terror"
             }
           ]
         },
@@ -1382,7 +1397,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Mental_Manipulation.Scare",
               "damageType": "Smashing"
             },
@@ -1396,7 +1411,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Mental_Manipulation.Scare",
               "damageType": "Lethal"
             },
@@ -1410,7 +1425,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Mental_Manipulation.Scare",
               "damageType": "Fire"
             },
@@ -1424,7 +1439,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Mental_Manipulation.Scare",
               "damageType": "Cold"
             },
@@ -1438,7 +1453,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Mental_Manipulation.Scare",
               "damageType": "Energy"
             },
@@ -1452,7 +1467,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Mental_Manipulation.Scare",
               "damageType": "Negative"
             },
@@ -1466,7 +1481,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Mental_Manipulation.Scare",
               "damageType": "Toxic"
             },
@@ -1480,13 +1495,23 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Mental_Manipulation.Scare",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Endurance_Discount",
+        "Fear",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Support.Mental_Manipulation.Scare",
+      "archetypeOrder": "secondary",
       "powerIndex": 7,
       "castTimeReal": 2.67,
       "toggleCost": 10.4,
@@ -1522,15 +1547,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Recharge",
-        "Stun"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Damage",
@@ -1543,8 +1559,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Mental_Manipulation.Psychic_Shockwave",
               "damageType": "Psionic"
             }
@@ -1561,8 +1578,9 @@
               "duration": 5.96,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Blaster_Support.Mental_Manipulation.Psychic_Shockwave",
               "mezType": "Stun"
@@ -1580,8 +1598,9 @@
               "duration": 2,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Blaster_Support.Mental_Manipulation.Psychic_Shockwave",
               "mezType": "Stun"
@@ -1592,16 +1611,16 @@
           "effectType": "Slow",
           "values": [
             {
+              "etModifies": "RechargeTime",
               "mag": {
                 "pve": -0.5
               },
               "probability": 1,
               "duration": 20,
               "effectType": "Enhancement",
-              "eTModifies": 25,
               "stacking": 1,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Mental_Manipulation.Psychic_Shockwave"
             }
           ]
@@ -1617,7 +1636,7 @@
               "duration": 9.47,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Mental_Manipulation.Psychic_Shockwave",
               "damageType": "Smashing"
             },
@@ -1629,7 +1648,7 @@
               "duration": 9.47,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Mental_Manipulation.Psychic_Shockwave",
               "damageType": "Lethal"
             },
@@ -1641,7 +1660,7 @@
               "duration": 9.47,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Mental_Manipulation.Psychic_Shockwave",
               "damageType": "Fire"
             },
@@ -1653,7 +1672,7 @@
               "duration": 9.47,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Mental_Manipulation.Psychic_Shockwave",
               "damageType": "Cold"
             },
@@ -1665,7 +1684,7 @@
               "duration": 9.47,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Mental_Manipulation.Psychic_Shockwave",
               "damageType": "Energy"
             },
@@ -1677,7 +1696,7 @@
               "duration": 9.47,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Mental_Manipulation.Psychic_Shockwave",
               "damageType": "Negative"
             },
@@ -1689,7 +1708,7 @@
               "duration": 9.47,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Mental_Manipulation.Psychic_Shockwave",
               "damageType": "Toxic"
             },
@@ -1701,13 +1720,23 @@
               "duration": 9.47,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Mental_Manipulation.Psychic_Shockwave",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Recharge",
+        "Stun"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Support.Mental_Manipulation.Psychic_Shockwave",
+      "archetypeOrder": "secondary",
       "powerIndex": 8,
       "castTimeReal": 1.97,
       "toggleCost": 10.192,

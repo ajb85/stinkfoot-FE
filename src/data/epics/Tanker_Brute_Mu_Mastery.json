@@ -6,16 +6,6 @@
   "displayName": "Mu Mastery",
   "powers": [
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Range",
-        "Recharge",
-        "Endurance_Modification"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Damage",
@@ -28,8 +18,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Brute_Mu_Mastery.Mu_Lightning",
               "damageType": "Energy"
             }
@@ -45,8 +36,9 @@
               "probability": 1,
               "effectType": "Endurance",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Brute_Mu_Mastery.Mu_Lightning"
             },
             {
@@ -57,8 +49,9 @@
               "duration": 4,
               "effectType": "Recovery",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Brute_Mu_Mastery.Mu_Lightning"
             },
             {
@@ -69,7 +62,8 @@
               "variableModified": true,
               "effectType": "Endurance",
               "stacking": 1,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Brute_Mu_Mastery.Mu_Lightning"
             },
             {
@@ -81,7 +75,7 @@
               "effectType": "Rage",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Epic.Brute_Mu_Mastery.Mu_Lightning"
             }
           ]
@@ -96,8 +90,9 @@
               "probability": 1,
               "effectType": "Endurance",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Brute_Mu_Mastery.Mu_Lightning"
             }
           ]
@@ -114,9 +109,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.Brute_Mu_Mastery.Mu_Lightning",
               "requiresToHitCheck": true,
@@ -133,14 +129,26 @@
               },
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Brute_Mu_Mastery.Mu_Lightning",
               "damageType": "Fire"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Range",
+        "Recharge",
+        "Endurance_Modification"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Brute_Mu_Mastery.Mu_Lightning",
+      "archetypeOrder": "epicPool",
       "powerIndex": 0,
       "castTimeReal": 1.17,
       "toggleCost": 8.58,
@@ -178,17 +186,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Immobilize",
-        "Range",
-        "Recharge",
-        "Endurance_Modification"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Damage",
@@ -203,8 +200,9 @@
               "effectType": "Damage",
               "ticks": 8,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Brute_Mu_Mastery.Electrifying_Fences",
               "damageType": "Energy"
             }
@@ -221,11 +219,12 @@
               "duration": 17.8800011,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.Brute_Mu_Mastery.Electrifying_Fences",
-              "mezType": "Immobilization"
+              "mezType": "Immob"
             }
           ]
         },
@@ -240,11 +239,12 @@
               "duration": 2,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.Brute_Mu_Mastery.Electrifying_Fences",
-              "mezType": "Immobilization"
+              "mezType": "Immob"
             },
             {
               "mag": {
@@ -255,8 +255,9 @@
               "effectType": "Endurance",
               "ticks": 4,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Brute_Mu_Mastery.Electrifying_Fences"
             },
             {
@@ -267,7 +268,7 @@
               "duration": 15,
               "effectType": "MezResist",
               "stacking": 1,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Brute_Mu_Mastery.Electrifying_Fences",
               "mezType": "Knockback"
             },
@@ -279,7 +280,7 @@
               "duration": 15,
               "effectType": "MezResist",
               "stacking": 1,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Brute_Mu_Mastery.Electrifying_Fences",
               "mezType": "Knockup"
             },
@@ -291,7 +292,8 @@
               "duration": 15,
               "effectType": "Mez",
               "stacking": 1,
-              "toWho": "Target",
+              "buffable": true,
+              "toWho": "target",
               "powerFullName": "Epic.Brute_Mu_Mastery.Electrifying_Fences",
               "mezType": "Knockback"
             },
@@ -303,7 +305,8 @@
               "duration": 15,
               "effectType": "Mez",
               "stacking": 1,
-              "toWho": "Target",
+              "buffable": true,
+              "toWho": "target",
               "powerFullName": "Epic.Brute_Mu_Mastery.Electrifying_Fences",
               "mezType": "Knockup"
             },
@@ -315,8 +318,9 @@
               "duration": 2,
               "effectType": "Recovery",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Brute_Mu_Mastery.Electrifying_Fences"
             },
             {
@@ -328,7 +332,7 @@
               "effectType": "Rage",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Epic.Brute_Mu_Mastery.Electrifying_Fences"
             }
           ]
@@ -345,8 +349,9 @@
               "effectType": "Endurance",
               "ticks": 4,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Brute_Mu_Mastery.Electrifying_Fences"
             }
           ]
@@ -363,9 +368,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.Brute_Mu_Mastery.Electrifying_Fences",
               "requiresToHitCheck": true,
@@ -384,14 +390,27 @@
               "effectType": "Damage",
               "ticks": 8,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Brute_Mu_Mastery.Electrifying_Fences",
               "damageType": "Fire"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Immobilize",
+        "Range",
+        "Recharge",
+        "Endurance_Modification"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Brute_Mu_Mastery.Electrifying_Fences",
+      "archetypeOrder": "epicPool",
       "powerIndex": 1,
       "castTimeReal": 1.17,
       "toggleCost": 12.74,
@@ -432,16 +451,6 @@
       "aoeModifier": 2.5
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Range",
-        "Recharge",
-        "Endurance_Modification"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Damage",
@@ -454,8 +463,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Brute_Mu_Mastery.Ball_Lightning",
               "damageType": "Energy"
             }
@@ -471,8 +481,9 @@
               "probability": 1,
               "effectType": "Endurance",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Brute_Mu_Mastery.Ball_Lightning"
             },
             {
@@ -483,8 +494,9 @@
               "duration": 4,
               "effectType": "Recovery",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Brute_Mu_Mastery.Ball_Lightning"
             },
             {
@@ -496,7 +508,7 @@
               "effectType": "Rage",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Epic.Brute_Mu_Mastery.Ball_Lightning"
             }
           ]
@@ -511,8 +523,9 @@
               "probability": 1,
               "effectType": "Endurance",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Brute_Mu_Mastery.Ball_Lightning"
             }
           ]
@@ -529,9 +542,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.Brute_Mu_Mastery.Ball_Lightning",
               "requiresToHitCheck": true,
@@ -548,23 +562,35 @@
               },
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Brute_Mu_Mastery.Ball_Lightning",
               "damageType": "Fire"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Range",
+        "Recharge",
+        "Endurance_Modification"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Brute_Mu_Mastery.Ball_Lightning",
+      "archetypeOrder": "epicPool",
       "powerIndex": 2,
       "castTimeReal": 1.07,
       "toggleCost": 18.98,
+      "isEpic": true,
       "fullName": "Epic_Mu_Mastery_Ball_Lightning",
       "displayName": "Ball Lightning",
       "requires": {
         "powers": {
-          "Epic_Mu_Mastery_Mu_Lightning": true,
-          "Epic_Mu_Mastery_Electrifying_Fences": true
+          "Epic.Brute_Mu_Mastery.Ball_Lightning": true
         },
         "count": 1
       },
@@ -598,16 +624,6 @@
       "aoeModifier": 3.25
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Range",
-        "Recharge",
-        "Endurance_Modification"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Damage",
@@ -620,8 +636,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Brute_Mu_Mastery.Static_Discharge",
               "damageType": "Energy"
             }
@@ -637,8 +654,9 @@
               "probability": 1,
               "effectType": "Endurance",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Brute_Mu_Mastery.Static_Discharge"
             },
             {
@@ -649,8 +667,9 @@
               "duration": 4,
               "effectType": "Recovery",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Brute_Mu_Mastery.Static_Discharge"
             },
             {
@@ -659,7 +678,8 @@
               },
               "probability": 0.1,
               "effectType": "Endurance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Brute_Mu_Mastery.Static_Discharge"
             }
           ]
@@ -674,8 +694,9 @@
               "probability": 1,
               "effectType": "Endurance",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Brute_Mu_Mastery.Static_Discharge"
             }
           ]
@@ -692,9 +713,10 @@
               "duration": 13.33,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.Brute_Mu_Mastery.Static_Discharge",
               "requiresToHitCheck": true,
@@ -711,23 +733,35 @@
               },
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Brute_Mu_Mastery.Static_Discharge",
               "damageType": "Fire"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Range",
+        "Recharge",
+        "Endurance_Modification"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Brute_Mu_Mastery.Static_Discharge",
+      "archetypeOrder": "epicPool",
       "powerIndex": 3,
       "castTimeReal": 2.07,
       "toggleCost": 18.98,
+      "isEpic": true,
       "fullName": "Epic_Mu_Mastery_Static_Discharge",
       "displayName": "Static Discharge",
       "requires": {
         "powers": {
-          "Epic_Mu_Mastery_Mu_Lightning": true,
-          "Epic_Mu_Mastery_Electrifying_Fences": true
+          "Epic.Brute_Mu_Mastery.Static_Discharge": true
         },
         "count": 1
       },
@@ -762,17 +796,6 @@
       "aoeModifier": 2.37995839
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Heal",
-        "Hold",
-        "Recharge",
-        "Endurance_Modification"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Ones",
@@ -784,23 +807,33 @@
               "probability": 1,
               "duration": 240,
               "effectType": "EntCreate",
-              "toWho": "All",
+              "toWho": "all",
               "powerFullName": "Epic.Brute_Mu_Mastery.Summon_Striker"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Heal",
+        "Hold",
+        "Recharge",
+        "Endurance_Modification"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Brute_Mu_Mastery.Summon_Striker",
+      "archetypeOrder": "epicPool",
       "powerIndex": 4,
       "castTimeReal": 1.17,
       "toggleCost": 26,
+      "isEpic": true,
       "fullName": "Epic_Mu_Mastery_Summon_Striker",
       "displayName": "Summon Striker",
       "requires": {
         "powers": {
-          "Epic_Mu_Mastery_Mu_Lightning": true,
-          "Epic_Mu_Mastery_Electrifying_Fences": true,
-          "Epic_Mu_Mastery_Ball_Lightning": true,
-          "Epic_Mu_Mastery_Static_Discharge": true
+          "Epic.Brute_Mu_Mastery.Summon_Striker": true
         },
         "count": 2
       },

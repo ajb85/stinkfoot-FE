@@ -6,17 +6,6 @@
   "displayName": "Darkness Manipulation",
   "powers": [
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "ToHit_Debuff",
-        "Endurance_Discount",
-        "Immobilize",
-        "Range",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Damage",
@@ -31,8 +20,9 @@
               "effectType": "Damage",
               "ticks": 5,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Darkness_Manipulation.Penumbral_Grasp",
               "damageType": "Negative"
             }
@@ -50,11 +40,12 @@
               "duration": 17.8800011,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Blaster_Support.Darkness_Manipulation.Penumbral_Grasp",
-              "mezType": "Immobilization"
+              "mezType": "Immob"
             }
           ]
         },
@@ -70,11 +61,12 @@
               "duration": 2,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Blaster_Support.Darkness_Manipulation.Penumbral_Grasp",
-              "mezType": "Immobilization"
+              "mezType": "Immob"
             }
           ]
         },
@@ -91,7 +83,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Darkness_Manipulation.Penumbral_Grasp",
               "damageType": "Smashing"
             },
@@ -105,7 +97,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Darkness_Manipulation.Penumbral_Grasp",
               "damageType": "Lethal"
             },
@@ -119,7 +111,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Darkness_Manipulation.Penumbral_Grasp",
               "damageType": "Fire"
             },
@@ -133,7 +125,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Darkness_Manipulation.Penumbral_Grasp",
               "damageType": "Cold"
             },
@@ -147,7 +139,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Darkness_Manipulation.Penumbral_Grasp",
               "damageType": "Energy"
             },
@@ -161,7 +153,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Darkness_Manipulation.Penumbral_Grasp",
               "damageType": "Negative"
             },
@@ -175,7 +167,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Darkness_Manipulation.Penumbral_Grasp",
               "damageType": "Toxic"
             },
@@ -189,7 +181,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Darkness_Manipulation.Penumbral_Grasp",
               "damageType": "Psionic"
             }
@@ -206,13 +198,26 @@
               "duration": 10,
               "effectType": "ToHit",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Darkness_Manipulation.Penumbral_Grasp"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "ToHit_Debuff",
+        "Endurance_Discount",
+        "Immobilize",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Support.Darkness_Manipulation.Penumbral_Grasp",
+      "archetypeOrder": "secondary",
       "powerIndex": 0,
       "castTimeReal": 1.67,
       "toggleCost": 7.8,
@@ -254,15 +259,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "ToHit_Debuff",
-        "Endurance_Discount",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Damage",
@@ -275,8 +271,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Darkness_Manipulation.Smite",
               "damageType": "Smashing"
             },
@@ -288,8 +285,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Darkness_Manipulation.Smite",
               "damageType": "Negative"
             }
@@ -306,8 +304,9 @@
               "duration": 10,
               "effectType": "ToHit",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Darkness_Manipulation.Smite"
             }
           ]
@@ -325,7 +324,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Darkness_Manipulation.Smite",
               "damageType": "Smashing"
             },
@@ -339,7 +338,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Darkness_Manipulation.Smite",
               "damageType": "Lethal"
             },
@@ -353,7 +352,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Darkness_Manipulation.Smite",
               "damageType": "Fire"
             },
@@ -367,7 +366,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Darkness_Manipulation.Smite",
               "damageType": "Cold"
             },
@@ -381,7 +380,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Darkness_Manipulation.Smite",
               "damageType": "Energy"
             },
@@ -395,7 +394,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Darkness_Manipulation.Smite",
               "damageType": "Negative"
             },
@@ -409,7 +408,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Darkness_Manipulation.Smite",
               "damageType": "Toxic"
             },
@@ -423,13 +422,23 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Darkness_Manipulation.Smite",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "ToHit_Debuff",
+        "Endurance_Discount",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Support.Darkness_Manipulation.Smite",
+      "archetypeOrder": "secondary",
       "powerIndex": 1,
       "castTimeReal": 0.97,
       "toggleCost": 10.192,
@@ -471,14 +480,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Damage",
@@ -490,14 +491,24 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Darkness_Manipulation.Death_Shroud",
               "damageType": "Negative"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Support.Darkness_Manipulation.Death_Shroud",
+      "archetypeOrder": "secondary",
       "powerIndex": 2,
       "castTimeReal": 3.47,
       "toggleCost": 0.52,
@@ -538,15 +549,6 @@
       "powerType": "Toggle"
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "ToHit_Debuff",
-        "Endurance_Discount",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Damage",
@@ -561,8 +563,9 @@
               "effectType": "Damage",
               "ticks": 4,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Darkness_Manipulation.Shadow_Maul",
               "damageType": "Smashing"
             },
@@ -576,8 +579,9 @@
               "effectType": "Damage",
               "ticks": 4,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Darkness_Manipulation.Shadow_Maul",
               "damageType": "Negative"
             }
@@ -594,8 +598,9 @@
               "duration": 10,
               "effectType": "ToHit",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Darkness_Manipulation.Shadow_Maul"
             }
           ]
@@ -613,7 +618,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Darkness_Manipulation.Shadow_Maul",
               "damageType": "Smashing"
             },
@@ -627,7 +632,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Darkness_Manipulation.Shadow_Maul",
               "damageType": "Lethal"
             },
@@ -641,7 +646,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Darkness_Manipulation.Shadow_Maul",
               "damageType": "Fire"
             },
@@ -655,7 +660,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Darkness_Manipulation.Shadow_Maul",
               "damageType": "Cold"
             },
@@ -669,7 +674,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Darkness_Manipulation.Shadow_Maul",
               "damageType": "Energy"
             },
@@ -683,7 +688,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Darkness_Manipulation.Shadow_Maul",
               "damageType": "Negative"
             },
@@ -697,7 +702,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Darkness_Manipulation.Shadow_Maul",
               "damageType": "Toxic"
             },
@@ -711,13 +716,23 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Darkness_Manipulation.Shadow_Maul",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "ToHit_Debuff",
+        "Endurance_Discount",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Support.Darkness_Manipulation.Shadow_Maul",
+      "archetypeOrder": "secondary",
       "powerIndex": 3,
       "castTimeReal": 3.07,
       "toggleCost": 13.52,
@@ -762,15 +777,6 @@
       "aoeModifier": 1.24149275
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "ToHit_Buff",
-        "Damage",
-        "Endurance_Discount",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Damage",
@@ -782,8 +788,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Darkness_Manipulation.Soul_Drain",
               "damageType": "Negative"
             }
@@ -801,7 +808,8 @@
               "variableModified": true,
               "effectType": "ToHit",
               "stacking": 1,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Darkness_Manipulation.Soul_Drain"
             }
           ]
@@ -819,7 +827,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Darkness_Manipulation.Soul_Drain",
               "damageType": "Smashing"
             },
@@ -833,7 +841,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Darkness_Manipulation.Soul_Drain",
               "damageType": "Lethal"
             },
@@ -847,7 +855,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Darkness_Manipulation.Soul_Drain",
               "damageType": "Fire"
             },
@@ -861,7 +869,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Darkness_Manipulation.Soul_Drain",
               "damageType": "Cold"
             },
@@ -875,7 +883,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Darkness_Manipulation.Soul_Drain",
               "damageType": "Energy"
             },
@@ -889,7 +897,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Darkness_Manipulation.Soul_Drain",
               "damageType": "Negative"
             },
@@ -903,7 +911,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Darkness_Manipulation.Soul_Drain",
               "damageType": "Psionic"
             }
@@ -922,7 +930,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Darkness_Manipulation.Soul_Drain",
               "damageType": "Smashing"
             },
@@ -936,7 +944,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Darkness_Manipulation.Soul_Drain",
               "damageType": "Lethal"
             },
@@ -950,7 +958,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Darkness_Manipulation.Soul_Drain",
               "damageType": "Fire"
             },
@@ -964,7 +972,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Darkness_Manipulation.Soul_Drain",
               "damageType": "Cold"
             },
@@ -978,7 +986,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Darkness_Manipulation.Soul_Drain",
               "damageType": "Energy"
             },
@@ -992,7 +1000,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Darkness_Manipulation.Soul_Drain",
               "damageType": "Negative"
             },
@@ -1006,7 +1014,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Darkness_Manipulation.Soul_Drain",
               "damageType": "Toxic"
             },
@@ -1020,13 +1028,23 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Darkness_Manipulation.Soul_Drain",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "ToHit_Buff",
+        "Damage",
+        "Endurance_Discount",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Support.Darkness_Manipulation.Soul_Drain",
+      "archetypeOrder": "secondary",
       "powerIndex": 4,
       "castTimeReal": 2.37,
       "toggleCost": 15.6,
@@ -1072,18 +1090,6 @@
       "aoeModifier": 2.5
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "ToHit_Debuff",
-        "Endurance_Discount",
-        "Fear",
-        "Heal",
-        "Range",
-        "Recharge",
-        "Endurance_Modification"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Fear",
@@ -1096,11 +1102,12 @@
               "duration": 11.92,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Blaster_Support.Darkness_Manipulation.Touch_of_Fear",
-              "mezType": "Terrorize"
+              "mezType": "Terror"
             }
           ]
         },
@@ -1115,11 +1122,12 @@
               "duration": 2,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Blaster_Support.Darkness_Manipulation.Touch_of_Fear",
-              "mezType": "Terrorize"
+              "mezType": "Terror"
             },
             {
               "mag": {
@@ -1128,7 +1136,8 @@
               "probability": 1,
               "duration": 60,
               "effectType": "Regeneration",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Darkness_Manipulation.Touch_of_Fear"
             },
             {
@@ -1138,7 +1147,8 @@
               "probability": 1,
               "duration": 60,
               "effectType": "Recovery",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Darkness_Manipulation.Touch_of_Fear"
             }
           ]
@@ -1154,8 +1164,9 @@
               "duration": 20,
               "effectType": "ToHit",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Darkness_Manipulation.Touch_of_Fear"
             }
           ]
@@ -1173,7 +1184,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Darkness_Manipulation.Touch_of_Fear",
               "damageType": "Smashing"
             },
@@ -1187,7 +1198,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Darkness_Manipulation.Touch_of_Fear",
               "damageType": "Lethal"
             },
@@ -1201,7 +1212,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Darkness_Manipulation.Touch_of_Fear",
               "damageType": "Fire"
             },
@@ -1215,7 +1226,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Darkness_Manipulation.Touch_of_Fear",
               "damageType": "Cold"
             },
@@ -1229,7 +1240,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Darkness_Manipulation.Touch_of_Fear",
               "damageType": "Energy"
             },
@@ -1243,7 +1254,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Darkness_Manipulation.Touch_of_Fear",
               "damageType": "Negative"
             },
@@ -1257,7 +1268,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Darkness_Manipulation.Touch_of_Fear",
               "damageType": "Toxic"
             },
@@ -1271,13 +1282,26 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Darkness_Manipulation.Touch_of_Fear",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "ToHit_Debuff",
+        "Endurance_Discount",
+        "Fear",
+        "Heal",
+        "Range",
+        "Recharge",
+        "Endurance_Modification"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Support.Darkness_Manipulation.Touch_of_Fear",
+      "archetypeOrder": "secondary",
       "powerIndex": 5,
       "castTimeReal": 1.17,
       "toggleCost": 5.2,
@@ -1321,14 +1345,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Recharge",
-        "Endurance_Modification"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Damage",
@@ -1340,8 +1356,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Darkness_Manipulation.Dark_Consumption",
               "damageType": "Negative"
             }
@@ -1359,7 +1376,8 @@
               "effectType": "Endurance",
               "delayedTime": 0.25,
               "stacking": 1,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Darkness_Manipulation.Dark_Consumption"
             }
           ]
@@ -1377,7 +1395,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Darkness_Manipulation.Dark_Consumption",
               "damageType": "Smashing"
             },
@@ -1391,7 +1409,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Darkness_Manipulation.Dark_Consumption",
               "damageType": "Lethal"
             },
@@ -1405,7 +1423,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Darkness_Manipulation.Dark_Consumption",
               "damageType": "Fire"
             },
@@ -1419,7 +1437,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Darkness_Manipulation.Dark_Consumption",
               "damageType": "Cold"
             },
@@ -1433,7 +1451,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Darkness_Manipulation.Dark_Consumption",
               "damageType": "Energy"
             },
@@ -1447,7 +1465,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Darkness_Manipulation.Dark_Consumption",
               "damageType": "Negative"
             },
@@ -1461,7 +1479,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Darkness_Manipulation.Dark_Consumption",
               "damageType": "Toxic"
             },
@@ -1475,13 +1493,22 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Darkness_Manipulation.Dark_Consumption",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Recharge",
+        "Endurance_Modification"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Support.Darkness_Manipulation.Dark_Consumption",
+      "archetypeOrder": "secondary",
       "powerIndex": 6,
       "castTimeReal": 1.03,
       "toggleCost": 0.52,
@@ -1526,15 +1553,6 @@
       "aoeModifier": 2.2
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Endurance_Discount",
-        "Range",
-        "Recharge",
-        "Stun"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Stun",
@@ -1547,8 +1565,9 @@
               "duration": 9.536,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Blaster_Support.Darkness_Manipulation.Dark_Pit",
               "mezType": "Stun"
@@ -1566,8 +1585,9 @@
               "duration": 2,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Blaster_Support.Darkness_Manipulation.Dark_Pit",
               "mezType": "Stun"
@@ -1587,7 +1607,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Darkness_Manipulation.Dark_Pit",
               "damageType": "Smashing"
             },
@@ -1601,7 +1621,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Darkness_Manipulation.Dark_Pit",
               "damageType": "Lethal"
             },
@@ -1615,7 +1635,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Darkness_Manipulation.Dark_Pit",
               "damageType": "Fire"
             },
@@ -1629,7 +1649,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Darkness_Manipulation.Dark_Pit",
               "damageType": "Cold"
             },
@@ -1643,7 +1663,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Darkness_Manipulation.Dark_Pit",
               "damageType": "Energy"
             },
@@ -1657,7 +1677,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Darkness_Manipulation.Dark_Pit",
               "damageType": "Negative"
             },
@@ -1671,7 +1691,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Darkness_Manipulation.Dark_Pit",
               "damageType": "Toxic"
             },
@@ -1685,13 +1705,23 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Darkness_Manipulation.Dark_Pit",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Endurance_Discount",
+        "Range",
+        "Recharge",
+        "Stun"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Support.Darkness_Manipulation.Dark_Pit",
+      "archetypeOrder": "secondary",
       "powerIndex": 7,
       "castTimeReal": 1.07,
       "toggleCost": 13,
@@ -1729,16 +1759,6 @@
       "aoeModifier": 4
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "ToHit_Debuff",
-        "Endurance_Discount",
-        "Immobilize",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Damage",
@@ -1751,8 +1771,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Darkness_Manipulation.Midnight_Grasp",
               "damageType": "Negative"
             }
@@ -1770,11 +1791,12 @@
               "duration": 17.8800011,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Blaster_Support.Darkness_Manipulation.Midnight_Grasp",
-              "mezType": "Immobilization"
+              "mezType": "Immob"
             }
           ]
         },
@@ -1789,8 +1811,9 @@
               "duration": 20,
               "effectType": "ToHit",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Darkness_Manipulation.Midnight_Grasp"
             }
           ]
@@ -1808,7 +1831,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Darkness_Manipulation.Midnight_Grasp",
               "damageType": "Smashing"
             },
@@ -1822,7 +1845,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Darkness_Manipulation.Midnight_Grasp",
               "damageType": "Lethal"
             },
@@ -1836,7 +1859,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Darkness_Manipulation.Midnight_Grasp",
               "damageType": "Fire"
             },
@@ -1850,7 +1873,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Darkness_Manipulation.Midnight_Grasp",
               "damageType": "Cold"
             },
@@ -1864,7 +1887,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Darkness_Manipulation.Midnight_Grasp",
               "damageType": "Energy"
             },
@@ -1878,7 +1901,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Darkness_Manipulation.Midnight_Grasp",
               "damageType": "Negative"
             },
@@ -1892,7 +1915,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Darkness_Manipulation.Midnight_Grasp",
               "damageType": "Toxic"
             },
@@ -1906,13 +1929,24 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Darkness_Manipulation.Midnight_Grasp",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "ToHit_Debuff",
+        "Endurance_Discount",
+        "Immobilize",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Support.Darkness_Manipulation.Midnight_Grasp",
+      "archetypeOrder": "secondary",
       "powerIndex": 8,
       "castTimeReal": 2.07,
       "toggleCost": 11.96,

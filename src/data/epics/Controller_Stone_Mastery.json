@@ -6,16 +6,6 @@
   "displayName": "Stone Mastery",
   "powers": [
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Knockback",
-        "Range",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Damage",
@@ -28,8 +18,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Stone_Mastery.Hurl_Boulder",
               "damageType": "Smashing"
             }
@@ -46,14 +37,26 @@
               "probability": 0.5,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Stone_Mastery.Hurl_Boulder",
               "mezType": "Knockback"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Knockback",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Stone_Mastery.Hurl_Boulder",
+      "archetypeOrder": "epicPool",
       "powerIndex": 0,
       "castTimeReal": 2.5,
       "toggleCost": 11.7,
@@ -92,17 +95,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Knockback",
-        "Range",
-        "Recharge",
-        "Stun"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Damage",
@@ -115,8 +107,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Stone_Mastery.Fissure",
               "damageType": "Smashing"
             }
@@ -133,8 +126,9 @@
               "probability": 0.5,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Stone_Mastery.Fissure",
               "nearGround": true,
               "mezType": "Knockback"
@@ -153,8 +147,9 @@
               "duration": 9.536,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.Stone_Mastery.Fissure",
               "nearGround": true,
@@ -163,6 +158,18 @@
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Knockback",
+        "Range",
+        "Recharge",
+        "Stun"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Stone_Mastery.Fissure",
+      "archetypeOrder": "epicPool",
       "powerIndex": 1,
       "castTimeReal": 2.1,
       "toggleCost": 12.74,
@@ -204,15 +211,6 @@
       "aoeModifier": 3.25
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Hold",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Damage",
@@ -225,8 +223,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Stone_Mastery.Seismic_Smash",
               "damageType": "Smashing"
             }
@@ -244,8 +243,9 @@
               "duration": 9.536,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.Stone_Mastery.Seismic_Smash",
               "mezType": "Hold"
@@ -253,15 +253,25 @@
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Hold",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Stone_Mastery.Seismic_Smash",
+      "archetypeOrder": "epicPool",
       "powerIndex": 2,
       "castTimeReal": 1.5,
       "toggleCost": 18.512,
+      "isEpic": true,
       "fullName": "Epic_Stone_Mastery_Seismic_Smash",
       "displayName": "Seismic Smash",
       "requires": {
         "powers": {
-          "Epic_Stone_Mastery_Hurl_Boulder": true,
-          "Epic_Stone_Mastery_Fissure": true
+          "Epic.Stone_Mastery.Seismic_Smash": true
         },
         "count": 1
       },
@@ -295,13 +305,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Defense_Buff",
-        "Endurance_Discount",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Buff_Def",
@@ -314,7 +317,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Stone_Mastery.Stone_Armor",
               "damageType": "Smashing"
             },
@@ -326,7 +330,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Stone_Mastery.Stone_Armor",
               "damageType": "Lethal"
             },
@@ -337,7 +342,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Stone_Mastery.Stone_Armor",
               "damageType": "Cold"
             },
@@ -348,7 +354,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Stone_Mastery.Stone_Armor",
               "damageType": "Fire"
             },
@@ -359,7 +366,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Stone_Mastery.Stone_Armor",
               "damageType": "Psionic"
             },
@@ -370,7 +378,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Stone_Mastery.Stone_Armor",
               "damageType": "Energy"
             },
@@ -381,7 +390,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Stone_Mastery.Stone_Armor",
               "damageType": "Negative"
             }
@@ -397,7 +407,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Elusivity",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Stone_Mastery.Stone_Armor",
               "damageType": "Smashing"
             },
@@ -408,7 +419,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Elusivity",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Stone_Mastery.Stone_Armor",
               "damageType": "Lethal"
             },
@@ -419,7 +431,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Elusivity",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Stone_Mastery.Stone_Armor",
               "damageType": "Cold"
             },
@@ -430,7 +443,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Elusivity",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Stone_Mastery.Stone_Armor",
               "damageType": "Fire"
             },
@@ -441,7 +455,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Elusivity",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Stone_Mastery.Stone_Armor",
               "damageType": "Psionic"
             },
@@ -452,7 +467,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Elusivity",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Stone_Mastery.Stone_Armor",
               "damageType": "Energy"
             },
@@ -462,7 +478,8 @@
               },
               "probability": 1,
               "duration": 0.75,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Stone_Mastery.Stone_Armor"
             }
           ]
@@ -477,22 +494,31 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Stone_Mastery.Stone_Armor",
               "damageType": "Toxic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Defense_Buff",
+        "Endurance_Discount",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Stone_Mastery.Stone_Armor",
+      "archetypeOrder": "epicPool",
       "powerIndex": 3,
       "castTimeReal": 0.73,
       "toggleCost": 0.325,
+      "isEpic": true,
       "fullName": "Epic_Stone_Mastery_Rock_Armor",
       "displayName": "Rock Armor",
       "requires": {
         "powers": {
-          "Epic_Stone_Mastery_Hurl_Boulder": true,
-          "Epic_Stone_Mastery_Fissure": true
+          "Epic.Stone_Mastery.Stone_Armor": true
         },
         "count": 1
       },
@@ -523,14 +549,6 @@
       "powerType": "Toggle"
     },
     {
-      "allowedEnhancements": [
-        "Endurance_Discount",
-        "Heal",
-        "Recharge",
-        "Res_Damage"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "HealSelf",
@@ -544,7 +562,7 @@
               "variableModified": true,
               "effectType": "HitPoints",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Epic.Stone_Mastery.Earths_Embrace"
             },
             {
@@ -556,8 +574,9 @@
               "effectType": "Heal",
               "delayedTime": 1,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Epic.Stone_Mastery.Earths_Embrace"
             }
           ]
@@ -572,24 +591,32 @@
               "probability": 1,
               "duration": 120,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Stone_Mastery.Earths_Embrace",
               "damageType": "Toxic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Endurance_Discount",
+        "Heal",
+        "Recharge",
+        "Res_Damage"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Stone_Mastery.Earths_Embrace",
+      "archetypeOrder": "epicPool",
       "powerIndex": 4,
       "castTimeReal": 2.03,
       "toggleCost": 13,
+      "isEpic": true,
       "fullName": "Epic_Stone_Mastery_Earth's_Embrace",
       "displayName": "Earth's Embrace",
       "requires": {
         "powers": {
-          "Epic_Stone_Mastery_Hurl_Boulder": true,
-          "Epic_Stone_Mastery_Fissure": true,
-          "Epic_Stone_Mastery_Seismic_Smash": true,
-          "Epic_Stone_Mastery_Rock_Armor": true
+          "Epic.Stone_Mastery.Earths_Embrace": true
         },
         "count": 2
       },

@@ -6,16 +6,6 @@
   "displayName": "Soul Mastery",
   "powers": [
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "ToHit_Debuff",
-        "Endurance_Discount",
-        "Range",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Damage",
@@ -28,8 +18,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Stalker_Soul_Mastery.Dark_Blast",
               "damageType": "Negative"
             }
@@ -46,13 +37,25 @@
               "duration": 6,
               "effectType": "ToHit",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Stalker_Soul_Mastery.Dark_Blast"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "ToHit_Debuff",
+        "Endurance_Discount",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Stalker_Soul_Mastery.Dark_Blast",
+      "archetypeOrder": "epicPool",
       "powerIndex": 0,
       "castTimeReal": 1,
       "toggleCost": 6.5,
@@ -91,17 +94,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "ToHit_Debuff",
-        "Endurance_Discount",
-        "Interrupt",
-        "Range",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Damage",
@@ -114,8 +106,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Stalker_Soul_Mastery.Moonbeam",
               "damageType": "Negative"
             }
@@ -132,8 +125,9 @@
               "duration": 10,
               "effectType": "ToHit",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Stalker_Soul_Mastery.Moonbeam"
             }
           ]
@@ -149,12 +143,24 @@
               "effectType": "PowerRedirect",
               "stacking": 1,
               "specialCase": 43,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Stalker_Soul_Mastery.Moonbeam"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "ToHit_Debuff",
+        "Endurance_Discount",
+        "Interrupt",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Stalker_Soul_Mastery.Moonbeam",
+      "archetypeOrder": "epicPool",
       "powerIndex": 1,
       "castTimeReal": 7.33,
       "toggleCost": 17.94,
@@ -196,13 +202,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Defense_Buff",
-        "Endurance_Discount",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Buff_Def",
@@ -214,7 +213,8 @@
               "probability": 1,
               "duration": 15,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Stalker_Soul_Mastery.Shadow_Meld",
               "damageType": "Melee"
             },
@@ -225,7 +225,8 @@
               "probability": 1,
               "duration": 15,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Stalker_Soul_Mastery.Shadow_Meld",
               "damageType": "Ranged"
             },
@@ -236,7 +237,8 @@
               "probability": 1,
               "duration": 15,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Stalker_Soul_Mastery.Shadow_Meld",
               "damageType": "AoE"
             },
@@ -247,7 +249,8 @@
               "probability": 1,
               "duration": 15,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Stalker_Soul_Mastery.Shadow_Meld",
               "damageType": "Smashing"
             },
@@ -258,7 +261,8 @@
               "probability": 1,
               "duration": 15,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Stalker_Soul_Mastery.Shadow_Meld",
               "damageType": "Lethal"
             },
@@ -269,7 +273,8 @@
               "probability": 1,
               "duration": 15,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Stalker_Soul_Mastery.Shadow_Meld",
               "damageType": "Cold"
             },
@@ -280,7 +285,8 @@
               "probability": 1,
               "duration": 15,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Stalker_Soul_Mastery.Shadow_Meld",
               "damageType": "Fire"
             },
@@ -291,7 +297,8 @@
               "probability": 1,
               "duration": 15,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Stalker_Soul_Mastery.Shadow_Meld",
               "damageType": "Psionic"
             },
@@ -302,7 +309,8 @@
               "probability": 1,
               "duration": 15,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Stalker_Soul_Mastery.Shadow_Meld",
               "damageType": "Energy"
             },
@@ -313,7 +321,8 @@
               "probability": 1,
               "duration": 15,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Stalker_Soul_Mastery.Shadow_Meld",
               "damageType": "Negative"
             }
@@ -327,21 +336,29 @@
               "probability": 1,
               "duration": 15,
               "effectType": "Translucency",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Epic.Stalker_Soul_Mastery.Shadow_Meld"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Defense_Buff",
+        "Endurance_Discount",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Stalker_Soul_Mastery.Shadow_Meld",
+      "archetypeOrder": "epicPool",
       "powerIndex": 2,
       "castTimeReal": 3,
       "toggleCost": 5.2,
+      "isEpic": true,
       "fullName": "Epic_Soul_Mastery_Shadow_Meld",
       "displayName": "Shadow Meld",
       "requires": {
         "powers": {
-          "Epic_Soul_Mastery_Dark_Blast": true,
-          "Epic_Soul_Mastery_Moonbeam": true
+          "Epic.Stalker_Soul_Mastery.Shadow_Meld": true
         },
         "count": 1
       },
@@ -370,16 +387,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Hold",
-        "Range",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Immobilize",
@@ -392,8 +399,9 @@
               "duration": 11.92,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.Stalker_Soul_Mastery.Soul_Storm",
               "mezType": "Hold"
@@ -411,8 +419,9 @@
               "duration": 2,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.Stalker_Soul_Mastery.Soul_Storm",
               "mezType": "Hold"
@@ -432,23 +441,35 @@
               "effectType": "Damage",
               "ticks": 11,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Stalker_Soul_Mastery.Soul_Storm",
               "damageType": "Negative"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Hold",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Stalker_Soul_Mastery.Soul_Storm",
+      "archetypeOrder": "epicPool",
       "powerIndex": 3,
       "castTimeReal": 2.17,
       "toggleCost": 10.66,
+      "isEpic": true,
       "fullName": "Epic_Soul_Mastery_Soul_Storm",
       "displayName": "Soul Storm",
       "requires": {
         "powers": {
-          "Epic_Soul_Mastery_Dark_Blast": true,
-          "Epic_Soul_Mastery_Moonbeam": true
+          "Epic.Stalker_Soul_Mastery.Soul_Storm": true
         },
         "count": 1
       },
@@ -480,16 +501,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "ToHit_Debuff",
-        "Endurance_Discount",
-        "Range",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Ones",
@@ -501,23 +512,32 @@
               "probability": 1,
               "duration": 240,
               "effectType": "EntCreate",
-              "toWho": "All",
+              "toWho": "all",
               "powerFullName": "Epic.Stalker_Soul_Mastery.Summon_Widow"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "ToHit_Debuff",
+        "Endurance_Discount",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Stalker_Soul_Mastery.Summon_Widow",
+      "archetypeOrder": "epicPool",
       "powerIndex": 4,
       "castTimeReal": 3.2,
       "toggleCost": 26,
+      "isEpic": true,
       "fullName": "Epic_Soul_Mastery_Summon_Widow",
       "displayName": "Summon Widow",
       "requires": {
         "powers": {
-          "Epic_Soul_Mastery_Dark_Blast": true,
-          "Epic_Soul_Mastery_Moonbeam": true,
-          "Epic_Soul_Mastery_Shadow_Meld": true,
-          "Epic_Soul_Mastery_Soul_Storm": true
+          "Epic.Stalker_Soul_Mastery.Summon_Widow": true
         },
         "count": 2
       },

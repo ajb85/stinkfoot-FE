@@ -2,176 +2,88 @@
   "fullName": "IOSet.Achilles'_Heel",
   "enhancements": [
     {
-      "effects": [
-        {
-          "effectType": "DefenseDebuff",
-          "values": [
-            {
-              "etModifies": "Defense",
-              "mag": {
-                "pve": 0.424
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Achilles_Heel_A.Attuned_Achilles_Heel_A"
-            }
-          ]
-        }
-      ],
+      "type": "set",
+      "fullName": "Boosts.Attuned_Achilles_Heel_A.Attuned_Achilles_Heel_A",
+      "displayName": "Defense Debuff",
       "description": {
         "short": "+Defense Debuff",
         "long": "Enhances the defense debuff potential of a power by {Boost.Attrib.DefenseDebuff.Scale}%."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Achilles_Heel_A.Attuned_Achilles_Heel_A",
-      "setName": "Achilles'_Heel",
-      "displayName": "Defense Debuff"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Recharge",
-          "values": [
-            {
-              "etModifies": "RechargeTime",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Achilles_Heel_B.Attuned_Achilles_Heel_B"
+          "mag": {
+            "IO": {
+              "cap": 0.424
             }
-          ]
-        },
-        {
-          "effectType": "DefenseDebuff",
-          "values": [
-            {
-              "etModifies": "Defense",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Achilles_Heel_B.Attuned_Achilles_Heel_B"
-            }
-          ]
+          },
+          "stat": "Defense_Debuff",
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Achilles_Heel_B.Attuned_Achilles_Heel_B",
+      "displayName": "Defense Debuff/Recharge",
       "description": {
         "short": "+Defense Debuff, +Rech",
         "long": "Enhances the defense debuff potential of a power by {Boost.Attrib.DefenseDebuff.Scale}% and reduces the recharge time by {Boost.Attrib.Recharge.Scale}%."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Achilles_Heel_B.Attuned_Achilles_Heel_B",
-      "setName": "Achilles'_Heel",
-      "displayName": "Defense Debuff/Recharge"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Ones",
-          "values": [
-            {
-              "mag": {},
-              "procsPerMinute": 3.5,
-              "duration": 10,
-              "effectType": "Resistance",
-              "resistible": true,
-              "toWho": "all",
-              "powerFullName": "Boosts.Attuned_Achilles_Heel_C.Attuned_Achilles_Heel_C",
-              "damageType": "Smashing"
-            },
-            {
-              "mag": {},
-              "procsPerMinute": 3.5,
-              "duration": 10,
-              "effectType": "Resistance",
-              "resistible": true,
-              "toWho": "all",
-              "powerFullName": "Boosts.Attuned_Achilles_Heel_C.Attuned_Achilles_Heel_C",
-              "damageType": "Lethal"
-            },
-            {
-              "mag": {},
-              "procsPerMinute": 3.5,
-              "duration": 10,
-              "effectType": "Resistance",
-              "resistible": true,
-              "toWho": "all",
-              "powerFullName": "Boosts.Attuned_Achilles_Heel_C.Attuned_Achilles_Heel_C",
-              "damageType": "Fire"
-            },
-            {
-              "mag": {},
-              "procsPerMinute": 3.5,
-              "duration": 10,
-              "effectType": "Resistance",
-              "resistible": true,
-              "toWho": "all",
-              "powerFullName": "Boosts.Attuned_Achilles_Heel_C.Attuned_Achilles_Heel_C",
-              "damageType": "Cold"
-            },
-            {
-              "mag": {},
-              "procsPerMinute": 3.5,
-              "duration": 10,
-              "effectType": "Resistance",
-              "resistible": true,
-              "toWho": "all",
-              "powerFullName": "Boosts.Attuned_Achilles_Heel_C.Attuned_Achilles_Heel_C",
-              "damageType": "Energy"
-            },
-            {
-              "mag": {},
-              "procsPerMinute": 3.5,
-              "duration": 10,
-              "effectType": "Resistance",
-              "resistible": true,
-              "toWho": "all",
-              "powerFullName": "Boosts.Attuned_Achilles_Heel_C.Attuned_Achilles_Heel_C",
-              "damageType": "Negative"
-            },
-            {
-              "mag": {},
-              "procsPerMinute": 3.5,
-              "duration": 10,
-              "effectType": "Resistance",
-              "resistible": true,
-              "toWho": "all",
-              "powerFullName": "Boosts.Attuned_Achilles_Heel_C.Attuned_Achilles_Heel_C",
-              "damageType": "Toxic"
-            },
-            {
-              "mag": {},
-              "procsPerMinute": 3.5,
-              "duration": 10,
-              "effectType": "Resistance",
-              "resistible": true,
-              "toWho": "all",
-              "powerFullName": "Boosts.Attuned_Achilles_Heel_C.Attuned_Achilles_Heel_C",
-              "damageType": "Psionic"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
+          },
+          "stat": "Defense_Debuff",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Recharge",
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Achilles_Heel_C.Attuned_Achilles_Heel_C",
+      "displayName": "Chance for Resistance Debuff",
       "description": {
         "short": "-RES (All)",
         "long": "Gives a chance to reduce your foes damage resistance by 20%.  This effect will trigger roughly 3.5 times per minute."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Achilles_Heel_C.Attuned_Achilles_Heel_C",
-      "setName": "Achilles'_Heel",
-      "displayName": "Chance for Resistance Debuff"
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": -0.2
+            }
+          },
+          "stat": "Chance for Resistance Debuff",
+          "procsPerMinute": 3.5,
+          "damageType": [
+            "Smashing",
+            "Lethal",
+            "Fire",
+            "Cold",
+            "Energy",
+            "Negative",
+            "Toxic",
+            "Psionic"
+          ],
+          "resistible": true,
+          "toWho": "all"
+        }
+      ]
     }
   ],
   "levels": {

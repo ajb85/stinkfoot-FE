@@ -2,139 +2,74 @@
   "fullName": "IOSet.Springfoot",
   "enhancements": [
     {
-      "effects": [
-        {
-          "effectType": "Jump",
-          "values": [
-            {
-              "etModifies": "SpeedJumping",
-              "mag": {
-                "pve": 0.424
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Springfoot_A.Attuned_Springfoot_A"
-            }
-          ]
-        },
-        {
-          "effectType": "Boosts_33",
-          "values": [
-            {
-              "etModifies": "JumpHeight",
-              "mag": {
-                "pve": 0.424
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Springfoot_A.Attuned_Springfoot_A"
-            }
-          ]
-        }
-      ],
+      "type": "set",
+      "fullName": "Boosts.Attuned_Springfoot_A.Attuned_Springfoot_A",
+      "displayName": "Jump",
       "description": {
         "short": "+Jump",
         "long": "Enhances the jumping ability of a power by {Boost.Attrib.Jump.Scale}%."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Springfoot_A.Attuned_Springfoot_A",
-      "setName": "Springfoot",
-      "displayName": "Jump"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Endurance",
-          "values": [
-            {
-              "etModifies": "EnduranceDiscount",
-              "mag": {
-                "pve": 0.424
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Springfoot_B.Attuned_Springfoot_B"
+          "mag": {
+            "IO": {
+              "cap": 0.424
             }
-          ]
+          },
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Springfoot_B.Attuned_Springfoot_B",
+      "displayName": "Endurance",
       "description": {
         "short": "-End Cost",
         "long": "Reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Springfoot_B.Attuned_Springfoot_B",
-      "setName": "Springfoot",
-      "displayName": "Endurance"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Endurance",
-          "values": [
-            {
-              "etModifies": "EnduranceDiscount",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Springfoot_C.Attuned_Springfoot_C"
+          "mag": {
+            "IO": {
+              "cap": 0.424
             }
-          ]
-        },
-        {
-          "effectType": "Jump",
-          "values": [
-            {
-              "etModifies": "SpeedJumping",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Springfoot_C.Attuned_Springfoot_C"
-            }
-          ]
-        },
-        {
-          "effectType": "Boosts_33",
-          "values": [
-            {
-              "etModifies": "JumpHeight",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Springfoot_C.Attuned_Springfoot_C"
-            }
-          ]
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Springfoot_C.Attuned_Springfoot_C",
+      "displayName": "Endurance/Jump",
       "description": {
         "short": "+Jump, -End Cost",
         "long": "Enhances the jumping ability of a power by {Boost.Attrib.Jump.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Springfoot_C.Attuned_Springfoot_C",
-      "setName": "Springfoot",
-      "displayName": "Endurance/Jump"
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "toWho": "self"
+        }
+      ]
     }
   ],
   "levels": {

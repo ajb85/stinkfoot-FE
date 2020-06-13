@@ -2,260 +2,179 @@
   "fullName": "IOSet.Gaussian's_Synchronized_Fire-Control",
   "enhancements": [
     {
-      "effects": [
-        {
-          "effectType": "ToHitBuff",
-          "values": [
-            {
-              "etModifies": "ToHit",
-              "mag": {
-                "pve": 0.255
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Gaussians_Synchronized_FireControl_A.Attuned_Gaussians_Synchronized_FireControl_A"
-            }
-          ]
-        }
-      ],
+      "type": "set",
+      "fullName": "Boosts.Attuned_Gaussians_Synchronized_FireControl_A.Attuned_Gaussians_Synchronized_FireControl_A",
+      "displayName": "To Hit Buff",
       "description": {
         "short": "+To Hit Buff",
         "long": "Enhances the to hit buff potential of a power by {Boost.Attrib.ToHitBuff.Scale}%."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Gaussians_Synchronized_FireControl_A.Attuned_Gaussians_Synchronized_FireControl_A",
-      "setName": "Gaussian's_Synchronized_Fire-Control",
-      "displayName": "To Hit Buff"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Recharge",
-          "values": [
-            {
-              "etModifies": "RechargeTime",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Gaussians_Synchronized_FireControl_B.Attuned_Gaussians_Synchronized_FireControl_B"
+          "mag": {
+            "IO": {
+              "cap": 0.255
             }
-          ]
-        },
-        {
-          "effectType": "ToHitBuff",
-          "values": [
-            {
-              "etModifies": "ToHit",
-              "mag": {
-                "pve": 0.159375
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Gaussians_Synchronized_FireControl_B.Attuned_Gaussians_Synchronized_FireControl_B"
-            }
-          ]
+          },
+          "stat": "ToHit_Buff",
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Gaussians_Synchronized_FireControl_B.Attuned_Gaussians_Synchronized_FireControl_B",
+      "displayName": "To Hit Buff/Recharge",
       "description": {
         "short": "+To Hit Buff, +Rech",
         "long": "Enhances the to hit buff potential of a power by {Boost.Attrib.ToHitBuff.Scale}% and reduces the recharge time by {Boost.Attrib.Recharge.Scale}%."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Gaussians_Synchronized_FireControl_B.Attuned_Gaussians_Synchronized_FireControl_B",
-      "setName": "Gaussian's_Synchronized_Fire-Control",
-      "displayName": "To Hit Buff/Recharge"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Recharge",
-          "values": [
-            {
-              "etModifies": "RechargeTime",
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Gaussians_Synchronized_FireControl_C.Attuned_Gaussians_Synchronized_FireControl_C"
+          "mag": {
+            "IO": {
+              "cap": 0.159375
             }
-          ]
+          },
+          "stat": "ToHit_Buff",
+          "toWho": "self"
         },
         {
-          "effectType": "Endurance",
-          "values": [
-            {
-              "etModifies": "EnduranceDiscount",
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Gaussians_Synchronized_FireControl_C.Attuned_Gaussians_Synchronized_FireControl_C"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
-        },
-        {
-          "effectType": "ToHitBuff",
-          "values": [
-            {
-              "etModifies": "ToHit",
-              "mag": {
-                "pve": 0.1275
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Gaussians_Synchronized_FireControl_C.Attuned_Gaussians_Synchronized_FireControl_C"
-            }
-          ]
+          },
+          "stat": "Recharge",
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Gaussians_Synchronized_FireControl_C.Attuned_Gaussians_Synchronized_FireControl_C",
+      "displayName": "To Hit Buff/Recharge/Endurance Reduction",
       "description": {
         "short": "+To Hit Buff, +Rech, +End",
         "long": "Enhances the to hit buff potential of a power by {Boost.Attrib.ToHitBuff.Scale}%, reduces the endurance cost by {Boost.Attrib.Endurance.Scale}% and the recharge time of a power by {Boost.Attrib.Recharge.Scale}%."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Gaussians_Synchronized_FireControl_C.Attuned_Gaussians_Synchronized_FireControl_C",
-      "setName": "Gaussian's_Synchronized_Fire-Control",
-      "displayName": "To Hit Buff/Recharge/Endurance Reduction"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Recharge",
-          "values": [
-            {
-              "etModifies": "RechargeTime",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Gaussians_Synchronized_FireControl_D.Attuned_Gaussians_Synchronized_FireControl_D"
+          "mag": {
+            "IO": {
+              "cap": 0.1275
             }
-          ]
+          },
+          "stat": "ToHit_Buff",
+          "toWho": "self"
         },
         {
-          "effectType": "Endurance",
-          "values": [
-            {
-              "etModifies": "EnduranceDiscount",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Gaussians_Synchronized_FireControl_D.Attuned_Gaussians_Synchronized_FireControl_D"
+          "mag": {
+            "IO": {
+              "cap": 0.212
             }
-          ]
+          },
+          "stat": "Recharge",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.212
+            }
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Gaussians_Synchronized_FireControl_D.Attuned_Gaussians_Synchronized_FireControl_D",
+      "displayName": "Recharge/Endurance Reduction",
       "description": {
         "short": "+Rech, +End",
         "long": "Reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}% and the endurance cost by {Boost.Attrib.Endurance.Scale}%."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Gaussians_Synchronized_FireControl_D.Attuned_Gaussians_Synchronized_FireControl_D",
-      "setName": "Gaussian's_Synchronized_Fire-Control",
-      "displayName": " Recharge/Endurance Reduction"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "ToHitBuff",
-          "values": [
-            {
-              "etModifies": "ToHit",
-              "mag": {
-                "pve": 0.159375
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Gaussians_Synchronized_FireControl_E.Attuned_Gaussians_Synchronized_FireControl_E"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
+          },
+          "stat": "Recharge",
+          "toWho": "self"
         },
         {
-          "effectType": "Endurance",
-          "values": [
-            {
-              "etModifies": "EnduranceDiscount",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Gaussians_Synchronized_FireControl_E.Attuned_Gaussians_Synchronized_FireControl_E"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Gaussians_Synchronized_FireControl_E.Attuned_Gaussians_Synchronized_FireControl_E",
+      "displayName": "To Hit Buff/Endurance Reduction",
       "description": {
         "short": "+To Hit Buff, +End",
         "long": "Enhances the to hit buff potential of a power by {Boost.Attrib.ToHitBuff.Scale}% and reduces the endurance cost by {Boost.Attrib.Endurance.Scale}%."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Gaussians_Synchronized_FireControl_E.Attuned_Gaussians_Synchronized_FireControl_E",
-      "setName": "Gaussian's_Synchronized_Fire-Control",
-      "displayName": " To Hit Buff/Endurance Reduction"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Boost",
-          "values": [
-            {
-              "mag": {
-                "pve": 1
-              },
-              "procsPerMinute": 1,
-              "cancelOnMiss": true,
-              "duration": 10,
-              "effectType": "GrantPower",
-              "ticks": 1,
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Gaussians_Synchronized_FireControl_F.Attuned_Gaussians_Synchronized_FireControl_F"
+          "mag": {
+            "IO": {
+              "cap": 0.159375
             }
-          ]
+          },
+          "stat": "ToHit_Buff",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Gaussians_Synchronized_FireControl_F.Attuned_Gaussians_Synchronized_FireControl_F",
+      "displayName": "Chance for Build Up",
       "description": {
         "short": "Chance for Buildup",
         "long": "UNIQUE -- No more than 1 enhancement of this type may be slotted by a character.  Gives a chance to have a \"\"Build Up\"\" power affect the caster.  This effect will trigger roughly 1 time per minute."
       },
-      "isUnique": true,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Gaussians_Synchronized_FireControl_F.Attuned_Gaussians_Synchronized_FireControl_F",
-      "setName": "Gaussian's_Synchronized_Fire-Control",
-      "displayName": " Chance for Build Up",
-      "hasGrantPowerEffect": true
+      "hasGrantPowerEffect": true,
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 1
+            }
+          },
+          "stat": "Chance for Build Up",
+          "procsPerMinute": 1,
+          "cancelOnMiss": true,
+          "ticks": 1,
+          "toWho": "self"
+        }
+      ]
     }
   ],
   "levels": {

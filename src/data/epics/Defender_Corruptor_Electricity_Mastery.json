@@ -6,17 +6,6 @@
   "displayName": "Electricity Mastery",
   "powers": [
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Immobilize",
-        "Range",
-        "Recharge",
-        "Endurance_Modification"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Damage",
@@ -31,8 +20,9 @@
               "effectType": "Damage",
               "ticks": 5,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Electricity_Mastery.Electric_Fence",
               "damageType": "Energy"
             }
@@ -50,11 +40,12 @@
               "duration": 17.8800011,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.Electricity_Mastery.Electric_Fence",
-              "mezType": "Immobilization"
+              "mezType": "Immob"
             }
           ]
         },
@@ -71,8 +62,9 @@
               "effectType": "Endurance",
               "ticks": 4,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Electricity_Mastery.Electric_Fence"
             }
           ]
@@ -88,7 +80,7 @@
               "duration": 15,
               "effectType": "MezResist",
               "stacking": 1,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Electricity_Mastery.Electric_Fence",
               "mezType": "Knockback"
             },
@@ -100,7 +92,7 @@
               "duration": 15,
               "effectType": "MezResist",
               "stacking": 1,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Electricity_Mastery.Electric_Fence",
               "mezType": "Knockup"
             },
@@ -112,7 +104,8 @@
               "duration": 15,
               "effectType": "Mez",
               "stacking": 1,
-              "toWho": "Target",
+              "buffable": true,
+              "toWho": "target",
               "powerFullName": "Epic.Electricity_Mastery.Electric_Fence",
               "mezType": "Knockback"
             },
@@ -124,7 +117,8 @@
               "duration": 15,
               "effectType": "Mez",
               "stacking": 1,
-              "toWho": "Target",
+              "buffable": true,
+              "toWho": "target",
               "powerFullName": "Epic.Electricity_Mastery.Electric_Fence",
               "mezType": "Knockup"
             },
@@ -136,13 +130,26 @@
               "duration": 2,
               "effectType": "Recovery",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Electricity_Mastery.Electric_Fence"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Immobilize",
+        "Range",
+        "Recharge",
+        "Endurance_Modification"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Electricity_Mastery.Electric_Fence",
+      "archetypeOrder": "epicPool",
       "powerIndex": 0,
       "castTimeReal": 1.67,
       "toggleCost": 9.75,
@@ -181,16 +188,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Knockback",
-        "Recharge",
-        "Stun"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Damage",
@@ -203,8 +200,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Electricity_Mastery.Thunder_Strike",
               "damageType": "Smashing"
             },
@@ -216,8 +214,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Electricity_Mastery.Thunder_Strike",
               "damageType": "Energy"
             }
@@ -234,8 +233,9 @@
               "duration": 5.96,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.Electricity_Mastery.Thunder_Strike",
               "mezType": "Stun"
@@ -253,8 +253,9 @@
               "duration": 2,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.Electricity_Mastery.Thunder_Strike",
               "mezType": "Stun"
@@ -267,8 +268,9 @@
               "duration": 4,
               "effectType": "Recovery",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Electricity_Mastery.Thunder_Strike"
             }
           ]
@@ -284,14 +286,26 @@
               "probability": 1,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Electricity_Mastery.Thunder_Strike",
               "mezType": "Knockback"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Knockback",
+        "Recharge",
+        "Stun"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Electricity_Mastery.Thunder_Strike",
+      "archetypeOrder": "epicPool",
       "powerIndex": 1,
       "castTimeReal": 3.3,
       "toggleCost": 23.14,
@@ -332,13 +346,6 @@
       "aoeModifier": 2.8
     },
     {
-      "allowedEnhancements": [
-        "Endurance_Discount",
-        "Recharge",
-        "Res_Damage"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Res_Dmg",
@@ -351,7 +358,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Electricity_Mastery.Charged_Armor",
               "damageType": "Smashing"
             },
@@ -363,7 +371,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Electricity_Mastery.Charged_Armor",
               "damageType": "Lethal"
             },
@@ -375,7 +384,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Electricity_Mastery.Charged_Armor",
               "damageType": "Energy"
             },
@@ -386,7 +396,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Electricity_Mastery.Charged_Armor",
               "damageType": "Fire"
             },
@@ -397,7 +408,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Electricity_Mastery.Charged_Armor",
               "damageType": "Cold"
             },
@@ -408,7 +420,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Electricity_Mastery.Charged_Armor",
               "damageType": "Negative"
             },
@@ -419,7 +432,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Electricity_Mastery.Charged_Armor",
               "damageType": "Toxic"
             },
@@ -430,13 +444,22 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Electricity_Mastery.Charged_Armor",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Endurance_Discount",
+        "Recharge",
+        "Res_Damage"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Electricity_Mastery.Charged_Armor",
+      "archetypeOrder": "epicPool",
       "powerIndex": 2,
       "castTimeReal": 0.67,
       "toggleCost": 0.325,
@@ -444,8 +467,7 @@
       "displayName": "Charged Armor",
       "requires": {
         "powers": {
-          "epic.electricity_mastery.electric_fence": true,
-          "epic.electricity_mastery.thunder_strike": true
+          "Epic.Electricity_Mastery.Charged_Armor": true
         },
         "count": 1
       },
@@ -476,17 +498,6 @@
       "powerType": "Toggle"
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Hold",
-        "Range",
-        "Recharge",
-        "Endurance_Modification"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Immobilize",
@@ -499,8 +510,9 @@
               "duration": 14.3040009,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.Electricity_Mastery.Shocking_Bolt",
               "mezType": "Hold"
@@ -520,8 +532,9 @@
               "effectType": "Damage",
               "ticks": 5,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Electricity_Mastery.Shocking_Bolt",
               "damageType": "Energy"
             }
@@ -538,8 +551,9 @@
               "duration": 2,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.Electricity_Mastery.Shocking_Bolt",
               "mezType": "Hold"
@@ -552,7 +566,8 @@
               "variableModified": true,
               "effectType": "Endurance",
               "stacking": 1,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Electricity_Mastery.Shocking_Bolt"
             }
           ]
@@ -570,22 +585,35 @@
               "effectType": "Endurance",
               "ticks": 5,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Electricity_Mastery.Shocking_Bolt"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Hold",
+        "Range",
+        "Recharge",
+        "Endurance_Modification"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Electricity_Mastery.Shocking_Bolt",
+      "archetypeOrder": "epicPool",
       "powerIndex": 3,
       "castTimeReal": 2,
       "toggleCost": 10.66,
+      "isEpic": true,
       "fullName": "Epic_Electricity_Mastery_Shocking_Bolt",
       "displayName": "Shocking Bolt",
       "requires": {
         "powers": {
-          "Epic_Electricity_Mastery_Electric_Fence": true,
-          "Epic_Electricity_Mastery_Thunder_Strike": true
+          "Epic.Electricity_Mastery.Shocking_Bolt": true
         },
         "count": 1
       },
@@ -619,13 +647,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Endurance_Discount",
-        "Recharge",
-        "Endurance_Modification"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "EndDrain",
@@ -638,8 +659,9 @@
               "probability": 1,
               "effectType": "Endurance",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Electricity_Mastery.Power_Sink"
             }
           ]
@@ -655,8 +677,9 @@
               "duration": 4,
               "effectType": "Recovery",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Electricity_Mastery.Power_Sink"
             },
             {
@@ -668,23 +691,30 @@
               "effectType": "Endurance",
               "delayedTime": 0.25,
               "stacking": 1,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Electricity_Mastery.Power_Sink"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Endurance_Discount",
+        "Recharge",
+        "Endurance_Modification"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Electricity_Mastery.Power_Sink",
+      "archetypeOrder": "epicPool",
       "powerIndex": 4,
       "castTimeReal": 3.828,
       "toggleCost": 16.25,
+      "isEpic": true,
       "fullName": "Epic_Electricity_Mastery_Power_Sink",
       "displayName": "Power Sink",
       "requires": {
         "powers": {
-          "Epic_Electricity_Mastery_Electric_Fence": true,
-          "Epic_Electricity_Mastery_Thunder_Strike": true,
-          "Epic_Electricity_Mastery_Charged_Armor": true,
-          "Epic_Electricity_Mastery_Shocking_Bolt": true
+          "Epic.Electricity_Mastery.Power_Sink": true
         },
         "count": 2
       },

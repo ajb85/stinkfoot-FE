@@ -2,142 +2,85 @@
   "fullName": "IOSet.Annoyance",
   "enhancements": [
     {
-      "effects": [
-        {
-          "effectType": "Taunt",
-          "values": [
-            {
-              "etModifies": "Mez",
-              "mag": {
-                "pve": 0.424
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Annoyance_A.Attuned_Annoyance_A",
-              "mezType": "Taunt"
-            }
-          ]
-        }
-      ],
+      "type": "set",
+      "fullName": "Boosts.Attuned_Annoyance_A.Attuned_Annoyance_A",
+      "displayName": "Taunt",
       "description": {
         "short": "+Taunt",
         "long": "Enhances the taunt duration of a power by {Boost.Attrib.Taunt.Scale}%."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Annoyance_A.Attuned_Annoyance_A",
-      "setName": "Annoyance",
-      "displayName": "Taunt"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Recharge",
-          "values": [
-            {
-              "etModifies": "RechargeTime",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Annoyance_B.Attuned_Annoyance_B"
+          "mag": {
+            "IO": {
+              "cap": 0.424
             }
-          ]
-        },
-        {
-          "effectType": "Taunt",
-          "values": [
-            {
-              "etModifies": "Mez",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Annoyance_B.Attuned_Annoyance_B",
-              "mezType": "Taunt"
-            }
-          ]
+          },
+          "mezType": 11,
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Annoyance_B.Attuned_Annoyance_B",
+      "displayName": "Taunt/Recharge",
       "description": {
         "short": "+Taunt, +Rech",
         "long": "Enhances the taunt duration of a power by {Boost.Attrib.Taunt.Scale}% and reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}%."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Annoyance_B.Attuned_Annoyance_B",
-      "setName": "Annoyance",
-      "displayName": "Taunt/Recharge"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Recharge",
-          "values": [
-            {
-              "etModifies": "RechargeTime",
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Annoyance_C.Attuned_Annoyance_C"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
+          },
+          "stat": "Recharge",
+          "toWho": "self"
         },
         {
-          "effectType": "Taunt",
-          "values": [
-            {
-              "etModifies": "Mez",
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Annoyance_C.Attuned_Annoyance_C",
-              "mezType": "Taunt"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
-        },
-        {
-          "effectType": "Range",
-          "values": [
-            {
-              "etModifies": "Range",
-              "mag": {
-                "pve": 0.1275
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Annoyance_C.Attuned_Annoyance_C"
-            }
-          ]
+          },
+          "mezType": 11,
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Annoyance_C.Attuned_Annoyance_C",
+      "displayName": "Taunt/Recharge/Range",
       "description": {
         "short": "+Taunt, +Rech, +Range",
         "long": "Enhances the taunt duration of a power by {Boost.Attrib.Taunt.Scale}%, the range by {Boost.Attrib.Range.Scale}% and reduces the recharge time by {Boost.Attrib.Recharge.Scale}%."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Annoyance_C.Attuned_Annoyance_C",
-      "setName": "Annoyance",
-      "displayName": "Taunt/Recharge/Range"
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.212
+            }
+          },
+          "stat": "Recharge",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.212
+            }
+          },
+          "mezType": 11,
+          "toWho": "self"
+        }
+      ]
     }
   ],
   "levels": {

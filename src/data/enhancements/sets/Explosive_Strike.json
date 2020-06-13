@@ -2,259 +2,101 @@
   "fullName": "IOSet.Explosive_Strike",
   "enhancements": [
     {
-      "effects": [
-        {
-          "effectType": "Knockback",
-          "values": [
-            {
-              "etModifies": "Mez",
-              "mag": {
-                "pve": 0.4775
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Explosive_Strike_A.Attuned_Explosive_Strike_A",
-              "mezType": "Knockback"
-            }
-          ]
-        },
-        {
-          "effectType": "Boosts_60",
-          "values": [
-            {
-              "etModifies": "Mez",
-              "mag": {
-                "pve": 0.4775
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Explosive_Strike_A.Attuned_Explosive_Strike_A",
-              "mezType": "Knockup"
-            }
-          ]
-        },
-        {
-          "effectType": "Damage",
-          "values": [
-            {
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Explosive_Strike_A.Attuned_Explosive_Strike_A",
-              "damageType": "Smashing"
-            }
-          ]
-        },
-        {
-          "effectType": "Boosts_33",
-          "values": [
-            {
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Explosive_Strike_A.Attuned_Explosive_Strike_A",
-              "damageType": "Lethal"
-            },
-            {
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Explosive_Strike_A.Attuned_Explosive_Strike_A",
-              "damageType": "Fire"
-            },
-            {
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Explosive_Strike_A.Attuned_Explosive_Strike_A",
-              "damageType": "Cold"
-            },
-            {
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Explosive_Strike_A.Attuned_Explosive_Strike_A",
-              "damageType": "Energy"
-            },
-            {
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Explosive_Strike_A.Attuned_Explosive_Strike_A",
-              "damageType": "Negative"
-            },
-            {
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Explosive_Strike_A.Attuned_Explosive_Strike_A",
-              "damageType": "Toxic"
-            },
-            {
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Explosive_Strike_A.Attuned_Explosive_Strike_A",
-              "damageType": "Psionic"
-            }
-          ]
-        }
-      ],
+      "type": "set",
+      "fullName": "Boosts.Attuned_Explosive_Strike_A.Attuned_Explosive_Strike_A",
+      "displayName": "Knockback/Damage",
       "description": {
         "short": "+Knockback, +DMG",
         "long": "Enhances the Knockback potential of a power by {Boost.Attrib.Knockback.Scale}% and the damage by {Boost.Attrib.Damage.Scale}%."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Explosive_Strike_A.Attuned_Explosive_Strike_A",
-      "setName": "Explosive_Strike",
-      "displayName": "Knockback/Damage"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Accuracy",
-          "values": [
-            {
-              "etModifies": "Accuracy",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Explosive_Strike_B.Attuned_Explosive_Strike_B"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
+          },
+          "stat": "Damage",
+          "damageType": [
+            "Smashing",
+            "Lethal",
+            "Fire",
+            "Cold",
+            "Energy",
+            "Negative",
+            "Toxic",
+            "Psionic"
+          ],
+          "toWho": "self"
         },
         {
-          "effectType": "Knockback",
-          "values": [
-            {
-              "etModifies": "Mez",
-              "mag": {
-                "pve": 0.4775
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Explosive_Strike_B.Attuned_Explosive_Strike_B",
-              "mezType": "Knockback"
+          "mag": {
+            "IO": {
+              "cap": 0.4775
             }
-          ]
-        },
-        {
-          "effectType": "Boosts_60",
-          "values": [
-            {
-              "etModifies": "Mez",
-              "mag": {
-                "pve": 0.4775
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Explosive_Strike_B.Attuned_Explosive_Strike_B",
-              "mezType": "Knockup"
-            }
-          ]
+          },
+          "mezType": 4,
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Explosive_Strike_B.Attuned_Explosive_Strike_B",
+      "displayName": "Knockback/Accuracy",
       "description": {
         "short": "+Knockback, +ACC",
         "long": "Enhances the Knockback potential of a power by {Boost.Attrib.Knockback.Scale}% and the accuracy by {Boost.Attrib.Accuracy.Scale}%."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Explosive_Strike_B.Attuned_Explosive_Strike_B",
-      "setName": "Explosive_Strike",
-      "displayName": "Knockback/Accuracy"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Damage",
-          "values": [
-            {
-              "mag": {
-                "pve": 71.7501
-              },
-              "procsPerMinute": 3.5,
-              "cancelOnMiss": true,
-              "effectType": "Damage",
-              "stacking": 1,
-              "resistible": true,
-              "toWho": "all",
-              "powerFullName": "Boosts.Attuned_Explosive_Strike_C.Attuned_Explosive_Strike_C",
-              "damageType": "Smashing"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
+          },
+          "stat": "Accuracy",
+          "toWho": "self"
         },
         {
-          "effectType": "TempDamage",
-          "values": [
-            {
-              "mag": {
-                "pvp": 71.7501
-              },
-              "cancelOnMiss": true,
-              "effectType": "Damage",
-              "stacking": 1,
-              "toWho": "all",
-              "powerFullName": "Boosts.Attuned_Explosive_Strike_C.Attuned_Explosive_Strike_C",
-              "damageType": "Smashing"
+          "mag": {
+            "IO": {
+              "cap": 0.4775
             }
-          ]
+          },
+          "mezType": 4,
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Explosive_Strike_C.Attuned_Explosive_Strike_C",
+      "displayName": "Chance for Smashing Damage",
       "description": {
         "short": "Chance for Smashing Damage",
         "long": "Provides a chance to cause minor smashing damage to your targets.  This effect will trigger roughly 3.5 times per minute."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Explosive_Strike_C.Attuned_Explosive_Strike_C",
-      "setName": "Explosive_Strike",
-      "displayName": "Chance for Smashing Damage"
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 71.7501
+            }
+          },
+          "stat": "Chance for Smashing Damage",
+          "procsPerMinute": 3.5,
+          "cancelOnMiss": true,
+          "damageType": "Smashing",
+          "stacking": 1,
+          "resistible": true,
+          "pvMode": 1,
+          "toWho": "all"
+        }
+      ]
     }
   ],
   "levels": {

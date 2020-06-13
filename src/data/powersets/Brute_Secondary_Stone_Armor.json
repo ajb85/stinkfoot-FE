@@ -6,13 +6,6 @@
   "displayName": "Stone Armor",
   "powers": [
     {
-      "allowedEnhancements": [
-        "Defense_Buff",
-        "Endurance_Discount",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Buff_Def",
@@ -25,7 +18,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Stone_Armor.Rock_Armor",
               "damageType": "Smashing"
             },
@@ -37,7 +31,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Stone_Armor.Rock_Armor",
               "damageType": "Lethal"
             }
@@ -53,7 +48,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Elusivity",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Stone_Armor.Rock_Armor",
               "damageType": "Smashing"
             },
@@ -64,7 +60,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Elusivity",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Stone_Armor.Rock_Armor",
               "damageType": "Lethal"
             }
@@ -74,19 +71,27 @@
           "effectType": "Res_Boolean",
           "values": [
             {
+              "etModifies": "Defense",
               "mag": {
                 "pve": 0.11072
               },
               "probability": 1,
               "duration": 0.75,
               "effectType": "ResEffect",
-              "eTModifies": 5,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Stone_Armor.Rock_Armor"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Defense_Buff",
+        "Endurance_Discount",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Defense.Stone_Armor.Rock_Armor",
+      "archetypeOrder": "secondary",
       "powerIndex": 0,
       "castTimeReal": 0.73,
       "toggleCost": 0.26,
@@ -94,7 +99,7 @@
       "displayName": "Rock Armor",
       "requires": {
         "powers": {
-          "BRUTE_MELEE.CLAWS": true
+          "Brute_Defense.Stone_Armor.Rock_Armor": true
         },
         "count": 1
       },
@@ -125,11 +130,6 @@
       "powerType": "Toggle"
     },
     {
-      "allowedEnhancements": [
-        "Res_Damage"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Res_DMG",
@@ -141,7 +141,8 @@
               "probability": 1,
               "duration": 10.25,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Stone_Armor.Stone_Skin",
               "damageType": "Smashing"
             },
@@ -152,13 +153,20 @@
               "probability": 1,
               "duration": 10.25,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Stone_Armor.Stone_Skin",
               "damageType": "Lethal"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Res_Damage"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Defense.Stone_Armor.Stone_Skin",
+      "archetypeOrder": "secondary",
       "powerIndex": 1,
       "fullName": "Brute_Secondary_Stone_Armor_Stone_Skin",
       "displayName": "Stone Skin",
@@ -190,14 +198,6 @@
       "powerType": "Auto"
     },
     {
-      "allowedEnhancements": [
-        "Endurance_Discount",
-        "Heal",
-        "Recharge",
-        "Res_Damage"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "HealSelf",
@@ -211,7 +211,7 @@
               "variableModified": true,
               "effectType": "HitPoints",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Stone_Armor.Earths_Embrace"
             },
             {
@@ -222,7 +222,8 @@
               "variableModified": true,
               "effectType": "Heal",
               "stacking": 1,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Stone_Armor.Earths_Embrace"
             }
           ]
@@ -237,13 +238,23 @@
               "probability": 1,
               "duration": 120,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Stone_Armor.Earths_Embrace",
               "damageType": "Toxic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Endurance_Discount",
+        "Heal",
+        "Recharge",
+        "Res_Damage"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Defense.Stone_Armor.Earths_Embrace",
+      "archetypeOrder": "secondary",
       "powerIndex": 2,
       "castTimeReal": 2.03,
       "toggleCost": 10.4,
@@ -280,16 +291,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Recharge",
-        "Slow",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Slow",
@@ -301,20 +302,21 @@
               "probability": 1,
               "duration": 5,
               "effectType": "SpeedRunning",
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Defense.Stone_Armor.Mud_Pots"
             },
             {
+              "etModifies": "JumpHeight",
               "mag": {
                 "pve": -0.5
               },
               "probability": 1,
               "duration": 5,
               "effectType": "Enhancement",
-              "eTModifies": 16,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Defense.Stone_Armor.Mud_Pots"
             },
             {
@@ -324,8 +326,9 @@
               "probability": 1,
               "duration": 5,
               "effectType": "SpeedJumping",
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Defense.Stone_Armor.Mud_Pots"
             }
           ]
@@ -341,7 +344,7 @@
               "duration": 5,
               "effectType": "SpeedRunning",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Defense.Stone_Armor.Mud_Pots"
             }
           ]
@@ -357,11 +360,12 @@
               "probability": 1,
               "duration": 2.25,
               "effectType": "Mez",
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Defense.Stone_Armor.Mud_Pots",
-              "mezType": "Immobilization"
+              "mezType": "Immob"
             }
           ]
         },
@@ -375,8 +379,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Defense.Stone_Armor.Mud_Pots",
               "requiresToHitCheck": true,
               "damageType": "Fire"
@@ -395,9 +400,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Defense.Stone_Armor.Mud_Pots",
               "requiresToHitCheck": true,
@@ -406,6 +412,17 @@
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Recharge",
+        "Slow",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Defense.Stone_Armor.Mud_Pots",
+      "archetypeOrder": "secondary",
       "powerIndex": 3,
       "castTimeReal": 2.03,
       "toggleCost": 0.78,
@@ -447,13 +464,6 @@
       "powerType": "Toggle"
     },
     {
-      "allowedEnhancements": [
-        "Endurance_Discount",
-        "Heal",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Ones",
@@ -466,7 +476,7 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "MezResist",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Stone_Armor.Rooted",
               "mezType": "Knockback"
             },
@@ -478,7 +488,7 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "MezResist",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Stone_Armor.Rooted",
               "mezType": "Knockup"
             },
@@ -490,7 +500,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Mez",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Stone_Armor.Rooted",
               "mezType": "Knockback"
             },
@@ -502,7 +513,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Mez",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Stone_Armor.Rooted",
               "mezType": "Knockup"
             },
@@ -514,7 +526,7 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "MezResist",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Stone_Armor.Rooted",
               "mezType": "Repel"
             },
@@ -526,7 +538,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Mez",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Stone_Armor.Rooted",
               "mezType": "Repel"
             },
@@ -538,7 +551,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Regeneration",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Stone_Armor.Rooted"
             },
             {
@@ -548,7 +562,7 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "JumpHeight",
-              "toWho": "All",
+              "toWho": "all",
               "powerFullName": "Brute_Defense.Stone_Armor.Rooted"
             },
             {
@@ -558,7 +572,7 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "SpeedJumping",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Stone_Armor.Rooted"
             },
             {
@@ -568,7 +582,7 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "SpeedRunning",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Stone_Armor.Rooted"
             },
             {
@@ -578,18 +592,84 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Fly",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Stone_Armor.Rooted"
             },
             {
+              "etModifies": "Defense",
+              "mag": {
+                "pvp": 0.3
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "ResEffect",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Stone_Armor.Rooted"
+            },
+            {
+              "etModifies": "ToHit",
+              "mag": {
+                "pvp": 0.3
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "ResEffect",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Stone_Armor.Rooted"
+            },
+            {
+              "etModifies": "RechargeTime",
+              "mag": {
+                "pvp": 0.3
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "ResEffect",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Stone_Armor.Rooted"
+            },
+            {
+              "etModifies": "SpeedRunning",
               "mag": {
                 "pvp": 0.5
               },
               "probability": 1,
               "duration": 0.75,
               "effectType": "ResEffect",
-              "eTModifies": 5,
-              "toWho": "Self",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Stone_Armor.Rooted"
+            },
+            {
+              "etModifies": "SpeedFlying",
+              "mag": {
+                "pvp": 0.5
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "ResEffect",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Stone_Armor.Rooted"
+            },
+            {
+              "etModifies": "JumpHeight",
+              "mag": {
+                "pvp": 0.5
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "ResEffect",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Stone_Armor.Rooted"
+            },
+            {
+              "etModifies": "SpeedJumping",
+              "mag": {
+                "pvp": 0.5
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "ResEffect",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Stone_Armor.Rooted"
             }
           ]
@@ -604,7 +684,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Mez",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Stone_Armor.Rooted",
               "mezType": "Stun"
             },
@@ -615,7 +696,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Mez",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Stone_Armor.Rooted",
               "mezType": "Hold"
             },
@@ -626,7 +708,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Mez",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Stone_Armor.Rooted",
               "mezType": "Sleep"
             },
@@ -637,9 +720,10 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Mez",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Stone_Armor.Rooted",
-              "mezType": "Immobilization"
+              "mezType": "Immob"
             },
             {
               "mag": {
@@ -648,7 +732,7 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "MezResist",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Stone_Armor.Rooted",
               "mezType": "Stun"
             },
@@ -659,7 +743,7 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "MezResist",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Stone_Armor.Rooted",
               "mezType": "Hold"
             },
@@ -670,7 +754,7 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "MezResist",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Stone_Armor.Rooted",
               "mezType": "Sleep"
             },
@@ -681,35 +765,54 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "MezResist",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Stone_Armor.Rooted",
-              "mezType": "Immobilization"
+              "mezType": "Immob"
             },
             {
+              "etModifies": "Recovery",
               "mag": {
                 "pve": 0.5536
               },
               "probability": 1,
               "duration": 0.75,
               "effectType": "ResEffect",
-              "eTModifies": 26,
-              "toWho": "All",
+              "toWho": "all",
               "powerFullName": "Brute_Defense.Stone_Armor.Rooted"
             },
             {
+              "etModifies": "Endurance",
+              "mag": {
+                "pve": 0.5536
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "ResEffect",
+              "toWho": "all",
+              "powerFullName": "Brute_Defense.Stone_Armor.Rooted"
+            },
+            {
+              "etModifies": "Defense",
               "mag": {
                 "pve": 0.11072
               },
               "probability": 1,
               "duration": 0.75,
               "effectType": "ResEffect",
-              "eTModifies": 5,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Stone_Armor.Rooted"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Endurance_Discount",
+        "Heal",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Defense.Stone_Armor.Rooted",
+      "archetypeOrder": "secondary",
       "powerIndex": 4,
       "castTimeReal": 1.17,
       "toggleCost": 0.208,
@@ -747,13 +850,6 @@
       "powerType": "Toggle"
     },
     {
-      "allowedEnhancements": [
-        "Endurance_Discount",
-        "Recharge",
-        "Res_Damage"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Res_DMG",
@@ -766,7 +862,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Stone_Armor.Brimstone_Armor",
               "damageType": "Fire"
             },
@@ -778,13 +875,22 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Stone_Armor.Brimstone_Armor",
               "damageType": "Cold"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Endurance_Discount",
+        "Recharge",
+        "Res_Damage"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Defense.Stone_Armor.Brimstone_Armor",
+      "archetypeOrder": "secondary",
       "powerIndex": 5,
       "castTimeReal": 0.73,
       "toggleCost": 0.26,
@@ -822,13 +928,6 @@
       "powerType": "Toggle"
     },
     {
-      "allowedEnhancements": [
-        "Defense_Buff",
-        "Endurance_Discount",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Buff_Def",
@@ -841,7 +940,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Stone_Armor.Crystal_Armor",
               "damageType": "Energy"
             },
@@ -853,7 +953,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Stone_Armor.Crystal_Armor",
               "damageType": "Negative"
             }
@@ -869,7 +970,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Elusivity",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Stone_Armor.Crystal_Armor",
               "damageType": "Energy"
             },
@@ -879,7 +981,8 @@
               },
               "probability": 1,
               "duration": 0.75,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Stone_Armor.Crystal_Armor"
             }
           ]
@@ -888,19 +991,27 @@
           "effectType": "Res_Boolean",
           "values": [
             {
+              "etModifies": "Defense",
               "mag": {
                 "pve": 0.11072
               },
               "probability": 1,
               "duration": 0.75,
               "effectType": "ResEffect",
-              "eTModifies": 5,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Stone_Armor.Crystal_Armor"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Defense_Buff",
+        "Endurance_Discount",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Defense.Stone_Armor.Crystal_Armor",
+      "archetypeOrder": "secondary",
       "powerIndex": 6,
       "castTimeReal": 2.03,
       "toggleCost": 0.26,
@@ -938,13 +1049,6 @@
       "powerType": "Toggle"
     },
     {
-      "allowedEnhancements": [
-        "Defense_Buff",
-        "Endurance_Discount",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Buff_Def",
@@ -957,7 +1061,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Stone_Armor.Minerals",
               "damageType": "Psionic"
             }
@@ -973,19 +1078,21 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Elusivity",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Stone_Armor.Minerals",
               "damageType": "Psionic"
             },
             {
+              "etModifies": "PerceptionRadius",
               "mag": {
                 "pve": 0.6
               },
               "probability": 1,
               "duration": 0.75,
               "effectType": "ResEffect",
-              "eTModifies": 23,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Stone_Armor.Minerals"
             },
             {
@@ -995,7 +1102,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "PerceptionRadius",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Stone_Armor.Minerals"
             },
             {
@@ -1005,7 +1113,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Mez",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Stone_Armor.Minerals",
               "mezType": "Confuse"
             }
@@ -1022,13 +1131,22 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "MezResist",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Stone_Armor.Minerals",
               "mezType": "Confuse"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Defense_Buff",
+        "Endurance_Discount",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Defense.Stone_Armor.Minerals",
+      "archetypeOrder": "secondary",
       "powerIndex": 7,
       "castTimeReal": 0.73,
       "toggleCost": 0.26,
@@ -1065,14 +1183,6 @@
       "powerType": "Toggle"
     },
     {
-      "allowedEnhancements": [
-        "Defense_Buff",
-        "Endurance_Discount",
-        "Recharge",
-        "Res_Damage"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Res_DMG",
@@ -1085,7 +1195,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Stone_Armor.Granite_Armor",
               "damageType": "Smashing"
             },
@@ -1097,7 +1208,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Stone_Armor.Granite_Armor",
               "damageType": "Lethal"
             },
@@ -1109,7 +1221,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Stone_Armor.Granite_Armor",
               "damageType": "Fire"
             },
@@ -1121,7 +1234,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Stone_Armor.Granite_Armor",
               "damageType": "Cold"
             },
@@ -1133,7 +1247,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Stone_Armor.Granite_Armor",
               "damageType": "Energy"
             },
@@ -1145,7 +1260,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Stone_Armor.Granite_Armor",
               "damageType": "Negative"
             },
@@ -1157,7 +1273,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Stone_Armor.Granite_Armor",
               "damageType": "Toxic"
             }
@@ -1174,7 +1291,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Stone_Armor.Granite_Armor",
               "damageType": "Smashing"
             },
@@ -1186,7 +1304,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Stone_Armor.Granite_Armor",
               "damageType": "Lethal"
             },
@@ -1198,7 +1317,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Stone_Armor.Granite_Armor",
               "damageType": "Fire"
             },
@@ -1210,7 +1330,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Stone_Armor.Granite_Armor",
               "damageType": "Cold"
             },
@@ -1222,7 +1343,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Stone_Armor.Granite_Armor",
               "damageType": "Energy"
             },
@@ -1234,7 +1356,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Stone_Armor.Granite_Armor",
               "damageType": "Negative"
             }
@@ -1250,7 +1373,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Mez",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Stone_Armor.Granite_Armor",
               "mezType": "Stun"
             },
@@ -1261,7 +1385,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Mez",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Stone_Armor.Granite_Armor",
               "mezType": "Hold"
             },
@@ -1272,7 +1397,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Mez",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Stone_Armor.Granite_Armor",
               "mezType": "Sleep"
             },
@@ -1283,9 +1409,10 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Mez",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Stone_Armor.Granite_Armor",
-              "mezType": "Immobilization"
+              "mezType": "Immob"
             },
             {
               "mag": {
@@ -1294,7 +1421,7 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "MezResist",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Stone_Armor.Granite_Armor",
               "mezType": "Stun"
             },
@@ -1305,7 +1432,7 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "MezResist",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Stone_Armor.Granite_Armor",
               "mezType": "Hold"
             },
@@ -1316,7 +1443,7 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "MezResist",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Stone_Armor.Granite_Armor",
               "mezType": "Sleep"
             },
@@ -1327,19 +1454,19 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "MezResist",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Stone_Armor.Granite_Armor",
-              "mezType": "Immobilization"
+              "mezType": "Immob"
             },
             {
+              "etModifies": "Defense",
               "mag": {
                 "pve": 0.2768
               },
               "probability": 1,
               "duration": 0.75,
               "effectType": "ResEffect",
-              "eTModifies": 5,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Stone_Armor.Granite_Armor"
             }
           ]
@@ -1355,7 +1482,7 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Mez",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Stone_Armor.Granite_Armor",
               "mezType": "Knockback"
             },
@@ -1367,7 +1494,7 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Mez",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Stone_Armor.Granite_Armor",
               "mezType": "Knockup"
             },
@@ -1379,7 +1506,7 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Mez",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Stone_Armor.Granite_Armor",
               "mezType": "Repel"
             },
@@ -1390,18 +1517,18 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "SpeedRunning",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Stone_Armor.Granite_Armor"
             },
             {
+              "etModifies": "RechargeTime",
               "mag": {
                 "pve": -0.65
               },
               "probability": 1,
               "duration": 0.75,
               "effectType": "Enhancement",
-              "eTModifies": 25,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Stone_Armor.Granite_Armor"
             },
             {
@@ -1411,7 +1538,7 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "DamageBuff",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Stone_Armor.Granite_Armor",
               "damageType": "Smashing"
             },
@@ -1422,7 +1549,7 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "DamageBuff",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Stone_Armor.Granite_Armor",
               "damageType": "Lethal"
             },
@@ -1433,7 +1560,7 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "DamageBuff",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Stone_Armor.Granite_Armor",
               "damageType": "Fire"
             },
@@ -1444,7 +1571,7 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "DamageBuff",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Stone_Armor.Granite_Armor",
               "damageType": "Cold"
             },
@@ -1455,7 +1582,7 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "DamageBuff",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Stone_Armor.Granite_Armor",
               "damageType": "Energy"
             },
@@ -1466,7 +1593,7 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "DamageBuff",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Stone_Armor.Granite_Armor",
               "damageType": "Negative"
             },
@@ -1477,7 +1604,7 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "DamageBuff",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Stone_Armor.Granite_Armor",
               "damageType": "Toxic"
             },
@@ -1488,7 +1615,7 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "DamageBuff",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Stone_Armor.Granite_Armor",
               "damageType": "Psionic"
             },
@@ -1499,7 +1626,7 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "JumpHeight",
-              "toWho": "All",
+              "toWho": "all",
               "powerFullName": "Brute_Defense.Stone_Armor.Granite_Armor"
             },
             {
@@ -1509,7 +1636,7 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "SpeedJumping",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Stone_Armor.Granite_Armor"
             },
             {
@@ -1519,7 +1646,7 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Fly",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Stone_Armor.Granite_Armor"
             },
             {
@@ -1530,12 +1657,21 @@
               "duration": 0.75,
               "effectType": "SetCostume",
               "ticks": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Stone_Armor.Granite_Armor"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Defense_Buff",
+        "Endurance_Discount",
+        "Recharge",
+        "Res_Damage"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Defense.Stone_Armor.Granite_Armor",
+      "archetypeOrder": "secondary",
       "powerIndex": 8,
       "castTimeReal": 0.73,
       "toggleCost": 0.26,

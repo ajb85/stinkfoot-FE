@@ -6,16 +6,6 @@
   "displayName": "Ninja Training",
   "powers": [
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Immobilize",
-        "Range",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Immobilize",
@@ -28,11 +18,12 @@
               "duration": 17.8800011,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Blaster_Support.Ninja_Training.Immobilizing_Dart",
-              "mezType": "Immobilization"
+              "mezType": "Immob"
             }
           ]
         },
@@ -50,8 +41,9 @@
               "ticks": 4,
               "delayedTime": 0.5,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Ninja_Training.Immobilizing_Dart",
               "damageType": "Toxic"
             }
@@ -61,16 +53,16 @@
           "effectType": "Slow",
           "values": [
             {
+              "etModifies": "JumpHeight",
               "mag": {
                 "pve": -0.3
               },
               "probability": 1,
               "duration": 18,
               "effectType": "Enhancement",
-              "eTModifies": 16,
               "stacking": 1,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Ninja_Training.Immobilizing_Dart"
             },
             {
@@ -81,8 +73,9 @@
               "duration": 18,
               "effectType": "SpeedJumping",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Ninja_Training.Immobilizing_Dart"
             },
             {
@@ -93,8 +86,9 @@
               "duration": 18,
               "effectType": "SpeedRunning",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Ninja_Training.Immobilizing_Dart"
             },
             {
@@ -105,9 +99,24 @@
               "duration": 18,
               "effectType": "SpeedFlying",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Ninja_Training.Immobilizing_Dart"
+            },
+            {
+              "etModifies": "RechargeTime",
+              "mag": {
+                "pve": -0.3
+              },
+              "probability": 1,
+              "duration": 18,
+              "effectType": "Enhancement",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Support.Ninja_Training.Immobilizing_Dart",
+              "nearGround": true
             }
           ]
         },
@@ -122,11 +131,12 @@
               "duration": 2,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Blaster_Support.Ninja_Training.Immobilizing_Dart",
-              "mezType": "Immobilization"
+              "mezType": "Immob"
             },
             {
               "mag": {
@@ -136,8 +146,9 @@
               "duration": 0.3,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Blaster_Support.Ninja_Training.Immobilizing_Dart",
               "mezType": "Hold"
@@ -149,8 +160,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Ninja_Training.Immobilizing_Dart",
               "damageType": "Toxic"
             }
@@ -169,7 +181,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Ninja_Training.Immobilizing_Dart",
               "damageType": "Smashing"
             },
@@ -183,7 +195,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Ninja_Training.Immobilizing_Dart",
               "damageType": "Lethal"
             },
@@ -197,7 +209,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Ninja_Training.Immobilizing_Dart",
               "damageType": "Fire"
             },
@@ -211,7 +223,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Ninja_Training.Immobilizing_Dart",
               "damageType": "Cold"
             },
@@ -225,7 +237,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Ninja_Training.Immobilizing_Dart",
               "damageType": "Energy"
             },
@@ -239,7 +251,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Ninja_Training.Immobilizing_Dart",
               "damageType": "Negative"
             },
@@ -253,7 +265,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Ninja_Training.Immobilizing_Dart",
               "damageType": "Toxic"
             },
@@ -267,13 +279,24 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Ninja_Training.Immobilizing_Dart",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Immobilize",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Support.Ninja_Training.Immobilizing_Dart",
+      "archetypeOrder": "secondary",
       "powerIndex": 0,
       "castTimeReal": 1.5,
       "toggleCost": 5.2,
@@ -313,15 +336,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Defense_Debuff",
-        "Endurance_Discount",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Damage",
@@ -333,8 +347,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Ninja_Training.Sting_of_the_Wasp",
               "damageType": "Lethal"
             }
@@ -352,8 +367,9 @@
               "duration": 10,
               "effectType": "Defense",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Ninja_Training.Sting_of_the_Wasp"
             }
           ]
@@ -368,8 +384,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Ninja_Training.Sting_of_the_Wasp",
               "damageType": "Lethal"
             }
@@ -388,7 +405,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Ninja_Training.Sting_of_the_Wasp",
               "damageType": "Smashing"
             },
@@ -402,7 +419,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Ninja_Training.Sting_of_the_Wasp",
               "damageType": "Lethal"
             },
@@ -416,7 +433,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Ninja_Training.Sting_of_the_Wasp",
               "damageType": "Fire"
             },
@@ -430,7 +447,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Ninja_Training.Sting_of_the_Wasp",
               "damageType": "Cold"
             },
@@ -444,7 +461,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Ninja_Training.Sting_of_the_Wasp",
               "damageType": "Energy"
             },
@@ -458,7 +475,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Ninja_Training.Sting_of_the_Wasp",
               "damageType": "Negative"
             },
@@ -472,7 +489,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Ninja_Training.Sting_of_the_Wasp",
               "damageType": "Toxic"
             },
@@ -486,13 +503,23 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Ninja_Training.Sting_of_the_Wasp",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Defense_Debuff",
+        "Endurance_Discount",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Support.Ninja_Training.Sting_of_the_Wasp",
+      "archetypeOrder": "secondary",
       "powerIndex": 1,
       "castTimeReal": 1.17,
       "toggleCost": 6.03,
@@ -533,16 +560,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Hold",
-        "Range",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Immobilize",
@@ -555,8 +572,9 @@
               "duration": 14.3040009,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Blaster_Support.Ninja_Training.Choking_Powder",
               "mezType": "Hold"
@@ -575,8 +593,9 @@
               "effectType": "Damage",
               "ticks": 5,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Ninja_Training.Choking_Powder",
               "damageType": "Toxic"
             }
@@ -593,8 +612,9 @@
               "duration": 2,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Blaster_Support.Ninja_Training.Choking_Powder",
               "mezType": "Hold"
@@ -608,8 +628,9 @@
               "effectType": "Damage",
               "ticks": 5,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Ninja_Training.Choking_Powder",
               "damageType": "Toxic"
             }
@@ -628,7 +649,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Ninja_Training.Choking_Powder",
               "damageType": "Smashing"
             },
@@ -642,7 +663,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Ninja_Training.Choking_Powder",
               "damageType": "Lethal"
             },
@@ -656,7 +677,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Ninja_Training.Choking_Powder",
               "damageType": "Fire"
             },
@@ -670,7 +691,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Ninja_Training.Choking_Powder",
               "damageType": "Cold"
             },
@@ -684,7 +705,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Ninja_Training.Choking_Powder",
               "damageType": "Energy"
             },
@@ -698,7 +719,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Ninja_Training.Choking_Powder",
               "damageType": "Negative"
             },
@@ -712,7 +733,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Ninja_Training.Choking_Powder",
               "damageType": "Toxic"
             },
@@ -726,13 +747,24 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Ninja_Training.Choking_Powder",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Hold",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Support.Ninja_Training.Choking_Powder",
+      "archetypeOrder": "secondary",
       "powerIndex": 2,
       "castTimeReal": 1.07,
       "toggleCost": 11.388,
@@ -771,14 +803,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Defense_Buff",
-        "ToHit_Buff",
-        "Endurance_Discount",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Buff_Def",
@@ -790,7 +814,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Ninja_Training.Kyokan",
               "damageType": "Melee"
             },
@@ -801,7 +826,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Ninja_Training.Kyokan",
               "damageType": "Ranged"
             },
@@ -812,7 +838,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Ninja_Training.Kyokan",
               "damageType": "AoE"
             },
@@ -823,7 +850,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Ninja_Training.Kyokan",
               "damageType": "Smashing"
             },
@@ -834,7 +862,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Ninja_Training.Kyokan",
               "damageType": "Lethal"
             },
@@ -845,7 +874,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Ninja_Training.Kyokan",
               "damageType": "Fire"
             },
@@ -856,7 +886,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Ninja_Training.Kyokan",
               "damageType": "Cold"
             },
@@ -867,7 +898,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Ninja_Training.Kyokan",
               "damageType": "Energy"
             },
@@ -878,7 +910,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Ninja_Training.Kyokan",
               "damageType": "Negative"
             },
@@ -889,7 +922,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Ninja_Training.Kyokan",
               "damageType": "Psionic"
             }
@@ -905,7 +939,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "StealthRadius",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Ninja_Training.Kyokan"
             },
             {
@@ -915,7 +950,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "StealthRadiusPlayer",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Ninja_Training.Kyokan"
             },
             {
@@ -925,7 +961,7 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Translucency",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Ninja_Training.Kyokan"
             }
           ]
@@ -940,7 +976,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "ToHit",
-              "toWho": "All",
+              "buffable": true,
+              "toWho": "all",
               "powerFullName": "Blaster_Support.Ninja_Training.Kyokan"
             }
           ]
@@ -955,7 +992,7 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "DamageBuff",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Ninja_Training.Kyokan",
               "damageType": "Smashing"
             },
@@ -966,7 +1003,7 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "DamageBuff",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Ninja_Training.Kyokan",
               "damageType": "Lethal"
             },
@@ -977,7 +1014,7 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "DamageBuff",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Ninja_Training.Kyokan",
               "damageType": "Fire"
             },
@@ -988,7 +1025,7 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "DamageBuff",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Ninja_Training.Kyokan",
               "damageType": "Cold"
             },
@@ -999,7 +1036,7 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "DamageBuff",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Ninja_Training.Kyokan",
               "damageType": "Energy"
             },
@@ -1010,7 +1047,7 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "DamageBuff",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Ninja_Training.Kyokan",
               "damageType": "Negative"
             },
@@ -1021,7 +1058,7 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "DamageBuff",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Ninja_Training.Kyokan",
               "damageType": "Toxic"
             },
@@ -1032,13 +1069,22 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "DamageBuff",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Ninja_Training.Kyokan",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Defense_Buff",
+        "ToHit_Buff",
+        "Endurance_Discount",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Support.Ninja_Training.Kyokan",
+      "archetypeOrder": "secondary",
       "powerIndex": 3,
       "toggleCost": 0.26,
       "fullName": "Blaster_Secondary_Ninja_Training_Shinobi",
@@ -1074,15 +1120,6 @@
       "powerType": "Toggle"
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Defense_Debuff",
-        "Endurance_Discount",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Damage",
@@ -1094,8 +1131,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Ninja_Training.The_Lotus_Drops",
               "damageType": "Lethal"
             }
@@ -1113,8 +1151,9 @@
               "duration": 10,
               "effectType": "Defense",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Ninja_Training.The_Lotus_Drops"
             }
           ]
@@ -1129,8 +1168,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Ninja_Training.The_Lotus_Drops",
               "damageType": "Lethal"
             }
@@ -1147,7 +1187,7 @@
               "duration": 9.33,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Ninja_Training.The_Lotus_Drops",
               "damageType": "Smashing"
             },
@@ -1159,7 +1199,7 @@
               "duration": 9.33,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Ninja_Training.The_Lotus_Drops",
               "damageType": "Lethal"
             },
@@ -1171,7 +1211,7 @@
               "duration": 9.33,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Ninja_Training.The_Lotus_Drops",
               "damageType": "Fire"
             },
@@ -1183,7 +1223,7 @@
               "duration": 9.33,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Ninja_Training.The_Lotus_Drops",
               "damageType": "Cold"
             },
@@ -1195,7 +1235,7 @@
               "duration": 9.33,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Ninja_Training.The_Lotus_Drops",
               "damageType": "Energy"
             },
@@ -1207,7 +1247,7 @@
               "duration": 9.33,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Ninja_Training.The_Lotus_Drops",
               "damageType": "Negative"
             },
@@ -1219,7 +1259,7 @@
               "duration": 9.33,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Ninja_Training.The_Lotus_Drops",
               "damageType": "Toxic"
             },
@@ -1231,13 +1271,23 @@
               "duration": 9.33,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Ninja_Training.The_Lotus_Drops",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Defense_Debuff",
+        "Endurance_Discount",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Support.Ninja_Training.The_Lotus_Drops",
+      "archetypeOrder": "secondary",
       "powerIndex": 4,
       "castTimeReal": 1.83,
       "toggleCost": 13,
@@ -1279,14 +1329,6 @@
       "aoeModifier": 2.2
     },
     {
-      "allowedEnhancements": [
-        "Heal",
-        "Recharge",
-        "Endurance_Modification",
-        "Res_Damage"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Ones",
@@ -1298,7 +1340,8 @@
               "probability": 1,
               "duration": 210,
               "effectType": "Regeneration",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Ninja_Training.Kuji-In_Toh"
             },
             {
@@ -1308,7 +1351,8 @@
               "probability": 1,
               "duration": 210,
               "effectType": "Recovery",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Ninja_Training.Kuji-In_Toh"
             }
           ]
@@ -1323,9 +1367,9 @@
               "probability": 1,
               "duration": 210,
               "effectType": "Mez",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Ninja_Training.Kuji-In_Toh",
-              "mezType": "Terrorize"
+              "mezType": "Terror"
             },
             {
               "mag": {
@@ -1334,9 +1378,9 @@
               "probability": 1,
               "duration": 210,
               "effectType": "MezResist",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Ninja_Training.Kuji-In_Toh",
-              "mezType": "Terrorize"
+              "mezType": "Terror"
             }
           ]
         },
@@ -1350,13 +1394,23 @@
               "probability": 1,
               "duration": 210,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Ninja_Training.Kuji-In_Toh",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Heal",
+        "Recharge",
+        "Endurance_Modification",
+        "Res_Damage"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Support.Ninja_Training.Kuji-In_Toh",
+      "archetypeOrder": "secondary",
       "powerIndex": 5,
       "castTimeReal": 1,
       "toggleCost": 5.2,
@@ -1394,12 +1448,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Taunt",
@@ -1413,8 +1461,9 @@
               "duration": 8.24,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Blaster_Support.Ninja_Training.Smoke_Flash",
               "mezType": "Placate"
@@ -1431,8 +1480,9 @@
               "probability": 1,
               "duration": 15,
               "effectType": "Resistance",
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Ninja_Training.Smoke_Flash",
               "damageType": "Smashing"
             },
@@ -1443,8 +1493,9 @@
               "probability": 1,
               "duration": 15,
               "effectType": "Resistance",
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Ninja_Training.Smoke_Flash",
               "damageType": "Lethal"
             },
@@ -1455,8 +1506,9 @@
               "probability": 1,
               "duration": 15,
               "effectType": "Resistance",
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Ninja_Training.Smoke_Flash",
               "damageType": "Fire"
             },
@@ -1467,8 +1519,9 @@
               "probability": 1,
               "duration": 15,
               "effectType": "Resistance",
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Ninja_Training.Smoke_Flash",
               "damageType": "Cold"
             },
@@ -1479,8 +1532,9 @@
               "probability": 1,
               "duration": 15,
               "effectType": "Resistance",
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Ninja_Training.Smoke_Flash",
               "damageType": "Energy"
             },
@@ -1491,8 +1545,9 @@
               "probability": 1,
               "duration": 15,
               "effectType": "Resistance",
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Ninja_Training.Smoke_Flash",
               "damageType": "Negative"
             },
@@ -1503,8 +1558,9 @@
               "probability": 1,
               "duration": 15,
               "effectType": "Resistance",
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Ninja_Training.Smoke_Flash",
               "damageType": "Toxic"
             },
@@ -1515,8 +1571,9 @@
               "probability": 1,
               "duration": 15,
               "effectType": "Resistance",
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Ninja_Training.Smoke_Flash",
               "damageType": "Psionic"
             }
@@ -1533,7 +1590,7 @@
               "duration": 9.33,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Ninja_Training.Smoke_Flash",
               "damageType": "Smashing"
             },
@@ -1545,7 +1602,7 @@
               "duration": 9.33,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Ninja_Training.Smoke_Flash",
               "damageType": "Lethal"
             },
@@ -1557,7 +1614,7 @@
               "duration": 9.33,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Ninja_Training.Smoke_Flash",
               "damageType": "Fire"
             },
@@ -1569,7 +1626,7 @@
               "duration": 9.33,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Ninja_Training.Smoke_Flash",
               "damageType": "Cold"
             },
@@ -1581,7 +1638,7 @@
               "duration": 9.33,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Ninja_Training.Smoke_Flash",
               "damageType": "Energy"
             },
@@ -1593,7 +1650,7 @@
               "duration": 9.33,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Ninja_Training.Smoke_Flash",
               "damageType": "Negative"
             },
@@ -1605,7 +1662,7 @@
               "duration": 9.33,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Ninja_Training.Smoke_Flash",
               "damageType": "Toxic"
             },
@@ -1617,13 +1674,20 @@
               "duration": 9.33,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Ninja_Training.Smoke_Flash",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Support.Ninja_Training.Smoke_Flash",
+      "archetypeOrder": "secondary",
       "powerIndex": 6,
       "castTimeReal": 1.83,
       "toggleCost": 2.6,
@@ -1657,15 +1721,6 @@
       "aoeModifier": 4
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Confuse",
-        "ToHit_Debuff",
-        "Endurance_Discount",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Sleep",
@@ -1679,8 +1734,9 @@
               "effectType": "Mez",
               "delayedTime": 0.25,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Blaster_Support.Ninja_Training.Blinding_Powder",
               "mezType": "Sleep"
@@ -1697,8 +1753,9 @@
               "probability": 1,
               "duration": 15,
               "effectType": "ToHit",
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Ninja_Training.Blinding_Powder"
             }
           ]
@@ -1713,8 +1770,9 @@
               "probability": 0.5,
               "duration": 23.84,
               "effectType": "Mez",
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Blaster_Support.Ninja_Training.Blinding_Powder",
               "mezType": "Confuse"
@@ -1731,8 +1789,9 @@
               "probability": 1,
               "duration": 20,
               "effectType": "PerceptionRadius",
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Ninja_Training.Blinding_Powder"
             }
           ]
@@ -1749,8 +1808,9 @@
               "effectType": "Mez",
               "delayedTime": 0.25,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Blaster_Support.Ninja_Training.Blinding_Powder",
               "mezType": "Sleep"
@@ -1762,8 +1822,9 @@
               "probability": 0.5,
               "duration": 0.3,
               "effectType": "Mez",
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Blaster_Support.Ninja_Training.Blinding_Powder",
               "mezType": "Confuse"
@@ -1775,8 +1836,9 @@
               "probability": 1,
               "duration": 20,
               "effectType": "PerceptionRadius",
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Ninja_Training.Blinding_Powder"
             }
           ]
@@ -1792,7 +1854,7 @@
               "duration": 8.57,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Ninja_Training.Blinding_Powder",
               "damageType": "Smashing"
             },
@@ -1804,7 +1866,7 @@
               "duration": 8.57,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Ninja_Training.Blinding_Powder",
               "damageType": "Lethal"
             },
@@ -1816,7 +1878,7 @@
               "duration": 8.57,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Ninja_Training.Blinding_Powder",
               "damageType": "Fire"
             },
@@ -1828,7 +1890,7 @@
               "duration": 8.57,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Ninja_Training.Blinding_Powder",
               "damageType": "Cold"
             },
@@ -1840,7 +1902,7 @@
               "duration": 8.57,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Ninja_Training.Blinding_Powder",
               "damageType": "Energy"
             },
@@ -1852,7 +1914,7 @@
               "duration": 8.57,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Ninja_Training.Blinding_Powder",
               "damageType": "Negative"
             },
@@ -1864,7 +1926,7 @@
               "duration": 8.57,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Ninja_Training.Blinding_Powder",
               "damageType": "Toxic"
             },
@@ -1876,13 +1938,23 @@
               "duration": 8.57,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Ninja_Training.Blinding_Powder",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Confuse",
+        "ToHit_Debuff",
+        "Endurance_Discount",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Support.Ninja_Training.Blinding_Powder",
+      "archetypeOrder": "secondary",
       "powerIndex": 7,
       "castTimeReal": 1.07,
       "toggleCost": 7.8,
@@ -1924,16 +1996,6 @@
       "aoeModifier": 1.862474
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Defense_Debuff",
-        "Endurance_Discount",
-        "Knockback",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Damage",
@@ -1945,8 +2007,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Ninja_Training.Golden_Dragonfly",
               "damageType": "Lethal"
             }
@@ -1962,8 +2025,9 @@
               "probability": 0.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Ninja_Training.Golden_Dragonfly",
               "mezType": "Knockback"
             }
@@ -1981,8 +2045,9 @@
               "duration": 10,
               "effectType": "Defense",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Ninja_Training.Golden_Dragonfly"
             }
           ]
@@ -1997,8 +2062,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Ninja_Training.Golden_Dragonfly",
               "damageType": "Lethal"
             }
@@ -2015,7 +2081,7 @@
               "duration": 9.33,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Ninja_Training.Golden_Dragonfly",
               "damageType": "Smashing"
             },
@@ -2027,7 +2093,7 @@
               "duration": 9.33,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Ninja_Training.Golden_Dragonfly",
               "damageType": "Lethal"
             },
@@ -2039,7 +2105,7 @@
               "duration": 9.33,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Ninja_Training.Golden_Dragonfly",
               "damageType": "Fire"
             },
@@ -2051,7 +2117,7 @@
               "duration": 9.33,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Ninja_Training.Golden_Dragonfly",
               "damageType": "Cold"
             },
@@ -2063,7 +2129,7 @@
               "duration": 9.33,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Ninja_Training.Golden_Dragonfly",
               "damageType": "Energy"
             },
@@ -2075,7 +2141,7 @@
               "duration": 9.33,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Ninja_Training.Golden_Dragonfly",
               "damageType": "Negative"
             },
@@ -2087,7 +2153,7 @@
               "duration": 9.33,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Ninja_Training.Golden_Dragonfly",
               "damageType": "Toxic"
             },
@@ -2099,13 +2165,24 @@
               "duration": 9.33,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Ninja_Training.Golden_Dragonfly",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Defense_Debuff",
+        "Endurance_Discount",
+        "Knockback",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Support.Ninja_Training.Golden_Dragonfly",
+      "archetypeOrder": "secondary",
       "powerIndex": 8,
       "castTimeReal": 1.83,
       "toggleCost": 11.856,

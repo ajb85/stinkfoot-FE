@@ -6,16 +6,6 @@
   "displayName": "Leviathan Mastery",
   "powers": [
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Immobilize",
-        "Range",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Damage",
@@ -28,8 +18,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Mastermind_Leviathan_Mastery.School_of_Sharks",
               "nearGround": true,
               "damageType": "Negative"
@@ -47,11 +38,12 @@
               "duration": 17.8800011,
               "effectType": "Mez",
               "stacking": 1,
-              "toWho": "Target",
+              "buffable": true,
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.Mastermind_Leviathan_Mastery.School_of_Sharks",
               "nearGround": true,
-              "mezType": "Immobilization"
+              "mezType": "Immob"
             }
           ]
         },
@@ -66,16 +58,28 @@
               "duration": 2,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.Mastermind_Leviathan_Mastery.School_of_Sharks",
               "nearGround": true,
-              "mezType": "Immobilization"
+              "mezType": "Immob"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Immobilize",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Mastermind_Leviathan_Mastery.School_of_Sharks",
+      "archetypeOrder": "epicPool",
       "powerIndex": 0,
       "castTimeReal": 2.37,
       "toggleCost": 12.74,
@@ -117,15 +121,6 @@
       "aoeModifier": 2.44994545
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Range",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Damage",
@@ -138,14 +133,25 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Mastermind_Leviathan_Mastery.Chum_Spray",
               "damageType": "Toxic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Mastermind_Leviathan_Mastery.Chum_Spray",
+      "archetypeOrder": "epicPool",
       "powerIndex": 1,
       "castTimeReal": 2.67,
       "toggleCost": 18.98,
@@ -185,16 +191,6 @@
       "aoeModifier": 2.73993444
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Hold",
-        "Knockback",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Damage",
@@ -207,8 +203,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Mastermind_Leviathan_Mastery.Knockout_Blow",
               "damageType": "Smashing"
             }
@@ -225,8 +222,9 @@
               "duration": 11.92,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.Mastermind_Leviathan_Mastery.Knockout_Blow",
               "mezType": "Hold"
@@ -244,8 +242,9 @@
               "duration": 2,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.Mastermind_Leviathan_Mastery.Knockout_Blow",
               "mezType": "Hold"
@@ -263,23 +262,35 @@
               "probability": 1,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Mastermind_Leviathan_Mastery.Knockout_Blow",
               "mezType": "Knockup"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Hold",
+        "Knockback",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Mastermind_Leviathan_Mastery.Knockout_Blow",
+      "archetypeOrder": "epicPool",
       "powerIndex": 2,
       "castTimeReal": 2.23,
       "toggleCost": 23.14,
+      "isEpic": true,
       "fullName": "Epic_Leviathan_Mastery_Knockout_Blow",
       "displayName": "Knockout Blow",
       "requires": {
         "powers": {
-          "Epic_Leviathan_Mastery_School_of_Sharks": true,
-          "Epic_Leviathan_Mastery_Bile_Spray": true
+          "Epic.Mastermind_Leviathan_Mastery.Knockout_Blow": true
         },
         "count": 1
       },
@@ -313,13 +324,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Endurance_Discount",
-        "Recharge",
-        "Res_Damage"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Res_Dmg",
@@ -332,7 +336,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Mastermind_Leviathan_Mastery.Shark_Skin",
               "damageType": "Smashing"
             },
@@ -344,7 +349,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Mastermind_Leviathan_Mastery.Shark_Skin",
               "damageType": "Lethal"
             },
@@ -356,7 +362,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Mastermind_Leviathan_Mastery.Shark_Skin",
               "damageType": "Cold"
             },
@@ -367,7 +374,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Mastermind_Leviathan_Mastery.Shark_Skin",
               "damageType": "Fire"
             },
@@ -378,7 +386,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Mastermind_Leviathan_Mastery.Shark_Skin",
               "damageType": "Energy"
             },
@@ -389,7 +398,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Mastermind_Leviathan_Mastery.Shark_Skin",
               "damageType": "Negative"
             },
@@ -400,7 +410,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Mastermind_Leviathan_Mastery.Shark_Skin",
               "damageType": "Toxic"
             },
@@ -411,22 +422,31 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Mastermind_Leviathan_Mastery.Shark_Skin",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Endurance_Discount",
+        "Recharge",
+        "Res_Damage"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Mastermind_Leviathan_Mastery.Shark_Skin",
+      "archetypeOrder": "epicPool",
       "powerIndex": 3,
       "castTimeReal": 0.67,
       "toggleCost": 0.325,
+      "isEpic": true,
       "fullName": "Epic_Leviathan_Mastery_Shark_Skin",
       "displayName": "Shark Skin",
       "requires": {
         "powers": {
-          "Epic_Leviathan_Mastery_School_of_Sharks": true,
-          "Epic_Leviathan_Mastery_Bile_Spray": true
+          "Epic.Mastermind_Leviathan_Mastery.Shark_Skin": true
         },
         "count": 1
       },
@@ -457,16 +477,6 @@
       "powerType": "Toggle"
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Hold",
-        "Range",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Immobilize",
@@ -479,8 +489,9 @@
               "duration": 11.92,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.Mastermind_Leviathan_Mastery.Spirit_Shark_Jaws",
               "mezType": "Hold"
@@ -498,8 +509,9 @@
               "duration": 2,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.Mastermind_Leviathan_Mastery.Spirit_Shark_Jaws",
               "mezType": "Hold"
@@ -512,7 +524,8 @@
               "duration": 15,
               "effectType": "Fly",
               "stacking": 1,
-              "toWho": "Target",
+              "buffable": true,
+              "toWho": "target",
               "powerFullName": "Epic.Mastermind_Leviathan_Mastery.Spirit_Shark_Jaws"
             }
           ]
@@ -528,25 +541,35 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Mastermind_Leviathan_Mastery.Spirit_Shark_Jaws",
               "damageType": "Lethal"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Hold",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Mastermind_Leviathan_Mastery.Spirit_Shark_Jaws",
+      "archetypeOrder": "epicPool",
       "powerIndex": 4,
       "castTimeReal": 1.87,
       "toggleCost": 10.66,
+      "isEpic": true,
       "fullName": "Epic_Leviathan_Mastery_Spirit_Shark_Jaws",
       "displayName": "Spirit Shark Jaws",
       "requires": {
         "powers": {
-          "Epic_Leviathan_Mastery_School_of_Sharks": true,
-          "Epic_Leviathan_Mastery_Bile_Spray": true,
-          "Epic_Leviathan_Mastery_Knockout_Blow": true,
-          "Epic_Leviathan_Mastery_Shark_Skin": true
+          "Epic.Mastermind_Leviathan_Mastery.Spirit_Shark_Jaws": true
         },
         "count": 2
       },

@@ -6,16 +6,6 @@
   "displayName": "Street Justice",
   "powers": [
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Recharge",
-        "Stun",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Damage",
@@ -28,8 +18,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Brawling.Initial_Strike",
               "damageType": "Smashing"
             }
@@ -47,8 +38,9 @@
               "duration": 7.15200043,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Brawling.Initial_Strike",
               "mezType": "Stun"
@@ -64,8 +56,9 @@
               },
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Brawling.Initial_Strike",
               "damageType": "Fire"
             }
@@ -83,9 +76,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Brawling.Initial_Strike",
               "requiresToHitCheck": true,
@@ -105,7 +99,7 @@
               "effectType": "Rage",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Brawling.Initial_Strike"
             },
             {
@@ -115,7 +109,7 @@
               "probability": 1,
               "effectType": "GrantPower",
               "specialCase": 21,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Brawling.Initial_Strike"
             },
             {
@@ -125,12 +119,23 @@
               "probability": 1,
               "effectType": "RevokePower",
               "specialCase": 22,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Brawling.Initial_Strike"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Recharge",
+        "Stun",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Brawling.Initial_Strike",
+      "archetypeOrder": "primary",
       "powerIndex": 0,
       "castTimeReal": 0.8,
       "toggleCost": 4.368,
@@ -173,16 +178,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Knockback",
-        "Recharge",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Damage",
@@ -195,8 +190,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Brawling.Heavy_Blow",
               "damageType": "Smashing"
             }
@@ -211,8 +207,9 @@
               },
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Brawling.Heavy_Blow",
               "damageType": "Fire"
             }
@@ -229,8 +226,9 @@
               "probability": 0.3,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Brawling.Heavy_Blow",
               "mezType": "Knockback"
             },
@@ -243,7 +241,7 @@
               "effectType": "Rage",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Brawling.Heavy_Blow"
             },
             {
@@ -253,7 +251,7 @@
               "probability": 1,
               "effectType": "GrantPower",
               "specialCase": 21,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Brawling.Heavy_Blow"
             },
             {
@@ -263,7 +261,7 @@
               "probability": 1,
               "effectType": "RevokePower",
               "specialCase": 22,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Brawling.Heavy_Blow"
             }
           ]
@@ -280,9 +278,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Brawling.Heavy_Blow",
               "requiresToHitCheck": true,
@@ -291,6 +290,17 @@
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Knockback",
+        "Recharge",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Brawling.Heavy_Blow",
+      "archetypeOrder": "primary",
       "powerIndex": 1,
       "castTimeReal": 1.07,
       "toggleCost": 6.032,
@@ -333,16 +343,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Recharge",
-        "Stun",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Damage",
@@ -355,9 +355,10 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 21,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Brawling.Sweeping_Cross",
               "damageType": "Smashing"
             }
@@ -375,9 +376,10 @@
               "duration": 7.15200043,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 22,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Brawling.Sweeping_Cross",
               "mezType": "Stun"
@@ -395,9 +397,10 @@
               "probability": 0.4,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 24,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Brawling.Sweeping_Cross",
               "nearGround": true,
               "mezType": "Knockback"
@@ -411,7 +414,7 @@
               "effectType": "Rage",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Brawling.Sweeping_Cross"
             },
             {
@@ -420,7 +423,7 @@
               },
               "probability": 1,
               "effectType": "RevokePower",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Brawling.Sweeping_Cross"
             }
           ]
@@ -434,8 +437,9 @@
               },
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Brawling.Sweeping_Cross",
               "damageType": "Fire"
             }
@@ -453,9 +457,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Brawling.Sweeping_Cross",
               "requiresToHitCheck": true,
@@ -464,6 +469,17 @@
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Recharge",
+        "Stun",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Brawling.Sweeping_Cross",
+      "archetypeOrder": "primary",
       "powerIndex": 2,
       "castTimeReal": 1.67,
       "toggleCost": 8.528,
@@ -507,13 +523,6 @@
       "aoeModifier": 1.25432611
     },
     {
-      "allowedEnhancements": [
-        "ToHit_Buff",
-        "Endurance_Discount",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Buff_ToHit",
@@ -527,7 +536,8 @@
               "variableModified": true,
               "effectType": "ToHit",
               "stacking": 1,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Brawling.Combat_Readiness"
             }
           ]
@@ -544,7 +554,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Brawling.Combat_Readiness",
               "damageType": "Smashing"
             },
@@ -557,7 +567,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Brawling.Combat_Readiness",
               "damageType": "Lethal"
             },
@@ -570,7 +580,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Brawling.Combat_Readiness",
               "damageType": "Fire"
             },
@@ -583,7 +593,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Brawling.Combat_Readiness",
               "damageType": "Cold"
             },
@@ -596,7 +606,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Brawling.Combat_Readiness",
               "damageType": "Energy"
             },
@@ -609,7 +619,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Brawling.Combat_Readiness",
               "damageType": "Negative"
             },
@@ -622,7 +632,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Brawling.Combat_Readiness",
               "damageType": "Toxic"
             },
@@ -635,7 +645,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Brawling.Combat_Readiness",
               "damageType": "Psionic"
             }
@@ -650,7 +660,7 @@
               },
               "probability": 1,
               "effectType": "RevokePower",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Brawling.Combat_Readiness"
             },
             {
@@ -659,12 +669,20 @@
               },
               "probability": 1,
               "effectType": "GrantPower",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Brawling.Combat_Readiness"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "ToHit_Buff",
+        "Endurance_Discount",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Brawling.Combat_Readiness",
+      "archetypeOrder": "primary",
       "powerIndex": 3,
       "castTimeReal": 1.17,
       "toggleCost": 5.2,
@@ -700,15 +718,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Recharge",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Damage",
@@ -721,8 +730,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Brawling.Throat_Strike",
               "damageType": "Smashing"
             }
@@ -737,8 +747,9 @@
               },
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Brawling.Throat_Strike",
               "damageType": "Fire"
             }
@@ -756,7 +767,7 @@
               "duration": 5,
               "effectType": "DamageBuff",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Brawling.Throat_Strike",
               "damageType": "Smashing"
             },
@@ -769,7 +780,7 @@
               "duration": 5,
               "effectType": "DamageBuff",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Brawling.Throat_Strike",
               "damageType": "Lethal"
             },
@@ -782,7 +793,7 @@
               "duration": 5,
               "effectType": "DamageBuff",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Brawling.Throat_Strike",
               "damageType": "Fire"
             },
@@ -795,7 +806,7 @@
               "duration": 5,
               "effectType": "DamageBuff",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Brawling.Throat_Strike",
               "damageType": "Cold"
             },
@@ -808,7 +819,7 @@
               "duration": 5,
               "effectType": "DamageBuff",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Brawling.Throat_Strike",
               "damageType": "Energy"
             },
@@ -821,7 +832,7 @@
               "duration": 5,
               "effectType": "DamageBuff",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Brawling.Throat_Strike",
               "damageType": "Negative"
             },
@@ -834,7 +845,7 @@
               "duration": 5,
               "effectType": "DamageBuff",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Brawling.Throat_Strike",
               "damageType": "Toxic"
             },
@@ -847,7 +858,7 @@
               "duration": 5,
               "effectType": "DamageBuff",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Brawling.Throat_Strike",
               "damageType": "Psionic"
             }
@@ -865,7 +876,7 @@
               "duration": 5,
               "effectType": "Resistance",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Brawling.Throat_Strike",
               "damageType": "Smashing"
             },
@@ -878,7 +889,7 @@
               "duration": 5,
               "effectType": "Resistance",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Brawling.Throat_Strike",
               "damageType": "Lethal"
             },
@@ -891,7 +902,7 @@
               "duration": 5,
               "effectType": "Resistance",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Brawling.Throat_Strike",
               "damageType": "Fire"
             },
@@ -904,7 +915,7 @@
               "duration": 5,
               "effectType": "Resistance",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Brawling.Throat_Strike",
               "damageType": "Cold"
             },
@@ -917,7 +928,7 @@
               "duration": 5,
               "effectType": "Resistance",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Brawling.Throat_Strike",
               "damageType": "Energy"
             },
@@ -930,7 +941,7 @@
               "duration": 5,
               "effectType": "Resistance",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Brawling.Throat_Strike",
               "damageType": "Negative"
             },
@@ -943,7 +954,7 @@
               "duration": 5,
               "effectType": "Resistance",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Brawling.Throat_Strike",
               "damageType": "Psionic"
             },
@@ -956,7 +967,7 @@
               "duration": 5,
               "effectType": "Resistance",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Brawling.Throat_Strike",
               "damageType": "Toxic"
             }
@@ -974,9 +985,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Brawling.Throat_Strike",
               "requiresToHitCheck": true,
@@ -996,7 +1008,7 @@
               "effectType": "Rage",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Brawling.Throat_Strike"
             },
             {
@@ -1006,7 +1018,7 @@
               "probability": 1,
               "effectType": "GrantPower",
               "specialCase": 21,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Brawling.Throat_Strike"
             },
             {
@@ -1016,12 +1028,22 @@
               "probability": 1,
               "effectType": "RevokePower",
               "specialCase": 22,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Brawling.Throat_Strike"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Recharge",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Brawling.Throat_Strike",
+      "archetypeOrder": "primary",
       "powerIndex": 4,
       "castTimeReal": 1.33,
       "toggleCost": 6.864,
@@ -1063,14 +1085,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Range",
-        "Recharge",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Taunt",
@@ -1084,8 +1098,9 @@
               "duration": 20.5999985,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Brawling.Taunt",
               "mezType": "Taunt"
@@ -1096,21 +1111,30 @@
           "effectType": "Ones",
           "values": [
             {
+              "etModifies": "Range",
               "mag": {
                 "pve": -0.75
               },
               "probability": 1,
               "duration": 12,
               "effectType": "Enhancement",
-              "eTModifies": 24,
               "stacking": 1,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Brawling.Taunt"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Range",
+        "Recharge",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Brawling.Taunt",
+      "archetypeOrder": "primary",
       "powerIndex": 5,
       "castTimeReal": 1.67,
       "fullName": "Brute_Primary_Street_Justice_Taunt",
@@ -1146,16 +1170,6 @@
       "aoeModifier": 3.25
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Knockback",
-        "Recharge",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Damage",
@@ -1168,9 +1182,10 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 21,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Brawling.Spinning_Strike",
               "damageType": "Smashing"
             }
@@ -1188,9 +1203,10 @@
               "effectType": "Mez",
               "delayedTime": 0.4,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 22,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Brawling.Spinning_Strike",
               "nearGround": true,
               "mezType": "Knockback"
@@ -1204,7 +1220,7 @@
               "effectType": "Rage",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Brawling.Spinning_Strike"
             },
             {
@@ -1213,7 +1229,7 @@
               },
               "probability": 1,
               "effectType": "RevokePower",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Brawling.Spinning_Strike"
             }
           ]
@@ -1230,12 +1246,13 @@
               "duration": 7.15200043,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 24,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Brawling.Spinning_Strike",
-              "mezType": "Terrorize"
+              "mezType": "Terror"
             }
           ]
         },
@@ -1248,8 +1265,9 @@
               },
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Brawling.Spinning_Strike",
               "damageType": "Fire"
             }
@@ -1267,9 +1285,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Brawling.Spinning_Strike",
               "requiresToHitCheck": true,
@@ -1278,6 +1297,17 @@
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Knockback",
+        "Recharge",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Brawling.Spinning_Strike",
+      "archetypeOrder": "primary",
       "powerIndex": 6,
       "castTimeReal": 1.8,
       "toggleCost": 15.184,
@@ -1320,17 +1350,6 @@
       "aoeModifier": 1.9
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Defense_Debuff",
-        "Endurance_Discount",
-        "Recharge",
-        "Slow",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Damage",
@@ -1343,8 +1362,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Brawling.Low_Kick",
               "damageType": "Smashing"
             }
@@ -1361,21 +1381,22 @@
               "duration": 8,
               "effectType": "SpeedRunning",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Brawling.Low_Kick"
             },
             {
+              "etModifies": "JumpHeight",
               "mag": {
                 "pve": -0.5
               },
               "probability": 1,
               "duration": 8,
               "effectType": "Enhancement",
-              "eTModifies": 16,
               "stacking": 1,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Brawling.Low_Kick"
             },
             {
@@ -1386,8 +1407,9 @@
               "duration": 8,
               "effectType": "SpeedJumping",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Brawling.Low_Kick"
             }
           ]
@@ -1403,8 +1425,9 @@
               "duration": 8,
               "effectType": "Fly",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Brawling.Low_Kick"
             },
             {
@@ -1416,7 +1439,7 @@
               "effectType": "Rage",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Brawling.Low_Kick"
             },
             {
@@ -1426,7 +1449,7 @@
               "probability": 1,
               "effectType": "GrantPower",
               "specialCase": 21,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Brawling.Low_Kick"
             },
             {
@@ -1436,7 +1459,7 @@
               "probability": 1,
               "effectType": "RevokePower",
               "specialCase": 22,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Brawling.Low_Kick"
             }
           ]
@@ -1453,8 +1476,9 @@
               "duration": 10,
               "effectType": "Defense",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Brawling.Low_Kick"
             }
           ]
@@ -1468,8 +1492,9 @@
               },
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Brawling.Low_Kick",
               "damageType": "Fire"
             }
@@ -1487,9 +1512,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Brawling.Low_Kick",
               "requiresToHitCheck": true,
@@ -1498,6 +1524,18 @@
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Defense_Debuff",
+        "Endurance_Discount",
+        "Recharge",
+        "Slow",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Brawling.Low_Kick",
+      "archetypeOrder": "primary",
       "powerIndex": 7,
       "castTimeReal": 1.33,
       "toggleCost": 8.528,
@@ -1541,18 +1579,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Hold",
-        "Knockback",
-        "Recharge",
-        "Stun",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Damage",
@@ -1565,9 +1591,10 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 21,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Brawling.Crushing_Uppercut",
               "damageType": "Smashing"
             }
@@ -1585,9 +1612,10 @@
               "duration": 8.940001,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 22,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Brawling.Crushing_Uppercut",
               "mezType": "Stun"
@@ -1601,9 +1629,10 @@
               "duration": 12.5160007,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 24,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Brawling.Crushing_Uppercut",
               "mezType": "Hold"
@@ -1621,8 +1650,9 @@
               "probability": 1,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Brawling.Crushing_Uppercut",
               "mezType": "Knockup"
             }
@@ -1637,8 +1667,9 @@
               },
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Brawling.Crushing_Uppercut",
               "damageType": "Fire"
             }
@@ -1656,9 +1687,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Brawling.Crushing_Uppercut",
               "requiresToHitCheck": true,
@@ -1678,7 +1710,7 @@
               "effectType": "Rage",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Brawling.Crushing_Uppercut"
             },
             {
@@ -1687,12 +1719,25 @@
               },
               "probability": 1,
               "effectType": "RevokePower",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Brawling.Crushing_Uppercut"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Hold",
+        "Knockback",
+        "Recharge",
+        "Stun",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Brawling.Crushing_Uppercut",
+      "archetypeOrder": "primary",
       "powerIndex": 8,
       "castTimeReal": 2.17,
       "toggleCost": 14.352,

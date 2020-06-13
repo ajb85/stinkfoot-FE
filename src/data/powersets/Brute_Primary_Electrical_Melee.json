@@ -6,17 +6,6 @@
   "displayName": "Electrical Melee",
   "powers": [
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Recharge",
-        "Endurance_Modification",
-        "Sleep",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Damage",
@@ -29,8 +18,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Electrical_Melee.Charged_Brawl",
               "damageType": "Smashing"
             },
@@ -42,8 +32,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Electrical_Melee.Charged_Brawl",
               "damageType": "Energy"
             }
@@ -61,8 +52,9 @@
               "effectType": "Mez",
               "delayedTime": 0.25,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Electrical_Melee.Charged_Brawl",
               "mezType": "Sleep"
@@ -81,8 +73,9 @@
               "effectType": "Mez",
               "delayedTime": 0.25,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Electrical_Melee.Charged_Brawl",
               "mezType": "Sleep"
@@ -94,8 +87,9 @@
               "probability": 1,
               "effectType": "Endurance",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Electrical_Melee.Charged_Brawl"
             },
             {
@@ -106,8 +100,9 @@
               "duration": 2,
               "effectType": "Recovery",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Electrical_Melee.Charged_Brawl"
             },
             {
@@ -118,7 +113,8 @@
               "variableModified": true,
               "effectType": "Endurance",
               "stacking": 1,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Electrical_Melee.Charged_Brawl"
             },
             {
@@ -130,7 +126,7 @@
               "effectType": "Rage",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Electrical_Melee.Charged_Brawl"
             }
           ]
@@ -145,8 +141,9 @@
               "probability": 1,
               "effectType": "Endurance",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Electrical_Melee.Charged_Brawl"
             }
           ]
@@ -163,9 +160,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Electrical_Melee.Charged_Brawl",
               "requiresToHitCheck": true,
@@ -182,14 +180,27 @@
               },
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Electrical_Melee.Charged_Brawl",
               "damageType": "Fire"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Recharge",
+        "Endurance_Modification",
+        "Sleep",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Electrical_Melee.Charged_Brawl",
+      "archetypeOrder": "primary",
       "powerIndex": 0,
       "castTimeReal": 0.83,
       "toggleCost": 4.368,
@@ -232,17 +243,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Recharge",
-        "Endurance_Modification",
-        "Sleep",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Damage",
@@ -255,8 +255,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Electrical_Melee.Havoc_Punch",
               "damageType": "Smashing"
             },
@@ -268,8 +269,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Electrical_Melee.Havoc_Punch",
               "damageType": "Energy"
             }
@@ -287,8 +289,9 @@
               "effectType": "Mez",
               "delayedTime": 0.25,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Electrical_Melee.Havoc_Punch",
               "mezType": "Sleep"
@@ -307,8 +310,9 @@
               "effectType": "Mez",
               "delayedTime": 0.25,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Electrical_Melee.Havoc_Punch",
               "mezType": "Sleep"
@@ -320,8 +324,9 @@
               "probability": 1,
               "effectType": "Endurance",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Electrical_Melee.Havoc_Punch"
             },
             {
@@ -332,8 +337,9 @@
               "duration": 4,
               "effectType": "Recovery",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Electrical_Melee.Havoc_Punch"
             },
             {
@@ -344,7 +350,8 @@
               "variableModified": true,
               "effectType": "Endurance",
               "stacking": 1,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Electrical_Melee.Havoc_Punch"
             },
             {
@@ -356,7 +363,7 @@
               "effectType": "Rage",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Electrical_Melee.Havoc_Punch"
             }
           ]
@@ -371,8 +378,9 @@
               "probability": 1,
               "effectType": "Endurance",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Electrical_Melee.Havoc_Punch"
             }
           ]
@@ -389,9 +397,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Electrical_Melee.Havoc_Punch",
               "requiresToHitCheck": true,
@@ -408,14 +417,27 @@
               },
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Electrical_Melee.Havoc_Punch",
               "damageType": "Fire"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Recharge",
+        "Endurance_Modification",
+        "Sleep",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Electrical_Melee.Havoc_Punch",
+      "archetypeOrder": "primary",
       "powerIndex": 1,
       "castTimeReal": 1.5,
       "toggleCost": 6.864,
@@ -458,17 +480,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Recharge",
-        "Endurance_Modification",
-        "Sleep",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Damage",
@@ -481,8 +492,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Electrical_Melee.Jacobs_Ladder",
               "damageType": "Energy"
             }
@@ -500,8 +512,9 @@
               "effectType": "Mez",
               "delayedTime": 0.25,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Electrical_Melee.Jacobs_Ladder",
               "mezType": "Sleep"
@@ -520,8 +533,9 @@
               "effectType": "Mez",
               "delayedTime": 0.25,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Electrical_Melee.Jacobs_Ladder",
               "mezType": "Sleep"
@@ -533,8 +547,9 @@
               "probability": 1,
               "effectType": "Endurance",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Electrical_Melee.Jacobs_Ladder"
             },
             {
@@ -545,8 +560,9 @@
               "duration": 2,
               "effectType": "Recovery",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Electrical_Melee.Jacobs_Ladder"
             },
             {
@@ -558,7 +574,7 @@
               "effectType": "Rage",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Electrical_Melee.Jacobs_Ladder"
             }
           ]
@@ -573,8 +589,9 @@
               "probability": 1,
               "effectType": "Endurance",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Electrical_Melee.Jacobs_Ladder"
             }
           ]
@@ -591,9 +608,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Electrical_Melee.Jacobs_Ladder",
               "requiresToHitCheck": true,
@@ -610,14 +628,27 @@
               },
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Electrical_Melee.Jacobs_Ladder",
               "damageType": "Fire"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Recharge",
+        "Endurance_Modification",
+        "Sleep",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Electrical_Melee.Jacobs_Ladder",
+      "archetypeOrder": "primary",
       "powerIndex": 2,
       "castTimeReal": 1.67,
       "toggleCost": 8.528,
@@ -663,13 +694,6 @@
       "aoeModifier": 1.25432611
     },
     {
-      "allowedEnhancements": [
-        "ToHit_Buff",
-        "Endurance_Discount",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Buff_ToHit",
@@ -683,7 +707,8 @@
               "variableModified": true,
               "effectType": "ToHit",
               "stacking": 1,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Electrical_Melee.Build_Up"
             }
           ]
@@ -700,7 +725,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Electrical_Melee.Build_Up",
               "damageType": "Smashing"
             },
@@ -713,7 +738,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Electrical_Melee.Build_Up",
               "damageType": "Lethal"
             },
@@ -726,7 +751,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Electrical_Melee.Build_Up",
               "damageType": "Fire"
             },
@@ -739,7 +764,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Electrical_Melee.Build_Up",
               "damageType": "Cold"
             },
@@ -752,7 +777,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Electrical_Melee.Build_Up",
               "damageType": "Energy"
             },
@@ -765,7 +790,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Electrical_Melee.Build_Up",
               "damageType": "Negative"
             },
@@ -778,7 +803,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Electrical_Melee.Build_Up",
               "damageType": "Toxic"
             },
@@ -791,13 +816,21 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Electrical_Melee.Build_Up",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "ToHit_Buff",
+        "Endurance_Discount",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Electrical_Melee.Build_Up",
+      "archetypeOrder": "primary",
       "powerIndex": 3,
       "castTimeReal": 1.17,
       "toggleCost": 5.2,
@@ -832,17 +865,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Knockback",
-        "Recharge",
-        "Stun",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Damage",
@@ -855,8 +877,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Electrical_Melee.Thunder_Strike",
               "damageType": "Smashing"
             },
@@ -868,8 +891,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Electrical_Melee.Thunder_Strike",
               "damageType": "Energy"
             }
@@ -886,8 +910,9 @@
               "duration": 5.96,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Electrical_Melee.Thunder_Strike",
               "mezType": "Stun"
@@ -905,8 +930,9 @@
               "duration": 2,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Electrical_Melee.Thunder_Strike",
               "mezType": "Stun"
@@ -918,8 +944,9 @@
               "probability": 1,
               "effectType": "Endurance",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Electrical_Melee.Thunder_Strike"
             },
             {
@@ -930,8 +957,9 @@
               "duration": 4,
               "effectType": "Recovery",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Electrical_Melee.Thunder_Strike"
             },
             {
@@ -942,8 +970,9 @@
               "probability": 0.8,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Electrical_Melee.Thunder_Strike",
               "mezType": "Knockback"
             },
@@ -956,7 +985,7 @@
               "effectType": "Rage",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Electrical_Melee.Thunder_Strike"
             }
           ]
@@ -971,8 +1000,9 @@
               "probability": 1,
               "effectType": "Endurance",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Electrical_Melee.Thunder_Strike"
             }
           ]
@@ -989,9 +1019,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Electrical_Melee.Thunder_Strike",
               "requiresToHitCheck": true,
@@ -1008,14 +1039,27 @@
               },
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Electrical_Melee.Thunder_Strike",
               "damageType": "Fire"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Knockback",
+        "Recharge",
+        "Stun",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Electrical_Melee.Thunder_Strike",
+      "archetypeOrder": "primary",
       "powerIndex": 4,
       "castTimeReal": 3.3,
       "toggleCost": 10.192,
@@ -1060,14 +1104,6 @@
       "aoeModifier": 2.05
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Range",
-        "Recharge",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Taunt",
@@ -1081,8 +1117,9 @@
               "duration": 20.5999985,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Electrical_Melee.Taunt",
               "mezType": "Taunt"
@@ -1093,16 +1130,16 @@
           "effectType": "Ones",
           "values": [
             {
+              "etModifies": "Range",
               "mag": {
                 "pve": -0.75
               },
               "probability": 1,
               "duration": 12,
               "effectType": "Enhancement",
-              "eTModifies": 24,
               "stacking": 1,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Electrical_Melee.Taunt"
             },
             {
@@ -1112,14 +1149,24 @@
               "probability": 1,
               "effectType": "Null",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Electrical_Melee.Taunt",
               "requiresToHitCheck": true
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Range",
+        "Recharge",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Electrical_Melee.Taunt",
+      "archetypeOrder": "primary",
       "powerIndex": 5,
       "castTimeReal": 1.67,
       "fullName": "Brute_Primary_Electrical_Melee_Taunt",
@@ -1155,16 +1202,6 @@
       "aoeModifier": 3.25
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Recharge",
-        "Endurance_Modification",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Damage",
@@ -1177,8 +1214,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Electrical_Melee.Chain_Induction",
               "damageType": "Smashing"
             },
@@ -1190,8 +1228,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Electrical_Melee.Chain_Induction",
               "damageType": "Energy"
             }
@@ -1208,7 +1247,7 @@
               "duration": 2,
               "effectType": "Null",
               "stacking": 1,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Electrical_Melee.Chain_Induction"
             },
             {
@@ -1221,8 +1260,9 @@
               "effectType": "EntCreate",
               "delayedTime": 0.5,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Electrical_Melee.Chain_Induction"
             },
             {
@@ -1233,7 +1273,7 @@
               "duration": 4,
               "effectType": "SetMode",
               "ticks": 1,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Electrical_Melee.Chain_Induction"
             },
             {
@@ -1243,8 +1283,9 @@
               "probability": 1,
               "effectType": "Endurance",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Electrical_Melee.Chain_Induction"
             },
             {
@@ -1255,8 +1296,9 @@
               "duration": 4,
               "effectType": "Recovery",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Electrical_Melee.Chain_Induction"
             },
             {
@@ -1267,7 +1309,7 @@
               "effectType": "Rage",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Electrical_Melee.Chain_Induction"
             }
           ]
@@ -1282,8 +1324,9 @@
               "probability": 1,
               "effectType": "Endurance",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Electrical_Melee.Chain_Induction"
             }
           ]
@@ -1300,9 +1343,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Electrical_Melee.Chain_Induction",
               "requiresToHitCheck": true,
@@ -1319,14 +1363,26 @@
               },
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Electrical_Melee.Chain_Induction",
               "damageType": "Fire"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Recharge",
+        "Endurance_Modification",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Electrical_Melee.Chain_Induction",
+      "archetypeOrder": "primary",
       "powerIndex": 6,
       "castTimeReal": 1,
       "toggleCost": 10.192,
@@ -1368,16 +1424,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Endurance_Discount",
-        "Knockback",
-        "Recharge",
-        "Stun",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Stun",
@@ -1390,8 +1436,9 @@
               "duration": 9.536,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Electrical_Melee.Lightning_Clap",
               "mezType": "Stun"
@@ -1409,8 +1456,9 @@
               "duration": 2,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Electrical_Melee.Lightning_Clap",
               "mezType": "Stun"
@@ -1424,7 +1472,7 @@
               "effectType": "Rage",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Electrical_Melee.Lightning_Clap"
             }
           ]
@@ -1440,8 +1488,9 @@
               "probability": 1,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Electrical_Melee.Lightning_Clap",
               "mezType": "Knockback"
             }
@@ -1459,9 +1508,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Electrical_Melee.Lightning_Clap",
               "requiresToHitCheck": true,
@@ -1478,14 +1528,26 @@
               },
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Electrical_Melee.Lightning_Clap",
               "damageType": "Fire"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Endurance_Discount",
+        "Knockback",
+        "Recharge",
+        "Stun",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Electrical_Melee.Lightning_Clap",
+      "archetypeOrder": "primary",
       "powerIndex": 7,
       "castTimeReal": 1.23,
       "toggleCost": 13,
@@ -1526,17 +1588,6 @@
       "aoeModifier": 3.25
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Knockback",
-        "Range",
-        "Recharge",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Ones",
@@ -1550,7 +1601,8 @@
               "effectType": "Mez",
               "delayedTime": 0.5,
               "stacking": 1,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Electrical_Melee.Lightning_Rod",
               "mezType": "Teleport"
             },
@@ -1562,7 +1614,7 @@
               "duration": 4,
               "effectType": "EntCreate",
               "delayedTime": 0.625,
-              "toWho": "All",
+              "toWho": "all",
               "powerFullName": "Brute_Melee.Electrical_Melee.Lightning_Rod"
             }
           ]
@@ -1577,12 +1629,24 @@
               "duration": 4,
               "effectType": "EntCreate",
               "delayedTime": 0.625,
-              "toWho": "All",
+              "toWho": "all",
               "powerFullName": "Brute_Melee.Electrical_Melee.Lightning_Rod"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Knockback",
+        "Range",
+        "Recharge",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Electrical_Melee.Lightning_Rod",
+      "archetypeOrder": "primary",
       "powerIndex": 8,
       "castTimeReal": 2.57,
       "toggleCost": 13.52,

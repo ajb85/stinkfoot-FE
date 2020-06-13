@@ -2,651 +2,253 @@
   "fullName": "IOSet.Fury_of_the_Gladiator",
   "enhancements": [
     {
-      "effects": [
-        {
-          "effectType": "Damage",
-          "values": [
-            {
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Fury_of_the_Gladiator_A.Attuned_Fury_of_the_Gladiator_A",
-              "damageType": "Smashing"
-            }
-          ]
-        },
-        {
-          "effectType": "Boosts_33",
-          "values": [
-            {
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Fury_of_the_Gladiator_A.Attuned_Fury_of_the_Gladiator_A",
-              "damageType": "Lethal"
-            },
-            {
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Fury_of_the_Gladiator_A.Attuned_Fury_of_the_Gladiator_A",
-              "damageType": "Fire"
-            },
-            {
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Fury_of_the_Gladiator_A.Attuned_Fury_of_the_Gladiator_A",
-              "damageType": "Cold"
-            },
-            {
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Fury_of_the_Gladiator_A.Attuned_Fury_of_the_Gladiator_A",
-              "damageType": "Energy"
-            },
-            {
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Fury_of_the_Gladiator_A.Attuned_Fury_of_the_Gladiator_A",
-              "damageType": "Negative"
-            },
-            {
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Fury_of_the_Gladiator_A.Attuned_Fury_of_the_Gladiator_A",
-              "damageType": "Toxic"
-            },
-            {
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Fury_of_the_Gladiator_A.Attuned_Fury_of_the_Gladiator_A",
-              "damageType": "Psionic"
-            }
-          ]
-        },
-        {
-          "effectType": "Accuracy",
-          "values": [
-            {
-              "etModifies": "Accuracy",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Fury_of_the_Gladiator_A.Attuned_Fury_of_the_Gladiator_A"
-            }
-          ]
-        }
-      ],
+      "type": "set",
+      "fullName": "Boosts.Attuned_Fury_of_the_Gladiator_A.Attuned_Fury_of_the_Gladiator_A",
+      "displayName": "Damage/Accuracy",
       "description": {
         "short": "Enhances Accuracy and Damage",
         "long": "Enhances the damage of a power by {Boost.Attrib.Damage.Scale}% and accuracy by {Boost.Attrib.Accuracy.Scale}%. NOTE: This is a PvP enhancement, this type of enhancement has two groups of set bonuses.  You get the set bonuses not marked \"\"(PvP)\"\" while experiencing PvE content, but you get both the PvP set bonuses and the PvE set bonuses when fighting players."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Fury_of_the_Gladiator_A.Attuned_Fury_of_the_Gladiator_A",
-      "setName": "Fury_of_the_Gladiator",
-      "displayName": "Damage/Accuracy"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Damage",
-          "values": [
-            {
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Fury_of_the_Gladiator_B.Attuned_Fury_of_the_Gladiator_B",
-              "damageType": "Smashing"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
+          },
+          "stat": "Damage",
+          "damageType": [
+            "Smashing",
+            "Lethal",
+            "Fire",
+            "Cold",
+            "Energy",
+            "Negative",
+            "Toxic",
+            "Psionic"
+          ],
+          "toWho": "self"
         },
         {
-          "effectType": "Boosts_33",
-          "values": [
-            {
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Fury_of_the_Gladiator_B.Attuned_Fury_of_the_Gladiator_B",
-              "damageType": "Lethal"
-            },
-            {
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Fury_of_the_Gladiator_B.Attuned_Fury_of_the_Gladiator_B",
-              "damageType": "Fire"
-            },
-            {
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Fury_of_the_Gladiator_B.Attuned_Fury_of_the_Gladiator_B",
-              "damageType": "Cold"
-            },
-            {
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Fury_of_the_Gladiator_B.Attuned_Fury_of_the_Gladiator_B",
-              "damageType": "Energy"
-            },
-            {
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Fury_of_the_Gladiator_B.Attuned_Fury_of_the_Gladiator_B",
-              "damageType": "Negative"
-            },
-            {
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Fury_of_the_Gladiator_B.Attuned_Fury_of_the_Gladiator_B",
-              "damageType": "Toxic"
-            },
-            {
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Fury_of_the_Gladiator_B.Attuned_Fury_of_the_Gladiator_B",
-              "damageType": "Psionic"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
-        },
-        {
-          "effectType": "Recharge",
-          "values": [
-            {
-              "etModifies": "RechargeTime",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Fury_of_the_Gladiator_B.Attuned_Fury_of_the_Gladiator_B"
-            }
-          ]
+          },
+          "stat": "Accuracy",
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Fury_of_the_Gladiator_B.Attuned_Fury_of_the_Gladiator_B",
+      "displayName": "Damage/Recharge",
       "description": {
         "short": "Enhances Damage and Recharge",
         "long": "Enhances the damage of a power by {Boost.Attrib.Damage.Scale}% and reduces recharge time by {Boost.Attrib.Recharge.Scale}%.  NOTE: This is a PvP enhancement, this type of enhancement has two groups of set bonuses.  You get the set bonuses not marked \"\"(PvP)\"\" while experiencing PvE content, but you get both the PvP set bonuses and the PvE set bonuses when fighting players."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Fury_of_the_Gladiator_B.Attuned_Fury_of_the_Gladiator_B",
-      "setName": "Fury_of_the_Gladiator",
-      "displayName": "Damage/Recharge"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Damage",
-          "values": [
-            {
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Fury_of_the_Gladiator_C.Attuned_Fury_of_the_Gladiator_C",
-              "damageType": "Smashing"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
+          },
+          "stat": "Damage",
+          "damageType": [
+            "Smashing",
+            "Lethal",
+            "Fire",
+            "Cold",
+            "Energy",
+            "Negative",
+            "Toxic",
+            "Psionic"
+          ],
+          "toWho": "self"
         },
         {
-          "effectType": "Boosts_33",
-          "values": [
-            {
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Fury_of_the_Gladiator_C.Attuned_Fury_of_the_Gladiator_C",
-              "damageType": "Lethal"
-            },
-            {
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Fury_of_the_Gladiator_C.Attuned_Fury_of_the_Gladiator_C",
-              "damageType": "Fire"
-            },
-            {
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Fury_of_the_Gladiator_C.Attuned_Fury_of_the_Gladiator_C",
-              "damageType": "Cold"
-            },
-            {
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Fury_of_the_Gladiator_C.Attuned_Fury_of_the_Gladiator_C",
-              "damageType": "Energy"
-            },
-            {
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Fury_of_the_Gladiator_C.Attuned_Fury_of_the_Gladiator_C",
-              "damageType": "Negative"
-            },
-            {
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Fury_of_the_Gladiator_C.Attuned_Fury_of_the_Gladiator_C",
-              "damageType": "Toxic"
-            },
-            {
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Fury_of_the_Gladiator_C.Attuned_Fury_of_the_Gladiator_C",
-              "damageType": "Psionic"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
-        },
-        {
-          "effectType": "Recharge",
-          "values": [
-            {
-              "etModifies": "RechargeTime",
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Fury_of_the_Gladiator_C.Attuned_Fury_of_the_Gladiator_C"
-            }
-          ]
-        },
-        {
-          "effectType": "Endurance",
-          "values": [
-            {
-              "etModifies": "EnduranceDiscount",
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Fury_of_the_Gladiator_C.Attuned_Fury_of_the_Gladiator_C"
-            }
-          ]
+          },
+          "stat": "Recharge",
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Fury_of_the_Gladiator_C.Attuned_Fury_of_the_Gladiator_C",
+      "displayName": "Damage/Endurance/Recharge",
       "description": {
         "short": "Enhances Damage, Reduces Endurance Cost and Increases Attack Rate",
         "long": "Enhances the damage of a power by {Boost.Attrib.Damage.Scale}%, reduces recharge time by {Boost.Attrib.Recharge.Scale}% and endurance cost by {Boost.Attrib.Endurance.Scale}%.  NOTE: This is a PvP enhancement, this type of enhancement has two groups of set bonuses.  You get the set bonuses not marked \"\"(PvP)\"\" while experiencing PvE content, but you get both the PvP set bonuses and the PvE set bonuses when fighting players."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Fury_of_the_Gladiator_C.Attuned_Fury_of_the_Gladiator_C",
-      "setName": "Fury_of_the_Gladiator",
-      "displayName": "Damage/Endurance/Recharge"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Accuracy",
-          "values": [
-            {
-              "etModifies": "Accuracy",
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Fury_of_the_Gladiator_D.Attuned_Fury_of_the_Gladiator_D"
+          "mag": {
+            "IO": {
+              "cap": 0.212
             }
-          ]
+          },
+          "stat": "Damage",
+          "damageType": [
+            "Smashing",
+            "Lethal",
+            "Fire",
+            "Cold",
+            "Energy",
+            "Negative",
+            "Toxic",
+            "Psionic"
+          ],
+          "toWho": "self"
         },
         {
-          "effectType": "Endurance",
-          "values": [
-            {
-              "etModifies": "EnduranceDiscount",
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Fury_of_the_Gladiator_D.Attuned_Fury_of_the_Gladiator_D"
+          "mag": {
+            "IO": {
+              "cap": 0.212
             }
-          ]
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self"
         },
         {
-          "effectType": "Recharge",
-          "values": [
-            {
-              "etModifies": "RechargeTime",
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Fury_of_the_Gladiator_D.Attuned_Fury_of_the_Gladiator_D"
+          "mag": {
+            "IO": {
+              "cap": 0.212
             }
-          ]
+          },
+          "stat": "Recharge",
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Fury_of_the_Gladiator_D.Attuned_Fury_of_the_Gladiator_D",
+      "displayName": "Accuracy/Endurance/Recharge",
       "description": {
         "short": "Enhances Accuracy, Reduces Endurance Cost and Increases Attack Rate",
         "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}%, reduces recharge time by {Boost.Attrib.Recharge.Scale}% and endurance cost by {Boost.Attrib.Endurance.Scale}%.  NOTE: This is a PvP enhancement, this type of enhancement has two groups of set bonuses.  You get the set bonuses not marked \"\"(PvP)\"\" while experiencing PvE content, but you get both the PvP set bonuses and the PvE set bonuses when fighting players."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Fury_of_the_Gladiator_D.Attuned_Fury_of_the_Gladiator_D",
-      "setName": "Fury_of_the_Gladiator",
-      "displayName": "Accuracy/Endurance/Recharge"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Damage",
-          "values": [
-            {
-              "mag": {
-                "pve": 0.1855
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Fury_of_the_Gladiator_E.Attuned_Fury_of_the_Gladiator_E",
-              "damageType": "Smashing"
+          "mag": {
+            "IO": {
+              "cap": 0.212
             }
-          ]
+          },
+          "stat": "Accuracy",
+          "toWho": "self"
         },
         {
-          "effectType": "Boosts_33",
-          "values": [
-            {
-              "mag": {
-                "pve": 0.1855
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Fury_of_the_Gladiator_E.Attuned_Fury_of_the_Gladiator_E",
-              "damageType": "Lethal"
-            },
-            {
-              "mag": {
-                "pve": 0.1855
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Fury_of_the_Gladiator_E.Attuned_Fury_of_the_Gladiator_E",
-              "damageType": "Fire"
-            },
-            {
-              "mag": {
-                "pve": 0.1855
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Fury_of_the_Gladiator_E.Attuned_Fury_of_the_Gladiator_E",
-              "damageType": "Cold"
-            },
-            {
-              "mag": {
-                "pve": 0.1855
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Fury_of_the_Gladiator_E.Attuned_Fury_of_the_Gladiator_E",
-              "damageType": "Energy"
-            },
-            {
-              "mag": {
-                "pve": 0.1855
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Fury_of_the_Gladiator_E.Attuned_Fury_of_the_Gladiator_E",
-              "damageType": "Negative"
-            },
-            {
-              "mag": {
-                "pve": 0.1855
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Fury_of_the_Gladiator_E.Attuned_Fury_of_the_Gladiator_E",
-              "damageType": "Toxic"
-            },
-            {
-              "mag": {
-                "pve": 0.1855
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Fury_of_the_Gladiator_E.Attuned_Fury_of_the_Gladiator_E",
-              "damageType": "Psionic"
+          "mag": {
+            "IO": {
+              "cap": 0.212
             }
-          ]
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self"
         },
         {
-          "effectType": "Accuracy",
-          "values": [
-            {
-              "etModifies": "Accuracy",
-              "mag": {
-                "pve": 0.1855
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Fury_of_the_Gladiator_E.Attuned_Fury_of_the_Gladiator_E"
+          "mag": {
+            "IO": {
+              "cap": 0.212
             }
-          ]
-        },
-        {
-          "effectType": "Recharge",
-          "values": [
-            {
-              "etModifies": "RechargeTime",
-              "mag": {
-                "pve": 0.1855
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Fury_of_the_Gladiator_E.Attuned_Fury_of_the_Gladiator_E"
-            }
-          ]
-        },
-        {
-          "effectType": "Endurance",
-          "values": [
-            {
-              "etModifies": "EnduranceDiscount",
-              "mag": {
-                "pve": 0.1855
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Fury_of_the_Gladiator_E.Attuned_Fury_of_the_Gladiator_E"
-            }
-          ]
+          },
+          "stat": "Recharge",
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Fury_of_the_Gladiator_E.Attuned_Fury_of_the_Gladiator_E",
+      "displayName": "Accuracy/Damage/Endurance/Recharge",
       "description": {
         "short": "Enhances Accuracy, Damage, Recharge, and Reduces Endurance Cost",
         "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}%, damage by {Boost.Attrib.Damage.Scale}%, reduces endurance cost by {Boost.Attrib.Endurance.Scale}% and reduces recharge time by {Boost.Attrib.Recharge.Scale}%.  NOTE: This is a PvP enhancement, this type of enhancement has two groups of set bonuses.  You get the set bonuses not marked \"\"(PvP)\"\" while experiencing PvE content, but you get both the PvP set bonuses and the PvE set bonuses when fighting players."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Fury_of_the_Gladiator_E.Attuned_Fury_of_the_Gladiator_E",
-      "setName": "Fury_of_the_Gladiator",
-      "displayName": "Accuracy/Damage/Endurance/Recharge"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Ones",
-          "values": [
-            {
-              "mag": {
-                "pve": -0.2
-              },
-              "procsPerMinute": 3.5,
-              "probability": 0.2,
-              "duration": 10,
-              "effectType": "Resistance",
-              "resistible": true,
-              "toWho": "all",
-              "powerFullName": "Boosts.Attuned_Fury_of_the_Gladiator_F.Attuned_Fury_of_the_Gladiator_F"
+          "mag": {
+            "IO": {
+              "cap": 0.1855
             }
-          ]
+          },
+          "stat": "Accuracy",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.1855
+            }
+          },
+          "stat": "Damage",
+          "damageType": [
+            "Smashing",
+            "Lethal",
+            "Fire",
+            "Cold",
+            "Energy",
+            "Negative",
+            "Toxic",
+            "Psionic"
+          ],
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.1855
+            }
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.1855
+            }
+          },
+          "stat": "Recharge",
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Fury_of_the_Gladiator_F.Attuned_Fury_of_the_Gladiator_F",
+      "displayName": "Chance for -Res",
       "description": {
         "short": "-RES (All)",
         "long": "UNIQUE -- No more than 1 enhancement of this type may be slotted by a character. Gives a chance to reduce your foes' damage resistance by 20%.  This effect will trigger roughly 3.5 times per minute.  NOTE: This is a PvP enhancement, this type of enhancement has two groups of set bonuses.  You get the set bonuses not marked \"\"(PvP)\"\" while experiencing PvE content, but you get both the PvP set bonuses and the PvE set bonuses when fighting players."
       },
-      "isUnique": true,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Fury_of_the_Gladiator_F.Attuned_Fury_of_the_Gladiator_F",
-      "setName": "Fury_of_the_Gladiator",
-      "displayName": "Chance for -Res"
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": -0.2
+            }
+          },
+          "stat": "Chance for -Res",
+          "procsPerMinute": 3.5,
+          "resistible": true,
+          "toWho": "all"
+        }
+      ]
     }
   ],
   "levels": {

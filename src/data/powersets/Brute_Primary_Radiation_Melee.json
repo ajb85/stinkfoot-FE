@@ -6,16 +6,6 @@
   "displayName": "Radiation Melee",
   "powers": [
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Defense_Debuff",
-        "Endurance_Discount",
-        "Recharge",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Damage",
@@ -28,8 +18,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Radiation_Melee.Contaminated_Strike",
               "damageType": "Smashing"
             },
@@ -41,8 +32,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Radiation_Melee.Contaminated_Strike",
               "damageType": "Energy"
             }
@@ -60,8 +52,9 @@
               "duration": 10,
               "effectType": "Defense",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Radiation_Melee.Contaminated_Strike"
             }
           ]
@@ -75,7 +68,7 @@
               },
               "probability": 0.12,
               "effectType": "GrantPower",
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Radiation_Melee.Contaminated_Strike"
             }
           ]
@@ -90,7 +83,7 @@
               "probability": 1,
               "variableModified": true,
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Radiation_Melee.Contaminated_Strike"
             },
             {
@@ -102,7 +95,7 @@
               "effectType": "Rage",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Radiation_Melee.Contaminated_Strike"
             }
           ]
@@ -119,8 +112,9 @@
               "effectType": "Damage",
               "delayedTime": 0.5,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Radiation_Melee.Contaminated_Strike",
               "damageType": "Toxic"
             }
@@ -138,9 +132,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Radiation_Melee.Contaminated_Strike",
               "requiresToHitCheck": true,
@@ -157,14 +152,26 @@
               },
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Radiation_Melee.Contaminated_Strike",
               "damageType": "Fire"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Defense_Debuff",
+        "Endurance_Discount",
+        "Recharge",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Radiation_Melee.Contaminated_Strike",
+      "archetypeOrder": "primary",
       "powerIndex": 0,
       "castTimeReal": 0.83,
       "toggleCost": 4.368,
@@ -210,17 +217,6 @@
       "aoeModifier": 2.2
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Defense_Debuff",
-        "Endurance_Discount",
-        "Knockback",
-        "Recharge",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Damage",
@@ -233,8 +229,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Radiation_Melee.Radioactive_Smash",
               "damageType": "Smashing"
             },
@@ -246,8 +243,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Radiation_Melee.Radioactive_Smash",
               "damageType": "Energy"
             }
@@ -265,8 +263,9 @@
               "duration": 10,
               "effectType": "Defense",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Radiation_Melee.Radioactive_Smash"
             }
           ]
@@ -280,7 +279,7 @@
               },
               "probability": 0.23,
               "effectType": "GrantPower",
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Radiation_Melee.Radioactive_Smash"
             }
           ]
@@ -295,7 +294,7 @@
               "probability": 1,
               "variableModified": true,
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Radiation_Melee.Radioactive_Smash"
             },
             {
@@ -306,8 +305,9 @@
               "probability": 0.33,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Radiation_Melee.Radioactive_Smash",
               "mezType": "Knockback"
             },
@@ -320,7 +320,7 @@
               "effectType": "Rage",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Radiation_Melee.Radioactive_Smash"
             }
           ]
@@ -337,8 +337,9 @@
               "effectType": "Damage",
               "delayedTime": 0.5,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Radiation_Melee.Radioactive_Smash",
               "damageType": "Toxic"
             }
@@ -356,9 +357,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Radiation_Melee.Radioactive_Smash",
               "requiresToHitCheck": true,
@@ -375,14 +377,27 @@
               },
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Radiation_Melee.Radioactive_Smash",
               "damageType": "Fire"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Defense_Debuff",
+        "Endurance_Discount",
+        "Knockback",
+        "Recharge",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Radiation_Melee.Radioactive_Smash",
+      "archetypeOrder": "primary",
       "powerIndex": 1,
       "castTimeReal": 1.5,
       "toggleCost": 7.696,
@@ -429,17 +444,6 @@
       "aoeModifier": 2.2
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Defense_Debuff",
-        "Endurance_Discount",
-        "Knockback",
-        "Recharge",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Damage",
@@ -455,8 +459,9 @@
               "ticks": 4,
               "delayedTime": 0.5,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Radiation_Melee.Proton_Sweep",
               "damageType": "Energy"
             },
@@ -471,8 +476,9 @@
               "ticks": 4,
               "delayedTime": 0.5,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Radiation_Melee.Proton_Sweep",
               "damageType": "Toxic"
             }
@@ -490,8 +496,9 @@
               "duration": 10,
               "effectType": "Defense",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Radiation_Melee.Proton_Sweep"
             }
           ]
@@ -505,7 +512,7 @@
               },
               "probability": 0.21,
               "effectType": "GrantPower",
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Radiation_Melee.Proton_Sweep"
             }
           ]
@@ -522,9 +529,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Radiation_Melee.Proton_Sweep",
               "requiresToHitCheck": true,
@@ -544,7 +552,7 @@
               "effectType": "Rage",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Radiation_Melee.Proton_Sweep"
             }
           ]
@@ -561,14 +569,27 @@
               "ticks": 4,
               "delayedTime": 0.5,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Radiation_Melee.Proton_Sweep",
               "damageType": "Fire"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Defense_Debuff",
+        "Endurance_Discount",
+        "Knockback",
+        "Recharge",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Radiation_Melee.Proton_Sweep",
+      "archetypeOrder": "primary",
       "powerIndex": 2,
       "castTimeReal": 1.67,
       "toggleCost": 8.528,
@@ -615,13 +636,6 @@
       "aoeModifier": 1.31592667
     },
     {
-      "allowedEnhancements": [
-        "ToHit_Buff",
-        "Endurance_Discount",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Buff_ToHit",
@@ -635,7 +649,8 @@
               "variableModified": true,
               "effectType": "ToHit",
               "stacking": 1,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Radiation_Melee.Fusion"
             }
           ]
@@ -652,7 +667,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Radiation_Melee.Fusion",
               "damageType": "Smashing"
             },
@@ -665,7 +680,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Radiation_Melee.Fusion",
               "damageType": "Lethal"
             },
@@ -678,7 +693,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Radiation_Melee.Fusion",
               "damageType": "Fire"
             },
@@ -691,7 +706,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Radiation_Melee.Fusion",
               "damageType": "Cold"
             },
@@ -704,7 +719,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Radiation_Melee.Fusion",
               "damageType": "Energy"
             },
@@ -717,7 +732,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Radiation_Melee.Fusion",
               "damageType": "Negative"
             },
@@ -730,7 +745,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Radiation_Melee.Fusion",
               "damageType": "Toxic"
             },
@@ -743,7 +758,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Radiation_Melee.Fusion",
               "damageType": "Psionic"
             }
@@ -761,12 +776,20 @@
               "variableModified": true,
               "effectType": "GlobalChanceMod",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Radiation_Melee.Fusion"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "ToHit_Buff",
+        "Endurance_Discount",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Radiation_Melee.Fusion",
+      "archetypeOrder": "primary",
       "powerIndex": 3,
       "castTimeReal": 1.17,
       "toggleCost": 5.2,
@@ -801,17 +824,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Defense_Debuff",
-        "Endurance_Discount",
-        "Heal",
-        "Recharge",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Damage",
@@ -824,8 +836,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Radiation_Melee.Radiation_Siphon",
               "damageType": "Smashing"
             },
@@ -837,8 +850,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Radiation_Melee.Radiation_Siphon",
               "damageType": "Energy"
             }
@@ -856,8 +870,9 @@
               "duration": 10,
               "effectType": "Defense",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Radiation_Melee.Radiation_Siphon"
             }
           ]
@@ -874,8 +889,9 @@
               "effectType": "Damage",
               "delayedTime": 0.2,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Radiation_Melee.Radiation_Siphon",
               "damageType": "Toxic"
             }
@@ -891,7 +907,7 @@
               "probability": 0.32,
               "effectType": "GrantPower",
               "delayedTime": 0.3,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Radiation_Melee.Radiation_Siphon"
             }
           ]
@@ -906,7 +922,7 @@
               "probability": 1,
               "variableModified": true,
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Radiation_Melee.Radiation_Siphon"
             },
             {
@@ -916,7 +932,7 @@
               "probability": 1,
               "effectType": "RevokePower",
               "delayedTime": 0.1,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Radiation_Melee.Radiation_Siphon"
             },
             {
@@ -926,7 +942,7 @@
               "probability": 1,
               "effectType": "GrantPower",
               "delayedTime": 0.1,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Radiation_Melee.Radiation_Siphon"
             },
             {
@@ -938,7 +954,7 @@
               "effectType": "Rage",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Radiation_Melee.Radiation_Siphon"
             }
           ]
@@ -956,7 +972,8 @@
               "effectType": "Heal",
               "ticks": 3,
               "stacking": 1,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Radiation_Melee.Radiation_Siphon"
             }
           ]
@@ -973,9 +990,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Radiation_Melee.Radiation_Siphon",
               "requiresToHitCheck": true,
@@ -992,14 +1010,27 @@
               },
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Radiation_Melee.Radiation_Siphon",
               "damageType": "Fire"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Defense_Debuff",
+        "Endurance_Discount",
+        "Heal",
+        "Recharge",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Radiation_Melee.Radiation_Siphon",
+      "archetypeOrder": "primary",
       "powerIndex": 4,
       "castTimeReal": 2.23,
       "toggleCost": 10.192,
@@ -1047,14 +1078,6 @@
       "aoeModifier": 2.2
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Range",
-        "Recharge",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Taunt",
@@ -1068,8 +1091,9 @@
               "duration": 20.5999985,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Radiation_Melee.Taunt",
               "mezType": "Taunt"
@@ -1080,16 +1104,16 @@
           "effectType": "Ones",
           "values": [
             {
+              "etModifies": "Range",
               "mag": {
                 "pve": -0.75
               },
               "probability": 1,
               "duration": 12,
               "effectType": "Enhancement",
-              "eTModifies": 24,
               "stacking": 1,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Radiation_Melee.Taunt"
             },
             {
@@ -1099,14 +1123,24 @@
               "probability": 1,
               "effectType": "Null",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Radiation_Melee.Taunt",
               "requiresToHitCheck": true
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Range",
+        "Recharge",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Radiation_Melee.Taunt",
+      "archetypeOrder": "primary",
       "powerIndex": 5,
       "castTimeReal": 1.67,
       "fullName": "Brute_Primary_Radiation_Melee_Taunt",
@@ -1142,15 +1176,6 @@
       "aoeModifier": 3.25
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Defense_Debuff",
-        "Endurance_Discount",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Ones",
@@ -1163,13 +1188,24 @@
               "variableModified": true,
               "effectType": "EntCreate",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Radiation_Melee.Irradiated_Ground"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Defense_Debuff",
+        "Endurance_Discount",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Radiation_Melee.Irradiated_Ground",
+      "archetypeOrder": "primary",
       "powerIndex": 6,
       "castTimeReal": 2.03,
       "toggleCost": 0.52,
@@ -1209,17 +1245,6 @@
       "powerType": "Toggle"
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Defense_Debuff",
-        "Endurance_Discount",
-        "Recharge",
-        "Stun",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Damage",
@@ -1232,8 +1257,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Radiation_Melee.Devastating_Blow",
               "damageType": "Smashing"
             },
@@ -1245,8 +1271,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Radiation_Melee.Devastating_Blow",
               "damageType": "Energy"
             }
@@ -1264,8 +1291,9 @@
               "duration": 10,
               "effectType": "Defense",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Radiation_Melee.Devastating_Blow"
             }
           ]
@@ -1279,7 +1307,7 @@
               },
               "probability": 0.5,
               "effectType": "GrantPower",
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Radiation_Melee.Devastating_Blow"
             }
           ]
@@ -1294,7 +1322,7 @@
               "probability": 1,
               "variableModified": true,
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Radiation_Melee.Devastating_Blow"
             },
             {
@@ -1305,8 +1333,9 @@
               "duration": 2,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Radiation_Melee.Devastating_Blow",
               "mezType": "Stun"
@@ -1320,7 +1349,7 @@
               "effectType": "Rage",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Radiation_Melee.Devastating_Blow"
             }
           ]
@@ -1337,8 +1366,9 @@
               "effectType": "Damage",
               "delayedTime": 0.5,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Radiation_Melee.Devastating_Blow",
               "damageType": "Toxic"
             }
@@ -1355,8 +1385,9 @@
               "duration": 11.92,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Radiation_Melee.Devastating_Blow",
               "mezType": "Stun"
@@ -1375,9 +1406,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Radiation_Melee.Devastating_Blow",
               "requiresToHitCheck": true,
@@ -1394,14 +1426,27 @@
               },
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Radiation_Melee.Devastating_Blow",
               "damageType": "Fire"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Defense_Debuff",
+        "Endurance_Discount",
+        "Recharge",
+        "Stun",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Radiation_Melee.Devastating_Blow",
+      "archetypeOrder": "primary",
       "powerIndex": 7,
       "castTimeReal": 2.67,
       "toggleCost": 16.016,
@@ -1448,17 +1493,6 @@
       "aoeModifier": 2.2
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Defense_Debuff",
-        "Endurance_Discount",
-        "Recharge",
-        "Stun",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Damage",
@@ -1471,8 +1505,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Radiation_Melee.Atom_Smasher",
               "damageType": "Energy"
             },
@@ -1484,8 +1519,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Radiation_Melee.Atom_Smasher",
               "damageType": "Toxic"
             }
@@ -1503,8 +1539,9 @@
               "duration": 10,
               "effectType": "Defense",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Radiation_Melee.Atom_Smasher"
             }
           ]
@@ -1518,7 +1555,7 @@
               },
               "probability": 0.35,
               "effectType": "GrantPower",
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Radiation_Melee.Atom_Smasher"
             }
           ]
@@ -1534,8 +1571,9 @@
               "duration": 7.15200043,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Radiation_Melee.Atom_Smasher",
               "mezType": "Stun"
@@ -1553,8 +1591,9 @@
               "duration": 2,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Radiation_Melee.Atom_Smasher",
               "mezType": "Stun"
@@ -1568,7 +1607,7 @@
               "effectType": "Rage",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Radiation_Melee.Atom_Smasher"
             }
           ]
@@ -1585,9 +1624,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Radiation_Melee.Atom_Smasher",
               "requiresToHitCheck": true,
@@ -1604,14 +1644,27 @@
               },
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Radiation_Melee.Atom_Smasher",
               "damageType": "Fire"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Defense_Debuff",
+        "Endurance_Discount",
+        "Recharge",
+        "Stun",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Radiation_Melee.Atom_Smasher",
+      "archetypeOrder": "primary",
       "powerIndex": 8,
       "castTimeReal": 2.93,
       "toggleCost": 20.176,

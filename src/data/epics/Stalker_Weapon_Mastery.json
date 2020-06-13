@@ -6,16 +6,6 @@
   "displayName": "Weapon Mastery",
   "powers": [
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Endurance_Discount",
-        "Immobilize",
-        "Range",
-        "Recharge",
-        "Slow"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Immobilize",
@@ -29,11 +19,12 @@
               "duration": 17.8800011,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.Weapon_Mastery_Stalker.Web_Grenade",
-              "mezType": "Immobilization"
+              "mezType": "Immob"
             }
           ]
         },
@@ -41,15 +32,15 @@
           "effectType": "Slow",
           "values": [
             {
+              "etModifies": "RechargeTime",
               "mag": {
                 "pve": -0.5
               },
               "probability": 1,
               "duration": 15,
               "effectType": "Enhancement",
-              "eTModifies": 25,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Weapon_Mastery_Stalker.Web_Grenade",
               "nearGround": true
             },
@@ -60,8 +51,9 @@
               "probability": 1,
               "duration": 15,
               "effectType": "SpeedRunning",
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Weapon_Mastery_Stalker.Web_Grenade",
               "nearGround": true
             },
@@ -72,8 +64,9 @@
               "probability": 1,
               "duration": 15,
               "effectType": "SpeedFlying",
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Weapon_Mastery_Stalker.Web_Grenade",
               "nearGround": true
             }
@@ -90,7 +83,8 @@
               "duration": 15,
               "effectType": "MezResist",
               "stacking": 1,
-              "toWho": "Target",
+              "buffable": true,
+              "toWho": "target",
               "powerFullName": "Epic.Weapon_Mastery_Stalker.Web_Grenade",
               "mezType": "Knockback"
             },
@@ -102,7 +96,8 @@
               "duration": 15,
               "effectType": "MezResist",
               "stacking": 1,
-              "toWho": "Target",
+              "buffable": true,
+              "toWho": "target",
               "powerFullName": "Epic.Weapon_Mastery_Stalker.Web_Grenade",
               "mezType": "Knockup"
             },
@@ -114,7 +109,8 @@
               "duration": 15,
               "effectType": "Mez",
               "stacking": 1,
-              "toWho": "Target",
+              "buffable": true,
+              "toWho": "target",
               "powerFullName": "Epic.Weapon_Mastery_Stalker.Web_Grenade",
               "mezType": "Knockback"
             },
@@ -126,7 +122,8 @@
               "duration": 15,
               "effectType": "Mez",
               "stacking": 1,
-              "toWho": "Target",
+              "buffable": true,
+              "toWho": "target",
               "powerFullName": "Epic.Weapon_Mastery_Stalker.Web_Grenade",
               "mezType": "Knockup"
             },
@@ -138,7 +135,8 @@
               "duration": 15,
               "effectType": "JumpHeight",
               "stacking": 1,
-              "toWho": "Target",
+              "buffable": true,
+              "toWho": "target",
               "powerFullName": "Epic.Weapon_Mastery_Stalker.Web_Grenade"
             },
             {
@@ -149,12 +147,24 @@
               "duration": 15,
               "effectType": "Fly",
               "stacking": 1,
-              "toWho": "Target",
+              "buffable": true,
+              "toWho": "target",
               "powerFullName": "Epic.Weapon_Mastery_Stalker.Web_Grenade"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Endurance_Discount",
+        "Immobilize",
+        "Range",
+        "Recharge",
+        "Slow"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Weapon_Mastery_Stalker.Web_Grenade",
+      "archetypeOrder": "epicPool",
       "powerIndex": 0,
       "castTimeReal": 1.37,
       "toggleCost": 9.75,
@@ -191,12 +201,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Heal",
-        "Endurance_Modification"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Ones",
@@ -208,7 +212,8 @@
               "probability": 1,
               "duration": 10.25,
               "effectType": "Regeneration",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Weapon_Mastery_Stalker.Caltrops"
             },
             {
@@ -218,12 +223,20 @@
               "probability": 1,
               "duration": 10.25,
               "effectType": "Recovery",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Weapon_Mastery_Stalker.Caltrops"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Heal",
+        "Endurance_Modification"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Weapon_Mastery_Stalker.Caltrops",
+      "archetypeOrder": "epicPool",
       "powerIndex": 1,
       "fullName": "Epic_Weapon_Mastery_Physical_Perfection",
       "displayName": "Physical Perfection",
@@ -255,15 +268,6 @@
       "powerType": "Auto"
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Range",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Damage",
@@ -276,23 +280,34 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Weapon_Mastery_Stalker.Shuriken",
               "damageType": "Lethal"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Weapon_Mastery_Stalker.Shuriken",
+      "archetypeOrder": "epicPool",
       "powerIndex": 2,
       "castTimeReal": 1.07,
       "toggleCost": 5.46,
+      "isEpic": true,
       "fullName": "Epic_Weapon_Mastery_Shuriken",
       "displayName": "Shuriken",
       "requires": {
         "powers": {
-          "Epic_Weapon_Mastery_Web_Grenade": true,
-          "Epic_Weapon_Mastery_Physical_Perfection": true
+          "Epic.Weapon_Mastery_Stalker.Shuriken": true
         },
         "count": 1
       },
@@ -323,13 +338,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "ToHit_Buff",
-        "Endurance_Discount",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Buff_ToHit",
@@ -342,7 +350,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "ToHit",
-              "toWho": "All",
+              "buffable": true,
+              "toWho": "all",
               "powerFullName": "Epic.Weapon_Mastery_Stalker.Targeting_Drone"
             }
           ]
@@ -351,14 +360,14 @@
           "effectType": "Res_Boolean",
           "values": [
             {
+              "etModifies": "ToHit",
               "mag": {
                 "pve": 0.5536
               },
               "probability": 1,
               "duration": 0.75,
               "effectType": "ResEffect",
-              "eTModifies": 40,
-              "toWho": "All",
+              "toWho": "all",
               "powerFullName": "Epic.Weapon_Mastery_Stalker.Targeting_Drone"
             }
           ]
@@ -367,6 +376,7 @@
           "effectType": "Ones",
           "values": [
             {
+              "etModifies": "Accuracy",
               "mag": {
                 "pve": 0.2
               },
@@ -374,19 +384,18 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Enhancement",
-              "eTModifies": 1,
-              "toWho": "All",
+              "toWho": "all",
               "powerFullName": "Epic.Weapon_Mastery_Stalker.Targeting_Drone"
             },
             {
+              "etModifies": "PerceptionRadius",
               "mag": {
                 "pve": 0.6
               },
               "probability": 1,
               "duration": 0.75,
               "effectType": "ResEffect",
-              "eTModifies": 23,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Epic.Weapon_Mastery_Stalker.Targeting_Drone"
             },
             {
@@ -396,21 +405,30 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "PerceptionRadius",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Weapon_Mastery_Stalker.Targeting_Drone"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "ToHit_Buff",
+        "Endurance_Discount",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Weapon_Mastery_Stalker.Targeting_Drone",
+      "archetypeOrder": "epicPool",
       "powerIndex": 3,
       "castTimeReal": 1.17,
       "toggleCost": 0.78,
+      "isEpic": true,
       "fullName": "Epic_Weapon_Mastery_Targeting_Drone",
       "displayName": "Targeting Drone",
       "requires": {
         "powers": {
-          "Epic_Weapon_Mastery_Web_Grenade": true,
-          "Epic_Weapon_Mastery_Physical_Perfection": true
+          "Epic.Weapon_Mastery_Stalker.Targeting_Drone": true
         },
         "count": 1
       },
@@ -440,15 +458,6 @@
       "powerType": "Toggle"
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Range",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Damage",
@@ -461,25 +470,34 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Weapon_Mastery_Stalker.Exploding_Shuriken",
               "damageType": "Lethal"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Weapon_Mastery_Stalker.Exploding_Shuriken",
+      "archetypeOrder": "epicPool",
       "powerIndex": 4,
       "castTimeReal": 1.07,
       "toggleCost": 18.98,
+      "isEpic": true,
       "fullName": "Epic_Weapon_Mastery_Exploding_Shuriken",
       "displayName": "Exploding Shuriken",
       "requires": {
         "powers": {
-          "Epic_Weapon_Mastery_Web_Grenade": true,
-          "Epic_Weapon_Mastery_Physical_Perfection": true,
-          "Epic_Weapon_Mastery_Shuriken": true,
-          "Epic_Weapon_Mastery_Targeting_Drone": true
+          "Epic.Weapon_Mastery_Stalker.Exploding_Shuriken": true
         },
         "count": 2
       },

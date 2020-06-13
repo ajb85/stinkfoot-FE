@@ -2,603 +2,216 @@
   "fullName": "IOSet.Gladiator's_Armor",
   "enhancements": [
     {
-      "effects": [
-        {
-          "effectType": "Resist",
-          "values": [
-            {
-              "mag": {
-                "pve": 0.159375
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Gladiators_Armor_A.Attuned_Gladiators_Armor_A",
-              "damageType": "Smashing"
-            }
-          ]
-        },
-        {
-          "effectType": "Boosts_20",
-          "values": [
-            {
-              "mag": {
-                "pve": 0.159375
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Gladiators_Armor_A.Attuned_Gladiators_Armor_A",
-              "damageType": "Lethal"
-            },
-            {
-              "mag": {
-                "pve": 0.159375
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Gladiators_Armor_A.Attuned_Gladiators_Armor_A",
-              "damageType": "Fire"
-            },
-            {
-              "mag": {
-                "pve": 0.159375
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Gladiators_Armor_A.Attuned_Gladiators_Armor_A",
-              "damageType": "Cold"
-            },
-            {
-              "mag": {
-                "pve": 0.159375
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Gladiators_Armor_A.Attuned_Gladiators_Armor_A",
-              "damageType": "Energy"
-            },
-            {
-              "mag": {
-                "pve": 0.159375
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Gladiators_Armor_A.Attuned_Gladiators_Armor_A",
-              "damageType": "Negative"
-            },
-            {
-              "mag": {
-                "pve": 0.159375
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Gladiators_Armor_A.Attuned_Gladiators_Armor_A",
-              "damageType": "Toxic"
-            },
-            {
-              "mag": {
-                "pve": 0.159375
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Gladiators_Armor_A.Attuned_Gladiators_Armor_A",
-              "damageType": "Psionic"
-            }
-          ]
-        },
-        {
-          "effectType": "Endurance",
-          "values": [
-            {
-              "etModifies": "EnduranceDiscount",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Gladiators_Armor_A.Attuned_Gladiators_Armor_A"
-            }
-          ]
-        }
-      ],
+      "type": "set",
+      "fullName": "Boosts.Attuned_Gladiators_Armor_A.Attuned_Gladiators_Armor_A",
+      "displayName": "Resistance/Endurance",
       "description": {
         "short": "+RES (all), Reduces End cost",
         "long": "Enhances the damage resistance of a power by {Boost.Attrib.Resist.Scale}% and reduces endurance cost by {Boost.Attrib.Endurance.Scale}%. NOTE: This is a PvP enhancement, this type of enhancement has two groups of set bonuses.  You get the set bonuses not marked \"\"(PvP)\"\" while experiencing PvE content, but you get both the PvP set bonuses and the PvE set bonuses when fighting players."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Gladiators_Armor_A.Attuned_Gladiators_Armor_A",
-      "setName": "Gladiator's_Armor",
-      "displayName": "Resistance/Endurance"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Resist",
-          "values": [
-            {
-              "mag": {
-                "pve": 0.159375
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Gladiators_Armor_B.Attuned_Gladiators_Armor_B",
-              "damageType": "Smashing"
+          "mag": {
+            "IO": {
+              "cap": 0.159375
             }
-          ]
+          },
+          "stat": "Res_Damage",
+          "damageType": [
+            "Smashing",
+            "Lethal",
+            "Fire",
+            "Cold",
+            "Energy",
+            "Negative",
+            "Toxic",
+            "Psionic"
+          ],
+          "toWho": "self"
         },
         {
-          "effectType": "Boosts_20",
-          "values": [
-            {
-              "mag": {
-                "pve": 0.159375
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Gladiators_Armor_B.Attuned_Gladiators_Armor_B",
-              "damageType": "Lethal"
-            },
-            {
-              "mag": {
-                "pve": 0.159375
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Gladiators_Armor_B.Attuned_Gladiators_Armor_B",
-              "damageType": "Fire"
-            },
-            {
-              "mag": {
-                "pve": 0.159375
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Gladiators_Armor_B.Attuned_Gladiators_Armor_B",
-              "damageType": "Cold"
-            },
-            {
-              "mag": {
-                "pve": 0.159375
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Gladiators_Armor_B.Attuned_Gladiators_Armor_B",
-              "damageType": "Energy"
-            },
-            {
-              "mag": {
-                "pve": 0.159375
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Gladiators_Armor_B.Attuned_Gladiators_Armor_B",
-              "damageType": "Negative"
-            },
-            {
-              "mag": {
-                "pve": 0.159375
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Gladiators_Armor_B.Attuned_Gladiators_Armor_B",
-              "damageType": "Toxic"
-            },
-            {
-              "mag": {
-                "pve": 0.159375
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Gladiators_Armor_B.Attuned_Gladiators_Armor_B",
-              "damageType": "Psionic"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
-        },
-        {
-          "effectType": "recharge",
-          "values": [
-            {
-              "etModifies": "RechargeTime",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Gladiators_Armor_B.Attuned_Gladiators_Armor_B"
-            }
-          ]
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Gladiators_Armor_B.Attuned_Gladiators_Armor_B",
+      "displayName": "Resistance/Recharge",
       "description": {
         "short": "+RES (all), +Rech",
         "long": "Enhances the damage resistance of a power by {Boost.Attrib.Resist.Scale}% and reduces recharge time by {Boost.Attrib.Recharge.Scale}%. NOTE: This is a PvP enhancement, this type of enhancement has two groups of set bonuses.  You get the set bonuses not marked \"\"(PvP)\"\" while experiencing PvE content, but you get both the PvP set bonuses and the PvE set bonuses when fighting players."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Gladiators_Armor_B.Attuned_Gladiators_Armor_B",
-      "setName": "Gladiator's_Armor",
-      "displayName": "Resistance/Recharge"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Endurance",
-          "values": [
-            {
-              "etModifies": "EnduranceDiscount",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Gladiators_Armor_C.Attuned_Gladiators_Armor_C"
+          "mag": {
+            "IO": {
+              "cap": 0.159375
             }
-          ]
+          },
+          "stat": "Res_Damage",
+          "damageType": [
+            "Smashing",
+            "Lethal",
+            "Fire",
+            "Cold",
+            "Energy",
+            "Negative",
+            "Toxic",
+            "Psionic"
+          ],
+          "toWho": "self"
         },
         {
-          "effectType": "recharge",
-          "values": [
-            {
-              "etModifies": "RechargeTime",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Gladiators_Armor_C.Attuned_Gladiators_Armor_C"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
+          },
+          "stat": "Recharge",
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Gladiators_Armor_C.Attuned_Gladiators_Armor_C",
+      "displayName": "Endurance/Recharge",
       "description": {
         "short": "Reduces Endurance Cost and Increases Attack Rate",
         "long": "Reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}% and recharge time by {Boost.Attrib.Recharge.Scale}%. NOTE: This is a PvP enhancement, this type of enhancement has two groups of set bonuses.  You get the set bonuses not marked \"\"(PvP)\"\" while experiencing PvE content, but you get both the PvP set bonuses and the PvE set bonuses when fighting players."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Gladiators_Armor_C.Attuned_Gladiators_Armor_C",
-      "setName": "Gladiator's_Armor",
-      "displayName": "Endurance/Recharge"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Resist",
-          "values": [
-            {
-              "mag": {
-                "pve": 0.1275
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Gladiators_Armor_D.Attuned_Gladiators_Armor_D",
-              "damageType": "Smashing"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self"
         },
         {
-          "effectType": "Boosts_20",
-          "values": [
-            {
-              "mag": {
-                "pve": 0.1275
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Gladiators_Armor_D.Attuned_Gladiators_Armor_D",
-              "damageType": "Lethal"
-            },
-            {
-              "mag": {
-                "pve": 0.1275
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Gladiators_Armor_D.Attuned_Gladiators_Armor_D",
-              "damageType": "Fire"
-            },
-            {
-              "mag": {
-                "pve": 0.1275
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Gladiators_Armor_D.Attuned_Gladiators_Armor_D",
-              "damageType": "Cold"
-            },
-            {
-              "mag": {
-                "pve": 0.1275
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Gladiators_Armor_D.Attuned_Gladiators_Armor_D",
-              "damageType": "Energy"
-            },
-            {
-              "mag": {
-                "pve": 0.1275
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Gladiators_Armor_D.Attuned_Gladiators_Armor_D",
-              "damageType": "Negative"
-            },
-            {
-              "mag": {
-                "pve": 0.1275
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Gladiators_Armor_D.Attuned_Gladiators_Armor_D",
-              "damageType": "Toxic"
-            },
-            {
-              "mag": {
-                "pve": 0.1275
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Gladiators_Armor_D.Attuned_Gladiators_Armor_D",
-              "damageType": "Psionic"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
-        },
-        {
-          "effectType": "Endurance",
-          "values": [
-            {
-              "etModifies": "EnduranceDiscount",
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Gladiators_Armor_D.Attuned_Gladiators_Armor_D"
-            }
-          ]
-        },
-        {
-          "effectType": "recharge",
-          "values": [
-            {
-              "etModifies": "RechargeTime",
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Gladiators_Armor_D.Attuned_Gladiators_Armor_D"
-            }
-          ]
+          },
+          "stat": "Recharge",
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Gladiators_Armor_D.Attuned_Gladiators_Armor_D",
+      "displayName": "Resistance/Endurance/Recharge",
       "description": {
         "short": "Enhances Resistance, Reduces Endurance Cost and Increases Attack Rate",
         "long": "Enhances the damage resistance of a power by {Boost.Attrib.Resist.Scale}%, reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}% and recharge time by {Boost.Attrib.Recharge.Scale}%. NOTE: This is a PvP enhancement, this type of enhancement has two groups of set bonuses.  You get the set bonuses not marked \"\"(PvP)\"\" while experiencing PvE content, but you get both the PvP set bonuses and the PvE set bonuses when fighting players."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Gladiators_Armor_D.Attuned_Gladiators_Armor_D",
-      "setName": "Gladiator's_Armor",
-      "displayName": "Resistance/Endurance/Recharge"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Resist",
-          "values": [
-            {
-              "mag": {
-                "pve": 0.255
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Gladiators_Armor_E.Attuned_Gladiators_Armor_E",
-              "damageType": "Smashing"
+          "mag": {
+            "IO": {
+              "cap": 0.1275
             }
-          ]
+          },
+          "stat": "Res_Damage",
+          "damageType": [
+            "Smashing",
+            "Lethal",
+            "Fire",
+            "Cold",
+            "Energy",
+            "Negative",
+            "Toxic",
+            "Psionic"
+          ],
+          "toWho": "self"
         },
         {
-          "effectType": "Boosts_20",
-          "values": [
-            {
-              "mag": {
-                "pve": 0.255
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Gladiators_Armor_E.Attuned_Gladiators_Armor_E",
-              "damageType": "Lethal"
-            },
-            {
-              "mag": {
-                "pve": 0.255
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Gladiators_Armor_E.Attuned_Gladiators_Armor_E",
-              "damageType": "Fire"
-            },
-            {
-              "mag": {
-                "pve": 0.255
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Gladiators_Armor_E.Attuned_Gladiators_Armor_E",
-              "damageType": "Cold"
-            },
-            {
-              "mag": {
-                "pve": 0.255
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Gladiators_Armor_E.Attuned_Gladiators_Armor_E",
-              "damageType": "Energy"
-            },
-            {
-              "mag": {
-                "pve": 0.255
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Gladiators_Armor_E.Attuned_Gladiators_Armor_E",
-              "damageType": "Negative"
-            },
-            {
-              "mag": {
-                "pve": 0.255
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Gladiators_Armor_E.Attuned_Gladiators_Armor_E",
-              "damageType": "Toxic"
-            },
-            {
-              "mag": {
-                "pve": 0.255
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Gladiators_Armor_E.Attuned_Gladiators_Armor_E",
-              "damageType": "Psionic"
+          "mag": {
+            "IO": {
+              "cap": 0.212
             }
-          ]
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.212
+            }
+          },
+          "stat": "Recharge",
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Gladiators_Armor_E.Attuned_Gladiators_Armor_E",
+      "displayName": "Resistance",
       "description": {
         "short": "+RES (all)",
         "long": "Enhances the damage resistance of a power by {Boost.Attrib.Resist.Scale}%. NOTE: This is a PvP enhancement, this type of enhancement has two groups of set bonuses.  You get the set bonuses not marked \"\"(PvP)\"\" while experiencing PvE content, but you get both the PvP set bonuses and the PvE set bonuses when fighting players."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Gladiators_Armor_E.Attuned_Gladiators_Armor_E",
-      "setName": "Gladiator's_Armor",
-      "displayName": "Resistance"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Defense",
-          "values": [
-            {
-              "mag": {
-                "pve": 0.03
-              },
-              "cancelOnMiss": true,
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Null",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Gladiators_Armor_F.Attuned_Gladiators_Armor_F"
+          "mag": {
+            "IO": {
+              "cap": 0.255
             }
-          ]
-        },
-        {
-          "effectType": "Ones",
-          "values": [
-            {
-              "etModifies": "Null",
-              "mag": {
-                "pve": 1
-              },
-              "cancelOnMiss": true,
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "ResEffect",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Gladiators_Armor_F.Attuned_Gladiators_Armor_F"
-            }
-          ]
+          },
+          "stat": "Res_Damage",
+          "damageType": [
+            "Smashing",
+            "Lethal",
+            "Fire",
+            "Cold",
+            "Energy",
+            "Negative",
+            "Toxic",
+            "Psionic"
+          ],
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Gladiators_Armor_F.Attuned_Gladiators_Armor_F",
+      "displayName": "Teleportation Protection, +Def(All)",
       "description": {
         "short": "Teleportation Protection,  Def(All)",
         "long": "UNIQUE -- No more than 1 enhancement of this type may be slotted by a character.  Gives the user a 20% chance for protection from teleportation effects and +3% bonus to defense. NOTE: This is a PvP enhancement, this type of enhancement has two groups of set bonuses.  You get the set bonuses not marked \"\"(PvP)\"\" while experiencing PvE content, but you get both the PvP set bonuses and the PvE set bonuses when fighting players."
       },
-      "isUnique": true,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Gladiators_Armor_F.Attuned_Gladiators_Armor_F",
-      "setName": "Gladiator's_Armor",
-      "displayName": "Teleportation Protection, +Def(All)"
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.03
+            }
+          },
+          "stat": "Teleportation Protection, +De",
+          "cancelOnMiss": true,
+          "toWho": "self"
+        }
+      ]
     }
   ],
   "levels": {

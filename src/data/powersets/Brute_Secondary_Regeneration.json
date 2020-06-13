@@ -6,11 +6,6 @@
   "displayName": "Regeneration",
   "powers": [
     {
-      "allowedEnhancements": [
-        "Heal"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Ones",
@@ -22,7 +17,8 @@
               "probability": 1,
               "duration": 10.25,
               "effectType": "Regeneration",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Regeneration.Fast_Healing"
             }
           ]
@@ -31,19 +27,25 @@
           "effectType": "Res_Boolean",
           "values": [
             {
+              "etModifies": "Regeneration",
               "mag": {
                 "pve": 0.2076
               },
               "probability": 1,
               "duration": 10.25,
               "effectType": "ResEffect",
-              "eTModifies": 27,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Regeneration.Fast_Healing"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Heal"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Defense.Regeneration.Fast_Healing",
+      "archetypeOrder": "secondary",
       "powerIndex": 0,
       "fullName": "Brute_Secondary_Regeneration_Fast_Healing",
       "displayName": "Fast Healing",
@@ -74,14 +76,6 @@
       "powerType": "Auto"
     },
     {
-      "allowedEnhancements": [
-        "Endurance_Discount",
-        "Heal",
-        "Recharge",
-        "Res_Damage"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "HealSelf",
@@ -94,7 +88,8 @@
               "variableModified": true,
               "effectType": "Heal",
               "stacking": 1,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Regeneration.Reconstruction"
             }
           ]
@@ -111,13 +106,23 @@
               "variableModified": true,
               "effectType": "Resistance",
               "stacking": 1,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Regeneration.Reconstruction",
               "damageType": "Toxic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Endurance_Discount",
+        "Heal",
+        "Recharge",
+        "Res_Damage"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Defense.Regeneration.Reconstruction",
+      "archetypeOrder": "secondary",
       "powerIndex": 1,
       "castTimeReal": 0.73,
       "toggleCost": 10.4,
@@ -154,11 +159,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Endurance_Modification"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Ones",
@@ -170,12 +170,19 @@
               "probability": 1,
               "duration": 10.25,
               "effectType": "Recovery",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Regeneration.Quick_Recovery"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Endurance_Modification"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Defense.Regeneration.Quick_Recovery",
+      "archetypeOrder": "secondary",
       "powerIndex": 2,
       "fullName": "Brute_Secondary_Regeneration_Quick_Recovery",
       "displayName": "Quick Recovery",
@@ -206,13 +213,6 @@
       "powerType": "Auto"
     },
     {
-      "allowedEnhancements": [
-        "Endurance_Discount",
-        "Heal",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "HealSelf",
@@ -226,7 +226,7 @@
               "variableModified": true,
               "effectType": "HitPoints",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Regeneration.Dull_Pain"
             },
             {
@@ -237,7 +237,8 @@
               "variableModified": true,
               "effectType": "Heal",
               "stacking": 1,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Regeneration.Dull_Pain"
             }
           ]
@@ -254,12 +255,20 @@
               "duration": 120,
               "effectType": "Null",
               "stacking": 1,
-              "toWho": "All",
+              "toWho": "all",
               "powerFullName": "Brute_Defense.Regeneration.Dull_Pain"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Endurance_Discount",
+        "Heal",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Defense.Regeneration.Dull_Pain",
+      "archetypeOrder": "secondary",
       "powerIndex": 3,
       "castTimeReal": 0.73,
       "toggleCost": 10.4,
@@ -294,14 +303,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Endurance_Discount",
-        "Heal",
-        "Recharge",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Ones",
@@ -314,7 +315,7 @@
               "probability": 1,
               "duration": 2.25,
               "effectType": "MezResist",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Regeneration.Integration",
               "mezType": "Knockback"
             },
@@ -326,7 +327,7 @@
               "probability": 1,
               "duration": 2.25,
               "effectType": "MezResist",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Regeneration.Integration",
               "mezType": "Knockup"
             },
@@ -338,7 +339,8 @@
               "probability": 1,
               "duration": 2.25,
               "effectType": "Mez",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Regeneration.Integration",
               "mezType": "Knockback"
             },
@@ -350,7 +352,8 @@
               "probability": 1,
               "duration": 2.25,
               "effectType": "Mez",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Regeneration.Integration",
               "mezType": "Knockup"
             },
@@ -362,18 +365,84 @@
               "probability": 1,
               "duration": 2.25,
               "effectType": "Regeneration",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Regeneration.Integration"
             },
             {
+              "etModifies": "Defense",
+              "mag": {
+                "pvp": 0.3
+              },
+              "probability": 1,
+              "duration": 2.25,
+              "effectType": "ResEffect",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Regeneration.Integration"
+            },
+            {
+              "etModifies": "ToHit",
+              "mag": {
+                "pvp": 0.3
+              },
+              "probability": 1,
+              "duration": 2.25,
+              "effectType": "ResEffect",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Regeneration.Integration"
+            },
+            {
+              "etModifies": "RechargeTime",
+              "mag": {
+                "pvp": 0.3
+              },
+              "probability": 1,
+              "duration": 2.25,
+              "effectType": "ResEffect",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Regeneration.Integration"
+            },
+            {
+              "etModifies": "SpeedRunning",
               "mag": {
                 "pvp": 0.5
               },
               "probability": 1,
               "duration": 2.25,
               "effectType": "ResEffect",
-              "eTModifies": 5,
-              "toWho": "Self",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Regeneration.Integration"
+            },
+            {
+              "etModifies": "SpeedFlying",
+              "mag": {
+                "pvp": 0.5
+              },
+              "probability": 1,
+              "duration": 2.25,
+              "effectType": "ResEffect",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Regeneration.Integration"
+            },
+            {
+              "etModifies": "JumpHeight",
+              "mag": {
+                "pvp": 0.5
+              },
+              "probability": 1,
+              "duration": 2.25,
+              "effectType": "ResEffect",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Regeneration.Integration"
+            },
+            {
+              "etModifies": "SpeedJumping",
+              "mag": {
+                "pvp": 0.5
+              },
+              "probability": 1,
+              "duration": 2.25,
+              "effectType": "ResEffect",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Regeneration.Integration"
             }
           ]
@@ -388,7 +457,8 @@
               "probability": 1,
               "duration": 2.25,
               "effectType": "Mez",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Regeneration.Integration",
               "mezType": "Stun"
             },
@@ -399,7 +469,8 @@
               "probability": 1,
               "duration": 2.25,
               "effectType": "Mez",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Regeneration.Integration",
               "mezType": "Hold"
             },
@@ -410,7 +481,8 @@
               "probability": 1,
               "duration": 2.25,
               "effectType": "Mez",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Regeneration.Integration",
               "mezType": "Sleep"
             },
@@ -421,9 +493,10 @@
               "probability": 1,
               "duration": 2.25,
               "effectType": "Mez",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Regeneration.Integration",
-              "mezType": "Immobilization"
+              "mezType": "Immob"
             },
             {
               "mag": {
@@ -432,7 +505,7 @@
               "probability": 1,
               "duration": 2.25,
               "effectType": "MezResist",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Regeneration.Integration",
               "mezType": "Stun"
             },
@@ -443,7 +516,7 @@
               "probability": 1,
               "duration": 2.25,
               "effectType": "MezResist",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Regeneration.Integration",
               "mezType": "Hold"
             },
@@ -454,7 +527,7 @@
               "probability": 1,
               "duration": 2.25,
               "effectType": "MezResist",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Regeneration.Integration",
               "mezType": "Sleep"
             },
@@ -465,9 +538,9 @@
               "probability": 1,
               "duration": 2.25,
               "effectType": "MezResist",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Regeneration.Integration",
-              "mezType": "Immobilization"
+              "mezType": "Immob"
             }
           ]
         },
@@ -483,9 +556,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "All",
+              "toWho": "all",
               "attribType": 1,
               "powerFullName": "Brute_Defense.Regeneration.Integration",
               "requiresToHitCheck": true,
@@ -494,6 +568,15 @@
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Endurance_Discount",
+        "Heal",
+        "Recharge",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Defense.Regeneration.Integration",
+      "archetypeOrder": "secondary",
       "powerIndex": 4,
       "castTimeReal": 3.1,
       "toggleCost": 0.26,
@@ -531,11 +614,6 @@
       "powerType": "Toggle"
     },
     {
-      "allowedEnhancements": [
-        "Res_Damage"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Res_Boolean",
@@ -548,7 +626,7 @@
               "probability": 1,
               "duration": 10.25,
               "effectType": "MezResist",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Regeneration.Resist_Disorientation",
               "mezType": "Stun"
             },
@@ -559,7 +637,8 @@
               "probability": 1,
               "duration": 10.25,
               "effectType": "Mez",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Regeneration.Resist_Disorientation",
               "mezType": "Stun"
             }
@@ -575,7 +654,8 @@
               "probability": 1,
               "duration": 10.25,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Regeneration.Resist_Disorientation",
               "damageType": "Smashing"
             },
@@ -586,7 +666,8 @@
               "probability": 1,
               "duration": 10.25,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Regeneration.Resist_Disorientation",
               "damageType": "Lethal"
             },
@@ -597,7 +678,8 @@
               "probability": 1,
               "duration": 10.25,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Regeneration.Resist_Disorientation",
               "damageType": "Toxic"
             },
@@ -608,7 +690,8 @@
               "probability": 1,
               "duration": 10.25,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Regeneration.Resist_Disorientation",
               "damageType": "Fire"
             },
@@ -619,7 +702,8 @@
               "probability": 1,
               "duration": 10.25,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Regeneration.Resist_Disorientation",
               "damageType": "Cold"
             },
@@ -630,7 +714,8 @@
               "probability": 1,
               "duration": 10.25,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Regeneration.Resist_Disorientation",
               "damageType": "Energy"
             },
@@ -641,7 +726,8 @@
               "probability": 1,
               "duration": 10.25,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Regeneration.Resist_Disorientation",
               "damageType": "Negative"
             },
@@ -652,13 +738,20 @@
               "probability": 1,
               "duration": 10.25,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Regeneration.Resist_Disorientation",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Res_Damage"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Defense.Regeneration.Resist_Disorientation",
+      "archetypeOrder": "secondary",
       "powerIndex": 5,
       "fullName": "Brute_Secondary_Regeneration_Resilience",
       "displayName": "Resilience",
@@ -690,13 +783,6 @@
       "powerType": "Auto"
     },
     {
-      "allowedEnhancements": [
-        "Endurance_Discount",
-        "Heal",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Ones",
@@ -708,7 +794,7 @@
               "probability": 1,
               "duration": 90,
               "effectType": "Regeneration",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Regeneration.Instant_Healing"
             },
             {
@@ -720,12 +806,20 @@
               "duration": 90,
               "effectType": "Null",
               "stacking": 1,
-              "toWho": "All",
+              "toWho": "all",
               "powerFullName": "Brute_Defense.Regeneration.Instant_Healing"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Endurance_Discount",
+        "Heal",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Defense.Regeneration.Instant_Healing",
+      "archetypeOrder": "secondary",
       "powerIndex": 6,
       "castTimeReal": 1.17,
       "toggleCost": 10.4,
@@ -760,13 +854,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Heal",
-        "Recharge",
-        "Endurance_Modification"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "HealSelf",
@@ -781,7 +868,8 @@
               "effectType": "Heal",
               "ticks": 1,
               "stacking": 1,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Regeneration.Revive"
             }
           ]
@@ -798,7 +886,8 @@
               "effectType": "Endurance",
               "delayedTime": 0.125,
               "stacking": 1,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Regeneration.Revive"
             },
             {
@@ -808,7 +897,7 @@
               "probability": 1,
               "duration": 15,
               "effectType": "Mez",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Regeneration.Revive",
               "mezType": "Untouchable"
             },
@@ -821,10 +910,10 @@
               "variableModified": true,
               "effectType": "Mez",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "attribType": 1,
               "powerFullName": "Brute_Defense.Regeneration.Revive",
-              "mezType": "Immobilization"
+              "mezType": "Immob"
             },
             {
               "mag": {
@@ -833,12 +922,20 @@
               "probability": 1,
               "duration": 90,
               "effectType": "XPDebtProtection",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Regeneration.Revive"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Heal",
+        "Recharge",
+        "Endurance_Modification"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Defense.Regeneration.Revive",
+      "archetypeOrder": "secondary",
       "powerIndex": 7,
       "castTimeReal": 1.5,
       "fullName": "Brute_Secondary_Regeneration_Revive",
@@ -872,15 +969,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Defense_Buff",
-        "Endurance_Discount",
-        "Recharge",
-        "Endurance_Modification",
-        "Res_Damage"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Ones",
@@ -892,7 +980,7 @@
               "probability": 1,
               "duration": 15,
               "effectType": "Mez",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Regeneration.Moment_of_Glory",
               "mezType": "Knockback"
             },
@@ -903,7 +991,7 @@
               "probability": 1,
               "duration": 15,
               "effectType": "MezResist",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Regeneration.Moment_of_Glory",
               "mezType": "Knockback"
             },
@@ -914,7 +1002,7 @@
               "probability": 1,
               "duration": 15,
               "effectType": "Mez",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Regeneration.Moment_of_Glory",
               "mezType": "Knockup"
             },
@@ -925,7 +1013,7 @@
               "probability": 1,
               "duration": 15,
               "effectType": "MezResist",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Regeneration.Moment_of_Glory",
               "mezType": "Knockup"
             },
@@ -936,7 +1024,7 @@
               "probability": 1,
               "duration": 15,
               "effectType": "Mez",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Regeneration.Moment_of_Glory",
               "mezType": "Repel"
             },
@@ -947,7 +1035,7 @@
               "probability": 1,
               "duration": 15,
               "effectType": "MezResist",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Regeneration.Moment_of_Glory",
               "mezType": "Repel"
             },
@@ -958,7 +1046,8 @@
               "probability": 1,
               "duration": 15,
               "effectType": "Recovery",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Regeneration.Moment_of_Glory"
             }
           ]
@@ -973,7 +1062,8 @@
               "probability": 1,
               "duration": 15,
               "effectType": "Mez",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Regeneration.Moment_of_Glory",
               "mezType": "Stun"
             },
@@ -984,7 +1074,8 @@
               "probability": 1,
               "duration": 15,
               "effectType": "Mez",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Regeneration.Moment_of_Glory",
               "mezType": "Hold"
             },
@@ -995,7 +1086,8 @@
               "probability": 1,
               "duration": 15,
               "effectType": "Mez",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Regeneration.Moment_of_Glory",
               "mezType": "Sleep"
             },
@@ -1006,9 +1098,10 @@
               "probability": 1,
               "duration": 15,
               "effectType": "Mez",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Regeneration.Moment_of_Glory",
-              "mezType": "Immobilization"
+              "mezType": "Immob"
             },
             {
               "mag": {
@@ -1017,7 +1110,7 @@
               "probability": 1,
               "duration": 15,
               "effectType": "MezResist",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Regeneration.Moment_of_Glory",
               "mezType": "Stun"
             },
@@ -1028,7 +1121,7 @@
               "probability": 1,
               "duration": 15,
               "effectType": "MezResist",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Regeneration.Moment_of_Glory",
               "mezType": "Hold"
             },
@@ -1039,7 +1132,7 @@
               "probability": 1,
               "duration": 15,
               "effectType": "MezResist",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Regeneration.Moment_of_Glory",
               "mezType": "Sleep"
             },
@@ -1050,9 +1143,9 @@
               "probability": 1,
               "duration": 15,
               "effectType": "MezResist",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Regeneration.Moment_of_Glory",
-              "mezType": "Immobilization"
+              "mezType": "Immob"
             }
           ]
         },
@@ -1066,7 +1159,8 @@
               "probability": 1,
               "duration": 15,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Regeneration.Moment_of_Glory",
               "damageType": "Smashing"
             },
@@ -1077,7 +1171,8 @@
               "probability": 1,
               "duration": 15,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Regeneration.Moment_of_Glory",
               "damageType": "Lethal"
             },
@@ -1088,7 +1183,8 @@
               "probability": 1,
               "duration": 15,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Regeneration.Moment_of_Glory",
               "damageType": "Fire"
             },
@@ -1099,7 +1195,8 @@
               "probability": 1,
               "duration": 15,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Regeneration.Moment_of_Glory",
               "damageType": "Cold"
             },
@@ -1110,7 +1207,8 @@
               "probability": 1,
               "duration": 15,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Regeneration.Moment_of_Glory",
               "damageType": "Energy"
             },
@@ -1121,7 +1219,8 @@
               "probability": 1,
               "duration": 15,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Regeneration.Moment_of_Glory",
               "damageType": "Negative"
             }
@@ -1137,7 +1236,8 @@
               "probability": 1,
               "duration": 15,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Regeneration.Moment_of_Glory",
               "damageType": "Smashing"
             },
@@ -1148,7 +1248,8 @@
               "probability": 1,
               "duration": 15,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Regeneration.Moment_of_Glory",
               "damageType": "Lethal"
             },
@@ -1159,7 +1260,8 @@
               "probability": 1,
               "duration": 15,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Regeneration.Moment_of_Glory",
               "damageType": "Fire"
             },
@@ -1170,7 +1272,8 @@
               "probability": 1,
               "duration": 15,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Regeneration.Moment_of_Glory",
               "damageType": "Cold"
             },
@@ -1181,7 +1284,8 @@
               "probability": 1,
               "duration": 15,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Regeneration.Moment_of_Glory",
               "damageType": "Energy"
             },
@@ -1192,7 +1296,8 @@
               "probability": 1,
               "duration": 15,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Regeneration.Moment_of_Glory",
               "damageType": "Negative"
             },
@@ -1203,13 +1308,24 @@
               "probability": 1,
               "duration": 15,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Regeneration.Moment_of_Glory",
               "damageType": "Toxic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Defense_Buff",
+        "Endurance_Discount",
+        "Recharge",
+        "Endurance_Modification",
+        "Res_Damage"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Defense.Regeneration.Moment_of_Glory",
+      "archetypeOrder": "secondary",
       "powerIndex": 8,
       "castTimeReal": 2.57,
       "toggleCost": 2.6,

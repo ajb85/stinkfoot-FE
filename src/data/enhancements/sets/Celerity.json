@@ -2,118 +2,68 @@
   "fullName": "IOSet.Celerity",
   "enhancements": [
     {
-      "effects": [
-        {
-          "effectType": "Endurance",
-          "values": [
-            {
-              "etModifies": "EnduranceDiscount",
-              "mag": {
-                "pve": 0.424
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Celerity_A.Attuned_Celerity_A"
-            }
-          ]
-        }
-      ],
+      "type": "set",
+      "fullName": "Boosts.Attuned_Celerity_A.Attuned_Celerity_A",
+      "displayName": "Endurance",
       "description": {
         "short": "-End Cost",
         "long": "Reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Celerity_A.Attuned_Celerity_A",
-      "setName": "Celerity",
-      "displayName": "Endurance"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Run",
-          "values": [
-            {
-              "etModifies": "SpeedRunning",
-              "mag": {
-                "pve": 0.424
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Celerity_B.Attuned_Celerity_B"
+          "mag": {
+            "IO": {
+              "cap": 0.424
             }
-          ]
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Celerity_B.Attuned_Celerity_B",
+      "displayName": "Run",
       "description": {
         "short": "+Run",
         "long": "Enhances the run speed of a power by {Boost.Attrib.Run.Scale}%."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Celerity_B.Attuned_Celerity_B",
-      "setName": "Celerity",
-      "displayName": "Run"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Stealth",
-          "values": [
-            {
-              "mag": {
-                "pve": 30
-              },
-              "cancelOnMiss": true,
-              "probability": 1,
-              "duration": 120,
-              "effectType": "StealthRadius",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Celerity_C.Attuned_Celerity_C"
+          "mag": {
+            "IO": {
+              "cap": 0.424
             }
-          ]
-        },
-        {
-          "effectType": "Ones",
-          "values": [
-            {
-              "mag": {
-                "pve": 300
-              },
-              "cancelOnMiss": true,
-              "probability": 1,
-              "duration": 120,
-              "effectType": "StealthRadiusPlayer",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Celerity_C.Attuned_Celerity_C"
-            },
-            {
-              "mag": {
-                "pve": 0.8
-              },
-              "cancelOnMiss": true,
-              "probability": 1,
-              "duration": 120,
-              "effectType": "Translucency",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Celerity_C.Attuned_Celerity_C"
-            }
-          ]
+          },
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Celerity_C.Attuned_Celerity_C",
+      "displayName": "Stealth",
       "description": {
         "short": "Grants Stealth",
         "long": "UNIQUE -- No more than 1 enhancement of this type may be slotted by a character.  May not be slotted if you have any other enhancements which grant stealth.  Grants Stealth for 120 seconds when used in an instant effect power."
       },
-      "isUnique": true,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Celerity_C.Attuned_Celerity_C",
-      "setName": "Celerity",
-      "displayName": "Stealth"
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 30
+            }
+          },
+          "stat": "Stealth",
+          "cancelOnMiss": true,
+          "suppression": 448,
+          "toWho": "self"
+        }
+      ]
     }
   ],
   "levels": {

@@ -6,16 +6,6 @@
   "displayName": "Mace Mastery",
   "powers": [
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Defense_Debuff",
-        "Endurance_Discount",
-        "Range",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Damage",
@@ -28,8 +18,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Dominator_Mace_Mastery.Poisonous_Ray",
               "damageType": "Energy"
             },
@@ -43,8 +34,9 @@
               "effectType": "Damage",
               "ticks": 10,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Dominator_Mace_Mastery.Poisonous_Ray",
               "damageType": "Toxic"
             }
@@ -60,8 +52,9 @@
               "probability": 1,
               "duration": 30,
               "effectType": "Defense",
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Dominator_Mace_Mastery.Poisonous_Ray"
             }
           ]
@@ -77,7 +70,7 @@
               "duration": 30,
               "effectType": "Resistance",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Dominator_Mace_Mastery.Poisonous_Ray",
               "damageType": "Smashing"
             },
@@ -89,7 +82,7 @@
               "duration": 30,
               "effectType": "Resistance",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Dominator_Mace_Mastery.Poisonous_Ray",
               "damageType": "Lethal"
             },
@@ -101,7 +94,7 @@
               "duration": 30,
               "effectType": "Resistance",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Dominator_Mace_Mastery.Poisonous_Ray",
               "damageType": "Fire"
             },
@@ -113,7 +106,7 @@
               "duration": 30,
               "effectType": "Resistance",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Dominator_Mace_Mastery.Poisonous_Ray",
               "damageType": "Cold"
             },
@@ -125,7 +118,7 @@
               "duration": 30,
               "effectType": "Resistance",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Dominator_Mace_Mastery.Poisonous_Ray",
               "damageType": "Energy"
             },
@@ -137,7 +130,7 @@
               "duration": 30,
               "effectType": "Resistance",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Dominator_Mace_Mastery.Poisonous_Ray",
               "damageType": "Negative"
             },
@@ -149,7 +142,7 @@
               "duration": 30,
               "effectType": "Resistance",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Dominator_Mace_Mastery.Poisonous_Ray",
               "damageType": "Toxic"
             },
@@ -161,13 +154,24 @@
               "duration": 30,
               "effectType": "Resistance",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Dominator_Mace_Mastery.Poisonous_Ray",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Defense_Debuff",
+        "Endurance_Discount",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Dominator_Mace_Mastery.Poisonous_Ray",
+      "archetypeOrder": "epicPool",
       "powerIndex": 0,
       "castTimeReal": 2,
       "toggleCost": 13,
@@ -206,13 +210,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Defense_Buff",
-        "Endurance_Discount",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Buff_Def",
@@ -225,7 +222,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Dominator_Mace_Mastery.Scorpion_Shield",
               "damageType": "Smashing"
             },
@@ -237,7 +235,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Dominator_Mace_Mastery.Scorpion_Shield",
               "damageType": "Lethal"
             },
@@ -249,7 +248,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Dominator_Mace_Mastery.Scorpion_Shield",
               "damageType": "Energy"
             },
@@ -260,7 +260,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Dominator_Mace_Mastery.Scorpion_Shield",
               "damageType": "Cold"
             },
@@ -271,7 +272,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Dominator_Mace_Mastery.Scorpion_Shield",
               "damageType": "Fire"
             },
@@ -282,7 +284,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Dominator_Mace_Mastery.Scorpion_Shield",
               "damageType": "Psionic"
             },
@@ -293,7 +296,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Dominator_Mace_Mastery.Scorpion_Shield",
               "damageType": "Negative"
             }
@@ -310,7 +314,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Dominator_Mace_Mastery.Scorpion_Shield",
               "damageType": "Toxic"
             }
@@ -326,7 +331,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Elusivity",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Dominator_Mace_Mastery.Scorpion_Shield",
               "damageType": "Smashing"
             },
@@ -337,7 +343,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Elusivity",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Dominator_Mace_Mastery.Scorpion_Shield",
               "damageType": "Lethal"
             },
@@ -348,7 +355,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Elusivity",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Dominator_Mace_Mastery.Scorpion_Shield",
               "damageType": "Cold"
             },
@@ -359,7 +367,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Elusivity",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Dominator_Mace_Mastery.Scorpion_Shield",
               "damageType": "Fire"
             },
@@ -370,7 +379,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Elusivity",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Dominator_Mace_Mastery.Scorpion_Shield",
               "damageType": "Psionic"
             },
@@ -381,7 +391,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Elusivity",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Dominator_Mace_Mastery.Scorpion_Shield",
               "damageType": "Energy"
             },
@@ -391,12 +402,21 @@
               },
               "probability": 1,
               "duration": 0.75,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Dominator_Mace_Mastery.Scorpion_Shield"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Defense_Buff",
+        "Endurance_Discount",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Dominator_Mace_Mastery.Scorpion_Shield",
+      "archetypeOrder": "epicPool",
       "powerIndex": 1,
       "castTimeReal": 2,
       "toggleCost": 0.325,
@@ -433,16 +453,6 @@
       "powerType": "Toggle"
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Knockback",
-        "Range",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Damage",
@@ -455,8 +465,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Dominator_Mace_Mastery.Disruptor_Blast",
               "damageType": "Smashing"
             },
@@ -468,8 +479,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Dominator_Mace_Mastery.Disruptor_Blast",
               "damageType": "Energy"
             }
@@ -486,23 +498,35 @@
               "probability": 0.2,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Dominator_Mace_Mastery.Disruptor_Blast",
               "mezType": "Knockback"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Knockback",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Dominator_Mace_Mastery.Disruptor_Blast",
+      "archetypeOrder": "epicPool",
       "powerIndex": 2,
       "castTimeReal": 2,
       "toggleCost": 18.98,
+      "isEpic": true,
       "fullName": "Epic_Mace_Mastery_Disruptor_Blast",
       "displayName": "Disruptor Blast",
       "requires": {
         "powers": {
-          "Epic_Mace_Mastery_Poisonous_Ray": true,
-          "Epic_Mace_Mastery_Scorpion_Shield": true
+          "Epic.Dominator_Mace_Mastery.Disruptor_Blast": true
         },
         "count": 1
       },
@@ -536,13 +560,6 @@
       "aoeModifier": 3.25
     },
     {
-      "allowedEnhancements": [
-        "Defense_Buff",
-        "Endurance_Discount",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Ones",
@@ -554,20 +571,20 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Mez",
-              "toWho": "Self",
+              "toWho": "self",
               "attribType": 1,
               "powerFullName": "Epic.Dominator_Mace_Mastery.Personal_Force_Field",
-              "mezType": "OnlyAffectsSelf"
+              "mezType": "Only Affects Self"
             },
             {
+              "etModifies": "Elusivity",
               "mag": {
                 "pvp": 0.5
               },
               "probability": 1,
               "duration": 0.75,
               "effectType": "Enhancement",
-              "eTModifies": 44,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Epic.Dominator_Mace_Mastery.Personal_Force_Field"
             }
           ]
@@ -583,7 +600,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Dominator_Mace_Mastery.Personal_Force_Field"
             }
           ]
@@ -599,7 +617,7 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Epic.Dominator_Mace_Mastery.Personal_Force_Field",
               "damageType": "Smashing"
             },
@@ -611,7 +629,7 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Epic.Dominator_Mace_Mastery.Personal_Force_Field",
               "damageType": "Lethal"
             },
@@ -623,7 +641,7 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Epic.Dominator_Mace_Mastery.Personal_Force_Field",
               "damageType": "Fire"
             },
@@ -635,7 +653,7 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Epic.Dominator_Mace_Mastery.Personal_Force_Field",
               "damageType": "Cold"
             },
@@ -647,7 +665,7 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Epic.Dominator_Mace_Mastery.Personal_Force_Field",
               "damageType": "Energy"
             },
@@ -659,7 +677,7 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Epic.Dominator_Mace_Mastery.Personal_Force_Field",
               "damageType": "Negative"
             },
@@ -671,22 +689,30 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Epic.Dominator_Mace_Mastery.Personal_Force_Field",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Defense_Buff",
+        "Endurance_Discount",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Dominator_Mace_Mastery.Personal_Force_Field",
+      "archetypeOrder": "epicPool",
       "powerIndex": 3,
       "castTimeReal": 2.03,
       "toggleCost": 0.325,
+      "isEpic": true,
       "fullName": "Epic_Mace_Mastery_Personal_Force_Field",
       "displayName": "Personal Force Field",
       "requires": {
         "powers": {
-          "Epic_Mace_Mastery_Poisonous_Ray": true,
-          "Epic_Mace_Mastery_Scorpion_Shield": true
+          "Epic.Dominator_Mace_Mastery.Personal_Force_Field": true
         },
         "count": 1
       },
@@ -716,17 +742,6 @@
       "powerType": "Toggle"
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Defense_Debuff",
-        "Endurance_Discount",
-        "Range",
-        "Recharge",
-        "Slow"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Ones",
@@ -738,23 +753,33 @@
               "probability": 1,
               "duration": 240,
               "effectType": "EntCreate",
-              "toWho": "All",
+              "toWho": "all",
               "powerFullName": "Epic.Dominator_Mace_Mastery.Summon_Tarantula"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Defense_Debuff",
+        "Endurance_Discount",
+        "Range",
+        "Recharge",
+        "Slow"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Dominator_Mace_Mastery.Summon_Tarantula",
+      "archetypeOrder": "epicPool",
       "powerIndex": 4,
       "castTimeReal": 3.03,
       "toggleCost": 26,
+      "isEpic": true,
       "fullName": "Epic_Mace_Mastery_Summon_Tarantula",
       "displayName": "Summon Tarantula",
       "requires": {
         "powers": {
-          "Epic_Mace_Mastery_Poisonous_Ray": true,
-          "Epic_Mace_Mastery_Scorpion_Shield": true,
-          "Epic_Mace_Mastery_Disruptor_Blast": true,
-          "Epic_Mace_Mastery_Personal_Force_Field": true
+          "Epic.Dominator_Mace_Mastery.Summon_Tarantula": true
         },
         "count": 2
       },

@@ -2,235 +2,93 @@
   "fullName": "IOSet.Winter's_Gift",
   "enhancements": [
     {
-      "effects": [
-        {
-          "effectType": "Range",
-          "values": [
-            {
-              "etModifies": "Range",
-              "mag": {
-                "pve": 0.255
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Winters_Gift_A.Attuned_Winters_Gift_A"
-            }
-          ]
-        },
-        {
-          "effectType": "Fly",
-          "values": [
-            {
-              "etModifies": "SpeedFlying",
-              "mag": {
-                "pve": 0.424
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Winters_Gift_A.Attuned_Winters_Gift_A"
-            }
-          ]
-        },
-        {
-          "effectType": "Jump",
-          "values": [
-            {
-              "etModifies": "SpeedJumping",
-              "mag": {
-                "pve": 0.424
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Winters_Gift_A.Attuned_Winters_Gift_A"
-            }
-          ]
-        },
-        {
-          "effectType": "Boosts_33",
-          "values": [
-            {
-              "etModifies": "JumpHeight",
-              "mag": {
-                "pve": 0.424
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Winters_Gift_A.Attuned_Winters_Gift_A"
-            }
-          ]
-        },
-        {
-          "effectType": "Run",
-          "values": [
-            {
-              "etModifies": "SpeedRunning",
-              "mag": {
-                "pve": 0.424
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Winters_Gift_A.Attuned_Winters_Gift_A"
-            }
-          ]
-        }
-      ],
+      "type": "set",
+      "fullName": "Boosts.Attuned_Winters_Gift_A.Attuned_Winters_Gift_A",
+      "displayName": "Run Speed, Jump, Flight Speed, Range",
       "description": {
         "short": "+Run Speed, +Jump, +Flight Speed, +Range",
         "long": "Enhances the range of a teleport power by {Boost.Attrib.Range.Scale}%, the flight speed of a power by {Boost.Attrib.Fly.Scale}%, the jumping ability of a power by {Boost.Attrib.Jump.Scale}% and the run speed of a power by {Boost.Attrib.Run.Scale}%.  NOTE: This enhancement can be slotted into any travel power and will enhance run speed, jumping, flight speed and teleport range.  UNIQUE -- No more than 1 enhancement of this type may be slotted by a character."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Winters_Gift_A.Attuned_Winters_Gift_A",
-      "setName": "Winter's_Gift",
-      "displayName": "Run Speed, Jump, Flight Speed, Range"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Range",
-          "values": [
-            {
-              "etModifies": "Range",
-              "mag": {
-                "pve": 0.159375
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Winters_Gift_B.Attuned_Winters_Gift_B"
+          "mag": {
+            "IO": {
+              "cap": 0.255
             }
-          ]
+          },
+          "stat": "+Travel",
+          "toWho": "self"
         },
         {
-          "effectType": "Fly",
-          "values": [
-            {
-              "etModifies": "SpeedFlying",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Winters_Gift_B.Attuned_Winters_Gift_B"
+          "mag": {
+            "IO": {
+              "cap": 0.424
             }
-          ]
-        },
-        {
-          "effectType": "Jump",
-          "values": [
-            {
-              "etModifies": "SpeedJumping",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Winters_Gift_B.Attuned_Winters_Gift_B"
-            }
-          ]
-        },
-        {
-          "effectType": "Boosts_33",
-          "values": [
-            {
-              "etModifies": "JumpHeight",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Winters_Gift_B.Attuned_Winters_Gift_B"
-            }
-          ]
-        },
-        {
-          "effectType": "Run",
-          "values": [
-            {
-              "etModifies": "SpeedRunning",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Winters_Gift_B.Attuned_Winters_Gift_B"
-            }
-          ]
-        },
-        {
-          "effectType": "Endurance",
-          "values": [
-            {
-              "etModifies": "EnduranceDiscount",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Winters_Gift_B.Attuned_Winters_Gift_B"
-            }
-          ]
+          },
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Winters_Gift_B.Attuned_Winters_Gift_B",
+      "displayName": "Run Speed, Jump, Flight Speed, Range/Endurance",
       "description": {
         "short": "+Run Speed, +Jump, +Flight Speed, +Range, -End Cost",
         "long": "Enhances the range of a teleport power by {Boost.Attrib.Range.Scale}%, the flight speed of a power by {Boost.Attrib.Fly.Scale}%, the jumping ability of a power by {Boost.Attrib.Jump.Scale}%, the run speed of a power by {Boost.Attrib.Run.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%.  NOTE: This enhancement can be slotted into any travel power and will enhance run speed, jumping, flight speed and teleport range.  UNIQUE -- No more than 1 enhancement of this type may be slotted by a character."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Winters_Gift_B.Attuned_Winters_Gift_B",
-      "setName": "Winter's_Gift",
-      "displayName": "Run Speed, Jump, Flight Speed, Range/Endurance"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Resist",
-          "values": [
-            {
-              "mag": {
-                "pve": 1
-              },
-              "cancelOnMiss": true,
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Null",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Winters_Gift_C.Attuned_Winters_Gift_C"
+          "mag": {
+            "IO": {
+              "cap": 0.159375
             }
-          ]
+          },
+          "stat": "+Travel",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Winters_Gift_C.Attuned_Winters_Gift_C",
+      "displayName": "Slow Resistance (20%)",
       "description": {
         "short": "+RES(Slow)",
         "long": "UNIQUE -- No more than 1 enhancement of this type may be slotted by a character.  Reduces Slow effects by 20%.  NOTE: This enhancement can be slotted into any travel power."
       },
-      "isUnique": true,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Winters_Gift_C.Attuned_Winters_Gift_C",
-      "setName": "Winter's_Gift",
-      "displayName": "Slow Resistance (20%)"
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 1
+            }
+          },
+          "stat": "Slow Resistance",
+          "cancelOnMiss": true,
+          "toWho": "self"
+        }
+      ]
     }
   ],
   "levels": {

@@ -6,16 +6,6 @@
   "displayName": "Mace Mastery",
   "powers": [
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Knockback",
-        "Range",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Damage",
@@ -28,8 +18,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.VEAT_Mace_Mastery.Mace_Blast",
               "damageType": "Smashing"
             },
@@ -41,8 +32,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.VEAT_Mace_Mastery.Mace_Blast",
               "damageType": "Energy"
             }
@@ -59,14 +51,26 @@
               "probability": 0.3,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.VEAT_Mace_Mastery.Mace_Blast",
               "mezType": "Knockback"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Knockback",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.VEAT_Mace_Mastery.Mace_Blast",
+      "archetypeOrder": "epicPool",
       "powerIndex": 0,
       "castTimeReal": 2,
       "toggleCost": 8.58,
@@ -104,16 +108,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Endurance_Discount",
-        "Immobilize",
-        "Range",
-        "Recharge",
-        "Slow"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Immobilize",
@@ -126,11 +120,12 @@
               "duration": 17.8800011,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.VEAT_Mace_Mastery.Web_Envelope",
-              "mezType": "Immobilization"
+              "mezType": "Immob"
             }
           ]
         },
@@ -145,11 +140,12 @@
               "duration": 2,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.VEAT_Mace_Mastery.Web_Envelope",
-              "mezType": "Immobilization"
+              "mezType": "Immob"
             },
             {
               "mag": {
@@ -159,7 +155,8 @@
               "duration": 15,
               "effectType": "JumpHeight",
               "stacking": 1,
-              "toWho": "Target",
+              "buffable": true,
+              "toWho": "target",
               "powerFullName": "Epic.VEAT_Mace_Mastery.Web_Envelope"
             },
             {
@@ -170,7 +167,8 @@
               "duration": 15,
               "effectType": "Fly",
               "stacking": 1,
-              "toWho": "Target",
+              "buffable": true,
+              "toWho": "target",
               "powerFullName": "Epic.VEAT_Mace_Mastery.Web_Envelope"
             }
           ]
@@ -179,15 +177,15 @@
           "effectType": "Slow",
           "values": [
             {
+              "etModifies": "RechargeTime",
               "mag": {
                 "pve": -0.2
               },
               "probability": 1,
               "duration": 15,
               "effectType": "Enhancement",
-              "eTModifies": 25,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.VEAT_Mace_Mastery.Web_Envelope",
               "nearGround": true
             },
@@ -198,8 +196,9 @@
               "probability": 1,
               "duration": 15,
               "effectType": "SpeedRunning",
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.VEAT_Mace_Mastery.Web_Envelope",
               "nearGround": true
             },
@@ -210,14 +209,26 @@
               "probability": 1,
               "duration": 15,
               "effectType": "SpeedFlying",
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.VEAT_Mace_Mastery.Web_Envelope",
               "nearGround": true
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Endurance_Discount",
+        "Immobilize",
+        "Range",
+        "Recharge",
+        "Slow"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.VEAT_Mace_Mastery.Web_Envelope",
+      "archetypeOrder": "epicPool",
       "powerIndex": 1,
       "castTimeReal": 2,
       "toggleCost": 12.74,
@@ -255,16 +266,6 @@
       "aoeModifier": 3.25
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Knockback",
-        "Range",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Damage",
@@ -277,8 +278,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.VEAT_Mace_Mastery.Disruptor_Blast",
               "damageType": "Smashing"
             },
@@ -290,8 +292,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.VEAT_Mace_Mastery.Disruptor_Blast",
               "damageType": "Energy"
             }
@@ -308,23 +311,35 @@
               "probability": 0.1,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.VEAT_Mace_Mastery.Disruptor_Blast",
               "mezType": "Knockback"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Knockback",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.VEAT_Mace_Mastery.Disruptor_Blast",
+      "archetypeOrder": "epicPool",
       "powerIndex": 2,
       "castTimeReal": 2,
       "toggleCost": 18.98,
+      "isEpic": true,
       "fullName": "Epic_Mace_Mastery_Disruptor_Blast",
       "displayName": "Disruptor Blast",
       "requires": {
         "powers": {
-          "Epic_Mace_Mastery_Mace_Blast": true,
-          "Epic_Mace_Mastery_Web_Envelope": true
+          "Epic.VEAT_Mace_Mastery.Disruptor_Blast": true
         },
         "count": 1
       },
@@ -358,14 +373,6 @@
       "aoeModifier": 3.25
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Damage",
@@ -378,8 +385,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.VEAT_Mace_Mastery.Focused_Accuracy",
               "damageType": "Smashing"
             }
@@ -396,7 +404,7 @@
               "duration": 20,
               "effectType": "Resistance",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.VEAT_Mace_Mastery.Focused_Accuracy",
               "damageType": "Smashing"
             },
@@ -408,7 +416,7 @@
               "duration": 20,
               "effectType": "Resistance",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.VEAT_Mace_Mastery.Focused_Accuracy",
               "damageType": "Lethal"
             },
@@ -420,7 +428,7 @@
               "duration": 20,
               "effectType": "Resistance",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.VEAT_Mace_Mastery.Focused_Accuracy",
               "damageType": "Fire"
             },
@@ -432,7 +440,7 @@
               "duration": 20,
               "effectType": "Resistance",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.VEAT_Mace_Mastery.Focused_Accuracy",
               "damageType": "Cold"
             },
@@ -444,7 +452,7 @@
               "duration": 20,
               "effectType": "Resistance",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.VEAT_Mace_Mastery.Focused_Accuracy",
               "damageType": "Energy"
             },
@@ -456,7 +464,7 @@
               "duration": 20,
               "effectType": "Resistance",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.VEAT_Mace_Mastery.Focused_Accuracy",
               "damageType": "Negative"
             },
@@ -468,7 +476,7 @@
               "duration": 20,
               "effectType": "Resistance",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.VEAT_Mace_Mastery.Focused_Accuracy",
               "damageType": "Psionic"
             },
@@ -480,22 +488,31 @@
               "duration": 20,
               "effectType": "Resistance",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.VEAT_Mace_Mastery.Focused_Accuracy",
               "damageType": "Toxic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.VEAT_Mace_Mastery.Focused_Accuracy",
+      "archetypeOrder": "epicPool",
       "powerIndex": 3,
       "castTimeReal": 2.33,
       "toggleCost": 17.94,
+      "isEpic": true,
       "fullName": "Epic_Mace_Mastery_Shatter_Armor",
       "displayName": "Shatter Armor",
       "requires": {
         "powers": {
-          "Epic_Mace_Mastery_Mace_Blast": true,
-          "Epic_Mace_Mastery_Web_Envelope": true
+          "Epic.VEAT_Mace_Mastery.Focused_Accuracy": true
         },
         "count": 1
       },
@@ -526,17 +543,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Immobilize",
-        "Knockback",
-        "Range",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Ones",
@@ -548,23 +554,33 @@
               "probability": 1,
               "duration": 240,
               "effectType": "EntCreate",
-              "toWho": "All",
+              "toWho": "all",
               "powerFullName": "Epic.VEAT_Mace_Mastery.Summon_Blaster"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Immobilize",
+        "Knockback",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.VEAT_Mace_Mastery.Summon_Blaster",
+      "archetypeOrder": "epicPool",
       "powerIndex": 4,
       "castTimeReal": 3.03,
       "toggleCost": 26,
+      "isEpic": true,
       "fullName": "Epic_Mace_Mastery_Summon_Blaster",
       "displayName": "Summon Blaster",
       "requires": {
         "powers": {
-          "Epic_Mace_Mastery_Mace_Blast": true,
-          "Epic_Mace_Mastery_Web_Envelope": true,
-          "Epic_Mace_Mastery_Disruptor_Blast": true,
-          "Epic_Mace_Mastery_Shatter_Armor": true
+          "Epic.VEAT_Mace_Mastery.Summon_Blaster": true
         },
         "count": 2
       },

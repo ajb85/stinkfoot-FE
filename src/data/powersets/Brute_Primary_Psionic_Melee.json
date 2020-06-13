@@ -6,15 +6,6 @@
   "displayName": "Psionic Melee",
   "powers": [
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Recharge",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Ones",
@@ -25,7 +16,7 @@
               },
               "probability": 0.08889,
               "effectType": "GrantPower",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Psionic_Melee.Mental_Strike"
             },
             {
@@ -37,7 +28,7 @@
               "effectType": "Rage",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Psionic_Melee.Mental_Strike"
             }
           ]
@@ -53,8 +44,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Psionic_Melee.Mental_Strike",
               "damageType": "Smashing"
             },
@@ -66,8 +58,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Psionic_Melee.Mental_Strike",
               "damageType": "Psionic"
             }
@@ -77,16 +70,16 @@
           "effectType": "Slow",
           "values": [
             {
+              "etModifies": "RechargeTime",
               "mag": {
                 "pve": -0.1
               },
               "probability": 1,
               "duration": 6,
               "effectType": "Enhancement",
-              "eTModifies": 25,
               "stacking": 1,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Psionic_Melee.Mental_Strike"
             }
           ]
@@ -103,9 +96,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Psionic_Melee.Mental_Strike",
               "requiresToHitCheck": true,
@@ -122,14 +116,25 @@
               },
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Psionic_Melee.Mental_Strike",
               "damageType": "Fire"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Recharge",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Psionic_Melee.Mental_Strike",
+      "archetypeOrder": "primary",
       "powerIndex": 0,
       "castTimeReal": 1,
       "toggleCost": 4.368,
@@ -171,15 +176,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Recharge",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Ones",
@@ -190,7 +186,7 @@
               },
               "probability": 0.14067,
               "effectType": "GrantPower",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Psionic_Melee.Psi_Blade"
             },
             {
@@ -202,7 +198,7 @@
               "effectType": "Rage",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Psionic_Melee.Psi_Blade"
             }
           ]
@@ -218,8 +214,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Psionic_Melee.Psi_Blade",
               "damageType": "Lethal"
             },
@@ -231,8 +228,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Psionic_Melee.Psi_Blade",
               "damageType": "Psionic"
             }
@@ -242,16 +240,16 @@
           "effectType": "Slow",
           "values": [
             {
+              "etModifies": "RechargeTime",
               "mag": {
                 "pve": -0.12
               },
               "probability": 1,
               "duration": 6,
               "effectType": "Enhancement",
-              "eTModifies": 25,
               "stacking": 1,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Psionic_Melee.Psi_Blade"
             }
           ]
@@ -268,9 +266,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Psionic_Melee.Psi_Blade",
               "requiresToHitCheck": true,
@@ -287,14 +286,25 @@
               },
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Psionic_Melee.Psi_Blade",
               "damageType": "Fire"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Recharge",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Psionic_Melee.Psi_Blade",
+      "archetypeOrder": "primary",
       "powerIndex": 1,
       "castTimeReal": 1.33,
       "toggleCost": 5.928,
@@ -336,16 +346,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Knockback",
-        "Recharge",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Ones",
@@ -356,7 +356,7 @@
               },
               "probability": 0.23267,
               "effectType": "GrantPower",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Psionic_Melee.Telekinetic_Blow"
             },
             {
@@ -368,7 +368,7 @@
               "effectType": "Rage",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Psionic_Melee.Telekinetic_Blow"
             }
           ]
@@ -384,8 +384,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Psionic_Melee.Telekinetic_Blow",
               "damageType": "Smashing"
             },
@@ -397,8 +398,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Psionic_Melee.Telekinetic_Blow",
               "damageType": "Psionic"
             }
@@ -415,8 +417,9 @@
               "probability": 0.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Psionic_Melee.Telekinetic_Blow",
               "mezType": "Knockup"
             }
@@ -434,9 +437,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Psionic_Melee.Telekinetic_Blow",
               "requiresToHitCheck": true,
@@ -453,14 +457,26 @@
               },
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Psionic_Melee.Telekinetic_Blow",
               "damageType": "Fire"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Knockback",
+        "Recharge",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Psionic_Melee.Telekinetic_Blow",
+      "archetypeOrder": "primary",
       "powerIndex": 2,
       "castTimeReal": 1.47,
       "toggleCost": 9.36,
@@ -503,13 +519,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "ToHit_Buff",
-        "Endurance_Discount",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Buff_ToHit",
@@ -523,7 +532,8 @@
               "variableModified": true,
               "effectType": "ToHit",
               "stacking": 1,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Psionic_Melee.Concentration"
             }
           ]
@@ -540,7 +550,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Psionic_Melee.Concentration",
               "damageType": "Smashing"
             },
@@ -553,7 +563,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Psionic_Melee.Concentration",
               "damageType": "Lethal"
             },
@@ -566,7 +576,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Psionic_Melee.Concentration",
               "damageType": "Fire"
             },
@@ -579,7 +589,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Psionic_Melee.Concentration",
               "damageType": "Cold"
             },
@@ -592,7 +602,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Psionic_Melee.Concentration",
               "damageType": "Energy"
             },
@@ -605,7 +615,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Psionic_Melee.Concentration",
               "damageType": "Negative"
             },
@@ -618,7 +628,7 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Psionic_Melee.Concentration",
               "damageType": "Toxic"
             },
@@ -631,13 +641,21 @@
               "variableModified": true,
               "effectType": "DamageBuff",
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Psionic_Melee.Concentration",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "ToHit_Buff",
+        "Endurance_Discount",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Psionic_Melee.Concentration",
+      "archetypeOrder": "primary",
       "powerIndex": 3,
       "castTimeReal": 1.17,
       "toggleCost": 5.2,
@@ -672,16 +690,6 @@
       "powerType": "Toggle"
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Recharge",
-        "Stun",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Ones",
@@ -692,7 +700,7 @@
               },
               "probability": 0.19045,
               "effectType": "GrantPower",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Psionic_Melee.Psi_Blade_Sweep"
             },
             {
@@ -703,8 +711,9 @@
               "duration": 2,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Psionic_Melee.Psi_Blade_Sweep",
               "mezType": "Stun"
@@ -718,7 +727,7 @@
               "effectType": "Rage",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Psionic_Melee.Psi_Blade_Sweep"
             }
           ]
@@ -734,8 +743,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Psionic_Melee.Psi_Blade_Sweep",
               "damageType": "Lethal"
             },
@@ -747,8 +757,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Psionic_Melee.Psi_Blade_Sweep",
               "damageType": "Psionic"
             }
@@ -758,16 +769,16 @@
           "effectType": "Slow",
           "values": [
             {
+              "etModifies": "RechargeTime",
               "mag": {
                 "pve": -0.15
               },
               "probability": 1,
               "duration": 6,
               "effectType": "Enhancement",
-              "eTModifies": 25,
               "stacking": 1,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Psionic_Melee.Psi_Blade_Sweep"
             }
           ]
@@ -783,8 +794,9 @@
               "duration": 5.96,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Psionic_Melee.Psi_Blade_Sweep",
               "mezType": "Stun"
@@ -803,9 +815,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Psionic_Melee.Psi_Blade_Sweep",
               "requiresToHitCheck": true,
@@ -822,14 +835,26 @@
               },
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Psionic_Melee.Psi_Blade_Sweep",
               "damageType": "Fire"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Recharge",
+        "Stun",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Psionic_Melee.Psi_Blade_Sweep",
+      "archetypeOrder": "primary",
       "powerIndex": 4,
       "castTimeReal": 1.77,
       "toggleCost": 8.528,
@@ -875,14 +900,6 @@
       "aoeModifier": 1.30309331
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Range",
-        "Recharge",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Taunt",
@@ -896,8 +913,9 @@
               "duration": 20.5999985,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Psionic_Melee.Taunt",
               "mezType": "Taunt"
@@ -908,16 +926,16 @@
           "effectType": "Ones",
           "values": [
             {
+              "etModifies": "Range",
               "mag": {
                 "pve": -0.75
               },
               "probability": 1,
               "duration": 12,
               "effectType": "Enhancement",
-              "eTModifies": 24,
               "stacking": 1,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Psionic_Melee.Taunt"
             },
             {
@@ -927,14 +945,24 @@
               "probability": 1,
               "effectType": "Null",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Psionic_Melee.Taunt",
               "requiresToHitCheck": true
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Range",
+        "Recharge",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Psionic_Melee.Taunt",
+      "archetypeOrder": "primary",
       "powerIndex": 5,
       "castTimeReal": 1.67,
       "fullName": "Brute_Primary_Psionic_Melee_Taunt",
@@ -970,15 +998,6 @@
       "aoeModifier": 3.25
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Confuse",
-        "Endurance_Discount",
-        "Range",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Ones",
@@ -989,7 +1008,7 @@
               },
               "probability": 1,
               "effectType": "GrantPower",
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Psionic_Melee.Boggle"
             },
             {
@@ -1001,8 +1020,9 @@
               "duration": 15,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Psionic_Melee.Boggle",
               "mezType": "Confuse"
@@ -1010,6 +1030,16 @@
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Confuse",
+        "Endurance_Discount",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Psionic_Melee.Boggle",
+      "archetypeOrder": "primary",
       "powerIndex": 6,
       "castTimeReal": 2,
       "toggleCost": 7.8,
@@ -1047,16 +1077,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Hold",
-        "Recharge",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Ones",
@@ -1067,7 +1087,7 @@
               },
               "probability": 1,
               "effectType": "RevokePower",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Psionic_Melee.Greater_Psi_Blade"
             },
             {
@@ -1078,8 +1098,9 @@
               "duration": 2,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Psionic_Melee.Greater_Psi_Blade",
               "mezType": "Hold"
@@ -1093,7 +1114,7 @@
               "effectType": "Rage",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Psionic_Melee.Greater_Psi_Blade"
             }
           ]
@@ -1109,8 +1130,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Psionic_Melee.Greater_Psi_Blade",
               "damageType": "Lethal"
             },
@@ -1122,8 +1144,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Psionic_Melee.Greater_Psi_Blade",
               "damageType": "Psionic"
             }
@@ -1133,16 +1156,16 @@
           "effectType": "Slow",
           "values": [
             {
+              "etModifies": "RechargeTime",
               "mag": {
                 "pve": -0.2
               },
               "probability": 1,
               "duration": 6,
               "effectType": "Enhancement",
-              "eTModifies": 25,
               "stacking": 1,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Psionic_Melee.Greater_Psi_Blade"
             }
           ]
@@ -1158,8 +1181,9 @@
               "duration": 9.536,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Psionic_Melee.Greater_Psi_Blade",
               "mezType": "Hold"
@@ -1178,9 +1202,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Psionic_Melee.Greater_Psi_Blade",
               "requiresToHitCheck": true,
@@ -1197,14 +1222,26 @@
               },
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Psionic_Melee.Greater_Psi_Blade",
               "damageType": "Fire"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Hold",
+        "Recharge",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Psionic_Melee.Greater_Psi_Blade",
+      "archetypeOrder": "primary",
       "powerIndex": 7,
       "castTimeReal": 2.5,
       "toggleCost": 14.352,
@@ -1246,16 +1283,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Knockback",
-        "Recharge",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "primary",
       "effects": [
         {
           "effectType": "Ones",
@@ -1266,7 +1293,7 @@
               },
               "probability": 0.2,
               "effectType": "GrantPower",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Psionic_Melee.Mass_Levitate"
             },
             {
@@ -1278,7 +1305,7 @@
               "effectType": "Rage",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Melee.Psionic_Melee.Mass_Levitate"
             }
           ]
@@ -1295,8 +1322,9 @@
               "effectType": "Damage",
               "delayedTime": 2,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Psionic_Melee.Mass_Levitate",
               "damageType": "Smashing"
             },
@@ -1311,8 +1339,9 @@
               "ticks": 4,
               "delayedTime": 2.25,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Psionic_Melee.Mass_Levitate",
               "damageType": "Psionic"
             }
@@ -1329,8 +1358,9 @@
               "probability": 1,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Psionic_Melee.Mass_Levitate",
               "mezType": "Knockup"
             }
@@ -1348,9 +1378,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Melee.Psionic_Melee.Mass_Levitate",
               "requiresToHitCheck": true,
@@ -1367,14 +1398,26 @@
               },
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Melee.Psionic_Melee.Mass_Levitate",
               "damageType": "Fire"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Knockback",
+        "Recharge",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Psionic_Melee.Mass_Levitate",
+      "archetypeOrder": "primary",
       "powerIndex": 8,
       "castTimeReal": 2.5,
       "toggleCost": 18.512,

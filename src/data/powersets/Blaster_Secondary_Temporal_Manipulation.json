@@ -6,16 +6,6 @@
   "displayName": "Temporal Manipulation",
   "powers": [
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Endurance_Discount",
-        "Immobilize",
-        "Range",
-        "Recharge",
-        "Slow"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Slow",
@@ -27,20 +17,33 @@
               "probability": 1,
               "duration": 20,
               "effectType": "SpeedRunning",
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Temporal_Manipulation.Time_Wall"
             },
             {
+              "etModifies": "RechargeTime",
+              "mag": {
+                "pve": -0.6
+              },
+              "probability": 1,
+              "duration": 20,
+              "effectType": "Enhancement",
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Support.Temporal_Manipulation.Time_Wall"
+            },
+            {
+              "etModifies": "JumpHeight",
               "mag": {
                 "pve": -0.5
               },
               "probability": 1,
               "duration": 20,
               "effectType": "Enhancement",
-              "eTModifies": 25,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Temporal_Manipulation.Time_Wall"
             },
             {
@@ -50,8 +53,9 @@
               "probability": 1,
               "duration": 20,
               "effectType": "SpeedJumping",
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Temporal_Manipulation.Time_Wall"
             },
             {
@@ -61,8 +65,9 @@
               "probability": 1,
               "duration": 20,
               "effectType": "SpeedFlying",
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Temporal_Manipulation.Time_Wall"
             }
           ]
@@ -76,7 +81,7 @@
               },
               "probability": 1,
               "effectType": "GrantPower",
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Temporal_Manipulation.Time_Wall"
             },
             {
@@ -86,7 +91,7 @@
               "probability": 1,
               "duration": 20,
               "effectType": "Null",
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Temporal_Manipulation.Time_Wall"
             },
             {
@@ -98,7 +103,7 @@
               "duration": 20,
               "effectType": "Regeneration",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Temporal_Manipulation.Time_Wall"
             }
           ]
@@ -114,7 +119,7 @@
               "duration": 20,
               "effectType": "SpeedRunning",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Temporal_Manipulation.Time_Wall"
             }
           ]
@@ -131,11 +136,12 @@
               "duration": 17.8800011,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Blaster_Support.Temporal_Manipulation.Time_Wall",
-              "mezType": "Immobilization"
+              "mezType": "Immob"
             }
           ]
         },
@@ -152,7 +158,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Temporal_Manipulation.Time_Wall",
               "damageType": "Smashing"
             },
@@ -166,7 +172,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Temporal_Manipulation.Time_Wall",
               "damageType": "Lethal"
             },
@@ -180,7 +186,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Temporal_Manipulation.Time_Wall",
               "damageType": "Fire"
             },
@@ -194,7 +200,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Temporal_Manipulation.Time_Wall",
               "damageType": "Cold"
             },
@@ -208,7 +214,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Temporal_Manipulation.Time_Wall",
               "damageType": "Energy"
             },
@@ -222,7 +228,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Temporal_Manipulation.Time_Wall",
               "damageType": "Negative"
             },
@@ -236,7 +242,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Temporal_Manipulation.Time_Wall",
               "damageType": "Toxic"
             },
@@ -250,13 +256,24 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Temporal_Manipulation.Time_Wall",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Endurance_Discount",
+        "Immobilize",
+        "Range",
+        "Recharge",
+        "Slow"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Support.Temporal_Manipulation.Time_Wall",
+      "archetypeOrder": "secondary",
       "powerIndex": 0,
       "castTimeReal": 1.6,
       "toggleCost": 5.2,
@@ -295,14 +312,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Damage",
@@ -315,8 +324,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Temporal_Manipulation.Aging_Touch",
               "damageType": "Psionic"
             }
@@ -334,8 +344,9 @@
               "effectType": "Endurance",
               "ticks": 3,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Temporal_Manipulation.Aging_Touch"
             }
           ]
@@ -352,8 +363,9 @@
               "effectType": "Endurance",
               "ticks": 3,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Temporal_Manipulation.Aging_Touch"
             }
           ]
@@ -371,7 +383,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Temporal_Manipulation.Aging_Touch",
               "damageType": "Smashing"
             },
@@ -385,7 +397,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Temporal_Manipulation.Aging_Touch",
               "damageType": "Lethal"
             },
@@ -399,7 +411,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Temporal_Manipulation.Aging_Touch",
               "damageType": "Fire"
             },
@@ -413,7 +425,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Temporal_Manipulation.Aging_Touch",
               "damageType": "Cold"
             },
@@ -427,7 +439,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Temporal_Manipulation.Aging_Touch",
               "damageType": "Energy"
             },
@@ -441,7 +453,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Temporal_Manipulation.Aging_Touch",
               "damageType": "Negative"
             },
@@ -455,7 +467,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Temporal_Manipulation.Aging_Touch",
               "damageType": "Toxic"
             },
@@ -469,13 +481,22 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Temporal_Manipulation.Aging_Touch",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Support.Temporal_Manipulation.Aging_Touch",
+      "archetypeOrder": "secondary",
       "powerIndex": 1,
       "castTimeReal": 1,
       "toggleCost": 6.864,
@@ -515,15 +536,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Endurance_Discount",
-        "Hold",
-        "Range",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Immobilize",
@@ -537,8 +549,9 @@
               "duration": 9.536,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Blaster_Support.Temporal_Manipulation.Time_Stop",
               "mezType": "Hold"
@@ -549,15 +562,16 @@
           "effectType": "Stun",
           "values": [
             {
+              "etModifies": "Heal",
               "mag": {
                 "pve": -0.298
               },
               "probability": 1,
               "duration": 20,
               "effectType": "Enhancement",
-              "eTModifies": 13,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Temporal_Manipulation.Time_Stop"
             }
           ]
@@ -574,7 +588,7 @@
               "duration": 20,
               "effectType": "Regeneration",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Temporal_Manipulation.Time_Stop"
             }
           ]
@@ -592,7 +606,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Temporal_Manipulation.Time_Stop",
               "damageType": "Smashing"
             },
@@ -606,7 +620,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Temporal_Manipulation.Time_Stop",
               "damageType": "Lethal"
             },
@@ -620,7 +634,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Temporal_Manipulation.Time_Stop",
               "damageType": "Fire"
             },
@@ -634,7 +648,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Temporal_Manipulation.Time_Stop",
               "damageType": "Cold"
             },
@@ -648,7 +662,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Temporal_Manipulation.Time_Stop",
               "damageType": "Energy"
             },
@@ -662,7 +676,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Temporal_Manipulation.Time_Stop",
               "damageType": "Negative"
             },
@@ -676,7 +690,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Temporal_Manipulation.Time_Stop",
               "damageType": "Toxic"
             },
@@ -690,13 +704,23 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Temporal_Manipulation.Time_Stop",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Endurance_Discount",
+        "Hold",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Support.Temporal_Manipulation.Time_Stop",
+      "archetypeOrder": "secondary",
       "powerIndex": 2,
       "castTimeReal": 2.17,
       "toggleCost": 11.388,
@@ -732,26 +756,19 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "ToHit_Buff",
-        "Endurance_Discount",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Ones",
           "values": [
             {
+              "etModifies": "RechargeTime",
               "mag": {
                 "pve": 0.3
               },
               "probability": 1,
               "duration": 10,
               "effectType": "Enhancement",
-              "eTModifies": 25,
-              "toWho": "All",
+              "toWho": "all",
               "powerFullName": "Blaster_Support.Temporal_Manipulation.Chronological_Selection"
             },
             {
@@ -761,7 +778,7 @@
               "probability": 1,
               "duration": 10,
               "effectType": "Null",
-              "toWho": "All",
+              "toWho": "all",
               "powerFullName": "Blaster_Support.Temporal_Manipulation.Chronological_Selection"
             },
             {
@@ -772,7 +789,7 @@
               "effectType": "RevokePower",
               "delayedTime": 10,
               "specialCase": 17,
-              "toWho": "All",
+              "toWho": "all",
               "powerFullName": "Blaster_Support.Temporal_Manipulation.Chronological_Selection"
             },
             {
@@ -782,7 +799,7 @@
               "probability": 1,
               "effectType": "GrantPower",
               "delayedTime": 0.5,
-              "toWho": "All",
+              "toWho": "all",
               "powerFullName": "Blaster_Support.Temporal_Manipulation.Chronological_Selection"
             }
           ]
@@ -797,7 +814,8 @@
               "probability": 1,
               "duration": 10,
               "effectType": "ToHit",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Temporal_Manipulation.Chronological_Selection"
             }
           ]
@@ -812,7 +830,7 @@
               "probability": 1,
               "duration": 10,
               "effectType": "DamageBuff",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Temporal_Manipulation.Chronological_Selection",
               "damageType": "Smashing"
             },
@@ -823,7 +841,7 @@
               "probability": 1,
               "duration": 10,
               "effectType": "DamageBuff",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Temporal_Manipulation.Chronological_Selection",
               "damageType": "Lethal"
             },
@@ -834,7 +852,7 @@
               "probability": 1,
               "duration": 10,
               "effectType": "DamageBuff",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Temporal_Manipulation.Chronological_Selection",
               "damageType": "Fire"
             },
@@ -845,7 +863,7 @@
               "probability": 1,
               "duration": 10,
               "effectType": "DamageBuff",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Temporal_Manipulation.Chronological_Selection",
               "damageType": "Cold"
             },
@@ -856,7 +874,7 @@
               "probability": 1,
               "duration": 10,
               "effectType": "DamageBuff",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Temporal_Manipulation.Chronological_Selection",
               "damageType": "Energy"
             },
@@ -867,7 +885,7 @@
               "probability": 1,
               "duration": 10,
               "effectType": "DamageBuff",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Temporal_Manipulation.Chronological_Selection",
               "damageType": "Negative"
             },
@@ -878,7 +896,7 @@
               "probability": 1,
               "duration": 10,
               "effectType": "DamageBuff",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Temporal_Manipulation.Chronological_Selection",
               "damageType": "Toxic"
             },
@@ -889,13 +907,21 @@
               "probability": 1,
               "duration": 10,
               "effectType": "DamageBuff",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Temporal_Manipulation.Chronological_Selection",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "ToHit_Buff",
+        "Endurance_Discount",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Support.Temporal_Manipulation.Chronological_Selection",
+      "archetypeOrder": "secondary",
       "powerIndex": 3,
       "castTimeReal": 1.17,
       "toggleCost": 10.4,
@@ -930,14 +956,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Damage",
@@ -950,8 +968,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Temporal_Manipulation.End_of_Time",
               "damageType": "Cold"
             },
@@ -963,8 +982,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Temporal_Manipulation.End_of_Time",
               "damageType": "Energy"
             }
@@ -982,7 +1002,7 @@
               "duration": 20,
               "effectType": "Regeneration",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Temporal_Manipulation.End_of_Time"
             }
           ]
@@ -998,7 +1018,7 @@
               "duration": 10,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Temporal_Manipulation.End_of_Time",
               "damageType": "Smashing"
             },
@@ -1010,7 +1030,7 @@
               "duration": 10,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Temporal_Manipulation.End_of_Time",
               "damageType": "Lethal"
             },
@@ -1022,7 +1042,7 @@
               "duration": 10,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Temporal_Manipulation.End_of_Time",
               "damageType": "Fire"
             },
@@ -1034,7 +1054,7 @@
               "duration": 10,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Temporal_Manipulation.End_of_Time",
               "damageType": "Cold"
             },
@@ -1046,7 +1066,7 @@
               "duration": 10,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Temporal_Manipulation.End_of_Time",
               "damageType": "Energy"
             },
@@ -1058,7 +1078,7 @@
               "duration": 10,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Temporal_Manipulation.End_of_Time",
               "damageType": "Negative"
             },
@@ -1070,7 +1090,7 @@
               "duration": 10,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Temporal_Manipulation.End_of_Time",
               "damageType": "Toxic"
             },
@@ -1082,13 +1102,22 @@
               "duration": 10,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Temporal_Manipulation.End_of_Time",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Support.Temporal_Manipulation.End_of_Time",
+      "archetypeOrder": "secondary",
       "powerIndex": 4,
       "castTimeReal": 2.03,
       "toggleCost": 20.176,
@@ -1130,14 +1159,6 @@
       "aoeModifier": 2.5
     },
     {
-      "allowedEnhancements": [
-        "Endurance_Discount",
-        "Heal",
-        "Recharge",
-        "Endurance_Modification"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "HealSelf",
@@ -1149,8 +1170,9 @@
               "probability": 1,
               "duration": 3,
               "effectType": "Absorb",
+              "buffable": true,
               "specialCase": 18,
-              "toWho": "All",
+              "toWho": "all",
               "powerFullName": "Blaster_Support.Temporal_Manipulation.Temporal_Healing"
             }
           ]
@@ -1165,18 +1187,63 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Recovery",
-              "toWho": "All",
+              "buffable": true,
+              "toWho": "all",
               "powerFullName": "Blaster_Support.Temporal_Manipulation.Temporal_Healing"
             },
             {
+              "etModifies": "SpeedRunning",
               "mag": {
                 "pve": 0.2
               },
               "probability": 1,
               "duration": 0.75,
               "effectType": "ResEffect",
-              "eTModifies": 32,
-              "toWho": "All",
+              "toWho": "all",
+              "powerFullName": "Blaster_Support.Temporal_Manipulation.Temporal_Healing"
+            },
+            {
+              "etModifies": "RechargeTime",
+              "mag": {
+                "pve": 0.2
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "ResEffect",
+              "toWho": "all",
+              "powerFullName": "Blaster_Support.Temporal_Manipulation.Temporal_Healing"
+            },
+            {
+              "etModifies": "SpeedFlying",
+              "mag": {
+                "pve": 0.2
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "ResEffect",
+              "toWho": "all",
+              "powerFullName": "Blaster_Support.Temporal_Manipulation.Temporal_Healing"
+            },
+            {
+              "etModifies": "JumpHeight",
+              "mag": {
+                "pve": 0.2
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "ResEffect",
+              "toWho": "all",
+              "powerFullName": "Blaster_Support.Temporal_Manipulation.Temporal_Healing"
+            },
+            {
+              "etModifies": "SpeedJumping",
+              "mag": {
+                "pve": 0.2
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "ResEffect",
+              "toWho": "all",
               "powerFullName": "Blaster_Support.Temporal_Manipulation.Temporal_Healing"
             }
           ]
@@ -1185,19 +1252,28 @@
           "effectType": "Res_Boolean",
           "values": [
             {
+              "etModifies": "Regeneration",
               "mag": {
                 "pve": 0.1384
               },
               "probability": 1,
               "duration": 0.75,
               "effectType": "ResEffect",
-              "eTModifies": 27,
-              "toWho": "All",
+              "toWho": "all",
               "powerFullName": "Blaster_Support.Temporal_Manipulation.Temporal_Healing"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Endurance_Discount",
+        "Heal",
+        "Recharge",
+        "Endurance_Modification"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Support.Temporal_Manipulation.Temporal_Healing",
+      "archetypeOrder": "secondary",
       "powerIndex": 5,
       "castTimeReal": 2.03,
       "fullName": "Blaster_Secondary_Temporal_Manipulation_Temporal_Healing",
@@ -1232,15 +1308,6 @@
       "powerType": "Toggle"
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Fear",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Damage",
@@ -1253,8 +1320,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Temporal_Manipulation.Future_Pain",
               "damageType": "Psionic"
             }
@@ -1271,11 +1339,12 @@
               "duration": 5.96,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Blaster_Support.Temporal_Manipulation.Future_Pain",
-              "mezType": "Terrorize"
+              "mezType": "Terror"
             }
           ]
         },
@@ -1290,11 +1359,12 @@
               "duration": 2,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Blaster_Support.Temporal_Manipulation.Future_Pain",
-              "mezType": "Terrorize"
+              "mezType": "Terror"
             }
           ]
         },
@@ -1311,7 +1381,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Temporal_Manipulation.Future_Pain",
               "damageType": "Smashing"
             },
@@ -1325,7 +1395,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Temporal_Manipulation.Future_Pain",
               "damageType": "Lethal"
             },
@@ -1339,7 +1409,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Temporal_Manipulation.Future_Pain",
               "damageType": "Fire"
             },
@@ -1353,7 +1423,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Temporal_Manipulation.Future_Pain",
               "damageType": "Cold"
             },
@@ -1367,7 +1437,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Temporal_Manipulation.Future_Pain",
               "damageType": "Energy"
             },
@@ -1381,7 +1451,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Temporal_Manipulation.Future_Pain",
               "damageType": "Negative"
             },
@@ -1395,7 +1465,7 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Temporal_Manipulation.Future_Pain",
               "damageType": "Toxic"
             },
@@ -1409,13 +1479,23 @@
               "effectType": "DamageBuff",
               "stacking": 1,
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Temporal_Manipulation.Future_Pain",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Fear",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Support.Temporal_Manipulation.Future_Pain",
+      "archetypeOrder": "secondary",
       "powerIndex": 6,
       "castTimeReal": 1.67,
       "toggleCost": 11.024,
@@ -1456,16 +1536,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "ToHit_Debuff",
-        "Endurance_Discount",
-        "Recharge",
-        "Slow",
-        "Stun"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Immobilize",
@@ -1479,8 +1549,9 @@
               "duration": 9.536,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Blaster_Support.Temporal_Manipulation.Time_Shift",
               "mezType": "Stun"
@@ -1499,8 +1570,9 @@
               "duration": 2,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Blaster_Support.Temporal_Manipulation.Time_Shift",
               "mezType": "Stun"
@@ -1517,8 +1589,9 @@
               "probability": 1,
               "duration": 20,
               "effectType": "ToHit",
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Temporal_Manipulation.Time_Shift"
             }
           ]
@@ -1527,15 +1600,27 @@
           "effectType": "Slow",
           "values": [
             {
+              "etModifies": "SpeedRunning",
               "mag": {
                 "pve": -0.4
               },
               "probability": 1,
               "duration": 20,
               "effectType": "Enhancement",
-              "eTModifies": 32,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
+              "powerFullName": "Blaster_Support.Temporal_Manipulation.Time_Shift"
+            },
+            {
+              "etModifies": "JumpHeight",
+              "mag": {
+                "pve": -0.4
+              },
+              "probability": 1,
+              "duration": 20,
+              "effectType": "Enhancement",
+              "resistible": true,
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Temporal_Manipulation.Time_Shift"
             },
             {
@@ -1545,8 +1630,9 @@
               "probability": 1,
               "duration": 20,
               "effectType": "SpeedJumping",
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Temporal_Manipulation.Time_Shift"
             },
             {
@@ -1556,8 +1642,9 @@
               "probability": 1,
               "duration": 20,
               "effectType": "SpeedFlying",
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Temporal_Manipulation.Time_Shift"
             }
           ]
@@ -1573,7 +1660,7 @@
               "duration": 20,
               "effectType": "SpeedRunning",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Blaster_Support.Temporal_Manipulation.Time_Shift"
             }
           ]
@@ -1589,7 +1676,7 @@
               "duration": 9.53,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Temporal_Manipulation.Time_Shift",
               "damageType": "Smashing"
             },
@@ -1601,7 +1688,7 @@
               "duration": 9.53,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Temporal_Manipulation.Time_Shift",
               "damageType": "Lethal"
             },
@@ -1613,7 +1700,7 @@
               "duration": 9.53,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Temporal_Manipulation.Time_Shift",
               "damageType": "Fire"
             },
@@ -1625,7 +1712,7 @@
               "duration": 9.53,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Temporal_Manipulation.Time_Shift",
               "damageType": "Cold"
             },
@@ -1637,7 +1724,7 @@
               "duration": 9.53,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Temporal_Manipulation.Time_Shift",
               "damageType": "Energy"
             },
@@ -1649,7 +1736,7 @@
               "duration": 9.53,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Temporal_Manipulation.Time_Shift",
               "damageType": "Negative"
             },
@@ -1661,7 +1748,7 @@
               "duration": 9.53,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Temporal_Manipulation.Time_Shift",
               "damageType": "Toxic"
             },
@@ -1673,13 +1760,24 @@
               "duration": 9.53,
               "effectType": "DamageBuff",
               "specialCase": 11,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Temporal_Manipulation.Time_Shift",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "ToHit_Debuff",
+        "Endurance_Discount",
+        "Recharge",
+        "Slow",
+        "Stun"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Support.Temporal_Manipulation.Time_Shift",
+      "archetypeOrder": "secondary",
       "powerIndex": 7,
       "castTimeReal": 2.03,
       "toggleCost": 20.18,
@@ -1720,35 +1818,52 @@
       "aoeModifier": 4
     },
     {
-      "allowedEnhancements": [
-        "Res_Damage"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Ones",
           "values": [
             {
+              "etModifies": "RechargeTime",
               "mag": {
                 "pve": 0.1
               },
               "probability": 1,
               "duration": 0.75,
               "effectType": "Enhancement",
-              "eTModifies": 25,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Temporal_Manipulation.Time_Lord"
             },
             {
+              "etModifies": "SpeedRunning",
               "mag": {
                 "pve": 0.3
               },
               "probability": 1,
               "duration": 0.75,
               "effectType": "ResEffect",
-              "eTModifies": 32,
-              "toWho": "Self",
+              "toWho": "self",
+              "powerFullName": "Blaster_Support.Temporal_Manipulation.Time_Lord"
+            },
+            {
+              "etModifies": "RechargeTime",
+              "mag": {
+                "pve": 0.3
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "ResEffect",
+              "toWho": "self",
+              "powerFullName": "Blaster_Support.Temporal_Manipulation.Time_Lord"
+            },
+            {
+              "etModifies": "SpeedFlying",
+              "mag": {
+                "pve": 0.3
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "ResEffect",
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Temporal_Manipulation.Time_Lord"
             }
           ]
@@ -1763,7 +1878,7 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Mez",
-              "toWho": "All",
+              "toWho": "all",
               "powerFullName": "Blaster_Support.Temporal_Manipulation.Time_Lord",
               "mezType": "Stun"
             }
@@ -1779,13 +1894,20 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Blaster_Support.Temporal_Manipulation.Time_Lord",
               "damageType": "Energy"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Res_Damage"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Support.Temporal_Manipulation.Time_Lord",
+      "archetypeOrder": "secondary",
       "powerIndex": 8,
       "fullName": "Blaster_Secondary_Temporal_Manipulation_Time_Lord",
       "displayName": "Time Lord",

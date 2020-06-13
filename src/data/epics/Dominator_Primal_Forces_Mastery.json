@@ -6,16 +6,6 @@
   "displayName": "Primal Forces Mastery",
   "powers": [
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Recharge",
-        "Stun",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Damage",
@@ -28,8 +18,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Primal_Forces_Mastery_Dominator.Energy_Transfer",
               "damageType": "Smashing"
             },
@@ -41,8 +32,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Primal_Forces_Mastery_Dominator.Energy_Transfer",
               "damageType": "Energy"
             },
@@ -55,7 +47,7 @@
               "effectType": "Damage",
               "delayedTime": 0.1,
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Epic.Primal_Forces_Mastery_Dominator.Energy_Transfer",
               "damageType": "Special"
             }
@@ -72,8 +64,9 @@
               "duration": 9.536,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.Primal_Forces_Mastery_Dominator.Energy_Transfer",
               "mezType": "Stun"
@@ -91,8 +84,9 @@
               "duration": 2,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.Primal_Forces_Mastery_Dominator.Energy_Transfer",
               "mezType": "Stun"
@@ -100,6 +94,17 @@
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Recharge",
+        "Stun",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Primal_Forces_Mastery_Dominator.Energy_Transfer",
+      "archetypeOrder": "epicPool",
       "powerIndex": 0,
       "castTimeReal": 2.67,
       "toggleCost": 19.11,
@@ -139,17 +144,12 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Endurance_Discount",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Stun",
           "values": [
             {
+              "etModifies": "EnduranceDiscount",
               "mag": {
                 "pve": 1.192
               },
@@ -157,14 +157,20 @@
               "duration": 90,
               "variableModified": true,
               "effectType": "Enhancement",
-              "eTModifies": 8,
               "stacking": 1,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Epic.Primal_Forces_Mastery_Dominator.Conserve_Power"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Endurance_Discount",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Primal_Forces_Mastery_Dominator.Conserve_Power",
+      "archetypeOrder": "epicPool",
       "powerIndex": 1,
       "castTimeReal": 1.17,
       "toggleCost": 9.75,
@@ -197,16 +203,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Knockback",
-        "Range",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Damage",
@@ -219,8 +215,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Primal_Forces_Mastery_Dominator.Energy_Torrent",
               "damageType": "Smashing"
             },
@@ -232,8 +229,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Primal_Forces_Mastery_Dominator.Energy_Torrent",
               "damageType": "Energy"
             }
@@ -250,23 +248,35 @@
               "probability": 0.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Primal_Forces_Mastery_Dominator.Energy_Torrent",
               "mezType": "Knockback"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Knockback",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Primal_Forces_Mastery_Dominator.Energy_Torrent",
+      "archetypeOrder": "epicPool",
       "powerIndex": 2,
       "castTimeReal": 1.07,
       "toggleCost": 14.82,
+      "isEpic": true,
       "fullName": "Epic_Primal_Forces_Mastery_Energy_Torrent",
       "displayName": "Energy Torrent",
       "requires": {
         "powers": {
-          "Epic_Primal_Forces_Mastery_Energy_Transfer": true,
-          "Epic_Primal_Forces_Mastery_Conserve_Power": true
+          "Epic.Primal_Forces_Mastery_Dominator.Energy_Torrent": true
         },
         "count": 1
       },
@@ -301,13 +311,6 @@
       "aoeModifier": 2.37995839
     },
     {
-      "allowedEnhancements": [
-        "Endurance_Discount",
-        "Recharge",
-        "Res_Damage"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Res_Dmg",
@@ -320,7 +323,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Primal_Forces_Mastery_Dominator.Temp_Invulnerability",
               "damageType": "Smashing"
             },
@@ -332,7 +336,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Primal_Forces_Mastery_Dominator.Temp_Invulnerability",
               "damageType": "Lethal"
             },
@@ -343,7 +348,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Primal_Forces_Mastery_Dominator.Temp_Invulnerability",
               "damageType": "Fire"
             },
@@ -354,7 +360,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Primal_Forces_Mastery_Dominator.Temp_Invulnerability",
               "damageType": "Cold"
             },
@@ -365,7 +372,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Primal_Forces_Mastery_Dominator.Temp_Invulnerability",
               "damageType": "Energy"
             },
@@ -376,7 +384,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Primal_Forces_Mastery_Dominator.Temp_Invulnerability",
               "damageType": "Negative"
             },
@@ -387,7 +396,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Primal_Forces_Mastery_Dominator.Temp_Invulnerability",
               "damageType": "Toxic"
             },
@@ -398,22 +408,31 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Primal_Forces_Mastery_Dominator.Temp_Invulnerability",
               "damageType": "Psionic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Endurance_Discount",
+        "Recharge",
+        "Res_Damage"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Primal_Forces_Mastery_Dominator.Temp_Invulnerability",
+      "archetypeOrder": "epicPool",
       "powerIndex": 3,
       "castTimeReal": 0.67,
       "toggleCost": 0.325,
+      "isEpic": true,
       "fullName": "Epic_Primal_Forces_Mastery_Temp_Invulnerability",
       "displayName": "Temp Invulnerability",
       "requires": {
         "powers": {
-          "Epic_Primal_Forces_Mastery_Energy_Transfer": true,
-          "Epic_Primal_Forces_Mastery_Conserve_Power": true
+          "Epic.Primal_Forces_Mastery_Dominator.Temp_Invulnerability": true
         },
         "count": 1
       },
@@ -444,16 +463,6 @@
       "powerType": "Toggle"
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Knockback",
-        "Range",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Damage",
@@ -465,8 +474,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Primal_Forces_Mastery_Dominator.Explosive_Blast",
               "damageType": "Smashing"
             },
@@ -478,8 +488,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Primal_Forces_Mastery_Dominator.Explosive_Blast",
               "damageType": "Energy"
             }
@@ -496,25 +507,35 @@
               "probability": 0.5,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Primal_Forces_Mastery_Dominator.Explosive_Blast",
               "mezType": "Knockback"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Knockback",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Primal_Forces_Mastery_Dominator.Explosive_Blast",
+      "archetypeOrder": "epicPool",
       "powerIndex": 4,
       "castTimeReal": 1.67,
       "toggleCost": 28.47,
+      "isEpic": true,
       "fullName": "Epic_Primal_Forces_Mastery_Explosive_Blast",
       "displayName": "Explosive Blast",
       "requires": {
         "powers": {
-          "Epic_Primal_Forces_Mastery_Energy_Transfer": true,
-          "Epic_Primal_Forces_Mastery_Conserve_Power": true,
-          "Epic_Primal_Forces_Mastery_Energy_Torrent": true,
-          "Epic_Primal_Forces_Mastery_Temp_Invulnerability": true
+          "Epic.Primal_Forces_Mastery_Dominator.Explosive_Blast": true
         },
         "count": 2
       },

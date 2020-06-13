@@ -2,430 +2,160 @@
   "fullName": "IOSet.Curtail_Speed",
   "enhancements": [
     {
-      "effects": [
-        {
-          "effectType": "Accuracy",
-          "values": [
-            {
-              "etModifies": "Accuracy",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Curtail_Speed_A.Attuned_Curtail_Speed_A"
-            }
-          ]
-        },
-        {
-          "effectType": "Slow",
-          "values": [
-            {
-              "etModifies": "SpeedRunning",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Curtail_Speed_A.Attuned_Curtail_Speed_A"
-            }
-          ]
-        },
-        {
-          "effectType": "Boosts_33",
-          "values": [
-            {
-              "etModifies": "SpeedJumping",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Curtail_Speed_A.Attuned_Curtail_Speed_A"
-            },
-            {
-              "etModifies": "SpeedFlying",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Curtail_Speed_A.Attuned_Curtail_Speed_A"
-            }
-          ]
-        }
-      ],
+      "type": "set",
+      "fullName": "Boosts.Attuned_Curtail_Speed_A.Attuned_Curtail_Speed_A",
+      "displayName": "Accuracy/Slow",
       "description": {
         "short": "+ACC, +Slow",
         "long": "Enhances the accuracy by {Boost.Attrib.Accuracy.Scale}% and slowing ability of a power by {Boost.Attrib.Slow.Scale}%."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Curtail_Speed_A.Attuned_Curtail_Speed_A",
-      "setName": "Curtail_Speed",
-      "displayName": "Accuracy/Slow"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Damage",
-          "values": [
-            {
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Curtail_Speed_B.Attuned_Curtail_Speed_B",
-              "damageType": "Smashing"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
+          },
+          "stat": "Accuracy",
+          "toWho": "self"
         },
         {
-          "effectType": "Boosts_33",
-          "values": [
-            {
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Curtail_Speed_B.Attuned_Curtail_Speed_B",
-              "damageType": "Lethal"
-            },
-            {
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Curtail_Speed_B.Attuned_Curtail_Speed_B",
-              "damageType": "Fire"
-            },
-            {
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Curtail_Speed_B.Attuned_Curtail_Speed_B",
-              "damageType": "Cold"
-            },
-            {
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Curtail_Speed_B.Attuned_Curtail_Speed_B",
-              "damageType": "Energy"
-            },
-            {
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Curtail_Speed_B.Attuned_Curtail_Speed_B",
-              "damageType": "Negative"
-            },
-            {
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Curtail_Speed_B.Attuned_Curtail_Speed_B",
-              "damageType": "Toxic"
-            },
-            {
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Curtail_Speed_B.Attuned_Curtail_Speed_B",
-              "damageType": "Psionic"
-            },
-            {
-              "etModifies": "SpeedJumping",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Curtail_Speed_B.Attuned_Curtail_Speed_B"
-            },
-            {
-              "etModifies": "SpeedFlying",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Curtail_Speed_B.Attuned_Curtail_Speed_B"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
-        },
-        {
-          "effectType": "Slow",
-          "values": [
-            {
-              "etModifies": "SpeedRunning",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Curtail_Speed_B.Attuned_Curtail_Speed_B"
-            }
-          ]
+          },
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Curtail_Speed_B.Attuned_Curtail_Speed_B",
+      "displayName": "Damage/Slow",
       "description": {
         "short": "+DMG, +Slow",
         "long": "Enhances the damage by {Boost.Attrib.Damage.Scale}% and slowing ability of a power by {Boost.Attrib.Slow.Scale}%."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Curtail_Speed_B.Attuned_Curtail_Speed_B",
-      "setName": "Curtail_Speed",
-      "displayName": "Damage/Slow"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Accuracy",
-          "values": [
-            {
-              "etModifies": "Accuracy",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Curtail_Speed_C.Attuned_Curtail_Speed_C"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
+          },
+          "stat": "Damage",
+          "damageType": [
+            "Smashing",
+            "Lethal",
+            "Fire",
+            "Cold",
+            "Energy",
+            "Negative",
+            "Toxic",
+            "Psionic"
+          ],
+          "toWho": "self"
         },
         {
-          "effectType": "Endurance",
-          "values": [
-            {
-              "etModifies": "EnduranceDiscount",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Curtail_Speed_C.Attuned_Curtail_Speed_C"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
+          },
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Curtail_Speed_C.Attuned_Curtail_Speed_C",
+      "displayName": "Accuracy/Endurance",
       "description": {
         "short": "+ACC, -End Cost",
         "long": "Enhances the accuracy by {Boost.Attrib.Accuracy.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Curtail_Speed_C.Attuned_Curtail_Speed_C",
-      "setName": "Curtail_Speed",
-      "displayName": "Accuracy/Endurance"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Range",
-          "values": [
-            {
-              "etModifies": "Range",
-              "mag": {
-                "pve": 0.159375
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Curtail_Speed_D.Attuned_Curtail_Speed_D"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
+          },
+          "stat": "Accuracy",
+          "toWho": "self"
         },
         {
-          "effectType": "Slow",
-          "values": [
-            {
-              "etModifies": "SpeedRunning",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Curtail_Speed_D.Attuned_Curtail_Speed_D"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
-        },
-        {
-          "effectType": "Boosts_33",
-          "values": [
-            {
-              "etModifies": "SpeedJumping",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Curtail_Speed_D.Attuned_Curtail_Speed_D"
-            },
-            {
-              "etModifies": "SpeedFlying",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Curtail_Speed_D.Attuned_Curtail_Speed_D"
-            }
-          ]
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Curtail_Speed_D.Attuned_Curtail_Speed_D",
+      "displayName": "Range/Slow",
       "description": {
         "short": "+Range, +Slow",
         "long": "Enhances the range by {Boost.Attrib.Range.Scale}% and slowing ability of a power by {Boost.Attrib.Slow.Scale}%."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Curtail_Speed_D.Attuned_Curtail_Speed_D",
-      "setName": "Curtail_Speed",
-      "displayName": "Range/Slow"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Endurance",
-          "values": [
-            {
-              "etModifies": "EnduranceDiscount",
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Curtail_Speed_E.Attuned_Curtail_Speed_E"
+          "mag": {
+            "IO": {
+              "cap": 0.159375
             }
-          ]
-        },
-        {
-          "effectType": "Recharge",
-          "values": [
-            {
-              "etModifies": "RechargeTime",
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Curtail_Speed_E.Attuned_Curtail_Speed_E"
-            }
-          ]
-        },
-        {
-          "effectType": "Slow",
-          "values": [
-            {
-              "etModifies": "SpeedRunning",
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Curtail_Speed_E.Attuned_Curtail_Speed_E"
-            }
-          ]
-        },
-        {
-          "effectType": "Boosts_33",
-          "values": [
-            {
-              "etModifies": "SpeedJumping",
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Curtail_Speed_E.Attuned_Curtail_Speed_E"
-            },
-            {
-              "etModifies": "SpeedFlying",
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Curtail_Speed_E.Attuned_Curtail_Speed_E"
-            }
-          ]
+          },
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Curtail_Speed_E.Attuned_Curtail_Speed_E",
+      "displayName": "Endurance/Recharge/Slow",
       "description": {
         "short": "+Slow, +Rech, -End Cost",
         "long": "Enhances the slowing ability of a power by {Boost.Attrib.Slow.Scale}%, reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}% and reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}%."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Curtail_Speed_E.Attuned_Curtail_Speed_E",
-      "setName": "Curtail_Speed",
-      "displayName": "Endurance/Recharge/Slow"
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.212
+            }
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.212
+            }
+          },
+          "stat": "Recharge",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.212
+            }
+          },
+          "toWho": "self"
+        }
+      ]
     }
   ],
   "levels": {

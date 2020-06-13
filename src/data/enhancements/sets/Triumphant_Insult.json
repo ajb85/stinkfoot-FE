@@ -2,133 +2,83 @@
   "fullName": "IOSet.Triumphant_Insult",
   "enhancements": [
     {
-      "effects": [
-        {
-          "effectType": "Taunt",
-          "values": [
-            {
-              "etModifies": "Mez",
-              "mag": {
-                "pve": 0.424
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Triumphant_Insult_A.Attuned_Triumphant_Insult_A",
-              "mezType": "Taunt"
-            }
-          ]
-        }
-      ],
+      "type": "set",
+      "fullName": "Boosts.Attuned_Triumphant_Insult_A.Attuned_Triumphant_Insult_A",
+      "displayName": "Taunt",
       "description": {
         "short": "+Taunt",
         "long": "Enhances the taunt duration of a power by {Boost.Attrib.Taunt.Scale}%."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Triumphant_Insult_A.Attuned_Triumphant_Insult_A",
-      "setName": "Triumphant_Insult",
-      "displayName": "Taunt"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Recharge",
-          "values": [
-            {
-              "etModifies": "RechargeTime",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Triumphant_Insult_B.Attuned_Triumphant_Insult_B"
+          "mag": {
+            "IO": {
+              "cap": 0.424
             }
-          ]
-        },
-        {
-          "effectType": "Taunt",
-          "values": [
-            {
-              "etModifies": "Mez",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Triumphant_Insult_B.Attuned_Triumphant_Insult_B",
-              "mezType": "Taunt"
-            }
-          ]
+          },
+          "mezType": 11,
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Triumphant_Insult_B.Attuned_Triumphant_Insult_B",
+      "displayName": "Taunt/Recharge",
       "description": {
         "short": "+Taunt, +Rech",
         "long": "Enhances the taunt duration of a power by {Boost.Attrib.Taunt.Scale}% and reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}%."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Triumphant_Insult_B.Attuned_Triumphant_Insult_B",
-      "setName": "Triumphant_Insult",
-      "displayName": "Taunt/Recharge"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Stun",
-          "values": [
-            {
-              "mag": {
-                "pve": 1
-              },
-              "procsPerMinute": 2,
-              "cancelOnMiss": true,
-              "duration": 3,
-              "effectType": "Mez",
-              "stacking": 1,
-              "resistible": true,
-              "toWho": "all",
-              "attribType": 1,
-              "powerFullName": "Boosts.Attuned_Triumphant_Insult_C.Attuned_Triumphant_Insult_C",
-              "mezType": "Stun"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
+          },
+          "stat": "Recharge",
+          "toWho": "self"
         },
         {
-          "effectType": "Ones",
-          "values": [
-            {
-              "mag": {
-                "pvp": 1
-              },
-              "procsPerMinute": 2,
-              "cancelOnMiss": true,
-              "duration": 2,
-              "effectType": "Mez",
-              "stacking": 1,
-              "resistible": true,
-              "toWho": "all",
-              "attribType": 1,
-              "powerFullName": "Boosts.Attuned_Triumphant_Insult_C.Attuned_Triumphant_Insult_C",
-              "mezType": "Stun"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
+          },
+          "mezType": 11,
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Triumphant_Insult_C.Attuned_Triumphant_Insult_C",
+      "displayName": "Chance to Disorient",
       "description": {
         "short": "Adds Disorient Chance",
         "long": "Adds a chance to Disorient your foe.  This effect will trigger roughly 2 times per minute."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Triumphant_Insult_C.Attuned_Triumphant_Insult_C",
-      "setName": "Triumphant_Insult",
-      "displayName": "Chance to Disorient"
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 1
+            }
+          },
+          "stat": "Chance to Disorient",
+          "procsPerMinute": 2,
+          "cancelOnMiss": true,
+          "mezType": 10,
+          "stacking": 1,
+          "resistible": true,
+          "pvMode": 1,
+          "toWho": "all",
+          "attribType": 1
+        }
+      ]
     }
   ],
   "levels": {

@@ -2,490 +2,185 @@
   "fullName": "IOSet.Impervious_Skin",
   "enhancements": [
     {
-      "effects": [
-        {
-          "effectType": "Resist",
-          "values": [
-            {
-              "mag": {
-                "pve": 0.159375
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Impervious_Skin_A.Attuned_Impervious_Skin_A",
-              "damageType": "Smashing"
-            }
-          ]
-        },
-        {
-          "effectType": "Boosts_20",
-          "values": [
-            {
-              "mag": {
-                "pve": 0.159375
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Impervious_Skin_A.Attuned_Impervious_Skin_A",
-              "damageType": "Lethal"
-            },
-            {
-              "mag": {
-                "pve": 0.159375
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Impervious_Skin_A.Attuned_Impervious_Skin_A",
-              "damageType": "Fire"
-            },
-            {
-              "mag": {
-                "pve": 0.159375
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Impervious_Skin_A.Attuned_Impervious_Skin_A",
-              "damageType": "Cold"
-            },
-            {
-              "mag": {
-                "pve": 0.159375
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Impervious_Skin_A.Attuned_Impervious_Skin_A",
-              "damageType": "Energy"
-            },
-            {
-              "mag": {
-                "pve": 0.159375
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Impervious_Skin_A.Attuned_Impervious_Skin_A",
-              "damageType": "Negative"
-            },
-            {
-              "mag": {
-                "pve": 0.159375
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Impervious_Skin_A.Attuned_Impervious_Skin_A",
-              "damageType": "Toxic"
-            },
-            {
-              "mag": {
-                "pve": 0.159375
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Impervious_Skin_A.Attuned_Impervious_Skin_A",
-              "damageType": "Psionic"
-            }
-          ]
-        },
-        {
-          "effectType": "Endurance",
-          "values": [
-            {
-              "etModifies": "EnduranceDiscount",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Impervious_Skin_A.Attuned_Impervious_Skin_A"
-            }
-          ]
-        }
-      ],
+      "type": "set",
+      "fullName": "Boosts.Attuned_Impervious_Skin_A.Attuned_Impervious_Skin_A",
+      "displayName": "Resistance/Endurance",
       "description": {
         "short": "+RES (all), Reduces End cost",
         "long": "Enhances the damage resistance of a power by {Boost.Attrib.Resist.Scale}% and reduces endurance cost by {Boost.Attrib.Endurance.Scale}%"
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Impervious_Skin_A.Attuned_Impervious_Skin_A",
-      "setName": "Impervious_Skin",
-      "displayName": "Resistance/Endurance"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Resist",
-          "values": [
-            {
-              "mag": {
-                "pve": 0.159375
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Impervious_Skin_B.Attuned_Impervious_Skin_B",
-              "damageType": "Smashing"
+          "mag": {
+            "IO": {
+              "cap": 0.159375
             }
-          ]
+          },
+          "stat": "Res_Damage",
+          "damageType": [
+            "Smashing",
+            "Lethal",
+            "Fire",
+            "Cold",
+            "Energy",
+            "Negative",
+            "Toxic",
+            "Psionic"
+          ],
+          "toWho": "self"
         },
         {
-          "effectType": "Boosts_20",
-          "values": [
-            {
-              "mag": {
-                "pve": 0.159375
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Impervious_Skin_B.Attuned_Impervious_Skin_B",
-              "damageType": "Lethal"
-            },
-            {
-              "mag": {
-                "pve": 0.159375
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Impervious_Skin_B.Attuned_Impervious_Skin_B",
-              "damageType": "Fire"
-            },
-            {
-              "mag": {
-                "pve": 0.159375
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Impervious_Skin_B.Attuned_Impervious_Skin_B",
-              "damageType": "Cold"
-            },
-            {
-              "mag": {
-                "pve": 0.159375
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Impervious_Skin_B.Attuned_Impervious_Skin_B",
-              "damageType": "Energy"
-            },
-            {
-              "mag": {
-                "pve": 0.159375
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Impervious_Skin_B.Attuned_Impervious_Skin_B",
-              "damageType": "Negative"
-            },
-            {
-              "mag": {
-                "pve": 0.159375
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Impervious_Skin_B.Attuned_Impervious_Skin_B",
-              "damageType": "Toxic"
-            },
-            {
-              "mag": {
-                "pve": 0.159375
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Impervious_Skin_B.Attuned_Impervious_Skin_B",
-              "damageType": "Psionic"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
-        },
-        {
-          "effectType": "Recharge",
-          "values": [
-            {
-              "etModifies": "RechargeTime",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Impervious_Skin_B.Attuned_Impervious_Skin_B"
-            }
-          ]
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Impervious_Skin_B.Attuned_Impervious_Skin_B",
+      "displayName": "Resistance/Recharge",
       "description": {
         "short": "+RES (all), +Rech",
         "long": "Enhances the damage resistance of a power by {Boost.Attrib.Resist.Scale}% and reduces recharge time by {Boost.Attrib.Recharge.Scale}%"
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Impervious_Skin_B.Attuned_Impervious_Skin_B",
-      "setName": "Impervious_Skin",
-      "displayName": "Resistance/Recharge"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Endurance",
-          "values": [
-            {
-              "etModifies": "EnduranceDiscount",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Impervious_Skin_C.Attuned_Impervious_Skin_C"
+          "mag": {
+            "IO": {
+              "cap": 0.159375
             }
-          ]
+          },
+          "stat": "Res_Damage",
+          "damageType": [
+            "Smashing",
+            "Lethal",
+            "Fire",
+            "Cold",
+            "Energy",
+            "Negative",
+            "Toxic",
+            "Psionic"
+          ],
+          "toWho": "self"
         },
         {
-          "effectType": "Recharge",
-          "values": [
-            {
-              "etModifies": "RechargeTime",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Impervious_Skin_C.Attuned_Impervious_Skin_C"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
+          },
+          "stat": "Recharge",
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Impervious_Skin_C.Attuned_Impervious_Skin_C",
+      "displayName": "Endurance/Recharge",
       "description": {
         "short": "Reduces Endurance Cost and Increases Attack Rate",
         "long": "Reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}% and recharge time by {Boost.Attrib.Recharge.Scale}%"
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Impervious_Skin_C.Attuned_Impervious_Skin_C",
-      "setName": "Impervious_Skin",
-      "displayName": "Endurance/Recharge"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Resist",
-          "values": [
-            {
-              "mag": {
-                "pve": 0.1275
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Impervious_Skin_D.Attuned_Impervious_Skin_D",
-              "damageType": "Smashing"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self"
         },
         {
-          "effectType": "Boosts_20",
-          "values": [
-            {
-              "mag": {
-                "pve": 0.1275
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Impervious_Skin_D.Attuned_Impervious_Skin_D",
-              "damageType": "Lethal"
-            },
-            {
-              "mag": {
-                "pve": 0.1275
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Impervious_Skin_D.Attuned_Impervious_Skin_D",
-              "damageType": "Fire"
-            },
-            {
-              "mag": {
-                "pve": 0.1275
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Impervious_Skin_D.Attuned_Impervious_Skin_D",
-              "damageType": "Cold"
-            },
-            {
-              "mag": {
-                "pve": 0.1275
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Impervious_Skin_D.Attuned_Impervious_Skin_D",
-              "damageType": "Energy"
-            },
-            {
-              "mag": {
-                "pve": 0.1275
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Impervious_Skin_D.Attuned_Impervious_Skin_D",
-              "damageType": "Negative"
-            },
-            {
-              "mag": {
-                "pve": 0.1275
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Impervious_Skin_D.Attuned_Impervious_Skin_D",
-              "damageType": "Toxic"
-            },
-            {
-              "mag": {
-                "pve": 0.1275
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Impervious_Skin_D.Attuned_Impervious_Skin_D",
-              "damageType": "Psionic"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
-        },
-        {
-          "effectType": "Endurance",
-          "values": [
-            {
-              "etModifies": "EnduranceDiscount",
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Impervious_Skin_D.Attuned_Impervious_Skin_D"
-            }
-          ]
-        },
-        {
-          "effectType": "Recharge",
-          "values": [
-            {
-              "etModifies": "RechargeTime",
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Impervious_Skin_D.Attuned_Impervious_Skin_D"
-            }
-          ]
+          },
+          "stat": "Recharge",
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Impervious_Skin_D.Attuned_Impervious_Skin_D",
+      "displayName": "Resistance/Endurance/Recharge",
       "description": {
         "short": "Enhances Resistance, Reduces Endurance Cost and Increases Attack Rate",
         "long": "Enhances the damage resistance of a power by {Boost.Attrib.Resist.Scale}%, reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%and recharge time by {Boost.Attrib.Recharge.Scale}%"
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Impervious_Skin_D.Attuned_Impervious_Skin_D",
-      "setName": "Impervious_Skin",
-      "displayName": "Resistance/Endurance/Recharge"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Status",
-          "values": [
-            {
-              "mag": {
-                "pve": 1
-              },
-              "cancelOnMiss": true,
-              "probability": 1,
-              "effectType": "Null",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Impervious_Skin_E.Attuned_Impervious_Skin_E"
+          "mag": {
+            "IO": {
+              "cap": 0.1275
             }
-          ]
+          },
+          "stat": "Res_Damage",
+          "damageType": [
+            "Smashing",
+            "Lethal",
+            "Fire",
+            "Cold",
+            "Energy",
+            "Negative",
+            "Toxic",
+            "Psionic"
+          ],
+          "toWho": "self"
         },
         {
-          "effectType": "Heal",
-          "values": [
-            {
-              "mag": {
-                "pve": 0.25
-              },
-              "cancelOnMiss": true,
-              "probability": 1,
-              "duration": 120,
-              "effectType": "Regeneration",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Impervious_Skin_E.Attuned_Impervious_Skin_E"
+          "mag": {
+            "IO": {
+              "cap": 0.212
             }
-          ]
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.212
+            }
+          },
+          "stat": "Recharge",
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Impervious_Skin_E.Attuned_Impervious_Skin_E",
+      "displayName": "Status Resistance, +Regeneration",
       "description": {
         "short": "+RES Status Effects, +Regeneration",
         "long": "Reduces the duration of status effects on you by 7.5% and increases your regeneration rate moderately."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Impervious_Skin_E.Attuned_Impervious_Skin_E",
-      "setName": "Impervious_Skin",
-      "displayName": "Status Resistance, +Regeneration"
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 1
+            }
+          },
+          "stat": "Status Resistance, +Regeneration",
+          "cancelOnMiss": true,
+          "toWho": "self"
+        }
+      ]
     }
   ],
   "levels": {

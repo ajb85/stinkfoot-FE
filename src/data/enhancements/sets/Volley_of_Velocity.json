@@ -2,241 +2,104 @@
   "fullName": "IOSet.Volley_of_Velocity",
   "enhancements": [
     {
-      "effects": [
-        {
-          "effectType": "Knockback",
-          "values": [
-            {
-              "etModifies": "Mez",
-              "mag": {
-                "pve": 0.4775
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Volley_of_Velocity_A.Attuned_Volley_of_Velocity_A",
-              "mezType": "Knockback"
-            }
-          ]
-        },
-        {
-          "effectType": "Boosts_60",
-          "values": [
-            {
-              "etModifies": "Mez",
-              "mag": {
-                "pve": 0.4775
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Volley_of_Velocity_A.Attuned_Volley_of_Velocity_A",
-              "mezType": "Knockup"
-            }
-          ]
-        },
-        {
-          "effectType": "Damage",
-          "values": [
-            {
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Volley_of_Velocity_A.Attuned_Volley_of_Velocity_A",
-              "damageType": "Smashing"
-            }
-          ]
-        },
-        {
-          "effectType": "Boosts_33",
-          "values": [
-            {
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Volley_of_Velocity_A.Attuned_Volley_of_Velocity_A",
-              "damageType": "Lethal"
-            },
-            {
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Volley_of_Velocity_A.Attuned_Volley_of_Velocity_A",
-              "damageType": "Fire"
-            },
-            {
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Volley_of_Velocity_A.Attuned_Volley_of_Velocity_A",
-              "damageType": "Cold"
-            },
-            {
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Volley_of_Velocity_A.Attuned_Volley_of_Velocity_A",
-              "damageType": "Energy"
-            },
-            {
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Volley_of_Velocity_A.Attuned_Volley_of_Velocity_A",
-              "damageType": "Negative"
-            },
-            {
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Volley_of_Velocity_A.Attuned_Volley_of_Velocity_A",
-              "damageType": "Toxic"
-            },
-            {
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "DamageBuff",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Volley_of_Velocity_A.Attuned_Volley_of_Velocity_A",
-              "damageType": "Psionic"
-            }
-          ]
-        }
-      ],
+      "type": "set",
+      "fullName": "Boosts.Attuned_Volley_of_Velocity_A.Attuned_Volley_of_Velocity_A",
+      "displayName": "Knockback/Damage",
       "description": {
         "short": "+Knockback, +DMG",
         "long": "Enhances the Knockback potential of a power by {Boost.Attrib.Knockback.Scale}% and the damage by {Boost.Attrib.Damage.Scale}%."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Volley_of_Velocity_A.Attuned_Volley_of_Velocity_A",
-      "setName": "Volley_of_Velocity",
-      "displayName": "Knockback/Damage"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Accuracy",
-          "values": [
-            {
-              "etModifies": "Accuracy",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Volley_of_Velocity_B.Attuned_Volley_of_Velocity_B"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
+          },
+          "stat": "Damage",
+          "damageType": [
+            "Smashing",
+            "Lethal",
+            "Fire",
+            "Cold",
+            "Energy",
+            "Negative",
+            "Toxic",
+            "Psionic"
+          ],
+          "toWho": "self"
         },
         {
-          "effectType": "Knockback",
-          "values": [
-            {
-              "etModifies": "Mez",
-              "mag": {
-                "pve": 0.4775
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Volley_of_Velocity_B.Attuned_Volley_of_Velocity_B",
-              "mezType": "Knockback"
+          "mag": {
+            "IO": {
+              "cap": 0.4775
             }
-          ]
+          },
+          "mezType": 4,
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Volley_of_Velocity_B.Attuned_Volley_of_Velocity_B",
+      "displayName": "Knockback/Accuracy",
       "description": {
         "short": "+Knockback, +ACC",
         "long": "Enhances the Knockback potential of a power by {Boost.Attrib.Knockback.Scale}% and the accuracy by {Boost.Attrib.Accuracy.Scale}%."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Volley_of_Velocity_B.Attuned_Volley_of_Velocity_B",
-      "setName": "Volley_of_Velocity",
-      "displayName": "Knockback/Accuracy"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Recharge",
-          "values": [
-            {
-              "etModifies": "RechargeTime",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Volley_of_Velocity_C.Attuned_Volley_of_Velocity_C"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
+          },
+          "stat": "Accuracy",
+          "toWho": "self"
         },
         {
-          "effectType": "Knockback",
-          "values": [
-            {
-              "etModifies": "Mez",
-              "mag": {
-                "pve": 0.4775
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Volley_of_Velocity_C.Attuned_Volley_of_Velocity_C",
-              "mezType": "Knockback"
+          "mag": {
+            "IO": {
+              "cap": 0.4775
             }
-          ]
+          },
+          "mezType": 4,
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Volley_of_Velocity_C.Attuned_Volley_of_Velocity_C",
+      "displayName": "Knockback/Recharge",
       "description": {
         "short": "+Knockback, +Rech",
         "long": "Enhances the Knockback potential of a power by {Boost.Attrib.Knockback.Scale}% and reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}%."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Volley_of_Velocity_C.Attuned_Volley_of_Velocity_C",
-      "setName": "Volley_of_Velocity",
-      "displayName": "Knockback/Recharge"
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Recharge",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.4775
+            }
+          },
+          "mezType": 4,
+          "toWho": "self"
+        }
+      ]
     }
   ],
   "levels": {

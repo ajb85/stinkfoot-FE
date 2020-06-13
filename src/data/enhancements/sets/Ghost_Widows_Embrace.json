@@ -2,298 +2,182 @@
   "fullName": "IOSet.Ghost_Widows_Embrace",
   "enhancements": [
     {
-      "effects": [
-        {
-          "effectType": "Recharge",
-          "values": [
-            {
-              "etModifies": "RechargeTime",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Ghost_Widows_Embrace_A.Attuned_Ghost_Widows_Embrace_A"
-            }
-          ]
-        },
-        {
-          "effectType": "Accuracy",
-          "values": [
-            {
-              "etModifies": "Accuracy",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Ghost_Widows_Embrace_A.Attuned_Ghost_Widows_Embrace_A"
-            }
-          ]
-        }
-      ],
+      "type": "set",
+      "fullName": "Boosts.Attuned_Ghost_Widows_Embrace_A.Attuned_Ghost_Widows_Embrace_A",
+      "displayName": "Accuracy/Recharge",
       "description": {
         "short": "+ACC, +Rech",
         "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}%."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Ghost_Widows_Embrace_A.Attuned_Ghost_Widows_Embrace_A",
-      "setName": "Ghost_Widows_Embrace",
-      "displayName": "Accuracy/Recharge"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Endurance",
-          "values": [
-            {
-              "etModifies": "EnduranceDiscount",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Ghost_Widows_Embrace_B.Attuned_Ghost_Widows_Embrace_B"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
+          },
+          "stat": "Accuracy",
+          "toWho": "self"
         },
         {
-          "effectType": "Hold",
-          "values": [
-            {
-              "etModifies": "Mez",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Ghost_Widows_Embrace_B.Attuned_Ghost_Widows_Embrace_B",
-              "mezType": "Hold"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
+          },
+          "stat": "Recharge",
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Ghost_Widows_Embrace_B.Attuned_Ghost_Widows_Embrace_B",
+      "displayName": "Endurance/Hold",
       "description": {
         "short": "+End, +Hold",
         "long": "Enhances the hold duration of a power by {Boost.Attrib.Hold.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Ghost_Widows_Embrace_B.Attuned_Ghost_Widows_Embrace_B",
-      "setName": "Ghost_Widows_Embrace",
-      "displayName": "Endurance/Hold"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Accuracy",
-          "values": [
-            {
-              "etModifies": "Accuracy",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Ghost_Widows_Embrace_C.Attuned_Ghost_Widows_Embrace_C"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self"
         },
         {
-          "effectType": "Endurance",
-          "values": [
-            {
-              "etModifies": "EnduranceDiscount",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Ghost_Widows_Embrace_C.Attuned_Ghost_Widows_Embrace_C"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
+          },
+          "mezType": 2,
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Ghost_Widows_Embrace_C.Attuned_Ghost_Widows_Embrace_C",
+      "displayName": "Accuracy/Endurance",
       "description": {
         "short": "+ACC, -End Cost",
         "long": "Enhances the accuracy by {Boost.Attrib.Accuracy.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Ghost_Widows_Embrace_C.Attuned_Ghost_Widows_Embrace_C",
-      "setName": "Ghost_Widows_Embrace",
-      "displayName": "Accuracy/Endurance"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Hold",
-          "values": [
-            {
-              "etModifies": "Mez",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Ghost_Widows_Embrace_D.Attuned_Ghost_Widows_Embrace_D",
-              "mezType": "Hold"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
+          },
+          "stat": "Accuracy",
+          "toWho": "self"
         },
         {
-          "effectType": "Range",
-          "values": [
-            {
-              "etModifies": "Range",
-              "mag": {
-                "pve": 0.159375
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Ghost_Widows_Embrace_D.Attuned_Ghost_Widows_Embrace_D"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Ghost_Widows_Embrace_D.Attuned_Ghost_Widows_Embrace_D",
+      "displayName": "Hold/Range",
       "description": {
         "short": "+Range, +Hold",
         "long": "Enhances the range of a power by {Boost.Attrib.Range.Scale}% and hold duration by {Boost.Attrib.Hold.Scale}%."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Ghost_Widows_Embrace_D.Attuned_Ghost_Widows_Embrace_D",
-      "setName": "Ghost_Widows_Embrace",
-      "displayName": "Hold/Range"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Accuracy",
-          "values": [
-            {
-              "etModifies": "Accuracy",
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Ghost_Widows_Embrace_E.Attuned_Ghost_Widows_Embrace_E"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
-        },
-        {
-          "effectType": "Hold",
-          "values": [
-            {
-              "etModifies": "Mez",
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Ghost_Widows_Embrace_E.Attuned_Ghost_Widows_Embrace_E",
-              "mezType": "Hold"
-            }
-          ]
-        },
-        {
-          "effectType": "Recharge",
-          "values": [
-            {
-              "etModifies": "RechargeTime",
-              "mag": {
-                "pve": 0.212
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Ghost_Widows_Embrace_E.Attuned_Ghost_Widows_Embrace_E"
-            }
-          ]
+          },
+          "mezType": 2,
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Ghost_Widows_Embrace_E.Attuned_Ghost_Widows_Embrace_E",
+      "displayName": "Accuracy/Hold/Recharge",
       "description": {
         "short": "+ACC, +Rech, +Hold",
         "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}%, hold duration by {Boost.Attrib.Hold.Scale}% and reduces the recharge time by {Boost.Attrib.Recharge.Scale}%."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Ghost_Widows_Embrace_E.Attuned_Ghost_Widows_Embrace_E",
-      "setName": "Ghost_Widows_Embrace",
-      "displayName": "Accuracy/Hold/Recharge"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Damage",
-          "values": [
-            {
-              "mag": {
-                "pve": 71.7501
-              },
-              "procsPerMinute": 3.5,
-              "cancelOnMiss": true,
-              "effectType": "Damage",
-              "ticks": 1,
-              "stacking": 1,
-              "resistible": true,
-              "toWho": "all",
-              "powerFullName": "Boosts.Attuned_Ghost_Widows_Embrace_F.Attuned_Ghost_Widows_Embrace_F",
-              "damageType": "Psionic"
+          "mag": {
+            "IO": {
+              "cap": 0.212
             }
-          ]
+          },
+          "stat": "Accuracy",
+          "toWho": "self"
         },
         {
-          "effectType": "TempDamage",
-          "values": [
-            {
-              "mag": {
-                "pvp": 71.7501
-              },
-              "procsPerMinute": 3.5,
-              "cancelOnMiss": true,
-              "effectType": "Damage",
-              "ticks": 1,
-              "stacking": 1,
-              "toWho": "all",
-              "powerFullName": "Boosts.Attuned_Ghost_Widows_Embrace_F.Attuned_Ghost_Widows_Embrace_F",
-              "damageType": "Psionic"
+          "mag": {
+            "IO": {
+              "cap": 0.212
             }
-          ]
+          },
+          "stat": "Recharge",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.212
+            }
+          },
+          "mezType": 2,
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Ghost_Widows_Embrace_F.Attuned_Ghost_Widows_Embrace_F",
+      "displayName": "Chance for Psionic Damage",
       "description": {
         "short": "Chance for Psionic DMG",
         "long": "Provides a chance to cause minor psionic damage to your targets.  This effect will trigger roughly 3.5 times per minute."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Ghost_Widows_Embrace_F.Attuned_Ghost_Widows_Embrace_F",
-      "setName": "Ghost_Widows_Embrace",
-      "displayName": "Chance for Psionic Damage"
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 71.7501
+            }
+          },
+          "stat": "Chance for Psionic Damage",
+          "procsPerMinute": 3.5,
+          "cancelOnMiss": true,
+          "damageType": "Psionic",
+          "ticks": 1,
+          "stacking": 1,
+          "resistible": true,
+          "pvMode": 1,
+          "toWho": "all"
+        }
+      ]
     }
   ],
   "levels": {

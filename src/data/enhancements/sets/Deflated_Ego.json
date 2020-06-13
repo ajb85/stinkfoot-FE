@@ -2,108 +2,77 @@
   "fullName": "IOSet.Deflated_Ego",
   "enhancements": [
     {
-      "effects": [
-        {
-          "effectType": "ToHitDebuff",
-          "values": [
-            {
-              "etModifies": "ToHit",
-              "mag": {
-                "pve": 0.255
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Deflated_Ego_A.Attuned_Deflated_Ego_A"
-            }
-          ]
-        }
-      ],
+      "type": "set",
+      "fullName": "Boosts.Attuned_Deflated_Ego_A.Attuned_Deflated_Ego_A",
+      "displayName": "To Hit Debuff",
       "description": {
         "short": "+To Hit Debuff",
         "long": "Enhances the to hit debuff potential of a power by {Boost.Attrib.ToHitDebuff.Scale}%."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Deflated_Ego_A.Attuned_Deflated_Ego_A",
-      "setName": "Deflated_Ego",
-      "displayName": "To Hit Debuff"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Recharge",
-          "values": [
-            {
-              "etModifies": "RechargeTime",
-              "mag": {
-                "pve": 0.265
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Deflated_Ego_B.Attuned_Deflated_Ego_B"
+          "mag": {
+            "IO": {
+              "cap": 0.255
             }
-          ]
-        },
-        {
-          "effectType": "ToHitDebuff",
-          "values": [
-            {
-              "etModifies": "ToHit",
-              "mag": {
-                "pve": 0.159375
-              },
-              "probability": 1,
-              "duration": 10.25,
-              "effectType": "Enhancement",
-              "toWho": "self",
-              "powerFullName": "Boosts.Attuned_Deflated_Ego_B.Attuned_Deflated_Ego_B"
-            }
-          ]
+          },
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Deflated_Ego_B.Attuned_Deflated_Ego_B",
+      "displayName": "To Hit Debuff/Recharge",
       "description": {
         "short": "+To Hit Debuff, +Rech",
         "long": "Enhances the to hit debuff potential of a power by {Boost.Attrib.ToHitDebuff.Scale}% and reduces the recharge time by {Boost.Attrib.Recharge.Scale}%."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Deflated_Ego_B.Attuned_Deflated_Ego_B",
-      "setName": "Deflated_Ego",
-      "displayName": "To Hit Debuff/Recharge"
-    },
-    {
+      "boostUsePlayerLevel": true,
       "effects": [
         {
-          "effectType": "Recovery",
-          "values": [
-            {
-              "mag": {
-                "pve": -0.25
-              },
-              "procsPerMinute": 3.5,
-              "cancelOnMiss": true,
-              "duration": 10.25,
-              "effectType": "Recovery",
-              "resistible": true,
-              "toWho": "all",
-              "powerFullName": "Boosts.Attuned_Deflated_Ego_C.Attuned_Deflated_Ego_C"
+          "mag": {
+            "IO": {
+              "cap": 0.265
             }
-          ]
+          },
+          "stat": "Recharge",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.159375
+            }
+          },
+          "toWho": "self"
         }
-      ],
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Deflated_Ego_C.Attuned_Deflated_Ego_C",
+      "displayName": "Chance for Recovery Debuff",
       "description": {
         "short": "Chance for -Recovery",
         "long": "Gives a chance to reduce your foes recovery by {Boost.Attrib.Recovery.Scale}%.  This effect will trigger roughly 3.5 times per minute."
       },
-      "isUnique": false,
-      "type": "set",
-      "fullName": "Boosts.Attuned_Deflated_Ego_C.Attuned_Deflated_Ego_C",
-      "setName": "Deflated_Ego",
-      "displayName": "Chance for Recovery Debuff"
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": -0.25
+            }
+          },
+          "stat": "Chance for Recovery Debuff",
+          "procsPerMinute": 3.5,
+          "cancelOnMiss": true,
+          "resistible": true,
+          "toWho": "all"
+        }
+      ]
     }
   ],
   "levels": {

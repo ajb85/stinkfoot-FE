@@ -6,13 +6,6 @@
   "displayName": "Radiation Armor",
   "powers": [
     {
-      "allowedEnhancements": [
-        "Endurance_Discount",
-        "Recharge",
-        "Res_Damage"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Res_Dmg",
@@ -25,7 +18,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Radiation_Armor.Alpha_Barrier",
               "damageType": "Smashing"
             },
@@ -37,7 +31,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Radiation_Armor.Alpha_Barrier",
               "damageType": "Lethal"
             },
@@ -49,13 +44,22 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Radiation_Armor.Alpha_Barrier",
               "damageType": "Toxic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Endurance_Discount",
+        "Recharge",
+        "Res_Damage"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Defense.Radiation_Armor.Alpha_Barrier",
+      "archetypeOrder": "secondary",
       "powerIndex": 0,
       "castTimeReal": 0.67,
       "toggleCost": 0.26,
@@ -93,12 +97,6 @@
       "powerType": "Toggle"
     },
     {
-      "allowedEnhancements": [
-        "Heal",
-        "Endurance_Modification"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Ones",
@@ -107,7 +105,8 @@
               "mag": {},
               "probability": 1,
               "effectType": "Regeneration",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "attribType": 2,
               "powerFullName": "Brute_Defense.Radiation_Armor.Gamma_Boost"
             },
@@ -115,7 +114,8 @@
               "mag": {},
               "probability": 1,
               "effectType": "Recovery",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "attribType": 2,
               "powerFullName": "Brute_Defense.Radiation_Armor.Gamma_Boost"
             }
@@ -125,30 +125,48 @@
           "effectType": "Res_Boolean",
           "values": [
             {
+              "etModifies": "Regeneration",
               "mag": {
                 "pve": 0.1384
               },
               "probability": 1,
               "duration": 1.25,
               "effectType": "ResEffect",
-              "eTModifies": 27,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Radiation_Armor.Gamma_Boost"
             },
             {
+              "etModifies": "Recovery",
               "mag": {
                 "pve": 0.5536
               },
               "probability": 1,
               "duration": 1.25,
               "effectType": "ResEffect",
-              "eTModifies": 26,
-              "toWho": "All",
+              "toWho": "all",
+              "powerFullName": "Brute_Defense.Radiation_Armor.Gamma_Boost"
+            },
+            {
+              "etModifies": "Endurance",
+              "mag": {
+                "pve": 0.5536
+              },
+              "probability": 1,
+              "duration": 1.25,
+              "effectType": "ResEffect",
+              "toWho": "all",
               "powerFullName": "Brute_Defense.Radiation_Armor.Gamma_Boost"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Heal",
+        "Endurance_Modification"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Defense.Radiation_Armor.Gamma_Boost",
+      "archetypeOrder": "secondary",
       "powerIndex": 1,
       "fullName": "Brute_Secondary_Radiation_Armor_Gamma_Boost",
       "displayName": "Gamma Boost",
@@ -180,13 +198,6 @@
       "powerType": "Auto"
     },
     {
-      "allowedEnhancements": [
-        "Endurance_Discount",
-        "Recharge",
-        "Res_Damage"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Res_Dmg",
@@ -199,7 +210,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Radiation_Armor.Proton_Armor",
               "damageType": "Energy"
             },
@@ -211,7 +223,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Radiation_Armor.Proton_Armor",
               "damageType": "Fire"
             },
@@ -223,7 +236,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Radiation_Armor.Proton_Armor",
               "damageType": "Negative"
             },
@@ -235,13 +249,22 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Radiation_Armor.Proton_Armor",
               "damageType": "Cold"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Endurance_Discount",
+        "Recharge",
+        "Res_Damage"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Defense.Radiation_Armor.Proton_Armor",
+      "archetypeOrder": "secondary",
       "powerIndex": 2,
       "castTimeReal": 0.67,
       "toggleCost": 0.26,
@@ -279,13 +302,6 @@
       "powerType": "Toggle"
     },
     {
-      "allowedEnhancements": [
-        "Endurance_Discount",
-        "Recharge",
-        "Res_Damage"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Res_Boolean",
@@ -297,7 +313,7 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Mez",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Radiation_Armor.Fallout_Shelter",
               "mezType": "Stun"
             },
@@ -308,7 +324,7 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Mez",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Radiation_Armor.Fallout_Shelter",
               "mezType": "Sleep"
             },
@@ -319,7 +335,7 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Mez",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Radiation_Armor.Fallout_Shelter",
               "mezType": "Hold"
             },
@@ -330,19 +346,64 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Mez",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Radiation_Armor.Fallout_Shelter",
-              "mezType": "Immobilization"
+              "mezType": "Immob"
             },
             {
+              "etModifies": "RechargeTime",
               "mag": {
                 "pve": 0.29064
               },
               "probability": 1,
               "duration": 0.75,
               "effectType": "ResEffect",
-              "eTModifies": 25,
-              "toWho": "Self",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Radiation_Armor.Fallout_Shelter"
+            },
+            {
+              "etModifies": "SpeedRunning",
+              "mag": {
+                "pve": 0.29064
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "ResEffect",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Radiation_Armor.Fallout_Shelter"
+            },
+            {
+              "etModifies": "SpeedFlying",
+              "mag": {
+                "pve": 0.29064
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "ResEffect",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Radiation_Armor.Fallout_Shelter"
+            },
+            {
+              "etModifies": "JumpHeight",
+              "mag": {
+                "pve": 0.29064
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "ResEffect",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Radiation_Armor.Fallout_Shelter"
+            },
+            {
+              "etModifies": "SpeedJumping",
+              "mag": {
+                "pve": 0.29064
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "ResEffect",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Radiation_Armor.Fallout_Shelter"
             },
             {
@@ -352,7 +413,7 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "MezResist",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Radiation_Armor.Fallout_Shelter",
               "mezType": "Stun"
             },
@@ -363,7 +424,7 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "MezResist",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Radiation_Armor.Fallout_Shelter",
               "mezType": "Sleep"
             },
@@ -374,7 +435,7 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "MezResist",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Radiation_Armor.Fallout_Shelter",
               "mezType": "Hold"
             },
@@ -385,9 +446,10 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "MezResist",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Radiation_Armor.Fallout_Shelter",
-              "mezType": "Immobilization"
+              "mezType": "Immob"
             }
           ]
         },
@@ -402,7 +464,7 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "MezResist",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Radiation_Armor.Fallout_Shelter",
               "mezType": "Knockback"
             },
@@ -414,7 +476,7 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "MezResist",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Radiation_Armor.Fallout_Shelter",
               "mezType": "Knockup"
             },
@@ -426,7 +488,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Mez",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Radiation_Armor.Fallout_Shelter",
               "mezType": "Knockback"
             },
@@ -438,19 +501,20 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Mez",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Radiation_Armor.Fallout_Shelter",
               "mezType": "Knockup"
             },
             {
+              "etModifies": "ToHit",
               "mag": {
                 "pvp": 0.3
               },
               "probability": 1,
               "duration": 0.75,
               "effectType": "ResEffect",
-              "eTModifies": 40,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Radiation_Armor.Fallout_Shelter"
             }
           ]
@@ -466,7 +530,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Radiation_Armor.Fallout_Shelter",
               "damageType": "Energy"
             },
@@ -478,7 +543,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Radiation_Armor.Fallout_Shelter",
               "damageType": "Negative"
             },
@@ -490,7 +556,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Radiation_Armor.Fallout_Shelter",
               "damageType": "Fire"
             },
@@ -502,7 +569,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Radiation_Armor.Fallout_Shelter",
               "damageType": "Psionic"
             },
@@ -514,13 +582,22 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Radiation_Armor.Fallout_Shelter",
               "damageType": "Toxic"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Endurance_Discount",
+        "Recharge",
+        "Res_Damage"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Defense.Radiation_Armor.Fallout_Shelter",
+      "archetypeOrder": "secondary",
       "powerIndex": 3,
       "castTimeReal": 0.73,
       "toggleCost": 0.208,
@@ -558,17 +635,6 @@
       "powerType": "Toggle"
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Heal",
-        "Recharge",
-        "Endurance_Modification",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Damage",
@@ -580,8 +646,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "All",
+              "toWho": "all",
               "powerFullName": "Brute_Defense.Radiation_Armor.Radiation_Therapy",
               "damageType": "Energy"
             },
@@ -594,8 +661,9 @@
               "effectType": "Damage",
               "ticks": 5,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "All",
+              "toWho": "all",
               "powerFullName": "Brute_Defense.Radiation_Armor.Radiation_Therapy",
               "damageType": "Toxic"
             }
@@ -611,7 +679,8 @@
               "probability": 1,
               "effectType": "Heal",
               "delayedTime": 0.25,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Radiation_Armor.Radiation_Therapy"
             }
           ]
@@ -625,7 +694,8 @@
               },
               "probability": 1,
               "effectType": "Endurance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Radiation_Armor.Radiation_Therapy"
             },
             {
@@ -636,7 +706,7 @@
               "duration": 30,
               "effectType": "Regeneration",
               "resistible": true,
-              "toWho": "All",
+              "toWho": "all",
               "powerFullName": "Brute_Defense.Radiation_Armor.Radiation_Therapy"
             }
           ]
@@ -645,14 +715,15 @@
           "effectType": "Res_Boolean",
           "values": [
             {
+              "etModifies": "Regeneration",
               "mag": {
                 "pve": 0.2076
               },
               "probability": 1,
               "duration": 60,
               "effectType": "ResEffect",
-              "eTModifies": 27,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Radiation_Armor.Radiation_Therapy"
             },
             {
@@ -663,7 +734,7 @@
               "duration": 30,
               "effectType": "Regeneration",
               "resistible": true,
-              "toWho": "All",
+              "toWho": "all",
               "powerFullName": "Brute_Defense.Radiation_Armor.Radiation_Therapy"
             }
           ]
@@ -680,9 +751,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "All",
+              "toWho": "all",
               "attribType": 1,
               "powerFullName": "Brute_Defense.Radiation_Armor.Radiation_Therapy",
               "requiresToHitCheck": true,
@@ -691,6 +763,18 @@
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Heal",
+        "Recharge",
+        "Endurance_Modification",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Defense.Radiation_Armor.Radiation_Therapy",
+      "archetypeOrder": "secondary",
       "powerIndex": 4,
       "castTimeReal": 1.03,
       "toggleCost": 13,
@@ -738,13 +822,6 @@
       "aoeModifier": 4
     },
     {
-      "allowedEnhancements": [
-        "Endurance_Discount",
-        "Recharge",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "InherentTaunt",
@@ -758,9 +835,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Defense.Radiation_Armor.Beta_Decay",
               "requiresToHitCheck": true,
@@ -778,8 +856,9 @@
               "probability": 1,
               "duration": 1,
               "effectType": "ToHit",
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Defense.Radiation_Armor.Beta_Decay"
             }
           ]
@@ -794,8 +873,9 @@
               "probability": 1,
               "duration": 1,
               "effectType": "Defense",
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Defense.Radiation_Armor.Beta_Decay"
             }
           ]
@@ -804,19 +884,27 @@
           "effectType": "StealthOn",
           "values": [
             {
+              "etModifies": "RechargeTime",
               "mag": {
                 "pve": 0.025
               },
               "probability": 1,
               "duration": 1,
               "effectType": "Enhancement",
-              "eTModifies": 25,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Radiation_Armor.Beta_Decay"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Endurance_Discount",
+        "Recharge",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Defense.Radiation_Armor.Beta_Decay",
+      "archetypeOrder": "secondary",
       "powerIndex": 5,
       "castTimeReal": 0.67,
       "toggleCost": 0.208,
@@ -862,14 +950,6 @@
       "powerType": "Toggle"
     },
     {
-      "allowedEnhancements": [
-        "Endurance_Discount",
-        "Heal",
-        "Recharge",
-        "Endurance_Modification"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Ones",
@@ -881,7 +961,8 @@
               "probability": 1,
               "duration": 30,
               "effectType": "Regeneration",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Radiation_Armor.Particle_Shielding"
             },
             {
@@ -891,7 +972,7 @@
               "probability": 1,
               "duration": 60,
               "effectType": "Recovery",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Radiation_Armor.Particle_Shielding"
             },
             {
@@ -900,12 +981,22 @@
               },
               "probability": 1,
               "effectType": "Absorb",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": ""
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Endurance_Discount",
+        "Heal",
+        "Recharge",
+        "Endurance_Modification"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Defense.Radiation_Armor.Particle_Shielding",
+      "archetypeOrder": "secondary",
       "powerIndex": 6,
       "castTimeReal": 0.73,
       "toggleCost": 10.4,
@@ -940,17 +1031,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Defense_Debuff",
-        "Endurance_Discount",
-        "Heal",
-        "Recharge",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Damage",
@@ -962,8 +1042,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Defense.Radiation_Armor.Ground_Zero",
               "damageType": "Energy"
             },
@@ -977,8 +1058,9 @@
               "ticks": 10,
               "delayedTime": 1,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Defense.Radiation_Armor.Ground_Zero",
               "damageType": "Toxic"
             }
@@ -995,8 +1077,9 @@
               "duration": 10,
               "effectType": "Defense",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Defense.Radiation_Armor.Ground_Zero"
             }
           ]
@@ -1011,7 +1094,8 @@
               "probability": 1,
               "effectType": "Heal",
               "stacking": 1,
-              "toWho": "Target",
+              "buffable": true,
+              "toWho": "target",
               "powerFullName": "Brute_Defense.Radiation_Armor.Ground_Zero"
             }
           ]
@@ -1028,9 +1112,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Defense.Radiation_Armor.Ground_Zero",
               "requiresToHitCheck": true,
@@ -1039,6 +1124,18 @@
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Defense_Debuff",
+        "Endurance_Discount",
+        "Heal",
+        "Recharge",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Defense.Radiation_Armor.Ground_Zero",
+      "archetypeOrder": "secondary",
       "powerIndex": 7,
       "castTimeReal": 3,
       "toggleCost": 13,
@@ -1085,14 +1182,6 @@
       "aoeModifier": 3.25
     },
     {
-      "allowedEnhancements": [
-        "Endurance_Discount",
-        "Recharge",
-        "Endurance_Modification",
-        "Res_Damage"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Res_Dmg",
@@ -1104,7 +1193,8 @@
               "probability": 1,
               "duration": 60,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Radiation_Armor.Meltdown",
               "damageType": "Smashing"
             },
@@ -1115,7 +1205,8 @@
               "probability": 1,
               "duration": 60,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Radiation_Armor.Meltdown",
               "damageType": "Lethal"
             },
@@ -1126,7 +1217,8 @@
               "probability": 1,
               "duration": 60,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Radiation_Armor.Meltdown",
               "damageType": "Fire"
             },
@@ -1137,7 +1229,8 @@
               "probability": 1,
               "duration": 60,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Radiation_Armor.Meltdown",
               "damageType": "Cold"
             },
@@ -1148,7 +1241,8 @@
               "probability": 1,
               "duration": 60,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Radiation_Armor.Meltdown",
               "damageType": "Energy"
             },
@@ -1159,7 +1253,8 @@
               "probability": 1,
               "duration": 60,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Radiation_Armor.Meltdown",
               "damageType": "Negative"
             },
@@ -1170,7 +1265,8 @@
               "probability": 1,
               "duration": 60,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Radiation_Armor.Meltdown",
               "damageType": "Psionic"
             },
@@ -1181,7 +1277,8 @@
               "probability": 1,
               "duration": 60,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Radiation_Armor.Meltdown",
               "damageType": "Toxic"
             }
@@ -1197,7 +1294,7 @@
               "probability": 1,
               "duration": 60,
               "effectType": "Recovery",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Radiation_Armor.Meltdown"
             },
             {
@@ -1207,7 +1304,7 @@
               "probability": 1,
               "duration": 10,
               "effectType": "GlobalChanceMod",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Radiation_Armor.Meltdown"
             }
           ]
@@ -1222,7 +1319,7 @@
               "probability": 1,
               "duration": 60,
               "effectType": "DamageBuff",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Radiation_Armor.Meltdown",
               "damageType": "Smashing"
             },
@@ -1233,7 +1330,7 @@
               "probability": 1,
               "duration": 60,
               "effectType": "DamageBuff",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Radiation_Armor.Meltdown",
               "damageType": "Lethal"
             },
@@ -1244,7 +1341,7 @@
               "probability": 1,
               "duration": 60,
               "effectType": "DamageBuff",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Radiation_Armor.Meltdown",
               "damageType": "Fire"
             },
@@ -1255,7 +1352,7 @@
               "probability": 1,
               "duration": 60,
               "effectType": "DamageBuff",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Radiation_Armor.Meltdown",
               "damageType": "Cold"
             },
@@ -1266,7 +1363,7 @@
               "probability": 1,
               "duration": 60,
               "effectType": "DamageBuff",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Radiation_Armor.Meltdown",
               "damageType": "Energy"
             },
@@ -1277,7 +1374,7 @@
               "probability": 1,
               "duration": 60,
               "effectType": "DamageBuff",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Radiation_Armor.Meltdown",
               "damageType": "Negative"
             },
@@ -1288,7 +1385,7 @@
               "probability": 1,
               "duration": 60,
               "effectType": "DamageBuff",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Radiation_Armor.Meltdown",
               "damageType": "Toxic"
             },
@@ -1299,7 +1396,7 @@
               "probability": 1,
               "duration": 60,
               "effectType": "DamageBuff",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Radiation_Armor.Meltdown",
               "damageType": "Psionic"
             }
@@ -1315,7 +1412,7 @@
               "probability": 1,
               "effectType": "Endurance",
               "delayedTime": 60,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Radiation_Armor.Meltdown"
             },
             {
@@ -1326,24 +1423,33 @@
               "duration": 10,
               "effectType": "Recovery",
               "delayedTime": 60,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Radiation_Armor.Meltdown"
             },
             {
+              "etModifies": "Recovery",
               "mag": {
                 "pve": 1
               },
               "probability": 1,
               "duration": 10,
               "effectType": "ResEffect",
-              "eTModifies": 26,
               "delayedTime": 60,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Radiation_Armor.Meltdown"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Endurance_Discount",
+        "Recharge",
+        "Endurance_Modification",
+        "Res_Damage"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Defense.Radiation_Armor.Meltdown",
+      "archetypeOrder": "secondary",
       "powerIndex": 8,
       "castTimeReal": 2.93,
       "toggleCost": 2.6,

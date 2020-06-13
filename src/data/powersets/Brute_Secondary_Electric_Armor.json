@@ -6,13 +6,6 @@
   "displayName": "Electric Armor",
   "powers": [
     {
-      "allowedEnhancements": [
-        "Endurance_Discount",
-        "Recharge",
-        "Res_Damage"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Res_DMG",
@@ -25,7 +18,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Electric_Armor.Charged_Armor",
               "damageType": "Smashing"
             },
@@ -37,7 +31,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Electric_Armor.Charged_Armor",
               "damageType": "Lethal"
             },
@@ -49,13 +44,22 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Electric_Armor.Charged_Armor",
               "damageType": "Energy"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Endurance_Discount",
+        "Recharge",
+        "Res_Damage"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Defense.Electric_Armor.Charged_Armor",
+      "archetypeOrder": "secondary",
       "powerIndex": 0,
       "castTimeReal": 0.67,
       "toggleCost": 0.26,
@@ -93,16 +97,6 @@
       "powerType": "Toggle"
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Recharge",
-        "Endurance_Modification",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Damage",
@@ -114,8 +108,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Defense.Electric_Armor.Lightning_Field",
               "damageType": "Energy"
             }
@@ -131,8 +126,9 @@
               "probability": 1,
               "effectType": "Endurance",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Defense.Electric_Armor.Lightning_Field"
             }
           ]
@@ -147,8 +143,9 @@
               "probability": 1,
               "effectType": "Endurance",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Defense.Electric_Armor.Lightning_Field"
             }
           ]
@@ -165,9 +162,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Defense.Electric_Armor.Lightning_Field",
               "requiresToHitCheck": true,
@@ -176,6 +174,17 @@
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Recharge",
+        "Endurance_Modification",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Defense.Electric_Armor.Lightning_Field",
+      "archetypeOrder": "secondary",
       "powerIndex": 1,
       "castTimeReal": 2.03,
       "toggleCost": 0.52,
@@ -218,13 +227,6 @@
       "powerType": "Toggle"
     },
     {
-      "allowedEnhancements": [
-        "Endurance_Discount",
-        "Recharge",
-        "Res_Damage"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Res_DMG",
@@ -237,7 +239,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Electric_Armor.Conductive_Shield",
               "damageType": "Fire"
             },
@@ -249,7 +252,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Electric_Armor.Conductive_Shield",
               "damageType": "Cold"
             },
@@ -261,7 +265,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Electric_Armor.Conductive_Shield",
               "damageType": "Energy"
             },
@@ -273,13 +278,22 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Electric_Armor.Conductive_Shield",
               "damageType": "Negative"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Endurance_Discount",
+        "Recharge",
+        "Res_Damage"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Defense.Electric_Armor.Conductive_Shield",
+      "archetypeOrder": "secondary",
       "powerIndex": 2,
       "castTimeReal": 0.67,
       "toggleCost": 0.26,
@@ -317,13 +331,6 @@
       "powerType": "Toggle"
     },
     {
-      "allowedEnhancements": [
-        "Endurance_Discount",
-        "Recharge",
-        "Res_Damage"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Res_Boolean",
@@ -335,7 +342,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Mez",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Electric_Armor.Static_Shield",
               "mezType": "Stun"
             },
@@ -346,7 +354,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Mez",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Electric_Armor.Static_Shield",
               "mezType": "Hold"
             },
@@ -357,7 +366,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Mez",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Electric_Armor.Static_Shield",
               "mezType": "Sleep"
             },
@@ -368,7 +378,7 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "MezResist",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Electric_Armor.Static_Shield",
               "mezType": "Stun"
             },
@@ -379,7 +389,7 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "MezResist",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Electric_Armor.Static_Shield",
               "mezType": "Hold"
             },
@@ -390,19 +400,30 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "MezResist",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Electric_Armor.Static_Shield",
               "mezType": "Sleep"
             },
             {
+              "etModifies": "Recovery",
               "mag": {
                 "pve": 0.8304
               },
               "probability": 1,
               "duration": 0.75,
               "effectType": "ResEffect",
-              "eTModifies": 26,
-              "toWho": "All",
+              "toWho": "all",
+              "powerFullName": "Brute_Defense.Electric_Armor.Static_Shield"
+            },
+            {
+              "etModifies": "Endurance",
+              "mag": {
+                "pve": 0.8304
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "ResEffect",
+              "toWho": "all",
               "powerFullName": "Brute_Defense.Electric_Armor.Static_Shield"
             }
           ]
@@ -418,7 +439,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Electric_Armor.Static_Shield",
               "damageType": "Psionic"
             }
@@ -434,24 +456,98 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "MezResist",
-              "toWho": "All",
+              "toWho": "all",
               "powerFullName": "Brute_Defense.Electric_Armor.Static_Shield",
               "mezType": "Teleport"
             },
             {
+              "etModifies": "Defense",
+              "mag": {
+                "pvp": 0.3
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "ResEffect",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Electric_Armor.Static_Shield"
+            },
+            {
+              "etModifies": "ToHit",
+              "mag": {
+                "pvp": 0.3
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "ResEffect",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Electric_Armor.Static_Shield"
+            },
+            {
+              "etModifies": "RechargeTime",
+              "mag": {
+                "pvp": 0.3
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "ResEffect",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Electric_Armor.Static_Shield"
+            },
+            {
+              "etModifies": "SpeedRunning",
               "mag": {
                 "pvp": 0.5
               },
               "probability": 1,
               "duration": 0.75,
               "effectType": "ResEffect",
-              "eTModifies": 5,
-              "toWho": "Self",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Electric_Armor.Static_Shield"
+            },
+            {
+              "etModifies": "SpeedFlying",
+              "mag": {
+                "pvp": 0.5
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "ResEffect",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Electric_Armor.Static_Shield"
+            },
+            {
+              "etModifies": "JumpHeight",
+              "mag": {
+                "pvp": 0.5
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "ResEffect",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Electric_Armor.Static_Shield"
+            },
+            {
+              "etModifies": "SpeedJumping",
+              "mag": {
+                "pvp": 0.5
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "ResEffect",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Electric_Armor.Static_Shield"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Endurance_Discount",
+        "Recharge",
+        "Res_Damage"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Defense.Electric_Armor.Static_Shield",
+      "archetypeOrder": "secondary",
       "powerIndex": 3,
       "castTimeReal": 1.17,
       "toggleCost": 0.208,
@@ -489,11 +585,6 @@
       "powerType": "Toggle"
     },
     {
-      "allowedEnhancements": [
-        "Res_Damage"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Res_DMG",
@@ -505,7 +596,8 @@
               "probability": 1,
               "duration": 10.25,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Electric_Armor.Grounded",
               "damageType": "Energy"
             },
@@ -516,7 +608,8 @@
               "probability": 1,
               "duration": 10.25,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Electric_Armor.Grounded",
               "damageType": "Negative"
             }
@@ -526,14 +619,14 @@
           "effectType": "Res_Boolean",
           "values": [
             {
+              "etModifies": "Endurance",
               "mag": {
                 "pve": 0.5536
               },
               "probability": 1,
               "duration": 10.25,
               "effectType": "ResEffect",
-              "eTModifies": 7,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Electric_Armor.Grounded"
             },
             {
@@ -543,9 +636,9 @@
               "probability": 1,
               "duration": 10.25,
               "effectType": "MezResist",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Electric_Armor.Grounded",
-              "mezType": "Immobilization"
+              "mezType": "Immob"
             }
           ]
         },
@@ -559,7 +652,8 @@
               "probability": 1,
               "duration": 10.25,
               "effectType": "Mez",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Electric_Armor.Grounded",
               "nearGround": true,
               "mezType": "Knockback"
@@ -571,7 +665,8 @@
               "probability": 1,
               "duration": 10.25,
               "effectType": "Mez",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Electric_Armor.Grounded",
               "nearGround": true,
               "mezType": "Knockup"
@@ -588,14 +683,21 @@
               "probability": 1,
               "duration": 10.25,
               "effectType": "Mez",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Electric_Armor.Grounded",
               "nearGround": true,
-              "mezType": "Immobilization"
+              "mezType": "Immob"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Res_Damage"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Defense.Electric_Armor.Grounded",
+      "archetypeOrder": "secondary",
       "powerIndex": 4,
       "castTimeReal": 0.5,
       "fullName": "Brute_Secondary_Electric_Armor_Grounded",
@@ -628,36 +730,52 @@
       "powerType": "Auto"
     },
     {
-      "allowedEnhancements": [
-        "Fly",
-        "Run"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Ones",
           "values": [
             {
+              "etModifies": "RechargeTime",
               "mag": {
                 "pve": 0.2
               },
               "probability": 1,
               "duration": 10.25,
               "effectType": "Enhancement",
-              "eTModifies": 25,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Electric_Armor.Lightning_Reflexes"
             },
             {
+              "etModifies": "SpeedRunning",
               "mag": {
                 "pve": 0.4
               },
               "probability": 1,
               "duration": 10.25,
               "effectType": "ResEffect",
-              "eTModifies": 32,
-              "toWho": "Self",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Electric_Armor.Lightning_Reflexes"
+            },
+            {
+              "etModifies": "RechargeTime",
+              "mag": {
+                "pve": 0.4
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "ResEffect",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Electric_Armor.Lightning_Reflexes"
+            },
+            {
+              "etModifies": "SpeedFlying",
+              "mag": {
+                "pve": 0.4
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "ResEffect",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Electric_Armor.Lightning_Reflexes"
             }
           ]
@@ -672,7 +790,8 @@
               "probability": 1,
               "duration": 10.25,
               "effectType": "SpeedRunning",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Electric_Armor.Lightning_Reflexes"
             }
           ]
@@ -687,12 +806,20 @@
               "probability": 1,
               "duration": 10.25,
               "effectType": "SpeedFlying",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Electric_Armor.Lightning_Reflexes"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Fly",
+        "Run"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Defense.Electric_Armor.Lightning_Reflexes",
+      "archetypeOrder": "secondary",
       "powerIndex": 5,
       "fullName": "Brute_Secondary_Electric_Armor_Lightning_Reflexes",
       "displayName": "Lightning Reflexes",
@@ -721,26 +848,19 @@
       "powerType": "Auto"
     },
     {
-      "allowedEnhancements": [
-        "Endurance_Discount",
-        "Heal",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Stun",
           "values": [
             {
+              "etModifies": "EnduranceDiscount",
               "mag": {
                 "pve": 0.596
               },
               "probability": 1,
               "duration": 30,
               "effectType": "Enhancement",
-              "eTModifies": 8,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Electric_Armor.Conserve_Power"
             }
           ]
@@ -755,7 +875,8 @@
               "probability": 1,
               "duration": 30,
               "effectType": "Regeneration",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Electric_Armor.Conserve_Power"
             }
           ]
@@ -771,12 +892,21 @@
               "variableModified": true,
               "effectType": "Heal",
               "stacking": 1,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Electric_Armor.Conserve_Power"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Endurance_Discount",
+        "Heal",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Defense.Electric_Armor.Conserve_Power",
+      "archetypeOrder": "secondary",
       "powerIndex": 6,
       "castTimeReal": 1.17,
       "toggleCost": 10.4,
@@ -811,14 +941,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Endurance_Discount",
-        "Recharge",
-        "Endurance_Modification",
-        "Taunt"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Ones",
@@ -830,8 +952,9 @@
               "probability": 1,
               "effectType": "Endurance",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Defense.Electric_Armor.Power_Sink"
             },
             {
@@ -842,8 +965,9 @@
               "duration": 4,
               "effectType": "Recovery",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Defense.Electric_Armor.Power_Sink"
             },
             {
@@ -855,7 +979,8 @@
               "effectType": "Endurance",
               "delayedTime": 0.25,
               "stacking": 1,
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Electric_Armor.Power_Sink"
             },
             {
@@ -867,7 +992,7 @@
               "effectType": "Rage",
               "stacking": 1,
               "resistible": true,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Electric_Armor.Power_Sink"
             }
           ]
@@ -882,8 +1007,9 @@
               "probability": 1,
               "effectType": "Endurance",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Brute_Defense.Electric_Armor.Power_Sink"
             }
           ]
@@ -900,9 +1026,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Brute_Defense.Electric_Armor.Power_Sink",
               "requiresToHitCheck": true,
@@ -911,6 +1038,15 @@
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Endurance_Discount",
+        "Recharge",
+        "Endurance_Modification",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Defense.Electric_Armor.Power_Sink",
+      "archetypeOrder": "secondary",
       "powerIndex": 7,
       "castTimeReal": 2.03,
       "toggleCost": 13,
@@ -952,16 +1088,6 @@
       "aoeModifier": 2.5
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Endurance_Discount",
-        "Hold",
-        "Recharge",
-        "Endurance_Modification",
-        "Res_Damage"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "secondary",
       "effects": [
         {
           "effectType": "Res_DMG",
@@ -973,7 +1099,8 @@
               "probability": 1,
               "duration": 180,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Electric_Armor.Power_Surge",
               "damageType": "Smashing"
             },
@@ -984,7 +1111,8 @@
               "probability": 1,
               "duration": 180,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Electric_Armor.Power_Surge",
               "damageType": "Lethal"
             },
@@ -995,7 +1123,8 @@
               "probability": 1,
               "duration": 180,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Electric_Armor.Power_Surge",
               "damageType": "Fire"
             },
@@ -1006,7 +1135,8 @@
               "probability": 1,
               "duration": 180,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Electric_Armor.Power_Surge",
               "damageType": "Cold"
             },
@@ -1017,7 +1147,8 @@
               "probability": 1,
               "duration": 180,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Electric_Armor.Power_Surge",
               "damageType": "Energy"
             },
@@ -1028,7 +1159,8 @@
               "probability": 1,
               "duration": 180,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Electric_Armor.Power_Surge",
               "damageType": "Negative"
             },
@@ -1039,7 +1171,8 @@
               "probability": 1,
               "duration": 180,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Electric_Armor.Power_Surge",
               "damageType": "Toxic"
             }
@@ -1055,7 +1188,7 @@
               "probability": 1,
               "duration": 180,
               "effectType": "Recovery",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Electric_Armor.Power_Surge"
             },
             {
@@ -1065,7 +1198,7 @@
               "probability": 1,
               "duration": 180,
               "effectType": "Mez",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Electric_Armor.Power_Surge",
               "mezType": "Knockup"
             },
@@ -1076,7 +1209,7 @@
               "probability": 1,
               "duration": 180,
               "effectType": "MezResist",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Electric_Armor.Power_Surge",
               "mezType": "Knockup"
             },
@@ -1087,7 +1220,7 @@
               "probability": 1,
               "duration": 180,
               "effectType": "Mez",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Electric_Armor.Power_Surge",
               "mezType": "Knockback"
             },
@@ -1098,7 +1231,7 @@
               "probability": 1,
               "duration": 180,
               "effectType": "MezResist",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Electric_Armor.Power_Surge",
               "mezType": "Knockback"
             },
@@ -1109,7 +1242,7 @@
               "probability": 1,
               "duration": 180,
               "effectType": "Mez",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Electric_Armor.Power_Surge",
               "mezType": "Repel"
             },
@@ -1120,7 +1253,7 @@
               "probability": 1,
               "duration": 180,
               "effectType": "MezResist",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Electric_Armor.Power_Surge",
               "mezType": "Repel"
             },
@@ -1131,7 +1264,7 @@
               "probability": 1,
               "duration": 180,
               "effectType": "MezResist",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Electric_Armor.Power_Surge",
               "mezType": "Teleport"
             },
@@ -1140,7 +1273,7 @@
               "probability": 1,
               "duration": 179,
               "effectType": "Translucency",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Electric_Armor.Power_Surge"
             },
             {
@@ -1151,7 +1284,7 @@
               "duration": 4,
               "effectType": "EntCreate",
               "delayedTime": 179,
-              "toWho": "All",
+              "toWho": "all",
               "powerFullName": "Brute_Defense.Electric_Armor.Power_Surge"
             },
             {
@@ -1161,7 +1294,7 @@
               "probability": 1,
               "duration": 30,
               "effectType": "GlobalChanceMod",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Electric_Armor.Power_Surge"
             }
           ]
@@ -1176,7 +1309,8 @@
               "probability": 1,
               "duration": 180,
               "effectType": "Mez",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Electric_Armor.Power_Surge",
               "mezType": "Stun"
             },
@@ -1187,7 +1321,8 @@
               "probability": 1,
               "duration": 180,
               "effectType": "Mez",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Electric_Armor.Power_Surge",
               "mezType": "Hold"
             },
@@ -1198,7 +1333,8 @@
               "probability": 1,
               "duration": 180,
               "effectType": "Mez",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Electric_Armor.Power_Surge",
               "mezType": "Sleep"
             },
@@ -1209,9 +1345,10 @@
               "probability": 1,
               "duration": 180,
               "effectType": "Mez",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Electric_Armor.Power_Surge",
-              "mezType": "Immobilization"
+              "mezType": "Immob"
             },
             {
               "mag": {
@@ -1220,7 +1357,7 @@
               "probability": 1,
               "duration": 180,
               "effectType": "MezResist",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Electric_Armor.Power_Surge",
               "mezType": "Stun"
             },
@@ -1231,7 +1368,7 @@
               "probability": 1,
               "duration": 180,
               "effectType": "MezResist",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Electric_Armor.Power_Surge",
               "mezType": "Hold"
             },
@@ -1242,7 +1379,7 @@
               "probability": 1,
               "duration": 180,
               "effectType": "MezResist",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Electric_Armor.Power_Surge",
               "mezType": "Sleep"
             },
@@ -1253,19 +1390,30 @@
               "probability": 1,
               "duration": 180,
               "effectType": "MezResist",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Electric_Armor.Power_Surge",
-              "mezType": "Immobilization"
+              "mezType": "Immob"
             },
             {
+              "etModifies": "Recovery",
               "mag": {
                 "pve": 1.1072
               },
               "probability": 1,
               "duration": 180,
               "effectType": "ResEffect",
-              "eTModifies": 26,
-              "toWho": "Self",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Electric_Armor.Power_Surge"
+            },
+            {
+              "etModifies": "Endurance",
+              "mag": {
+                "pve": 1.1072
+              },
+              "probability": 1,
+              "duration": 180,
+              "effectType": "ResEffect",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Electric_Armor.Power_Surge"
             }
           ]
@@ -1280,19 +1428,19 @@
               "probability": 1,
               "effectType": "Endurance",
               "delayedTime": 180,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Electric_Armor.Power_Surge"
             },
             {
+              "etModifies": "Endurance",
               "mag": {
                 "pve": 1
               },
               "probability": 1,
               "duration": 20,
               "effectType": "ResEffect",
-              "eTModifies": 7,
               "delayedTime": 180,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Electric_Armor.Power_Surge"
             },
             {
@@ -1303,7 +1451,19 @@
               "duration": 20,
               "effectType": "Recovery",
               "delayedTime": 180,
-              "toWho": "Self",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Electric_Armor.Power_Surge"
+            },
+            {
+              "etModifies": "Recovery",
+              "mag": {
+                "pve": 1
+              },
+              "probability": 1,
+              "duration": 20,
+              "effectType": "ResEffect",
+              "delayedTime": 180,
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Electric_Armor.Power_Surge"
             },
             {
@@ -1313,13 +1473,24 @@
               "probability": 1,
               "effectType": "Damage",
               "delayedTime": 180,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Brute_Defense.Electric_Armor.Power_Surge",
               "damageType": "Special"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Endurance_Discount",
+        "Hold",
+        "Recharge",
+        "Endurance_Modification",
+        "Res_Damage"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Defense.Electric_Armor.Power_Surge",
+      "archetypeOrder": "secondary",
       "powerIndex": 8,
       "castTimeReal": 1.96,
       "toggleCost": 2.6,

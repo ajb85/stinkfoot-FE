@@ -6,16 +6,6 @@
   "displayName": "Pyre Mastery",
   "powers": [
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Immobilize",
-        "Range",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Damage",
@@ -30,8 +20,9 @@
               "effectType": "Damage",
               "ticks": 5,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Pyre_Mastery.Ring_of_Fire",
               "damageType": "Fire"
             }
@@ -49,11 +40,12 @@
               "duration": 17.8800011,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.Pyre_Mastery.Ring_of_Fire",
-              "mezType": "Immobilization"
+              "mezType": "Immob"
             }
           ]
         },
@@ -68,7 +60,7 @@
               "duration": 15,
               "effectType": "MezResist",
               "stacking": 1,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Pyre_Mastery.Ring_of_Fire",
               "mezType": "Knockback"
             },
@@ -80,7 +72,7 @@
               "duration": 15,
               "effectType": "MezResist",
               "stacking": 1,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Pyre_Mastery.Ring_of_Fire",
               "mezType": "Knockup"
             },
@@ -92,7 +84,8 @@
               "duration": 15,
               "effectType": "Mez",
               "stacking": 1,
-              "toWho": "Target",
+              "buffable": true,
+              "toWho": "target",
               "powerFullName": "Epic.Pyre_Mastery.Ring_of_Fire",
               "mezType": "Knockback"
             },
@@ -104,7 +97,8 @@
               "duration": 15,
               "effectType": "Mez",
               "stacking": 1,
-              "toWho": "Target",
+              "buffable": true,
+              "toWho": "target",
               "powerFullName": "Epic.Pyre_Mastery.Ring_of_Fire",
               "mezType": "Knockup"
             },
@@ -116,8 +110,9 @@
               "duration": 6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.Pyre_Mastery.Ring_of_Fire",
               "mezType": "Taunt"
@@ -136,9 +131,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.Pyre_Mastery.Ring_of_Fire",
               "requiresToHitCheck": true,
@@ -157,14 +153,26 @@
               "effectType": "Damage",
               "ticks": 5,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Pyre_Mastery.Ring_of_Fire",
               "damageType": "Fire"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Immobilize",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Pyre_Mastery.Ring_of_Fire",
+      "archetypeOrder": "epicPool",
       "powerIndex": 0,
       "castTimeReal": 1.17,
       "toggleCost": 9.75,
@@ -202,16 +210,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Hold",
-        "Range",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Immobilize",
@@ -224,8 +222,9 @@
               "duration": 14.3040009,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.Pyre_Mastery.Char",
               "mezType": "Hold"
@@ -243,8 +242,9 @@
               "duration": 2,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.Pyre_Mastery.Char",
               "mezType": "Hold"
@@ -257,8 +257,9 @@
               "duration": 6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.Pyre_Mastery.Char",
               "mezType": "Taunt"
@@ -278,8 +279,9 @@
               "effectType": "Damage",
               "ticks": 5,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Pyre_Mastery.Char",
               "damageType": "Fire"
             }
@@ -297,9 +299,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.Pyre_Mastery.Char",
               "requiresToHitCheck": true,
@@ -318,14 +321,26 @@
               "effectType": "Damage",
               "ticks": 5,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Pyre_Mastery.Char",
               "damageType": "Fire"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Hold",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Pyre_Mastery.Char",
+      "archetypeOrder": "epicPool",
       "powerIndex": 1,
       "castTimeReal": 1.07,
       "toggleCost": 10.66,
@@ -363,15 +378,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Range",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Damage",
@@ -384,8 +390,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Pyre_Mastery.Fire_Blast",
               "damageType": "Fire"
             }
@@ -403,9 +410,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.Pyre_Mastery.Fire_Blast",
               "requiresToHitCheck": true,
@@ -424,8 +432,9 @@
               "duration": 6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.Pyre_Mastery.Fire_Blast",
               "mezType": "Taunt"
@@ -441,23 +450,34 @@
               },
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Pyre_Mastery.Fire_Blast",
               "damageType": "Fire"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Pyre_Mastery.Fire_Blast",
+      "archetypeOrder": "epicPool",
       "powerIndex": 2,
       "castTimeReal": 1.67,
       "toggleCost": 6.5,
+      "isEpic": true,
       "fullName": "Epic_Pyre_Mastery_Fire_Blast",
       "displayName": "Fire Blast",
       "requires": {
         "powers": {
-          "Epic_Pyre_Mastery_Ring_of_Fire": true,
-          "Epic_Pyre_Mastery_Char": true
+          "Epic.Pyre_Mastery.Fire_Blast": true
         },
         "count": 1
       },
@@ -488,15 +508,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Defense_Debuff",
-        "Endurance_Discount",
-        "Range",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Debuff_Def",
@@ -508,8 +519,9 @@
               "probability": 1,
               "duration": 40,
               "effectType": "Defense",
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Pyre_Mastery.Melt_Armor"
             }
           ]
@@ -525,7 +537,7 @@
               "duration": 40,
               "effectType": "Resistance",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Pyre_Mastery.Melt_Armor",
               "damageType": "Smashing"
             },
@@ -537,7 +549,7 @@
               "duration": 40,
               "effectType": "Resistance",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Pyre_Mastery.Melt_Armor",
               "damageType": "Lethal"
             },
@@ -549,7 +561,7 @@
               "duration": 40,
               "effectType": "Resistance",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Pyre_Mastery.Melt_Armor",
               "damageType": "Fire"
             },
@@ -561,7 +573,7 @@
               "duration": 40,
               "effectType": "Resistance",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Pyre_Mastery.Melt_Armor",
               "damageType": "Cold"
             },
@@ -573,7 +585,7 @@
               "duration": 40,
               "effectType": "Resistance",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Pyre_Mastery.Melt_Armor",
               "damageType": "Energy"
             },
@@ -585,7 +597,7 @@
               "duration": 40,
               "effectType": "Resistance",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Pyre_Mastery.Melt_Armor",
               "damageType": "Negative"
             },
@@ -597,7 +609,7 @@
               "duration": 40,
               "effectType": "Resistance",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Pyre_Mastery.Melt_Armor",
               "damageType": "Toxic"
             },
@@ -609,7 +621,7 @@
               "duration": 40,
               "effectType": "Resistance",
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Pyre_Mastery.Melt_Armor",
               "damageType": "Psionic"
             }
@@ -627,8 +639,9 @@
               "duration": 13.33,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.Pyre_Mastery.Melt_Armor",
               "requiresToHitCheck": true,
@@ -645,23 +658,34 @@
               },
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Pyre_Mastery.Melt_Armor",
               "damageType": "Fire"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Defense_Debuff",
+        "Endurance_Discount",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Pyre_Mastery.Melt_Armor",
+      "archetypeOrder": "epicPool",
       "powerIndex": 3,
       "castTimeReal": 1.5,
       "toggleCost": 22.75,
+      "isEpic": true,
       "fullName": "Epic_Pyre_Mastery_Melt_Armor",
       "displayName": "Melt Armor",
       "requires": {
         "powers": {
-          "Epic_Pyre_Mastery_Ring_of_Fire": true,
-          "Epic_Pyre_Mastery_Char": true
+          "Epic.Pyre_Mastery.Melt_Armor": true
         },
         "count": 1
       },
@@ -694,15 +718,6 @@
       "aoeModifier": 2.5
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Range",
-        "Recharge"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Damage",
@@ -715,8 +730,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Pyre_Mastery.Fire_Ball",
               "damageType": "Smashing"
             },
@@ -728,8 +744,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Pyre_Mastery.Fire_Ball",
               "damageType": "Fire"
             }
@@ -747,9 +764,10 @@
               "duration": 13.6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
               "specialCase": 14,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.Pyre_Mastery.Fire_Ball",
               "requiresToHitCheck": true,
@@ -768,8 +786,9 @@
               "duration": 6,
               "effectType": "Mez",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "attribType": 1,
               "powerFullName": "Epic.Pyre_Mastery.Fire_Ball",
               "mezType": "Taunt"
@@ -788,25 +807,34 @@
               "ticks": 3,
               "delayedTime": 0.5,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Pyre_Mastery.Fire_Ball",
               "damageType": "Fire"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Pyre_Mastery.Fire_Ball",
+      "archetypeOrder": "epicPool",
       "powerIndex": 4,
       "castTimeReal": 1,
       "toggleCost": 18.98,
+      "isEpic": true,
       "fullName": "Epic_Pyre_Mastery_Fire_Ball",
       "displayName": "Fire Ball",
       "requires": {
         "powers": {
-          "Epic_Pyre_Mastery_Ring_of_Fire": true,
-          "Epic_Pyre_Mastery_Char": true,
-          "Epic_Pyre_Mastery_Fire_Blast": true,
-          "Epic_Pyre_Mastery_Melt_Armor": true
+          "Epic.Pyre_Mastery.Fire_Ball": true
         },
         "count": 2
       },

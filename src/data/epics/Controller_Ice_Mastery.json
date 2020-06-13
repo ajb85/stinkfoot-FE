@@ -6,16 +6,6 @@
   "displayName": "Ice Mastery",
   "powers": [
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Range",
-        "Recharge",
-        "Slow"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Damage",
@@ -28,8 +18,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Ice_Mastery.Ice_Blast",
               "damageType": "Smashing"
             },
@@ -41,8 +32,9 @@
               "probability": 1,
               "effectType": "Damage",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Ice_Mastery.Ice_Blast",
               "damageType": "Cold"
             }
@@ -52,16 +44,16 @@
           "effectType": "Slow",
           "values": [
             {
+              "etModifies": "JumpHeight",
               "mag": {
                 "pve": -0.2
               },
               "probability": 1,
               "duration": 10,
               "effectType": "Enhancement",
-              "eTModifies": 16,
               "stacking": 1,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Ice_Mastery.Ice_Blast"
             },
             {
@@ -72,8 +64,9 @@
               "duration": 10,
               "effectType": "SpeedJumping",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Ice_Mastery.Ice_Blast"
             },
             {
@@ -84,8 +77,9 @@
               "duration": 10,
               "effectType": "SpeedRunning",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Ice_Mastery.Ice_Blast"
             },
             {
@@ -96,13 +90,38 @@
               "duration": 10,
               "effectType": "SpeedFlying",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
+              "powerFullName": "Epic.Ice_Mastery.Ice_Blast"
+            },
+            {
+              "etModifies": "RechargeTime",
+              "mag": {
+                "pve": -0.2
+              },
+              "probability": 1,
+              "duration": 10,
+              "effectType": "Enhancement",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "target",
               "powerFullName": "Epic.Ice_Mastery.Ice_Blast"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Range",
+        "Recharge",
+        "Slow"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Ice_Mastery.Ice_Blast",
+      "archetypeOrder": "epicPool",
       "powerIndex": 0,
       "castTimeReal": 1.67,
       "toggleCost": 10.66,
@@ -140,14 +159,6 @@
       "aoeModifier": 1
     },
     {
-      "allowedEnhancements": [
-        "Endurance_Discount",
-        "Heal",
-        "Recharge",
-        "Endurance_Modification"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Ones",
@@ -159,7 +170,7 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "MezResist",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Epic.Ice_Mastery.Hibernate",
               "mezType": "Knockback"
             },
@@ -170,7 +181,7 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "MezResist",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Epic.Ice_Mastery.Hibernate",
               "mezType": "Knockup"
             },
@@ -181,7 +192,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Mez",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Ice_Mastery.Hibernate",
               "mezType": "Knockback"
             },
@@ -192,7 +204,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Mez",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Ice_Mastery.Hibernate",
               "mezType": "Knockup"
             },
@@ -203,7 +216,7 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Mez",
-              "toWho": "Self",
+              "toWho": "self",
               "attribType": 1,
               "powerFullName": "Epic.Ice_Mastery.Hibernate",
               "mezType": "Untouchable"
@@ -215,10 +228,10 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Mez",
-              "toWho": "Self",
+              "toWho": "self",
               "attribType": 1,
               "powerFullName": "Epic.Ice_Mastery.Hibernate",
-              "mezType": "Immobilization"
+              "mezType": "Immob"
             },
             {
               "mag": {
@@ -227,10 +240,10 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Mez",
-              "toWho": "Self",
+              "toWho": "self",
               "attribType": 1,
               "powerFullName": "Epic.Ice_Mastery.Hibernate",
-              "mezType": "OnlyAffectsSelf"
+              "mezType": "Only Affects Self"
             },
             {
               "mag": {
@@ -239,7 +252,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Regeneration",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Ice_Mastery.Hibernate"
             },
             {
@@ -249,7 +263,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Recovery",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Ice_Mastery.Hibernate"
             },
             {
@@ -258,12 +273,21 @@
               },
               "probability": 1,
               "effectType": "GrantPower",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Epic.Ice_Mastery.Hibernate"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Endurance_Discount",
+        "Heal",
+        "Recharge",
+        "Endurance_Modification"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Ice_Mastery.Hibernate",
+      "archetypeOrder": "epicPool",
       "powerIndex": 1,
       "castTimeReal": 0.07,
       "toggleCost": 0.325,
@@ -302,16 +326,6 @@
       "powerType": "Toggle"
     },
     {
-      "allowedEnhancements": [
-        "Accuracy",
-        "Damage",
-        "Endurance_Discount",
-        "Range",
-        "Recharge",
-        "Slow"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Damage",
@@ -326,8 +340,9 @@
               "effectType": "Damage",
               "ticks": 2,
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Ice_Mastery.Frost_Breath",
               "damageType": "Cold"
             }
@@ -337,16 +352,16 @@
           "effectType": "Slow",
           "values": [
             {
+              "etModifies": "JumpHeight",
               "mag": {
                 "pve": -0.2
               },
               "probability": 1,
               "duration": 10,
               "effectType": "Enhancement",
-              "eTModifies": 16,
               "stacking": 1,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Ice_Mastery.Frost_Breath"
             },
             {
@@ -357,8 +372,22 @@
               "duration": 10,
               "effectType": "SpeedJumping",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
+              "powerFullName": "Epic.Ice_Mastery.Frost_Breath"
+            },
+            {
+              "etModifies": "RechargeTime",
+              "mag": {
+                "pve": -0.2
+              },
+              "probability": 1,
+              "duration": 10,
+              "effectType": "Enhancement",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "target",
               "powerFullName": "Epic.Ice_Mastery.Frost_Breath"
             },
             {
@@ -369,8 +398,9 @@
               "duration": 10,
               "effectType": "SpeedRunning",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Ice_Mastery.Frost_Breath"
             },
             {
@@ -381,22 +411,34 @@
               "duration": 10,
               "effectType": "SpeedFlying",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "Target",
+              "toWho": "target",
               "powerFullName": "Epic.Ice_Mastery.Frost_Breath"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Range",
+        "Recharge",
+        "Slow"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Ice_Mastery.Frost_Breath",
+      "archetypeOrder": "epicPool",
       "powerIndex": 2,
       "castTimeReal": 2.67,
       "toggleCost": 18.98,
+      "isEpic": true,
       "fullName": "Epic_Ice_Mastery_Frost_Breath",
       "displayName": "Frost Breath",
       "requires": {
         "powers": {
-          "Epic_Ice_Mastery_Ice_Blast": true,
-          "Epic_Ice_Mastery_Hibernate": true
+          "Epic.Ice_Mastery.Frost_Breath": true
         },
         "count": 1
       },
@@ -431,14 +473,6 @@
       "aoeModifier": 2.15995646
     },
     {
-      "allowedEnhancements": [
-        "Defense_Buff",
-        "Endurance_Discount",
-        "Recharge",
-        "Res_Damage"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Buff_Def",
@@ -451,7 +485,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Ice_Mastery.Frozen_Armor",
               "damageType": "Smashing"
             },
@@ -463,7 +498,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Ice_Mastery.Frozen_Armor",
               "damageType": "Lethal"
             },
@@ -474,7 +510,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Ice_Mastery.Frozen_Armor",
               "damageType": "Psionic"
             },
@@ -485,7 +522,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Ice_Mastery.Frozen_Armor",
               "damageType": "Energy"
             },
@@ -496,7 +534,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Defense",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Ice_Mastery.Frozen_Armor",
               "damageType": "Negative"
             }
@@ -513,7 +552,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Ice_Mastery.Frozen_Armor",
               "damageType": "Cold"
             },
@@ -525,7 +565,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Ice_Mastery.Frozen_Armor",
               "damageType": "Fire"
             },
@@ -536,7 +577,8 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Resistance",
-              "toWho": "Self",
+              "buffable": true,
+              "toWho": "self",
               "powerFullName": "Epic.Ice_Mastery.Frozen_Armor",
               "damageType": "Toxic"
             }
@@ -552,7 +594,7 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Elusivity",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Epic.Ice_Mastery.Frozen_Armor",
               "damageType": "Smashing"
             },
@@ -563,7 +605,7 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Elusivity",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Epic.Ice_Mastery.Frozen_Armor",
               "damageType": "Lethal"
             },
@@ -574,7 +616,7 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Elusivity",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Epic.Ice_Mastery.Frozen_Armor",
               "damageType": "Psionic"
             },
@@ -585,7 +627,7 @@
               "probability": 1,
               "duration": 0.75,
               "effectType": "Elusivity",
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Epic.Ice_Mastery.Frozen_Armor",
               "damageType": "Energy"
             },
@@ -595,21 +637,30 @@
               },
               "probability": 1,
               "duration": 0.75,
-              "toWho": "Self",
+              "toWho": "self",
               "powerFullName": "Epic.Ice_Mastery.Frozen_Armor"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Defense_Buff",
+        "Endurance_Discount",
+        "Recharge",
+        "Res_Damage"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Ice_Mastery.Frozen_Armor",
+      "archetypeOrder": "epicPool",
       "powerIndex": 3,
       "castTimeReal": 0.73,
       "toggleCost": 0.325,
+      "isEpic": true,
       "fullName": "Epic_Ice_Mastery_Frozen_Armor",
       "displayName": "Frozen Armor",
       "requires": {
         "powers": {
-          "Epic_Ice_Mastery_Ice_Blast": true,
-          "Epic_Ice_Mastery_Hibernate": true
+          "Epic.Ice_Mastery.Frozen_Armor": true
         },
         "count": 1
       },
@@ -642,15 +693,6 @@
       "powerType": "Toggle"
     },
     {
-      "allowedEnhancements": [
-        "Damage",
-        "Endurance_Discount",
-        "Range",
-        "Recharge",
-        "Slow"
-      ],
-      "enhancementCount": 6,
-      "archetypeOrder": "epicPool",
       "effects": [
         {
           "effectType": "Level",
@@ -663,24 +705,33 @@
               "duration": 15,
               "effectType": "EntCreate",
               "stacking": 1,
+              "buffable": true,
               "resistible": true,
-              "toWho": "All",
+              "toWho": "all",
               "powerFullName": "Epic.Ice_Mastery.Ice_Storm"
             }
           ]
         }
       ],
+      "allowedEnhancements": [
+        "Damage",
+        "Endurance_Discount",
+        "Range",
+        "Recharge",
+        "Slow"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Ice_Mastery.Ice_Storm",
+      "archetypeOrder": "epicPool",
       "powerIndex": 4,
       "castTimeReal": 2.03,
       "toggleCost": 19.5,
+      "isEpic": true,
       "fullName": "Epic_Ice_Mastery_Ice_Storm",
       "displayName": "Ice Storm",
       "requires": {
         "powers": {
-          "Epic_Ice_Mastery_Ice_Blast": true,
-          "Epic_Ice_Mastery_Hibernate": true,
-          "Epic_Ice_Mastery_Frost_Breath": true,
-          "Epic_Ice_Mastery_Frozen_Armor": true
+          "Epic.Ice_Mastery.Ice_Storm": true
         },
         "count": 2
       },
