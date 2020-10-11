@@ -1,22 +1,22 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
-import ManageCharacter from './ManageCharacter/';
-import Selection from './Selection/';
-import BadgeList from './BadgeList/';
+import ManageCharacter from "./ManageCharacter/";
+import Selection from "./Selection/";
+import BadgeList from "./BadgeList/";
 
-import { useBadges } from 'Providers/Badges.js';
+import useBadges from "Providers/Badges.js";
 
-import { badgeTypes } from './data/';
+import { badgeTypes } from "./data/";
 
-import styles from './styles.module.scss';
+import styles from "./styles.module.scss";
 
 function Badger(props) {
-  const lastSection = localStorage.getItem('activeBadgeSection');
+  const lastSection = localStorage.getItem("activeBadgeSection");
   const [section, setSection] = useState(
     lastSection ? JSON.parse(lastSection) : null
   );
 
-  const filterState = useState({ search: '', showCompleted: false });
+  const filterState = useState({ search: "", showCompleted: false });
 
   const { badges } = useBadges();
 
@@ -51,6 +51,6 @@ const saveActiveSection = (setSection) => (e) => {
 };
 
 const saveLocal = (data) =>
-  localStorage.setItem('activeBadgeSection', JSON.stringify(data));
+  localStorage.setItem("activeBadgeSection", JSON.stringify(data));
 
 export default Badger;

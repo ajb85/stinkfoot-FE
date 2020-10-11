@@ -1,11 +1,11 @@
-import React, { useContext } from "react";
+import React from "react";
 
-import { BuildContext } from "Providers/Builds.js";
+import useBuild from "Providers/Builds.js";
 
 import styles from "./styles.module.scss";
 
 function FilterOptions({ filters, toggleTag, setSearch, zIndex = 10000 }) {
-  const { saveBuild } = useContext(BuildContext);
+  const { saveBuild } = useBuild();
   return (
     <div style={{ zIndex }} className={styles.FilterButtons}>
       <div className={styles.filterContainer}>

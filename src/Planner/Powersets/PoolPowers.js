@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react";
 
-import Powerset from './Powerset.js';
-import { usePlannerState } from 'Providers/PlannerStateManagement.js';
+import Powerset from "./Powerset.js";
+import usePlannerState from "Providers/PlannerStateManagement.js";
 
-import styles from './styles.module.scss';
+import styles from "./styles.module.scss";
 
 function PoolPowers(props) {
   const stateManager = usePlannerState();
@@ -43,7 +43,7 @@ function PoolPowers(props) {
         {stateManager.selectedPoolPowers.length < 4 && (
           <Powerset
             dropdown={{
-              name: 'poolPowerIndex',
+              name: "poolPowerIndex",
               list: stateManager.pools,
             }}
             powerList={stateManager.activePool.powers}

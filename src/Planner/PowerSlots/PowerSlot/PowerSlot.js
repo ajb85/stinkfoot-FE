@@ -1,6 +1,6 @@
 import React, { useCallback } from "react";
 
-import { usePlannerState } from "Providers/PlannerStateManagement.js";
+import usePlannerState from "Providers/PlannerStateManagement.js";
 import StandardEnhancements from "../Enhancements/Standards.js";
 import IOSetEnhancements from "../Enhancements/IOSets.js";
 import { getPowerStats } from "../../../js/powerCalculations.js";

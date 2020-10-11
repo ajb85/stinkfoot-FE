@@ -1,19 +1,19 @@
-import React, { useState, createContext } from 'react';
+import React, { useState, createContext, useContext } from "react";
 
-import parseStringToBuild from 'js/parseStringToBuild.js';
+import parseStringToBuild from "js/parseStringToBuild.js";
 
-export const BuildContext = createContext();
+const BuildContext = createContext();
 
-function BuildProvider(props) {
-  const storage = localStorage.getItem('builds');
+export function BuildProvider(props) {
+  const storage = localStorage.getItem("builds");
   const builds = storage ? JSON.parse(storage).active : {};
   const [build, setBuild] = useState(builds ? builds : {});
 
   const _saveBuildToActive = (build) => {
-    const builds = JSON.parse(localStorage.getItem('builds')) || {};
+    const builds = JSON.parse(localStorage.getItem("builds")) || {};
 
     builds.active = build;
-    localStorage.setItem('builds', JSON.stringify(builds));
+    localStorage.setItem("builds", JSON.stringify(builds));
     setBuild(builds.active);
   };
 
@@ -26,7 +26,7 @@ function BuildProvider(props) {
   };
 
   const isValidBuild = (build) => {
-    if (typeof build === 'string') {
+    if (typeof build === "string") {
       build = parseStringToBuild(build);
     }
 
@@ -121,4 +121,6 @@ function BuildProvider(props) {
   );
 }
 
-export default BuildProvider;
+export default function useBuild() {
+  return useContext(BuildContext);
+}

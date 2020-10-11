@@ -1,9 +1,9 @@
-import React, { useState, createContext, useContext } from 'react';
-import badgeData from 'Badger/data/';
+import React, { useState, createContext, useContext } from "react";
+import badgeData from "Badger/data/";
 const BadgesContext = createContext();
 
-export default function BadgesProvider(props) {
-  const storage = localStorage.getItem('badges');
+export function BadgesProvider(props) {
+  const storage = localStorage.getItem("badges");
   const storedBadges = storage ? JSON.parse(storage) : { characters: {} };
   const badgeState = useState(storedBadges);
   const [badges] = badgeState;
@@ -105,9 +105,9 @@ const toggleComplete = ([badges, setBadges]) => ({
 };
 
 function saveLocal(data) {
-  localStorage.setItem('badges', JSON.stringify(data));
+  localStorage.setItem("badges", JSON.stringify(data));
 }
 
-export function useBadges(props) {
+export default function useBadges(props) {
   return useContext(BadgesContext);
 }

@@ -1,8 +1,8 @@
-import React, { useState, useEffect, createContext } from 'react';
+import React, { useState, useEffect, createContext, useContext } from "react";
 
-export const DBContext = createContext();
+const DBContext = createContext();
 
-function DatabaseProvider(props) {
+export function DatabaseProvider(props) {
   const [db, setDB] = useState(null);
 
   useEffect(() => {
@@ -10,15 +10,15 @@ function DatabaseProvider(props) {
 
     if (!idb) {
       alert(
-        'Your browser is too outdated to use this service.  Please consider updating or switching to a modern browser, like Chrome or Firefox.'
+        "Your browser is too outdated to use this service.  Please consider updating or switching to a modern browser, like Chrome or Firefox."
       );
       return;
     }
 
-    const cp = idb.open('characterPlanner');
+    const cp = idb.open("characterPlanner");
 
     cp.onerror = function (e) {
-      console.log('Failed to open DB: ', e);
+      console.log("Failed to open DB: ", e);
     };
 
     cp.onsuccess = function (e) {
@@ -37,4 +37,6 @@ function DatabaseProvider(props) {
   return <Provider value={db}>{props.children}</Provider>;
 }
 
-export default DatabaseProvider;
+export default function useDB() {
+  return useContext(DBContext);
+}
