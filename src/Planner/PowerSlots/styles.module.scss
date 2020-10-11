@@ -1,4 +1,4 @@
-@import 'styles/variables.scss';
+@import "styles/variables.scss";
 
 section.PowerSlots {
   width: 70%;
@@ -54,48 +54,22 @@ section.PowerSlots {
       margin: 3px $lh/2 2 * $lh;
     }
 
-    .selectEnhancements {
+    .enhPreviewContainer {
       display: flex;
-      flex-direction: column;
 
-      .EnhSectionSelect {
+      .enhPreviewList {
         display: flex;
-        justify-content: center;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-content: flex-start;
 
+        padding: 0 $lh/2;
+        max-width: 147px;
         width: 100%;
 
-        & > p {
-          cursor: pointer;
-          margin: 0 $lh/2;
-        }
-      }
-
-      .enhPreviewContainer {
-        display: flex;
-
-        .enhPreviewList {
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: flex-start;
-          align-content: flex-start;
-
-          padding: 0 $lh/2;
-          max-width: 147px;
-          width: 100%;
-
-          .enhPreview {
-            margin: $lh/2 2px 0;
-            height: 1.5 * $lh;
-          }
-        }
-
-        .EnhPreviewSubSectionPreview {
-          display: flex;
-          flex-direction: column;
-
-          p {
-            padding: $lh / 2;
-          }
+        .enhPreview {
+          margin: $lh/2 2px 0;
+          height: 1.5 * $lh;
         }
       }
     }
@@ -298,24 +272,5 @@ section.PowerSlots {
         }
       }
     }
-  }
-}
-
-.powerStats {
-  padding: $lh/2;
-
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-
-  p {
-    text-align: center;
-  }
-  p:first-of-type {
-    font-size: 10px;
-  }
-
-  p:nth-of-type(2) {
-    font-size: 12px;
   }
 }

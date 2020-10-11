@@ -1,28 +1,27 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from "react";
 
-import { usePlannerState } from 'Providers/PlannerStateManagement.js';
-import HoverMenu from '../HoverMenus/IOSets.js';
+import { usePlannerState } from "Providers/PlannerStateManagement.js";
+import HoverMenu from "../HoverMenus/IOSets.js";
 
-import styles from '../styles.module.scss';
+import styles from "../styles.module.scss";
 
 export default function IOSets(props) {
   const enhRefs = useRef([]);
   const { selectionState, powerSlotIndex, power: p } = props;
-  const [enhNavigation, setEnhNavigation] = selectionState;
+  const [enhNavigation] = selectionState;
   const stateManager = usePlannerState();
+  const { getEnhancementSectionForPower } = stateManager;
 
-  const enhancementsData = stateManager.getEnhancementSectionForPower(
-    p,
-    enhNavigation
-  );
-
-  const overlayImg = stateManager.getEnhancementOverlay('IO');
+  const enhancementsData = getEnhancementSectionForPower(p, enhNavigation);
+  const overlayImg = stateManager.getEnhancementOverlay("IO");
 
   useEffect(() => {
     if (enhancementsData.length !== enhRefs.current.length) {
       enhRefs.current = enhRefs.current.slice(0, enhancementsData.length);
     }
   }, [enhancementsData.length, enhRefs]);
+
+  const handleClick = updateNavigation(selectionState, enhRefs);
 
   return (
     <div className={styles.enhPreviewContainer}>
@@ -35,10 +34,7 @@ export default function IOSets(props) {
                 ref={(ele) => (enhRefs.current[i] = ele)}
                 src={enh.image}
                 alt={enh.fullName}
-                onClick={updateNavigation(selectionState, enhRefs).bind(
-                  this,
-                  i
-                )}
+                onClick={handleClick.bind(this, i)}
               />
               <HoverMenu
                 powerSlotIndex={powerSlotIndex}
@@ -47,38 +43,14 @@ export default function IOSets(props) {
                 display={
                   enhNavigation.ioSetIndex !== null
                     ? i === enhNavigation.ioSetIndex
-                      ? 'initial'
-                      : 'none'
+                      ? "initial"
+                      : "none"
                     : null
                 }
               />
             </div>
           </div>
         ))}
-      </div>
-      <div className={styles.EnhPreviewSubSectionPreview}>
-        {stateManager
-          .getSubSectionsForIOSets(p.setTypes)
-          .map(({ tier, name }) => (
-            <p
-              key={tier}
-              onClick={setEnhNavigation.bind(this, {
-                ...enhNavigation,
-                tier,
-                ioSetIndex: null,
-              })}
-              style={{
-                color: enhNavigation.tier === tier ? 'red' : null,
-                cursor: 'pointer',
-              }}
-            >
-              {name
-                .split(' ')
-                .map((n) => n[0])
-                .slice(0, 2)
-                .join('')}
-            </p>
-          ))}
       </div>
     </div>
   );
@@ -87,7 +59,6 @@ export default function IOSets(props) {
 const updateNavigation = ([enhNavigation, setEnhNavigation], enhRefs) => (
   i
 ) => {
-  console.log('REF: ', enhRefs.current[i].getBoundingClientRect());
   const ioSetIndex = i === enhNavigation.ioSetIndex ? null : i;
   setEnhNavigation({ ...enhNavigation, ioSetIndex });
 };

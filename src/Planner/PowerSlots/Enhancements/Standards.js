@@ -1,14 +1,13 @@
-import React from 'react';
+import React from "react";
 
-import { usePlannerState } from 'Providers/PlannerStateManagement.js';
-import HoverMenu from '../HoverMenus/Standards.js';
+import { usePlannerState } from "Providers/PlannerStateManagement.js";
+import HoverMenu from "../HoverMenus/Standards.js";
 
-import styles from '../styles.module.scss';
+import styles from "../styles.module.scss";
 
 export default function StandardEnhancements(props) {
-  const sections = ['IO', 'SO', 'DO', 'TO'];
   const { selectionState, powerSlotIndex, power: p } = props;
-  const [enhNavigation, setEnhNavigation] = selectionState;
+  const [enhNavigation] = selectionState;
   const stateManager = usePlannerState();
   const overlayImg = stateManager.getEnhancementOverlay(enhNavigation.tier);
 
@@ -31,29 +30,10 @@ export default function StandardEnhancements(props) {
               >
                 <img src={overlayImg} alt={enh.fullName} />
                 <img src={enh.image} alt={enh.fullName} />
-
                 <HoverMenu enhancement={enh} />
               </div>
             </div>
           ))}
-      </div>
-      <div className={styles.EnhPreviewSubSectionPreview}>
-        {sections.map((tier) => (
-          <p
-            key={tier}
-            onClick={setEnhNavigation.bind(this, {
-              ...enhNavigation,
-              tier,
-              ioSet: null,
-            })}
-            style={{
-              color: enhNavigation.tier === tier ? 'red' : null,
-              cursor: 'pointer',
-            }}
-          >
-            {tier}
-          </p>
-        ))}
       </div>
     </div>
   );
