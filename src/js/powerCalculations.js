@@ -73,7 +73,7 @@ const getOrder = (archetype, archetypeOrder) =>
   ({
     primary: powersets[archetype].primaries,
     secondary: powersets[archetype].secondaries,
-    poolPowers: poolPowers,
+    poolPower: poolPowers,
     epicPool: epicPools,
   }[archetypeOrder]);
 
