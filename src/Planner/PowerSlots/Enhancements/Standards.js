@@ -1,13 +1,15 @@
 import React from "react";
 
-import { usePlannerState } from "Providers/PlannerStateManagement.js";
 import HoverMenu from "../HoverMenus/Standards.js";
+
+import { usePlannerState } from "Providers/PlannerStateManagement.js";
+import useEnhNavigation from "Providers/EnhancementNavigation.js";
 
 import styles from "../styles.module.scss";
 
 export default function StandardEnhancements(props) {
-  const { selectionState, powerSlotIndex, power: p } = props;
-  const [enhNavigation] = selectionState;
+  const { powerSlotIndex, power: p } = props;
+  const { enhNavigation } = useEnhNavigation();
   const stateManager = usePlannerState();
   const overlayImg = stateManager.getEnhancementOverlay(enhNavigation.tier);
 

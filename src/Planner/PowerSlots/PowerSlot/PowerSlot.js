@@ -7,13 +7,15 @@ import { getPowerStats } from "../../../js/powerCalculations.js";
 
 import TableList from "components/TableList/";
 import PunnettSquare from "components/PunnettSquare/";
+
+import useEnhNavigation from "Providers/EnhancementNavigation.js";
 import styles from "../styles.module.scss";
 
-function PowerSlot({ slot, selectionState }) {
+function PowerSlot({ slot }) {
   const stateManager = usePlannerState();
   const { getPower, getState } = stateManager;
   const { level, power, powerSlotIndex } = slot;
-  const [enhNavigation, setEnhNavigation] = selectionState;
+  const { enhNavigation, updateEnhNavigation } = useEnhNavigation();
   const isToggled = stateManager.toggledPowerSlotIndex === powerSlotIndex;
   const p = power ? getPower(power) : {};
   const zIndex =
@@ -23,6 +25,7 @@ function PowerSlot({ slot, selectionState }) {
     togglePowerSlot,
     powerSlotIndex,
   ]);
+
   if (!power) {
     // Empty PowerSlot
     const isActive = stateManager.activeLevel === level;
@@ -51,8 +54,7 @@ function PowerSlot({ slot, selectionState }) {
       styles: {
         color: enhNavigation.section === "standard" ? "red" : null,
       },
-      onClick: setEnhNavigation.bind(this, {
-        ...enhNavigation,
+      onClick: updateEnhNavigation.bind(this, {
         section: "standard",
         tier: "IO",
         ioSetIndex: null,
@@ -61,8 +63,7 @@ function PowerSlot({ slot, selectionState }) {
     {
       content: "Sets",
       styles: { color: enhNavigation.section === "sets" ? "red" : null },
-      onClick: setEnhNavigation.bind(this, {
-        ...enhNavigation,
+      onClick: updateEnhNavigation.bind(this, {
         section: "sets",
         tier: p.setTypes[0],
         ioSetIndex: null,
@@ -78,8 +79,7 @@ function PowerSlot({ slot, selectionState }) {
         .map((n) => n[0])
         .slice(0, 2)
         .join(""),
-      onClick: setEnhNavigation.bind(this, {
-        ...enhNavigation,
+      onClick: updateEnhNavigation.bind(this, {
         tier,
         ioSetIndex: null,
       }),
@@ -113,17 +113,9 @@ function PowerSlot({ slot, selectionState }) {
           slot={slot}
         >
           {enhNavigation.section === "standard" ? (
-            <StandardEnhancements
-              selectionState={selectionState}
-              powerSlotIndex={powerSlotIndex}
-              power={p}
-            />
+            <StandardEnhancements powerSlotIndex={powerSlotIndex} power={p} />
           ) : (
-            <IOSetEnhancements
-              selectionState={selectionState}
-              powerSlotIndex={powerSlotIndex}
-              power={p}
-            />
+            <IOSetEnhancements powerSlotIndex={powerSlotIndex} power={p} />
           )}
         </PunnettSquare>
         {/* Power stats - temporarily disabled, not ready for this feature */}

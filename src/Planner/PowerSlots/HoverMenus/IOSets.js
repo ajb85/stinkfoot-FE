@@ -1,17 +1,20 @@
-import React from 'react';
+import React from "react";
 
-import { usePlannerState } from 'Providers/PlannerStateManagement.js';
-import SetBonuses from './SetBonuses.js';
-import EnhancementList from './EnhancementList.js';
+import SetBonuses from "./SetBonuses.js";
+import EnhancementList from "./EnhancementList.js";
 
-import styles from '../styles.module.scss';
+import { usePlannerState } from "Providers/PlannerStateManagement.js";
+import useEnhNavigation from "Providers/EnhancementNavigation.js";
+
+import styles from "../styles.module.scss";
 
 export default function SetPreviewMenu(props) {
   const stateManager = usePlannerState();
-  const { display, powerSlotIndex, enhNavigation } = props;
+  const { display, powerSlotIndex } = props;
+  const { enhNavigation } = useEnhNavigation();
   const { displayName, enhancements, setTypeName, levels } = props.set;
 
-  const border = display && display !== 'null' ? '1px solid red' : null;
+  const border = display && display !== "null" ? "1px solid red" : null;
   return (
     <div className={styles.EnhHoverMenu} style={{ display }}>
       <div

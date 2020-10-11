@@ -1,14 +1,16 @@
 import React, { useEffect, useRef } from "react";
 
-import { usePlannerState } from "Providers/PlannerStateManagement.js";
 import HoverMenu from "../HoverMenus/IOSets.js";
+
+import { usePlannerState } from "Providers/PlannerStateManagement.js";
+import useEnhNavigation from "Providers/EnhancementNavigation.js";
 
 import styles from "../styles.module.scss";
 
 export default function IOSets(props) {
   const enhRefs = useRef([]);
-  const { selectionState, powerSlotIndex, power: p } = props;
-  const [enhNavigation] = selectionState;
+  const { powerSlotIndex, power: p } = props;
+  const { enhNavigation, updateEnhNavigation } = useEnhNavigation();
   const stateManager = usePlannerState();
   const { getEnhancementSectionForPower } = stateManager;
 
@@ -21,7 +23,10 @@ export default function IOSets(props) {
     }
   }, [enhancementsData.length, enhRefs]);
 
-  const handleClick = updateNavigation(selectionState, enhRefs);
+  const handleClick = updateNavigation(
+    [enhNavigation, updateEnhNavigation],
+    enhRefs
+  );
 
   return (
     <div className={styles.enhPreviewContainer}>
@@ -56,9 +61,8 @@ export default function IOSets(props) {
   );
 }
 
-const updateNavigation = ([enhNavigation, setEnhNavigation], enhRefs) => (
-  i
-) => {
+const updateNavigation = (navState, enhRefs) => (i) => {
+  const [enhNavigation, updateEnhNavigation] = navState;
   const ioSetIndex = i === enhNavigation.ioSetIndex ? null : i;
-  setEnhNavigation({ ...enhNavigation, ioSetIndex });
+  updateEnhNavigation({ ioSetIndex });
 };
