@@ -35,4 +35,7 @@ const GridAndLabel = styled.div`
   display: flex;
   flex-direction: ${({ labelDirection }) =>
     labelDirection === "left" ? "row-reverse" : "row"};
+
+  justify-content: space-between;
+  width: 100%;
 `;
