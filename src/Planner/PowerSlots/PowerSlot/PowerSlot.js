@@ -55,8 +55,7 @@ function PowerSlot({ slot, selectionState }) {
     sets: IOSetEnhancements,
   };
 
-  const powerStats = getPowerStats(getState())(power);
-  console.log('STATS: ', powerStats);
+  const powerStats = getPowerStats(getState())(powerSlotIndex);
   const EnhancementSelection = enhancementComps[enhNavigation.section];
 
   return (

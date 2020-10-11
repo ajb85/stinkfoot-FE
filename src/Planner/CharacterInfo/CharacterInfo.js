@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react";
 
-import Dropdown from 'Planner/UI/Dropdown/';
+import Dropdown from "components/Dropdown";
 
-import { usePlannerState } from 'Providers/PlannerStateManagement.js';
-import styles from './styles.module.scss';
+import { usePlannerState } from "Providers/PlannerStateManagement.js";
+import styles from "./styles.module.scss";
 
 function CharacterInfo(props) {
   const stateManager = usePlannerState();
@@ -14,6 +14,7 @@ function CharacterInfo(props) {
     display: a,
     image: stateManager.getArchetypeImage(a),
   }));
+
   return (
     <section className={styles.CharacterInfo}>
       <div>
@@ -22,7 +23,7 @@ function CharacterInfo(props) {
           <Dropdown
             selected={stateManager.archetype}
             name="archetype"
-            onChange={(e) => updateBuild(e)}
+            onChange={updateBuild}
             options={atOptions}
           />
         </div>
@@ -33,7 +34,7 @@ function CharacterInfo(props) {
           <Dropdown
             selected={stateManager.origin}
             name="origin"
-            onChange={(e) => updateBuild(e)}
+            onChange={updateBuild}
             options={stateManager.origins.map(({ name }) => ({
               value: name,
               display: name,
@@ -41,21 +42,16 @@ function CharacterInfo(props) {
             }))}
           />
         </div>
-      </div>{' '}
+      </div>
       <div>
         <label>Name</label>
         <input
           type="text"
           value={stateManager.buildName}
           name="name"
-          onChange={(e) => updateBuild(e)}
+          onChange={updateBuild}
         />
       </div>
-      {/* <div>
-        <button type="text" onClick={toggleAlignment}>
-          {build.alignment}
-        </button>
-      </div> */}
     </section>
   );
 }
