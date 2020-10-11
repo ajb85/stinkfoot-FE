@@ -1,6 +1,6 @@
 import React from "react";
-import { BuildProvider } from "./Builds.js";
-import { DatabaseProvider } from "./Database.js";
+import { BuildProvider } from "./useBuilds.js";
+import { DatabaseProvider } from "./useDatabase.js";
 
 export default function Providers(props) {
   return (

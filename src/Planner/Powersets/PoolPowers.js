@@ -1,7 +1,8 @@
 import React from "react";
 
 import Powerset from "./Powerset.js";
-import usePlannerState from "Providers/PlannerStateManagement.js";
+
+import usePlannerState from "hooks/usePlannerState.js";
 
 import styles from "./styles.module.scss";
 

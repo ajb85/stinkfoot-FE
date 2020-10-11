@@ -2,8 +2,8 @@ import React from "react";
 
 import HoverMenu from "../HoverMenus/Standards.js";
 
-import usePlannerState from "Providers/PlannerStateManagement.js";
-import useEnhNavigation from "Providers/EnhancementNavigation.js";
+import usePlannerState from "hooks/usePlannerState.js";
+import useEnhNavigation from "hooks/useEnhancementNavigation.js";
 
 import styles from "../styles.module.scss";
 
