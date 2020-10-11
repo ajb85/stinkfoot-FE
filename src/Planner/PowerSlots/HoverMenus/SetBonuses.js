@@ -1,12 +1,14 @@
-import React from 'react';
+import React from "react";
 
-import { usePlannerState } from 'Providers/PlannerStateManagement.js';
+import { usePlannerState } from "Providers/PlannerStateManagement.js";
+import useEnhNavigation from "Providers/EnhancementNavigation.js";
 
-import styles from '../styles.module.scss';
+import styles from "../styles.module.scss";
 
-function SetBonuses({ set, powerSlotIndex, enhNavigation }) {
+function SetBonuses({ set, powerSlotIndex }) {
   const stateManager = usePlannerState();
   const { enhancements, displayName } = set;
+  const { enhNavigation } = useEnhNavigation();
   const setBonuses = stateManager.getDisplayBonuses(displayName, enhNavigation);
 
   const bonusTier =
@@ -24,21 +26,21 @@ function SetBonuses({ set, powerSlotIndex, enhNavigation }) {
         const bonusColor = {
           color: isBonusUnlocked
             ? bonusCount === 5
-              ? 'chartreuse'
+              ? "chartreuse"
               : bonusCount > 5
-              ? 'red'
-              : 'gold'
+              ? "red"
+              : "gold"
             : willGetBonus
             ? null
-            : 'grey',
+            : "grey",
           textDecoration:
-            !isBonusUnlocked && !willGetBonus ? 'line-through' : null,
+            !isBonusUnlocked && !willGetBonus ? "line-through" : null,
         };
 
         acc.push(
           <div key={bonusIndex} className={styles.bonusContainer}>
             <p style={bonusColor}>{`${
-              bonusCount > 0 ? `x${bonusCount}` : ''
+              bonusCount > 0 ? `x${bonusCount}` : ""
             }`}</p>
             <p style={bonusColor}>({unlocked})</p>
             <div className={styles.bonusText}>
