@@ -1,9 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Routes from "./components/Routes/";
+import Routes from "./Routes/";
 
 // Context
-import Providers from "Providers/";
+import UniversalProviders from "Providers/";
 
 // Routing
 import { Router } from "react-router-dom";
@@ -17,11 +17,11 @@ import { closeMenu } from "js/closeTracker.js";
 ReactDOM.render(
   <React.StrictMode>
     <Router history={history}>
-      <Providers>
+      <UniversalProviders>
         <div onClick={closeMenu}>
           <Routes />
         </div>
-      </Providers>
+      </UniversalProviders>
     </Router>
   </React.StrictMode>,
   document.getElementById("root")
