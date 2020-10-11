@@ -1,10 +1,10 @@
-import React from 'react';
+import React from "react";
 
-import arePowerRequirementsMet from 'js/arePowerRequirementsMet.js';
-import Dropdown from 'Planner/UI/Dropdown/';
-import { usePlannerState } from 'Providers/PlannerStateManagement.js';
+import arePowerRequirementsMet from "js/arePowerRequirementsMet.js";
+import Dropdown from "components/Dropdown";
+import { usePlannerState } from "Providers/PlannerStateManagement.js";
 
-import styles from './styles.module.scss';
+import styles from "./styles.module.scss";
 
 function Powerset(props) {
   const stateManager = usePlannerState();
@@ -55,7 +55,7 @@ function Powerset(props) {
       ) : null}
       {dropdown && renderDropdown()}
       <div
-        style={{ width, textAlign: compact ? 'center' : 'left' }}
+        style={{ width, textAlign: compact ? "center" : "left" }}
         className={styles.powersList}
       >
         {powerList.map((p) => {
@@ -77,21 +77,21 @@ function Powerset(props) {
 function getPowerColor(stateManager, p) {
   const { buildHasPower } = stateManager;
   const isPoolPower =
-    p.archetypeOrder === 'poolPower' || p.archetypeOrder === 'epicPool';
+    p.archetypeOrder === "poolPower" || p.archetypeOrder === "epicPool";
   const isPowerInUse = buildHasPower(p.fullName);
   const areReqsMet = arePowerRequirementsMet(stateManager, p);
 
   return isPowerInUse
     ? areReqsMet
-      ? 'lightgreen'
-      : 'red'
+      ? "lightgreen"
+      : "red"
     : stateManager.activeLevel >= p.level
     ? isPoolPower
       ? areReqsMet
-        ? 'yellow'
-        : 'grey'
-      : 'yellow'
-    : 'grey';
+        ? "yellow"
+        : "grey"
+      : "yellow"
+    : "grey";
 }
 
 function filterDropdownList(stateManager, list) {
