@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback } from "react";
 
 import { usePlannerState } from "Providers/PlannerStateManagement.js";
 import StandardEnhancements from "../Enhancements/Standards.js";
@@ -19,17 +19,10 @@ function PowerSlot({ slot, selectionState }) {
   const zIndex =
     stateManager.getFromState("powerSlots").length * 2 - powerSlotIndex * 2;
   const { togglePowerSlot } = stateManager;
-
-  const handlePillClick = (psIndex) => (e) => {
-    const { className } = e.target;
-    if (
-      className === "pillText" ||
-      stateManager.toggledPowerSlotIndex !== psIndex
-    ) {
-      togglePowerSlot(psIndex);
-    }
-  };
-
+  const handlePowerToggle = useCallback(() => togglePowerSlot(powerSlotIndex), [
+    togglePowerSlot,
+    powerSlotIndex,
+  ]);
   if (!power) {
     // Empty PowerSlot
     const isActive = stateManager.activeLevel === level;
@@ -99,7 +92,7 @@ function PowerSlot({ slot, selectionState }) {
   return (
     <div
       className={styles.powerContainer}
-      onClick={handlePillClick(powerSlotIndex)}
+      onClick={!isToggled ? handlePowerToggle : noFunc}
       key={powerSlotIndex}
     >
       <div
@@ -110,7 +103,7 @@ function PowerSlot({ slot, selectionState }) {
         }}
       >
         {/* Pill Title */}
-        <p className="pillText">
+        <p className="pillText" onClick={handlePowerToggle}>
           ({level}) {p.displayName}
         </p>
 
@@ -133,8 +126,8 @@ function PowerSlot({ slot, selectionState }) {
             />
           )}
         </PunnettSquare>
-        {/* Power stats */}
-        <TableList list={powerStats} />
+        {/* Power stats - temporarily disabled, not ready for this feature */}
+        {false && <TableList list={powerStats} />}
       </div>
       {/* Selected Enhancements Menu */}
       <HoverMenu slot={slot} />
@@ -144,6 +137,7 @@ function PowerSlot({ slot, selectionState }) {
 
 export default PowerSlot;
 
+function noFunc() {}
 function HoverMenu({ slot }) {
   const stateManager = usePlannerState();
   const { getPower } = stateManager;
