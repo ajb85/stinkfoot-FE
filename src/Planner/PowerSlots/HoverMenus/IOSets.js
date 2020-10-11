@@ -3,8 +3,8 @@ import React from "react";
 import SetBonuses from "./SetBonuses.js";
 import EnhancementList from "./EnhancementList.js";
 
-import usePlannerState from "Providers/PlannerStateManagement.js";
-import useEnhNavigation from "Providers/EnhancementNavigation.js";
+import usePlannerState from "hooks/usePlannerState.js";
+import useEnhNavigation from "hooks/useEnhancementNavigation.js";
 
 import styles from "../styles.module.scss";
 

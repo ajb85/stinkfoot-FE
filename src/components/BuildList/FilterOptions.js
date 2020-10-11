@@ -1,6 +1,6 @@
 import React from "react";
 
-import useBuild from "Providers/Builds.js";
+import useBuild from "hooks/useBuilds.js";
 
 import styles from "./styles.module.scss";
 

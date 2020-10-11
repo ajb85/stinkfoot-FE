@@ -2,7 +2,7 @@ import React from "react";
 
 import Dropdown from "components/Dropdown";
 
-import usePlannerState from "Providers/PlannerStateManagement.js";
+import usePlannerState from "hooks/usePlannerState.js";
 import styles from "./styles.module.scss";
 
 function CharacterInfo(props) {

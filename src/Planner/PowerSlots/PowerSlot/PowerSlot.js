@@ -1,6 +1,6 @@
 import React, { useCallback } from "react";
 
-import usePlannerState from "Providers/PlannerStateManagement.js";
+import usePlannerState from "hooks/usePlannerState.js";
 import StandardEnhancements from "../Enhancements/Standards.js";
 import IOSetEnhancements from "../Enhancements/IOSets.js";
 import { getPowerStats } from "../../../js/powerCalculations.js";
@@ -8,7 +8,7 @@ import { getPowerStats } from "../../../js/powerCalculations.js";
 import TableList from "components/TableList/";
 import PunnettSquare from "components/PunnettSquare/";
 
-import useEnhNavigation from "Providers/EnhancementNavigation.js";
+import useEnhNavigation from "hooks/useEnhancementNavigation.js";
 import styles from "../styles.module.scss";
 
 function PowerSlot({ slot }) {

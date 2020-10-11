@@ -4,7 +4,7 @@ import ManageCharacter from "./ManageCharacter/";
 import Selection from "./Selection/";
 import BadgeList from "./BadgeList/";
 
-import useBadges from "Providers/Badges.js";
+import useBadges from "hooks/useBadges.js";
 
 import { badgeTypes } from "./data/";
 
