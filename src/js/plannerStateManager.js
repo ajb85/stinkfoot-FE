@@ -1,20 +1,20 @@
-import powersets from 'data/powersets.js';
-import poolPowers from 'data/poolPowers.js';
-import epicPools from 'data/epicPools.js';
-import origins from 'data/origins.js';
-import archetypes from 'data/archetypes.js';
-import powerSlotsTemplate from 'data/powerSlotsTemplate.js';
-import enhancementSlots from 'data/enhancementSlots.js';
-import enhancements from 'data/enhancements.js';
-import ioSets, { setTypeConversion } from 'data/ioSets.js';
-import setBonuses from 'data/enhancements/setBonuses.json';
-import bonusLibrary from 'data/enhancements/bonusesLibrary.json';
+import powersets from "data/powersets.js";
+import poolPowers from "data/poolPowers.js";
+import epicPools from "data/epicPools.js";
+import origins from "data/origins.js";
+import archetypes from "data/archetypes.js";
+import powerSlotsTemplate from "data/powerSlotsTemplate.js";
+import enhancementSlots from "data/enhancementSlots.js";
+import enhancements from "data/enhancements.js";
+import ioSets, { setTypeConversion } from "data/ioSets.js";
+import setBonuses from "data/enhancements/setBonuses.json";
+import bonusLibrary from "data/enhancements/bonusesLibrary.json";
 
 export default class BuildManager {
   constructor(state, setState) {
     this.state = state;
     this.setState = setState;
-    console.log('STATE: ', this.state);
+    console.log("STATE: ", this.state);
 
     // State to be mutated and eventually set as new state
     this.nextState = this._deepCloneState();
@@ -23,10 +23,10 @@ export default class BuildManager {
   static initialState() {
     return {
       build: {
-        name: '',
+        name: "",
         archetype: archetypes[0],
         origin: origins[0].name,
-        alignment: 'Hero',
+        alignment: "Hero",
         powerSlots: powerSlotsTemplate,
         poolPowers: [],
       },
@@ -165,7 +165,7 @@ export default class BuildManager {
     }
     const { archetypeOrder, powerIndex, poolIndex } = power;
     if (!archetypeOrder || (!powerIndex && powerIndex !== 0)) {
-      console.log('MISSING DATA: ', archetypeOrder, powerIndex);
+      console.log("MISSING DATA: ", archetypeOrder, powerIndex);
       return null;
     }
     const setOfPowers = {
@@ -188,17 +188,17 @@ export default class BuildManager {
 
   getEnhancementSectionForPower = (power, enhNavigation) => {
     const { section, tier, showSuperior } = enhNavigation;
-    const enhImages = require.context('./images/enhancements/', true);
+    const enhImages = require.context("./images/enhancements/", true);
     if (!power.slottable) {
       return [];
     }
 
-    if (section === 'standard') {
+    if (section === "standard") {
       return power.allowedEnhancements.reduce((acc, enhName) => {
         const enh = { ...enhancements.standard[enhName] };
         const { imageName } = enh;
         if (!imageName) {
-          console.log('MISSING DATA: ', enhName);
+          console.log("MISSING DATA: ", enhName);
           return acc;
         } else {
           enh.image = enhImages(`./${imageName}`);
@@ -206,11 +206,11 @@ export default class BuildManager {
           return acc;
         }
       }, []);
-    } else if (section === 'sets') {
+    } else if (section === "sets") {
       return ioSets[tier].map((enh) => {
         let { imageName } = enh;
         if (!imageName) {
-          throw new Error('No image found for: ', enh.displayName);
+          throw new Error("No image found for: ", enh.displayName);
         }
         // Superior enhancements have an "S" in front of them.  The regular attuned
         // version drops the first letter
@@ -226,14 +226,14 @@ export default class BuildManager {
 
   getEnhancementAndOverlayImages = (powerSlotEnhData) => {
     const { imageName, tier, type } = powerSlotEnhData;
-    const enhImages = require.context('./images/enhancements/', true);
+    const enhImages = require.context("./images/enhancements/", true);
 
     const enhancement = enhImages(`./${imageName}`);
     let overlay;
-    if (type === 'standard') {
+    if (type === "standard") {
       overlay = this.getEnhancementOverlay(tier);
-    } else if (type === 'set') {
-      overlay = this.getEnhancementOverlay('IO');
+    } else if (type === "set") {
+      overlay = this.getEnhancementOverlay("IO");
     }
 
     return {
@@ -243,30 +243,30 @@ export default class BuildManager {
   };
 
   getEnhancementOverlay = (tier) => {
-    const images = require.context('./images/overlays/', true);
+    const images = require.context("./images/overlays/", true);
     const oData = this.origins.find((o) => o.name === this.origin);
 
     switch (tier) {
-      case 'IO':
-        return images('./IO.png');
-      case 'TO':
-        return images('./TO.png');
-      case 'SO':
-      case 'DO':
+      case "IO":
+        return images("./IO.png");
+      case "TO":
+        return images("./TO.png");
+      case "SO":
+      case "DO":
         return images(`./${oData[tier]}.png`);
       default:
-        return images('./OldClass.png');
+        return images("./OldClass.png");
     }
   };
 
   getOriginImage = (originName) => {
-    const oImages = require.context('./images/origins/', true);
+    const oImages = require.context("./images/origins/", true);
     return oImages(`./${originName}.png`);
   };
 
   getArchetypeImage = (atName) => {
-    const atImages = require.context('./images/archetypes/', true);
-    return atImages('./' + atName.split(' ').join('_') + '.png');
+    const atImages = require.context("./images/archetypes/", true);
+    return atImages("./" + atName.split(" ").join("_") + ".png");
   };
 
   getPowersetImage = (imageName) => {
@@ -276,18 +276,36 @@ export default class BuildManager {
 
     imageName = imageName.imageName ? imageName.imageName : imageName;
 
-    const images = require.context('./images/powersets/', true);
+    const images = require.context("./images/powersets/", true);
     return images(`./${imageName}`);
+  };
+
+  getSubSectionsForPower = ({ tier }, types) => {
+    if (!Array.isArray(types)) {
+      types = [types];
+    }
+
+    if (!isNaN(parseInt(tier, 10))) {
+      return this.getSubSectionsForIOSets(types);
+    }
+
+    return ["IO", "SO", "DO", "TO"].map((name) => ({
+      tier: name,
+      name,
+      isSet: false,
+    }));
   };
 
   getSubSectionsForIOSets = (types) => {
     if (!Array.isArray(types)) {
       types = [types];
     }
+
     return types.map((setNum) => {
       return {
         tier: setNum,
         name: setTypeConversion[setNum],
+        isSet: true,
       };
     });
   };
@@ -311,10 +329,10 @@ export default class BuildManager {
   getEnhancement = (data) => {
     const enhancementTypes = {
       standard: ({ fullName, tier, level }) => {
-        const enhStat = fullName.split('_').slice(1).join('_');
+        const enhStat = fullName.split("_").slice(1).join("_");
         const enh = { ...enhancements.standard[enhStat] };
         const stats =
-          tier === 'IO' ? enh.effects[tier][level] : enh.effects[tier];
+          tier === "IO" ? enh.effects[tier][level] : enh.effects[tier];
         enh.effects = stats;
         return enh;
       },
@@ -329,7 +347,7 @@ export default class BuildManager {
     if (data.type) {
       // Is enhancement
       const enhType =
-        data.type === 'set' || data.type === 'attuned' ? 'ioSet' : data.type;
+        data.type === "set" || data.type === "attuned" ? "ioSet" : data.type;
       return enhancementTypes[enhType](data);
     } else {
       return null;
@@ -341,18 +359,18 @@ export default class BuildManager {
   };
 
   getDisplayBonuses = (setName, { showSuperior }) => {
-    const baseName = setName.split(' ').join('_');
+    const baseName = setName.split(" ").join("_");
     const isAttuned =
-      setBonuses[baseName] && setBonuses['Superior_' + baseName];
+      setBonuses[baseName] && setBonuses["Superior_" + baseName];
     const correctedSetName =
-      showSuperior && isAttuned ? 'Superior_' + baseName : baseName;
+      showSuperior && isAttuned ? "Superior_" + baseName : baseName;
 
     if (!setBonuses[correctedSetName]) {
-      console.log('NO BONUSES FOR ', correctedSetName);
+      console.log("NO BONUSES FOR ", correctedSetName);
       return [];
     }
 
-    const pvpEnabled = this.getSetting('pvp');
+    const pvpEnabled = this.getSetting("pvp");
 
     return setBonuses[correctedSetName].reduce(
       (acc, { name, unlocked, isPvP }) => {
@@ -402,7 +420,7 @@ export default class BuildManager {
       let enhCount = {};
       for (let j = 0; j < enhLength; j++) {
         const enh = ps.enhSlots[j].enhancement;
-        if (!enh || (enh.type !== 'set' && enh.type !== 'attuned')) {
+        if (!enh || (enh.type !== "set" && enh.type !== "attuned")) {
           continue;
         }
         const key = `${enh.tier},${enh.setIndex}`;
@@ -411,7 +429,7 @@ export default class BuildManager {
 
       for (let enh in enhCount) {
         const bonusTier = enhCount[enh];
-        const [tier, setIndex] = enh.split(',');
+        const [tier, setIndex] = enh.split(",");
         const bonuses = this._getBonuses(tier, setIndex);
         const bonusLength = bonuses.length;
 
@@ -456,11 +474,11 @@ export default class BuildManager {
   };
 
   updateBuild = (e) => {
-    this._updateState(e, 'build');
+    this._updateState(e, "build");
   };
 
   updateTracking = (e) => {
-    this._updateState(e, 'tracking');
+    this._updateState(e, "tracking");
   };
 
   togglePower = (p) => {
@@ -510,7 +528,7 @@ export default class BuildManager {
       if (powerSlot.power) {
         const { power } = powerSlot;
         if (
-          power.archetypeOrder === 'poolPower' &&
+          power.archetypeOrder === "poolPower" &&
           power.poolIndex === poolIndexToRemove
         ) {
           this._removePowers(this.getPower(power));
@@ -538,7 +556,7 @@ export default class BuildManager {
   addEnhancement = (powerSlotIndex, enhancement, enhNavigation, level = 50) => {
     const { tier, showSuperior } = enhNavigation;
     const enhCopy =
-      enhancement.type === 'set' || enhancement.type === 'attuned'
+      enhancement.type === "set" || enhancement.type === "attuned"
         ? this._addImageToSetEnhancement(enhancement, tier, showSuperior)
         : { ...enhancement };
 
@@ -575,21 +593,21 @@ export default class BuildManager {
 
   shortenEnhName = (name) => {
     const shortened = {
-      Accuracy: 'Acc',
-      Damage: 'Dmg',
-      Defense: 'Def',
-      Endurance: 'End',
-      'Fly Speed': 'FlySpd',
-      Healing: 'Heal',
-      'Hit Points': 'HP',
-      'Jump Speed': 'JumpSpd',
-      Recharge: 'Rech',
-      'Run Speed': 'RunSpd',
+      Accuracy: "Acc",
+      Damage: "Dmg",
+      Defense: "Def",
+      Endurance: "End",
+      "Fly Speed": "FlySpd",
+      Healing: "Heal",
+      "Hit Points": "HP",
+      "Jump Speed": "JumpSpd",
+      Recharge: "Rech",
+      "Run Speed": "RunSpd",
     };
     return name
-      .split('/')
+      .split("/")
       .map((n) => (shortened[n] ? shortened[n] : n))
-      .join('/');
+      .join("/");
   };
 
   canEnhancementGoInPowerSlot = (enhancement, powerSlotIndex) => {
@@ -601,7 +619,7 @@ export default class BuildManager {
     const { isUnique, type, fullName } = enhancement;
     const enhLookup = this.nextState.lookup.enhancements;
 
-    const isUniqueInPower = type === 'set' || type === 'attuned';
+    const isUniqueInPower = type === "set" || type === "attuned";
     const isInUse = !!enhLookup[fullName];
     const isInPower =
       isInUse &&
@@ -639,7 +657,7 @@ export default class BuildManager {
   };
 
   _addImageToSetEnhancement = (enhancement, tier, showSuperior) => {
-    const enhImages = require.context('./images/enhancements/', true);
+    const enhImages = require.context("./images/enhancements/", true);
     const ioSetIndex = enhancement.setIndex;
     const ioSetImage = ioSets[tier][ioSetIndex].imageName;
     const { isAttuned } = ioSets[tier][ioSetIndex];
@@ -648,12 +666,12 @@ export default class BuildManager {
     if (!imageName && ioSetImage) {
       imageName = ioSetImage;
     } else if (!imageName) {
-      throw new Error('No image found for: ', enhancement.displayName);
+      throw new Error("No image found for: ", enhancement.displayName);
     }
     // Superior enhancements have an "S" in front of them.  The regular attuned
     // version drops the first letter
     const correctedImgName =
-      isAttuned && showSuperior ? 'S' + imageName : imageName;
+      isAttuned && showSuperior ? "S" + imageName : imageName;
 
     const enhCopy = { ...enhancement };
     enhCopy.image = enhImages(`./${correctedImgName}`);
@@ -663,7 +681,7 @@ export default class BuildManager {
   };
 
   _getBonuses = (tier, setIndex) => {
-    const setName = ioSets[tier][setIndex].displayName.split(' ').join('_');
+    const setName = ioSets[tier][setIndex].displayName.split(" ").join("_");
     return setBonuses[setName];
   };
 
@@ -730,7 +748,7 @@ export default class BuildManager {
       const { type, displayName, fullName } = e;
       const { imageName, isUnique, setIndex } = e;
 
-      const isSet = type === 'set' || type === 'attuned';
+      const isSet = type === "set" || type === "attuned";
 
       const enhancementLookup = this.nextState.lookup.enhancements;
 
@@ -745,7 +763,7 @@ export default class BuildManager {
         );
 
       if ((isUnique && isAlreadyUsed) || (isSet && enhLog)) {
-        console.log('UNIQUE ISSUE');
+        console.log("UNIQUE ISSUE");
         return;
       }
 
@@ -909,7 +927,7 @@ export default class BuildManager {
           if (enhSlotIndex > -1) {
             updatedEnhSlots[enhSlotIndex].inUse = false;
           } else {
-            console.log('DID NOT FIND IN USE FOR ', lvl);
+            console.log("DID NOT FIND IN USE FOR ", lvl);
           }
         });
     }
@@ -956,7 +974,7 @@ export default class BuildManager {
           console.log(
             "Whoops, didn't find ",
             powersetFullName,
-            ' in the exclusion list.'
+            " in the exclusion list."
           );
         }
       });
@@ -987,7 +1005,7 @@ export default class BuildManager {
   };
 
   _togglePower = (p) => {
-    const isPrimary = p.archetypeOrder === 'primary';
+    const isPrimary = p.archetypeOrder === "primary";
     const { powerIndex } = p;
     const powerLookup = this.nextState.lookup.powers;
     if (this.buildHasPower(p.fullName)) {
@@ -1018,7 +1036,7 @@ export default class BuildManager {
           const power = this.activeSecondary.powers[0];
           powerSlots[1] = {
             ...powerSlots[1],
-            power: { archetypeOrder: 'secondary', powerIndex: 0 },
+            power: { archetypeOrder: "secondary", powerIndex: 0 },
             enhSlots: emptyDefaultSlot(),
           };
           powerLookup[power.fullName] = 1;
@@ -1054,7 +1072,7 @@ export default class BuildManager {
     const { powerSlots } = this.nextState.build;
     const powersLookup = this.nextState.lookup.powers;
     if (
-      !powerSlots[psIndex].hasOwnProperty('power') &&
+      !powerSlots[psIndex].hasOwnProperty("power") &&
       p.level <= powerSlots[psIndex].level &&
       !powersLookup.hasOwnProperty(p.fullName)
     ) {
@@ -1087,7 +1105,7 @@ export default class BuildManager {
       (powerSlot, i) => {
         if (
           !powerSlotIndicesRemoved.hasOwnProperty(i) ||
-          powerSlot.type === 'default'
+          powerSlot.type === "default"
         ) {
           // If this is not a power slot we're removing or if the power is default,
           // do nothing
@@ -1118,15 +1136,15 @@ export default class BuildManager {
 
   _handleSpecialCases = (name, value) => {
     switch (name) {
-      case 'archetype':
+      case "archetype":
         this.nextState = this.constructor.initialState();
         this.nextState.build.archetype = value;
         this.nextState.build.origin = this.state.build.origin;
         this.nextState.build.name = this.state.build.name;
         break;
-      case 'primaryIndex':
-      case 'secondaryIndex':
-      case 'epicPoolIndex':
+      case "primaryIndex":
+      case "secondaryIndex":
+      case "epicPoolIndex":
         const archetypeOrder = name.substring(0, name.length - 5);
 
         this._removePowers(
@@ -1151,17 +1169,17 @@ export default class BuildManager {
 
   _pluralizeOrder = (order) => {
     const toPlural = {
-      primary: 'primaries',
-      secondary: 'secondaries',
-      poolPower: 'poolPowers',
-      epicPower: 'epicPowers',
+      primary: "primaries",
+      secondary: "secondaries",
+      poolPower: "poolPowers",
+      epicPower: "epicPowers",
     };
 
     return toPlural[order] || order;
   };
 
   _isObject = (obj) =>
-    typeof obj === 'object' && obj !== null && !Array.isArray(obj);
+    typeof obj === "object" && obj !== null && !Array.isArray(obj);
 }
 
 function emptyDefaultSlot() {
