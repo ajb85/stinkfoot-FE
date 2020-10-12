@@ -9,25 +9,11 @@ import styles from "./styles.module.scss";
 function PoolPowers(props) {
   const stateManager = usePlannerState();
 
-  const renderEmptyBoxes = () => {
-    const emptyBoxes = [];
-
-    for (let i = stateManager.selectedPoolPowers.length; i < 3; i++) {
-      // Must only be a total of 4 boxes.  There are the selected pools &
-      // the extra box to select a new pool to consider.  That means, when
-      // there are three pools selected, no empty boxes should render
-
-      emptyBoxes.push(
-        <div key={`empty box ${i}`} className={styles.emptyBox} />
-      );
-    }
-
-    return emptyBoxes;
-  };
   return (
     <div className={styles.PoolPowers}>
       <h2>Power Pools</h2>
       <div>
+        {/* Render selected pool powers */}
         {stateManager.selectedPoolPowers.map((poolIndex) => {
           return (
             <React.Fragment key={poolIndex}>
@@ -41,6 +27,7 @@ function PoolPowers(props) {
           );
         })}
 
+        {/* Render new power pool selection */}
         {stateManager.selectedPoolPowers.length < 4 && (
           <Powerset
             dropdown={{
@@ -54,10 +41,24 @@ function PoolPowers(props) {
           />
         )}
 
-        {renderEmptyBoxes()}
+        {renderEmptyBoxes(stateManager)}
       </div>
     </div>
   );
 }
+
+const renderEmptyBoxes = (stateManager) => {
+  const emptyBoxes = [];
+
+  for (let i = stateManager.selectedPoolPowers.length; i < 3; i++) {
+    // Must only be a total of 4 boxes.  There are the selected pools &
+    // the extra box to select a new pool to consider.  That means, when
+    // there are three pools selected, no empty boxes should render
+
+    emptyBoxes.push(<div key={`empty box ${i}`} className={styles.emptyBox} />);
+  }
+
+  return emptyBoxes;
+};
 
 export default PoolPowers;
