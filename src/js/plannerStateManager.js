@@ -17,7 +17,44 @@ export default class BuildManager {
     console.log("STATE: ", this.state);
 
     // State to be mutated and eventually set as new state
+    // ** replace with immer
     this.nextState = this._deepCloneState();
+
+    this.lookup = this.state.build.powerSlots.reduce(
+      (acc, { enhSlots, power }, i) => {
+        const p = power && this.getPower(power);
+        if (p) {
+          acc.powers[p.fullName] = i;
+        }
+
+        const hasEnhs = enhSlots && enhSlots.length;
+        hasEnhs && scanEnhancementsForLookup(acc, p, enhSlots);
+
+        return acc;
+      },
+      {
+        powers: {},
+        enhancements: {},
+        uniqueEnhancements: {},
+      }
+    );
+
+    const primaryPrevents = this.activePrimary.prevents || [];
+    const secondaryPrevents = this.activeSecondary.prevents || [];
+    const poolsPrevent = this.state.build.poolPowers.map((index) => {
+      const pool = this.pools[index];
+      if (pool.prevents) {
+        pool.prevents.name = pool.displayName;
+      }
+      return pool.prevents || [];
+    });
+
+    this.lookup.excludedPowersets = this.combinePrevents(
+      primaryPrevents,
+      secondaryPrevents,
+      poolsPrevent
+    );
+    console.log("LOOKUP: ", this.lookup);
   }
 
   static initialState() {
@@ -38,9 +75,6 @@ export default class BuildManager {
         activeLevelIndex: 0,
         powerSlotIndex: null,
       },
-      // !! lookup should eventually be replaced by looping over
-      // powerslots in the constructor and stored on 'this'.
-      // This will prevent >1 sources of truth.
       lookup: {
         powers: {},
         excludedPowersets: {},
@@ -163,11 +197,13 @@ export default class BuildManager {
     if (!power) {
       return null;
     }
+
     const { archetypeOrder, powerIndex, poolIndex } = power;
     if (!archetypeOrder || (!powerIndex && powerIndex !== 0)) {
       console.log("MISSING DATA: ", archetypeOrder, powerIndex);
       return null;
     }
+
     const setOfPowers = {
       primary:
         powersets[this.state.build.archetype].primaries[
@@ -642,6 +678,27 @@ export default class BuildManager {
       ({ enhancement }) => enhancement && enhancement.fullName === fullName
     );
   };
+
+  combinePrevents(primaryPrevents, secondaryPrevents, poolsPrevents) {
+    const priName = this.activePrimary.displayName;
+    const secName = this.activeSecondary.displayName;
+
+    primaryPrevents.name = priName;
+    secondaryPrevents.name = secName;
+    const preventByPools = poolsPrevents.reduce(
+      (acc, preventList, i) => ({
+        ...acc,
+        ...preventList.reduce(toNameValue, {}),
+      }),
+      {}
+    );
+
+    return {
+      ...primaryPrevents.reduce(toNameValue, {}),
+      ...secondaryPrevents.reduce(toNameValue, {}),
+      ...preventByPools,
+    };
+  }
 
   _indexOfAll = (text, target) => {
     const indices = [];
@@ -1180,6 +1237,39 @@ export default class BuildManager {
 
   _isObject = (obj) =>
     typeof obj === "object" && obj !== null && !Array.isArray(obj);
+}
+function toNameValue(acc, cur, i, arr) {
+  const { name } = arr;
+  acc[cur] = name;
+  return acc;
+}
+
+function scanEnhancementsForLookup(acc, p, enhSlots) {
+  enhSlots.forEach(({ enhancement }) => {
+    if (!enhancement) {
+      return;
+    }
+
+    if (enhancement.isUnique) {
+      acc.uniqueEnhancements[enhancement.fullName] = p.displayName;
+    }
+
+    if (acc.enhancements[enhancement.fullName]) {
+      const duplicate = acc.enhancements[enhancement.fullName].find(
+        ({ fullName }) => fullName === p.fullName
+      );
+
+      if (duplicate) {
+        duplicate.count++;
+      } else {
+        acc.enhancements[enhancement.fullName].push({
+          fullName: p.fullName,
+          powerName: p.displayName,
+          count: 1,
+        });
+      }
+    }
+  });
 }
 
 function emptyDefaultSlot() {
