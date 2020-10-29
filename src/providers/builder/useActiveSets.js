@@ -14,15 +14,13 @@ const context = createContext();
 export const IndexTrackingProvider = (props) => {
   const [tracking, setTracking] = useState(initialState);
 
+  const setActiveTracking = (e) => {
+    const { name, value } = e.target;
+    setTracking({ ...tracking, [name]: value });
+  };
+
   const { Provider } = context;
-
-  const setIndex = useCallback(
-    (key, index) => setTracking({ ...tracking, [key]: index }),
-    [tracking]
-  );
-
-  const state = { tracking, setIndex };
-
+  const state = { tracking, setActiveTracking };
   return <Provider value={state}>{props.children}</Provider>;
 };
 
