@@ -2,8 +2,8 @@ import React, { useEffect, useRef } from "react";
 
 import HoverMenu from "../HoverMenus/IOSets.js";
 
-import usePlannerState from "hooks/usePlannerState.js";
-import useEnhNavigation from "hooks/useEnhancementNavigation.js";
+import usePlannerState from "providers/usePlannerState.js";
+import useEnhNavigation from "providers/builder/useEnhancementNavigation.js";
 
 import styles from "../styles.module.scss";
 

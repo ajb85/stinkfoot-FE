@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
-import usePlannerState from "hooks/usePlannerState.js";
-import useEnhNavigation from "hooks/useEnhancementNavigation.js";
+import usePlannerState from "providers/usePlannerState.js";
+import useEnhNavigation from "providers/builder/useEnhancementNavigation.js";
 
 import { reducer, mapSelected, getInitialAcc } from "./logic.js";
 import styles from "./styles.module.scss";

@@ -2,7 +2,7 @@ import React from "react";
 
 import arePowerRequirementsMet from "js/arePowerRequirementsMet.js";
 import Dropdown from "components/Dropdown";
-import usePlannerState from "hooks/usePlannerState.js";
+import usePlannerState from "providers/usePlannerState.js";
 
 import styles from "./styles.module.scss";
 

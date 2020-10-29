@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import Routes from "./Routes/";
 
 // Context
-import UniversalProviders from "hooks";
+import UniversalProviders from "providers";
 
 // Routing
 import { Router } from "react-router-dom";
