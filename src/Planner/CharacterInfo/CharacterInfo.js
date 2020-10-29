@@ -1,16 +1,15 @@
 import React from "react";
 
 import Dropdown from "components/Dropdown";
-import usePlannerState from "providers/usePlannerState.js";
 
-import { archetypes } from "hooks/powersets.js";
 import { useCharacterDetails } from "providers/builder/useCharacterDetails.js";
 import { getArchetypeImage, getOriginImage } from "helpers/getImages.js";
-import { allOrigins } from "hooks/powersets.js";
+import allOrigins from "data/origins.js";
+import allArchetypes from "data/archetypes.js";
 
 import styles from "./styles.module.scss";
 
-const atOptions = archetypes.map((a) => ({
+const atOptions = allArchetypes.map((a) => ({
   value: a,
   display: a,
   image: getArchetypeImage(a),
@@ -23,8 +22,7 @@ const originOptions = allOrigins.map(({ name }) => ({
 }));
 
 function CharacterInfo(props) {
-  const { character } = useCharacterDetails();
-
+  const { character, setCharacterDetail } = useCharacterDetails();
   return (
     <section className={styles.CharacterInfo}>
       <div>
@@ -33,7 +31,7 @@ function CharacterInfo(props) {
           <Dropdown
             selected={character.archetype}
             name="archetype"
-            onChange={updateBuild}
+            onChange={setCharacterDetail}
             options={atOptions}
           />
         </div>
@@ -44,7 +42,7 @@ function CharacterInfo(props) {
           <Dropdown
             selected={character.origin}
             name="origin"
-            onChange={updateBuild}
+            onChange={setCharacterDetail}
             options={originOptions}
           />
         </div>
@@ -55,7 +53,7 @@ function CharacterInfo(props) {
           type="text"
           value={character.name}
           name="name"
-          onChange={updateBuild}
+          onChange={setCharacterDetail}
         />
       </div>
     </section>
