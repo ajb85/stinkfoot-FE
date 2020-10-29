@@ -3,7 +3,7 @@ import React from "react";
 import Powerset from "./Powerset.js";
 import PoolPowers from "./PoolPowers.js";
 
-import usePlannerState from "hooks/usePlannerState.js";
+import usePlannerState from "providers/usePlannerState.js";
 
 import styles from "./styles.module.scss";
 

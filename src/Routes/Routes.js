@@ -6,7 +6,7 @@ import BuildList from "components/BuildList/";
 
 import PlannerRoutes from "./Planner.js";
 import BadgerRoutes from "./Badger.js";
-import useBuild from "hooks/useBuilds.js";
+import useBuild from "providers/useBuilds.js";
 
 function Routes(props) {
   const { build } = useBuild();

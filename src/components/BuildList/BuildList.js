@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-import useBuild from "hooks/useBuilds.js";
+import useBuild from "providers/useBuilds.js";
 import FilterOptions from "./FilterOptions.js";
 
 import categoryName from "js/categories.js";

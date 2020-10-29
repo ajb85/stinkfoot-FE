@@ -1,7 +1,7 @@
 import React from "react";
 
 import Powerset from "./Powerset.js";
-import usePlannerState from "hooks/usePlannerState.js";
+import usePlannerState from "providers/usePlannerState.js";
 import styles from "./styles.module.scss";
 
 function PoolPowers(props) {

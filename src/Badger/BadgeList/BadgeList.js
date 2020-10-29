@@ -1,6 +1,6 @@
 import React from "react";
 
-import useBadges from "hooks/useBadges.js";
+import useBadges from "providers/useBadges.js";
 
 import styles from "./styles.module.scss";
 
