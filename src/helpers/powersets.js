@@ -1,6 +1,7 @@
 import powersets from "data/powersets.js";
 import poolPowers from "data/poolPowers.js";
 import epicPools from "data/epicPools.js";
+import origins from "data/origins.js";
 
 export const allPowersets = {
   primary: powersets,
@@ -21,8 +22,6 @@ export function getPower({ archetypeOrder, powerIndex, poolIndex }, archetype) {
   const ps = poolIndex !== undefined ? powerset[poolIndex] : powerset;
   return ps.powers[powerIndex];
 }
-
-export const archetypes = Object.keys(powersets);
 
 // export const combinePrevents = (
 //   primaryPrevents,
