@@ -1,7 +1,6 @@
 import powersets from "data/powersets.js";
 import poolPowers from "data/poolPowers.js";
 import epicPools from "data/epicPools.js";
-import origins from "data/origins.js";
 
 export const allPowersets = {
   primary: powersets,
