@@ -7,11 +7,8 @@ export function PoolPowersProvider(props) {
 
   const { Provider } = context;
 
-  const addPool = useCallback((index) => setPools([...pools, index]), [pools]);
-  const removePool = useCallback(
-    (index) => setPools(pools.filter((i) => i !== index)),
-    [pools]
-  );
+  const addPool = (index) => setPools([...pools, index]);
+  const removePool = (index) => setPools(pools.filter((i) => i !== index));
   const state = { pools, addPool, removePool };
   return <Provider value={state}>{props.children}</Provider>;
 }
