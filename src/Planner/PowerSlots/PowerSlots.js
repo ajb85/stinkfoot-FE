@@ -1,17 +1,15 @@
 import React, { useState, useEffect } from "react";
 
-import usePlannerState from "providers/usePlannerState.js";
 import useEnhNavigation from "providers/builder/useEnhancementNavigation.js";
-
+import usePowerSlots from "providers/builder/usePowerSlots.js";
 import { reducer, mapSelected, getInitialAcc } from "./logic.js";
 import styles from "./styles.module.scss";
 
 function PowerSlots(props) {
-  const [view] = useState("level");
+  const [view, setView] = useState("level");
   const { updateEnhNavigation } = useEnhNavigation();
-
-  const stateManager = usePlannerState();
-
+  const { powerSlots } = usePowerSlots();
+  const toggleView = () => setView(view === "level" ? "respec" : "level");
   useEffect(() => {
     // Resets navigation whenever a power is opened or closed.  A more long term solution
     // would probably be to store the state for every power slot so there can be a memory of where
@@ -24,12 +22,14 @@ function PowerSlots(props) {
     // eslint-disable-next-line
   }, [stateManager.tracking.powerSlotIndex]);
 
-  const { selected /*, defaults*/ } = stateManager
-    .getFromState("powerSlots")
-    .reduce(reducer(view), getInitialAcc());
+  const { selected /*, defaults*/ } = powerSlots.reduce(
+    reducer(view),
+    getInitialAcc()
+  );
 
   return (
     <section className={styles.PowerSlots}>
+      <button onClick={toggleView}>Toggle View</button>
       <h2>Power Slots</h2>
       <div className={styles.slotsContainer}>{selected.map(mapSelected)}</div>
     </section>
