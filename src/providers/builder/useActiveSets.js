@@ -1,4 +1,4 @@
-import React, { useState, createContext, useContext, useCallback } from "react";
+import React, { useState, createContext, useContext } from "react";
 
 const initialState = {
   primary: 0,
@@ -19,8 +19,11 @@ export const IndexTrackingProvider = (props) => {
     setTracking({ ...tracking, [name]: value });
   };
 
+  const setTrackingManually = (name, value) =>
+    setTracking({ ...tracking, [name]: value });
+
   const { Provider } = context;
-  const state = { tracking, setActiveTracking };
+  const state = { tracking, setActiveTracking, setTrackingManually };
   return <Provider value={state}>{props.children}</Provider>;
 };
 

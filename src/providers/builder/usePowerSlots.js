@@ -12,16 +12,19 @@ export const PowerSlotsProvider = (props) => {
   const removePowerFromSlot = (index) => {
     const newSlots = [...powerSlots];
     newSlots[index] = powerSlotsTemplate[index];
+    setPowerSlots(newSlots);
   };
 
-  const addPowerToSlot = (index, power) => {
+  const addPowerToSlot = (power, index) => {
     const newSlots = [...powerSlots];
     newSlots[index] = {
       ...newSlots[index],
       power,
       enhSlots: emptyDefaultSlot(),
     };
+    setPowerSlots(newSlots);
   };
+
   const state = { powerSlots, removePowerFromSlot, addPowerToSlot };
   return <Provider value={state}>{props.children}</Provider>;
 };
