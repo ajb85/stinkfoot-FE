@@ -1,14 +1,15 @@
 import React from "react";
 
-import arePowerRequirementsMet from "js/arePowerRequirementsMet.js";
 import Dropdown from "components/Dropdown";
-import usePlannerState from "providers/usePlannerState.js";
+import useActiveSets from "providers/useActiveSets.js";
+import { getPowersetImage } from "helpers/getImages.js";
+
+import arePowerRequirementsMet from "js/arePowerRequirementsMet.js";
 
 import styles from "./styles.module.scss";
 
 function Powerset(props) {
-  const stateManager = usePlannerState();
-
+  const { tracking, setActiveTracking } = useActiveSets();
   const { header, dropdown, powerList, poolIndex, compact } = props;
 
   const isPoolPower = !isNaN(parseInt(poolIndex, 10));
@@ -16,12 +17,12 @@ function Powerset(props) {
   // This allows components to supply their own methods to run when
   // clicking a power or changing dropdown selection.
   const togglePower = props.togglePower || stateManager.togglePower;
-  const updateBuild = props.updateBuild || stateManager.updateBuild;
+  const updateBuild = props.updateBuild || setActiveTracking;
   const width = compact ? 123 : 170;
 
   const renderDropdown = () => {
     const { list, name } = dropdown;
-    const index = stateManager.getFromState(name);
+    const index = tracking[name];
     return (
       <div style={{ width }}>
         <Dropdown
@@ -31,9 +32,9 @@ function Powerset(props) {
           options={filterDropdownList(stateManager, list).map((p) => ({
             value: p.originalIndex,
             display: p.displayName,
-            image: stateManager.getPowersetImage(p.imageName),
+            image: getPowersetImage(p.imageName),
           }))}
-          onChange={(e) => updateBuild(e)}
+          onChange={updateBuild}
         />
       </div>
     );
