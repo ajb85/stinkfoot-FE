@@ -2,11 +2,12 @@ import poolPowers from "data/poolPowers.js";
 
 import useActiveSets from "providers/builder/useActiveSets.js";
 import useCharacterDetails from "providers/builder/useCharacterDetails.js";
+import usePowerSlots from "providers/builder/usePowerSlots.js";
 import usePoolPowers from "providers/builder/usePoolPowers.js";
 import useEnhNav from "providers/builder/useEnhancementNavigation.js";
-import usePowerSlots from "providers/builder/usePowerSlots.js";
 
 import { getPowerset, getPower } from "helpers/powersets.js";
+import analyzeBuild from "helpers/analyzeBuild.js";
 
 export function usePowersets(archetypeOrder) {
   const { character } = useCharacterDetails();
@@ -113,22 +114,65 @@ export const useRemovePool = (poolIndexToRemove) => {
   });
 };
 
-function excludePowersets(powersetFullNames, excludedBy) {
-  if (!powersetFullNames || !excludedBy) {
-    return;
+export const useSelectedPools = () => {
+  const { pools } = usePoolPowers();
+  const poolData = [];
+
+  for (let i = 0; i < pools.length; i++) {
+    poolData.push(poolPowers[i]);
   }
 
-  powersetFullNames = Array.isArray(powersetFullNames)
-    ? powersetFullNames
-    : [powersetFullNames];
+  return poolDat;
+};
 
-  const { excludedPowersets } = this.nextState.lookup;
+export const useBuildAnalysis = () => {
+  const { character } = useCharacterDetails();
+  const { powerSlots } = usePowerSlots();
+  const activePowersets = {
+    primary: useActivePowerset("primaries"),
+    secondary: useActivePowerset("secondaries"),
+    pools: useSelectedPools(),
+  };
 
-  powersetFullNames.forEach((name) => {
-    if (excludedPowersets.hasOwnProperty(name)) {
-      excludedPowersets[name].push(excludedBy);
-    } else {
-      excludedPowersets[name] = [excludedBy];
+  return analyzeBuild(powerSlots, character.archetype, activePowersets);
+};
+
+export const useTogglePower = (power) => {
+  const { tracking } = useActiveSets();
+  const details = useBuildAnalysis();
+  const { lookup } = details;
+  const { removePowerFromSlot, addPowerToSlot } = usePowerSlots();
+
+  const isRemoving = lookup.powers[power.fullName] !== undefined;
+
+  if (isRemoving) {
+    removePowerFromSlot(lookup.powers[power.fullName]);
+  } else if (canPowerGoInSlot(power, tracking.activeLevel, details)) {
+    addPowerToSlot();
+  }
+};
+
+export const useCanPowerGoInSlot = (power) => {
+  const { tracking } = useActiveSets();
+  const details = useBuildAnalysis();
+  return canPowerGoInSlot(power, tracking.activeLevel, details);
+};
+
+export function canPowerGoInSlot(power, activeLevel, { lookup }) {
+  const hasRequirements = power.requirements;
+
+  if (hasRequirements) {
+    const { powers, count } = power.requirements;
+
+    const reqCount = Object.keys(powers).reduce(
+      (acc, p) => (lookup.powers[p] !== undefined ? acc + 1 : acc),
+      0
+    );
+
+    if (reqCount < count) {
+      return false;
     }
-  });
+  }
+
+  return power.level <= activeLevel;
 }
