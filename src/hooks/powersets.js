@@ -4,11 +4,24 @@ import useActiveSets from "providers/builder/useActiveSets.js";
 import useCharacterDetails from "providers/builder/useCharacterDetails.js";
 import usePowerSlots from "providers/builder/usePowerSlots.js";
 import usePoolPowers from "providers/builder/usePoolPowers.js";
-import useEnhNav from "providers/builder/useEnhancementNavigation.js";
+// import useEnhNav from "providers/builder/useEnhancementNavigation.js";
 
-import { getPowerset, getPower } from "helpers/powersets.js";
+import {
+  getPowerset,
+  getPower,
+  togglePower,
+  canPowerGoInSlot,
+  canPowersetBeAdded,
+  powerSelectionColor,
+} from "helpers/powersets.js";
+
 import analyzeBuild from "helpers/analyzeBuild.js";
 
+/******************************************
+ ******************************************
+ ***********  DATA RETRIEVAL  *************
+ ******************************************
+ *****************************************/
 export function usePowersets(archetypeOrder) {
   const { character } = useCharacterDetails();
   const { archetype } = character;
@@ -21,109 +34,39 @@ export function useActivePowerset(archetypeOrder) {
   return usePowersets(archetypeOrder)[activeIndex];
 }
 
-export function useSelectedPoolNames() {
-  const { pools } = usePoolPowers();
-  return pools.map((i) => poolPowers[i].displayName);
+// export function useSubSectionForPowerType(types) {
+//   // getSubSectionsForPower
+//   if (!Array.isArray(types)) {
+//     types = [types];
+//   }
+
+//   const {
+//     enhNavigation: { tier },
+//   } = useEnhNav();
+
+//   if (!isNaN(parseInt(tier, 10))) {
+//     // If IOs, map over the setNums
+//     return types.map((setNum) => {
+//       return {
+//         tier: setNum,
+//         name: setTypeConversion[setNum],
+//         isSet: true,
+//       };
+//     });
+//   }
+
+//   // Else, send back standard IOs
+//   return ["IO", "SO", "DO", "TO"].map((name) => ({
+//     tier: name,
+//     name,
+//     isSet: false,
+//   }));
+// }
+
+export function useBuildHasPower(power) {
+  const { lookup } = useBuildAnalysis();
+  return lookup.powers[power.fullName] !== undefined;
 }
-
-export function usePower({ archetypeOrder, powerIndex, poolIndex }) {
-  const { character } = useCharacterDetails();
-  const { archetype } = character;
-  return getPower({ archetypeOrder, powerIndex, poolIndex }, archetype);
-}
-
-export function useSubSectionForPowerType(types) {
-  // getSubSectionsForPower
-  if (!Array.isArray(types)) {
-    types = [types];
-  }
-
-  const {
-    enhNavigation: { tier },
-  } = useEnhNav();
-
-  if (!isNaN(parseInt(tier, 10))) {
-    // If IOs, map over the setNums
-    return types.map((setNum) => {
-      return {
-        tier: setNum,
-        name: setTypeConversion[setNum],
-        isSet: true,
-      };
-    });
-  }
-
-  // Else, send back standard IOs
-  return ["IO", "SO", "DO", "TO"].map((name) => ({
-    tier: name,
-    name,
-    isSet: false,
-  }));
-}
-
-export function useIsPowersetExcluded(powersetFullName) {}
-
-export function useBuildHasPower() {}
-
-export function useBuildHasPool(poolFullName) {}
-
-export function usePoolCanBeAdded(poolFullName) {}
-
-export function usePowerFromNewPool(power) {
-  const pool = useActivePowerset("poolPower");
-  const isExcluded = useIsPowersetExcluded(pool.fullName);
-  const selectedPools = useSelectedPoolNames();
-
-  const { poolIndex } = power;
-  const poolCanBeAdded =
-    selectedPools.length < 4 &&
-    selectedPools.indexOf(poolIndex) === -1 &&
-    !isExcluded;
-
-  if (!poolCanBeAdded) {
-    return;
-  }
-
-  selectedPools.push(poolIndex);
-  this._togglePower(power);
-
-  // Find a pool that hasn't been excluded & isn't active
-  this.nextState.tracking.poolPowerIndex = poolPowers.findIndex(
-    ({ fullName }, i) =>
-      !this.isPowersetExcluded(fullName) && selectedPools.indexOf(i) === -1
-  );
-
-  // Update exclusion list with any sets this one prevents & itself (no double adding)
-  excludePowersets(pool.prevents, pool.displayName);
-  this._setState();
-}
-
-export const useRemovePool = (poolIndexToRemove) => {
-  // const { pools, removePools } = usePoolPowers();
-  const { powerSlots } = usePowerSlots();
-  powerSlots.forEach((powerSlot) => {
-    if (powerSlot.power) {
-      const { power } = powerSlot;
-      if (
-        power.archetypeOrder === "poolPower" &&
-        power.poolIndex === poolIndexToRemove
-      ) {
-        // this._removePowers(this.getPower(power));
-      }
-    }
-  });
-};
-
-export const useSelectedPools = () => {
-  const { pools } = usePoolPowers();
-  const poolData = [];
-
-  for (let i = 0; i < pools.length; i++) {
-    poolData.push(poolPowers[i]);
-  }
-
-  return poolDat;
-};
 
 export const useBuildAnalysis = () => {
   const { character } = useCharacterDetails();
@@ -137,42 +80,99 @@ export const useBuildAnalysis = () => {
   return analyzeBuild(powerSlots, character.archetype, activePowersets);
 };
 
-export const useTogglePower = (power) => {
+/******************************************
+ ******************************************
+ *********  FUNCTION RETRIEVERS  **********
+ ******************************************
+ *****************************************/
+export function useGetPower() {
+  const { character } = useCharacterDetails();
+  const { archetype } = character;
+  return getPower.bind(this, archetype);
+}
+
+export const useTogglePower = () => {
   const { tracking } = useActiveSets();
   const details = useBuildAnalysis();
-  const { lookup } = details;
-  const { removePowerFromSlot, addPowerToSlot } = usePowerSlots();
+  const psFuncs = usePowerSlots();
+  return togglePower.bind(this, tracking, details, psFuncs);
+};
 
-  const isRemoving = lookup.powers[power.fullName] !== undefined;
+export const useCanPowerGoInSlot = () => {
+  const { tracking } = useActiveSets();
+  const details = useBuildAnalysis();
+  return canPowerGoInSlot.bind(this, tracking.activeLevel, details);
+};
 
-  if (isRemoving) {
-    removePowerFromSlot(lookup.powers[power.fullName]);
-  } else if (canPowerGoInSlot(power, tracking.activeLevel, details)) {
-    addPowerToSlot();
+export const usePowerSelectionColor = () => {
+  const { tracking } = useActiveSets();
+  const details = useBuildAnalysis();
+  return powerSelectionColor.bind(this, tracking.activeLevel, details);
+};
+
+export function useCanPowersetBeAdded() {
+  const analysis = useBuildAnalysis();
+  return canPowersetBeAdded.bind(this, analysis);
+}
+
+/******************************************
+ ******************************************
+ *************  POOL POWERS  **************
+ ******************************************
+ *****************************************/
+export function useBuildHasPool(poolIndex) {
+  const { pools } = usePoolPowers();
+  return !!pools.find((p) => p.poolIndex === poolIndex);
+}
+
+export function useSelectedPoolNames() {
+  const { pools } = usePoolPowers();
+  const poolData = [];
+
+  for (let i = 0; i < pools.length; i++) {
+    poolData.push(poolPowers[i].displayName);
   }
+
+  return poolData;
+}
+
+export const useSelectedPools = () => {
+  const { pools } = usePoolPowers();
+  const poolData = [];
+
+  for (let i = 0; i < pools.length; i++) {
+    poolData.push(poolPowers[i]);
+  }
+
+  return poolData;
 };
 
-export const useCanPowerGoInSlot = (power) => {
-  const { tracking } = useActiveSets();
-  const details = useBuildAnalysis();
-  return canPowerGoInSlot(power, tracking.activeLevel, details);
-};
+export function useCanPoolBeAdded() {
+  const canPoolBeAdded = useCanPowersetBeAdded();
+  const selectedPools = useSelectedPoolNames();
 
-export function canPowerGoInSlot(power, activeLevel, { lookup }) {
-  const hasRequirements = power.requirements;
+  return (pool) => canPoolBeAdded(pool) && selectedPools.length < 4;
+}
 
-  if (hasRequirements) {
-    const { powers, count } = power.requirements;
-
-    const reqCount = Object.keys(powers).reduce(
-      (acc, p) => (lookup.powers[p] !== undefined ? acc + 1 : acc),
-      0
-    );
-
-    if (reqCount < count) {
-      return false;
+export function useAddPowerFromNewPool() {
+  const pool = useActivePowerset("poolPower");
+  const canBeAdded = useCanPoolBeAdded()(pool);
+  const togglePower = useTogglePower();
+  const updateTracking = useFirstUnusedPool();
+  const { addPool } = usePoolPowers();
+  return (power) => {
+    if (canBeAdded) {
+      const { poolIndex } = power;
+      addPool(poolIndex);
+      togglePower(power);
+      updateTracking();
     }
-  }
+  };
+}
 
-  return power.level <= activeLevel;
+export function useFirstUnusedPool() {
+  const { setTrackingManually } = useActiveSets();
+  const canPoolBeAdded = useCanPoolBeAdded();
+  const firstPool = poolPowers.find((pool) => canPoolBeAdded(pool)) || {};
+  return setTrackingManually.bind(this, "poolPower", firstPool.poolIndex || 0);
 }

@@ -1,54 +1,60 @@
 import React from "react";
 
 import Powerset from "./Powerset.js";
-import usePlannerState from "providers/usePlannerState.js";
+import {
+  useSelectedPools,
+  useActivePowerset,
+  useAddPowerFromNewPool,
+} from "hooks/powersets.js";
+import allPools from "data/poolPowers.js";
 import styles from "./styles.module.scss";
 
 function PoolPowers(props) {
-  const stateManager = usePlannerState();
+  const selectedPoolPowers = useSelectedPools();
+  const activePool = useActivePowerset("poolPower");
+  const addPowerFromNewPool = useAddPowerFromNewPool();
 
   return (
     <div className={styles.PoolPowers}>
       <h2>Power Pools</h2>
       <div>
         {/* Render selected pool powers */}
-        {stateManager.selectedPoolPowers.map((poolIndex) => {
+        {selectedPoolPowers.map((pool) => {
           return (
-            <React.Fragment key={poolIndex}>
+            <React.Fragment key={pool.poolIndex}>
               <Powerset
-                header={stateManager.pools[poolIndex].displayName}
-                powerList={stateManager.pools[poolIndex].powers}
-                poolIndex={poolIndex}
-                compact={true}
+                header={pool.displayName}
+                powerList={pool.powers}
+                poolIndex={pool.poolIndex}
+                compact
               />
             </React.Fragment>
           );
         })}
 
         {/* Render new power pool selection */}
-        {stateManager.selectedPoolPowers.length < 4 && (
+        {selectedPoolPowers.length < 4 && (
           <Powerset
             dropdown={{
               name: "poolPowerIndex",
-              list: stateManager.pools,
+              list: allPools,
             }}
-            powerList={stateManager.activePool.powers}
-            togglePower={stateManager.addPowerFromNewPool}
-            updateBuild={stateManager.updateTracking}
-            compact={true}
+            powerList={activePool.powers}
+            togglePower={addPowerFromNewPool}
+            compact
           />
         )}
 
-        {renderEmptyBoxes(stateManager)}
+        {renderEmptyBoxes(selectedPoolPowers)}
       </div>
     </div>
   );
 }
 
-const renderEmptyBoxes = (stateManager) => {
+const renderEmptyBoxes = (selectedPoolPowers) => {
   const emptyBoxes = [];
 
-  for (let i = stateManager.selectedPoolPowers.length; i < 3; i++) {
+  for (let i = selectedPoolPowers.length; i < 3; i++) {
     // Must only be a total of 4 boxes.  There are the selected pools &
     // the extra box to select a new pool to consider.  That means, when
     // there are three pools selected, no empty boxes should render
