@@ -8,7 +8,7 @@ export default ((cache) => (powerSlots, archetype, activeSets) => {
 
   const reduceSlot = getSlotReducer(archetype);
   const results = powerSlots.reduce(reduceSlot, getInitialAcc());
-  evaluateSets(activeSets, results);
+  excludePowersets(activeSets, results);
 
   cache.build = powerSlots;
   cache.results = results;
@@ -78,20 +78,37 @@ function getInitialAcc() {
   };
 }
 
-function evaluateSets({ primary, secondary, pools }, acc) {
-  const primaryPrevents = primary.prevents || [];
-  const secondaryPrevents = secondary.prevents || [];
+function excludePowersets({ primary, secondary, pools }, acc) {
+  const primaryPrevents = (primary.prevents || []).map((powerset) => {
+    const p = { preventedSet: powerset };
+    p.excludedBy = primary.displayName;
+    return p;
+  });
+
+  const secondaryPrevents = (secondary.prevents || []).map((powerset) => {
+    const p = { preventedSet: powerset };
+    p.excludedBy = secondary.displayName;
+    return p;
+  });
+
   const poolsPrevents = pools.reduce((acc, { prevents }) => {
     if (prevents) {
-      return [...acc, ...prevents];
+      return [
+        ...acc,
+        ...prevents.map((powerset) => {
+          const p = { preventedSet: powerset };
+          p.excludedBy = secondary.displayName;
+          return p;
+        }),
+      ];
     }
 
     return acc;
   });
 
   [...primaryPrevents, ...secondaryPrevents, ...poolsPrevents].reduce(
-    (acc, ex) => {
-      acc[ex] = true;
+    (acc, { preventedSet, excludedBy }) => {
+      acc[preventedSet] = excludedBy;
       return acc;
     },
     acc.excluded.powersets
