@@ -9,14 +9,6 @@ export function pluralizeOrder(order) {
   return toPlural[order] || order;
 }
 
-export function emptyDefaultSlot() {
-  return [
-    {
-      slotLevel: null,
-    },
-  ];
-}
-
 export function findLowestUnusedSlot(powerSlots) {
   const nextEmptySlotIndex = powerSlots.findIndex(({ power }) => !power);
   return !isNaN(parseInt(nextEmptySlotIndex)) ? nextEmptySlotIndex : null;
