@@ -9,8 +9,29 @@ export const PowerSlotsProvider = (props) => {
 
   const { Provider } = context;
 
-  const state = { powerSlots, setPowerSlots };
+  const removePowerFromSlot = (index) => {
+    const newSlots = [...powerSlots];
+    newSlots[index] = powerSlotsTemplate[index];
+  };
+
+  const addPowerToSlot = (index, power) => {
+    const newSlots = [...powerSlots];
+    newSlots[index] = {
+      ...newSlots[index],
+      power,
+      enhSlots: emptyDefaultSlot(),
+    };
+  };
+  const state = { powerSlots, removePowerFromSlot, addPowerToSlot };
   return <Provider value={state}>{props.children}</Provider>;
 };
 
 export default () => useContext(context);
+
+export function emptyDefaultSlot() {
+  return [
+    {
+      slotLevel: null,
+    },
+  ];
+}
