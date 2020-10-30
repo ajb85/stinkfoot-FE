@@ -3,43 +3,42 @@ import React from "react";
 import Powerset from "./Powerset.js";
 import PoolPowers from "./PoolPowers.js";
 
-import usePlannerState from "providers/usePlannerState.js";
+import useCharacterDetails from "providers/builder/useCharacterDetails.js";
+import { usePowersets, useActivePowerset } from "hooks/powersets";
 
 import styles from "./styles.module.scss";
 
 function Powersets(props) {
-  const stateManager = usePlannerState();
+  const { character } = useCharacterDetails();
+
   return (
     <section className={styles.Powersets}>
       <div className={styles.powersetContainer}>
-        <h2>{stateManager.getFromState("archetype")} Powersets</h2>
+        <h2>{character.archetype} Powersets</h2>
         <div>
           <Powerset
             header="Primary"
             dropdown={{
               name: "primaryIndex",
-              list: stateManager.primaries,
+              list: usePowersets("primaries"),
             }}
-            powerList={stateManager.activePrimary.powers}
-            updateBuild={stateManager.updateTracking}
+            powerList={useActivePowerset("primaries").powers}
           />
           <Powerset
             header="Secondary"
             dropdown={{
               name: "secondaryIndex",
-              list: stateManager.secondaries,
+              list: usePowersets("secondaries"),
             }}
-            powerList={stateManager.activeSecondary.powers}
-            updateBuild={stateManager.updateTracking}
+            powerList={useActivePowerset("secondaries").powers}
           />
           <Powerset
             header="Epic Pool"
             dropdown={{
               name: "epicPoolIndex",
-              list: stateManager.epicPools,
+              list: usePowersets("epicPools"),
             }}
-            powerList={stateManager.activeEpicPool.powers}
-            updateBuild={stateManager.updateTracking}
+            powerList={useActivePowerset("epicPools").powers}
           />
         </div>
         <PoolPowers />
