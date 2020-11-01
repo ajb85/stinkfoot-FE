@@ -86,28 +86,3 @@ export function powerSelectionColor(activeLevel, { lookup }, p) {
       : "yellow"
     : "grey";
 }
-
-// export const combinePrevents = (
-//   primaryPrevents,
-//   secondaryPrevents,
-//   poolsPrevents
-// ) => {
-//   const priName = this.activePrimary.displayName;
-//   const secName = this.activeSecondary.displayName;
-
-//   primaryPrevents.name = priName;
-//   secondaryPrevents.name = secName;
-//   const preventByPools = poolsPrevents.reduce(
-//     (acc, preventList, i) => ({
-//       ...acc,
-//       ...preventList.reduce(toNameValue, {}),
-//     }),
-//     {}
-//   );
-
-//   return {
-//     ...primaryPrevents.reduce(toNameValue, {}),
-//     ...secondaryPrevents.reduce(toNameValue, {}),
-//     ...preventByPools,
-//   };
-// };
