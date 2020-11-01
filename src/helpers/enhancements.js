@@ -122,6 +122,25 @@ export const getBonusCount = (bonusName, powerSlots) => {
   return bonusCount;
 };
 
+export const getEnhancementSubSections = ({ tier }, types) => {
+  const isSet = !isNaN(parseInt(tier, 10));
+  if (isSet) {
+    // If IOs, map over the setNums
+    return types.map((setNum) => ({
+      tier: setNum,
+      name: [setNum],
+      isSet,
+    }));
+  }
+
+  // Else, send back standard IOs
+  return ["IO", "SO", "DO", "TO"].map((name) => ({
+    tier: name,
+    name,
+    isSet: false,
+  }));
+};
+
 function _getBonuses(tier, setIndex) {
   const setName = ioSets[tier][setIndex].displayName.split(" ").join("_");
   return setBonuses[setName];

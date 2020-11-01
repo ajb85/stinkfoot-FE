@@ -1,43 +1,39 @@
-import React, { useCallback } from "react";
+import React from "react";
 
-import usePlannerState from "providers/usePlannerState.js";
 import StandardEnhancements from "../Enhancements/Standards.js";
 import IOSetEnhancements from "../Enhancements/IOSets.js";
-import { getPowerStats } from "../../../js/powerCalculations.js";
-
-import TableList from "components/TableList/";
+// import { getPowerStats } from "../../../js/powerCalculations.js";
+// import TableList from "components/TableList/";
 import PunnettSquare from "components/PunnettSquare/";
 
 import useEnhNavigation from "providers/builder/useEnhancementNavigation.js";
+import { useGetEnhancementSubSections } from "hooks/enhancements.js";
+import { useGetPower } from "hooks/powersets";
+import useActiveSets from "providers/builder/useActiveSets.js";
+import usePowerSlots from "providers/builder/usePowerSlots.js";
+
+import { getEnhancementImageWithOverlay } from "helpers/getImages.js";
 import styles from "../styles.module.scss";
 
 function PowerSlot({ slot }) {
-  const stateManager = usePlannerState();
-  const { getPower, getState } = stateManager;
+  const getPower = useGetPower();
   const { level, power, powerSlotIndex } = slot;
   const { enhNavigation, updateEnhNavigation } = useEnhNavigation();
-  const isToggled = stateManager.toggledPowerSlotIndex === powerSlotIndex;
+  const { tracking, togglePowerSlot, setTrackingManually } = useActiveSets();
+  const { powerSlots } = usePowerSlots();
+  const getEnhancementSubSections = useGetEnhancementSubSections();
+  const isToggled = tracking.powerSlot === powerSlotIndex;
   const p = power ? getPower(power) : {};
-  const zIndex =
-    stateManager.getFromState("powerSlots").length * 2 - powerSlotIndex * 2;
-  const { togglePowerSlot } = stateManager;
-  const handlePowerToggle = useCallback(() => togglePowerSlot(powerSlotIndex), [
-    togglePowerSlot,
-    powerSlotIndex,
-  ]);
+  const zIndex = powerSlots.length * 2 - powerSlotIndex * 2;
 
   if (!power) {
     // Empty PowerSlot
-    const isActive = stateManager.activeLevel === level;
+    const isActive = tracking.activeLevel === level;
     return (
       <div className={styles.powerContainer}>
         <div
           className={styles.power}
-          onClick={(e) => {
-            e.target.name = "activeLevelIndex";
-            e.target.value = powerSlotIndex;
-            stateManager.updateTracking(e);
-          }}
+          onClick={setTrackingManually.bind(this, "activeLevel", level)}
           style={{ backgroundColor: isActive ? "green" : "grey" }}
         >
           <p>({level})</p>
@@ -46,7 +42,7 @@ function PowerSlot({ slot }) {
     );
   }
 
-  const powerStats = getPowerStats(getState())(powerSlotIndex);
+  // const powerStats = getPowerStats(getState())(powerSlotIndex);
 
   const topOptions = [
     {
@@ -71,9 +67,8 @@ function PowerSlot({ slot }) {
     },
   ];
 
-  const sideOptions = stateManager
-    .getSubSectionsForPower(enhNavigation, p.setTypes)
-    .map(({ tier, name }) => ({
+  const sideOptions = getEnhancementSubSections(p.setTypes).map(
+    ({ tier, name }) => ({
       content: name
         .split(" ")
         .map((n) => n[0])
@@ -87,12 +82,13 @@ function PowerSlot({ slot }) {
         color: enhNavigation.tier === tier ? "red" : null,
         cursor: "pointer",
       },
-    }));
+    })
+  );
 
   return (
     <div
       className={styles.powerContainer}
-      onClick={!isToggled ? handlePowerToggle : noFunc}
+      onClick={!isToggled ? togglePowerSlot : noFunc}
       key={powerSlotIndex}
     >
       <div
@@ -103,7 +99,7 @@ function PowerSlot({ slot }) {
         }}
       >
         {/* Pill Title */}
-        <p className="pillText" onClick={handlePowerToggle}>
+        <p className="pillText" onClick={togglePowerSlot}>
           ({level}) {p.displayName}
         </p>
 
@@ -119,7 +115,7 @@ function PowerSlot({ slot }) {
           )}
         </PunnettSquare>
         {/* Power stats - temporarily disabled, not ready for this feature */}
-        {false && <TableList list={powerStats} />}
+        {/* {false && <TableList list={powerStats} />} */}
       </div>
       {/* Selected Enhancements Menu */}
       <HoverMenu slot={slot} />
@@ -131,14 +127,16 @@ export default PowerSlot;
 
 function noFunc() {}
 function HoverMenu({ slot }) {
-  const stateManager = usePlannerState();
-  const { getPower } = stateManager;
+  const getPower = useGetPower();
+  const {
+    powerSlots,
+    removePowerFromSlot,
+    removeEnhancement,
+  } = usePowerSlots();
   const { level, power, enhSlots, powerSlotIndex } = slot;
 
   const p = power ? getPower(power) : {};
-  const zIndex =
-    stateManager.getFromState("powerSlots").length * 2 - powerSlotIndex * 2;
-  const { removeSlots } = stateManager;
+  const zIndex = powerSlots.length * 2 - powerSlotIndex * 2;
 
   return (
     <div
@@ -149,7 +147,7 @@ function HoverMenu({ slot }) {
         const displayLevel = slotLevel === null ? level : slotLevel;
 
         const images = enhancement
-          ? stateManager.getEnhancementAndOverlayImages(enhancement)
+          ? getEnhancementImageWithOverlay(enhancement)
           : null;
 
         return (
@@ -157,7 +155,7 @@ function HoverMenu({ slot }) {
             {images ? (
               <div
                 className={styles.enhancementSlot}
-                onClick={removeSlots.bind(this, powerSlotIndex, j)}
+                onClick={removePowerFromSlot.bind(this, powerSlotIndex, j)}
               >
                 <div
                   className={styles.enhancementImage}
@@ -174,7 +172,7 @@ function HoverMenu({ slot }) {
               <div className={styles.enhancementSlot}>
                 <div
                   key={`${powerSlotIndex} ${j}`}
-                  onClick={removeSlots.bind(this, powerSlotIndex, j)}
+                  onClick={removeEnhancement.bind(this, powerSlotIndex, j)}
                   className={styles.enhancementBubble}
                 >
                   <p>{displayLevel}</p>
