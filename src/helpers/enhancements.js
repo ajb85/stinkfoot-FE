@@ -37,18 +37,14 @@ export const getSetDisplayName = (tier, setIndex) => {
   return ioSets[tier][setIndex].displayName;
 };
 
-export const getDisplayBonuses = (
-  settings,
-  { showSuperior },
-  setDisplayName
-) => {
-  const baseName = setDisplayName.split(" ").join("_");
+export const getBonusesForSet = (settings, { showSuperior }, set) => {
+  const baseName = set.displayName.split(" ").join("_");
   const isAttuned = setBonuses[baseName] && setBonuses["Superior_" + baseName];
   const correctedSetName =
     showSuperior && isAttuned ? "Superior_" + baseName : baseName;
 
   if (!setBonuses[correctedSetName]) {
-    console.log("NO BONUSES FOR ", correctedSetName);
+    console.log("NO BONUSES FOR ", correctedSetName, set);
     return [];
   }
 
@@ -59,13 +55,7 @@ export const getDisplayBonuses = (
       if (isPvP && !pvpEnabled) {
         return acc;
       }
-      // const {effects, ...bonus} = bonusLibrary[name];
-      acc.push({
-        unlocked,
-        isPvP,
-        displays: bonusLibrary[name].displays,
-        bonusName: name,
-      });
+      acc.push({ unlocked, isPvP, bonus: bonusLibrary[name] });
       return acc;
     },
     []

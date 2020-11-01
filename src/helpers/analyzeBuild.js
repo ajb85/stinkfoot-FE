@@ -1,12 +1,16 @@
 import ioSets from "data/ioSets.js";
-import { getBonusesForCount } from "helpers/enhancements.js";
 
-export default ((cache) => (powerSlots, archetype, activeSets) => {
+export default ((cache) => (
+  powerSlots,
+  archetype,
+  activeSets,
+  getBonusesForSet
+) => {
   if (cache.build === powerSlots) {
     return cache.results;
   }
 
-  const reduceSlot = getSlotReducer(archetype);
+  const reduceSlot = getSlotReducer(archetype, getBonusesForSet);
   const results = powerSlots.reduce(reduceSlot, getInitialAcc());
   evaluatePowersets(activeSets, results);
 
@@ -15,7 +19,8 @@ export default ((cache) => (powerSlots, archetype, activeSets) => {
   return results;
 })({});
 
-function getSlotReducer(archetype) {
+function getSlotReducer(archetype, getBonusesForSet) {
+  const setBonusesCache = {};
   return function reduceSlot(acc, { enhSlots, level, power, type }, i) {
     const isEmpty = !power || !enhSlots;
     if (isEmpty) {
@@ -79,7 +84,12 @@ function getSlotReducer(archetype) {
     const powerBonuses = acc.lookup.setsInPower[power.fullName];
     Object.keys(powerBonuses).forEach((setName) => {
       const { set, count } = powerBonuses[setName];
-      getBonusesForCount(set, count).forEach(({ name }) => {
+      if (!setBonusesCache[set.fullName]) {
+        setBonusesCache[set.fullName] = getBonusesForSet(set);
+      }
+
+      const setBonuses = setBonusesCache[set.fullName];
+      setBonuses.slice(0, count - 1).forEach(({ name }) => {
         // Should consider PvP ?
         const { setBonuses } = acc.lookup;
         setBonuses[name] = setBonuses[name] ? setBonuses[name] + 1 : 1;

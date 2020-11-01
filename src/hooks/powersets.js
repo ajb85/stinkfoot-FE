@@ -14,6 +14,8 @@ import {
   powerSelectionColor,
 } from "helpers/powersets.js";
 
+import { useGetBonusesForSet } from "hooks/enhancements.js";
+
 import analyzeBuild from "helpers/analyzeBuild.js";
 
 /******************************************
@@ -46,8 +48,14 @@ export const useBuildAnalysis = () => {
     secondary: useActivePowerset("secondaries"),
     pools: useSelectedPools(),
   };
+  const getBonusesForSet = useGetBonusesForSet();
 
-  return analyzeBuild(powerSlots, character.archetype, activePowersets);
+  return analyzeBuild(
+    powerSlots,
+    character.archetype,
+    activePowersets,
+    getBonusesForSet
+  );
 };
 
 /******************************************
