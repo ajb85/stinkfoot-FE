@@ -1,21 +1,21 @@
 import React, { useEffect, useRef } from "react";
 
-import HoverMenu from "../HoverMenus/IOSets.js";
+import IOHoverMenu from "../HoverMenus/IOSets.js";
 
-import usePlannerState from "providers/usePlannerState.js";
+import { useGetEnhancementsForPower } from "hooks/enhancements.js";
 import useEnhNavigation from "providers/builder/useEnhancementNavigation.js";
 
+import { getEnhancementOverlay } from "helpers/getImages.js";
 import styles from "../styles.module.scss";
 
 export default function IOSets(props) {
   const enhRefs = useRef([]);
   const { powerSlotIndex, power: p } = props;
   const { enhNavigation, updateEnhNavigation } = useEnhNavigation();
-  const stateManager = usePlannerState();
-  const { getEnhancementSectionForPower } = stateManager;
+  const getEnhancementsForPower = useGetEnhancementsForPower();
 
-  const enhancementsData = getEnhancementSectionForPower(p, enhNavigation);
-  const overlayImg = stateManager.getEnhancementOverlay("IO");
+  const enhancementsData = getEnhancementsForPower(p);
+  const overlayImg = getEnhancementOverlay("IO");
 
   useEffect(() => {
     if (enhancementsData.length !== enhRefs.current.length) {
@@ -41,7 +41,7 @@ export default function IOSets(props) {
                 alt={enh.fullName}
                 onClick={handleClick.bind(this, i)}
               />
-              <HoverMenu
+              <IOHoverMenu
                 powerSlotIndex={powerSlotIndex}
                 enhNavigation={enhNavigation}
                 set={enh}
