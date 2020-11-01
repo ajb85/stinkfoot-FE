@@ -4,7 +4,7 @@ import {
   getEnhancementSubSections,
   getEnhancementsForPower,
   canEnhancementGoInPowerSlot,
-  getDisplayBonuses,
+  getBonusesForSet,
 } from "helpers/enhancements.js";
 
 import { useBuildAnalysis, useGetPower } from "./powersets.js";
@@ -32,9 +32,9 @@ export const useCanEnhancementGoInPowerSlot = (powerSlot) => {
   );
 };
 
-export const useGetDisplayBonuses = () => {
+export const useGetBonusesForSet = () => {
   const { enhNavigation } = useEnhancementNavigation();
   const settings = {};
 
-  return getDisplayBonuses.bind(this, settings, enhNavigation);
+  return getBonusesForSet.bind(this, settings, enhNavigation);
 };

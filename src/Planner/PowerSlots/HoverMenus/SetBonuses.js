@@ -1,21 +1,24 @@
 import React from "react";
 
-import useGetDisplayBonuses from "hooks/enhancements.js";
+import useGetBonusesForSet from "hooks/enhancements.js";
+import { useBuildAnalysis } from "hooks/powersets.js";
 import { getBonusTiersForPowerSlot } from "js/getBonusTiersForPowerSlot.js";
 import styles from "../styles.module.scss";
 
 function SetBonuses({ set, powerSlotIndex }) {
-  const { enhancements, displayName } = set;
-  const getDisplayBonuses = useGetDisplayBonuses();
-  const setBonuses = getDisplayBonuses(displayName);
+  const { enhancements } = set;
+  const getBonusesForSet = useGetBonusesForSet();
+  const setBonuses = getBonusesForSet(set);
+  const { lookup } = useBuildAnalysis();
 
   const bonusTier = getBonusTiersForPowerSlot()[enhancements[0].setIndex] || 0;
   return (
     <div className={styles.hoverContainer}>
       <h3>Set Bonuses</h3>
       {setBonuses.reduce((acc, b, bonusIndex) => {
-        const { unlocked, bonusName, displays } = b;
-        const bonusCount = stateManager.getBonusCount(bonusName);
+        const { unlocked, bonus, displays } = b;
+        const { bonusName } = bonus;
+        const bonusCount = lookup.setBonuses[bonusName];
         const willGetBonus = bonusCount < 5;
         const isBonusUnlocked = unlocked <= bonusTier;
         const bonusColor = {
