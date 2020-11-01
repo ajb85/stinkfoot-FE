@@ -1,35 +1,52 @@
 import React from "react";
 
-import usePlannerState from "providers/usePlannerState.js";
+import usePowerSlots from "providers/builder/usePowerSlots.js";
+import { useCanEnhancementGoInPowerSlot } from "hooks/enhancements.js";
+
+import shortenEnhName from "js/shortenEnhName.js";
 
 import styles from "../styles.module.scss";
 
-function EnhancementList({
-  enhancements,
-  powerSlotIndex,
-  addEnh,
-  addFull,
-  removeEnh,
-}) {
-  const stateManager = usePlannerState();
+function EnhancementList({ enhancements, powerSlotIndex }) {
+  const {
+    addEnhancement,
+    addEnhancements,
+    removeEnhancement,
+    powerSlots,
+  } = usePowerSlots();
+  const canEnhancementGoInPowerSlot = useCanEnhancementGoInPowerSlot(
+    powerSlotIndex
+  );
+  const powerSlot = powerSlots[powerSlotIndex];
+
+  const slottedFromSet = powerSlot.enhSlots.reduce((acc, slot) => {
+    if (!slot.enhancement) {
+      return acc;
+    }
+
+    const i = enhancements.findIndex(
+      ({ fullName }) => fullName === slot.enhancement.fullName
+    );
+    if (i > -1) {
+      acc[enhancements[i].fullName] = i;
+    }
+    return acc;
+  }, {});
+
   return (
     <div className={styles.hoverContainer}>
-      <h3 className={styles.addFullSet} onClick={addFull}>
+      <h3
+        className={styles.addFullSet}
+        onClick={addEnhancements.bind(this, powerSlotIndex, enhancements)}
+      >
         Add Full Set
       </h3>
       <div className={styles.enhancementContainer}>
         {enhancements.map((enh) => {
-          const enhancementIndex = stateManager.findEnhancementIndex(
-            enh,
-            powerSlotIndex
-          );
+          const enhIndex = slottedFromSet[enh.fullName];
+          const isAdded = slottedFromSet[enh.fullName] !== undefined;
 
-          const isAdded = enhancementIndex > -1;
-
-          const canBeAdded = !isAdded
-            ? stateManager.canEnhancementGoInPowerSlot(enh, powerSlotIndex)
-            : null;
-
+          const canBeAdded = !isAdded ? canEnhancementGoInPowerSlot(enh) : null;
           const c = styles.enhancementPill;
           const className = isAdded
             ? c + " " + styles.activePill
@@ -40,15 +57,15 @@ function EnhancementList({
           return (
             <p
               key={enh.displayName}
-              onClick={handleEnhToggle(addEnh, removeEnh).bind(
+              onClick={handleEnhToggle(addEnhancement, removeEnhancement).bind(
                 this,
                 enh,
-                enhancementIndex,
+                enhIndex,
                 canBeAdded
               )}
               className={className}
             >
-              {stateManager.shortenEnhName(enh.displayName)}
+              {shortenEnhName(enh.displayName)}
             </p>
           );
         })}

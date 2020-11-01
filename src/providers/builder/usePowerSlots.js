@@ -31,63 +31,76 @@ export const PowerSlotsProvider = (props) => {
     if (
       powerSlot.enhSlots &&
       powerSlot.enhSlots.length < 6 &&
-      slotsManager.previewSlot(powerSlot.level)
+      slotsManager.previewSlots(powerSlot.level)
     ) {
-      const updatedPowerSlots = powerSlots.map((ps, i) => {
-        if (i === powerSlotIndex) {
-          return {
-            ...ps,
-            enhSlots: [
-              ...ps.enhSlots,
-              { level: slotsManager.getSlot(ps.level), enhancement },
-            ],
-          };
-        }
-
-        return ps;
+      // Copy State
+      const updatedPowerSlots = copyPowerSlots(powerSlots, powerSlotIndex);
+      // Mutate copy
+      updatedPowerSlots[powerSlotIndex].enhSlots.push({
+        level: slotsManager.getSlot(powerSlot.level),
+        enhancement,
       });
 
       setPowerSlots(updatedPowerSlots);
     }
   };
 
-  const removeEnhancement = (powerSlotIndex, enhIndex) => {
-    const { enhSlots } = powerSlots[powerSlotIndex];
-    const { slotLevel } = enhSlots[enhIndex];
-
-    if (!slotLevel && enhSlots.length === 1) {
-      // Default slot that doesn't go away, no need to recalculate slots
-      return setPowerSlots(
-        powerSlots.map((ps, i) =>
-          i === powerSlotIndex ? { ...ps, enhSlots: emptyDefaultSlot() } : ps
-        )
-      );
+  const addEnhancements = (powerSlotIndex, enhancements) => {
+    if (
+      !powerSlots[powerSlotIndex].slottable ||
+      !powerSlots[powerSlotIndex].enhSlots
+    ) {
+      // Either the power slot isn't slot-able or there is no power there currently
+      // Regardless, enhancements cannot be added
+      return;
     }
 
-    slotsManager.reset();
-    const updatedPowerSlots = powerSlots.map((ps, i) => {
-      if (!ps.enhSlots) {
-        return ps;
-      }
+    const updatedPowerSlots = copyPowerSlots(powerSlots, powerSlotIndex);
 
-      const isUpdatingPowerSlot = i === powerSlotIndex;
-      const enhSlots = ps.enhSlots.reduce((acc, eSlot, j) => {
-        const isRemovingEnh = j === enhIndex;
-        if (isUpdatingPowerSlot && isRemovingEnh) {
-          return acc;
-        } else if (!eSlot.slotLevel) {
-          acc.push(eSlot);
-        } else {
-          acc.push({
-            ...eSlot,
-            level: acc.length ? slotsManager.getSlot(ps.level) : null, // If the user removed the 0 index, we need to replace it
-          });
-        }
-        return acc;
-      }, []);
+    // Return & erase existing slots
+    const powerSlot = updatedPowerSlots[powerSlotIndex];
 
-      return { ...ps, enhSlots };
+    powerSlot.enhSlots.forEach(
+      ({ slotLevel }) => slotLevel && slotsManager.returnSlot(slotLevel)
+    );
+    powerSlot.enhSlots = emptyDefaultSlot();
+
+    enhancements.forEach((enhancement, i) => {
+      const slotLevel =
+        powerSlot.enhSlots[i].slotLevel === null
+          ? null
+          : slotsManager.getSlot(powerSlot.level);
+
+      powerSlot.enhSlots[i] = { slotLevel, enhancement };
     });
+
+    setPowerSlots(updatedPowerSlots);
+  };
+
+  const removeEnhancement = (powerSlotIndex, enhIndex) => {
+    const updatedPowerSlots = copyPowerSlots(powerSlots, powerSlotIndex);
+    const { enhSlots } = updatedPowerSlots[powerSlotIndex];
+    const { slotLevel } = enhSlots[enhIndex];
+
+    // If slotLevel is null then remove the next slot if it exists
+    const slotToRemove = slotLevel || enhSlots[1] ? enhSlots[1].level : null;
+    if (slotToRemove) {
+      slotsManager.returnSlot(slotToRemove);
+    }
+
+    if (!slotLevel) {
+      // If we are removing the default enhancement slot, shift enhancements left
+      enhSlots.unshift();
+      if (enhSlots.length) {
+        enhSlots[0].slotLevel = null;
+      } else {
+        updatedPowerSlots[powerSlotIndex].enhSlots = emptyDefaultSlot();
+      }
+    } else {
+      updatedPowerSlots[powerSlotIndex].enhSlots = enhSlots.filter(
+        (_, i) => i !== enhIndex
+      );
+    }
 
     setPowerSlots(updatedPowerSlots);
   };
@@ -97,6 +110,7 @@ export const PowerSlotsProvider = (props) => {
     removePowerFromSlot,
     addPowerToSlot,
     addEnhancement,
+    addEnhancements,
     removeEnhancement,
   };
   return <Provider value={state}>{props.children}</Provider>;
@@ -110,4 +124,30 @@ export function emptyDefaultSlot() {
       slotLevel: null,
     },
   ];
+}
+
+export function copyPowerSlots(powerSlots, index) {
+  const newSlots = [...powerSlots];
+
+  if (index) {
+    const powerSlot = newSlots[index];
+    const pSlot = { ...powerSlot };
+    const enhSlots =
+      pSlot.enhSlots &&
+      pSlot.enhSlots.map((es) => {
+        const eSlot = { ...es };
+        const enhancement = eSlot.enhancement && { ...eSlot.enhancement };
+        if (enhancement) {
+          eSlot.enhancement = enhancement;
+        }
+        return eSlot;
+      });
+
+    if (enhSlots) {
+      pSlot.enhSlots = enhSlots;
+    }
+
+    newSlots[index] = pSlot;
+  }
+  return newSlots;
 }

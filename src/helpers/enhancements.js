@@ -1,7 +1,8 @@
 import enhancements from "data/enhancements.js";
-import ioSets, { setTypeConversion } from "data/ioSets.js";
+import ioSets from "data/ioSets.js";
 import setBonuses from "data/enhancements/setBonuses.json";
 import bonusLibrary from "data/enhancements/bonusesLibrary.json";
+import { getEnhancementImage } from "helpers/getImages.js";
 
 const getEnhancementFromType = {
   standard: ({ fullName, tier, level }) => {
@@ -140,6 +141,77 @@ export const getEnhancementSubSections = ({ tier }, types) => {
     isSet: false,
   }));
 };
+
+export const getEnhancementsForPower = (section, tier, showSuperior) => {
+  if (section === "standard") {
+    return getStandardEnhancementsForPower;
+  } else if (section === "sets") {
+    return getIOSetEnhancementsForPower.bind(this, tier, showSuperior);
+  } else return () => [];
+};
+
+export const getIOSet = (setIndex) => ioSets[setIndex];
+
+export const canEnhancementGoInPowerSlot = ({ lookup }, power, enhancement) => {
+  // With isUnique, type, and fullName, this will return if the
+  // enhancement can be added to a slot
+
+  const { isUnique, type, fullName } = enhancement;
+
+  const isUniqueInPower = type === "set" || type === "attuned";
+  const isInUse = lookup.enhancements[fullName] !== undefined;
+  const isInPower =
+    isInUse &&
+    lookup.enhancements[enhancement.fullName].find(
+      ({ powerName }) => powerName === power.fullName
+    );
+
+  return (
+    (isUnique && !isInUse) ||
+    (!isUnique && isUniqueInPower && !isInPower) ||
+    (!isUnique && !isUniqueInPower)
+  );
+};
+
+function getStandardEnhancementsForPower(power) {
+  if (!power.slottable) {
+    return [];
+  }
+
+  return power.allowedEnhancements.reduce((acc, enhName) => {
+    const enh = { ...enhancements.standard[enhName] };
+    const { imageName } = enh;
+    if (!imageName) {
+      console.log("MISSING DATA: ", enhName);
+      return acc;
+    } else {
+      enh.image = getEnhancementImage(imageName);
+      acc.push(enh);
+      return acc;
+    }
+  }, []);
+}
+
+function getIOSetEnhancementsForPower(tier, showSuperior, power) {
+  if (!power.slottable) {
+    return [];
+  }
+
+  return ioSets[tier].map((enh) => {
+    let { imageName } = enh;
+    if (!imageName) {
+      throw new Error("No image found for: ", enh.displayName);
+    }
+    // Superior enhancements have an "S" in front of them.  The regular attuned
+    // version drops the first letter
+    const correctedImgName =
+      !enh.isAttuned || showSuperior ? imageName : imageName.substring(1);
+    enh.image = getEnhancementImage(correctedImgName);
+
+    enh.imageName = correctedImgName;
+    return enh;
+  });
+}
 
 function _getBonuses(tier, setIndex) {
   const setName = ioSets[tier][setIndex].displayName.split(" ").join("_");

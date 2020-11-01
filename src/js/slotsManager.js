@@ -1,114 +1,115 @@
-import { enhancementSlots, powerLevels } from "data/levels.js";
-
-class Node {
-  constructor(level) {
-    this.level = level;
-    this.quantity = 1;
-
-    // this.prev;
-    // this.next;
-  }
-
-  increment() {
-    return ++this.quantity;
-  }
-
-  decrement() {
-    return --this.quantity;
-  }
-}
+import { enhancementSlots } from "data/levels.js";
 
 class SlotsManager {
   constructor() {
-    // this.head;
-    // this.tail;
-    // this.powerLevels;
-    this.slotCount = 0;
-
     this.reset();
   }
 
   get length() {
-    return this.slotCount;
+    return this.slots.length;
   }
 
-  _addNode(level) {
-    this.slotCount++;
-    if (this.tail && this.tail.level === level) {
-      return this.tail.increment();
+  _binarySearch(target) {
+    let cursor;
+    let bottom = 0;
+    let top = this.slots.length - 1;
+
+    if (!target || target > this.slots[top]) {
+      return;
     }
 
-    const node = new Node(level);
-    if (this.powerLevels[level - 1] === true) {
-      // If previous level was a power, add a pointer to this node
-      this.powerLevels[level - 1] = node;
-      node.powerLevel = level - 1;
+    if (target < this.slots[bottom]) {
+      return bottom;
     }
-    if (!this.head) {
-      this.head = node;
-      this.tail = node;
+
+    while (top - bottom > 1) {
+      cursor = Math.floor((bottom + top) / 2);
+      const item = this.slots[cursor];
+
+      if (item === target) {
+        return cursor;
+      }
+
+      if (item < target) {
+        bottom = cursor;
+      }
+
+      if (item > target) {
+        top = cursor;
+      }
+    }
+
+    return this.slots[top] === target ? top : bottom;
+  }
+
+  _findNextLargest(target, returnIndex) {
+    let index = this._binarySearch(target);
+    while (this.slots[index] && this.slots[index] < target) {
+      index++;
+    }
+    return returnIndex ? index : this.slots[index];
+  }
+
+  _removeOnce(num) {
+    const index = this._binarySearch(num);
+    if (this.slots[index] === num) {
+      this.slots.splice(index, 1);
     } else {
-      node.prev = this.tail;
-      this.tail.next = node;
-      this.tail = node;
+      console.log("COULD NOT REMOVE", num, "FROM ", this.slots);
     }
-  }
-
-  _getNextNodeForPowerLevel(powerLevel) {
-    const node = this.powerLevels[powerLevel];
-    return node;
-  }
-
-  _removeNode(node) {
-    const replacement = node.next;
-    const previous = node.prev;
-    const pl = node.powerLevel;
-
-    // Slice node out of chain
-    previous && (previous.next = replacement);
-    replacement && (replacement.prev = previous);
-    replacement && pl && (replacement.powerLevel = pl);
-    pl && (this.powerLevels[pl] = replacement);
-
-    // Replace end pointers
-    !replacement && (this.tail = previous);
-    !node.prev && (this.head = replacement);
-  }
-
-  previewSlot(powerLevel) {
-    const node = this._getNextNodeForPowerLevel(powerLevel);
-    return node ? node.level : null;
   }
 
   getSlot(powerLevel) {
-    this.slotCount--;
-    const node = this._getNextNodeForPowerLevel(powerLevel);
+    const slotLevel = this._findNextLargest(powerLevel);
+    this._removeOnce(slotLevel);
+    return slotLevel;
+  }
 
-    if (!node) {
-      return null;
+  previewSlots(powerLevel, count = 1) {
+    const firstIndex = this._findNextLargest(powerLevel, true);
+
+    const slots = [];
+    for (let i = 0; i < count; i++) {
+      const index = firstIndex + i;
+      const level = this.slots[index];
+      if (level) {
+        slots.push(level);
+      } else {
+        return false;
+      }
     }
 
-    node.decrement();
-    if (node.quantity <= 0) {
-      this._removeNode(node);
+    return count === 1 ? slots[0] : slots;
+  }
+
+  returnSlots(slots) {
+    slots.forEach(this.returnSlot);
+  }
+
+  returnSlot(slotLevel) {
+    if (!slotLevel) {
+      return;
     }
 
-    return node.level;
+    let index = this._binarySearch(slotLevel);
+
+    if (this.slots[index] >= slotLevel) {
+      return this.slots.splice(index, 0, slotLevel);
+    }
+
+    while (this.slots[index] && this.slots[index] < slotLevel) {
+      index++;
+    }
+
+    if (!this.slots[index]) {
+      this.slots.push(slotLevel);
+    } else {
+      this.slots.splice(index, 0, slotLevel);
+    }
   }
 
   reset() {
-    this.head = null;
-    this.tail = null;
-    this.powerLevels = { ...powerLevels };
-    enhancementSlots.forEach((level) => this._addNode(level));
-  }
-
-  printChain() {
-    let node = this.head;
-    while (node) {
-      console.log("LEVEL: ", node.level, "COUNT: ", node.quantity);
-      node = node.next;
-    }
+    this.slots = [...enhancementSlots];
   }
 }
 

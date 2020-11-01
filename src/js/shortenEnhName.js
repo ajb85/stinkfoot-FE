@@ -12,6 +12,7 @@ const shortened = {
 };
 
 export default (name) => {
+  // shortenEnhName
   return name
     .split("/")
     .map((n) => (shortened[n] ? shortened[n] : n))
