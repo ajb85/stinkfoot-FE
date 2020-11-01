@@ -1,5 +1,5 @@
-import { getPower } from "./powersets.js";
-import { getEnhancement } from "./enhancements.js";
+import ioSets from "data/ioSets.js";
+import { getBonusesForCount } from "helpers/enhancements.js";
 
 export default ((cache) => (powerSlots, archetype, activeSets) => {
   if (cache.build === powerSlots) {
@@ -16,42 +16,6 @@ export default ((cache) => (powerSlots, archetype, activeSets) => {
 })({});
 
 function getSlotReducer(archetype) {
-  let accumulator;
-  let currentPower;
-  let currentIndex;
-  function evaluateEnhSlot({ enhancement }) {
-    if (!enhancement) {
-      return;
-    }
-    // enhancement -> displayName, fullName, imageName, level, setIndex (set only), tier, type
-    const e = getEnhancement(enhancement);
-    if (e.isUnique) {
-      // Record any existing unique enhancements
-      accumulator.excluded.enhancements[e.fullName] = true;
-    }
-
-    if (!accumulator.lookup.enhancements[e.fullName]) {
-      // If enhancement is new, setup initial state
-      accumulator.lookup.enhancements[e.fullName] = {};
-    }
-
-    const record = accumulator.lookup.enhancements[e.fullName];
-    const recordOfEnh = record[currentPower.fullName];
-
-    if (recordOfEnh) {
-      // Increment its count if power is already added for this enhancement
-      recordOfEnh.count++;
-      recordOfEnh.powerSlotIndices.push(currentIndex);
-    } else {
-      // Create the record for a new power for this enhancement
-      recordOfEnh[currentPower.fullName] = {
-        powerDisplayName: currentPower.displayName,
-        powerSlotIndices: [currentIndex],
-        count: 1,
-      };
-    }
-  }
-
   return function reduceSlot(acc, { enhSlots, level, power, type }, i) {
     const isEmpty = !power || !enhSlots;
     if (isEmpty) {
@@ -59,21 +23,81 @@ function getSlotReducer(archetype) {
     }
 
     // Save power in look up
-    currentPower = getPower(power, archetype);
-    currentIndex = i;
-    acc.lookup.powers[currentPower.fullName] = i;
+    acc.lookup.powers[power.fullName] = i;
 
-    // Save enhancements in look up
-    accumulator = acc;
-    enhSlots.forEach(evaluateEnhSlot);
+    enhSlots.forEach(({ enhancement }) => {
+      if (!enhancement) {
+        return;
+      }
+      const isSet = enhancement.setType !== undefined;
+      if (isSet) {
+        // Save set bonus records
+        const set = ioSets[enhancement.setType][enhancement.setIndex];
+        if (!acc.lookup.setsInPower[power.fullName]) {
+          acc.lookup.setsInPower[power.fullName] = {};
+        }
 
+        if (!acc.lookup.setsInPower[power.fullName][set.fullName]) {
+          acc.lookup.setsInPower[power.fullName][set.fullName] = {
+            count: 1,
+            set,
+          };
+        } else {
+          acc.lookup.setsInPower[power.fullName][set.fullName].count++;
+        }
+      }
+
+      if (enhancement.isUnique) {
+        // Save enhancements in look up
+        // Record any existing unique enhancements
+        acc.excluded.enhancements[enhancement.fullName] = true;
+      }
+
+      if (!acc.lookup.enhancements[enhancement.fullName]) {
+        // If enhancement is new, setup initial state
+        acc.lookup.enhancements[enhancement.fullName] = {};
+      }
+
+      const record = acc.lookup.enhancements[enhancement.fullName];
+      const recordOfEnh = record[power.fullName];
+
+      if (recordOfEnh) {
+        // Increment its count if power is already added for this enhancement
+        recordOfEnh.count++;
+        recordOfEnh.powerSlotIndices.push(i);
+      } else {
+        // Create the record for a new power for this enhancement
+        recordOfEnh[power.fullName] = {
+          powerDisplayName: power.displayName,
+          powerSlotIndices: [i],
+          count: 1,
+        };
+      }
+    });
+
+    // Tally set bonuses
+    const powerBonuses = acc.lookup.setsInPower[power.fullName];
+    Object.keys(powerBonuses).forEach((setName) => {
+      const { set, count } = powerBonuses[setName];
+      getBonusesForCount(set, count).forEach(({ name }) => {
+        // Should consider PvP ?
+        const { setBonuses } = acc.lookup;
+        setBonuses[name] = setBonuses[name] ? setBonuses[name] + 1 : 1;
+      });
+    });
     return acc;
   };
 }
 
 function getInitialAcc() {
   return {
-    lookup: { powers: {}, powersets: {}, enhancements: {} },
+    lookup: {
+      powers: {},
+      powersets: {},
+      enhancements: {},
+      setBonuses: {},
+      setsInPower: {},
+    },
     excluded: { powers: {}, powersets: {}, enhancements: {} },
   };
 }

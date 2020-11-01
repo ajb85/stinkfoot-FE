@@ -1,20 +1,15 @@
 import React from "react";
 
-import usePlannerState from "providers/usePlannerState.js";
-import useEnhNavigation from "providers/builder/useEnhancementNavigation.js";
-
+import useGetDisplayBonuses from "hooks/enhancements.js";
+import { getBonusTiersForPowerSlot } from "js/getBonusTiersForPowerSlot.js";
 import styles from "../styles.module.scss";
 
 function SetBonuses({ set, powerSlotIndex }) {
-  const stateManager = usePlannerState();
   const { enhancements, displayName } = set;
-  const { enhNavigation } = useEnhNavigation();
-  const setBonuses = stateManager.getDisplayBonuses(displayName, enhNavigation);
+  const getDisplayBonuses = useGetDisplayBonuses();
+  const setBonuses = getDisplayBonuses(displayName);
 
-  const bonusTier =
-    stateManager.getBonusTiersForPowerSlot(powerSlotIndex)[
-      enhancements[0].setIndex
-    ] || 0;
+  const bonusTier = getBonusTiersForPowerSlot()[enhancements[0].setIndex] || 0;
   return (
     <div className={styles.hoverContainer}>
       <h3>Set Bonuses</h3>

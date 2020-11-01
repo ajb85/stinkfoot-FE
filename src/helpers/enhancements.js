@@ -37,8 +37,12 @@ export const getSetDisplayName = (tier, setIndex) => {
   return ioSets[tier][setIndex].displayName;
 };
 
-export const getDisplayBonuses = (setName, { showSuperior }, settings = {}) => {
-  const baseName = setName.split(" ").join("_");
+export const getDisplayBonuses = (
+  settings,
+  { showSuperior },
+  setDisplayName
+) => {
+  const baseName = setDisplayName.split(" ").join("_");
   const isAttuned = setBonuses[baseName] && setBonuses["Superior_" + baseName];
   const correctedSetName =
     showSuperior && isAttuned ? "Superior_" + baseName : baseName;
@@ -68,59 +72,9 @@ export const getDisplayBonuses = (setName, { showSuperior }, settings = {}) => {
   );
 };
 
-export const getBonusTiersForPowerSlot = ({ enhSlots }) => {
-  return enhSlots.reduce((acc, { enhancement }) => {
-    if (enhancement) {
-      const { setIndex } = enhancement;
-
-      if (setIndex) {
-        acc[setIndex] = acc[setIndex] ? ++acc[setIndex] : (acc[setIndex] = 1);
-      }
-    }
-
-    return acc;
-  }, {});
-};
-
-export const getBonusCount = (bonusName, powerSlots) => {
-  let bonusCount = 0;
-  const psLength = powerSlots.length;
-  for (let i = 0; i < psLength; i++) {
-    const ps = powerSlots[i];
-    if (!ps.enhSlots) {
-      continue;
-    }
-    const enhLength = ps.enhSlots.length;
-
-    let enhCount = {};
-    for (let j = 0; j < enhLength; j++) {
-      const enh = ps.enhSlots[j].enhancement;
-      if (!enh || (enh.type !== "set" && enh.type !== "attuned")) {
-        continue;
-      }
-      const key = `${enh.tier},${enh.setIndex}`;
-      enhCount[key] = enhCount[key] ? ++enhCount[key] : 1;
-    }
-
-    for (let enh in enhCount) {
-      const bonusTier = enhCount[enh];
-      const [tier, setIndex] = enh.split(",");
-      const bonuses = _getBonuses(tier, setIndex);
-      const bonusLength = bonuses.length;
-
-      for (let k = 0; k < bonusLength; k++) {
-        const b = bonuses[k];
-
-        if (b.unlocked > bonusTier) {
-          break;
-        }
-        if (b.name === bonusName) {
-          bonusCount++;
-        }
-      }
-    }
-  }
-  return bonusCount;
+export const getBonusesForCount = (set, count) => {
+  const setName = set.displayName.split(" ").join("_");
+  return setBonuses[setName].slice(0, count - 1);
 };
 
 export const getEnhancementSubSections = ({ tier }, types) => {
