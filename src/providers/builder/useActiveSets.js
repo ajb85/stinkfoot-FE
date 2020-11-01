@@ -22,8 +22,19 @@ export const IndexTrackingProvider = (props) => {
   const setTrackingManually = (name, value) =>
     setTracking({ ...tracking, [name]: value });
 
+  const togglePowerSlot = (psIndex) =>
+    setTracking({
+      ...tracking,
+      powerSlot: tracking.powerSlot === psIndex ? null : psIndex,
+    });
+
   const { Provider } = context;
-  const state = { tracking, setActiveTracking, setTrackingManually };
+  const state = {
+    tracking,
+    setActiveTracking,
+    setTrackingManually,
+    togglePowerSlot,
+  };
   return <Provider value={state}>{props.children}</Provider>;
 };
 

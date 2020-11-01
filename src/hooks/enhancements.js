@@ -2,7 +2,9 @@ import enhancements from "data/enhancements.js";
 import ioSets from "data/ioSets.js";
 
 import useEnhancementNavigation from "providers/builder/useEnhancementNavigation.js";
+
 import { getEnhancementImage } from "helpers/getImages.js";
+import { getEnhancementSubSections } from "helpers/enhancements.js";
 
 export const useEnhancementsForPower = (power) => {
   // getEnhancementSectionForPower
@@ -41,6 +43,11 @@ export const useEnhancementsForPower = (power) => {
       return enh;
     });
   } else return [];
+};
+
+export const useGetEnhancementSubSections = () => {
+  const { enhNavigation } = useEnhancementNavigation();
+  return getEnhancementSubSections.bind(this, enhNavigation);
 };
 
 export const useAddEnhancement = (

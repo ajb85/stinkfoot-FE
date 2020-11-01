@@ -4,7 +4,6 @@ import useActiveSets from "providers/builder/useActiveSets.js";
 import useCharacterDetails from "providers/builder/useCharacterDetails.js";
 import usePowerSlots from "providers/builder/usePowerSlots.js";
 import usePoolPowers from "providers/builder/usePoolPowers.js";
-// import useEnhNav from "providers/builder/useEnhancementNavigation.js";
 
 import {
   getPowerset,
@@ -33,35 +32,6 @@ export function useActivePowerset(archetypeOrder) {
   const activeIndex = tracking[archetypeOrder];
   return usePowersets(archetypeOrder)[activeIndex];
 }
-
-// export function useSubSectionForPowerType(types) {
-//   // getSubSectionsForPower
-//   if (!Array.isArray(types)) {
-//     types = [types];
-//   }
-
-//   const {
-//     enhNavigation: { tier },
-//   } = useEnhNav();
-
-//   if (!isNaN(parseInt(tier, 10))) {
-//     // If IOs, map over the setNums
-//     return types.map((setNum) => {
-//       return {
-//         tier: setNum,
-//         name: setTypeConversion[setNum],
-//         isSet: true,
-//       };
-//     });
-//   }
-
-//   // Else, send back standard IOs
-//   return ["IO", "SO", "DO", "TO"].map((name) => ({
-//     tier: name,
-//     name,
-//     isSet: false,
-//   }));
-// }
 
 export function useBuildHasPower(power) {
   const { lookup } = useBuildAnalysis();
