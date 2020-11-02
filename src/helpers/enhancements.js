@@ -156,8 +156,3 @@ function getIOSetEnhancementsForPower(tier, showSuperior, power) {
     return enh;
   });
 }
-
-function _getBonuses(tier, setIndex) {
-  const setName = ioSets[tier][setIndex].displayName.split(" ").join("_");
-  return setBonuses[setName];
-}

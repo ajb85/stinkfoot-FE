@@ -1,4 +1,4 @@
-import { allOrigins } from "hooks/powersets.js";
+import allOrigins from "data/origins.js";
 
 const enhImages = require.context("./images/enhancements/", true);
 const overlayImages = require.context("./images/overlays/", true);

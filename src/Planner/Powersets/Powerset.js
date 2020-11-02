@@ -1,14 +1,14 @@
 import React from "react";
 
 import Dropdown from "components/Dropdown";
-import useActiveSets from "providers/useActiveSets.js";
+import useActiveSets from "providers/builder/useActiveSets.js";
+import usePoolPowers from "providers/builder/usePoolPowers.js";
 import { getPowersetImage } from "helpers/getImages.js";
 import {
   useTogglePower,
   useCanPowersetBeAdded,
   usePowerSelectionColor,
 } from "hooks/powersets.js";
-import usePoolPowers from "providers/builder/usePoolPowers.js";
 
 import styles from "./styles.module.scss";
 

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 
 import useEnhNavigation from "providers/builder/useEnhancementNavigation.js";
 import usePowerSlots from "providers/builder/usePowerSlots.js";
+import useActiveSets from "providers/builder/useActiveSets.js";
 import { reducer, mapSelected, getInitialAcc } from "./logic.js";
 import styles from "./styles.module.scss";
 
@@ -9,6 +10,7 @@ function PowerSlots(props) {
   const [view, setView] = useState("level");
   const { updateEnhNavigation } = useEnhNavigation();
   const { powerSlots } = usePowerSlots();
+  const { tracking } = useActiveSets();
   const toggleView = () => setView(view === "level" ? "respec" : "level");
   useEffect(() => {
     // Resets navigation whenever a power is opened or closed.  A more long term solution
@@ -20,7 +22,7 @@ function PowerSlots(props) {
       ioSetIndex: null,
     });
     // eslint-disable-next-line
-  }, [stateManager.tracking.powerSlotIndex]);
+  }, [tracking.powerSlot]);
 
   const { selected /*, defaults*/ } = powerSlots.reduce(
     reducer(view),

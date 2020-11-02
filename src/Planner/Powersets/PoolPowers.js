@@ -36,7 +36,7 @@ function PoolPowers(props) {
         {selectedPoolPowers.length < 4 && (
           <Powerset
             dropdown={{
-              name: "poolPowerIndex",
+              name: "poolPower",
               list: allPools,
             }}
             powerList={activePool.powers}

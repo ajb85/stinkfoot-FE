@@ -2,7 +2,7 @@ import React from "react";
 
 import Dropdown from "components/Dropdown";
 
-import { useCharacterDetails } from "providers/builder/useCharacterDetails.js";
+import useCharacterDetails from "providers/builder/useCharacterDetails.js";
 import { getArchetypeImage, getOriginImage } from "helpers/getImages.js";
 import allOrigins from "data/origins.js";
 import allArchetypes from "data/archetypes.js";
@@ -23,6 +23,7 @@ const originOptions = allOrigins.map(({ name }) => ({
 
 function CharacterInfo(props) {
   const { character, setCharacterDetail } = useCharacterDetails();
+
   return (
     <section className={styles.CharacterInfo}>
       <div>
