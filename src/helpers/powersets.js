@@ -2,14 +2,21 @@ import powersets from "data/powersets.js";
 import poolPowers from "data/poolPowers.js";
 import epicPools from "data/epicPools.js";
 
+const standardizeName = {
+  primary: "primaries",
+  primaries: "primaries",
+  secondary: "secondaries",
+  secondaries: "secondaries",
+  poolPower: "poolPowers",
+  poolPowers: "poolPowers",
+  epicPool: "epicPools",
+  epicPools: "epicPools",
+};
+
 export const allPowersets = {
-  primary: powersets,
   primaries: powersets,
-  secondary: powersets,
   secondaries: powersets,
-  poolPower: poolPowers,
   poolPowers,
-  epicPool: epicPools,
   epicPools,
 };
 
@@ -17,11 +24,17 @@ function isNotPoolPower(archetypeOrder) {
   return archetypeOrder !== "poolPower" && archetypeOrder !== "poolPowers";
 }
 
-export function getPowerset({ archetypeOrder }, archetype) {
-  const allSets = allPowersets[archetypeOrder];
-  const powersets = isNotPoolPower(archetypeOrder)
-    ? allSets[archetype]
-    : allSets;
+export function getPowerset(archetype, archetypeOrder) {
+  const atOrder = standardizeName[archetypeOrder];
+  const allSets = allPowersets[atOrder];
+  const notPool = isNotPoolPower(atOrder);
+
+  const powersets = notPool
+    ? atOrder === "epicPools"
+      ? allSets[archetype] // Epic pool -> Blaster: [set, set, set]
+      : allSets[archetype][atOrder] // Primary/Secondary -> Blaster: { primaries: [set, set, set]}
+    : allSets; // Pools -> [set, set, set]
+
   return powersets;
 }
 
@@ -64,8 +77,14 @@ export function canPowerGoInSlot(activeLevel, { lookup }, power) {
 
 export function canPowersetBeAdded({ lookup, excluded }, { fullName }) {
   const isExcluded = excluded.powersets[fullName];
-  const isAlreadyInBuild = lookup.powersets[fullName];
-  return !isExcluded && !isAlreadyInBuild;
+  // const isAlreadyInBuild = lookup.powersets[fullName];
+  if (isExcluded) {
+    console.log("FULL NAME: ", fullName);
+    console.log("IS EXCLUDED: ", isExcluded);
+    // console.log("IS ALREADY IN BUILD: ", isAlreadyInBuild);
+    // console.log("CAN ADD POWERSET? ", !isExcluded && !isAlreadyInBuild);
+  }
+  return !isExcluded;
 }
 
 export function powerSelectionColor(activeLevel, { lookup }, p) {

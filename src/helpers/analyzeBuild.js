@@ -149,7 +149,7 @@ function evaluatePowersets({ primary, secondary, pools }, results) {
     }
 
     return acc;
-  });
+  }, []);
 
   [...primaryPrevents, ...secondaryPrevents, ...poolsPrevents].reduce(
     (acc, { preventedSet, excludedBy }) => {

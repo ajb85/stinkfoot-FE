@@ -1,8 +1,8 @@
 import React from "react";
 
-import useGetBonusesForSet from "hooks/enhancements.js";
+import { useGetBonusesForSet } from "hooks/enhancements.js";
 import { useBuildAnalysis } from "hooks/powersets.js";
-import { getBonusTiersForPowerSlot } from "js/getBonusTiersForPowerSlot.js";
+import getBonusTiersForPowerSlot from "js/getBonusTiersForPowerSlot.js";
 import styles from "../styles.module.scss";
 
 function SetBonuses({ set, powerSlotIndex }) {

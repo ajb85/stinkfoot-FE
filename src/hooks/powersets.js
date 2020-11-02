@@ -26,7 +26,7 @@ import analyzeBuild from "helpers/analyzeBuild.js";
 export function usePowersets(archetypeOrder) {
   const { character } = useCharacterDetails();
   const { archetype } = character;
-  return getPowerset({ archetypeOrder }, archetype);
+  return getPowerset(archetype, archetypeOrder);
 }
 
 export function useActivePowerset(archetypeOrder) {
@@ -44,8 +44,8 @@ export const useBuildAnalysis = () => {
   const { character } = useCharacterDetails();
   const { powerSlots } = usePowerSlots();
   const activePowersets = {
-    primary: useActivePowerset("primaries"),
-    secondary: useActivePowerset("secondaries"),
+    primary: useActivePowerset("primary"),
+    secondary: useActivePowerset("secondary"),
     pools: useSelectedPools(),
   };
   const getBonusesForSet = useGetBonusesForSet();
@@ -89,8 +89,8 @@ export const usePowerSelectionColor = () => {
 };
 
 export function useCanPowersetBeAdded() {
-  const analysis = useBuildAnalysis();
-  return canPowersetBeAdded.bind(this, analysis);
+  const details = useBuildAnalysis();
+  return canPowersetBeAdded.bind(this, details);
 }
 
 /******************************************

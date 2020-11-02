@@ -19,26 +19,26 @@ function Powersets(props) {
           <Powerset
             header="Primary"
             dropdown={{
-              name: "primaryIndex",
+              name: "primary",
               list: usePowersets("primaries"),
             }}
-            powerList={useActivePowerset("primaries").powers}
+            powerList={useActivePowerset("primary").powers}
           />
           <Powerset
             header="Secondary"
             dropdown={{
-              name: "secondaryIndex",
+              name: "secondary",
               list: usePowersets("secondaries"),
             }}
-            powerList={useActivePowerset("secondaries").powers}
+            powerList={useActivePowerset("secondary").powers}
           />
           <Powerset
             header="Epic Pool"
             dropdown={{
-              name: "epicPoolIndex",
+              name: "epicPool",
               list: usePowersets("epicPools"),
             }}
-            powerList={useActivePowerset("epicPools").powers}
+            powerList={useActivePowerset("epicPool").powers}
           />
         </div>
         <PoolPowers />
