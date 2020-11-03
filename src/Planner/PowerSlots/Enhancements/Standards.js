@@ -6,6 +6,7 @@ import { useGetEnhancementSubSections } from "hooks/enhancements.js";
 import { getEnhancementOverlay } from "helpers/getImages.js";
 import usePowerSlots from "providers/builder/usePowerSlots.js";
 import useEnhNavigation from "providers/builder/useEnhancementNavigation.js";
+import useCharacterDetails from "providers/builder/useCharacterDetails.js";
 
 import styles from "../styles.module.scss";
 
@@ -14,7 +15,11 @@ export default function StandardEnhancements(props) {
   const { enhNavigation } = useEnhNavigation();
   const getEnhancementSubSections = useGetEnhancementSubSections();
   const { addEnhancement } = usePowerSlots();
-  const overlayImg = getEnhancementOverlay(enhNavigation.tier);
+  const { character } = useCharacterDetails();
+  const overlayImg = getEnhancementOverlay(
+    character.origin,
+    enhNavigation.tier
+  );
 
   return (
     <div className={styles.enhPreviewContainer}>

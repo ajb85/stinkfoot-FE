@@ -2,7 +2,7 @@ import powersets from "data/powersets.js";
 import poolPowers from "data/poolPowers.js";
 import epicPools from "data/epicPools.js";
 
-const standardizeName = {
+const standardizeOrder = {
   primary: "primaries",
   primaries: "primaries",
   secondary: "secondaries",
@@ -13,6 +13,13 @@ const standardizeName = {
   epicPools: "epicPools",
 };
 
+const pluralToSingleOrder = {
+  primaries: "primary",
+  secondaries: "secondary",
+  poolPowers: "poolPower",
+  epicPools: "epicPool",
+};
+
 export const allPowersets = {
   primaries: powersets,
   secondaries: powersets,
@@ -20,12 +27,8 @@ export const allPowersets = {
   epicPools,
 };
 
-function isNotPoolPower(archetypeOrder) {
-  return archetypeOrder !== "poolPower" && archetypeOrder !== "poolPowers";
-}
-
-export function getPowerset(archetype, archetypeOrder) {
-  const atOrder = standardizeName[archetypeOrder];
+export function getPowersets(archetype, archetypeOrder) {
+  const atOrder = standardizeOrder[archetypeOrder];
   const allSets = allPowersets[atOrder];
   const notPool = isNotPoolPower(atOrder);
 
@@ -34,26 +37,39 @@ export function getPowerset(archetype, archetypeOrder) {
       ? allSets[archetype] // Epic pool -> Blaster: [set, set, set]
       : allSets[archetype][atOrder] // Primary/Secondary -> Blaster: { primaries: [set, set, set]}
     : allSets; // Pools -> [set, set, set]
-
   return powersets;
 }
 
-export function getPower(archetype, { archetypeOrder, powerIndex, poolIndex }) {
-  const powerset = getPowerset({ archetypeOrder }, archetype);
-  const ps = poolIndex !== undefined ? powerset[poolIndex] : powerset;
-  return ps.powers[powerIndex];
-}
-
-export function togglePower(tracking, details, powerslots, power, index) {
-  const { removePowerFromSlot, addPowerToSlot } = powerslots;
+export function togglePower(trackingFuncs, details, psFuncs, power, index) {
+  const { tracking, setTrackingManually } = trackingFuncs;
+  const { removePowerFromSlot, addPowerToSlot, powerSlots } = psFuncs;
   const { lookup } = details;
   const isRemoving = lookup.powers[power.fullName] !== undefined;
 
+  let updatedPowerSlotState;
   if (isRemoving) {
-    removePowerFromSlot(lookup.powers[power.fullName]);
-  } else if (canPowerGoInSlot(power, tracking.activeLevel, details)) {
-    addPowerToSlot(power, index);
+    updatedPowerSlotState = removePowerFromSlot(lookup.powers[power.fullName]);
+  } else if (canPowerGoInSlot(tracking.activeLevel, details, power)) {
+    updatedPowerSlotState = addPowerToSlot(power, index);
+  } else {
+    const slotIndex = powerSlots.findIndex(
+      (ps) => !ps.power && ps.level >= power.level
+    );
+
+    updatedPowerSlotState = addPowerToSlot(power, slotIndex);
   }
+
+  if (updatedPowerSlotState) {
+    setTrackingManually(
+      "activeLevel",
+      getNextActiveLevel(updatedPowerSlotState)
+    );
+  }
+}
+
+function getNextActiveLevel(powerSlots) {
+  const nextSlot = powerSlots.find(({ power }) => !power);
+  return nextSlot ? nextSlot.level : null;
 }
 
 export function canPowerGoInSlot(activeLevel, { lookup }, power) {
@@ -104,4 +120,8 @@ export function powerSelectionColor(activeLevel, { lookup }, p) {
         : "grey"
       : "yellow"
     : "grey";
+}
+
+function isNotPoolPower(archetypeOrder) {
+  return archetypeOrder !== "poolPower" && archetypeOrder !== "poolPowers";
 }

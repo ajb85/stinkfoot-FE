@@ -7,8 +7,8 @@ import IOSetEnhancements from "../Enhancements/IOSets.js";
 import PunnettSquare from "components/PunnettSquare/";
 
 import useEnhNavigation from "providers/builder/useEnhancementNavigation.js";
+import useCharacterDetails from "providers/builder/useCharacterDetails.js";
 import { useGetEnhancementSubSections } from "hooks/enhancements.js";
-import { useGetPower } from "hooks/powersets";
 import useActiveSets from "providers/builder/useActiveSets.js";
 import usePowerSlots from "providers/builder/usePowerSlots.js";
 
@@ -16,14 +16,12 @@ import { getEnhancementImageWithOverlay } from "helpers/getImages.js";
 import styles from "../styles.module.scss";
 
 function PowerSlot({ slot }) {
-  const getPower = useGetPower();
   const { level, power, powerSlotIndex } = slot;
   const { enhNavigation, updateEnhNavigation } = useEnhNavigation();
   const { tracking, togglePowerSlot, setTrackingManually } = useActiveSets();
   const { powerSlots } = usePowerSlots();
   const getEnhancementSubSections = useGetEnhancementSubSections();
   const isToggled = tracking.powerSlot === powerSlotIndex;
-  const p = power ? getPower(power) : {};
   const zIndex = powerSlots.length * 2 - powerSlotIndex * 2;
 
   if (!power) {
@@ -61,13 +59,13 @@ function PowerSlot({ slot }) {
       styles: { color: enhNavigation.section === "sets" ? "red" : null },
       onClick: updateEnhNavigation.bind(this, {
         section: "sets",
-        tier: p.setTypes[0],
+        tier: power.setTypes[0],
         ioSetIndex: null,
       }),
     },
   ];
 
-  const sideOptions = getEnhancementSubSections(p.setTypes).map(
+  const sideOptions = getEnhancementSubSections(power.setTypes).map(
     ({ tier, name }) => ({
       content: name
         .split(" ")
@@ -100,7 +98,7 @@ function PowerSlot({ slot }) {
       >
         {/* Pill Title */}
         <p className="pillText" onClick={togglePowerSlot}>
-          ({level}) {p.displayName}
+          ({level}) {power.displayName}
         </p>
 
         <PunnettSquare
@@ -109,9 +107,12 @@ function PowerSlot({ slot }) {
           slot={slot}
         >
           {enhNavigation.section === "standard" ? (
-            <StandardEnhancements powerSlotIndex={powerSlotIndex} power={p} />
+            <StandardEnhancements
+              powerSlotIndex={powerSlotIndex}
+              power={power}
+            />
           ) : (
-            <IOSetEnhancements powerSlotIndex={powerSlotIndex} power={p} />
+            <IOSetEnhancements powerSlotIndex={powerSlotIndex} power={power} />
           )}
         </PunnettSquare>
         {/* Power stats - temporarily disabled, not ready for this feature */}
@@ -127,15 +128,13 @@ export default PowerSlot;
 
 function noFunc() {}
 function HoverMenu({ slot }) {
-  const getPower = useGetPower();
   const {
     powerSlots,
     removePowerFromSlot,
     removeEnhancement,
   } = usePowerSlots();
   const { level, power, enhSlots, powerSlotIndex } = slot;
-
-  const p = power ? getPower(power) : {};
+  const { character } = useCharacterDetails();
   const zIndex = powerSlots.length * 2 - powerSlotIndex * 2;
 
   return (
@@ -147,7 +146,7 @@ function HoverMenu({ slot }) {
         const displayLevel = slotLevel === null ? level : slotLevel;
 
         const images = enhancement
-          ? getEnhancementImageWithOverlay(enhancement)
+          ? getEnhancementImageWithOverlay(character.origin, enhancement)
           : null;
 
         return (

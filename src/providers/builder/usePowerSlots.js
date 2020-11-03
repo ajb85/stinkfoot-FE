@@ -7,16 +7,19 @@ const context = createContext();
 
 export const PowerSlotsProvider = (props) => {
   const [powerSlots, setPowerSlots] = useState(powerSlotsTemplate);
-
+  console.log("PS: ", powerSlots);
   const { Provider } = context;
 
   const removePowerFromSlot = (index) => {
     const newSlots = [...powerSlots];
     newSlots[index] = powerSlotsTemplate[index];
     setPowerSlots(newSlots);
+
+    return newSlots;
   };
 
   const addPowerToSlot = (power, index) => {
+    console.log("ADD POWER: ", power, "TO SLOT: ", index);
     const newSlots = [...powerSlots];
     newSlots[index] = {
       ...newSlots[index],
@@ -24,6 +27,8 @@ export const PowerSlotsProvider = (props) => {
       enhSlots: emptyDefaultSlot(),
     };
     setPowerSlots(newSlots);
+
+    return newSlots;
   };
 
   const addEnhancement = (powerSlotIndex, enhancement) => {

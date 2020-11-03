@@ -5,7 +5,7 @@ const initialState = {
   secondary: 0,
   poolPower: 0,
   epicPool: 0,
-  activeLevel: 0,
+  activeLevel: 1,
   powerSlot: null,
 };
 

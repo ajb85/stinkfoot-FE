@@ -12,6 +12,7 @@ function PowerSlots(props) {
   const { powerSlots } = usePowerSlots();
   const { tracking } = useActiveSets();
   const toggleView = () => setView(view === "level" ? "respec" : "level");
+
   useEffect(() => {
     // Resets navigation whenever a power is opened or closed.  A more long term solution
     // would probably be to store the state for every power slot so there can be a memory of where

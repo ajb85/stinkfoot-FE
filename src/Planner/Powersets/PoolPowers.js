@@ -35,10 +35,7 @@ function PoolPowers(props) {
         {/* Render new power pool selection */}
         {selectedPoolPowers.length < 4 && (
           <Powerset
-            dropdown={{
-              name: "poolPower",
-              list: allPools,
-            }}
+            dropdown={{ name: "poolPower", list: allPools }}
             powerList={activePool.powers}
             togglePower={addPowerFromNewPool}
             compact
