@@ -8,10 +8,11 @@ import usePoolPowers from "providers/builder/usePoolPowers.js";
 import {
   getPowersets,
   togglePower,
-  canPowerGoInSlot,
+  arePowerRequirementsMet,
   canPowersetBeAdded,
   powerSelectionColor,
   getNextActiveLevel,
+  getSlotIndexFromActiveLevel,
 } from "helpers/powersets.js";
 
 import { useGetBonusesForSet } from "hooks/enhancements.js";
@@ -77,16 +78,16 @@ export const useTogglePower = () => {
   );
 };
 
-export const useCanPowerGoInSlot = () => {
-  const { tracking } = useActiveSets();
-  const details = useBuildAnalysis();
-  return canPowerGoInSlot.bind(this, tracking.activeLevel, details);
-};
-
 export const usePowerSelectionColor = () => {
   const { tracking } = useActiveSets();
   const details = useBuildAnalysis();
-  return powerSelectionColor.bind(this, tracking.activeLevel, details);
+  const { powerSlots } = usePowerSlots();
+  const getSlotIndex = getSlotIndexFromActiveLevel.bind(this, tracking);
+  return powerSelectionColor.bind(
+    this,
+    details,
+    (power) => powerSlots[getSlotIndex(power)]
+  );
 };
 
 export function useCanPowersetBeAdded() {
