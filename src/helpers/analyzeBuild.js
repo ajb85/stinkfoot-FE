@@ -21,6 +21,7 @@ export default ((cache) => (
 
 function getSlotReducer(archetype, getBonusesForSet) {
   const setBonusesCache = {};
+
   return function reduceSlot(acc, { enhSlots, level, power, type }, i) {
     const isEmpty = !power || !enhSlots;
     if (isEmpty) {
@@ -82,19 +83,24 @@ function getSlotReducer(archetype, getBonusesForSet) {
 
     // Tally set bonuses
     const powerBonuses = acc.lookup.setsInPower[power.fullName];
-    Object.keys(powerBonuses).forEach((setName) => {
-      const { set, count } = powerBonuses[setName];
-      if (!setBonusesCache[set.fullName]) {
-        setBonusesCache[set.fullName] = getBonusesForSet(set);
-      }
 
-      const setBonuses = setBonusesCache[set.fullName];
-      setBonuses.slice(0, count - 1).forEach(({ name }) => {
-        // Should consider PvP ?
-        const { setBonuses } = acc.lookup;
-        setBonuses[name] = setBonuses[name] ? setBonuses[name] + 1 : 1;
+    if (powerBonuses) {
+      Object.keys(powerBonuses).forEach((setName) => {
+        const { set, count } = powerBonuses[setName];
+        if (!setBonusesCache[set.fullName]) {
+          setBonusesCache[set.fullName] = getBonusesForSet(set);
+        }
+
+        const setBonuses = setBonusesCache[set.fullName];
+        setBonuses.slice(0, count - 1).forEach(({ name }) => {
+          // Should consider PvP ?
+          const { setBonuses } = acc.lookup;
+          setBonuses[name] = setBonuses[name] ? setBonuses[name] + 1 : 1;
+        });
       });
-    });
+      return acc;
+    }
+
     return acc;
   };
 }

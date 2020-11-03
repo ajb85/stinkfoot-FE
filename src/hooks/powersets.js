@@ -6,8 +6,7 @@ import usePowerSlots from "providers/builder/usePowerSlots.js";
 import usePoolPowers from "providers/builder/usePoolPowers.js";
 
 import {
-  getPowerset,
-  getPower,
+  getPowersets,
   togglePower,
   canPowerGoInSlot,
   canPowersetBeAdded,
@@ -26,7 +25,7 @@ import analyzeBuild from "helpers/analyzeBuild.js";
 export function usePowersets(archetypeOrder) {
   const { character } = useCharacterDetails();
   const { archetype } = character;
-  return getPowerset(archetype, archetypeOrder);
+  return getPowersets(archetype, archetypeOrder);
 }
 
 export function useActivePowerset(archetypeOrder) {
@@ -63,17 +62,11 @@ export const useBuildAnalysis = () => {
  *********  FUNCTION RETRIEVERS  **********
  ******************************************
  *****************************************/
-export function useGetPower() {
-  const { character } = useCharacterDetails();
-  const { archetype } = character;
-  return getPower.bind(this, archetype);
-}
-
 export const useTogglePower = () => {
-  const { tracking } = useActiveSets();
+  const trackingState = useActiveSets();
   const details = useBuildAnalysis();
   const psFuncs = usePowerSlots();
-  return togglePower.bind(this, tracking, details, psFuncs);
+  return togglePower.bind(this, trackingState, details, psFuncs);
 };
 
 export const useCanPowerGoInSlot = () => {
@@ -138,6 +131,7 @@ export function useAddPowerFromNewPool() {
   const togglePower = useTogglePower();
   const updateTracking = useFirstUnusedPool();
   const { addPool } = usePoolPowers();
+
   return (power) => {
     if (canBeAdded) {
       const { poolIndex } = power;
@@ -150,7 +144,11 @@ export function useAddPowerFromNewPool() {
 
 export function useFirstUnusedPool() {
   const { setTrackingManually } = useActiveSets();
+  const activePool = useActivePowerset("poolPower");
   const canPoolBeAdded = useCanPoolBeAdded();
-  const firstPool = poolPowers.find((pool) => canPoolBeAdded(pool)) || {};
+  const firstPool =
+    poolPowers.find(
+      (pool) => canPoolBeAdded(pool) && pool.poolIndex !== activePool.poolIndex
+    ) || {};
   return setTrackingManually.bind(this, "poolPower", firstPool.poolIndex || 0);
 }

@@ -14,9 +14,9 @@ export const getEnhancementImage = (name) => {
   return enhImages(`./${name}`);
 };
 
-export const getEnhancementOverlay = (tier) => {
+export const getEnhancementOverlay = (origin, tier) => {
   // getEnhancementOverlay
-  const oData = allOrigins.find((o) => o.name === this.origin);
+  const oData = allOrigins.find((o) => o.name === origin);
 
   switch (tier) {
     case "IO":
@@ -31,14 +31,17 @@ export const getEnhancementOverlay = (tier) => {
   }
 };
 
-export const getEnhancementImageWithOverlay = ({ imageName, tier, type }) => {
+export const getEnhancementImageWithOverlay = (
+  origin,
+  { imageName, tier, type }
+) => {
   // getEnhancementAndOverlayImages
   const enhancement = enhImages(`./${imageName}`);
   let overlay;
   if (type === "standard") {
-    overlay = getEnhancementOverlay(tier);
+    overlay = getEnhancementOverlay(origin, tier);
   } else if (type === "set") {
-    overlay = getEnhancementOverlay("IO");
+    overlay = getEnhancementOverlay(origin, "IO");
   }
 
   return {

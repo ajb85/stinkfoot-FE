@@ -99,6 +99,9 @@ export const getIOSet = (setIndex) => ioSets[setIndex];
 export const canEnhancementGoInPowerSlot = ({ lookup }, power, enhancement) => {
   // With isUnique, type, and fullName, this will return if the
   // enhancement can be added to a slot
+  if (!power) {
+    return false;
+  }
 
   const { isUnique, type, fullName } = enhancement;
 

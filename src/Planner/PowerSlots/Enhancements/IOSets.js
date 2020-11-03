@@ -4,18 +4,19 @@ import IOHoverMenu from "../HoverMenus/IOSets.js";
 
 import { useGetEnhancementsForPower } from "hooks/enhancements.js";
 import useEnhNavigation from "providers/builder/useEnhancementNavigation.js";
-
+import useCharacterDetails from "providers/builder/useCharacterDetails.js";
 import { getEnhancementOverlay } from "helpers/getImages.js";
 import styles from "../styles.module.scss";
 
 export default function IOSets(props) {
   const enhRefs = useRef([]);
   const { powerSlotIndex, power: p } = props;
+  const { character } = useCharacterDetails();
   const { enhNavigation, updateEnhNavigation } = useEnhNavigation();
   const getEnhancementsForPower = useGetEnhancementsForPower();
 
   const enhancementsData = getEnhancementsForPower(p);
-  const overlayImg = getEnhancementOverlay("IO");
+  const overlayImg = getEnhancementOverlay(character.origin, "IO");
 
   useEffect(() => {
     if (enhancementsData.length !== enhRefs.current.length) {

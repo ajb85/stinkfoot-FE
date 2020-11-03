@@ -1,10 +1,8 @@
-import { getPower } from "./powersets.js";
-
 export default (enhancement, powerSlot, archetype) => {
   // With isUnique, type, and fullName, this will return if the
   // enhancement can be added to a slot
   //   const powerSlot = this.nextState.build.powerSlots[powerSlotIndex];
-  const power = getPower(powerSlot.power, archetype);
+  const { power } = powerSlot.power;
 
   const { isUnique, type, fullName } = enhancement;
   const enhLookup = this.nextState.lookup.enhancements;

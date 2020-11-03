@@ -14,7 +14,7 @@ import styles from "./styles.module.scss";
 
 function Powerset(props) {
   const { tracking, setActiveTracking } = useActiveSets();
-  const { header, dropdown, powerList, poolIndex, compact } = props;
+  const { header, dropdown = {}, powerList, poolIndex, compact } = props;
   const tp = useTogglePower();
   const canPowersetBeAdded = useCanPowersetBeAdded();
   const powerSelectionColor = usePowerSelectionColor();
@@ -27,8 +27,7 @@ function Powerset(props) {
   const updateBuild = props.updateBuild || setActiveTracking;
   const width = compact ? 123 : 170;
 
-  const { list, name } = dropdown;
-  const index = tracking[name];
+  const index = dropdown.name && tracking[dropdown.name];
 
   return (
     <div className={styles.Powerset}>
@@ -41,17 +40,19 @@ function Powerset(props) {
           <h3 style={{ width }}>{header}</h3>
         )
       ) : null}
-      {dropdown && (
+      {dropdown.name && dropdown.list && (
         <div style={{ width }}>
           <Dropdown
             selected={index}
-            name={name}
+            name={dropdown.name}
             width={150 + 20}
-            options={filterDropdownList(canPowersetBeAdded, list).map((p) => ({
-              value: p.originalIndex,
-              display: p.displayName,
-              image: getPowersetImage(p.imageName),
-            }))}
+            options={filterDropdownList(canPowersetBeAdded, dropdown.list).map(
+              (p) => ({
+                value: p.originalIndex,
+                display: p.displayName,
+                image: getPowersetImage(p.imageName),
+              })
+            )}
             onChange={updateBuild}
           />
         </div>

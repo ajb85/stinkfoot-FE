@@ -1,5 +1,6 @@
 import useEnhancementNavigation from "providers/builder/useEnhancementNavigation.js";
 
+import useActiveSets from "providers/builder/useActiveSets.js";
 import {
   getEnhancementSubSections,
   getEnhancementsForPower,
@@ -7,7 +8,7 @@ import {
   getBonusesForSet,
 } from "helpers/enhancements.js";
 
-import { useBuildAnalysis, useGetPower } from "./powersets.js";
+import { useBuildAnalysis } from "./powersets.js";
 
 export const useGetEnhancementsForPower = () => {
   // getEnhancementSectionForPower
@@ -23,13 +24,7 @@ export const useGetEnhancementSubSections = () => {
 
 export const useCanEnhancementGoInPowerSlot = (powerSlot) => {
   const details = useBuildAnalysis();
-  const getPower = useGetPower();
-
-  return canEnhancementGoInPowerSlot.bind(
-    this,
-    details,
-    getPower(powerSlot.power)
-  );
+  return canEnhancementGoInPowerSlot.bind(this, details, powerSlot.power);
 };
 
 export const useGetBonusesForSet = () => {
