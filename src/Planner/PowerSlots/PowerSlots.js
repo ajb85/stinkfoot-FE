@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 
 import useEnhNavigation from "providers/builder/useEnhancementNavigation.js";
 import usePowerSlots from "providers/builder/usePowerSlots.js";
@@ -14,7 +14,10 @@ function PowerSlots(props) {
   const { updateEnhNavigation } = useEnhNavigation();
   const { powerSlots } = usePowerSlots();
   const { tracking } = useActiveSets();
-  const toggleView = () => setView(view === "level" ? "respec" : "level");
+  const toggleView = useCallback(
+    () => setView(view === "level" ? "respec" : "level"),
+    [view]
+  );
   const updateActiveLevel = useNextActiveLevel();
 
   useEffect(() => {
@@ -30,7 +33,6 @@ function PowerSlots(props) {
   }, [tracking.powerSlot]);
 
   useEffect(() => {
-    console.log("UPDATING ACTIVE LEVEL");
     updateActiveLevel();
   }, [powerSlots]); // eslint-disable-line
 

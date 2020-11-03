@@ -1,6 +1,7 @@
 import powersets from "data/powersets.js";
 import poolPowers from "data/poolPowers.js";
 import epicPools from "data/epicPools.js";
+import { powerSlotIndexLookup } from "data/powerSlotsTemplate.js";
 
 const standardizeOrder = {
   primary: "primaries",
@@ -13,12 +14,12 @@ const standardizeOrder = {
   epicPools: "epicPools",
 };
 
-const pluralToSingleOrder = {
-  primaries: "primary",
-  secondaries: "secondary",
-  poolPowers: "poolPower",
-  epicPools: "epicPool",
-};
+// const pluralToSingleOrder = {
+//   primaries: "primary",
+//   secondaries: "secondary",
+//   poolPowers: "poolPower",
+//   epicPools: "epicPool",
+// };
 
 export const allPowersets = {
   primaries: powersets,
@@ -40,23 +41,57 @@ export function getPowersets(archetype, archetypeOrder) {
   return powersets;
 }
 
-export function togglePower(trackingFuncs, details, psFuncs, power, index) {
-  const { tracking, setTrackingManually } = trackingFuncs;
+export function togglePower({ tracking }, archetype, details, psFuncs, power) {
   const { removePowerFromSlot, addPowerToSlot, powerSlots } = psFuncs;
   const { lookup } = details;
   const isRemoving = lookup.powers[power.fullName] !== undefined;
 
-  let updatedPowerSlotState;
+  const isPrimary = power.archetypeOrder === "primary";
+
+  const slotIndex =
+    tracking.activeLevel === 1
+      ? isPrimary
+        ? 1
+        : 0
+      : powerSlotIndexLookup.selected[tracking.activeLevel];
+  const activePowerSlot = powerSlots[slotIndex];
+
+  if (!isRemoving && power.level === 1) {
+    // Level one powers are more complicated so handling them separate to try to keep the logic
+    // organized
+    if (isPrimary && !powerSlots[0].power) {
+      // When adding a level 1 primary to the build, automatically add the first level 1 secondary power if it isn't added
+      const secondary = getPowersets(archetype, "secondary")[
+        tracking.secondary
+      ];
+      addPowerToSlot(secondary.powers[0], 0);
+    }
+
+    if (power.archetypeOrder === "secondary") {
+      // Force level 1 secondary to go in the first slot
+      // (blocks from adding it to a later slot)
+      return addPowerToSlot(power, 0);
+    } else {
+      if (activePowerSlot.level !== 1 && !powerSlots[1].power) {
+        // User is adding a level 1 power to a higher level slot without having a skill in level 1, thus auto assign the other
+        const otherPowerIndex = power.index === 0 ? 1 : 0;
+        const primary = getPowersets(archetype, "primary")[tracking.primary];
+        const otherPower = primary.powers[otherPowerIndex];
+        addPowerToSlot(otherPower, 1);
+      }
+    }
+  }
+
   if (isRemoving) {
-    updatedPowerSlotState = removePowerFromSlot(lookup.powers[power.fullName]);
-  } else if (canPowerGoInSlot(tracking.activeLevel, details, power)) {
-    updatedPowerSlotState = addPowerToSlot(power, index);
+    removePowerFromSlot(lookup.powers[power.fullName]);
+  } else if (canPowerGoInSlot(activePowerSlot, details, power)) {
+    addPowerToSlot(power, slotIndex);
   } else {
     const slotIndex = powerSlots.findIndex(
       (ps) => !ps.power && ps.level >= power.level
     );
 
-    updatedPowerSlotState = addPowerToSlot(power, slotIndex);
+    addPowerToSlot(power, slotIndex);
   }
 }
 
@@ -66,7 +101,7 @@ export function getNextActiveLevel(setTrackingManually, powerSlots) {
   setTrackingManually("activeLevel", nextLevel);
 }
 
-export function canPowerGoInSlot(activeLevel, { lookup }, power) {
+export function canPowerGoInSlot(slot, { lookup }, power) {
   const hasRequirements = power.requirements;
 
   if (hasRequirements) {
@@ -82,7 +117,7 @@ export function canPowerGoInSlot(activeLevel, { lookup }, power) {
     }
   }
 
-  return power.level <= activeLevel;
+  return power.level <= slot.level;
 }
 
 export function canPowersetBeAdded({ lookup, excluded }, { fullName }) {
