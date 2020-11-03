@@ -5,31 +5,38 @@ import slotsManager from "js/slotsManager.js";
 
 const context = createContext();
 
+let timeout;
 export const PowerSlotsProvider = (props) => {
   const [powerSlots, setPowerSlots] = useState(powerSlotsTemplate);
-  console.log("PS: ", powerSlots);
   const { Provider } = context;
 
   const removePowerFromSlot = (index) => {
     const newSlots = [...powerSlots];
     newSlots[index] = powerSlotsTemplate[index];
     setPowerSlots(newSlots);
-
-    return newSlots;
   };
 
-  const addPowerToSlot = (power, index) => {
-    console.log("ADD POWER: ", power, "TO SLOT: ", index);
+  const addPowerToSlot = ((cache) => (power, index) => {
+    // Experimenting with this pattern, allows multiple calls to the same
+    // state updater to pool up the instructions then loop over them and make a single
+    // state update
+    timeout && clearTimeout(timeout);
+    cache.push({ power, index });
     const newSlots = [...powerSlots];
-    newSlots[index] = {
-      ...newSlots[index],
-      power,
-      enhSlots: emptyDefaultSlot(),
-    };
-    setPowerSlots(newSlots);
 
-    return newSlots;
-  };
+    timeout = setTimeout(() => {
+      cache.forEach(({ power, index }) => {
+        newSlots[index] = {
+          ...newSlots[index],
+          power,
+          enhSlots: emptyDefaultSlot(),
+        };
+      });
+      setPowerSlots(newSlots);
+      cache = [];
+      timeout = null;
+    });
+  })([]);
 
   const addEnhancement = (powerSlotIndex, enhancement) => {
     const powerSlot = powerSlots[powerSlotIndex];

@@ -67,7 +67,14 @@ export const useTogglePower = () => {
   const trackingState = useActiveSets();
   const details = useBuildAnalysis();
   const psFuncs = usePowerSlots();
-  return togglePower.bind(this, trackingState, details, psFuncs);
+  const { character } = useCharacterDetails();
+  return togglePower.bind(
+    this,
+    trackingState,
+    character.archetype,
+    details,
+    psFuncs
+  );
 };
 
 export const useCanPowerGoInSlot = () => {

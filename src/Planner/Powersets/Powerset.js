@@ -61,12 +61,12 @@ function Powerset(props) {
         style={{ width, textAlign: compact ? "center" : "left" }}
         className={styles.powersList}
       >
-        {powerList.map((p, i) => {
+        {powerList.map((p) => {
           return (
             <p
               key={p.fullName}
               style={{ color: powerSelectionColor(p) }}
-              onClick={togglePower.bind(this, p, i)}
+              onClick={togglePower.bind(this, p)}
             >
               {p.displayName}
             </p>
