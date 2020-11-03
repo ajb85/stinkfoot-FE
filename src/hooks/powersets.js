@@ -11,6 +11,7 @@ import {
   canPowerGoInSlot,
   canPowersetBeAdded,
   powerSelectionColor,
+  getNextActiveLevel,
 } from "helpers/powersets.js";
 
 import { useGetBonusesForSet } from "hooks/enhancements.js";
@@ -85,6 +86,18 @@ export function useCanPowersetBeAdded() {
   const details = useBuildAnalysis();
   return canPowersetBeAdded.bind(this, details);
 }
+
+export const useNextActiveLevel = () => {
+  const { powerSlots } = usePowerSlots();
+  const { setTrackingManually } = useActiveSets();
+  return getNextActiveLevel.bind(this, setTrackingManually, powerSlots);
+};
+
+/******************************************
+ ******************************************
+ ***********  STATE UPDATERS  *************
+ ******************************************
+ *****************************************/
 
 /******************************************
  ******************************************
