@@ -58,18 +58,12 @@ export function togglePower(trackingFuncs, details, psFuncs, power, index) {
 
     updatedPowerSlotState = addPowerToSlot(power, slotIndex);
   }
-
-  if (updatedPowerSlotState) {
-    setTrackingManually(
-      "activeLevel",
-      getNextActiveLevel(updatedPowerSlotState)
-    );
-  }
 }
 
-function getNextActiveLevel(powerSlots) {
+export function getNextActiveLevel(setTrackingManually, powerSlots) {
   const nextSlot = powerSlots.find(({ power }) => !power);
-  return nextSlot ? nextSlot.level : null;
+  const nextLevel = nextSlot ? nextSlot.level : null;
+  setTrackingManually("activeLevel", nextLevel);
 }
 
 export function canPowerGoInSlot(activeLevel, { lookup }, power) {
