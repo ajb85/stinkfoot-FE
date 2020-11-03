@@ -41,6 +41,15 @@ export function getPowersets(archetype, archetypeOrder) {
   return powersets;
 }
 
+export function getSlotIndexFromActiveLevel({ activeLevel }, power) {
+  const isPrimary = power.archetypeOrder === "primary";
+  return activeLevel === 1
+    ? isPrimary
+      ? 1
+      : 0
+    : powerSlotIndexLookup.selected[activeLevel];
+}
+
 export function togglePower({ tracking }, archetype, details, psFuncs, power) {
   const { removePowerFromSlot, addPowerToSlot, powerSlots } = psFuncs;
   const { lookup } = details;
@@ -48,12 +57,7 @@ export function togglePower({ tracking }, archetype, details, psFuncs, power) {
 
   const isPrimary = power.archetypeOrder === "primary";
 
-  const slotIndex =
-    tracking.activeLevel === 1
-      ? isPrimary
-        ? 1
-        : 0
-      : powerSlotIndexLookup.selected[tracking.activeLevel];
+  const slotIndex = getSlotIndexFromActiveLevel(tracking, power);
   const activePowerSlot = powerSlots[slotIndex];
 
   if (!isRemoving && power.level === 1) {
@@ -84,7 +88,7 @@ export function togglePower({ tracking }, archetype, details, psFuncs, power) {
 
   if (isRemoving) {
     removePowerFromSlot(lookup.powers[power.fullName]);
-  } else if (canPowerGoInSlot(activePowerSlot, details, power)) {
+  } else if (tracking.activeLevel >= power.level) {
     addPowerToSlot(power, slotIndex);
   } else {
     const slotIndex = powerSlots.findIndex(
@@ -101,23 +105,19 @@ export function getNextActiveLevel(setTrackingManually, powerSlots) {
   setTrackingManually("activeLevel", nextLevel);
 }
 
-export function canPowerGoInSlot(slot, { lookup }, power) {
-  const hasRequirements = power.requirements;
-
-  if (hasRequirements) {
-    const { powers, count } = power.requirements;
-
-    const reqCount = Object.keys(powers).reduce(
-      (acc, p) => (lookup.powers[p] !== undefined ? acc + 1 : acc),
-      0
-    );
-
-    if (reqCount < count) {
-      return false;
-    }
+export function arePowerRequirementsMet({ lookup }, power) {
+  if (!power.requires) {
+    return true;
   }
+  const slotIndex = lookup.powers[power.fullName];
+  const { powers, count } = power.requires;
+  const reqCount = Object.keys(powers).reduce((acc, p) => {
+    return lookup.powers[p] !== undefined && lookup.powers[p] < slotIndex
+      ? acc + 1
+      : acc;
+  }, 0);
 
-  return power.level <= slot.level;
+  return reqCount >= count;
 }
 
 export function canPowersetBeAdded({ lookup, excluded }, { fullName }) {
@@ -132,17 +132,18 @@ export function canPowersetBeAdded({ lookup, excluded }, { fullName }) {
   return !isExcluded;
 }
 
-export function powerSelectionColor(activeLevel, { lookup }, p) {
+export function powerSelectionColor({ lookup }, getSlotFromPower, power) {
   const isPoolPower =
-    p.archetypeOrder === "poolPower" || p.archetypeOrder === "epicPool";
-  const isPowerInUse = lookup.powers[p.fullName] !== undefined;
-  const areReqsMet = canPowerGoInSlot(activeLevel, { lookup }, p);
+    power.archetypeOrder === "poolPower" || power.archetypeOrder === "epicPool";
+  const isPowerInUse = lookup.powers[power.fullName] !== undefined;
+  const powerSlot = getSlotFromPower(power);
+  const areReqsMet = arePowerRequirementsMet({ lookup }, power);
 
   return isPowerInUse
     ? areReqsMet
       ? "lightgreen"
       : "red"
-    : activeLevel >= p.level
+    : powerSlot.level >= power.level
     ? isPoolPower
       ? areReqsMet
         ? "yellow"

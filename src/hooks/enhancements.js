@@ -1,6 +1,5 @@
 import useEnhancementNavigation from "providers/builder/useEnhancementNavigation.js";
 
-import useActiveSets from "providers/builder/useActiveSets.js";
 import {
   getEnhancementSubSections,
   getEnhancementsForPower,
