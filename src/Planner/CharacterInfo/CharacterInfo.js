@@ -2,8 +2,10 @@ import React from "react";
 
 import Dropdown from "components/Dropdown";
 
+import { useSwitchArchetype } from "hooks/powersets.js";
 import useCharacterDetails from "providers/builder/useCharacterDetails.js";
 import { getArchetypeImage, getOriginImage } from "helpers/getImages.js";
+
 import allOrigins from "data/origins.js";
 import allArchetypes from "data/archetypes.js";
 
@@ -23,6 +25,7 @@ const originOptions = allOrigins.map(({ name }) => ({
 
 function CharacterInfo(props) {
   const { character, setCharacterDetail } = useCharacterDetails();
+  const switchArchetype = useSwitchArchetype();
 
   return (
     <section className={styles.CharacterInfo}>
@@ -32,7 +35,7 @@ function CharacterInfo(props) {
           <Dropdown
             selected={character.archetype}
             name="archetype"
-            onChange={setCharacterDetail}
+            onChange={switchArchetype}
             options={atOptions}
           />
         </div>

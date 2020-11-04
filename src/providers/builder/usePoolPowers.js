@@ -9,7 +9,8 @@ export function PoolPowersProvider(props) {
 
   const addPool = (index) => setPools([...pools, index]);
   const removePool = (index) => setPools(pools.filter((i) => i !== index));
-  const state = { pools, addPool, removePool };
+  const resetPools = () => setPools([]);
+  const state = { pools, addPool, removePool, resetPools };
   return <Provider value={state}>{props.children}</Provider>;
 }
 

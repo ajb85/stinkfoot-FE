@@ -63,6 +63,25 @@ export const useBuildAnalysis = () => {
  *********  FUNCTION RETRIEVERS  **********
  ******************************************
  *****************************************/
+export const useResetBuild = () => {
+  const { resetPowerSlots } = usePowerSlots();
+  const { resetPools } = usePoolPowers();
+
+  return () => {
+    resetPowerSlots();
+    resetPools();
+  };
+};
+
+export const useSwitchArchetype = () => {
+  const { setCharacterDetail } = useCharacterDetails();
+  const resetBuild = useResetBuild();
+  return (e) => {
+    setCharacterDetail(e);
+    resetBuild();
+  };
+};
+
 export const useChangePowerset = () => {
   const { powerSlots, removePowerFromSlot, addPowerToSlot } = usePowerSlots();
   const { setActiveTracking } = useActiveSets();
