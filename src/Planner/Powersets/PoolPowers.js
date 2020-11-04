@@ -16,7 +16,7 @@ function PoolPowers(props) {
   const addPowerFromNewPool = useAddPowerFromNewPool();
   const canPoolBeAdded = useCanPoolBeAdded();
   const list = createFilteredOptionsList(canPoolBeAdded, allPools);
-  console.log("SELECTED POOLS: ", selectedPoolPowers);
+
   return (
     <div className={styles.PoolPowers}>
       <h2>Power Pools</h2>

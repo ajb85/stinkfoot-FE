@@ -10,11 +10,28 @@ export const PowerSlotsProvider = (props) => {
   const [powerSlots, setPowerSlots] = useState(powerSlotsTemplate);
   const { Provider } = context;
 
-  const removePowerFromSlot = (index) => {
-    const newSlots = [...powerSlots];
-    newSlots[index] = powerSlotsTemplate[index];
-    setPowerSlots(newSlots);
-  };
+  const removePowerFromSlot = ((cache) => (index) => {
+    // Experimenting with this pattern, allows multiple calls to the same
+    // state updater to pool up the instructions then loop over them and make a single
+    // state update
+    cache.push(index);
+    timeout && clearTimeout(timeout);
+    timeout = setTimeout(() => {
+      const newSlots = [...powerSlots];
+      cache.forEach((index) => {
+        if (newSlots[index].enhSlots.length > 1) {
+          console.log("RETURNING SLOTS!");
+          newSlots[index].enhSlots.forEach(
+            ({ slotLevel }) => slotLevel && slotsManager.returnSlot(slotLevel)
+          );
+        }
+        newSlots[index] = powerSlotsTemplate[index];
+      });
+      setPowerSlots(newSlots);
+      cache = [];
+      timeout = null;
+    });
+  })([]);
 
   const addPowerToSlot = ((cache) => (power, index) => {
     // Experimenting with this pattern, allows multiple calls to the same
@@ -22,9 +39,8 @@ export const PowerSlotsProvider = (props) => {
     // state update
     timeout && clearTimeout(timeout);
     cache.push({ power, index });
-    const newSlots = [...powerSlots];
-
     timeout = setTimeout(() => {
+      const newSlots = [...powerSlots];
       cache.forEach(({ power, index }) => {
         newSlots[index] = {
           ...newSlots[index],

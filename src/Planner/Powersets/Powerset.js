@@ -2,9 +2,12 @@ import React from "react";
 
 import Dropdown from "components/Dropdown";
 import useActiveSets from "providers/builder/useActiveSets.js";
-import usePoolPowers from "providers/builder/usePoolPowers.js";
 import { getPowersetImage } from "helpers/getImages.js";
-import { useTogglePower, usePowerSelectionColor } from "hooks/powersets.js";
+import {
+  useTogglePower,
+  usePowerSelectionColor,
+  useRemovePool,
+} from "hooks/powersets.js";
 
 import styles from "./styles.module.scss";
 
@@ -15,7 +18,7 @@ function Powerset(props) {
 
   const powerSelectionColor = usePowerSelectionColor();
   const isPoolPower = poolIndex !== undefined;
-  const { removePool } = usePoolPowers();
+  const removePool = useRemovePool();
 
   // This allows components to supply their own methods to run when
   // clicking a power or changing dropdown selection.
