@@ -4,11 +4,7 @@ import Dropdown from "components/Dropdown";
 import useActiveSets from "providers/builder/useActiveSets.js";
 import usePoolPowers from "providers/builder/usePoolPowers.js";
 import { getPowersetImage } from "helpers/getImages.js";
-import {
-  useTogglePower,
-  useCanPowersetBeAdded,
-  usePowerSelectionColor,
-} from "hooks/powersets.js";
+import { useTogglePower, usePowerSelectionColor } from "hooks/powersets.js";
 
 import styles from "./styles.module.scss";
 
@@ -16,7 +12,7 @@ function Powerset(props) {
   const { tracking, setActiveTracking } = useActiveSets();
   const { header, dropdown = {}, powerList, poolIndex, compact } = props;
   const tp = useTogglePower();
-  const canPowersetBeAdded = useCanPowersetBeAdded();
+
   const powerSelectionColor = usePowerSelectionColor();
   const isPoolPower = poolIndex !== undefined;
   const { removePool } = usePoolPowers();
@@ -46,13 +42,7 @@ function Powerset(props) {
             selected={index}
             name={dropdown.name}
             width={150 + 20}
-            options={filterDropdownList(canPowersetBeAdded, dropdown.list).map(
-              (p) => ({
-                value: p.originalIndex,
-                display: p.displayName,
-                image: getPowersetImage(p.imageName),
-              })
-            )}
+            options={props.dropdown.list}
             onChange={updateBuild}
           />
         </div>
@@ -77,13 +67,15 @@ function Powerset(props) {
   );
 }
 
-function filterDropdownList(canPoolBeAdded, list) {
+export function createFilteredOptionsList(filterFunction, list) {
   return list
-    .map((l, i) => {
-      l.originalIndex = i;
-      return l;
-    })
-    .filter((pool) => canPoolBeAdded(pool));
+    .map((ps, i) => ({
+      ...ps,
+      value: i,
+      display: ps.displayName,
+      image: getPowersetImage(ps.imageName),
+    }))
+    .filter((powerset) => filterFunction(powerset)); // could be single .reduce
 }
 
 export default Powerset;

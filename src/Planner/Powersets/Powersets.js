@@ -1,6 +1,7 @@
 import React from "react";
 
-import Powerset from "./Powerset.js";
+import Powerset, { createFilteredOptionsList } from "./Powerset.js";
+import { useCanPowersetBeAdded } from "hooks/powersets.js";
 import PoolPowers from "./PoolPowers.js";
 
 import useCharacterDetails from "providers/builder/useCharacterDetails.js";
@@ -10,7 +11,8 @@ import styles from "./styles.module.scss";
 
 function Powersets(props) {
   const { character } = useCharacterDetails();
-
+  const canPowersetBeAdded = useCanPowersetBeAdded();
+  const filterList = createFilteredOptionsList.bind(this, canPowersetBeAdded);
   return (
     <section className={styles.Powersets}>
       <div className={styles.powersetContainer}>
@@ -20,7 +22,7 @@ function Powersets(props) {
             header="Primary"
             dropdown={{
               name: "primary",
-              list: usePowersets("primaries"),
+              list: filterList(usePowersets("primaries")),
             }}
             powerList={useActivePowerset("primary").powers}
           />
@@ -28,7 +30,7 @@ function Powersets(props) {
             header="Secondary"
             dropdown={{
               name: "secondary",
-              list: usePowersets("secondaries"),
+              list: filterList(usePowersets("secondaries")),
             }}
             powerList={useActivePowerset("secondary").powers}
           />
@@ -36,7 +38,7 @@ function Powersets(props) {
             header="Epic Pool"
             dropdown={{
               name: "epicPool",
-              list: usePowersets("epicPools"),
+              list: filterList(usePowersets("epicPools")),
             }}
             powerList={useActivePowerset("epicPool").powers}
           />

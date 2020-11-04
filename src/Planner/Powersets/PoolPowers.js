@@ -1,10 +1,11 @@
 import React from "react";
 
-import Powerset from "./Powerset.js";
+import Powerset, { createFilteredOptionsList } from "./Powerset.js";
 import {
   useSelectedPools,
   useActivePowerset,
   useAddPowerFromNewPool,
+  useCanPoolBeAdded,
 } from "hooks/powersets.js";
 import allPools from "data/poolPowers.js";
 import styles from "./styles.module.scss";
@@ -13,7 +14,9 @@ function PoolPowers(props) {
   const selectedPoolPowers = useSelectedPools();
   const activePool = useActivePowerset("poolPower");
   const addPowerFromNewPool = useAddPowerFromNewPool();
-
+  const canPoolBeAdded = useCanPoolBeAdded();
+  const list = createFilteredOptionsList(canPoolBeAdded, allPools);
+  console.log("SELECTED POOLS: ", selectedPoolPowers);
   return (
     <div className={styles.PoolPowers}>
       <h2>Power Pools</h2>
@@ -35,7 +38,7 @@ function PoolPowers(props) {
         {/* Render new power pool selection */}
         {selectedPoolPowers.length < 4 && (
           <Powerset
-            dropdown={{ name: "poolPower", list: allPools }}
+            dropdown={{ name: "poolPower", list }}
             powerList={activePool.powers}
             togglePower={addPowerFromNewPool}
             compact
