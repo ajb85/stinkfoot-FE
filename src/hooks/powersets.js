@@ -8,7 +8,6 @@ import usePoolPowers from "providers/builder/usePoolPowers.js";
 import {
   getPowersets,
   togglePower,
-  arePowerRequirementsMet,
   canPowersetBeAdded,
   powerSelectionColor,
   getNextActiveLevel,
@@ -83,11 +82,8 @@ export const usePowerSelectionColor = () => {
   const details = useBuildAnalysis();
   const { powerSlots } = usePowerSlots();
   const getSlotIndex = getSlotIndexFromActiveLevel.bind(this, tracking);
-  return powerSelectionColor.bind(
-    this,
-    details,
-    (power) => powerSlots[getSlotIndex(power)]
-  );
+  const getSlotFromPower = (power) => powerSlots[getSlotIndex(power)];
+  return powerSelectionColor.bind(this, details, getSlotFromPower);
 };
 
 export function useCanPowersetBeAdded() {
@@ -130,10 +126,11 @@ export function useSelectedPoolNames() {
 
 export const useSelectedPools = () => {
   const { pools } = usePoolPowers();
+  console.log("RAW POOLS: ", pools);
   const poolData = [];
 
   for (let i = 0; i < pools.length; i++) {
-    poolData.push(poolPowers[i]);
+    poolData.push(poolPowers[pools[i]]);
   }
 
   return poolData;
@@ -155,7 +152,7 @@ export function useAddPowerFromNewPool() {
 
   return (power) => {
     if (canBeAdded) {
-      const { poolIndex } = power;
+      const { poolIndex } = pool;
       addPool(poolIndex);
       togglePower(power);
       updateTracking();
@@ -167,9 +164,15 @@ export function useFirstUnusedPool() {
   const { setTrackingManually } = useActiveSets();
   const activePool = useActivePowerset("poolPower");
   const canPoolBeAdded = useCanPoolBeAdded();
-  const firstPool =
-    poolPowers.find(
-      (pool) => canPoolBeAdded(pool) && pool.poolIndex !== activePool.poolIndex
-    ) || {};
+  const firstPool = poolPowers.find(evaluatePool) || {};
   return setTrackingManually.bind(this, "poolPower", firstPool.poolIndex || 0);
+
+  function evaluatePool(pool) {
+    const isNotActivePool = pool.poolIndex !== activePool.poolIndex;
+    const isExcludedByActivePool =
+      activePool.prevents &&
+      activePool.prevents.find((p) => p === pool.fullName);
+
+    return canPoolBeAdded(pool) && isNotActivePool && !isExcludedByActivePool; // n^2, but tiny n
+  }
 }

@@ -6,10 +6,11 @@ import styles from "./styles.module.scss";
 
 function Dropdown(props) {
   const [isOpen, setIsOpen] = useState(false);
-  const selected = props.options.find(({ value }) => value === props.selected);
-  if (!selected) {
-    console.log("SELECTED: ", props.selected, props.options);
-  }
+  const selected =
+    props.options.find(({ value }) => value === props.selected) || {};
+  // if (props.name === "poolPower") {
+  //   console.log("OPTIONS: ", props);
+  // }
   const renderItem = (item = selected) => {
     return (
       <>

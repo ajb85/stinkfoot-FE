@@ -122,14 +122,10 @@ export function arePowerRequirementsMet({ lookup }, power) {
 
 export function canPowersetBeAdded({ lookup, excluded }, { fullName }) {
   const isExcluded = excluded.powersets[fullName];
-  // const isAlreadyInBuild = lookup.powersets[fullName];
-  if (isExcluded) {
-    console.log("FULL NAME: ", fullName);
-    console.log("IS EXCLUDED: ", isExcluded);
-    // console.log("IS ALREADY IN BUILD: ", isAlreadyInBuild);
-    // console.log("CAN ADD POWERSET? ", !isExcluded && !isAlreadyInBuild);
-  }
-  return !isExcluded;
+  const isPool = fullName.substring(0, 4) === "Pool";
+  const isAlreadyInBuild = isPool && lookup.powersets[fullName];
+
+  return !isAlreadyInBuild && !isExcluded;
 }
 
 export function powerSelectionColor({ lookup }, getSlotFromPower, power) {

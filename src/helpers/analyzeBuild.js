@@ -159,7 +159,7 @@ function evaluatePowersets({ primary, secondary, pools }, results) {
 
   [...primaryPrevents, ...secondaryPrevents, ...poolsPrevents].reduce(
     (acc, { preventedSet, excludedBy }) => {
-      acc.powersets[preventedSet] = excludedBy;
+      acc[preventedSet] = excludedBy;
       return acc;
     },
     results.excluded.powersets
