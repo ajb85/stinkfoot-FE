@@ -133,6 +133,8 @@ export const PowerSlotsProvider = (props) => {
     setPowerSlots(updatedPowerSlots);
   };
 
+  const resetPowerSlots = () => setPowerSlots(powerSlotsTemplate);
+
   const state = {
     powerSlots,
     removePowerFromSlot,
@@ -140,6 +142,7 @@ export const PowerSlotsProvider = (props) => {
     addEnhancement,
     addEnhancements,
     removeEnhancement,
+    resetPowerSlots,
   };
   return <Provider value={state}>{props.children}</Provider>;
 };
