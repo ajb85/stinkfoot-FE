@@ -63,6 +63,25 @@ export const useBuildAnalysis = () => {
  *********  FUNCTION RETRIEVERS  **********
  ******************************************
  *****************************************/
+export const useChangePowerset = () => {
+  const { powerSlots, removePowerFromSlot, addPowerToSlot } = usePowerSlots();
+  const { setActiveTracking } = useActiveSets();
+  const secondaries = usePowersets("secondaries");
+  return (e) => {
+    powerSlots.forEach(
+      ({ power }, i) =>
+        power &&
+        e.target.name === power.archetypeOrder &&
+        removePowerFromSlot(i)
+    );
+    setActiveTracking(e);
+    if (e.target.name === "secondary" && !!powerSlots[0].power) {
+      // Replace first power if it's been selected
+      addPowerToSlot(secondaries[e.target.value].powers[0], 0);
+    }
+  };
+};
+
 export const useTogglePower = () => {
   const trackingState = useActiveSets();
   const details = useBuildAnalysis();
