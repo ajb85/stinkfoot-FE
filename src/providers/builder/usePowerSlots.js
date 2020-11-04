@@ -9,7 +9,7 @@ let timeout;
 export const PowerSlotsProvider = (props) => {
   const [powerSlots, setPowerSlots] = useState(powerSlotsTemplate);
   const { Provider } = context;
-
+  console.log("POWERSLOTS: ", powerSlots);
   const removePowerFromSlot = ((cache) => (index) => {
     // Experimenting with this pattern, allows multiple calls to the same
     // state updater to pool up the instructions then loop over them and make a single

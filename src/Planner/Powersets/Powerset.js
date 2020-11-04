@@ -23,7 +23,7 @@ function Powerset(props) {
   // This allows components to supply their own methods to run when
   // clicking a power or changing dropdown selection.
   const togglePower = props.togglePower || tp;
-  const updateBuild = props.updateBuild || setActiveTracking;
+  const updateBuild = props.onChange || setActiveTracking;
   const width = compact ? 123 : 170;
 
   const index = dropdown.name && tracking[dropdown.name];
