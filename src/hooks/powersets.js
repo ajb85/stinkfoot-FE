@@ -126,7 +126,6 @@ export function useSelectedPoolNames() {
 
 export const useSelectedPools = () => {
   const { pools } = usePoolPowers();
-  console.log("RAW POOLS: ", pools);
   const poolData = [];
 
   for (let i = 0; i < pools.length; i++) {
@@ -175,4 +174,17 @@ export function useFirstUnusedPool() {
 
     return canPoolBeAdded(pool) && isNotActivePool && !isExcludedByActivePool; // n^2, but tiny n
   }
+}
+
+export function useRemovePool() {
+  const { powerSlots, removePowerFromSlot } = usePowerSlots();
+  const { removePool } = usePoolPowers();
+  return (poolIndex) => {
+    powerSlots.forEach(({ power }, i) => {
+      if (power && power.poolIndex === poolIndex) {
+        removePowerFromSlot(i);
+      }
+    });
+    removePool(poolIndex);
+  };
 }
