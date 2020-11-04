@@ -63,6 +63,13 @@ export const useBuildAnalysis = () => {
  *********  FUNCTION RETRIEVERS  **********
  ******************************************
  *****************************************/
+export const useTogglePowerSlot = (index) => {
+  const { tracking, setTrackingManually } = useActiveSets();
+  const toggled = tracking.toggledSlot;
+  const value = index === toggled ? null : index;
+  return setTrackingManually.bind(this, "toggledSlot", value);
+};
+
 export const useResetBuild = () => {
   const { resetPowerSlots } = usePowerSlots();
   const { resetPools } = usePoolPowers();

@@ -12,8 +12,7 @@ import { useBuildAnalysis } from "./powersets.js";
 export const useGetEnhancementsForPower = () => {
   // getEnhancementSectionForPower
   const { enhNavigation } = useEnhancementNavigation();
-  const { section, tier, showSuperior } = enhNavigation;
-  return getEnhancementsForPower(section, tier, showSuperior);
+  return getEnhancementsForPower(enhNavigation);
 };
 
 export const useGetEnhancementSubSections = () => {

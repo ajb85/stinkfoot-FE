@@ -6,6 +6,7 @@ const initialState = {
   poolPower: 0,
   epicPool: 0,
   activeLevel: 1,
+  toggledSlot: null,
 };
 
 const context = createContext();
