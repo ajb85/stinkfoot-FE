@@ -36,6 +36,7 @@ export const getEnhancementImageWithOverlay = (
   { imageName, tier, type }
 ) => {
   // getEnhancementAndOverlayImages
+  console.log("IMAGE NAME: ", imageName);
   const enhancement = enhImages(`./${imageName}`);
   let overlay;
   if (type === "standard") {

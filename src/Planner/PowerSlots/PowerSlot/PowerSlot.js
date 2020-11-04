@@ -11,6 +11,7 @@ import useCharacterDetails from "providers/builder/useCharacterDetails.js";
 import { useGetEnhancementSubSections } from "hooks/enhancements.js";
 import useActiveSets from "providers/builder/useActiveSets.js";
 import usePowerSlots from "providers/builder/usePowerSlots.js";
+import { useTogglePowerSlot } from "hooks/powersets.js";
 
 import { getEnhancementImageWithOverlay } from "helpers/getImages.js";
 import styles from "../styles.module.scss";
@@ -18,10 +19,11 @@ import styles from "../styles.module.scss";
 function PowerSlot({ slot }) {
   const { level, power, powerSlotIndex } = slot;
   const { enhNavigation, updateEnhNavigation } = useEnhNavigation();
-  const { tracking, togglePowerSlot, setTrackingManually } = useActiveSets();
+  const togglePowerSlot = useTogglePowerSlot(powerSlotIndex);
+  const { tracking, setTrackingManually } = useActiveSets();
   const { powerSlots } = usePowerSlots();
   const getEnhancementSubSections = useGetEnhancementSubSections();
-  const isToggled = tracking.powerSlot === powerSlotIndex;
+  const isToggled = tracking.toggledSlot === powerSlotIndex;
   const zIndex = powerSlots.length * 2 - powerSlotIndex * 2;
 
   if (!power) {
@@ -39,8 +41,6 @@ function PowerSlot({ slot }) {
       </div>
     );
   }
-
-  // const powerStats = getPowerStats(getState())(powerSlotIndex);
 
   const topOptions = [
     {
@@ -118,8 +118,8 @@ function PowerSlot({ slot }) {
         {/* Power stats - temporarily disabled, not ready for this feature */}
         {/* {false && <TableList list={powerStats} />} */}
       </div>
-      {/* Selected Enhancements Menu */}
-      <HoverMenu slot={slot} />
+
+      <FloatingSelectedEnhancements slot={slot} />
     </div>
   );
 }
@@ -127,13 +127,13 @@ function PowerSlot({ slot }) {
 export default PowerSlot;
 
 function noFunc() {}
-function HoverMenu({ slot }) {
+function FloatingSelectedEnhancements({ slot }) {
   const {
     powerSlots,
     removePowerFromSlot,
     removeEnhancement,
   } = usePowerSlots();
-  const { level, power, enhSlots, powerSlotIndex } = slot;
+  const { level, enhSlots, powerSlotIndex } = slot;
   const { character } = useCharacterDetails();
   const zIndex = powerSlots.length * 2 - powerSlotIndex * 2;
 

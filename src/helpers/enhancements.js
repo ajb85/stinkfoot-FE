@@ -86,7 +86,7 @@ export const getEnhancementSubSections = ({ tier }, types) => {
   }));
 };
 
-export const getEnhancementsForPower = (section, tier, showSuperior) => {
+export const getEnhancementsForPower = ({ section, tier, showSuperior }) => {
   if (section === "standard") {
     return getStandardEnhancementsForPower;
   } else if (section === "sets") {
