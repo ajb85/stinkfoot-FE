@@ -1,19 +1,18 @@
 import React from "react";
 
 import usePowerSlots from "providers/builder/usePowerSlots.js";
-import { useCanEnhancementGoInPowerSlot } from "hooks/enhancements.js";
+import {
+  useCanEnhancementGoInPowerSlot,
+  useAddEnhancement,
+} from "hooks/enhancements.js";
 
 import shortenEnhName from "js/shortenEnhName.js";
 
 import styles from "../styles.module.scss";
 
 function EnhancementList({ enhancements, powerSlotIndex }) {
-  const {
-    addEnhancement,
-    addEnhancements,
-    removeEnhancement,
-    powerSlots,
-  } = usePowerSlots();
+  const { addEnhancements, removeEnhancement, powerSlots } = usePowerSlots();
+  const addEnhancement = useAddEnhancement();
   const canEnhancementGoInPowerSlot = useCanEnhancementGoInPowerSlot(
     powerSlotIndex
   );
@@ -57,12 +56,10 @@ function EnhancementList({ enhancements, powerSlotIndex }) {
           return (
             <p
               key={enh.displayName}
-              onClick={handleEnhToggle(addEnhancement, removeEnhancement).bind(
-                this,
-                enh,
-                enhIndex,
-                canBeAdded
-              )}
+              onClick={handleEnhToggle(
+                addEnhancement.bind(this, powerSlotIndex),
+                removeEnhancement
+              ).bind(this, enh, enhIndex, canBeAdded)}
               className={className}
             >
               {shortenEnhName(enh.displayName)}

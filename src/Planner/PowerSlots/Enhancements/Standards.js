@@ -4,7 +4,7 @@ import HoverMenu from "../HoverMenus/Standards.js";
 
 import { useGetEnhancementsForPower } from "hooks/enhancements.js";
 import { getEnhancementOverlay } from "helpers/getImages.js";
-import usePowerSlots from "providers/builder/usePowerSlots.js";
+import { useAddEnhancement } from "hooks/enhancements.js";
 import useEnhNavigation from "providers/builder/useEnhancementNavigation.js";
 import useCharacterDetails from "providers/builder/useCharacterDetails.js";
 
@@ -14,7 +14,7 @@ export default function StandardEnhancements(props) {
   const { powerSlotIndex, power: p } = props;
   const { enhNavigation } = useEnhNavigation();
   const getEnhancementsForPower = useGetEnhancementsForPower();
-  const { addEnhancement } = usePowerSlots();
+  const addEnhancement = useAddEnhancement(powerSlotIndex);
   const { character } = useCharacterDetails();
   const overlayImg = getEnhancementOverlay(
     character.origin,
@@ -28,7 +28,7 @@ export default function StandardEnhancements(props) {
           <div className={styles.enhPreview} key={`${enh.fullName} @ ${i}`}>
             <div
               className={styles.enhancementImage}
-              onClick={addEnhancement.bind(this, powerSlotIndex, enh)}
+              onClick={addEnhancement.bind(this, enh)}
             >
               <img src={overlayImg} alt={enh.fullName} />
               <img src={enh.image} alt={enh.fullName} />
