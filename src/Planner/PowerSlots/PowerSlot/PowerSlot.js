@@ -26,6 +26,21 @@ function PowerSlot({ slot }) {
   const isToggled = tracking.toggledSlot === powerSlotIndex;
   const zIndex = powerSlots.length * 2 - powerSlotIndex * 2;
 
+  const pill = React.useRef();
+
+  React.useEffect(() => {
+    // Delay changing overflow on open so you slowly see the pill open up to show its contents
+    // Then when closing, immediately hide anything out of range.  This is hack-y as all hell but
+    // it does work :)
+    if (isToggled) {
+      setTimeout(() => {
+        pill.current && (pill.current.style.overflow = "visible");
+      }, 250);
+    } else {
+      pill.current && (pill.current.style.overflow = "hidden");
+    }
+  }, [isToggled]);
+
   if (!power) {
     // Empty PowerSlot
     const isActive = tracking.activeLevel === level;
@@ -95,6 +110,7 @@ function PowerSlot({ slot }) {
           backgroundColor: "#1b4ea8",
           zIndex,
         }}
+        ref={pill}
       >
         {/* Pill Title */}
         <p className="pillText" onClick={togglePowerSlot}>

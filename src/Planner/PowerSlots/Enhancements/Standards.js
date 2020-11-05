@@ -20,7 +20,7 @@ export default function StandardEnhancements(props) {
     character.origin,
     enhNavigation.tier
   );
-  // console.log("ENHS: ", getEnhancementsForPower(p));
+
   return (
     <div className={styles.enhPreviewContainer}>
       <div className={styles.enhPreviewList}>
