@@ -107,11 +107,7 @@ export const canEnhancementGoInPowerSlot = ({ lookup }, power, enhancement) => {
 
   const isUniqueInPower = type === "set" || type === "attuned";
   const isInUse = lookup.enhancements[fullName] !== undefined;
-  const isInPower =
-    isInUse &&
-    lookup.enhancements[enhancement.fullName].find(
-      ({ powerName }) => powerName === power.fullName
-    );
+  const isInPower = isInUse && lookup.enhancements[fullName][power.fullName];
 
   return (
     (isUnique && !isInUse) ||

@@ -1,4 +1,5 @@
 import allOrigins from "data/origins.js";
+import ioSets from "data/ioSets.js";
 
 const enhImages = require.context("./images/enhancements/", true);
 const overlayImages = require.context("./images/overlays/", true);
@@ -30,11 +31,13 @@ export const getEnhancementOverlay = (origin, tier) => {
   }
 };
 
-export const getEnhancementImageWithOverlay = (
-  origin,
-  { imageName, tier, type }
-) => {
+export const getEnhancementImageWithOverlay = (origin, enh) => {
   // getEnhancementAndOverlayImages
+  const { tier, type, setType, setIndex } = enh;
+  const imageName = setType
+    ? ioSets[setType][setIndex].imageName
+    : enh.imageName;
+
   const enhancement = enhImages(`./${imageName}`);
   let overlay;
   if (type === "standard") {

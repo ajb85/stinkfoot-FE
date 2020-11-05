@@ -56,7 +56,6 @@ export const PowerSlotsProvider = (props) => {
 
   const addEnhancement = (powerSlotIndex, enhancement) => {
     const powerSlot = powerSlots[powerSlotIndex];
-
     if (
       powerSlot.enhSlots &&
       powerSlot.enhSlots.length < 6 &&
@@ -78,10 +77,8 @@ export const PowerSlotsProvider = (props) => {
   };
 
   const addEnhancements = (powerSlotIndex, enhancements) => {
-    if (
-      !powerSlots[powerSlotIndex].slottable ||
-      !powerSlots[powerSlotIndex].enhSlots
-    ) {
+    if (!powerSlots[powerSlotIndex].enhSlots) {
+      console.log("INVALID SLOT", powerSlotIndex, powerSlots[powerSlotIndex]);
       // Either the power slot isn't slot-able or there is no power there currently
       // Regardless, enhancements cannot be added
       return;
@@ -98,12 +95,19 @@ export const PowerSlotsProvider = (props) => {
     powerSlot.enhSlots = emptyDefaultSlot();
 
     enhancements.forEach((enhancement, i) => {
-      const slotLevel =
-        powerSlot.enhSlots[i].slotLevel === null
-          ? null
-          : slotsManager.getSlot(powerSlot.level);
+      const slotExists = !!powerSlot.enhSlots[i];
+      const isDefaultSlot =
+        slotExists && powerSlot.enhSlots[i].slotLevel === null;
+      const slotLevel = isDefaultSlot
+        ? null
+        : slotsManager.getSlot(powerSlot.level);
 
-      powerSlot.enhSlots[i] = { slotLevel, enhancement };
+      const newSlot = { slotLevel, enhancement };
+      if (slotExists) {
+        powerSlot.enhSlots[i] = newSlot;
+      } else {
+        powerSlot.enhSlots.push(newSlot);
+      }
     });
 
     setPowerSlots(updatedPowerSlots);
@@ -113,16 +117,16 @@ export const PowerSlotsProvider = (props) => {
     const updatedPowerSlots = copyPowerSlots(powerSlots, powerSlotIndex);
     const { enhSlots } = updatedPowerSlots[powerSlotIndex];
     const { slotLevel } = enhSlots[enhIndex];
-
     // If slotLevel is null then remove the next slot if it exists
-    const slotToRemove = slotLevel || enhSlots[1] ? enhSlots[1].level : null;
-    if (slotToRemove) {
-      slotsManager.returnSlot(slotToRemove);
+    const slotToReturn =
+      slotLevel || (enhSlots[1] ? enhSlots[1].slotLevel : null);
+    if (slotToReturn) {
+      slotsManager.returnSlot(slotToReturn);
     }
 
     if (!slotLevel) {
       // If we are removing the default enhancement slot, shift enhancements left
-      enhSlots.unshift();
+      enhSlots.shift();
       if (enhSlots.length) {
         enhSlots[0].slotLevel = null;
       } else {
