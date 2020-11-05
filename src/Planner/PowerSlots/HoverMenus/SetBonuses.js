@@ -21,25 +21,10 @@ function SetBonuses({ set, powerSlotIndex }) {
       <h3>Set Bonuses</h3>
       {setBonuses.reduce((acc, b, bonusIndex) => {
         const { unlocked, bonus } = b;
-        console.log("DSAFBONUS: ", bonus);
         const { displays } = bonus;
         const { bonusName } = bonus;
-        const bonusCount = lookup.setBonuses[bonusName];
-        const willGetBonus = bonusCount < 5;
-        const isBonusUnlocked = unlocked <= bonusTier;
-        const bonusColor = {
-          color: isBonusUnlocked
-            ? bonusCount === 5
-              ? "chartreuse"
-              : bonusCount > 5
-              ? "red"
-              : "gold"
-            : willGetBonus
-            ? null
-            : "grey",
-          textDecoration:
-            !isBonusUnlocked && !willGetBonus ? "line-through" : null,
-        };
+        const bonusCount = lookup.setBonuses[bonusName] || 0;
+        const bonusColor = getBonusColor(unlocked, bonusCount, bonusTier);
 
         acc.push(
           <div key={bonusIndex} className={styles.bonusContainer}>
@@ -63,3 +48,20 @@ function SetBonuses({ set, powerSlotIndex }) {
 }
 
 export default SetBonuses;
+
+function getBonusColor(unlocked, bonusCount, bonusTier) {
+  const willGetBonus = bonusCount < 5;
+  const isBonusUnlocked = unlocked <= bonusTier;
+  return {
+    color: isBonusUnlocked
+      ? bonusCount === 5
+        ? "chartreuse"
+        : bonusCount > 5
+        ? "red"
+        : "gold"
+      : willGetBonus
+      ? null
+      : "grey",
+    textDecoration: !isBonusUnlocked && !willGetBonus ? "line-through" : null,
+  };
+}
