@@ -44,3 +44,20 @@ export const useAddEnhancement = (powerSlotIndex) => {
   const { addEnhancement } = usePowerSlots();
   return (enh) => addEnhancement(powerSlotIndex, { ...enh, tier });
 };
+
+export const useAddFullSet = (powerSlotIndex) => {
+  const {
+    enhNavigation: { tier },
+  } = useEnhancementNavigation();
+  const { addEnhancements } = usePowerSlots();
+  return (enhancements) =>
+    addEnhancements(
+      powerSlotIndex,
+      enhancements.map((e) => ({ ...e, tier }))
+    );
+};
+
+export const useRemoveEnhancement = (powerSlotIndex) => {
+  const { removeEnhancement } = usePowerSlots();
+  return removeEnhancement.bind(this, powerSlotIndex);
+};
