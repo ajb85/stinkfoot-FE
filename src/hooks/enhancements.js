@@ -36,3 +36,11 @@ export const useGetBonusesForSet = () => {
 
   return getBonusesForSet.bind(this, settings, enhNavigation);
 };
+
+export const useAddEnhancement = (powerSlotIndex) => {
+  const {
+    enhNavigation: { tier },
+  } = useEnhancementNavigation();
+  const { addEnhancement } = usePowerSlots();
+  return (enh) => addEnhancement(powerSlotIndex, { ...enh, tier });
+};

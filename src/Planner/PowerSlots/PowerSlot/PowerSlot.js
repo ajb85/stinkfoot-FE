@@ -160,7 +160,6 @@ function FloatingSelectedEnhancements({ slot }) {
     >
       {enhSlots.map(({ slotLevel, enhancement }, j) => {
         const displayLevel = slotLevel === null ? level : slotLevel;
-
         const images = enhancement
           ? getEnhancementImageWithOverlay(character.origin, enhancement)
           : null;

@@ -73,7 +73,7 @@ function getSlotReducer(archetype, getBonusesForSet) {
         recordOfEnh.powerSlotIndices.push(i);
       } else {
         // Create the record for a new power for this enhancement
-        recordOfEnh[power.fullName] = {
+        record[power.fullName] = {
           powerDisplayName: power.displayName,
           powerSlotIndices: [i],
           count: 1,

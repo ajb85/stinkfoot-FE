@@ -56,6 +56,7 @@ export const PowerSlotsProvider = (props) => {
 
   const addEnhancement = (powerSlotIndex, enhancement) => {
     const powerSlot = powerSlots[powerSlotIndex];
+
     if (
       powerSlot.enhSlots &&
       powerSlot.enhSlots.length < 6 &&
@@ -64,10 +65,13 @@ export const PowerSlotsProvider = (props) => {
       // Copy State
       const updatedPowerSlots = copyPowerSlots(powerSlots, powerSlotIndex);
       // Mutate copy
-      updatedPowerSlots[powerSlotIndex].enhSlots.push({
-        level: slotsManager.getSlot(powerSlot.level),
-        enhancement,
-      });
+      const { enhSlots } = updatedPowerSlots[powerSlotIndex];
+      !enhSlots[0].enhancement
+        ? (enhSlots[0].enhancement = enhancement)
+        : enhSlots.push({
+            slotLevel: slotsManager.getSlot(powerSlot.level),
+            enhancement,
+          });
 
       setPowerSlots(updatedPowerSlots);
     }
