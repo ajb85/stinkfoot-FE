@@ -1,5 +1,5 @@
 import enhancements from "data/enhancements.js";
-import ioSets from "data/ioSets.js";
+import ioSets, { setTypeConversion } from "data/ioSets.js";
 import setBonuses from "data/enhancements/setBonuses.json";
 import bonusLibrary from "data/enhancements/bonusesLibrary.json";
 import { getEnhancementImage } from "helpers/getImages.js";
@@ -73,7 +73,7 @@ export const getEnhancementSubSections = ({ tier }, types) => {
     // If IOs, map over the setNums
     return types.map((setNum) => ({
       tier: setNum,
-      name: [setNum],
+      name: setTypeConversion[setNum],
       isSet,
     }));
   }

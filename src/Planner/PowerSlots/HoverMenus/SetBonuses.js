@@ -3,6 +3,7 @@ import React from "react";
 import { useGetBonusesForSet } from "hooks/enhancements.js";
 import { useBuildAnalysis } from "hooks/powersets.js";
 import getBonusTiersForPowerSlot from "js/getBonusTiersForPowerSlot.js";
+import usePowerSlots from "providers/builder/usePowerSlots.js";
 import styles from "../styles.module.scss";
 
 function SetBonuses({ set, powerSlotIndex }) {
@@ -10,13 +11,18 @@ function SetBonuses({ set, powerSlotIndex }) {
   const getBonusesForSet = useGetBonusesForSet();
   const setBonuses = getBonusesForSet(set);
   const { lookup } = useBuildAnalysis();
+  const { powerSlots } = usePowerSlots();
+  const powerSlot = powerSlots[powerSlotIndex];
 
-  const bonusTier = getBonusTiersForPowerSlot()[enhancements[0].setIndex] || 0;
+  const bonusTier =
+    getBonusTiersForPowerSlot(powerSlot)[enhancements[0].setIndex] || 0;
   return (
     <div className={styles.hoverContainer}>
       <h3>Set Bonuses</h3>
       {setBonuses.reduce((acc, b, bonusIndex) => {
-        const { unlocked, bonus, displays } = b;
+        const { unlocked, bonus } = b;
+        console.log("DSAFBONUS: ", bonus);
+        const { displays } = bonus;
         const { bonusName } = bonus;
         const bonusCount = lookup.setBonuses[bonusName];
         const willGetBonus = bonusCount < 5;

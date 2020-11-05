@@ -1,5 +1,11 @@
 @import "styles/variables.scss";
 
+@keyframes delay-overflow {
+  from {
+    overflow: visible;
+  }
+}
+
 section.PowerSlots {
   width: 70%;
   max-width: 700px;
@@ -41,11 +47,13 @@ section.PowerSlots {
     overflow: hidden;
 
     transition: height 0.25s, border-radius 0.25s;
+    transition-delay: overflow 0.25s;
 
     &.toggled {
       cursor: default;
       height: 14 * $lh;
       border-radius: 0;
+      animation: 1s delay-overflow;
     }
 
     & > p {
