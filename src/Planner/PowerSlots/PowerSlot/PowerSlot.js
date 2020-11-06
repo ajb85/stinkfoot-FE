@@ -15,7 +15,7 @@ import { useTogglePowerSlot } from "hooks/powersets.js";
 
 import { getEnhancementImageWithOverlay } from "helpers/getImages.js";
 import styles from "../styles.module.scss";
-
+let timeout;
 function PowerSlot({ slot }) {
   const { level, power, powerSlotIndex } = slot;
   const { enhNavigation, updateEnhNavigation } = useEnhNavigation();
@@ -32,8 +32,9 @@ function PowerSlot({ slot }) {
     // Delay changing overflow on open so you slowly see the pill open up to show its contents
     // Then when closing, immediately hide anything out of range.  This is hack-y as all hell but
     // it does work :)
+    clearTimeout(timeout);
     if (isToggled) {
-      setTimeout(() => {
+      timeout = setTimeout(() => {
         pill.current && (pill.current.style.overflow = "visible");
       }, 250);
     } else {
