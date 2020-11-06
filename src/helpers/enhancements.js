@@ -44,7 +44,7 @@ export const getBonusesForSet = (settings, { showSuperior }, set) => {
     showSuperior && isAttuned ? "Superior_" + baseName : baseName;
 
   if (!setBonuses[correctedSetName]) {
-    console.log("NO BONUSES FOR ", correctedSetName, set);
+    // console.log("NO BONUSES FOR ", correctedSetName, set);
     return [];
   }
 
@@ -104,7 +104,6 @@ export const canEnhancementGoInPowerSlot = ({ lookup }, power, enhancement) => {
   }
 
   const { isUnique, type, fullName } = enhancement;
-
   const isUniqueInPower = type === "set" || type === "attuned";
   const isInUse = lookup.enhancements[fullName] !== undefined;
   const isInPower = isInUse && lookup.enhancements[fullName][power.fullName];
@@ -135,11 +134,7 @@ function getStandardEnhancementsForPower(power) {
   }, []);
 }
 
-function getIOSetEnhancementsForPower(tier, showSuperior, power) {
-  if (!power.slottable) {
-    return [];
-  }
-
+function getIOSetEnhancementsForPower(tier, showSuperior) {
   return ioSets[tier].map((enh) => {
     let { imageName } = enh;
     if (!imageName) {

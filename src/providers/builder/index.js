@@ -5,15 +5,18 @@ import { IndexTrackingProvider } from "./useActiveSets.js";
 import { PowerSlotsProvider } from "./usePowerSlots.js";
 import { PoolPowersProvider } from "./usePoolPowers.js";
 import { EnhNavProvider } from "./useEnhancementNavigation.js";
+import StateManagement from "./StateManagement.js";
 
 export default (props) => (
-  <CharacterDetailsProvider>
-    <IndexTrackingProvider>
+  <EnhNavProvider>
+    <CharacterDetailsProvider>
       <PowerSlotsProvider>
         <PoolPowersProvider>
-          <EnhNavProvider>{props.children}</EnhNavProvider>
+          <IndexTrackingProvider>
+            <StateManagement>{props.children}</StateManagement>
+          </IndexTrackingProvider>
         </PoolPowersProvider>
       </PowerSlotsProvider>
-    </IndexTrackingProvider>
-  </CharacterDetailsProvider>
+    </CharacterDetailsProvider>
+  </EnhNavProvider>
 );
