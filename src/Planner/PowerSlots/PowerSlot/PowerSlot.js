@@ -117,11 +117,7 @@ function PowerSlot({ slot }) {
           ({level}) {power.displayName}
         </p>
 
-        <PunnettSquare
-          topOptions={topOptions}
-          sideOptions={sideOptions}
-          slot={slot}
-        >
+        <PunnettSquare topOptions={topOptions} sideOptions={sideOptions}>
           {enhNavigation.section === "standard" ? (
             <StandardEnhancements
               powerSlotIndex={powerSlotIndex}

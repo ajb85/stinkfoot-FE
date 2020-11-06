@@ -10,14 +10,15 @@ import styles from "../styles.module.scss";
 
 export default function IOSets(props) {
   const enhRefs = useRef([]);
-  const { powerSlotIndex, power: p } = props;
+  const { powerSlotIndex, power } = props;
+
   const { character } = useCharacterDetails();
   const { enhNavigation, updateEnhNavigation } = useEnhNavigation();
   const getEnhancementsForPower = useGetEnhancementsForPower();
 
-  const enhancementsData = getEnhancementsForPower(p);
+  const enhancementsData = getEnhancementsForPower(power);
   const overlayImg = getEnhancementOverlay(character.origin, "IO");
-
+  console.log("ENH FOR POWER: ", powerSlotIndex, power, enhancementsData);
   useEffect(() => {
     if (enhancementsData.length !== enhRefs.current.length) {
       enhRefs.current = enhRefs.current.slice(0, enhancementsData.length);
