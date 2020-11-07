@@ -30,7 +30,8 @@ section.PowerSlots {
     margin: 0 5px 1.5 * $lh;
   }
 
-  .power {
+  .power,
+  .pill {
     width: 100%;
     height: 100%;
     border-style: solid;
@@ -39,14 +40,18 @@ section.PowerSlots {
     position: absolute;
     cursor: pointer;
     overflow: hidden;
-
+    background-color: #1b4ea8;
+    z-index: 0;
     transition: height 0.25s, border-radius 0.25s;
-    transition-delay: overflow 0.25s;
+
+    // &.toggled {
+    // cursor: default;
+    // height: 14 * $lh;
+    // border-radius: 0;
+    // }
 
     &.toggled {
-      cursor: default;
-      height: 14 * $lh;
-      border-radius: 0;
+      z-index: 2;
     }
 
     & > p {
