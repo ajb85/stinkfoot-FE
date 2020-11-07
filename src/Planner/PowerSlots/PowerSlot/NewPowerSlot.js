@@ -1,17 +1,12 @@
 import React from "react";
 
-// import StandardEnhancements from "../Enhancements/Standards.js";
-// import IOSetEnhancements from "../Enhancements/IOSets.js";
-// import { getPowerStats } from "../../../js/powerCalculations.js";
-// import TableList from "components/TableList/";
 import PunnettSquare from "components/PunnettSquare/";
 import SlideDropdown from "components/SlideDropdown/";
+import EnhancementSelection from "../EnhancementSelection.js";
 
 import useEnhNavigation from "providers/builder/useEnhancementNavigation.js";
-// import useCharacterDetails from "providers/builder/useCharacterDetails.js";
 import { useGetEnhancementSubSections } from "hooks/enhancements.js";
 import useActiveSets from "providers/builder/useActiveSets.js";
-// import usePowerSlots from "providers/builder/usePowerSlots.js";
 import { useTogglePowerSlot } from "hooks/powersets.js";
 
 // import { getEnhancementImageWithOverlay } from "helpers/getImages.js";
@@ -22,7 +17,6 @@ function PowerSlot({ slot }) {
   const enhNav = useEnhNavigation();
   const togglePowerSlot = useTogglePowerSlot(powerSlotIndex);
   const { tracking } = useActiveSets();
-  // const { powerSlots } = usePowerSlots();
   const getEnhancementSubSections = useGetEnhancementSubSections();
   const isToggled = tracking.toggledSlot === powerSlotIndex;
 
@@ -49,7 +43,9 @@ function PowerSlot({ slot }) {
           <PunnettSquare
             topOptions={getTopOptions(enhNav, power)}
             sideOptions={getSideOptions(enhNav, subsections)}
-          ></PunnettSquare>
+          >
+            <EnhancementSelection powerSlotIndex={powerSlotIndex} />
+          </PunnettSquare>
         </SlideDropdown>
       )}
     </div>
@@ -64,7 +60,7 @@ function getTopOptions(enhNav, power) {
       styles: {
         color: enhNavigation.section === "standard" ? "red" : null,
       },
-      onClick: viewStandardEnhancements,
+      onClick: viewStandardEnhancements.bind(this, "IO"),
     },
     {
       content: "Sets",
