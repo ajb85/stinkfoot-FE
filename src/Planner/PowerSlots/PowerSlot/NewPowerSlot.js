@@ -19,7 +19,7 @@ import styles from "../styles.module.scss";
 
 function PowerSlot({ slot }) {
   const { level, power, powerSlotIndex } = slot;
-  const { enhNavigation, updateEnhNavigation } = useEnhNavigation();
+  const enhNav = useEnhNavigation();
   const togglePowerSlot = useTogglePowerSlot(powerSlotIndex);
   const { tracking, setTrackingManually } = useActiveSets();
   const { powerSlots } = usePowerSlots();
@@ -31,9 +31,6 @@ function PowerSlot({ slot }) {
     return <EmptyPowerSlot level={level} isActive={isActive} />;
   }
 
-  if (powerSlotIndex === 0) {
-    console.log("TOGGLED: ", isToggled);
-  }
   return (
     <div
       className={styles.powerContainer}
@@ -47,29 +44,53 @@ function PowerSlot({ slot }) {
       </div>
       {powerSlotIndex === 0 && (
         <SlideDropdown isToggled={isToggled}>
-          <p>Hello World</p>
-          <p>Hello World</p>
-          <p>Hello World</p>
-          <p>Hello World</p>
-          <p>Hello World</p>
-          <p>Hello World</p>
-          <p>Hello World</p>
-          <p>Hello World</p>
-          <p>Hello World</p>
-          <p>Hello World</p>
-          <p>Hello World</p>
-          <p>Hello World</p>
-          <p>Hello World</p>
-          <p>Hello World</p>
-          <p>Hello World</p>
-          <p>Hello World</p>
-          <p>Hello World</p>
-          <p>Hello World</p>
-          <p>Hello World</p>
+          <PunnettSquare
+            topOptions={getTopOptions(enhNav, power)}
+            sideOptions={getEnhancementSubSections(enhNav, power.setTypes)}
+          ></PunnettSquare>
         </SlideDropdown>
       )}
     </div>
   );
+}
+
+function getTopOptions(enhNav, power) {
+  const { enhNavigation, viewStandardEnhancements, viewIOSets } = enhNav;
+  return [
+    {
+      content: "Standard",
+      styles: {
+        color: enhNavigation.section === "standard" ? "red" : null,
+      },
+      onClick: viewStandardEnhancements,
+    },
+    {
+      content: "Sets",
+      styles: { color: enhNavigation.section === "sets" ? "red" : null },
+      onClick: viewIOSets.bind(this, power.setTypes[0]),
+    },
+  ];
+}
+
+function getSideOptions(enhNav, subsections) {
+  const { enhNavigation, viewEnhancementSubSection } = enhNav;
+  const { section } = enhNavigation;
+  const isSet = section === "sets";
+
+  return subsections.map(({ setType, name }) => ({
+    content: name
+      .split(" ")
+      .map((n) => n[0])
+      .slice(0, 2)
+      .join(""),
+    onClick: viewEnhancementSubSection.bind(this, setType || name),
+    style: {
+      color: isSet
+        ? setType === enhNavigation.setType
+        : name === enhNavigation.tier,
+      cursor: "pointer",
+    },
+  }));
 }
 
 function EmptyPowerSlot({ isActive, level }) {
