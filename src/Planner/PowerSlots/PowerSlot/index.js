@@ -1,2 +1,2 @@
-import $ from './PowerSlot.js';
+import $ from "./NewPowerSlot.js";
 export default $;

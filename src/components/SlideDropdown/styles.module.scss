@@ -1,0 +1,30 @@
+@import "styles/variables.scss";
+
+.SlideDropdown {
+  width: 90%;
+  height: 0px;
+  overflow: hidden;
+  margin: 0 auto;
+
+  position: relative;
+  top: $lh * 1.5;
+  //   z-index: -1;
+
+  background-color: $accent2;
+  //   border-color: transparent;
+  //   border-width: 0px 2px 2px;
+  //   border-style: solid;
+
+  transition: height 0.25s;
+
+  z-index: 1;
+
+  &.toggled {
+    // border-color: $secondary;
+    height: $lh * 12;
+  }
+
+  .content {
+    height: fit-content;
+  }
+}

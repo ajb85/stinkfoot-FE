@@ -18,7 +18,7 @@ export default function IOSets(props) {
 
   const enhancementsData = getEnhancementsForPower(power);
   const overlayImg = getEnhancementOverlay(character.origin, "IO");
-  console.log("ENH FOR POWER: ", powerSlotIndex, power, enhancementsData);
+
   useEffect(() => {
     if (enhancementsData.length !== enhRefs.current.length) {
       enhRefs.current = enhRefs.current.slice(0, enhancementsData.length);
