@@ -18,6 +18,7 @@ export const getEnhancementImage = (name) => {
 export const getEnhancementOverlay = (origin, tier) => {
   // getEnhancementOverlay
   const oData = allOrigins.find((o) => o.name === origin);
+
   switch (tier) {
     case "IO":
       return overlayImages("./IO.png");

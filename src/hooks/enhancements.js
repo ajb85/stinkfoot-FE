@@ -1,11 +1,14 @@
 import useEnhancementNavigation from "providers/builder/useEnhancementNavigation.js";
 import usePowerSlots from "providers/builder/usePowerSlots.js";
+import useCharacterDetails from "providers/builder/useCharacterDetails.js";
 import {
   getEnhancementSubSections,
   getEnhancementsForPower,
   canEnhancementGoInPowerSlot,
   getBonusesForSet,
 } from "helpers/enhancements.js";
+
+import { getEnhancementOverlay } from "helpers/getImages.js";
 
 import { useBuildAnalysis } from "./powersets.js";
 
@@ -60,4 +63,9 @@ export const useAddFullSet = (powerSlotIndex) => {
 export const useRemoveEnhancement = (powerSlotIndex) => {
   const { removeEnhancement } = usePowerSlots();
   return removeEnhancement.bind(this, powerSlotIndex);
+};
+
+export const useGetEnhancementOverlay = () => {
+  const { character } = useCharacterDetails();
+  return getEnhancementOverlay.bind(this, character.origin);
 };

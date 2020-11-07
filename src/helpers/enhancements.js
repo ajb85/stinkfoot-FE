@@ -86,11 +86,11 @@ export const getEnhancementSubSections = ({ section }, types) => {
   return ["IO", "SO", "DO", "TO"];
 };
 
-export const getEnhancementsForPower = ({ section, tier, showSuperior }) => {
+export const getEnhancementsForPower = ({ section, setType, showSuperior }) => {
   if (section === "standard") {
     return getStandardEnhancementsForPower;
   } else if (section === "sets") {
-    return getIOSetEnhancementsForPower.bind(this, tier, showSuperior);
+    return getIOSetEnhancementsForPower.bind(this, setType, showSuperior);
   } else return () => [];
 };
 
@@ -134,19 +134,17 @@ function getStandardEnhancementsForPower(power) {
   }, []);
 }
 
-function getIOSetEnhancementsForPower(tier, showSuperior) {
-  return ioSets[tier].map((enh) => {
+function getIOSetEnhancementsForPower(setType, showSuperior) {
+  return ioSets[setType].map((enh) => {
     let { imageName } = enh;
     if (!imageName) {
       throw new Error("No image found for: ", enh.displayName);
     }
-    // Superior enhancements have an "S" in front of them.  The regular attuned
-    // version drops the first letter
-    const correctedImgName =
-      !enh.isAttuned || showSuperior ? imageName : imageName.substring(1);
-    enh.image = getEnhancementImage(correctedImgName);
+    // Superior enhancements have an "s" in front of the name
 
-    enh.imageName = correctedImgName;
+    const correctedImgName =
+      !enh.isAttuned || !showSuperior ? imageName : "S" + imageName;
+    enh.image = getEnhancementImage(correctedImgName);
     return enh;
   });
 }

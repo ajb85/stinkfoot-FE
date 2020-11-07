@@ -17,7 +17,7 @@ export const EnhNavProvider = (props) => {
     setEnhNavigation({ ...enhNavigation, ...newProps });
 
   const viewStandardEnhancements = (tier = "IO") =>
-    setEnhNavigation({
+    updateEnhNavigation({
       tier,
       section: "standard",
       setType: null,
@@ -25,7 +25,7 @@ export const EnhNavProvider = (props) => {
     });
 
   const viewIOSets = (setType = 0, setIndex = null) =>
-    setEnhNavigation({
+    updateEnhNavigation({
       section: "sets",
       tier: "IO",
       setType,
@@ -33,9 +33,7 @@ export const EnhNavProvider = (props) => {
     });
 
   const toggleSuperiorSets = () =>
-    setEnhNavigation({
-      showSuperior: !enhNavigation.showSuperior,
-    });
+    updateEnhNavigation({ showSuperior: !enhNavigation.showSuperior });
 
   const viewEnhancementSubSection = (sub) => {
     const isSet = !isNaN(Number(sub));
