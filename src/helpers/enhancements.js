@@ -67,23 +67,22 @@ export const getBonusesForCount = (set, count) => {
   return setBonuses[setName].slice(0, count - 1);
 };
 
-export const getEnhancementSubSections = ({ tier }, types) => {
-  const isSet = !isNaN(parseInt(tier, 10));
+export const getEnhancementSubSections = ({ section }, types) => {
+  const isSet = section === "set";
   if (isSet) {
     // If IOs, map over the setNums
-    return types.map((setNum) => ({
-      tier: setNum,
-      name: setTypeConversion[setNum],
-      isSet,
+    return types.map((setType) => ({
+      name: setTypeConversion[setType]
+        .split(" ")
+        .map((n) => n[0])
+        .slice(0, 2)
+        .join(""),
+      setType,
     }));
   }
 
   // Else, send back standard IOs
-  return ["IO", "SO", "DO", "TO"].map((name) => ({
-    tier: name,
-    name,
-    isSet: false,
-  }));
+  return ["IO", "SO", "DO", "TO"];
 };
 
 export const getEnhancementsForPower = ({ section, tier, showSuperior }) => {
