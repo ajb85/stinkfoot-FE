@@ -1,28 +1,28 @@
 import React from "react";
 
-import StandardEnhancements from "../Enhancements/Standards.js";
-import IOSetEnhancements from "../Enhancements/IOSets.js";
+// import StandardEnhancements from "../Enhancements/Standards.js";
+// import IOSetEnhancements from "../Enhancements/IOSets.js";
 // import { getPowerStats } from "../../../js/powerCalculations.js";
 // import TableList from "components/TableList/";
 import PunnettSquare from "components/PunnettSquare/";
 import SlideDropdown from "components/SlideDropdown/";
 
 import useEnhNavigation from "providers/builder/useEnhancementNavigation.js";
-import useCharacterDetails from "providers/builder/useCharacterDetails.js";
+// import useCharacterDetails from "providers/builder/useCharacterDetails.js";
 import { useGetEnhancementSubSections } from "hooks/enhancements.js";
 import useActiveSets from "providers/builder/useActiveSets.js";
-import usePowerSlots from "providers/builder/usePowerSlots.js";
+// import usePowerSlots from "providers/builder/usePowerSlots.js";
 import { useTogglePowerSlot } from "hooks/powersets.js";
 
-import { getEnhancementImageWithOverlay } from "helpers/getImages.js";
+// import { getEnhancementImageWithOverlay } from "helpers/getImages.js";
 import styles from "../styles.module.scss";
 
 function PowerSlot({ slot }) {
   const { level, power, powerSlotIndex } = slot;
   const enhNav = useEnhNavigation();
   const togglePowerSlot = useTogglePowerSlot(powerSlotIndex);
-  const { tracking, setTrackingManually } = useActiveSets();
-  const { powerSlots } = usePowerSlots();
+  const { tracking } = useActiveSets();
+  // const { powerSlots } = usePowerSlots();
   const getEnhancementSubSections = useGetEnhancementSubSections();
   const isToggled = tracking.toggledSlot === powerSlotIndex;
 
@@ -30,6 +30,8 @@ function PowerSlot({ slot }) {
     const isActive = tracking.activeLevel === level;
     return <EmptyPowerSlot level={level} isActive={isActive} />;
   }
+
+  const subsections = getEnhancementSubSections(power.setTypes);
 
   return (
     <div
@@ -46,7 +48,7 @@ function PowerSlot({ slot }) {
         <SlideDropdown isToggled={isToggled}>
           <PunnettSquare
             topOptions={getTopOptions(enhNav, power)}
-            sideOptions={getEnhancementSubSections(enhNav, power.setTypes)}
+            sideOptions={getSideOptions(enhNav, subsections)}
           ></PunnettSquare>
         </SlideDropdown>
       )}
@@ -77,20 +79,21 @@ function getSideOptions(enhNav, subsections) {
   const { section } = enhNavigation;
   const isSet = section === "sets";
 
-  return subsections.map(({ setType, name }) => ({
-    content: name
-      .split(" ")
-      .map((n) => n[0])
-      .slice(0, 2)
-      .join(""),
-    onClick: viewEnhancementSubSection.bind(this, setType || name),
-    style: {
-      color: isSet
-        ? setType === enhNavigation.setType
-        : name === enhNavigation.tier,
-      cursor: "pointer",
-    },
-  }));
+  return subsections.map((category) => {
+    const name = isSet ? category.name : category;
+    const setType = isSet ? category.setType : name;
+    const isActive = isSet
+      ? setType === enhNavigation.setType
+      : name === enhNavigation.tier;
+    return {
+      content: name,
+      onClick: viewEnhancementSubSection.bind(this, setType),
+      style: {
+        color: isActive ? "red" : "white",
+        cursor: "pointer",
+      },
+    };
+  });
 }
 
 function EmptyPowerSlot({ isActive, level }) {
