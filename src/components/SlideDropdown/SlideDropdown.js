@@ -8,10 +8,15 @@ function SlideDropdown(props) {
       className={
         styles.SlideDropdown + (props.isToggled ? " " + styles.toggled : "")
       }
+      onClick={stopProp}
     >
       <div className={styles.content}>{props.children}</div>
     </div>
   );
+}
+
+function stopProp(e) {
+  e.stopPropagation();
 }
 
 export default SlideDropdown;

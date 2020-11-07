@@ -68,7 +68,8 @@ export const getBonusesForCount = (set, count) => {
 };
 
 export const getEnhancementSubSections = ({ section }, types) => {
-  const isSet = section === "set";
+  const isSet = section === "sets";
+
   if (isSet) {
     // If IOs, map over the setNums
     return types.map((setType) => ({
