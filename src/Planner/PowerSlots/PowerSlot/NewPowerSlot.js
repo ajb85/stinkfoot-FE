@@ -4,10 +4,12 @@ import PunnettSquare from "components/PunnettSquare/";
 import SlideDropdown from "components/SlideDropdown/";
 import EnhancementSelection from "../EnhancementSelection.js";
 
+import usePowerSlots from "providers/builder/usePowerSlots.js";
 import useEnhNavigation from "providers/builder/useEnhancementNavigation.js";
 import { useGetEnhancementSubSections } from "hooks/enhancements.js";
 import useActiveSets from "providers/builder/useActiveSets.js";
 import { useTogglePowerSlot } from "hooks/powersets.js";
+import EnhancementBar from "components/EnhancementBar/";
 
 // import { getEnhancementImageWithOverlay } from "helpers/getImages.js";
 import styles from "../styles.module.scss";
@@ -17,15 +19,17 @@ function PowerSlot({ slot }) {
   const enhNav = useEnhNavigation();
   const togglePowerSlot = useTogglePowerSlot(powerSlotIndex);
   const { tracking } = useActiveSets();
+  const { powerSlots } = usePowerSlots();
   const getEnhancementSubSections = useGetEnhancementSubSections();
-  const isToggled = tracking.toggledSlot === powerSlotIndex;
 
   if (!power) {
     const isActive = tracking.activeLevel === level;
     return <EmptyPowerSlot level={level} isActive={isActive} />;
   }
 
+  const isToggled = tracking.toggledSlot === powerSlotIndex;
   const subsections = getEnhancementSubSections(power.setTypes);
+  const powerSlot = powerSlots[powerSlotIndex];
 
   return (
     <div
@@ -38,16 +42,15 @@ function PowerSlot({ slot }) {
           ({level}) {power.displayName}
         </p>
       </div>
-      {powerSlotIndex === 0 && (
-        <SlideDropdown isToggled={isToggled}>
-          <PunnettSquare
-            topOptions={getTopOptions(enhNav, power)}
-            sideOptions={getSideOptions(enhNav, subsections)}
-          >
-            <EnhancementSelection powerSlotIndex={powerSlotIndex} />
-          </PunnettSquare>
-        </SlideDropdown>
-      )}
+      <EnhancementBar enhancements={powerSlot.enhSlots} />
+      <SlideDropdown isToggled={isToggled}>
+        <PunnettSquare
+          topOptions={getTopOptions(enhNav, power)}
+          sideOptions={getSideOptions(enhNav, subsections)}
+        >
+          <EnhancementSelection powerSlotIndex={powerSlotIndex} />
+        </PunnettSquare>
+      </SlideDropdown>
     </div>
   );
 }

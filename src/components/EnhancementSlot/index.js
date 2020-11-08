@@ -1,2 +1,2 @@
-import $ from "./EnhancementSlots.js.";
+import $ from "./EnhancementSlot.js";
 export default $;
