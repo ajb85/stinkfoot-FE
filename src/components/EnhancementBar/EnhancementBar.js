@@ -6,14 +6,16 @@ import InPlaceAbsolute from "components/InPlaceAbsolute/";
 import styles from "./styles.module.scss";
 
 function EnhancementBar(props) {
-  if (!props.enhancements) {
+  if (!props.slots) {
     return null;
   }
 
+  const zIndex = props.zIndex !== undefined ? props.zIndex : 200;
+
   return (
-    <InPlaceAbsolute parentClassName={styles.EnhancementBar} zIndex={200}>
-      {props.enhancements.map((e) => {
-        return <EnhancementSlot enhancement={e} />;
+    <InPlaceAbsolute childClassName={styles.EnhancementBar} zIndex={zIndex}>
+      {props.slots.map((s) => {
+        return <EnhancementSlot slot={s} />;
       })}
     </InPlaceAbsolute>
   );

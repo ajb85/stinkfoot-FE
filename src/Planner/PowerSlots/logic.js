@@ -1,7 +1,3 @@
-import React from "react";
-import PowerSlot from "./PowerSlot/";
-import styles from "./styles.module.scss";
-
 export const reducer = (view, index = 0) => (acc, cur, powerSlotIndex) => {
   const psWithIndex = { ...cur, powerSlotIndex };
   if (cur.type === "default") {
@@ -25,20 +21,10 @@ export const reducer = (view, index = 0) => (acc, cur, powerSlotIndex) => {
   return acc;
 };
 
-export const mapSelected = (column, columnNumber) => {
-  return (
-    <div key={columnNumber} className={styles.column}>
-      {column.map(mapColumns)}
-    </div>
-  );
-};
-
-export const mapColumns = (ps) => (
-  <PowerSlot key={ps.powerSlotIndex} slot={ps} />
-);
-
 export const getInitialAcc = () => ({
   selected: [[], [], []],
   defaults: [],
   empties: [],
 });
+
+export const elementsPerIndex = 3;

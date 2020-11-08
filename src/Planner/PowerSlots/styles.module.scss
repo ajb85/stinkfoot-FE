@@ -24,7 +24,7 @@ section.PowerSlots {
   }
 
   .powerContainer {
-    width: 190px;
+    width: 200px;
     height: 1.5 * $lh;
     position: relative;
     margin: 0 5px 1.5 * $lh;
@@ -41,18 +41,13 @@ section.PowerSlots {
     cursor: pointer;
     overflow: hidden;
     background-color: #1b4ea8;
-    z-index: 0;
     transition: height 0.25s, border-radius 0.25s;
 
-    // &.toggled {
+    // &.toggled { // Old power slot
     // cursor: default;
     // height: 14 * $lh;
     // border-radius: 0;
     // }
-
-    &.toggled {
-      z-index: 2;
-    }
 
     & > p {
       font-size: 12px;
@@ -87,36 +82,36 @@ section.PowerSlots {
     top: 1.1 * $lh;
   }
 
-  .enhancementSlot {
-    margin: 0 1px;
-    .enhancementBubble {
-      width: 1.5 * $lh;
-      height: 1.5 * $lh;
-      border: 1px solid white;
-      border-radius: 50%;
-      background-color: $dark;
+  // .enhancementSlot { // old slot
+  //   margin: 0 1px;
+  //   .enhancementBubble {
+  //     width: 1.5 * $lh;
+  //     height: 1.5 * $lh;
+  //     border: 1px solid white;
+  //     border-radius: 50%;
+  //     background-color: $dark;
 
-      position: relative;
-      z-index: 1;
-      left: 8px;
-    }
+  //     position: relative;
+  //     z-index: 1;
+  //     left: 8px;
+  //   }
 
-    .enhancementBubble + .enhancementBubble {
-      margin-left: 2px;
-    }
+  //   .enhancementBubble + .enhancementBubble {
+  //     margin-left: 2px;
+  //   }
 
-    p {
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      margin: auto;
-      width: fit-content;
+  //   p {
+  //     position: absolute;
+  //     left: 0;
+  //     right: 0;
+  //     bottom: 0;
+  //     margin: auto;
+  //     width: fit-content;
 
-      font-size: 8px;
-      color: $secondary;
-    }
-  }
+  //     font-size: 8px;
+  //     color: $secondary;
+  //   }
+  // }
 }
 
 .enhancementImage {
@@ -295,4 +290,9 @@ section.PowerSlots {
       left: 0;
     }
   }
+}
+
+// NewPowerSlot
+.divider {
+  height: $lh;
 }

@@ -1,11 +1,11 @@
 import React, { useState, useEffect, useCallback } from "react";
 
-// import useEnhNavigation from "providers/builder/useEnhancementNavigation.js";
-// import useActiveSets from "providers/builder/useActiveSets.js";
+import PowerSlot from "./PowerSlot/";
+
 import usePowerSlots from "providers/builder/usePowerSlots.js";
 import { useNextActiveLevel } from "hooks/powersets.js";
 
-import { reducer, mapSelected, getInitialAcc } from "./logic.js";
+import { reducer, getInitialAcc, elementsPerIndex } from "./logic.js";
 
 import styles from "./styles.module.scss";
 
@@ -28,11 +28,35 @@ function PowerSlots(props) {
     getInitialAcc()
   );
 
+  const getZIndex = ((count) => () => {
+    for (let i = 0; i < elementsPerIndex; i++) {
+      count--;
+    }
+    return count;
+  })(
+    elementsPerIndex *
+      selected.reduce((count, column) => count + column.length, 0) // + defaults.length + empties.length
+  );
+
   return (
     <section className={styles.PowerSlots}>
       <button onClick={toggleView}>Toggle View</button>
       <h2>Power Slots</h2>
-      <div className={styles.slotsContainer}>{selected.map(mapSelected)}</div>
+      <div className={styles.slotsContainer}>
+        {selected.map((column, columnIndex) => {
+          return (
+            <div key={columnIndex} className={styles.column}>
+              {column.map((ps) => (
+                <PowerSlot
+                  key={ps.powerSlotIndex}
+                  slot={ps}
+                  zIndex={getZIndex()}
+                />
+              ))}
+            </div>
+          );
+        })}
+      </div>
     </section>
   );
 }
