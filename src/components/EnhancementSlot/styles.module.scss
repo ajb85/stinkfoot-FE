@@ -1,12 +1,21 @@
 @import "styles/variables.scss";
 
 .slot {
-    & > div.empty {
-        width:30px;
-        height:30px;
+  & > div.empty {
+    width: 30px;
+    height: 30px;
 
-        border: 1px solid $secondary;
-        border-radius: 50%;
-        background-color: $dark;
-    }
+    border: 1px solid $secondary;
+    border-radius: 50%;
+    background-color: $dark;
+  }
+
+  .level {
+    width: fit-content;
+    font-size: 9px;
+
+    position: relative;
+    left: 12px;
+    top: -8px;
+  }
 }

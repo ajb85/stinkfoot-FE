@@ -2,15 +2,18 @@ import React from "react";
 
 import styles from "./styles.module.scss";
 
-function EnhancementSlot(props) {
+function EnhancementSlot({ slot, powerSlotLevel, onClick }) {
+  const hasLevel = slot.slotLevel !== undefined;
   return (
     <div className={styles.slot}>
-      {props.slot.enhancement ? (
-        <div onClick={props.onClick}>H</div>
+      {slot.enhancement ? (
+        <div onClick={onClick || noFunc}>H</div>
       ) : (
         <div className={styles.empty} />
       )}
-      {props.slotLevel && <div className={styles.level}>{props.slotLevel}</div>}
+      {hasLevel && (
+        <p className={styles.level}>{slot.slotLevel || powerSlotLevel}</p>
+      )}
     </div>
   );
 }

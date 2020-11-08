@@ -6,7 +6,7 @@ import InPlaceAbsolute from "components/InPlaceAbsolute/";
 import styles from "./styles.module.scss";
 
 function EnhancementBar(props) {
-  if (!props.slots) {
+  if (!props.powerSlot) {
     return null;
   }
 
@@ -14,8 +14,10 @@ function EnhancementBar(props) {
 
   return (
     <InPlaceAbsolute childClassName={styles.EnhancementBar} zIndex={zIndex}>
-      {props.slots.map((s) => {
-        return <EnhancementSlot slot={s} />;
+      {props.powerSlot.enhSlots.map((s) => {
+        return (
+          <EnhancementSlot slot={s} powerSlotLevel={props.powerSlot.level} />
+        );
       })}
     </InPlaceAbsolute>
   );
