@@ -10,7 +10,9 @@ function SlideDropdown(props) {
       }
       onClick={stopProp}
     >
-      <div className={styles.content}>{props.children}</div>
+      <div className={styles.content} style={{ zIndex: props.zIndex }}>
+        {props.children}
+      </div>
     </div>
   );
 }

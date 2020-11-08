@@ -14,7 +14,7 @@ import EnhancementBar from "components/EnhancementBar/";
 // import { getEnhancementImageWithOverlay } from "helpers/getImages.js";
 import styles from "../styles.module.scss";
 
-function PowerSlot({ slot }) {
+function PowerSlot({ slot, zIndex }) {
   const { level, power, powerSlotIndex } = slot;
   const enhNav = useEnhNavigation();
   const togglePowerSlot = useTogglePowerSlot(powerSlotIndex);
@@ -36,14 +36,16 @@ function PowerSlot({ slot }) {
       className={styles.powerContainer}
       key={powerSlotIndex}
       onClick={togglePowerSlot}
+      style={{ zIndex: zIndex + 1 }}
     >
-      <div className={`${styles.pill} ${isToggled && styles.toggled}`}>
+      <div className={styles.pill} style={{ zIndex: zIndex + 1 }}>
         <p className="pillText">
           ({level}) {power.displayName}
         </p>
       </div>
-      <EnhancementBar enhancements={powerSlot.enhSlots} />
-      <SlideDropdown isToggled={isToggled}>
+      <EnhancementBar slots={powerSlot.enhSlots} zIndex={zIndex + 2} />
+      <SlideDropdown isToggled={isToggled} zIndex={zIndex}>
+        <div className={styles.divider} />
         <PunnettSquare
           topOptions={getTopOptions(enhNav, power)}
           sideOptions={getSideOptions(enhNav, subsections)}

@@ -5,7 +5,7 @@ import styles from "./styles.module.scss";
 function EnhancementSlot(props) {
   return (
     <div className={styles.slot}>
-      {props.enhancement ? (
+      {props.slot.enhancement ? (
         <div onClick={props.onClick}>H</div>
       ) : (
         <div className={styles.empty} />
