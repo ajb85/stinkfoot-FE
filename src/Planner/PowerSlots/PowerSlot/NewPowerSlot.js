@@ -43,7 +43,7 @@ function PowerSlot({ slot, zIndex }) {
           ({level}) {power.displayName}
         </p>
       </div>
-      <EnhancementBar slots={powerSlot.enhSlots} zIndex={zIndex + 2} />
+      <EnhancementBar powerSlot={powerSlot} zIndex={zIndex + 2} />
       <SlideDropdown isToggled={isToggled} zIndex={zIndex}>
         <div className={styles.divider} />
         <PunnettSquare
