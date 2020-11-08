@@ -5,8 +5,8 @@ import styles from "./styles.module.scss";
 
 export default function PunnettSquare(props) {
   return (
-    <div className={styles.selectEnhancements}>
-      <div className={styles.EnhSectionSelect}>
+    <div className={styles.Punnett} style={props.style || {}}>
+      <div className={styles.topLabels}>
         {props.topOptions.map((o) => {
           return (
             <p key={o.content} onClick={o.onClick} style={o.styles || {}}>
@@ -17,7 +17,7 @@ export default function PunnettSquare(props) {
       </div>
       <GridAndLabel labelDirection={props.labelDirection}>
         {props.children}
-        <div className={styles.EnhPreviewSubSectionPreview}>
+        <div className={styles.sideLabels}>
           {props.sideOptions.map((o) => {
             return (
               <p key={o.content} onClick={o.onClick} style={o.style}>

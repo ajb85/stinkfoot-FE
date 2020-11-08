@@ -1,6 +1,6 @@
 import React from "react";
 
-import styles from "styles.module.scss";
+import styles from "./styles.module.scss";
 
 function EnhancementSlot(props) {
   return (
@@ -10,9 +10,11 @@ function EnhancementSlot(props) {
       ) : (
         <div className={styles.empty} />
       )}
-      {props.level && <div className={styles.level}>{props.level}</div>}
+      {props.slotLevel && <div className={styles.level}>{props.slotLevel}</div>}
     </div>
   );
 }
+
+function noFunc() {}
 
 export default EnhancementSlot;

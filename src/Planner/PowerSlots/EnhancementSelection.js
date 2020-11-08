@@ -14,7 +14,6 @@ function EnhancementSelection(props) {
   const { power } = powerSlots[props.powerSlotIndex];
   const enhancements = useGetEnhancementsForPower()(power);
   const getOverlay = useGetEnhancementOverlay();
-
   const { enhNavigation } = useEnhNavigation();
   const { tier } = enhNavigation;
 
