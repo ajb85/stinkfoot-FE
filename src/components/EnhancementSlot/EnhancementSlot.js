@@ -4,15 +4,20 @@ import styles from "./styles.module.scss";
 
 function EnhancementSlot({ slot, powerSlotLevel, onClick }) {
   const hasLevel = slot.slotLevel !== undefined;
+  console.log("ENHANCEMENT: ", slot.enhancement);
   return (
     <div className={styles.slot}>
       {slot.enhancement ? (
-        <div onClick={onClick || noFunc}>H</div>
+        <img
+          src={slot.enhancement.image}
+          alt="enhancement"
+          onClick={onClick || noFunc}
+        />
       ) : (
         <div className={styles.empty} />
       )}
       {hasLevel && (
-        <p className={styles.level}>{slot.slotLevel || powerSlotLevel}</p>
+        <div className={styles.level}>{slot.slotLevel || powerSlotLevel}</div>
       )}
     </div>
   );

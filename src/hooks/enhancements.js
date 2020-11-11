@@ -6,6 +6,7 @@ import {
   getEnhancementsForPower,
   canEnhancementGoInPowerSlot,
   getBonusesForSet,
+  getSetBonusDataForPowerSlot,
 } from "helpers/enhancements.js";
 
 import { getEnhancementOverlay } from "helpers/getImages.js";
@@ -68,4 +69,19 @@ export const useRemoveEnhancement = (powerSlotIndex) => {
 export const useGetEnhancementOverlay = () => {
   const { character } = useCharacterDetails();
   return getEnhancementOverlay.bind(this, character.origin);
+};
+
+export const useGetSetBonusDataForPowerSlot = (powerSlot) => {
+  const bonuses = useGetBonusesForSet();
+  const details = useBuildAnalysis();
+  const settings = {};
+
+  return (set) =>
+    getSetBonusDataForPowerSlot(
+      bonuses(set),
+      details,
+      settings,
+      powerSlot,
+      set
+    );
 };
