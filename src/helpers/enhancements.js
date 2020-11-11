@@ -41,10 +41,11 @@ export const getBonusesForSet = (settings, { showSuperior }, set) => {
   const baseName = set.displayName.split(" ").join("_");
   const isAttuned = setBonuses[baseName] && setBonuses["Superior_" + baseName];
   const correctedSetName =
-    showSuperior && isAttuned ? "Superior_" + baseName : baseName;
+    showSuperior && isAttuned && !set.noSuperior
+      ? "Superior_" + baseName
+      : baseName;
 
   if (!setBonuses[correctedSetName]) {
-    // console.log("NO BONUSES FOR ", correctedSetName, set);
     return [];
   }
 
@@ -115,6 +116,25 @@ export const canEnhancementGoInPowerSlot = ({ lookup }, power, enhancement) => {
   );
 };
 
+export function getSetBonusDataForPowerSlot(
+  bonuses,
+  { lookup, excluded },
+  settings,
+  powerSlot,
+  set
+) {
+  const setsInCurrentPower = lookup.setsInPower[powerSlot.power.fullName];
+  const setInPower = (setsInCurrentPower &&
+    setsInCurrentPower[set.fullName]) || { count: 0 };
+
+  const { count } = setInPower;
+
+  return bonuses.map(({ bonus, unlocked }) => ({
+    displays: bonus.displays,
+    isActive: unlocked <= count,
+  }));
+}
+
 function getStandardEnhancementsForPower(power) {
   if (!power.slottable) {
     return [];
@@ -135,16 +155,19 @@ function getStandardEnhancementsForPower(power) {
 }
 
 function getIOSetEnhancementsForPower(setType, showSuperior) {
-  return ioSets[setType].map((enh) => {
-    let { imageName } = enh;
+  return ioSets[setType].map((set) => {
+    let { imageName } = set;
     if (!imageName) {
-      throw new Error("No image found for: ", enh.displayName);
+      throw new Error("No image found for: ", set.displayName);
     }
     // Superior enhancements have an "s" in front of the name
 
     const correctedImgName =
-      !enh.isAttuned || !showSuperior ? imageName : "S" + imageName;
-    enh.image = getEnhancementImage(correctedImgName);
-    return enh;
+      !set.isAttuned || !showSuperior || set.noSuperior
+        ? imageName
+        : "S" + imageName;
+    set.image = getEnhancementImage(correctedImgName);
+    set.enhancements.forEach((e) => (e.image = set.image));
+    return set;
   });
 }

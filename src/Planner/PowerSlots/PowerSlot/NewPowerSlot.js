@@ -44,15 +44,17 @@ function PowerSlot({ slot, zIndex }) {
         </p>
       </div>
       <EnhancementBar powerSlot={powerSlot} zIndex={zIndex + 2} />
-      <SlideDropdown isToggled={isToggled} zIndex={zIndex}>
-        <div className={styles.divider} />
-        <PunnettSquare
-          topOptions={getTopOptions(enhNav, power)}
-          sideOptions={getSideOptions(enhNav, subsections)}
-        >
-          <EnhancementSelection powerSlotIndex={powerSlotIndex} />
-        </PunnettSquare>
-      </SlideDropdown>
+      {powerSlotIndex === 0 && (
+        <SlideDropdown isToggled={isToggled} zIndex={zIndex}>
+          <div className={styles.divider} />
+          <PunnettSquare
+            topOptions={getTopOptions(enhNav, power)}
+            sideOptions={getSideOptions(enhNav, subsections)}
+          >
+            <EnhancementSelection powerSlotIndex={powerSlotIndex} />
+          </PunnettSquare>
+        </SlideDropdown>
+      )}
     </div>
   );
 }

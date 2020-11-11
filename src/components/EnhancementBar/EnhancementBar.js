@@ -14,9 +14,13 @@ function EnhancementBar(props) {
 
   return (
     <InPlaceAbsolute childClassName={styles.EnhancementBar} zIndex={zIndex}>
-      {props.powerSlot.enhSlots.map((s) => {
+      {props.powerSlot.enhSlots.map((s, i) => {
         return (
-          <EnhancementSlot slot={s} powerSlotLevel={props.powerSlot.level} />
+          <EnhancementSlot
+            key={s.slotLevel || i}
+            slot={s}
+            powerSlotLevel={props.powerSlot.level}
+          />
         );
       })}
     </InPlaceAbsolute>
