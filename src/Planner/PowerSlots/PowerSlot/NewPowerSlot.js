@@ -18,6 +18,13 @@ function PowerSlot({ slot, zIndex }) {
   const togglePowerSlot = useTogglePowerSlot(powerSlotIndex);
   const { tracking } = useActiveSets();
   const getEnhancementSubSections = useGetEnhancementSubSections();
+  const handlePillClick = React.useCallback(
+    (e) => {
+      e.stopPropagation();
+      togglePowerSlot(e);
+    },
+    [togglePowerSlot]
+  );
 
   if (!power) {
     const isActive = tracking.activeLevel === level;
@@ -28,29 +35,27 @@ function PowerSlot({ slot, zIndex }) {
   const subsections = getEnhancementSubSections(power.setTypes);
 
   return (
-    <div onClick={stopProp}>
-      <div
-        className={styles.powerContainer}
-        key={powerSlotIndex}
-        onClick={togglePowerSlot}
-        style={{ zIndex: zIndex + 1 }}
-      >
-        <div className={styles.pill} style={{ zIndex: zIndex + 1 }}>
-          <p className="pillText">
-            ({level}) {power.displayName}
-          </p>
-        </div>
-        <EnhancementBar powerSlotIndex={powerSlotIndex} zIndex={zIndex + 2} />
-        <SlideDropdown isToggled={isToggled} zIndex={zIndex}>
-          <div className={styles.divider} />
-          <PunnettSquare
-            topOptions={getTopOptions(enhNav, power)}
-            sideOptions={getSideOptions(enhNav, subsections)}
-          >
-            <EnhancementSelection powerSlotIndex={powerSlotIndex} />
-          </PunnettSquare>
-        </SlideDropdown>
+    <div
+      className={styles.powerContainer}
+      key={powerSlotIndex}
+      onClick={handlePillClick}
+      style={{ zIndex: zIndex + 1 }}
+    >
+      <div className={styles.pill} style={{ zIndex: zIndex + 1 }}>
+        <p className="pillText">
+          ({level}) {power.displayName}
+        </p>
       </div>
+      <EnhancementBar powerSlotIndex={powerSlotIndex} zIndex={zIndex + 2} />
+      <SlideDropdown isToggled={isToggled} zIndex={zIndex}>
+        <div className={styles.divider} />
+        <PunnettSquare
+          topOptions={getTopOptions(enhNav, power)}
+          sideOptions={getSideOptions(enhNav, subsections)}
+        >
+          <EnhancementSelection powerSlotIndex={powerSlotIndex} />
+        </PunnettSquare>
+      </SlideDropdown>
     </div>
   );
 }
@@ -108,10 +113,6 @@ function EmptyPowerSlot({ isActive, level }) {
       </div>
     </div>
   );
-}
-
-function stopProp(e) {
-  e.stopPropagation();
 }
 
 export default PowerSlot;
