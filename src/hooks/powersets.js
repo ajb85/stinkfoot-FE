@@ -70,6 +70,11 @@ export const useTogglePowerSlot = (index) => {
   return setTrackingManually.bind(this, "toggledSlot", value);
 };
 
+export const useRemoveSlotToggles = () => {
+  const { setTrackingManually } = useActiveSets();
+  return setTrackingManually.bind(this, "toggledSlot", null);
+};
+
 export const useResetBuild = () => {
   const { resetPowerSlots } = usePowerSlots();
   const { resetPools } = usePoolPowers();

@@ -14,6 +14,7 @@ function EnhancementSlot({ slot, powerSlotLevel, onClick }) {
     character.origin,
     slot.enhancement && slot.enhancement.tier
   );
+
   return (
     <div className={styles.slot}>
       {slot.enhancement ? (

@@ -28,27 +28,29 @@ function PowerSlot({ slot, zIndex }) {
   const subsections = getEnhancementSubSections(power.setTypes);
 
   return (
-    <div
-      className={styles.powerContainer}
-      key={powerSlotIndex}
-      onClick={togglePowerSlot}
-      style={{ zIndex: zIndex + 1 }}
-    >
-      <div className={styles.pill} style={{ zIndex: zIndex + 1 }}>
-        <p className="pillText">
-          ({level}) {power.displayName}
-        </p>
+    <div onClick={stopProp}>
+      <div
+        className={styles.powerContainer}
+        key={powerSlotIndex}
+        onClick={togglePowerSlot}
+        style={{ zIndex: zIndex + 1 }}
+      >
+        <div className={styles.pill} style={{ zIndex: zIndex + 1 }}>
+          <p className="pillText">
+            ({level}) {power.displayName}
+          </p>
+        </div>
+        <EnhancementBar powerSlotIndex={powerSlotIndex} zIndex={zIndex + 2} />
+        <SlideDropdown isToggled={isToggled} zIndex={zIndex}>
+          <div className={styles.divider} />
+          <PunnettSquare
+            topOptions={getTopOptions(enhNav, power)}
+            sideOptions={getSideOptions(enhNav, subsections)}
+          >
+            <EnhancementSelection powerSlotIndex={powerSlotIndex} />
+          </PunnettSquare>
+        </SlideDropdown>
       </div>
-      <EnhancementBar powerSlotIndex={powerSlotIndex} zIndex={zIndex + 2} />
-      <SlideDropdown isToggled={isToggled} zIndex={zIndex}>
-        <div className={styles.divider} />
-        <PunnettSquare
-          topOptions={getTopOptions(enhNav, power)}
-          sideOptions={getSideOptions(enhNav, subsections)}
-        >
-          <EnhancementSelection powerSlotIndex={powerSlotIndex} />
-        </PunnettSquare>
-      </SlideDropdown>
     </div>
   );
 }
@@ -106,6 +108,10 @@ function EmptyPowerSlot({ isActive, level }) {
       </div>
     </div>
   );
+}
+
+function stopProp(e) {
+  e.stopPropagation();
 }
 
 export default PowerSlot;
