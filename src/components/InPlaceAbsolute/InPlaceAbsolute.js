@@ -7,10 +7,16 @@ function InPlaceAbsolute(props) {
     styles.InPlaceAbsolute +
     (props.parentClassName ? " " + props.parentClassName : "");
   return (
-    <div style={{ zIndex: props.zIndex || 0 }} className={parentClass}>
+    <div
+      style={{ zIndex: props.zIndex || 0 }}
+      className={parentClass}
+      onClick={props.onClick || noFunc}
+    >
       <div className={props.childClassName || ""}>{props.children}</div>
     </div>
   );
 }
+
+function noFunc() {}
 
 export default InPlaceAbsolute;

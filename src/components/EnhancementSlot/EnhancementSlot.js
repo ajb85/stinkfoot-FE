@@ -15,7 +15,7 @@ function EnhancementSlot({ slot, powerSlotLevel, onClick }) {
     slot.enhancement && slot.enhancement.tier
   );
   return (
-    <div className={styles.slot} onClick={noProp}>
+    <div className={styles.slot}>
       {slot.enhancement ? (
         <div className={styles.enhancement}>
           {overlay && <img src={overlay} alt="enhancement overlay" />}
@@ -36,8 +36,5 @@ function EnhancementSlot({ slot, powerSlotLevel, onClick }) {
 }
 
 function noFunc() {}
-function noProp(e) {
-  e.stopPropagation();
-}
 
 export default EnhancementSlot;

@@ -20,7 +20,11 @@ function EnhancementBar(props) {
   const zIndex = props.zIndex !== undefined ? props.zIndex : 200;
 
   return (
-    <InPlaceAbsolute childClassName={styles.EnhancementBar} zIndex={zIndex}>
+    <InPlaceAbsolute
+      childClassName={styles.EnhancementBar}
+      zIndex={zIndex}
+      onClick={noProp}
+    >
       {powerSlot.enhSlots.map((s, i) => {
         return (
           <EnhancementSlot
@@ -33,6 +37,10 @@ function EnhancementBar(props) {
       })}
     </InPlaceAbsolute>
   );
+}
+
+function noProp(e) {
+  e.stopPropagation();
 }
 
 export default EnhancementBar;

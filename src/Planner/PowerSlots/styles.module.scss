@@ -27,7 +27,15 @@ section.PowerSlots {
     width: 200px;
     height: 1.5 * $lh;
     position: relative;
-    margin: 0 5px 1.5 * $lh;
+    margin: 1.5 * $lh 5px 0;
+
+    &:first-of-type {
+      margin-top: $lh/2;
+    }
+
+    &:last-of-type {
+      margin-bottom: $lh * 2.5;
+    }
   }
 
   .power,
@@ -43,15 +51,9 @@ section.PowerSlots {
     background-color: #1b4ea8;
     transition: height 0.25s, border-radius 0.25s;
 
-    // &.toggled { // Old power slot
-    // cursor: default;
-    // height: 14 * $lh;
-    // border-radius: 0;
-    // }
-
     & > p {
       font-size: 12px;
-      margin: 3px $lh/2 2 * $lh;
+      margin: 2px $lh/2 0; //2 * $lh;
     }
 
     .enhPreviewContainer {
@@ -81,37 +83,6 @@ section.PowerSlots {
     position: relative;
     top: 1.1 * $lh;
   }
-
-  // .enhancementSlot { // old slot
-  //   margin: 0 1px;
-  //   .enhancementBubble {
-  //     width: 1.5 * $lh;
-  //     height: 1.5 * $lh;
-  //     border: 1px solid white;
-  //     border-radius: 50%;
-  //     background-color: $dark;
-
-  //     position: relative;
-  //     z-index: 1;
-  //     left: 8px;
-  //   }
-
-  //   .enhancementBubble + .enhancementBubble {
-  //     margin-left: 2px;
-  //   }
-
-  //   p {
-  //     position: absolute;
-  //     left: 0;
-  //     right: 0;
-  //     bottom: 0;
-  //     margin: auto;
-  //     width: fit-content;
-
-  //     font-size: 8px;
-  //     color: $secondary;
-  //   }
-  // }
 }
 
 .enhancementImage {
