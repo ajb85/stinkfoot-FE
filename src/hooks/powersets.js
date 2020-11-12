@@ -71,8 +71,22 @@ export const useTogglePowerSlot = (index) => {
 };
 
 export const useRemoveSlotToggles = () => {
+  const { clearToggles } = useActiveSets();
+  return clearToggles;
+};
+
+export const useActiveEnhancementSet = () => {
+  const { tracking, setTrackingManually } = useActiveSets();
+  const toggleActiveEnhancementSet = (i) =>
+    setTrackingManually("toggledSet", i === tracking.toggledSet ? null : i);
+  const { toggledSet } = tracking;
+
+  return { toggledEnhancementSet: toggledSet, toggleActiveEnhancementSet };
+};
+
+export const useClearActiveEnhancementSet = () => {
   const { setTrackingManually } = useActiveSets();
-  return setTrackingManually.bind(this, "toggledSlot", null);
+  return setTrackingManually.bind(this, "toggledSet", null);
 };
 
 export const useResetBuild = () => {

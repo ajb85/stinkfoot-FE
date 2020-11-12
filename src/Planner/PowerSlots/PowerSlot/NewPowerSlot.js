@@ -7,7 +7,10 @@ import EnhancementSelection from "../EnhancementSelection.js";
 import useEnhNavigation from "providers/builder/useEnhancementNavigation.js";
 import { useGetEnhancementSubSections } from "hooks/enhancements.js";
 import useActiveSets from "providers/builder/useActiveSets.js";
-import { useTogglePowerSlot } from "hooks/powersets.js";
+import {
+  useTogglePowerSlot,
+  useClearActiveEnhancementSet,
+} from "hooks/powersets.js";
 import EnhancementBar from "components/EnhancementBar/";
 
 import styles from "../styles.module.scss";
@@ -15,6 +18,7 @@ import styles from "../styles.module.scss";
 function PowerSlot({ slot, zIndex }) {
   const { level, power, powerSlotIndex } = slot;
   const enhNav = useEnhNavigation();
+  const clearActiveEnhancementSet = useClearActiveEnhancementSet();
   const togglePowerSlot = useTogglePowerSlot(powerSlotIndex);
   const { tracking } = useActiveSets();
   const getEnhancementSubSections = useGetEnhancementSubSections();
@@ -47,7 +51,11 @@ function PowerSlot({ slot, zIndex }) {
         </p>
       </div>
       <EnhancementBar powerSlotIndex={powerSlotIndex} zIndex={zIndex + 2} />
-      <SlideDropdown isToggled={isToggled} zIndex={zIndex}>
+      <SlideDropdown
+        isToggled={isToggled}
+        zIndex={zIndex}
+        onClick={clearActiveEnhancementSet}
+      >
         <div className={styles.divider} />
         <PunnettSquare
           topOptions={getTopOptions(enhNav, power)}

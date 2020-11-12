@@ -114,7 +114,6 @@ export const PowerSlotsProvider = (props) => {
 
   const removeEnhancement = (powerSlotIndex, enhIndex) => {
     const updatedPowerSlots = copyPowerSlots(powerSlots, powerSlotIndex);
-    console.log("REMOVE ENH: ", powerSlotIndex, enhIndex);
     const { enhSlots } = updatedPowerSlots[powerSlotIndex];
     const { slotLevel } = enhSlots[enhIndex];
     // If slotLevel is null then remove the next slot if it exists

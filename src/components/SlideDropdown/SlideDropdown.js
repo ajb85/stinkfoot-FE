@@ -1,10 +1,19 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useCallback } from "react";
 
 import styles from "./styles.module.scss";
 
 let timeout;
 function SlideDropdown(props) {
   const dropdown = useRef();
+  const { onClick } = props;
+
+  const handleClick = useCallback(
+    (e) => {
+      e.stopPropagation();
+      onClick && onClick();
+    },
+    [onClick]
+  );
 
   useEffect(() => {
     clearTimeout(timeout);
@@ -25,17 +34,13 @@ function SlideDropdown(props) {
       className={
         styles.SlideDropdown + (props.isToggled ? " " + styles.toggled : "")
       }
-      onClick={stopProp}
+      onClick={handleClick}
     >
       <div className={styles.content} style={{ zIndex: props.zIndex }}>
         {props.children}
       </div>
     </div>
   );
-}
-
-function stopProp(e) {
-  e.stopPropagation();
 }
 
 export default SlideDropdown;

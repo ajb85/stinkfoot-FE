@@ -7,6 +7,7 @@ const initialState = {
   epicPool: 0,
   activeLevel: 1,
   toggledSlot: null,
+  toggledSet: null,
 };
 
 const context = createContext();
@@ -22,11 +23,16 @@ export const IndexTrackingProvider = (props) => {
   const setTrackingManually = (name, value) =>
     setTracking({ ...tracking, [name]: value });
 
+  const clearToggles = () => {
+    setTracking({ ...tracking, toggledSlot: null, toggledSet: null });
+  };
+
   const { Provider } = context;
   const state = {
     tracking,
     setActiveTracking,
     setTrackingManually,
+    clearToggles,
   };
   return <Provider value={state}>{props.children}</Provider>;
 };
