@@ -83,7 +83,7 @@ function EnhancementSelectionHoverMenu({
     : "";
 
   return (
-    <InPlaceAbsolute zIndex={200}>
+    <InPlaceAbsolute zIndex={200} parentClassName={styles.floatingMenu}>
       <div className={styles.enhancementHoverMenu}>
         <h3>
           {category.displayName}
