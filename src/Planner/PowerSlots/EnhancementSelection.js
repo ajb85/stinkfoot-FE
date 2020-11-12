@@ -8,6 +8,7 @@ import {
   useGetEnhancementOverlay,
   useGetSetBonusDataForPowerSlot,
   useAddEnhancement,
+  useRemoveEnhancement,
 } from "hooks/enhancements";
 import useEnhNavigation from "providers/builder/useEnhancementNavigation.js";
 
@@ -22,6 +23,7 @@ function EnhancementSelection(props) {
   const getOverlay = useGetEnhancementOverlay();
   const getSetBonusesForPowerSlot = useGetSetBonusDataForPowerSlot(powerSlot);
   const addEnhancement = useAddEnhancement(props.powerSlotIndex);
+  const removeEnhancement = useRemoveEnhancement(props.powerSlotIndex);
   const { enhNavigation } = useEnhNavigation();
   const { section, tier } = enhNavigation;
 
@@ -34,6 +36,7 @@ function EnhancementSelection(props) {
           <EnhancementSelectionHoverMenu
             category={c}
             addEnhancement={addEnhancement}
+            removeEnhancement={removeEnhancement}
           />
           {section === "sets" && (
             <ShowBonusesHoverMenu
@@ -49,7 +52,11 @@ function EnhancementSelection(props) {
 
 export default EnhancementSelection;
 
-function EnhancementSelectionHoverMenu({ category, addEnhancement }) {
+function EnhancementSelectionHoverMenu({
+  category,
+  addEnhancement,
+  removeEnhancement,
+}) {
   const isSet = category.enhancements;
   const levelText = category.levels
     ? `, Level ${category.levels.min} - ${category.levels.max}`

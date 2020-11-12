@@ -3,23 +3,31 @@ import React from "react";
 import EnhancementSlot from "../EnhancementSlot/";
 import InPlaceAbsolute from "components/InPlaceAbsolute/";
 
+import { useRemoveEnhancement } from "hooks/enhancements.js";
+import usePowerSlots from "providers/builder/usePowerSlots.js";
+
 import styles from "./styles.module.scss";
 
 function EnhancementBar(props) {
-  if (!props.powerSlot) {
+  const removeEnhancement = useRemoveEnhancement(props.powerSlotIndex);
+  const { powerSlots } = usePowerSlots();
+
+  if (props.powerSlotIndex === undefined) {
     return null;
   }
 
+  const powerSlot = powerSlots[props.powerSlotIndex];
   const zIndex = props.zIndex !== undefined ? props.zIndex : 200;
 
   return (
     <InPlaceAbsolute childClassName={styles.EnhancementBar} zIndex={zIndex}>
-      {props.powerSlot.enhSlots.map((s, i) => {
+      {powerSlot.enhSlots.map((s, i) => {
         return (
           <EnhancementSlot
-            key={s.slotLevel || i}
+            onClick={removeEnhancement.bind(this, i)}
+            key={i}
             slot={s}
-            powerSlotLevel={props.powerSlot.level}
+            powerSlotLevel={powerSlot.level}
           />
         );
       })}

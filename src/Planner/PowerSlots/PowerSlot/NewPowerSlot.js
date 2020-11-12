@@ -19,7 +19,7 @@ function PowerSlot({ slot, zIndex }) {
   const enhNav = useEnhNavigation();
   const togglePowerSlot = useTogglePowerSlot(powerSlotIndex);
   const { tracking } = useActiveSets();
-  const { powerSlots } = usePowerSlots();
+  // const { powerSlots } = usePowerSlots();
   const getEnhancementSubSections = useGetEnhancementSubSections();
 
   if (!power) {
@@ -29,7 +29,6 @@ function PowerSlot({ slot, zIndex }) {
 
   const isToggled = tracking.toggledSlot === powerSlotIndex;
   const subsections = getEnhancementSubSections(power.setTypes);
-  const powerSlot = powerSlots[powerSlotIndex];
 
   return (
     <div
@@ -43,7 +42,7 @@ function PowerSlot({ slot, zIndex }) {
           ({level}) {power.displayName}
         </p>
       </div>
-      <EnhancementBar powerSlot={powerSlot} zIndex={zIndex + 2} />
+      <EnhancementBar powerSlotIndex={powerSlotIndex} zIndex={zIndex + 2} />
       {powerSlotIndex === 0 && (
         <SlideDropdown isToggled={isToggled} zIndex={zIndex}>
           <div className={styles.divider} />
