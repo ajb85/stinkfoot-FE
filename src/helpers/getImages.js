@@ -28,7 +28,7 @@ export const getEnhancementOverlay = (origin, tier) => {
     case "DO":
       return overlayImages(`./${oData[tier]}.png`);
     default:
-      return overlayImages("./OldClass.png");
+      return null;
   }
 };
 

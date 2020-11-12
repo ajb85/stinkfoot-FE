@@ -46,7 +46,11 @@ export const useAddEnhancement = (powerSlotIndex) => {
     enhNavigation: { tier },
   } = useEnhancementNavigation();
   const { addEnhancement } = usePowerSlots();
-  return (enh) => addEnhancement(powerSlotIndex, { ...enh, tier });
+  return (enh) =>
+    addEnhancement(powerSlotIndex, {
+      ...enh,
+      tier: enh.type === "attuned" ? "attuned" : tier,
+    });
 };
 
 export const useAddFullSet = (powerSlotIndex) => {

@@ -27,16 +27,36 @@ function EnhancementSelection(props) {
   const { enhNavigation } = useEnhNavigation();
   const { section, tier } = enhNavigation;
 
+  const enhLookup = powerSlot.enhSlots.reduce((acc, { enhancement }, i) => {
+    if (enhancement) {
+      acc[enhancement.fullName] = i;
+    }
+    return acc;
+  }, {});
+
+  const isSet = section === "sets";
+  const toggleEnhancement = (enh) => {
+    const shouldRemove = isSet && enhLookup.hasOwnProperty(enh.fullName);
+    if (shouldRemove) {
+      removeEnhancement(enhLookup[enh.fullName]);
+    } else {
+      addEnhancement(enh);
+    }
+  };
+
   return (
     <div className={styles.enhancementPreview}>
       {enhCategories.map((c) => (
-        <div key={c.fullName}>
+        <div
+          key={c.fullName}
+          onClick={isSet ? noFunc : toggleEnhancement.bind(this, c)}
+        >
           <img src={getOverlay(tier)} alt="enhancement overlay" />
           <img src={c.image} alt="enhancement" />
           <EnhancementSelectionHoverMenu
             category={c}
-            addEnhancement={addEnhancement}
-            removeEnhancement={removeEnhancement}
+            toggleEnhancement={toggleEnhancement}
+            enhLookup={enhLookup}
           />
           {section === "sets" && (
             <ShowBonusesHoverMenu
@@ -54,8 +74,8 @@ export default EnhancementSelection;
 
 function EnhancementSelectionHoverMenu({
   category,
-  addEnhancement,
-  removeEnhancement,
+  toggleEnhancement,
+  enhLookup,
 }) {
   const isSet = category.enhancements;
   const levelText = category.levels
@@ -64,7 +84,7 @@ function EnhancementSelectionHoverMenu({
 
   return (
     <InPlaceAbsolute zIndex={200}>
-      <div className={styles.enhancementCategory}>
+      <div className={styles.enhancementHoverMenu}>
         <h3>
           {category.displayName}
           {levelText}
@@ -72,8 +92,14 @@ function EnhancementSelectionHoverMenu({
         <div className={styles.enhancementSelection}>
           {isSet &&
             category.enhancements.map((e) => {
+              const isActive = enhLookup.hasOwnProperty(e.fullName);
+
               return (
-                <p key={e.fullName} onClick={addEnhancement.bind(this, e)}>
+                <p
+                  className={isActive ? styles.active : ""}
+                  key={e.fullName}
+                  onClick={toggleEnhancement.bind(this, e)}
+                >
                   {shortenEnhName(e.displayName)}
                 </p>
               );
@@ -88,6 +114,8 @@ function ShowBonusesHoverMenu({ set, bonusData }) {
   // console.log("BONUS DATA: ", bonusData);
   return null;
 }
+
+function noFunc() {}
 
 // function FloatingEnhancementSelection({ category }) {
 //   const isSet = category.enhancements;

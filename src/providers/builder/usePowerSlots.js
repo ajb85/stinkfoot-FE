@@ -20,7 +20,6 @@ export const PowerSlotsProvider = (props) => {
       const newSlots = [...powerSlots];
       cache.forEach((index) => {
         if (newSlots[index].enhSlots.length > 1) {
-          console.log("RETURNING SLOTS!");
           newSlots[index].enhSlots.forEach(
             ({ slotLevel }) => slotLevel && slotsManager.returnSlot(slotLevel)
           );
@@ -71,7 +70,7 @@ export const PowerSlotsProvider = (props) => {
             slotLevel: slotsManager.getSlot(powerSlot.level),
             enhancement,
           });
-
+      enhSlots.sort((a, b) => a.slotLevel - b.slotLevel);
       setPowerSlots(updatedPowerSlots);
     }
   };
