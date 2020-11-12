@@ -10,7 +10,6 @@ import useActiveSets from "providers/builder/useActiveSets.js";
 import { useTogglePowerSlot } from "hooks/powersets.js";
 import EnhancementBar from "components/EnhancementBar/";
 
-// import { getEnhancementImageWithOverlay } from "helpers/getImages.js";
 import styles from "../styles.module.scss";
 
 function PowerSlot({ slot, zIndex }) {
