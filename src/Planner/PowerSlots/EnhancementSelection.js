@@ -12,12 +12,18 @@ import {
 } from "hooks/enhancements";
 import useEnhNavigation from "providers/builder/useEnhancementNavigation.js";
 
+import { useActiveEnhancementSet } from "hooks/powersets.js";
+
 import shortenEnhName from "js/shortenEnhName.js";
 
 import styles from "./styles.module.scss";
 
 function EnhancementSelection(props) {
   const { powerSlots } = usePowerSlots();
+  const {
+    toggledEnhancementSet,
+    toggleActiveEnhancementSet,
+  } = useActiveEnhancementSet();
   const powerSlot = powerSlots[props.powerSlotIndex];
   const enhCategories = useGetEnhancementsForPower()(powerSlot.power);
   const getOverlay = useGetEnhancementOverlay();
@@ -26,7 +32,6 @@ function EnhancementSelection(props) {
   const removeEnhancement = useRemoveEnhancement(props.powerSlotIndex);
   const { enhNavigation } = useEnhNavigation();
   const { section, tier } = enhNavigation;
-
   const enhLookup = powerSlot.enhSlots.reduce((acc, { enhancement }, i) => {
     if (enhancement) {
       acc[enhancement.fullName] = i;
@@ -46,26 +51,40 @@ function EnhancementSelection(props) {
 
   return (
     <div className={styles.enhancementPreview}>
-      {enhCategories.map((c) => (
-        <div
-          key={c.fullName}
-          onClick={isSet ? noFunc : toggleEnhancement.bind(this, c)}
-        >
-          <img src={getOverlay(tier)} alt="enhancement overlay" />
-          <img src={c.image} alt="enhancement" />
-          <EnhancementSelectionHoverMenu
-            category={c}
-            toggleEnhancement={toggleEnhancement}
-            enhLookup={enhLookup}
-          />
-          {section === "sets" && (
-            <ShowBonusesHoverMenu
-              set={c}
-              bonusData={getSetBonusesForPowerSlot(c)}
+      {enhCategories.map((c, i) => {
+        const isLocked = toggledEnhancementSet === i;
+        const noActive = toggledEnhancementSet === null;
+        const className = noActive
+          ? styles.isHoverable
+          : isLocked
+          ? styles.active
+          : null;
+        const clickFunc = isSet
+          ? toggleActiveEnhancementSet.bind(this, i)
+          : toggleEnhancement.bind(this, c);
+        const handleClick = (e) => {
+          e.stopPropagation();
+          clickFunc();
+        };
+        return (
+          <div key={c.fullName} className={className} onClick={handleClick}>
+            <img src={getOverlay(tier)} alt="enhancement overlay" />
+            <img src={c.image} alt="enhancement" />
+            <EnhancementSelectionHoverMenu
+              isLocked={isLocked}
+              category={c}
+              toggleEnhancement={toggleEnhancement}
+              enhLookup={enhLookup}
             />
-          )}
-        </div>
-      ))}
+            {section === "sets" && (
+              <ShowBonusesHoverMenu
+                set={c}
+                bonusData={getSetBonusesForPowerSlot(c)}
+              />
+            )}
+          </div>
+        );
+      })}
     </div>
   );
 }
@@ -73,6 +92,7 @@ function EnhancementSelection(props) {
 export default EnhancementSelection;
 
 function EnhancementSelectionHoverMenu({
+  isLocked,
   category,
   toggleEnhancement,
   enhLookup,
@@ -84,7 +104,10 @@ function EnhancementSelectionHoverMenu({
 
   return (
     <InPlaceAbsolute zIndex={200} parentClassName={styles.floatingMenu}>
-      <div className={styles.enhancementHoverMenu}>
+      <div
+        className={styles.enhancementHoverMenu}
+        style={{ border: isLocked ? "1px solid red" : "1px solid white" }}
+      >
         <h3>
           {category.displayName}
           {levelText}
@@ -92,11 +115,11 @@ function EnhancementSelectionHoverMenu({
         <div className={styles.enhancementSelection}>
           {isSet &&
             category.enhancements.map((e) => {
-              const isActive = enhLookup.hasOwnProperty(e.fullName);
+              const isAdded = enhLookup.hasOwnProperty(e.fullName);
 
               return (
                 <p
-                  className={isActive ? styles.active : ""}
+                  className={isAdded ? styles.active : ""}
                   key={e.fullName}
                   onClick={toggleEnhancement.bind(this, e)}
                 >
@@ -116,17 +139,3 @@ function ShowBonusesHoverMenu({ set, bonusData }) {
 }
 
 function noFunc() {}
-
-// function FloatingEnhancementSelection({ category }) {
-//   const isSet = category.enhancements;
-
-//   return (
-//     <div className={styles.enhancementCategory}>
-//       <h3>{category.displayName}</h3>
-//       {isSet &&
-//         category.enhancements.map((e) => {
-//           return <p>{shortenEnhName(e.displayName)}</p>;
-//         })}
-//     </div>
-//   );
-// }
