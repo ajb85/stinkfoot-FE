@@ -4,7 +4,7 @@ import styles from "./styles.module.scss";
 
 function EnhancementSlot({ slot, powerSlotLevel, onClick }) {
   const hasLevel = slot.slotLevel !== undefined;
-  console.log("ENHANCEMENT: ", slot.enhancement);
+
   return (
     <div className={styles.slot}>
       {slot.enhancement ? (
