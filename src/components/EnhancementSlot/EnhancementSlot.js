@@ -1,7 +1,6 @@
 import React from "react";
 
 import useCharacterDetails from "providers/builder/useCharacterDetails.js";
-
 import { getEnhancementOverlay } from "helpers/getImages.js";
 
 import styles from "./styles.module.scss";
