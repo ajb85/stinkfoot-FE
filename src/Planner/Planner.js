@@ -1,14 +1,17 @@
-import React from 'react';
+import React from "react";
 
-import CharacterInfo from './CharacterInfo/';
-import Powersets from './Powersets/';
-import PowerSlots from './PowerSlots/';
+import CharacterInfo from "./CharacterInfo/";
+import Powersets from "./Powersets/";
+import PowerSlots from "./PowerSlots/";
 
-import styles from './styles.module.scss';
+import { useRemoveSlotToggles } from "hooks/powersets";
+
+import styles from "./styles.module.scss";
 
 function Planner(props) {
+  const removeSlotToggles = useRemoveSlotToggles();
   return (
-    <div className={styles.Planner}>
+    <div className={styles.Planner} onClick={removeSlotToggles}>
       <header>
         <CharacterInfo />
       </header>
