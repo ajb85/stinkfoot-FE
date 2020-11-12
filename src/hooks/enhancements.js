@@ -1,5 +1,6 @@
 import useEnhancementNavigation from "providers/builder/useEnhancementNavigation.js";
 import usePowerSlots from "providers/builder/usePowerSlots.js";
+import useActiveSets from "providers/builder/useActiveSets.js";
 import useCharacterDetails from "providers/builder/useCharacterDetails.js";
 import {
   getEnhancementSubSections,
@@ -54,15 +55,15 @@ export const useAddEnhancement = (powerSlotIndex) => {
 };
 
 export const useAddFullSet = (powerSlotIndex) => {
-  const {
-    enhNavigation: { tier },
-  } = useEnhancementNavigation();
-  const { addEnhancements } = usePowerSlots();
-  return (enhancements) =>
-    addEnhancements(
+  const { AddMultiEnhancements } = usePowerSlots();
+  const { setTrackingManually } = useActiveSets();
+  return (enhancements) => {
+    AddMultiEnhancements(
       powerSlotIndex,
-      enhancements.map((e) => ({ ...e, tier }))
+      enhancements.map((e) => ({ ...e, tier: "IO" }))
     );
+    setTrackingManually("toggledSet", null);
+  };
 };
 
 export const useRemoveEnhancement = (powerSlotIndex) => {

@@ -9,6 +9,7 @@ import {
   useGetSetBonusDataForPowerSlot,
   useAddEnhancement,
   useRemoveEnhancement,
+  useAddFullSet,
 } from "hooks/enhancements";
 import useEnhNavigation from "providers/builder/useEnhancementNavigation.js";
 
@@ -52,8 +53,8 @@ function EnhancementSelection(props) {
   return (
     <div className={styles.enhancementPreview}>
       {enhCategories.map((c, i) => {
-        const isLocked = toggledEnhancementSet === i;
-        const noActive = toggledEnhancementSet === null;
+        const isLocked = isSet && toggledEnhancementSet === i;
+        const noActive = !isSet || toggledEnhancementSet === null;
         const className = noActive
           ? styles.isHoverable
           : isLocked
@@ -68,6 +69,12 @@ function EnhancementSelection(props) {
         };
         return (
           <div key={c.fullName} className={className} onClick={handleClick}>
+            {isLocked && (
+              <AddFullSet
+                powerSlotIndex={props.powerSlotIndex}
+                enhancements={c.enhancements}
+              />
+            )}
             <img src={getOverlay(tier)} alt="enhancement overlay" />
             <img src={c.image} alt="enhancement" />
             <EnhancementSelectionHoverMenu
@@ -104,10 +111,7 @@ function EnhancementSelectionHoverMenu({
 
   return (
     <InPlaceAbsolute zIndex={200} parentClassName={styles.floatingMenu}>
-      <div
-        className={styles.enhancementHoverMenu}
-        style={{ border: isLocked ? "1px solid red" : "1px solid white" }}
-      >
+      <div className={styles.enhancementHoverMenu}>
         <h3>
           {category.displayName}
           {levelText}
@@ -138,4 +142,19 @@ function ShowBonusesHoverMenu({ set, bonusData }) {
   return null;
 }
 
-function noFunc() {}
+function AddFullSet({ powerSlotIndex, enhancements }) {
+  const addFullSet = useAddFullSet(powerSlotIndex);
+
+  const handleClick = React.useCallback(
+    (e) => {
+      e.stopPropagation();
+      addFullSet(enhancements);
+    },
+    [addFullSet, enhancements]
+  );
+  return (
+    <InPlaceAbsolute zIndex={200} onClick={handleClick}>
+      <div className={styles.AddFullSet}>+</div>
+    </InPlaceAbsolute>
+  );
+}
