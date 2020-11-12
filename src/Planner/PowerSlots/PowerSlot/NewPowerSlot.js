@@ -4,7 +4,6 @@ import PunnettSquare from "components/PunnettSquare/";
 import SlideDropdown from "components/SlideDropdown/";
 import EnhancementSelection from "../EnhancementSelection.js";
 
-import usePowerSlots from "providers/builder/usePowerSlots.js";
 import useEnhNavigation from "providers/builder/useEnhancementNavigation.js";
 import { useGetEnhancementSubSections } from "hooks/enhancements.js";
 import useActiveSets from "providers/builder/useActiveSets.js";
@@ -19,7 +18,6 @@ function PowerSlot({ slot, zIndex }) {
   const enhNav = useEnhNavigation();
   const togglePowerSlot = useTogglePowerSlot(powerSlotIndex);
   const { tracking } = useActiveSets();
-  // const { powerSlots } = usePowerSlots();
   const getEnhancementSubSections = useGetEnhancementSubSections();
 
   if (!power) {
@@ -43,17 +41,15 @@ function PowerSlot({ slot, zIndex }) {
         </p>
       </div>
       <EnhancementBar powerSlotIndex={powerSlotIndex} zIndex={zIndex + 2} />
-      {powerSlotIndex === 0 && (
-        <SlideDropdown isToggled={isToggled} zIndex={zIndex}>
-          <div className={styles.divider} />
-          <PunnettSquare
-            topOptions={getTopOptions(enhNav, power)}
-            sideOptions={getSideOptions(enhNav, subsections)}
-          >
-            <EnhancementSelection powerSlotIndex={powerSlotIndex} />
-          </PunnettSquare>
-        </SlideDropdown>
-      )}
+      <SlideDropdown isToggled={isToggled} zIndex={zIndex}>
+        <div className={styles.divider} />
+        <PunnettSquare
+          topOptions={getTopOptions(enhNav, power)}
+          sideOptions={getSideOptions(enhNav, subsections)}
+        >
+          <EnhancementSelection powerSlotIndex={powerSlotIndex} />
+        </PunnettSquare>
+      </SlideDropdown>
     </div>
   );
 }
