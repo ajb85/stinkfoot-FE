@@ -75,7 +75,7 @@ export const PowerSlotsProvider = (props) => {
     }
   };
 
-  const addEnhancements = (powerSlotIndex, enhancements) => {
+  const AddMultiEnhancements = (powerSlotIndex, enhancements) => {
     if (!powerSlots[powerSlotIndex].enhSlots) {
       console.log("INVALID SLOT", powerSlotIndex, powerSlots[powerSlotIndex]);
       // Either the power slot isn't slot-able or there is no power there currently
@@ -147,7 +147,7 @@ export const PowerSlotsProvider = (props) => {
     removePowerFromSlot,
     addPowerToSlot,
     addEnhancement,
-    addEnhancements,
+    AddMultiEnhancements,
     removeEnhancement,
     resetPowerSlots,
   };
