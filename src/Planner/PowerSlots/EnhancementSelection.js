@@ -83,10 +83,7 @@ function EnhancementSelection(props) {
               enhLookup={enhLookup}
             />
             {isSet && (
-              <ShowBonusesHoverMenu
-                set={c}
-                bonusData={getSetBonusesForPowerSlot(c)}
-              />
+              <ShowBonusesHoverMenu bonusData={getSetBonusesForPowerSlot(c)} />
             )}
           </div>
         );
@@ -135,14 +132,18 @@ function EnhancementSelectionHoverMenu({
   );
 }
 
-function ShowBonusesHoverMenu({ set, bonusData }) {
+function ShowBonusesHoverMenu({ bonusData }) {
   return (
     <InPlaceAbsolute parentClassName={styles.bonusMenu} zIndex={200}>
       <div className={styles.setBonuses}>
         {bonusData.map(({ displays, isActive, bonusCount }, i) => {
           // const atMax = bonusCount >= 5;
           return (
-            <BonusStyle isActive={isActive} bonusCount={bonusCount}>
+            <BonusStyle
+              key={displays[0]}
+              isActive={isActive}
+              bonusCount={bonusCount}
+            >
               <p>{bonusCount ? "x" + bonusCount : ""}</p>
               <p>({i + 1})</p>
               <div>
@@ -197,6 +198,10 @@ const BonusStyle = styled.div`
 
   & > p {
     font-size: 10px;
+
+    &:nth-child(1) {
+      min-width: 12px;
+    }
 
     &:nth-child(2) {
       margin: 0 5px;

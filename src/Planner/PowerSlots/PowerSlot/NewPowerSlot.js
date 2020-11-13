@@ -15,7 +15,8 @@ import EnhancementBar from "components/EnhancementBar/";
 
 import styles from "../styles.module.scss";
 
-function PowerSlot({ slot, zIndex }) {
+function PowerSlot(props) {
+  const { slot } = props;
   const { level, power, powerSlotIndex } = slot;
   const enhNav = useEnhNavigation();
   const clearActiveEnhancementSet = useClearActiveEnhancementSet();
@@ -37,6 +38,8 @@ function PowerSlot({ slot, zIndex }) {
 
   const isToggled = tracking.toggledSlot === powerSlotIndex;
   const subsections = getEnhancementSubSections(power.setTypes);
+
+  const zIndex = isToggled ? props.zIndex + 100 : props.zIndex;
 
   return (
     <div
