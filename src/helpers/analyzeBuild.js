@@ -1,16 +1,11 @@
 import ioSets from "data/ioSets.js";
 
-export default ((cache) => (
-  powerSlots,
-  archetype,
-  activeSets,
-  getBonusesForSet
-) => {
+export default ((cache) => (powerSlots, activeSets, getBonusesForSet) => {
   if (cache.build === powerSlots) {
     return cache.results;
   }
 
-  const reduceSlot = getSlotReducer(archetype, getBonusesForSet);
+  const reduceSlot = getSlotReducer(getBonusesForSet);
   const results = powerSlots.reduce(reduceSlot, getInitialAcc());
   evaluatePowersets(activeSets, results);
 
@@ -19,10 +14,10 @@ export default ((cache) => (
   return results;
 })({});
 
-function getSlotReducer(archetype, getBonusesForSet) {
+function getSlotReducer(getBonusesForSet) {
   const setBonusesCache = {};
 
-  return function reduceSlot(acc, { enhSlots, level, power, type }, i) {
+  return function reduceSlot(acc, { enhSlots, power }, i) {
     const isEmpty = !power || !enhSlots;
     if (isEmpty) {
       return acc;
@@ -92,10 +87,13 @@ function getSlotReducer(archetype, getBonusesForSet) {
         }
 
         const setBonuses = setBonusesCache[set.fullName];
-        setBonuses.slice(0, count - 1).forEach(({ name }) => {
+        setBonuses.slice(0, count - 1).forEach(({ bonus }) => {
+          const { bonusName } = bonus;
           // Should consider PvP ?
           const { setBonuses } = acc.lookup;
-          setBonuses[name] = setBonuses[name] ? setBonuses[name] + 1 : 1;
+          setBonuses[bonusName] = setBonuses[bonusName]
+            ? setBonuses[bonusName] + 1
+            : 1;
         });
       });
       return acc;

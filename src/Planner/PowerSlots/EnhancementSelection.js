@@ -1,7 +1,7 @@
 import React from "react";
+import styled from "styled-components";
 
 import InPlaceAbsolute from "components/InPlaceAbsolute/";
-
 import usePowerSlots from "providers/builder/usePowerSlots";
 import {
   useGetEnhancementsForPower,
@@ -78,12 +78,11 @@ function EnhancementSelection(props) {
             <img src={getOverlay(tier)} alt="enhancement overlay" />
             <img src={c.image} alt="enhancement" />
             <EnhancementSelectionHoverMenu
-              isLocked={isLocked}
               category={c}
               toggleEnhancement={toggleEnhancement}
               enhLookup={enhLookup}
             />
-            {section === "sets" && (
+            {isSet && (
               <ShowBonusesHoverMenu
                 set={c}
                 bonusData={getSetBonusesForPowerSlot(c)}
@@ -99,7 +98,6 @@ function EnhancementSelection(props) {
 export default EnhancementSelection;
 
 function EnhancementSelectionHoverMenu({
-  isLocked,
   category,
   toggleEnhancement,
   enhLookup,
@@ -138,8 +136,26 @@ function EnhancementSelectionHoverMenu({
 }
 
 function ShowBonusesHoverMenu({ set, bonusData }) {
-  // console.log("BONUS DATA: ", bonusData);
-  return null;
+  return (
+    <InPlaceAbsolute parentClassName={styles.bonusMenu} zIndex={200}>
+      <div className={styles.setBonuses}>
+        {bonusData.map(({ displays, isActive, bonusCount }, i) => {
+          // const atMax = bonusCount >= 5;
+          return (
+            <BonusStyle isActive={isActive} bonusCount={bonusCount}>
+              <p>{bonusCount ? "x" + bonusCount : ""}</p>
+              <p>({i + 1})</p>
+              <div>
+                {displays.map((bonus) => (
+                  <p>{bonus}</p>
+                ))}
+              </div>
+            </BonusStyle>
+          );
+        })}
+      </div>
+    </InPlaceAbsolute>
+  );
 }
 
 function AddFullSet({ powerSlotIndex, enhancements }) {
@@ -158,3 +174,38 @@ function AddFullSet({ powerSlotIndex, enhancements }) {
     </InPlaceAbsolute>
   );
 }
+
+const BonusStyle = styled.div`
+  display: flex;
+
+  p {
+    color: ${({ isActive, bonusCount }) =>
+      isActive
+        ? bonusCount <= 5
+          ? "green"
+          : "red"
+        : bonusCount < 5
+        ? "yellow"
+        : "red"};
+
+    text-decoration: ${({ bonusCount }) =>
+      bonusCount >= 5 ? "line-through" : "none"};
+
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  & > p {
+    font-size: 10px;
+
+    &:nth-child(2) {
+      margin: 0 5px;
+    }
+  }
+
+  & > div {
+    p {
+      font-size: 12px;
+    }
+  }
+`;

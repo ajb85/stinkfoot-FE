@@ -6,6 +6,7 @@ section.PowerSlots {
   display: flex;
   flex-direction: column;
   padding: 0 $lh/2;
+  margin-bottom: 150px;
 
   @media #{$desktop} {
     width: 100%;
@@ -280,6 +281,14 @@ section.PowerSlots {
 }
 
 // EnhancementSelection > EnhancementCategoryHoverMenu
+.floatingMenu {
+  bottom: 32px + $lh/2;
+
+  & > div {
+    transform: translateY(-100%);
+  }
+}
+
 .enhancementHoverMenu {
   padding: $lh/4;
   background-color: $accent1;
@@ -316,15 +325,20 @@ section.PowerSlots {
   }
 }
 
+.setBonuses {
+  background-color: $accent1;
+  padding: $lh/2 3px;
+}
+
 // AddFullSet
-$maskSize: 22px;
+$maskSize: 24px;
 .AddFullSet {
   width: $maskSize;
   height: $maskSize;
   border-radius: 50%;
   position: relative;
-  left: 4px;
-  top: 4px;
+  left: 3px;
+  top: 3px;
 
   cursor: pointer;
   background-color: rgba(0, 0, 0, 0.5);
@@ -335,8 +349,9 @@ $maskSize: 22px;
   align-items: center;
 }
 
-.floatingMenu {
-  top: $lh/2;
+// EnhancementSelection > Bonus Menu
+.bonusMenu {
+  top: $lh;
 }
 
 // Floating Settings

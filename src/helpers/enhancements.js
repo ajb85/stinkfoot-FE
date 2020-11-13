@@ -128,10 +128,10 @@ export function getSetBonusDataForPowerSlot(
     setsInCurrentPower[set.fullName]) || { count: 0 };
 
   const { count } = setInPower;
-
   return bonuses.map(({ bonus, unlocked }) => ({
     displays: bonus.displays,
     isActive: unlocked <= count,
+    bonusCount: lookup.setBonuses[bonus.bonusName] || 0,
   }));
 }
 
