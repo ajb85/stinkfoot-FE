@@ -41,7 +41,6 @@ export function useBuildHasPower(power) {
 }
 
 export const useBuildAnalysis = () => {
-  const { character } = useCharacterDetails();
   const { powerSlots } = usePowerSlots();
   const activePowersets = {
     primary: useActivePowerset("primary"),
@@ -50,12 +49,7 @@ export const useBuildAnalysis = () => {
   };
   const getBonusesForSet = useGetBonusesForSet();
 
-  return analyzeBuild(
-    powerSlots,
-    character.archetype,
-    activePowersets,
-    getBonusesForSet
-  );
+  return analyzeBuild(powerSlots, activePowersets, getBonusesForSet);
 };
 
 /******************************************
