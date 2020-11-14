@@ -5,7 +5,6 @@ import Badger from "Badger/";
 import { BadgesProvider } from "providers/useBadges.js";
 
 export default function PlannerRoutes() {
-  document.title = "Badge Hunter";
   return (
     <Route path="/badger">
       <BadgesProvider>
