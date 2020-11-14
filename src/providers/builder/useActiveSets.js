@@ -20,8 +20,9 @@ export const IndexTrackingProvider = (props) => {
     setTracking({ ...tracking, [name]: value });
   };
 
-  const setTrackingManually = (name, value) =>
+  const setTrackingManually = (name, value) => {
     setTracking({ ...tracking, [name]: value });
+  };
 
   const clearToggles = () => {
     setTracking({ ...tracking, toggledSlot: null, toggledSet: null });

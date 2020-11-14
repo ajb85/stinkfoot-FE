@@ -7,6 +7,8 @@ import {
   useAddPowerFromNewPool,
   useCanPoolBeAdded,
 } from "hooks/powersets.js";
+
+import { stopProp } from "js/utility.js";
 import allPools from "data/poolPowers.js";
 import styles from "./styles.module.scss";
 
@@ -18,22 +20,19 @@ function PoolPowers(props) {
   const list = createFilteredOptionsList(canPoolBeAdded, allPools);
 
   return (
-    <div className={styles.PoolPowers}>
+    <div className={styles.PoolPowers} onClick={stopProp}>
       <h2>Power Pools</h2>
       <div>
         {/* Render selected pool powers */}
-        {selectedPoolPowers.map((pool) => {
-          return (
-            <React.Fragment key={pool.poolIndex}>
-              <Powerset
-                header={pool.displayName}
-                powerList={pool.powers}
-                poolIndex={pool.poolIndex}
-                compact
-              />
-            </React.Fragment>
-          );
-        })}
+        {selectedPoolPowers.map((pool) => (
+          <Powerset
+            key={pool.poolIndex}
+            header={pool.displayName}
+            powerList={pool.powers}
+            poolIndex={pool.poolIndex}
+            compact
+          />
+        ))}
 
         {/* Render new power pool selection */}
         {selectedPoolPowers.length < 4 && (

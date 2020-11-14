@@ -11,6 +11,8 @@ import {
   useChangePowerset,
 } from "hooks/powersets";
 
+import { stopProp } from "js/utility.js";
+
 import styles from "./styles.module.scss";
 
 function Powersets(props) {
@@ -19,7 +21,7 @@ function Powersets(props) {
   const filterList = createFilteredOptionsList.bind(this, canPowersetBeAdded);
   const changePowerset = useChangePowerset();
   return (
-    <section className={styles.Powersets}>
+    <section className={styles.Powersets} onClick={stopProp}>
       <div className={styles.powersetContainer}>
         <h2>{character.archetype} Powersets</h2>
         <div>
