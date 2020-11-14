@@ -2,7 +2,7 @@ import React, { useRef, useEffect, useCallback } from "react";
 
 import styles from "./styles.module.scss";
 
-let timeout;
+const timeouts = {};
 function SlideDropdown(props) {
   const dropdown = useRef();
   const { onClick } = props;
@@ -16,17 +16,16 @@ function SlideDropdown(props) {
   );
 
   useEffect(() => {
-    clearTimeout(timeout);
-    if (dropdown.current) {
-      if (props.isToggled) {
-        timeout = setTimeout(() => {
-          dropdown.current.style.overflow = "visible";
-        }, 250);
-      } else {
-        dropdown.current.style.overflow = "hidden";
-      }
+    clearTimeout(timeouts[props.powerSlotIndex]);
+    if (props.isToggled) {
+      timeouts[props.powerSlotIndex] = setTimeout(() => {
+        dropdown.current && (dropdown.current.style.overflow = "visible");
+        delete timeouts[props.powerSlotIndex];
+      }, 250);
+    } else {
+      dropdown.current && (dropdown.current.style.overflow = "hidden");
     }
-  }, [props.isToggled]);
+  }, [props.isToggled, props.powerSlotIndex]);
 
   return (
     <div

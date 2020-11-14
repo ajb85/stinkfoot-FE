@@ -55,6 +55,7 @@ function PowerSlot(props) {
       </div>
       <EnhancementBar powerSlotIndex={powerSlotIndex} zIndex={zIndex + 2} />
       <SlideDropdown
+        powerSlotIndex={powerSlotIndex}
         isToggled={isToggled}
         zIndex={zIndex}
         onClick={clearActiveEnhancementSet}
