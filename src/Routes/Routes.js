@@ -1,19 +1,36 @@
 import React from "react";
 
+import Import from "components/Import/";
+import BuildList from "components/BuildList/";
+import Badger from "Badger/";
+import Planner from "Planner/";
+import Home from "Home/";
+
+import useBuild from "providers/useBuilds.js";
+import { BadgesProvider } from "providers/useBadges.js";
+import PlannerProviders from "providers/builder/";
+
 import { Route, Switch, Redirect } from "react-router-dom";
 
-import PlannerRoutes from "./Planner.js";
-import BadgerRoutes from "./Badger.js";
-import ShopperRoutes from "./Shopper.js";
-import HomeRoutes from "./Home.js";
-
-function Routes(props) {
+function Routes() {
   return (
     <Switch>
-      <PlannerRoutes />
-      <BadgerRoutes />
-      <ShopperRoutes />
-      <HomeRoutes />
+      <Route path="/planner">
+        <PlannerProviders>
+          <Planner />
+        </PlannerProviders>
+      </Route>
+      <Route path="/badger">
+        <BadgesProvider>
+          <Badger />
+        </BadgesProvider>
+      </Route>
+      <Route path="/shopper">
+        <Shopper />
+      </Route>
+      <Route exact path="/">
+        <Home />
+      </Route>
       <Route>
         <Redirect to="/" />
       </Route>
@@ -22,3 +39,9 @@ function Routes(props) {
 }
 
 export default Routes;
+
+function Shopper() {
+  const { build } = useBuild();
+  window.title = "Shopping List";
+  return Object.keys(build).length ? <BuildList /> : <Import />;
+}
