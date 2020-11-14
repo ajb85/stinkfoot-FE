@@ -11,6 +11,7 @@ import { badgeTypes } from "./data/";
 import styles from "./styles.module.scss";
 
 function Badger(props) {
+  document.title = "Badge Tracker";
   const lastSection = localStorage.getItem("activeBadgeSection");
   const [section, setSection] = useState(
     lastSection ? JSON.parse(lastSection) : null

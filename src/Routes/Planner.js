@@ -5,7 +5,6 @@ import Planner from "Planner/";
 import PlannerProviders from "providers/builder/";
 
 export default function PlannerRoutes() {
-  document.title = "Character Planner";
   return (
     <Route path="/planner">
       <PlannerProviders>
