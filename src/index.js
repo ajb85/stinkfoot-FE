@@ -15,7 +15,7 @@ import "shards-ui/dist/css/shards.min.css";
 import "./styles/index.scss";
 
 import NavBar from "Home/NavBar/";
-import NewCharacter from "Home/components/NewCharacter/";
+import NewCharacter from "Home/NewCharacter";
 
 import { closeMenu } from "js/closeTracker.js";
 
