@@ -14,6 +14,8 @@ import { GiPoliceBadge } from "react-icons/gi";
 import { IoMdConstruct } from "react-icons/io";
 import { MdSupervisorAccount } from "react-icons/md";
 
+import useCharacters from "providers/useCharacters.js";
+
 import logo from "assets/logo.svg";
 import styles from "./styles.module.scss";
 
@@ -22,6 +24,7 @@ export default function NavBar(props) {
   const [hidden, setHidden] = useState(false);
   const [dropdown, setDropdown] = useState(false);
   const history = useHistory();
+  const { characters, activeCharacter } = useCharacters();
 
   const toggleHidden = () => setHidden(!hidden);
   const updateHistory = (route) => {
@@ -30,6 +33,7 @@ export default function NavBar(props) {
   };
 
   const hiddenClass = hidden ? " " + styles.hidden : "";
+
   return (
     <section className={styles.NavBar + hiddenClass}>
       <img src={logo} alt="Stinkfoot Logo" onClick={toggleHidden} />
@@ -42,9 +46,9 @@ export default function NavBar(props) {
           <MdSupervisorAccount />
         </DropdownToggle>
         <DropdownMenu>
-          <DropdownItem>+New Character</DropdownItem>
-          <DropdownItem>Another action</DropdownItem>
-          <DropdownItem>Something else here</DropdownItem>
+          <DropdownItem onClick={props.openNewCharacterModal}>
+            +New Character
+          </DropdownItem>
         </DropdownMenu>
       </Dropdown>
       <NavButton

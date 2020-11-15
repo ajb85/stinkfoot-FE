@@ -1,13 +1,13 @@
 import React, { useState, useEffect, useRef } from "react";
 
-import useBuild from "providers/useBuilds.js";
+import useCharacters from "providers/useCharacters.js";
 
 import styles from "./styles.module.scss";
 
 function Import(props) {
   const inputREF = useRef(null);
   const [wasSubmitted, setWasSubmitted] = useState(false);
-  const { saveBuild, isValidBuild } = useBuild();
+  const { saveBuild, isValidBuild } = useCharacters();
 
   useEffect(() => {
     if (inputREF.current) {

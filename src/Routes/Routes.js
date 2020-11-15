@@ -6,7 +6,7 @@ import Badger from "Badger/";
 import Planner from "Planner/";
 import Home from "Home/";
 
-// import useBuild from "providers/useBuilds.js";
+// import useCharacters from "providers/useBuilds.js";
 import { BadgesProvider } from "providers/useBadges.js";
 import PlannerProviders from "providers/builder/";
 
@@ -41,7 +41,7 @@ function Routes() {
 export default Routes;
 
 // function Shopper() {
-//   const { build } = useBuild();
+//   const { build } = useCharacters();
 //   window.title = "Shopping List";
 //   return Object.keys(build).length ? <BuildList /> : <Import />;
 // }
