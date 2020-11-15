@@ -18,7 +18,7 @@ export function BuildProvider(props) {
   const [active, setActive] = useState(activeCharName || "");
 
   const updateCharacters = (updated) => {
-    localStorage.setItem("characters", updated);
+    localStorage.setItem("characters", JSON.stringify(updated));
     setCharacters(updated);
   };
 
@@ -33,6 +33,14 @@ export function BuildProvider(props) {
     updateCharacters(updatedCharacters);
   };
 
+  const createNewCharacter = (name) => {
+    const updatedChars = { ...characters };
+    if (!updatedChars[name]) {
+      updatedChars[name] = getNewCharacter(name);
+    }
+    updateCharacters(updatedChars);
+  };
+
   const { Provider } = BuildContext;
   const charCount = Object.keys(characters).length;
   return (
@@ -43,6 +51,7 @@ export function BuildProvider(props) {
         updateCharacters,
         updateActive,
         updateActiveCharacter,
+        createNewCharacter,
       }}
     >
       {props.children}
@@ -52,4 +61,12 @@ export function BuildProvider(props) {
 
 export default function useCharacters() {
   return useContext(BuildContext);
+}
+
+function getNewCharacter(name) {
+  return {
+    name,
+    badges: {},
+    build: {},
+  };
 }
