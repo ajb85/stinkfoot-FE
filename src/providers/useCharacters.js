@@ -50,6 +50,6 @@ export function BuildProvider(props) {
   );
 }
 
-export default function useBuild() {
+export default function useCharacters() {
   return useContext(BuildContext);
 }

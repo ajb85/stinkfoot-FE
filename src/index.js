@@ -15,19 +15,29 @@ import "shards-ui/dist/css/shards.min.css";
 import "./styles/index.scss";
 
 import NavBar from "Home/NavBar/";
+import NewCharacter from "Home/components/NewCharacter/";
 
 import { closeMenu } from "js/closeTracker.js";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <Router history={history}>
-      <UniversalProviders>
-        <div onClick={closeMenu} style={{ display: "flex" }}>
-          <NavBar />
-          <Routes />
-        </div>
-      </UniversalProviders>
-    </Router>
-  </React.StrictMode>,
-  document.getElementById("root")
-);
+function App() {
+  const [modalOpen, setModalOpen] = React.useState(false);
+
+  return (
+    <React.StrictMode>
+      <Router history={history}>
+        <UniversalProviders>
+          <div onClick={closeMenu} style={{ display: "flex" }}>
+            <NewCharacter
+              open={modalOpen}
+              toggle={setModalOpen.bind(this, !modalOpen)}
+            />
+            <NavBar openNewCharacterModal={setModalOpen.bind(this, true)} />
+            <Routes />
+          </div>
+        </UniversalProviders>
+      </Router>
+    </React.StrictMode>
+  );
+}
+
+ReactDOM.render(<App />, document.getElementById("root"));

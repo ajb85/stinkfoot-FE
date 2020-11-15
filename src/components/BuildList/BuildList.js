@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-import useBuild from "providers/useBuilds.js";
+import useCharacters from "providers/useCharacters.js";
 import FilterOptions from "./FilterOptions.js";
 
 import categoryName from "js/categories.js";
@@ -16,7 +16,12 @@ function ListBuild(props) {
     search: "",
   });
 
-  const { build, toggleEnhancement, toggleSet, decrementCount } = useBuild();
+  const {
+    build,
+    toggleEnhancement,
+    toggleSet,
+    decrementCount,
+  } = useCharacters();
 
   const toggleTag = (tag) => {
     if (filters.tags[tag]) {

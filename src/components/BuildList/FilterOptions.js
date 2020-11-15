@@ -1,11 +1,11 @@
 import React from "react";
 
-import useBuild from "providers/useBuilds.js";
+import useCharacters from "providers/useCharacters.js";
 
 import styles from "./styles.module.scss";
 
 function FilterOptions({ filters, toggleTag, setSearch, zIndex = 10000 }) {
-  const { saveBuild } = useBuild();
+  const { saveBuild } = useCharacters();
   return (
     <div style={{ zIndex }} className={styles.FilterButtons}>
       <div className={styles.filterContainer}>
