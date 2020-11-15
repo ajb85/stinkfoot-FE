@@ -1,119 +1,48 @@
 import React, { useState, createContext, useContext } from "react";
 
-import parseStringToBuild from "js/parseStringToBuild.js";
+// import parseStringToBuild from "js/parseStringToBuild.js";
 
 const BuildContext = createContext();
 
 export function BuildProvider(props) {
-  const storage = localStorage.getItem("builds");
-  const builds = storage ? JSON.parse(storage).active : {};
-  const [build, setBuild] = useState(builds ? builds : {});
+  const storage = localStorage.getItem("characters");
+  let parsed;
+  try {
+    parsed = storage && JSON.parse(storage);
+  } catch {
+    parsed = {};
+    localStorage.setItem("character", JSON.stringify(parsed));
+  }
+  const activeCharName = parsed && localStorage.getItem("activeCharacterName");
+  const [characters, setCharacters] = useState(parsed || {});
+  const [active, setActive] = useState(activeCharName || "");
 
-  const _saveBuildToActive = (build) => {
-    const builds = JSON.parse(localStorage.getItem("builds")) || {};
-
-    builds.active = build;
-    localStorage.setItem("builds", JSON.stringify(builds));
-    setBuild(builds.active);
+  const updateCharacters = (updated) => {
+    localStorage.setItem("characters", updated);
+    setCharacters(updated);
   };
 
-  const saveBuild = (str) => {
-    if (!str) {
-      setBuild({});
-      return;
-    }
-    _saveBuildToActive(parseStringToBuild(str));
+  const updateActive = (name) => {
+    localStorage.setItem("activeCharacterName", JSON.stringify(name));
+    setActive(name);
   };
 
-  const isValidBuild = (build) => {
-    if (typeof build === "string") {
-      build = parseStringToBuild(build);
-    }
-
-    return (
-      build && build.enhancements && !!Object.keys(build.enhancements).length
-    );
-  };
-
-  const _saveUpdatedBuild = (newEnh, setName) => {
-    let isComplete = true;
-
-    for (let eName in newEnh) {
-      const enh = newEnh[eName];
-      if (enh.have < enh.need) {
-        isComplete = false;
-      }
-    }
-
-    const newBuild = {
-      ...build,
-      enhancements: {
-        ...build.enhancements,
-        [setName]: {
-          ...build.enhancements[setName],
-          enhancements: newEnh,
-          completed: isComplete,
-        },
-      },
-    };
-
-    _saveBuildToActive(newBuild);
-  };
-
-  const toggleEnhancement = (setName, enhName) => {
-    const enh = build.enhancements[setName].enhancements[enhName];
-    const updatedSet = {
-      ...build.enhancements[setName].enhancements,
-      [enhName]: {
-        ...enh,
-        have: enh.have < enh.need ? enh.need : 0,
-      },
-    };
-
-    _saveUpdatedBuild(updatedSet, setName);
-  };
-
-  const decrementCount = (setName, enhName) => {
-    const set = { ...build.enhancements[setName].enhancements };
-    set[enhName].have =
-      set[enhName].have < set[enhName].need
-        ? set[enhName].have + 1
-        : set[enhName].need;
-
-    _saveUpdatedBuild(set, setName);
-  };
-
-  const toggleSet = (setName) => {
-    const setCopy = { ...build.enhancements[setName] };
-    setCopy.completed = !setCopy.completed;
-    const isComplete = setCopy.completed;
-
-    const enhancements = { ...setCopy.enhancements };
-    for (let enhName in enhancements) {
-      const enh = setCopy.enhancements[enhName];
-      enh.have = isComplete ? enh.need : 0;
-    }
-
-    const newBuild = {
-      ...build,
-      enhancements: {
-        ...build.enhancements,
-        [setName]: { ...setCopy, enhancements },
-      },
-    };
-    _saveBuildToActive(newBuild);
+  const updateActiveCharacter = (key, updated) => {
+    const updatedCharacters = { ...characters };
+    updatedCharacters[active][key] = updated;
+    updateCharacters(updatedCharacters);
   };
 
   const { Provider } = BuildContext;
+  const charCount = Object.keys(characters).length;
   return (
     <Provider
       value={{
-        build,
-        saveBuild,
-        toggleEnhancement,
-        toggleSet,
-        decrementCount,
-        isValidBuild,
+        characters,
+        activeCharacter: charCount > 0 && active ? characters[active] : null,
+        updateCharacters,
+        updateActive,
+        updateActiveCharacter,
       }}
     >
       {props.children}
