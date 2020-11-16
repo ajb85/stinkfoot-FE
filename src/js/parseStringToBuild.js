@@ -1,232 +1,262 @@
-import { parse } from 'node-html-parser';
+import poolPowers from "data/poolPowers.js";
+import powersets from "data/powersets.js";
+import epicPools from "data/epicPools.js";
+import origins from "data/origins.js";
 
-class Stack {
-  constructor() {
-    this.storage = [];
-  }
+const atOrderToPlural = {
+  primary: "primaries",
+  secondary: "secondaries",
+};
 
-  addNodes(nodes) {
-    if (nodes && nodes.length) {
-      for (let i = nodes.length - 1; i > -1; i--) {
-        this.storage.push(nodes[i]);
-      }
-    }
-  }
-
-  getNode() {
-    return this.storage.length ? this.storage.pop() : null;
-  }
-
-  getSize() {
-    return this.storage.length;
-  }
-}
-
-export default function parseStringToBuild(str) {
-  const s = new Stack();
-  const dom = parse(str);
-
-  s.addNodes(dom.childNodes);
-
-  const build = {
-    poolPowers: [],
-    powerSets: {},
-    epicPool: null,
-    powers: [],
-    enhancements: {},
-  };
-
-  while (s.getSize()) {
-    const node = s.getNode();
-    s.addNodes(node.childNodes);
-
-    const { rawText: text } = node;
-
-    if (text && text !== '\n' && text !== '&nbsp;&nbsp;') {
-      const action = getActionFromNode(node);
-
-      if (action) {
-        const actions = getActions();
-        if (actions[action]) {
-          actions[action](text, build);
-        }
-      }
-    }
-  }
-
-  return build;
-}
-
-function getActionFromNode({ rawText: text, tagName }) {
-  const words = text.split(' ').filter((x) => x);
-
-  if (words[0] === 'Level') {
-    return text.indexOf(':') > -1
-      ? words[1].indexOf('&nbsp;&nbsp;') > -1
-        ? 'power'
-        : null
-      : 'archetype';
-  } else if (isPowerSet(words)) {
-    return 'powerSets';
-  } else if (isPoolPower(words)) {
-    return 'powerPool';
-  } else if (words[1] === 'Profile:') {
-    return 'alignment';
-  } else if (isEnhancement(words, tagName)) {
-    return 'enhancement';
-  }
-
-  return null;
-
-  function isPowerSet(words) {
-    return (
-      words.length > 3 &&
-      words[1] === 'Power' &&
-      words[2] === 'Set:' &&
-      (words[0] === 'Primary' || words[0] === 'Secondary')
-    );
-  }
-
-  function isPoolPower(words) {
-    return words.length > 2 && words[1] === 'Pool:';
-  }
-
-  function isEnhancement(words, tagName) {
-    return (
-      tagName === 'li' && (words.indexOf('-') > -1 || words.indexOf('IO') > -1)
-    );
-  }
-}
-
-function setArchetypeOriginAndLevel(text, build) {
-  const keys = {
-    1: 'level',
-    2: 'origin',
-    3: 'archetype',
-  };
-
-  text.split(' ').forEach((str, i) => {
-    if (i > 0) {
-      const key = keys[i];
-      build[key] = str;
-    }
-  });
-
-  return build;
-}
-
-function setPower(text, build) {
-  const newPower = text.split('&nbsp;&nbsp;').reduce((acc, cur) => {
-    if (cur.substring(0, 5) === 'Level') {
-      acc.level = parseInt(cur.substring(5, cur.length - 1), 10);
-    } else {
-      acc.name = cur;
-    }
-
-    return acc;
-  }, {});
-
-  newPower.slots = [];
-  newPower.type =
-    build.powers.length < 5 || newPower.level > 4 ? 'selected' : 'default';
-
-  build.powers.push(newPower);
-
-  return build;
-}
-
-function setPowerSets(text, build) {
-  const words = text.split(' ');
-  const key = words[0].toLowerCase();
-
-  const powerSet = words.slice(3).join(' ');
-
-  build.powerSets[key] = powerSet;
-
-  return build;
-}
-
-function setPowerPools(text, build) {
-  const words = text.split(' ');
-  const poolName = words.slice(2).join(' ');
-
-  if (words[0] === 'Ancillary') {
-    build.epicPool = poolName;
-  } else {
-    build.poolPowers.push(poolName);
-  }
-
-  return build;
-}
-
-function setAlignment(text, build) {
-  build.alignment = text.split(' ')[0];
-  return build;
-}
-
-function setEnhancement(text, build) {
-  const words = text.split(' ').filter((x) => x);
-  const slot = words.shift();
-  const slotLevel = slot.substring(1, slot.length - 1);
-  const dashIndex = words.indexOf('-');
-
-  const enhInfo = { slotLevel: slotLevel === 'A' ? null : slotLevel };
-  if (dashIndex > -1) {
-    // io set
-    enhInfo.setName = words.slice(0, dashIndex).join(' ');
-    enhInfo.name = words.slice(dashIndex + 1).join(' ');
-  } else {
-    if (words[0] === 'Empty') {
-      enhInfo.name = null;
-    } else if (words.indexOf('IO') > -1) {
-      enhInfo.setName = 'IOs';
-      enhInfo.name = words.slice(0, words.length - 1).join(' ');
-    }
-  }
-
-  const setInBuild = build.enhancements[enhInfo.setName];
-
-  const lastPower = build.powers[build.powers.length - 1];
-  lastPower.slots.push(enhInfo);
-
-  if (setInBuild) {
-    if (setInBuild.enhancements[enhInfo.name]) {
-      setInBuild.enhancements[enhInfo.name].need++;
-      if (setInBuild.enhancements[enhInfo.name].powers[lastPower.name]) {
-        setInBuild.enhancements[enhInfo.name].powers[lastPower.name].count++;
-      } else {
-        setInBuild.enhancements[enhInfo.name].powers[lastPower.name] = {
-          count: 1,
-        };
-      }
-    } else {
-      setInBuild.enhancements[enhInfo.name] = {
-        need: 1,
-        have: 0,
-        powers: { [lastPower.name]: { count: 1 } },
+export default function (str) {
+  try {
+    if (str.length < 100) {
+      return {
+        error:
+          "It doesn't look like you currently have a mids build copied, please follow the steps above again.",
       };
     }
-  } else {
-    build.enhancements[enhInfo.setName] = {
-      enhancements: {
-        [enhInfo.name]: {
-          need: 1,
-          have: 0,
-          powers: { [lastPower.name]: { count: 1 } },
-        },
+
+    if (str.indexOf("<font") < 0) {
+      return {
+        error:
+          "You likely forgot to select HTML Export from Formatting Code Type.  Please double check the steps above.",
+      };
+    }
+    const character = {
+      name: "",
+      archetype: "",
+      origin: "",
+      powerSlots: [],
+      poolPowers: [],
+      activeSets: {
+        primary: null,
+        secondary: null,
+        poolPower: null,
+        epicPool: null,
+        activeLevel: null,
+        toggledSlot: null,
+        toggledSet: null,
       },
-      completed: false,
+      badges: {},
+    };
+
+    const tagArray = str.split("<font").slice(4);
+    console.log("TAG ARRAY: ", tagArray[1]);
+
+    const hasName = getTagContent(tagArray[1]) !== "Primary Power Set: ";
+    console.log("HAS NAME? ", hasName);
+    if (hasName) {
+      character.name = stripNonAlphanumeric(getTagContent(tagArray.shift()));
+    }
+
+    const ogContent = getTagContent(tagArray.shift());
+    const [a, b, c] = ogContent.split(" ").slice(2);
+    const isExtraSpace = !isNaN(parseInt(a));
+    const origin = isExtraSpace ? b : a;
+    const archetype = isExtraSpace ? c : b;
+    console.log("OG CONTENT: ", archetype, ogContent);
+
+    if (powersets[archetype]) {
+      character.archetype = archetype;
+    }
+
+    if (origins.find((name) => name === origin)) {
+      character.origin = origin;
+    }
+
+    if (!character.archetype) {
+      // Unrecognized archetype
+      return { error: `Archetype '${archetype}' is currently unsupported` };
+    }
+
+    tagArray.shift(); // Primary Power Set:
+    const primary = stripNonAlphanumeric(getTagContent(tagArray.shift()));
+    putPowersetInBuild(character, "primary", primary);
+
+    tagArray.shift(); // Secondary Power Set:
+    const secondary = stripNonAlphanumeric(getTagContent(tagArray.shift()));
+    putPowersetInBuild(character, "secondary", secondary);
+
+    while (getTagContent(tagArray[0]) === "Power Pool: ") {
+      // Pool Power Set:
+      tagArray.shift();
+      const pool = stripNonAlphanumeric(getTagContent(tagArray.shift()));
+      putPowersetInBuild(character, "poolPower", pool);
+    }
+
+    const hasEpic = getTagContent(tagArray.shift()) === "Ancillary Pool: "; // Ancillary Power Set:
+    if (hasEpic) {
+      const epic = stripNonAlphanumeric(getTagContent(tagArray.shift()));
+      putPowersetInBuild(character, "epicPool", epic);
+      tagArray.shift(); // Alignment, which is shifted off if !hasEpic
+    }
+    // Begin power slots
+    let enhSlot;
+    let powerSlot;
+    let nextSlotLevel;
+    let slotType = "selected";
+    return tagArray.reduce((acc, str) => {
+      const contents = getTagContent(str);
+      if (contents === " IO") {
+        // Useless info, just terminate early
+        nextSlotLevel = getNextEnhancementSlotLevelFromStr(str);
+        return acc;
+      }
+
+      const ioColor = ' color="#8BAFF1"';
+      const standardColor = ' color="#5EAEFF"';
+      if (contents.substring(0, 5) === "Level") {
+        // is a new power slot
+        if (powerSlot) {
+          if (enhSlot) {
+            powerSlot.enhSlots.push(enhSlot);
+            enhSlot = null;
+          }
+
+          if (slotType === "selected") {
+            const prevSlot = acc.powerSlots[acc.powerSlots.length - 1];
+            slotType =
+              !prevSlot || prevSlot.level <= powerSlot.level
+                ? "selected"
+                : "default";
+          }
+          acc.powerSlots.push(powerSlot);
+        }
+        powerSlot = { enhSlots: [] };
+        const number = contents.substring(
+          contents.indexOf(" ") + 1,
+          contents.indexOf(":")
+        );
+        powerSlot.level = parseInt(number);
+
+        return acc;
+      }
+
+      if (str.indexOf("&nbsp;&nbsp;") > -1) {
+        // is a power, &nbsp;&nbsp; only appears on levels & powers
+        powerSlot.power = getTagContent(str);
+        nextSlotLevel = getNextEnhancementSlotLevelFromStr(str);
+        return acc;
+      }
+
+      if (contents.indexOf(" - ") > -1) {
+        // is IO Set
+        saveEnhancement(contents.split(" - ").shift());
+        enhSlot.type = "IO Set";
+        enhSlot.halfName = true;
+        return acc;
+      }
+
+      if (enhSlot && enhSlot.halfName) {
+        delete enhSlot.halfName;
+        enhSlot.name += " // " + contents;
+        nextSlotLevel = getNextEnhancementSlotLevelFromStr(str);
+        return acc;
+      }
+
+      const color = str.substring(0, str.indexOf(">"));
+      if (color === ioColor) {
+        saveEnhancement(contents);
+        enhSlot.type = "IO";
+        nextSlotLevel = getNextEnhancementSlotLevelFromStr(str);
+      }
+
+      if (color === standardColor) {
+        saveEnhancement(contents);
+        enhSlot.type = "SO";
+        nextSlotLevel = getNextEnhancementSlotLevelFromStr(str);
+      }
+
+      return acc;
+    }, character);
+
+    function saveEnhancement(contents) {
+      if (enhSlot) {
+        powerSlot.enhSlots.push(enhSlot);
+      }
+
+      enhSlot = {};
+      enhSlot.slotLevel =
+        nextSlotLevel === "A" ? null : parseInt(nextSlotLevel);
+      nextSlotLevel = null;
+
+      enhSlot.name = contents;
+    }
+  } catch (err) {
+    console.log("ENCOUNTERED ", err);
+    return {
+      error:
+        "Whoops, something broke.  Paste your build to Sham so he can figure out what happened.",
     };
   }
 }
 
-function getActions() {
-  return {
-    archetype: setArchetypeOriginAndLevel,
-    power: setPower,
-    powerSets: setPowerSets,
-    powerPool: setPowerPools,
-    alignment: setAlignment,
-    enhancement: setEnhancement,
-  };
+function getNextEnhancementSlotLevelFromStr(str) {
+  const substring = str.substring(str.indexOf("<li>"));
+  const startLevel = substring.indexOf("(") + 1;
+  const endLevel = startLevel > 0 && substring.indexOf(")");
+  if (endLevel && endLevel > 0) {
+    // Can only be false or -1 for falsey
+    return substring.substring(startLevel, endLevel);
+  }
+}
+
+function getTagContent(str) {
+  if (!str) {
+    return "";
+  }
+
+  const endOfOpenTag = str.indexOf(">");
+  if (endOfOpenTag < 0 || endOfOpenTag === str.length - 1) {
+    return "";
+  }
+
+  // _REL tags are not absolute indices.  They are relative to a substring
+  const startOfEndTag_REL = str.substring(endOfOpenTag + 1).indexOf("</");
+  if (startOfEndTag_REL < 0) {
+    return "";
+  }
+
+  const startOfEndTag = endOfOpenTag + 1 + startOfEndTag_REL;
+
+  return str.substring(endOfOpenTag + 1, startOfEndTag);
+}
+
+function stripNonAlphanumeric(str) {
+  return str.replace(/[^\w\s]/gi, "");
+}
+
+function putPowersetInBuild(character, atOrder, powersetName) {
+  if (!powersetName) {
+    return;
+  }
+
+  let powersetIndex;
+  const isNotPool = atOrder !== "poolPower";
+  const isEpic = atOrder === "epicPool";
+
+  const findName = findDisplayName(powersetName);
+  if (isNotPool && !isEpic) {
+    const pluralOrder = atOrderToPlural[atOrder];
+    powersetIndex = powersets[character.archetype][pluralOrder].findIndex(
+      findName
+    );
+  } else if (isEpic) {
+    powersetIndex = epicPools[character.archetype].findIndex(findName);
+  } else {
+    powersetIndex = poolPowers.findIndex(findName);
+  }
+
+  if ((powersetIndex || powersetIndex === 0) && powersetIndex >= 0) {
+    if (isNotPool) {
+      character.activeSets[atOrder] = powersetIndex;
+    } else {
+      character.poolPowers.push(powersetIndex);
+    }
+  }
+}
+
+function findDisplayName(powersetName) {
+  return ({ displayName }) => displayName === powersetName;
 }
