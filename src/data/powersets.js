@@ -11,70 +11,70 @@
 // import Arachnos_Widow_Teamwork from "./powersets/Arachnos_Widow_Teamwork.json"
 // import Arachnos_Widow_Training from "./powersets/Arachnos_Widow_Training.json"
 
-import Blaster_Primary_Archery from './powersets/Blaster_Primary_Archery.json';
-import Blaster_Primary_Assault_Rifle from './powersets/Blaster_Primary_Assault_Rifle.json';
-import Blaster_Primary_Beam_Rifle from './powersets/Blaster_Primary_Beam_Rifle.json';
-import Blaster_Primary_Dark_Blast from './powersets/Blaster_Primary_Dark_Blast.json';
-import Blaster_Primary_Dual_Pistols from './powersets/Blaster_Primary_Dual_Pistols.json';
-import Blaster_Primary_Electrical_Blast from './powersets/Blaster_Primary_Electrical_Blast.json';
-import Blaster_Primary_Energy_Blast from './powersets/Blaster_Primary_Energy_Blast.json';
-import Blaster_Primary_Fire_Blast from './powersets/Blaster_Primary_Fire_Blast.json';
-import Blaster_Primary_Ice_Blast from './powersets/Blaster_Primary_Ice_Blast.json';
-import Blaster_Primary_Psychic_Blast from './powersets/Blaster_Primary_Psychic_Blast.json';
-import Blaster_Primary_Radiation_Blast from './powersets/Blaster_Primary_Radiation_Blast.json';
-import Blaster_Primary_Sonic_Attack from './powersets/Blaster_Primary_Sonic_Attack.json';
-import Blaster_Primary_Water_Blast from './powersets/Blaster_Primary_Water_Blast.json';
+import Blaster_Primary_Archery from "./powersets/Blaster_Primary_Archery.json";
+import Blaster_Primary_Assault_Rifle from "./powersets/Blaster_Primary_Assault_Rifle.json";
+import Blaster_Primary_Beam_Rifle from "./powersets/Blaster_Primary_Beam_Rifle.json";
+import Blaster_Primary_Dark_Blast from "./powersets/Blaster_Primary_Dark_Blast.json";
+import Blaster_Primary_Dual_Pistols from "./powersets/Blaster_Primary_Dual_Pistols.json";
+import Blaster_Primary_Electrical_Blast from "./powersets/Blaster_Primary_Electrical_Blast.json";
+import Blaster_Primary_Energy_Blast from "./powersets/Blaster_Primary_Energy_Blast.json";
+import Blaster_Primary_Fire_Blast from "./powersets/Blaster_Primary_Fire_Blast.json";
+import Blaster_Primary_Ice_Blast from "./powersets/Blaster_Primary_Ice_Blast.json";
+import Blaster_Primary_Psychic_Blast from "./powersets/Blaster_Primary_Psychic_Blast.json";
+import Blaster_Primary_Radiation_Blast from "./powersets/Blaster_Primary_Radiation_Blast.json";
+import Blaster_Primary_Sonic_Attack from "./powersets/Blaster_Primary_Sonic_Attack.json";
+import Blaster_Primary_Water_Blast from "./powersets/Blaster_Primary_Water_Blast.json";
 
-import Blaster_Secondary_Darkness_Manipulation from './powersets/Blaster_Secondary_Darkness_Manipulation.json';
-import Blaster_Secondary_Energy_Manipulation from './powersets/Blaster_Secondary_Energy_Manipulation.json';
-import Blaster_Secondary_Fire_Manipulation from './powersets/Blaster_Secondary_Fire_Manipulation.json';
-import Blaster_Secondary_Devices from './powersets/Blaster_Secondary_Devices.json';
-import Blaster_Secondary_Ice_Manipulation from './powersets/Blaster_Secondary_Ice_Manipulation.json';
-import Blaster_Secondary_Martial_Manipulation from './powersets/Blaster_Secondary_Martial_Manipulation.json';
-import Blaster_Secondary_Mental_Manipulation from './powersets/Blaster_Secondary_Mental_Manipulation.json';
-import Blaster_Secondary_Ninja_Training from './powersets/Blaster_Secondary_Ninja_Training.json';
-import Blaster_Secondary_Plant_Manipulation from './powersets/Blaster_Secondary_Plant_Manipulation.json';
-import Blaster_Secondary_Radiation_Manipulation from './powersets/Blaster_Secondary_Radiation_Manipulation.json';
-import Blaster_Secondary_Tactical_Arrow from './powersets/Blaster_Secondary_Tactical_Arrow.json';
-import Blaster_Secondary_Temporal_Manipulation from './powersets/Blaster_Secondary_Temporal_Manipulation.json';
-import Blaster_Secondary_Electricity_Manipulation from './powersets/Blaster_Secondary_Electricity_Manipulation.json';
+import Blaster_Secondary_Darkness_Manipulation from "./powersets/Blaster_Secondary_Darkness_Manipulation.json";
+import Blaster_Secondary_Energy_Manipulation from "./powersets/Blaster_Secondary_Energy_Manipulation.json";
+import Blaster_Secondary_Fire_Manipulation from "./powersets/Blaster_Secondary_Fire_Manipulation.json";
+import Blaster_Secondary_Devices from "./powersets/Blaster_Secondary_Devices.json";
+import Blaster_Secondary_Ice_Manipulation from "./powersets/Blaster_Secondary_Ice_Manipulation.json";
+import Blaster_Secondary_Martial_Manipulation from "./powersets/Blaster_Secondary_Martial_Manipulation.json";
+import Blaster_Secondary_Mental_Manipulation from "./powersets/Blaster_Secondary_Mental_Manipulation.json";
+import Blaster_Secondary_Ninja_Training from "./powersets/Blaster_Secondary_Ninja_Training.json";
+import Blaster_Secondary_Plant_Manipulation from "./powersets/Blaster_Secondary_Plant_Manipulation.json";
+import Blaster_Secondary_Radiation_Manipulation from "./powersets/Blaster_Secondary_Radiation_Manipulation.json";
+import Blaster_Secondary_Tactical_Arrow from "./powersets/Blaster_Secondary_Tactical_Arrow.json";
+import Blaster_Secondary_Temporal_Manipulation from "./powersets/Blaster_Secondary_Temporal_Manipulation.json";
+import Blaster_Secondary_Electricity_Manipulation from "./powersets/Blaster_Secondary_Electricity_Manipulation.json";
 
-import Brute_Primary_Battle_Axe from './powersets/Brute_Primary_Battle_Axe.json';
-import Brute_Primary_Street_Justice from './powersets/Brute_Primary_Street_Justice.json';
-import Brute_Primary_Broad_Sword from './powersets/Brute_Primary_Broad_Sword.json';
-import Brute_Primary_Claws from './powersets/Brute_Primary_Claws.json';
-import Brute_Primary_Dark_Melee from './powersets/Brute_Primary_Dark_Melee.json';
-import Brute_Primary_Dual_Blades from './powersets/Brute_Primary_Dual_Blades.json';
-import Brute_Primary_Electrical_Melee from './powersets/Brute_Primary_Electrical_Melee.json';
-import Brute_Primary_Energy_Melee from './powersets/Brute_Primary_Energy_Melee.json';
-import Brute_Primary_Fiery_Melee from './powersets/Brute_Primary_Fiery_Melee.json';
-import Brute_Primary_Ice_Melee from './powersets/Brute_Primary_Ice_Melee.json';
-import Brute_Primary_Katana from './powersets/Brute_Primary_Katana.json';
-import Brute_Primary_Kinetic_Attack from './powersets/Brute_Primary_Kinetic_Attack.json';
-import Brute_Primary_Martial_Arts from './powersets/Brute_Primary_Martial_Arts.json';
-import Brute_Primary_Psionic_Melee from './powersets/Brute_Primary_Psionic_Melee.json';
-import Brute_Primary_Radiation_Melee from './powersets/Brute_Primary_Radiation_Melee.json';
-import Brute_Primary_Savage_Melee from './powersets/Brute_Primary_Savage_Melee.json';
-import Brute_Primary_Spines from './powersets/Brute_Primary_Spines.json';
-import Brute_Primary_Staff_Fighting from './powersets/Brute_Primary_Staff_Fighting.json';
-import Brute_Primary_Stone_Melee from './powersets/Brute_Primary_Stone_Melee.json';
-import Brute_Primary_Super_Strength from './powersets/Brute_Primary_Super_Strength.json';
-import Brute_Primary_Titan_Weapons from './powersets/Brute_Primary_Titan_Weapons.json';
-import Brute_Primary_War_Mace from './powersets/Brute_Primary_War_Mace.json';
+import Brute_Primary_Battle_Axe from "./powersets/Brute_Primary_Battle_Axe.json";
+import Brute_Primary_Street_Justice from "./powersets/Brute_Primary_Street_Justice.json";
+import Brute_Primary_Broad_Sword from "./powersets/Brute_Primary_Broad_Sword.json";
+import Brute_Primary_Claws from "./powersets/Brute_Primary_Claws.json";
+import Brute_Primary_Dark_Melee from "./powersets/Brute_Primary_Dark_Melee.json";
+import Brute_Primary_Dual_Blades from "./powersets/Brute_Primary_Dual_Blades.json";
+import Brute_Primary_Electrical_Melee from "./powersets/Brute_Primary_Electrical_Melee.json";
+import Brute_Primary_Energy_Melee from "./powersets/Brute_Primary_Energy_Melee.json";
+import Brute_Primary_Fiery_Melee from "./powersets/Brute_Primary_Fiery_Melee.json";
+import Brute_Primary_Ice_Melee from "./powersets/Brute_Primary_Ice_Melee.json";
+import Brute_Primary_Katana from "./powersets/Brute_Primary_Katana.json";
+import Brute_Primary_Kinetic_Attack from "./powersets/Brute_Primary_Kinetic_Attack.json";
+import Brute_Primary_Martial_Arts from "./powersets/Brute_Primary_Martial_Arts.json";
+import Brute_Primary_Psionic_Melee from "./powersets/Brute_Primary_Psionic_Melee.json";
+import Brute_Primary_Radiation_Melee from "./powersets/Brute_Primary_Radiation_Melee.json";
+import Brute_Primary_Savage_Melee from "./powersets/Brute_Primary_Savage_Melee.json";
+import Brute_Primary_Spines from "./powersets/Brute_Primary_Spines.json";
+import Brute_Primary_Staff_Fighting from "./powersets/Brute_Primary_Staff_Fighting.json";
+import Brute_Primary_Stone_Melee from "./powersets/Brute_Primary_Stone_Melee.json";
+import Brute_Primary_Super_Strength from "./powersets/Brute_Primary_Super_Strength.json";
+import Brute_Primary_Titan_Weapons from "./powersets/Brute_Primary_Titan_Weapons.json";
+import Brute_Primary_War_Mace from "./powersets/Brute_Primary_War_Mace.json";
 
-import Brute_Secondary_Bio_Organic_Armor from './powersets/Brute_Secondary_Bio_Organic_Armor.json';
-import Brute_Secondary_Dark_Armor from './powersets/Brute_Secondary_Dark_Armor.json';
-import Brute_Secondary_Electric_Armor from './powersets/Brute_Secondary_Electric_Armor.json';
-import Brute_Secondary_Energy_Aura from './powersets/Brute_Secondary_Energy_Aura.json';
-import Brute_Secondary_Fiery_Aura from './powersets/Brute_Secondary_Fiery_Aura.json';
-import Brute_Secondary_Ice_Armor from './powersets/Brute_Secondary_Ice_Armor.json';
-import Brute_Secondary_Invulnerability from './powersets/Brute_Secondary_Invulnerability.json';
-import Brute_Secondary_Radiation_Armor from './powersets/Brute_Secondary_Radiation_Armor.json';
-import Brute_Secondary_Regeneration from './powersets/Brute_Secondary_Regeneration.json';
-import Brute_Secondary_Shield_Defense from './powersets/Brute_Secondary_Shield_Defense.json';
-import Brute_Secondary_Stone_Armor from './powersets/Brute_Secondary_Stone_Armor.json';
-import Brute_Secondary_Super_Reflexes from './powersets/Brute_Secondary_Super_Reflexes.json';
-import Brute_Secondary_Willpower from './powersets/Brute_Secondary_Willpower.json';
+import Brute_Secondary_Bio_Organic_Armor from "./powersets/Brute_Secondary_Bio_Organic_Armor.json";
+import Brute_Secondary_Dark_Armor from "./powersets/Brute_Secondary_Dark_Armor.json";
+import Brute_Secondary_Electric_Armor from "./powersets/Brute_Secondary_Electric_Armor.json";
+import Brute_Secondary_Energy_Aura from "./powersets/Brute_Secondary_Energy_Aura.json";
+import Brute_Secondary_Fiery_Aura from "./powersets/Brute_Secondary_Fiery_Aura.json";
+import Brute_Secondary_Ice_Armor from "./powersets/Brute_Secondary_Ice_Armor.json";
+import Brute_Secondary_Invulnerability from "./powersets/Brute_Secondary_Invulnerability.json";
+import Brute_Secondary_Radiation_Armor from "./powersets/Brute_Secondary_Radiation_Armor.json";
+import Brute_Secondary_Regeneration from "./powersets/Brute_Secondary_Regeneration.json";
+import Brute_Secondary_Shield_Defense from "./powersets/Brute_Secondary_Shield_Defense.json";
+import Brute_Secondary_Stone_Armor from "./powersets/Brute_Secondary_Stone_Armor.json";
+import Brute_Secondary_Super_Reflexes from "./powersets/Brute_Secondary_Super_Reflexes.json";
+import Brute_Secondary_Willpower from "./powersets/Brute_Secondary_Willpower.json";
 
 // import Controller_Darkness_Control from './powersets/Controller_Darkness_Control.json';
 // import Controller_Earth_Control from './powersets/Controller_Earth_Control.json';
@@ -384,13 +384,13 @@ const powersets = {
       Blaster_Secondary_Temporal_Manipulation,
     ],
   },
-  Controller: { primaries: [], secondaries: [] },
-  Defender: { primaries: [], secondaries: [] },
-  Scrapper: { primaries: [], secondaries: [] },
-  Tanker: { primaries: [], secondaries: [] },
-  Peacebringer: { primaries: [], secondaries: [] },
-  Warshade: { primaries: [], secondaries: [] },
-  Sentinel: { primaries: [], secondaries: [] },
+  // Controller: { primaries: [], secondaries: [] },
+  // Defender: { primaries: [], secondaries: [] },
+  // Scrapper: { primaries: [], secondaries: [] },
+  // Tanker: { primaries: [], secondaries: [] },
+  // Peacebringer: { primaries: [], secondaries: [] },
+  // Warshade: { primaries: [], secondaries: [] },
+  // Sentinel: { primaries: [], secondaries: [] },
   Brute: {
     primaries: [
       Brute_Primary_Battle_Axe,
@@ -432,12 +432,12 @@ const powersets = {
       Brute_Secondary_Willpower,
     ],
   },
-  Stalker: { primaries: [], secondaries: [] },
-  Mastermind: { primaries: [], secondaries: [] },
-  Dominator: { primaries: [], secondaries: [] },
-  Corruptor: { primaries: [], secondaries: [] },
-  'Arachnos Widow': { primaries: [], secondaries: [] },
-  'Arachnos Soldier': { primaries: [], secondaries: [] },
+  // Stalker: { primaries: [], secondaries: [] },
+  // Mastermind: { primaries: [], secondaries: [] },
+  // Dominator: { primaries: [], secondaries: [] },
+  // Corruptor: { primaries: [], secondaries: [] },
+  // 'Arachnos Widow': { primaries: [], secondaries: [] },
+  // 'Arachnos Soldier': { primaries: [], secondaries: [] },
 };
 
 export default powersets;

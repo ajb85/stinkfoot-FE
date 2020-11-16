@@ -1,7 +1,5 @@
 import React, { useState, createContext, useContext } from "react";
 
-// import parseStringToBuild from "js/parseStringToBuild.js";
-
 const BuildContext = createContext();
 
 export function BuildProvider(props) {
@@ -65,8 +63,21 @@ export default function useCharacters() {
 
 function getNewCharacter(name) {
   return {
-    name,
+    name: name || "",
+    archetype: "",
+    origin: "",
+    alignment: "",
+    powerSlots: [],
+    poolPowers: [],
+    activeSets: {
+      primary: null,
+      secondary: null,
+      poolPower: null,
+      epicPool: null,
+      activeLevel: null,
+      toggledSlot: null,
+      toggledSet: null,
+    },
     badges: {},
-    build: {},
   };
 }

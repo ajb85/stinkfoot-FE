@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styled from "styled-components";
+
 import {
   Alert,
   Form,
@@ -10,11 +10,9 @@ import {
   ModalHeader,
 } from "shards-react";
 
-// import Input from "components/Input/";
-// import Button from "components/Button/";
-
 import useCharacters from "providers/useCharacters.js";
 
+import parseBuildFromStr from "js/parseStringToBuild.js";
 import styles from "./styles.module.scss";
 
 export default function AddCharacter(props) {
@@ -67,7 +65,7 @@ function NewCharacter() {
       </h2>
       <div className={styles.newCharacterInput}>
         <FormInput
-          valid={charName.length && !characters[charName]}
+          valid={!!charName.length && !characters[charName]}
           inline
           value={charName}
           onChange={updateName}
@@ -90,9 +88,44 @@ function NewCharacter() {
 }
 
 function ImportCharacter() {
-  return <div>Import Character</div>;
-}
+  const [input, setInput] = useState("");
+  const [error, setError] = useState("");
 
-const MenuItem = styled.span`
-  background-color: ${({ active }) => (active ? "darkgrey " : "grey")};
-`;
+  const handleChange = (e) => {
+    console.log("PASTE: ", e.target.value);
+    const build = parseBuildFromStr(e.target.value);
+    if (build.error) {
+      setError(build.error);
+    } else {
+      setError("");
+    }
+    setInput("");
+  };
+
+  return (
+    <div>
+      <h2>To import a character from Mids or Pines, follow these steps:</h2>
+      <ul>
+        <li>Open Mids then your Character</li>
+        <li>From the top of mids, select "Import/Export"</li>
+        <li>From the dropdown, select "Long Forum Export..."</li>
+        <li>
+          On the right side under "Formatting Code Type" select "HTML Export"
+        </li>
+        <li>Click the "Export Now" button at the bottom</li>
+        <li>Click "OK" on the prompt</li>
+        <li>Verify the input below is selected then paste</li>
+      </ul>
+      <FormInput
+        value={input}
+        placeholder="Paste exported build here"
+        onChange={handleChange}
+      />
+      {error && (
+        <Alert className={styles.Alert} theme="danger">
+          {error}
+        </Alert>
+      )}
+    </div>
+  );
+}
