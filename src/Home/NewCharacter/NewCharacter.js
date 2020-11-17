@@ -92,14 +92,13 @@ function ImportCharacter() {
   const [error, setError] = useState("");
 
   const handleChange = (e) => {
-    console.log("PASTE: ", e.target.value);
     const build = parseBuildFromStr(e.target.value);
     if (build.error) {
       setError(build.error);
     } else {
       setError("");
+      setInput(e.target.value);
     }
-    setInput("");
   };
 
   return (
@@ -117,6 +116,7 @@ function ImportCharacter() {
         <li>Verify the input below is selected then paste</li>
       </ul>
       <FormInput
+        valid={!!input && !error}
         value={input}
         placeholder="Paste exported build here"
         onChange={handleChange}
