@@ -2,6 +2,7 @@ import poolPowers from "data/poolPowers.js";
 import powersets from "data/powersets.js";
 import epicPools from "data/epicPools.js";
 import origins from "data/origins.js";
+import getEnhancementFromName from "js/getEnhancementFromName.js";
 
 const atOrderToPlural = {
   primary: "primaries",
@@ -42,10 +43,8 @@ export default function (str) {
     };
 
     const tagArray = str.split("<font").slice(4);
-    console.log("TAG ARRAY: ", tagArray[1]);
 
     const hasName = getTagContent(tagArray[1]) !== "Primary Power Set: ";
-    console.log("HAS NAME? ", hasName);
     if (hasName) {
       character.name = stripNonAlphanumeric(getTagContent(tagArray.shift()));
     }
@@ -55,7 +54,6 @@ export default function (str) {
     const isExtraSpace = !isNaN(parseInt(a));
     const origin = isExtraSpace ? b : a;
     const archetype = isExtraSpace ? c : b;
-    console.log("OG CONTENT: ", archetype, ogContent);
 
     if (powersets[archetype]) {
       character.archetype = archetype;
@@ -142,15 +140,15 @@ export default function (str) {
 
       if (contents.indexOf(" - ") > -1) {
         // is IO Set
-        saveEnhancement(contents.split(" - ").shift());
-        enhSlot.type = "IO Set";
+        saveEnhancement(correctSetName(contents.split(" - ").shift()));
+        enhSlot.type = "ioSet";
         enhSlot.halfName = true;
         return acc;
       }
 
       if (enhSlot && enhSlot.halfName) {
         delete enhSlot.halfName;
-        enhSlot.name += " // " + contents;
+        enhSlot.name += " // " + correctStatNames(contents);
         nextSlotLevel = getNextEnhancementSlotLevelFromStr(str);
         return acc;
       }
@@ -173,7 +171,16 @@ export default function (str) {
 
     function saveEnhancement(contents) {
       if (enhSlot) {
-        powerSlot.enhSlots.push(enhSlot);
+        const { name, type, ...slot } = enhSlot;
+        const sup = "Superior ";
+        let correctedName = name;
+        if (contents.substring(0, sup.length) === sup) {
+          correctedName = correctedName.substring(sup.length);
+          slot.modification = "superior";
+        }
+        const enhancement = getEnhancementFromName(correctedName, type);
+        slot.enhancement = enhancement;
+        powerSlot.enhSlots.push(slot);
       }
 
       enhSlot = {};
@@ -259,4 +266,35 @@ function putPowersetInBuild(character, atOrder, powersetName) {
 
 function findDisplayName(powersetName) {
   return ({ displayName }) => displayName === powersetName;
+}
+
+const mapToCorrectStats = {
+  RechargeTime: "Recharge",
+  Heal: "Healing",
+  "TP Protection +3% Def (All)": "Teleportation Protection, +Def(All)",
+  "+Res (Teleportation), +5% Res (All)": "Teleportation Protection, +Res(All)",
+  "+Regeneration": "Regeneration",
+  "+Recovery": "Recovery",
+  "Chance for +End": "Chance for +Endurance",
+};
+
+const mapToCorrectName = {
+  "Damage/Endurance/Accuracy/Recharge": "Accuracy/Damage/Endurance/Recharge",
+  Healing: "Healing/Absorb",
+};
+function correctStatNames(stats) {
+  const correctedStats = stats
+    .split("/")
+    .map((n) => mapToCorrectStats[n] || n)
+    .join("/");
+
+  return mapToCorrectName[correctedStats] || correctedStats;
+}
+
+const mapToCorrectSetName = {
+  "Numina's Convalesence": "Numina's Convalescence",
+};
+
+function correctSetName(setName) {
+  return mapToCorrectSetName[setName] || setName;
 }
