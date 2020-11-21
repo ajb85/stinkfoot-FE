@@ -1,36 +1,35 @@
 import React from 'react';
 
 import Powerset from './Powerset.js';
+import { PlannerContext } from 'Providers/PlannerStateManagement.js';
 
 import styles from './styles.module.scss';
 
-function PoolPowers({ stateManager }) {
-  const { build } = stateManager;
+function PoolPowers(props) {
+  const stateManager = React.useContext(PlannerContext);
+
   return (
     <div className={styles.PoolPowers}>
       <h2>Power Pools</h2>
-      {build.poolPowers.map((poolIndex) => {
+      {stateManager.selectedPoolPowers.map((poolIndex) => {
         return (
           <React.Fragment key={poolIndex}>
             <Powerset
               header={stateManager.pools[poolIndex].displayName}
               powerList={stateManager.pools[poolIndex].powers}
-              stateManager={stateManager}
               poolIndex={poolIndex}
             />
           </React.Fragment>
         );
       })}
 
-      {build.poolPowers.length < 4 && (
+      {stateManager.selectedPoolPowers.length < 4 && (
         <Powerset
           dropdown={{
             name: 'poolPowerIndex',
             list: stateManager.pools,
           }}
           powerList={stateManager.activePool.powers}
-          build={build}
-          stateManager={stateManager}
           togglePower={stateManager.addPowerFromNewPool}
         />
       )}

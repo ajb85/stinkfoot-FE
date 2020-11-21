@@ -2,11 +2,11 @@ import React, { useContext, useEffect } from 'react';
 
 import styles from './styles.module.scss';
 import { DDTrackingContext } from 'Providers/DropdownTracking.js';
-
 function Dropdown(props) {
   const { dropdowns, addDropdown, removeDropdown } = useContext(
     DDTrackingContext
   );
+
   const selected = props.options.find(({ value }) => value === props.selected);
   useEffect(() => {
     addDropdown(props.name);

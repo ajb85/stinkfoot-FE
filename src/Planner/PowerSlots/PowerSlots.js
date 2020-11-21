@@ -1,11 +1,13 @@
 import React, { Fragment } from 'react';
 
+import { PlannerContext } from 'Providers/PlannerStateManagement.js';
+
 import styles from './styles.module.scss';
 
-function PowerSlots({ stateManager }) {
+function PowerSlots(props) {
+  const stateManager = React.useContext(PlannerContext);
   const {
-    build,
-    setActiveLevelIndex,
+    updateTracking,
     togglePowerSlot,
     addSlot,
     removeSlot,
@@ -15,31 +17,37 @@ function PowerSlots({ stateManager }) {
 
   const handlePillClick = (e, psIndex) => {
     const { className } = e.target;
-    if (className === 'pillText' || build.powerSlotIndex !== psIndex) {
+    console.log('CLASS NAME: ', className);
+    if (
+      className === 'pillText' ||
+      stateManager.toggledPowerSlotIndex !== psIndex
+    ) {
       togglePowerSlot(psIndex);
     }
   };
 
-  const { selected /*, defaults*/ } = build.powerSlots.reduce(
-    (acc, cur, originalIndex) => {
-      const withIndex = { ...cur, originalIndex };
-      if (cur.type === 'default') {
-        acc.defaults.push(withIndex);
-      } else {
-        if (!acc.selected[index]) {
-          acc.selected.push([]);
-        }
+  const { selected /*, defaults*/ } = stateManager
+    .getFromState('powerSlots')
+    .reduce(
+      (acc, cur, originalIndex) => {
+        const withIndex = { ...cur, originalIndex };
+        if (cur.type === 'default') {
+          acc.defaults.push(withIndex);
+        } else {
+          if (!acc.selected[index]) {
+            acc.selected.push([]);
+          }
 
-        acc.selected[index].push(withIndex);
+          acc.selected[index].push(withIndex);
 
-        if (acc.selected[index].length >= 8) {
-          index++;
+          if (acc.selected[index].length >= 8) {
+            index++;
+          }
         }
-      }
-      return acc;
-    },
-    { selected: [], defaults: [] }
-  );
+        return acc;
+      },
+      { selected: [], defaults: [] }
+    );
 
   return (
     <div className={styles.Powers}>
@@ -49,20 +57,15 @@ function PowerSlots({ stateManager }) {
             const { level, power, enhSlots, originalIndex } = powerSlot;
             const isActive = stateManager.activeLevel === level;
             const isEmpty = !powerSlot.power;
-            const isToggled = build.powerSlotIndex === originalIndex;
+            const isToggled =
+              stateManager.toggledPowerSlotIndex === originalIndex;
             const p = power ? getPower(power) : {};
 
-            const enhImages = require.context(
-              'Planner/images/enhancements',
-              true
-            );
-
-            const enhOverlay = require.context('Planner/images/overlays', true);
             return (
               <Fragment key={originalIndex}>
                 {isEmpty ? (
                   <EmptyPowerSlot
-                    setActiveLevelIndex={setActiveLevelIndex}
+                    updateTracking={updateTracking}
                     index={originalIndex}
                     isActive={isActive}
                     level={powerSlot.level}
@@ -79,7 +82,9 @@ function PowerSlots({ stateManager }) {
                       }`}
                       style={{
                         backgroundColor: '#1b4ea8',
-                        zIndex: build.powerSlots.length - originalIndex,
+                        zIndex:
+                          stateManager.getFromState('powerSlots').length -
+                          originalIndex,
                       }}
                     >
                       <p className="pillText">
@@ -106,23 +111,19 @@ function PowerSlots({ stateManager }) {
                         <div className={styles.addEnhancements}>
                           <p onClick={addSlot.bind(this, originalIndex)}>+</p>
                           <div className={styles.enhancementList}>
-                            {p &&
-                              p.allowedEnhancements &&
-                              p.allowedEnhancements.map((enhName) => (
-                                <div
-                                  key={enhName}
-                                  className={styles.enhancementImage}
-                                >
-                                  <img
-                                    src={enhOverlay(`./IO.png`)}
-                                    alt={enhName}
-                                  />
-                                  <img
-                                    src={enhImages(`./${enhName}.png`)}
-                                    alt={enhName}
-                                  />
-                                </div>
-                              ))}
+                            {stateManager
+                              .getEnhancementsForPowerByType(p, 'IO')
+                              .map(
+                                ({ image: { enhancement, overlay }, name }) => (
+                                  <div
+                                    key={name}
+                                    className={styles.enhancementImage}
+                                  >
+                                    <img src={overlay} alt={name} />
+                                    <img src={enhancement} alt={name} />
+                                  </div>
+                                )
+                              )}
                           </div>
                         </div>
                       )}
@@ -138,12 +139,16 @@ function PowerSlots({ stateManager }) {
   );
 }
 
-function EmptyPowerSlot({ index, level, isActive, setActiveLevelIndex }) {
+function EmptyPowerSlot({ index, level, isActive, updateTracking }) {
   return (
     <div className={styles.powerContainer}>
       <div
         className={styles.power}
-        onClick={setActiveLevelIndex.bind(this, index)}
+        onClick={(e) => {
+          e.target.name = 'activeLevelIndex';
+          e.target.value = index;
+          updateTracking.bind(this, e);
+        }}
         style={{ backgroundColor: isActive ? 'green' : 'grey' }}
       >
         <p>({level})</p>
