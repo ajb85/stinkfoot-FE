@@ -5,7 +5,6 @@ import useBuild from "providers/useBuilds.js";
 import styles from "./styles.module.scss";
 
 function Import(props) {
-  console.log("IMPORT BUILD");
   const inputREF = useRef(null);
   const [wasSubmitted, setWasSubmitted] = useState(false);
   const { saveBuild, isValidBuild } = useBuild();

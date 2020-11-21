@@ -9,7 +9,6 @@ import doesSetMatchKeyword from "js/doesSetMatchKeyword.js";
 import styles from "./styles.module.scss";
 
 function ListBuild(props) {
-  console.log("BUILD LIST");
   const [filters, setFilters] = useState({
     order: "asc",
     tags: { length: 0 },

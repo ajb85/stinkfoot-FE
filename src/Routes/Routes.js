@@ -1,12 +1,12 @@
 import React from "react";
 
-import Import from "components/Import/";
-import BuildList from "components/BuildList/";
+// import Import from "components/Import/";
+// import BuildList from "components/BuildList/";
 import Badger from "Badger/";
 import Planner from "Planner/";
 import Home from "Home/";
 
-import useBuild from "providers/useBuilds.js";
+// import useBuild from "providers/useBuilds.js";
 import { BadgesProvider } from "providers/useBadges.js";
 import PlannerProviders from "providers/builder/";
 
@@ -25,9 +25,9 @@ function Routes() {
           <Badger />
         </BadgesProvider>
       </Route>
-      <Route path="/shopper">
+      {/* <Route path="/shopper">
         <Shopper />
-      </Route>
+      </Route> */}
       <Route exact path="/">
         <Home />
       </Route>
@@ -40,8 +40,8 @@ function Routes() {
 
 export default Routes;
 
-function Shopper() {
-  const { build } = useBuild();
-  window.title = "Shopping List";
-  return Object.keys(build).length ? <BuildList /> : <Import />;
-}
+// function Shopper() {
+//   const { build } = useBuild();
+//   window.title = "Shopping List";
+//   return Object.keys(build).length ? <BuildList /> : <Import />;
+// }

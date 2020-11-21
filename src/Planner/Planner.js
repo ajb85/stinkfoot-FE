@@ -9,7 +9,6 @@ import { useRemoveSlotToggles } from "hooks/powersets";
 import styles from "./styles.module.scss";
 
 function Planner(props) {
-  console.log("MOUNT PLANNER");
   document.title = "Character Planner";
   const removeSlotToggles = useRemoveSlotToggles();
   return (
