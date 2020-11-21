@@ -1,13 +1,17 @@
 import React, { useState, createContext, useContext } from "react";
 
-import powerSlotsTemplate from "data/powerSlotsTemplate.js";
+import useCharacters from "../useCharacters.js";
+
 import slotsManager from "js/slotsManager.js";
+import powerSlotsTemplate from "data/powerSlotsTemplate.js";
 
 const context = createContext();
 
 let timeout;
 export const PowerSlotsProvider = (props) => {
-  const [powerSlots, setPowerSlots] = useState(powerSlotsTemplate);
+  const { activeCharacter, updateActiveCharacter } = useCharacters();
+  const setPowerSlots = (value) => updateActiveCharacter("powerSlots", value);
+  const { powerSlots } = activeCharacter;
   const { Provider } = context;
   console.log("POWERSLOTS: ", powerSlots);
   const removePowerFromSlot = ((cache) => (index) => {

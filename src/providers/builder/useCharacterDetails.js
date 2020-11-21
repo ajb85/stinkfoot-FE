@@ -1,24 +1,18 @@
 import React, { useState, createContext, useContext } from "react";
-
-import origins from "data/origins.js";
-import archetypes from "data/archetypes.js";
-
-const initialState = {
-  name: "",
-  archetype: archetypes[0],
-  origin: origins[0].name,
-  alignment: "Hero",
-};
+import useCharacters from "../useCharacters.js";
 
 const context = createContext();
 
 export const CharacterDetailsProvider = (props) => {
-  const [character, setCharacter] = useState(initialState);
+  const { activeCharacter, updateActiveCharacter } = useCharacters();
 
   const setCharacterDetail = (e) => {
-    const { name, value } = e.target;
-    setCharacter({ ...character, [name]: value });
+    const { name: key, value } = e.target;
+    updateActiveCharacter(key, value);
   };
+
+  const { name, archetype, origin } = activeCharacter;
+  const character = { name, archetype, origin };
 
   const { Provider } = context;
   const state = { character, setCharacterDetail };
