@@ -24,7 +24,7 @@ export default function NavBar(props) {
   const [hidden, setHidden] = useState(false);
   const [dropdown, setDropdown] = useState(false);
   const history = useHistory();
-  const { characters, activeCharacter } = useCharacters();
+  const { activeCharacter } = useCharacters();
 
   const toggleHidden = () => setHidden(!hidden);
   const updateHistory = (route) => {
