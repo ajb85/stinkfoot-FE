@@ -1,9 +1,8 @@
-import React, { useContext } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import React, { useContext } from "react";
 
-import { BuildContext } from 'Providers/Builds.js';
+import { BuildContext } from "Providers/Builds.js";
 
-import styles from './styles.module.scss';
+import styles from "./styles.module.scss";
 
 function FilterOptions({ filters, toggleTag, setSearch, zIndex = 10000 }) {
   const { saveBuild } = useContext(BuildContext);
@@ -38,7 +37,7 @@ function FilterOptions({ filters, toggleTag, setSearch, zIndex = 10000 }) {
         {/* New Build Button */}
         <div className={styles.buildOptions}>
           <button onClick={() => saveBuild()}>
-            <FontAwesomeIcon icon={['fal', 'plus-circle']} />
+            <p>ICON</p>
             New Build
           </button>
         </div>
