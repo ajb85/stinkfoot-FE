@@ -20,7 +20,7 @@ import logo from "assets/logo.svg";
 import styles from "./styles.module.scss";
 
 export default function NavBar(props) {
-  const [render, setRender] = useState(false);
+  const [refreshToggle, setRefreshToggle] = useState(false);
   const [hidden, setHidden] = useState(false);
   const [dropdown, setDropdown] = useState(false);
   const history = useHistory();
@@ -29,7 +29,7 @@ export default function NavBar(props) {
   const toggleHidden = () => setHidden(!hidden);
   const updateHistory = (route) => {
     history.push(route);
-    setRender(!render);
+    setRefreshToggle(!refreshToggle);
   };
 
   const hiddenClass = hidden ? " " + styles.hidden : "";
@@ -55,6 +55,7 @@ export default function NavBar(props) {
         id="planner"
         title="Character Planner"
         updateHistory={updateHistory}
+        disabled={!activeCharacter}
       >
         <IoMdConstruct />
       </NavButton>
@@ -62,6 +63,7 @@ export default function NavBar(props) {
         id="badger"
         title="Badge Tracker"
         updateHistory={updateHistory}
+        disabled={!activeCharacter}
       >
         <GiPoliceBadge />
       </NavButton>
@@ -69,6 +71,7 @@ export default function NavBar(props) {
         id="shopper"
         title="Shopping Cart"
         updateHistory={updateHistory}
+        disabled={!activeCharacter}
       >
         <FaShoppingCart />
       </NavButton>
@@ -88,6 +91,7 @@ function NavButton(props) {
         id={props.id}
         pill
         outline={activeRoute !== props.id}
+        disabled={props.disabled}
       >
         {props.children}
       </Button>

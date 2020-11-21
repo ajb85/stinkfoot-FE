@@ -15,7 +15,7 @@ import "shards-ui/dist/css/shards.min.css";
 import "./styles/index.scss";
 
 import NavBar from "Home/NavBar/";
-import NewCharacter from "Home/NewCharacter";
+import AddCharacter from "Home/AddCharacter/";
 
 import { closeMenu } from "js/closeTracker.js";
 
@@ -27,7 +27,7 @@ function App() {
       <Router history={history}>
         <UniversalProviders>
           <div onClick={closeMenu} style={{ display: "flex" }}>
-            <NewCharacter
+            <AddCharacter
               open={modalOpen}
               toggle={setModalOpen.bind(this, !modalOpen)}
             />

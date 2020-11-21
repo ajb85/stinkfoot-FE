@@ -1,20 +1,28 @@
-import React, { useState, createContext, useContext } from "react";
+import React, { useState, createContext, useContext, useEffect } from "react";
+
+import origins from "data/origins.js";
+import archetypes from "data/archetypes.js";
+import powerSlotsTemplate from "data/powerSlotsTemplate.js";
 
 const BuildContext = createContext();
 
 export function BuildProvider(props) {
   const storage = localStorage.getItem("characters");
   let parsed;
+  let activeCharName;
   try {
     parsed = storage && JSON.parse(storage);
+    activeCharName =
+      parsed && JSON.parse(localStorage.getItem("activeCharacterName"));
   } catch {
     parsed = {};
     localStorage.setItem("character", JSON.stringify(parsed));
   }
-  const activeCharName = parsed && localStorage.getItem("activeCharacterName");
+
   const [characters, setCharacters] = useState(parsed || {});
   const [active, setActive] = useState(activeCharName || "");
 
+  console.log("ACTIVE: ", active, characters, characters[active]);
   const updateCharacters = (updated) => {
     localStorage.setItem("characters", JSON.stringify(updated));
     setCharacters(updated);
@@ -25,19 +33,33 @@ export function BuildProvider(props) {
     setActive(name);
   };
 
-  const updateActiveCharacter = (key, updated) => {
-    const updatedCharacters = { ...characters };
-    updatedCharacters[active][key] = updated;
-    updateCharacters(updatedCharacters);
+  const updateActiveCharacter = (key, value) => {
+    const updatedActive = { ...characters[active] };
+    updatedActive[key] = value;
+    updateCharacters({ ...characters, [active]: updatedActive });
   };
 
-  const createNewCharacter = (name) => {
+  const createNewCharacter = (name, makeActive = true) => {
     const updatedChars = { ...characters };
     if (!updatedChars[name]) {
       updatedChars[name] = getNewCharacter(name);
+
+      if (makeActive) {
+        updateActive(name);
+      }
     }
     updateCharacters(updatedChars);
   };
+
+  useEffect(() => {
+    if (!active) {
+      console.log("SETTING ACTIVE CHAR NAME");
+      const charNames = Object.keys(characters);
+      if (charNames.length) {
+        updateActive(charNames[0]);
+      }
+    }
+  }, [active]);
 
   const { Provider } = BuildContext;
   const charCount = Object.keys(characters).length;
@@ -64,20 +86,10 @@ export default function useCharacters() {
 function getNewCharacter(name) {
   return {
     name: name || "",
-    archetype: "",
-    origin: "",
-    alignment: "",
-    powerSlots: [],
+    archetype: archetypes[0],
+    origin: origins[0].name,
+    powerSlots: powerSlotsTemplate,
     poolPowers: [],
-    activeSets: {
-      primary: null,
-      secondary: null,
-      poolPower: null,
-      epicPool: null,
-      activeLevel: null,
-      toggledSlot: null,
-      toggledSet: null,
-    },
     badges: {},
   };
 }
