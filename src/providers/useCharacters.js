@@ -59,7 +59,7 @@ export function BuildProvider(props) {
         updateActive(charNames[0]);
       }
     }
-  }, [active]);
+  }, [characters, active]);
 
   const { Provider } = BuildContext;
   const charCount = Object.keys(characters).length;

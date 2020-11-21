@@ -1,11 +1,11 @@
-import React, { useState, useContext, createContext } from "react";
+import React, { useContext, createContext } from "react";
 import useCharacters from "../useCharacters.js";
 const context = createContext();
 
 export function PoolPowersProvider(props) {
   const { activeCharacter, updateActiveCharacter } = useCharacters();
 
-  const { pools } = activeCharacter;
+  const { poolPowers: pools } = activeCharacter;
   const { Provider } = context;
 
   const setPools = (value) => updateActiveCharacter("poolPowers", value);
