@@ -1,4 +1,4 @@
-import React, { useState, createContext, useContext } from "react";
+import React, { createContext, useContext } from "react";
 
 import useCharacters from "../useCharacters.js";
 
