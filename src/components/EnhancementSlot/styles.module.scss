@@ -1,0 +1,34 @@
+@import "styles/variables.scss";
+
+.slot {
+  & > div.empty {
+    width: 30px;
+    height: 30px;
+
+    border: 1px solid $secondary;
+    border-radius: 50%;
+    background-color: $dark;
+  }
+
+  & > div.enhancement {
+    position: relative;
+
+    img:nth-of-type(2) {
+      position: absolute;
+      left: 0;
+    }
+  }
+
+  .level {
+    width: fit-content;
+    font-size: 9px;
+
+    position: relative;
+    left: 11px;
+    top: -10px;
+
+    background-color: $dark;
+    border-radius: 50%;
+    padding: 1px;
+  }
+}

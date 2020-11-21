@@ -1,0 +1,102 @@
+{
+  "fullName": "IOSet.Blessing_of_the_Zephyr",
+  "enhancements": [
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Blessing_of_the_Zephyr_A.Attuned_Blessing_of_the_Zephyr_A",
+      "displayName": "Run Speed, Jump, Flight Speed, Range",
+      "description": {
+        "short": "+Run Speed, +Jump, +Flight Speed, +Range",
+        "long": "Enhances the range of a teleport power by {Boost.Attrib.Range.Scale}%, the flight speed of a power by {Boost.Attrib.Fly.Scale}%, the jumping ability of a power by {Boost.Attrib.Jump.Scale}% and the run speed of a power by {Boost.Attrib.Run.Scale}%.  NOTE: This enhancement can be slotted into any travel power and will enhance run speed, jumping, flight speed and teleport range."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.255
+            }
+          },
+          "stat": "+Travel",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.424
+            }
+          },
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Blessing_of_the_Zephyr_B.Attuned_Blessing_of_the_Zephyr_B",
+      "displayName": "Run Speed, Jump, Flight Speed, Range/Endurance",
+      "description": {
+        "short": "+Run Speed, +Jump, +Flight Speed, +Range, -End Cost",
+        "long": "Enhances the range of a teleport power by {Boost.Attrib.Range.Scale}%, the flight speed of a power by {Boost.Attrib.Fly.Scale}%, the jumping ability of a power by {Boost.Attrib.Jump.Scale}%, the run speed of a power by {Boost.Attrib.Run.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%.  NOTE: This enhancement can be slotted into any travel power and will enhance run speed, jumping, flight speed and teleport range."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.159375
+            }
+          },
+          "stat": "+Travel",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Blessing_of_the_Zephyr_C.Attuned_Blessing_of_the_Zephyr_C",
+      "displayName": "Knockback Reduction (4 points)",
+      "description": {
+        "short": "-Knockback",
+        "long": "Reduces Knockback effects by -4.  NOTE: This enhancement can be slotted into any travel power."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": -4
+            }
+          },
+          "stat": "Knockback Reduction",
+          "cancelOnMiss": true,
+          "toWho": "self"
+        }
+      ]
+    }
+  ],
+  "levels": {
+    "min": 10,
+    "max": 50
+  },
+  "setType": 28,
+  "setTypeName": "Universal Travel",
+  "displayName": "Blessing of the Zephyr",
+  "imageName": "Zephyr.png"
+}

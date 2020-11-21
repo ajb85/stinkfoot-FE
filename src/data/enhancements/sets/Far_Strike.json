@@ -1,0 +1,122 @@
+{
+  "fullName": "IOSet.Far_Strike",
+  "enhancements": [
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Far_Strike_A.Attuned_Far_Strike_A",
+      "displayName": "Damage/Range",
+      "description": {
+        "short": "Enhances Damage and Range",
+        "long": "Enhances the damage of a power by {Boost.Attrib.Damage.Scale}% and range by {Boost.Attrib.Range.Scale}%."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Damage",
+          "damageType": [
+            "Smashing",
+            "Lethal",
+            "Fire",
+            "Cold",
+            "Energy",
+            "Negative",
+            "Toxic",
+            "Psionic"
+          ],
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.159375
+            }
+          },
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Far_Strike_B.Attuned_Far_Strike_B",
+      "displayName": "Damage/Recharge",
+      "description": {
+        "short": "Enhances Damage and Recharge",
+        "long": "Enhances the damage of a power by {Boost.Attrib.Damage.Scale}% and reduces recharge time by {Boost.Attrib.Recharge.Scale}%."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Damage",
+          "damageType": [
+            "Smashing",
+            "Lethal",
+            "Fire",
+            "Cold",
+            "Energy",
+            "Negative",
+            "Toxic",
+            "Psionic"
+          ],
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Recharge",
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Far_Strike_C.Attuned_Far_Strike_C",
+      "displayName": "Accuracy/Endurance",
+      "description": {
+        "short": "Enhances Accuracy and Reduces Endurance Cost",
+        "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and endurance cost by {Boost.Attrib.Endurance.Scale}%."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Accuracy",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self"
+        }
+      ]
+    }
+  ],
+  "levels": {
+    "min": 10,
+    "max": 25
+  },
+  "setType": 2,
+  "setTypeName": "Ranged Damage",
+  "displayName": "Far Strike",
+  "imageName": "sFarStrike.png"
+}

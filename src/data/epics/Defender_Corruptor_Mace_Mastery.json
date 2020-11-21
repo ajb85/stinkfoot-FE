@@ -1,0 +1,759 @@
+{
+  "fullName": "Epic_Mace_Mastery",
+  "archetypeOrder": "epicPool",
+  "description": "Black Scorpion has granted you access to the advanced technology of the Nullifier Mace. The signature weapon of the Bane Spider Commandos, it is not a typical clumsy mace. The Bane Mace is capable of firing a variety of energy projectiles and grenades.  It can even be modified to summon and command some or Black Scorpion's RV technologies.",
+  "imageName": "PatronShield.png",
+  "displayName": "Mace Mastery",
+  "powers": [
+    {
+      "effects": [
+        {
+          "effectType": "Immobilize",
+          "values": [
+            {
+              "mag": {
+                "pve": 3
+              },
+              "probability": 1,
+              "duration": 17.8800011,
+              "effectType": "Mez",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "attribType": 1,
+              "powerFullName": "Epic.Corruptor_Mace_Mastery.Web_Envelope",
+              "mezType": "Immob"
+            }
+          ]
+        },
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pvp": 3
+              },
+              "probability": 1,
+              "duration": 2,
+              "effectType": "Mez",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "attribType": 1,
+              "powerFullName": "Epic.Corruptor_Mace_Mastery.Web_Envelope",
+              "mezType": "Immob"
+            },
+            {
+              "mag": {
+                "pve": -500
+              },
+              "probability": 1,
+              "duration": 15,
+              "effectType": "JumpHeight",
+              "stacking": 1,
+              "buffable": true,
+              "toWho": "target",
+              "powerFullName": "Epic.Corruptor_Mace_Mastery.Web_Envelope"
+            },
+            {
+              "mag": {
+                "pve": -10
+              },
+              "probability": 1,
+              "duration": 15,
+              "effectType": "Fly",
+              "stacking": 1,
+              "buffable": true,
+              "toWho": "target",
+              "powerFullName": "Epic.Corruptor_Mace_Mastery.Web_Envelope"
+            }
+          ]
+        },
+        {
+          "effectType": "Slow",
+          "values": [
+            {
+              "etModifies": "RechargeTime",
+              "mag": {
+                "pve": -0.2
+              },
+              "probability": 1,
+              "duration": 15,
+              "effectType": "Enhancement",
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Epic.Corruptor_Mace_Mastery.Web_Envelope",
+              "nearGround": true
+            },
+            {
+              "mag": {
+                "pve": -0.2
+              },
+              "probability": 1,
+              "duration": 15,
+              "effectType": "SpeedRunning",
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Epic.Corruptor_Mace_Mastery.Web_Envelope",
+              "nearGround": true
+            },
+            {
+              "mag": {
+                "pve": -0.2
+              },
+              "probability": 1,
+              "duration": 15,
+              "effectType": "SpeedFlying",
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Epic.Corruptor_Mace_Mastery.Web_Envelope",
+              "nearGround": true
+            }
+          ]
+        }
+      ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Endurance_Discount",
+        "Immobilize",
+        "Range",
+        "Recharge",
+        "Slow"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Corruptor_Mace_Mastery.Web_Envelope",
+      "archetypeOrder": "epicPool",
+      "powerIndex": 0,
+      "castTimeReal": 2,
+      "toggleCost": 12.74,
+      "fullName": "Epic_Mace_Mastery_Web_Envelope",
+      "displayName": "Web Envelope",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1.05,
+      "accuracyMult": 1.05,
+      "attackTypes": 4,
+      "target": 2048,
+      "targetLoS": true,
+      "range": 80,
+      "endCost": 12.74,
+      "rechargeTime": 20,
+      "baseRechargeTime": 20,
+      "effectArea": 2,
+      "radius": 15,
+      "maxTargets": 10,
+      "numAllowed": 1,
+      "description": {
+        "short": "Ranged (Targeted AoE) Immobilize, -Recharge, -Fly",
+        "long": "The Executioner's Mace can lob a modified Web Grenade.  Upon impact, the Web Grenade expels a strong, tenuous, and very sticky substance that can Immobilize most targets in a wide area. This non-lethal device deals no damage and does not prevent targets from attacking, although their attack rate is Slowed. The Web can bring down flying entities and halts jumping. Recharge: Slow"
+      },
+      "setTypes": [
+        12
+      ],
+      "level": 35,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 2.244,
+      "slottable": true,
+      "aoeModifier": 3.25
+    },
+    {
+      "effects": [
+        {
+          "effectType": "Buff_Def",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.105000004,
+                "pvp": 0.105000004
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Defense",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Epic.Corruptor_Mace_Mastery.Scorpion_Shield",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 0.105000004,
+                "pvp": 0.105000004
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Defense",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Epic.Corruptor_Mace_Mastery.Scorpion_Shield",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.07,
+                "pvp": 0.105000004
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Defense",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Epic.Corruptor_Mace_Mastery.Scorpion_Shield",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pvp": 0.105000004
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Defense",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Epic.Corruptor_Mace_Mastery.Scorpion_Shield",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pvp": 0.105000004
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Defense",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Epic.Corruptor_Mace_Mastery.Scorpion_Shield",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pvp": 0.105000004
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Defense",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Epic.Corruptor_Mace_Mastery.Scorpion_Shield",
+              "damageType": "Psionic"
+            },
+            {
+              "mag": {
+                "pvp": 0.105000004
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Defense",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Epic.Corruptor_Mace_Mastery.Scorpion_Shield",
+              "damageType": "Negative"
+            }
+          ]
+        },
+        {
+          "effectType": "Res_Dmg",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.1225,
+                "pvp": 0.1925
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Resistance",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Epic.Corruptor_Mace_Mastery.Scorpion_Shield",
+              "damageType": "Toxic"
+            }
+          ]
+        },
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pvp": 0.1
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Elusivity",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Epic.Corruptor_Mace_Mastery.Scorpion_Shield",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pvp": 0.1
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Elusivity",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Epic.Corruptor_Mace_Mastery.Scorpion_Shield",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pvp": 0.1
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Elusivity",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Epic.Corruptor_Mace_Mastery.Scorpion_Shield",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pvp": 0.1
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Elusivity",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Epic.Corruptor_Mace_Mastery.Scorpion_Shield",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pvp": 0.1
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Elusivity",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Epic.Corruptor_Mace_Mastery.Scorpion_Shield",
+              "damageType": "Psionic"
+            },
+            {
+              "mag": {
+                "pvp": 0.1
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Elusivity",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Epic.Corruptor_Mace_Mastery.Scorpion_Shield",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pvp": 0.1
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Epic.Corruptor_Mace_Mastery.Scorpion_Shield"
+            }
+          ]
+        }
+      ],
+      "allowedEnhancements": [
+        "Defense_Buff",
+        "Endurance_Discount",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Corruptor_Mace_Mastery.Scorpion_Shield",
+      "archetypeOrder": "epicPool",
+      "powerIndex": 1,
+      "castTimeReal": 2,
+      "toggleCost": 0.325,
+      "fullName": "Epic_Mace_Mastery_Scorpion_Shield",
+      "displayName": "Scorpion Shield",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "target": 1,
+      "targetLoS": true,
+      "endCost": 0.1625,
+      "rechargeTime": 4,
+      "baseRechargeTime": 4,
+      "activatePeriod": 0.5,
+      "effectArea": 1,
+      "numAllowed": 1,
+      "ignoreStrength": true,
+      "description": {
+        "short": "Toggle: Self, +Def(Smash,Lethal,Energy), +Res(Toxic)",
+        "long": "Black Scorpion's technologies are impressive indeed.  This energy shield grants you Defense to Lethal, Smashing and Energy attacks, as well as improves your damage resistance to Toxic damage. Recharge: Fast"
+      },
+      "setTypes": [
+        7
+      ],
+      "level": 35,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 2.244,
+      "slottable": true,
+      "aoeModifier": 1,
+      "powerType": "Toggle"
+    },
+    {
+      "effects": [
+        {
+          "effectType": "Buff_ToHit",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.05
+              },
+              "cancelOnMiss": true,
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "ToHit",
+              "buffable": true,
+              "toWho": "all",
+              "powerFullName": "Epic.Corruptor_Mace_Mastery.Focused_Accuracy"
+            }
+          ]
+        },
+        {
+          "effectType": "Res_Boolean",
+          "values": [
+            {
+              "etModifies": "ToHit",
+              "mag": {
+                "pve": 0.5536
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "ResEffect",
+              "toWho": "all",
+              "powerFullName": "Epic.Corruptor_Mace_Mastery.Focused_Accuracy"
+            }
+          ]
+        },
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "etModifies": "Accuracy",
+              "mag": {
+                "pve": 0.2
+              },
+              "cancelOnMiss": true,
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Enhancement",
+              "toWho": "all",
+              "powerFullName": "Epic.Corruptor_Mace_Mastery.Focused_Accuracy"
+            },
+            {
+              "etModifies": "PerceptionRadius",
+              "mag": {
+                "pve": 0.6
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "ResEffect",
+              "toWho": "self",
+              "powerFullName": "Epic.Corruptor_Mace_Mastery.Focused_Accuracy"
+            },
+            {
+              "mag": {
+                "pve": 0.6
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "PerceptionRadius",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Epic.Corruptor_Mace_Mastery.Focused_Accuracy"
+            }
+          ]
+        }
+      ],
+      "allowedEnhancements": [
+        "ToHit_Buff",
+        "Endurance_Discount",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Corruptor_Mace_Mastery.Focused_Accuracy",
+      "archetypeOrder": "epicPool",
+      "powerIndex": 2,
+      "castTimeReal": 1.17,
+      "toggleCost": 0.78,
+      "isEpic": true,
+      "fullName": "Epic_Mace_Mastery_Focused_Accuracy",
+      "displayName": "Focused Accuracy",
+      "requires": {
+        "powers": {
+          "Epic.Corruptor_Mace_Mastery.Focused_Accuracy": true
+        },
+        "count": 1
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "target": 1,
+      "targetLoS": true,
+      "endCost": 0.39,
+      "rechargeTime": 10,
+      "baseRechargeTime": 10,
+      "activatePeriod": 0.5,
+      "effectArea": 1,
+      "numAllowed": 1,
+      "description": {
+        "short": "Toggle: Self +To Hit, +ACC, +Perception, Res(DeBuff To Hit)",
+        "long": "When this power is activated, the Villain focuses their senses to dramatically improve their accuracy. Additionally, Focused Accuracy increase your Perception, allowing you to better see stealthy foes. It also grants you resistance to powers that DeBuff your Accuracy. Focused Accuracy is a toggle power and must be activated and deactivated manually. Like all toggle powers, while active, Focused Accuracy drains Endurance while active. You must be level 41 and have Web Envelope or Scorpion Shield before selecting this power. Recharge: Slow"
+      },
+      "setTypes": [
+        25
+      ],
+      "level": 41,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 1.31999993,
+      "slottable": true,
+      "aoeModifier": 1,
+      "powerType": "Toggle"
+    },
+    {
+      "effects": [
+        {
+          "effectType": "Immobilize",
+          "values": [
+            {
+              "mag": {
+                "pve": 3
+              },
+              "probability": 1,
+              "duration": 11.92,
+              "effectType": "Mez",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "attribType": 1,
+              "powerFullName": "Epic.Corruptor_Mace_Mastery.Web_Cocoon",
+              "mezType": "Hold"
+            }
+          ]
+        },
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pvp": 3
+              },
+              "probability": 1,
+              "duration": 2,
+              "effectType": "Mez",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "attribType": 1,
+              "powerFullName": "Epic.Corruptor_Mace_Mastery.Web_Cocoon",
+              "mezType": "Hold"
+            },
+            {
+              "mag": {
+                "pve": -500
+              },
+              "probability": 1,
+              "duration": 15,
+              "effectType": "JumpHeight",
+              "stacking": 1,
+              "buffable": true,
+              "toWho": "target",
+              "powerFullName": "Epic.Corruptor_Mace_Mastery.Web_Cocoon"
+            },
+            {
+              "mag": {
+                "pve": -10
+              },
+              "probability": 1,
+              "duration": 15,
+              "effectType": "Fly",
+              "stacking": 1,
+              "buffable": true,
+              "toWho": "target",
+              "powerFullName": "Epic.Corruptor_Mace_Mastery.Web_Cocoon"
+            }
+          ]
+        },
+        {
+          "effectType": "Slow",
+          "values": [
+            {
+              "etModifies": "RechargeTime",
+              "mag": {
+                "pve": -0.5
+              },
+              "probability": 1,
+              "duration": 15,
+              "effectType": "Enhancement",
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Epic.Corruptor_Mace_Mastery.Web_Cocoon",
+              "nearGround": true
+            },
+            {
+              "mag": {
+                "pve": -0.5
+              },
+              "probability": 1,
+              "duration": 15,
+              "effectType": "SpeedRunning",
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Epic.Corruptor_Mace_Mastery.Web_Cocoon",
+              "nearGround": true
+            },
+            {
+              "mag": {
+                "pve": -0.5
+              },
+              "probability": 1,
+              "duration": 15,
+              "effectType": "SpeedFlying",
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Epic.Corruptor_Mace_Mastery.Web_Cocoon",
+              "nearGround": true
+            }
+          ]
+        }
+      ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Endurance_Discount",
+        "Hold",
+        "Range",
+        "Recharge",
+        "Slow"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Corruptor_Mace_Mastery.Web_Cocoon",
+      "archetypeOrder": "epicPool",
+      "powerIndex": 3,
+      "castTimeReal": 2,
+      "toggleCost": 10.66,
+      "isEpic": true,
+      "fullName": "Epic_Mace_Mastery_Web_Cocoon",
+      "displayName": "Web Cocoon",
+      "requires": {
+        "powers": {
+          "Epic.Corruptor_Mace_Mastery.Web_Cocoon": true
+        },
+        "count": 1
+      },
+      "accuracy": 1.05,
+      "accuracyMult": 1.05,
+      "attackTypes": 2,
+      "target": 2048,
+      "targetLoS": true,
+      "range": 60,
+      "endCost": 10.66,
+      "rechargeTime": 32,
+      "baseRechargeTime": 32,
+      "effectArea": 1,
+      "numAllowed": 1,
+      "description": {
+        "short": "Ranged, Foe Hold, -Recharge, -Fly, -Jump, Slow",
+        "long": "The Bane Mace can fire a more powerful version the common web grenade.  The sinewy fibers of this grenade are strong enough to completely Hold one target. Targets able to resist the Hold are still likely to have their attack and movement speed dramatically slowed.  Web Cocoon can also bring down flying targets and prevent foes from jumping. You must be level 41 and have Web Envelope or Scorpion Shield before selecting this power. Recharge: Long"
+      },
+      "setTypes": [
+        10,
+        13
+      ],
+      "level": 41,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 2.244,
+      "slottable": true,
+      "aoeModifier": 1
+    },
+    {
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": -1
+              },
+              "probability": 1,
+              "duration": 240,
+              "effectType": "EntCreate",
+              "toWho": "all",
+              "powerFullName": "Epic.Corruptor_Mace_Mastery.Summon_Disruptor"
+            }
+          ]
+        }
+      ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Hold",
+        "Immobilize",
+        "Range",
+        "Recharge",
+        "Endurance_Modification"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Corruptor_Mace_Mastery.Summon_Disruptor",
+      "archetypeOrder": "epicPool",
+      "powerIndex": 4,
+      "castTimeReal": 3.03,
+      "toggleCost": 26,
+      "isEpic": true,
+      "fullName": "Epic_Mace_Mastery_Summon_Disruptor",
+      "displayName": "Summon Disruptor",
+      "requires": {
+        "powers": {
+          "Epic.Corruptor_Mace_Mastery.Summon_Disruptor": true
+        },
+        "count": 2
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "target": 8192,
+      "targetLoS": true,
+      "range": 60,
+      "endCost": 26,
+      "rechargeTime": 900,
+      "baseRechargeTime": 900,
+      "effectArea": 4,
+      "numAllowed": 1,
+      "description": {
+        "short": "Summon Arachnobot: Ranged Moderate DMG(Energy)",
+        "long": "Black Scorpion has granted you an Arachnobot Disruptor for you to command. Arachnobots were created by Arachnos Orb Weavers to take down particularly powerful super-powered threats. Your access to this Arachnobot is very limited. You can only summon it once every 15 minutes and it will leave after 4 minutes, or if you exit a zone or mission. You must be level 44 and have two other Mace Mastery Powers before selecting this power. Recharge: Extremely Long"
+      },
+      "setTypes": [
+        6,
+        27,
+        44
+      ],
+      "level": 44,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 3.168,
+      "slottable": true,
+      "aoeModifier": 1
+    }
+  ]
+}

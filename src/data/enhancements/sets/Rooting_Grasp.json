@@ -1,0 +1,163 @@
+{
+  "fullName": "IOSet.Rooting_Grasp",
+  "enhancements": [
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Rooting_Grasp_A.Attuned_Rooting_Grasp_A",
+      "displayName": "Accuracy/Recharge",
+      "description": {
+        "short": "+ACC, +Rech",
+        "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}%."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Accuracy",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Recharge",
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Rooting_Grasp_B.Attuned_Rooting_Grasp_B",
+      "displayName": "Endurance/Immobilize",
+      "description": {
+        "short": "+End, +Immobilize",
+        "long": "Enhances the Immobilize duration of a power by {Boost.Attrib.Immobilize.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "mezType": 3,
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Rooting_Grasp_C.Attuned_Rooting_Grasp_C",
+      "displayName": "Accuracy/Endurance",
+      "description": {
+        "short": "+ACC, -End Cost",
+        "long": "Enhances the accuracy by {Boost.Attrib.Accuracy.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Accuracy",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Rooting_Grasp_D.Attuned_Rooting_Grasp_D",
+      "displayName": "Immobilize/Range",
+      "description": {
+        "short": "+Range, +Immobilize",
+        "long": "Enhances the range of a power by {Boost.Attrib.Range.Scale}% and immobilize duration by {Boost.Attrib.immobilize.Scale}%."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "mezType": 3,
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Rooting_Grasp_E.Attuned_Rooting_Grasp_E",
+      "displayName": "Accuracy/Immob/Recharge",
+      "description": {
+        "short": "+ACC, +Rech, +Immob",
+        "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}%, immobilize duration by {Boost.Attrib.Immobilize.Scale}% and reduces the attack rate by {Boost.Attrib.Recharge.Scale}%."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.212
+            }
+          },
+          "stat": "Accuracy",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.212
+            }
+          },
+          "stat": "Recharge",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.212
+            }
+          },
+          "mezType": 3,
+          "toWho": "self"
+        }
+      ]
+    }
+  ],
+  "levels": {
+    "min": 10,
+    "max": 30
+  },
+  "setType": 12,
+  "setTypeName": "Immobilize",
+  "displayName": "Rooting Grasp",
+  "imageName": "sRoothingGrasp.png"
+}

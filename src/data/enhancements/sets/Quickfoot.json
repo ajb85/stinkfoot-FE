@@ -1,0 +1,83 @@
+{
+  "fullName": "IOSet.Quickfoot",
+  "enhancements": [
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Quickfoot_A.Attuned_Quickfoot_A",
+      "displayName": "Run",
+      "description": {
+        "short": "+Run",
+        "long": "Enhances the run speed of a power by {Boost.Attrib.Run.Scale}%."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.424
+            }
+          },
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Quickfoot_B.Attuned_Quickfoot_B",
+      "displayName": "Endurance",
+      "description": {
+        "short": "-End Cost",
+        "long": "Reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.424
+            }
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Quickfoot_C.Attuned_Quickfoot_C",
+      "displayName": "Endurance/Run",
+      "description": {
+        "short": "+Run, -End Cost",
+        "long": "Enhances the run speed of a power by {Boost.Attrib.Run.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "toWho": "self"
+        }
+      ]
+    }
+  ],
+  "levels": {
+    "min": 15,
+    "max": 50
+  },
+  "setType": 19,
+  "setTypeName": "Running",
+  "displayName": "Quickfoot",
+  "imageName": "sQuickfoot.png"
+}

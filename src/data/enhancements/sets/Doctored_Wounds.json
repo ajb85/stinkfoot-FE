@@ -1,0 +1,180 @@
+{
+  "fullName": "IOSet.Doctored_Wounds",
+  "enhancements": [
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Doctored_Wounds_A.Attuned_Doctored_Wounds_A",
+      "displayName": "Healing/Absorb/Endurance",
+      "description": {
+        "short": "+Heal, -End Cost, +Absorb",
+        "long": "Enhances the healing potential and damage absorption of a power by {Boost.Attrib.Heal.Scale}% and reduces endurance cost by {Boost.Attrib.Endurance.Scale}%"
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Doctored_Wounds_B.Attuned_Doctored_Wounds_B",
+      "displayName": "Endurance/Recharge",
+      "description": {
+        "short": "-End Cost, +Rech",
+        "long": "Reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}% and recharge time by {Boost.Attrib.Recharge.Scale}%"
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Recharge",
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Doctored_Wounds_C.Attuned_Doctored_Wounds_C",
+      "displayName": "Healing/Absorb/Recharge",
+      "description": {
+        "short": "+Heal, +Rech, +Absorb",
+        "long": "Enhances the healing potential and damage absorption of a power by {Boost.Attrib.Heal.Scale}% and reduces recharge time by  {Boost.Attrib.Recharge.Scale}%"
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Recharge",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Doctored_Wounds_D.Attuned_Doctored_Wounds_D",
+      "displayName": "Healing/Absorb/Endurance/Recharge",
+      "description": {
+        "short": "+Heal, -End Cost, +Rech, +Absorb",
+        "long": "Enhances the healing potential and damage absorption of a power by {Boost.Attrib.Heal.Scale}%, reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}% and recharge time by  {Boost.Attrib.Recharge.Scale}%"
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.212
+            }
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.212
+            }
+          },
+          "stat": "Recharge",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.212
+            }
+          },
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Doctored_Wounds_E.Attuned_Doctored_Wounds_E",
+      "displayName": "Healing/Absorb",
+      "description": {
+        "short": "+Heal, +Absorb",
+        "long": "Enhances the healing potential and damage absorption of a power by {Boost.Attrib.Heal.Scale}%."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.424
+            }
+          },
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Doctored_Wounds_F.Attuned_Doctored_Wounds_F",
+      "displayName": "Recharge",
+      "description": {
+        "short": "+Rech",
+        "long": "Reduces recharge time by {Boost.Attrib.Recharge.Scale}%"
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.424
+            }
+          },
+          "stat": "Recharge",
+          "toWho": "self"
+        }
+      ]
+    }
+  ],
+  "levels": {
+    "min": 30,
+    "max": 50
+  },
+  "setType": 9,
+  "setTypeName": "Healing",
+  "displayName": "Doctored Wounds",
+  "imageName": "sDoctoredWounds.png"
+}

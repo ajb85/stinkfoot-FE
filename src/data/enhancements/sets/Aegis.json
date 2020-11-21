@@ -1,0 +1,224 @@
+{
+  "fullName": "IOSet.Aegis",
+  "enhancements": [
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Aegis_A.Attuned_Aegis_A",
+      "displayName": "Resistance/Endurance",
+      "description": {
+        "short": "+RES (all), Reduces End cost",
+        "long": "Enhances the damage resistance of a power by {Boost.Attrib.Resist.Scale}% and reduces endurance cost by {Boost.Attrib.Endurance.Scale}%"
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.159375
+            }
+          },
+          "stat": "Res_Damage",
+          "damageType": [
+            "Smashing",
+            "Lethal",
+            "Fire",
+            "Cold",
+            "Energy",
+            "Negative",
+            "Toxic",
+            "Psionic"
+          ],
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Aegis_B.Attuned_Aegis_B",
+      "displayName": "Resistance/Recharge",
+      "description": {
+        "short": "+RES (all), +Rech",
+        "long": "Enhances the damage resistance of a power by {Boost.Attrib.Resist.Scale}% and reduces recharge time by {Boost.Attrib.Recharge.Scale}%"
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.159375
+            }
+          },
+          "stat": "Res_Damage",
+          "damageType": [
+            "Smashing",
+            "Lethal",
+            "Fire",
+            "Cold",
+            "Energy",
+            "Negative",
+            "Toxic",
+            "Psionic"
+          ],
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Recharge",
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Aegis_C.Attuned_Aegis_C",
+      "displayName": "Endurance/Recharge",
+      "description": {
+        "short": "Reduces Endurance Cost and Increases Attack Rate",
+        "long": "Reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}% and recharge time by {Boost.Attrib.Recharge.Scale}%"
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Recharge",
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Aegis_D.Attuned_Aegis_D",
+      "displayName": "Resistance/Endurance/Recharge",
+      "description": {
+        "short": "Enhances Resistance, Reduces Endurance Cost and Increases Attack Rate",
+        "long": "Enhances the damage resistance of a power by {Boost.Attrib.Resist.Scale}%, reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%and recharge time by {Boost.Attrib.Recharge.Scale}%"
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.1275
+            }
+          },
+          "stat": "Res_Damage",
+          "damageType": [
+            "Smashing",
+            "Lethal",
+            "Fire",
+            "Cold",
+            "Energy",
+            "Negative",
+            "Toxic",
+            "Psionic"
+          ],
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.212
+            }
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.212
+            }
+          },
+          "stat": "Recharge",
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Aegis_E.Attuned_Aegis_E",
+      "displayName": "Resistance",
+      "description": {
+        "short": "+RES (all)",
+        "long": "Enhances the damage resistance of a power by {Boost.Attrib.Resist.Scale}%."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.255
+            }
+          },
+          "stat": "Res_Damage",
+          "damageType": [
+            "Smashing",
+            "Lethal",
+            "Fire",
+            "Cold",
+            "Energy",
+            "Negative",
+            "Toxic",
+            "Psionic"
+          ],
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Aegis_F.Attuned_Aegis_F",
+      "displayName": "Psionic/Status Resistance",
+      "description": {
+        "short": "+RES (Psionic, Status Effects)",
+        "long": "UNIQUE -- No more than 1 enhancement of this type may be slotted by a character.  Gives a 5% bonus to psionic resistance and reduces the duration of all status effects by 20%."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.035
+            }
+          },
+          "stat": "Status Resistance",
+          "toWho": "self"
+        }
+      ]
+    }
+  ],
+  "levels": {
+    "min": 25,
+    "max": 50
+  },
+  "setType": 8,
+  "setTypeName": "Resist Damage",
+  "displayName": "Aegis",
+  "imageName": "sAegis.png"
+}

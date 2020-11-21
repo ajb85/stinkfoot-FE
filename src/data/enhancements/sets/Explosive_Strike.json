@@ -1,0 +1,110 @@
+{
+  "fullName": "IOSet.Explosive_Strike",
+  "enhancements": [
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Explosive_Strike_A.Attuned_Explosive_Strike_A",
+      "displayName": "Knockback/Damage",
+      "description": {
+        "short": "+Knockback, +DMG",
+        "long": "Enhances the Knockback potential of a power by {Boost.Attrib.Knockback.Scale}% and the damage by {Boost.Attrib.Damage.Scale}%."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Damage",
+          "damageType": [
+            "Smashing",
+            "Lethal",
+            "Fire",
+            "Cold",
+            "Energy",
+            "Negative",
+            "Toxic",
+            "Psionic"
+          ],
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.4775
+            }
+          },
+          "mezType": 4,
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Explosive_Strike_B.Attuned_Explosive_Strike_B",
+      "displayName": "Knockback/Accuracy",
+      "description": {
+        "short": "+Knockback, +ACC",
+        "long": "Enhances the Knockback potential of a power by {Boost.Attrib.Knockback.Scale}% and the accuracy by {Boost.Attrib.Accuracy.Scale}%."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Accuracy",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.4775
+            }
+          },
+          "mezType": 4,
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Explosive_Strike_C.Attuned_Explosive_Strike_C",
+      "displayName": "Chance for Smashing Damage",
+      "description": {
+        "short": "Chance for Smashing Damage",
+        "long": "Provides a chance to cause minor smashing damage to your targets.  This effect will trigger roughly 3.5 times per minute."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 71.7501
+            }
+          },
+          "stat": "Chance for Smashing Damage",
+          "procsPerMinute": 3.5,
+          "cancelOnMiss": true,
+          "damageType": "Smashing",
+          "stacking": 1,
+          "resistible": true,
+          "pvMode": 1,
+          "toWho": "all"
+        }
+      ]
+    }
+  ],
+  "levels": {
+    "min": 10,
+    "max": 20
+  },
+  "setType": 23,
+  "setTypeName": "Knockback",
+  "displayName": "Explosive Strike",
+  "imageName": "sExplosiveStrike.png"
+}

@@ -1,0 +1,1464 @@
+{
+  "fullName": "Brute_Primary_Psionic_Melee",
+  "archetypeOrder": "primary",
+  "description": "You are able to strike at foes with psychic projections including deadly psi blades. Psionic Melee provides excellent crowd control by dominating the minds of its victims. Your psionic damaging attacks have a chance to grant you Insight into your enemies. While you have Insight, your psionic damage powers cause additional psionic damage over time and your Boggle and Psi Blade Sweep powers become more potent.",
+  "imageName": "PsiMeleeHero.png",
+  "displayName": "Psionic Melee",
+  "powers": [
+    {
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 1
+              },
+              "probability": 0.08889,
+              "effectType": "GrantPower",
+              "toWho": "self",
+              "powerFullName": "Brute_Melee.Psionic_Melee.Mental_Strike"
+            },
+            {
+              "mag": {
+                "pvp": 0.05
+              },
+              "probability": 1,
+              "variableModified": true,
+              "effectType": "Rage",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Melee.Psionic_Melee.Mental_Strike"
+            }
+          ]
+        },
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 11.6781416,
+                "pvp": 22.94032
+              },
+              "probability": 1,
+              "effectType": "Damage",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Brute_Melee.Psionic_Melee.Mental_Strike",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 4.67125654,
+                "pvp": 68.82096
+              },
+              "probability": 1,
+              "effectType": "Damage",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Brute_Melee.Psionic_Melee.Mental_Strike",
+              "damageType": "Psionic"
+            }
+          ]
+        },
+        {
+          "effectType": "Slow",
+          "values": [
+            {
+              "etModifies": "RechargeTime",
+              "mag": {
+                "pve": -0.1
+              },
+              "probability": 1,
+              "duration": 6,
+              "effectType": "Enhancement",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Brute_Melee.Psionic_Melee.Mental_Strike"
+            }
+          ]
+        },
+        {
+          "effectType": "InherentTaunt",
+          "values": [
+            {
+              "mag": {
+                "pve": 4
+              },
+              "cancelOnMiss": true,
+              "probability": 1,
+              "duration": 13.6,
+              "effectType": "Mez",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "specialCase": 14,
+              "toWho": "target",
+              "attribType": 1,
+              "powerFullName": "Brute_Melee.Psionic_Melee.Mental_Strike",
+              "requiresToHitCheck": true,
+              "mezType": "Taunt"
+            }
+          ]
+        },
+        {
+          "effectType": "FieryEmbrace",
+          "values": [
+            {
+              "mag": {
+                "pve": 21.0206547
+              },
+              "effectType": "Damage",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Brute_Melee.Psionic_Melee.Mental_Strike",
+              "damageType": "Fire"
+            }
+          ]
+        }
+      ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Recharge",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Psionic_Melee.Mental_Strike",
+      "archetypeOrder": "primary",
+      "powerIndex": 0,
+      "castTimeReal": 1,
+      "toggleCost": 4.368,
+      "fullName": "Brute_Primary_Psionic_Melee_Mental_Strike",
+      "displayName": "Mental Strike",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "attackTypes": 521,
+      "target": 2048,
+      "targetLoS": true,
+      "range": 7,
+      "endCost": 4.368,
+      "rechargeTime": 3,
+      "baseRechargeTime": 3,
+      "effectArea": 1,
+      "numAllowed": 1,
+      "description": {
+        "short": "Melee, Light DMG(Psionic/Smash), Foe -Rech; Self +Insight",
+        "long": "You project psionic energy around your fist and strike at your foe dealing light Psionic and Smashing damage. Affected foes will have their recharge rate reduced. Mental Strike has a small chance to grant you Insight. While you have Insight, Mental Strike will deal additional minor psionic damage over time. Damage: Light, Recharge: Very Fast"
+      },
+      "setTypes": [
+        1,
+        24,
+        34,
+        44
+      ],
+      "level": 1,
+      "ignoreEnh": [
+        13
+      ],
+      "ignore_Buff": [],
+      "hasGrantPowerEffect": true,
+      "castTime": 1.188,
+      "slottable": true,
+      "aoeModifier": 1
+    },
+    {
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 1
+              },
+              "probability": 0.14067,
+              "effectType": "GrantPower",
+              "toWho": "self",
+              "powerFullName": "Brute_Melee.Psionic_Melee.Psi_Blade"
+            },
+            {
+              "mag": {
+                "pvp": 0.05
+              },
+              "probability": 1,
+              "variableModified": true,
+              "effectType": "Rage",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Melee.Psionic_Melee.Psi_Blade"
+            }
+          ]
+        },
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 15.8489065,
+                "pvp": 28.7882881
+              },
+              "probability": 1,
+              "effectType": "Damage",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Brute_Melee.Psionic_Melee.Psi_Blade",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 12.70693,
+                "pvp": 86.36431
+              },
+              "probability": 1,
+              "effectType": "Damage",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Brute_Melee.Psionic_Melee.Psi_Blade",
+              "damageType": "Psionic"
+            }
+          ]
+        },
+        {
+          "effectType": "Slow",
+          "values": [
+            {
+              "etModifies": "RechargeTime",
+              "mag": {
+                "pve": -0.12
+              },
+              "probability": 1,
+              "duration": 6,
+              "effectType": "Enhancement",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Brute_Melee.Psionic_Melee.Psi_Blade"
+            }
+          ]
+        },
+        {
+          "effectType": "InherentTaunt",
+          "values": [
+            {
+              "mag": {
+                "pve": 4
+              },
+              "cancelOnMiss": true,
+              "probability": 1,
+              "duration": 13.6,
+              "effectType": "Mez",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "specialCase": 14,
+              "toWho": "target",
+              "attribType": 1,
+              "powerFullName": "Brute_Melee.Psionic_Melee.Psi_Blade",
+              "requiresToHitCheck": true,
+              "mezType": "Taunt"
+            }
+          ]
+        },
+        {
+          "effectType": "FieryEmbrace",
+          "values": [
+            {
+              "mag": {
+                "pve": 28.5280323
+              },
+              "effectType": "Damage",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Brute_Melee.Psionic_Melee.Psi_Blade",
+              "damageType": "Fire"
+            }
+          ]
+        }
+      ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Recharge",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Psionic_Melee.Psi_Blade",
+      "archetypeOrder": "primary",
+      "powerIndex": 1,
+      "castTimeReal": 1.33,
+      "toggleCost": 5.928,
+      "fullName": "Brute_Primary_Psionic_Melee_Psi_Blade",
+      "displayName": "Psi Blade",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "attackTypes": 529,
+      "target": 2048,
+      "targetLoS": true,
+      "range": 7,
+      "endCost": 5.928,
+      "rechargeTime": 5,
+      "baseRechargeTime": 5,
+      "effectArea": 1,
+      "numAllowed": 1,
+      "description": {
+        "short": "Melee, Moderate DMG(Psionic/Lethal), Foe -Rech, Self +Insight",
+        "long": "You lash at your foe's mind with a mentally projected blade of psychic energy to deal moderate Psionic and Lethal damage. Affected foes will have their recharge rate reduced. Psi Blade has a moderate chance to grant you Insight. While you have Insight, Psi Blade will deal additional minor psionic damage over time. Damage: Moderate, Recharge: Fast"
+      },
+      "setTypes": [
+        1,
+        24,
+        34,
+        44
+      ],
+      "level": 1,
+      "ignoreEnh": [
+        13
+      ],
+      "ignore_Buff": [],
+      "hasGrantPowerEffect": true,
+      "castTime": 1.584,
+      "slottable": true,
+      "aoeModifier": 1
+    },
+    {
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 1
+              },
+              "probability": 0.23267,
+              "effectType": "GrantPower",
+              "toWho": "self",
+              "powerFullName": "Brute_Melee.Psionic_Melee.Telekinetic_Blow"
+            },
+            {
+              "mag": {
+                "pvp": 0.05
+              },
+              "probability": 1,
+              "variableModified": true,
+              "effectType": "Rage",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Melee.Psionic_Melee.Telekinetic_Blow"
+            }
+          ]
+        },
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 25.02459,
+                "pvp": 33.6391678
+              },
+              "probability": 1,
+              "effectType": "Damage",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Brute_Melee.Psionic_Melee.Telekinetic_Blow",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 10.0098362,
+                "pvp": 100.918053
+              },
+              "probability": 1,
+              "effectType": "Damage",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Brute_Melee.Psionic_Melee.Telekinetic_Blow",
+              "damageType": "Psionic"
+            }
+          ]
+        },
+        {
+          "effectType": "Knockback",
+          "values": [
+            {
+              "mag": {
+                "pve": 2.0771,
+                "pvp": 2.0771
+              },
+              "probability": 0.6,
+              "effectType": "Mez",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Brute_Melee.Psionic_Melee.Telekinetic_Blow",
+              "mezType": "Knockup"
+            }
+          ]
+        },
+        {
+          "effectType": "InherentTaunt",
+          "values": [
+            {
+              "mag": {
+                "pve": 4
+              },
+              "cancelOnMiss": true,
+              "probability": 1,
+              "duration": 13.6,
+              "effectType": "Mez",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "specialCase": 14,
+              "toWho": "target",
+              "attribType": 1,
+              "powerFullName": "Brute_Melee.Psionic_Melee.Telekinetic_Blow",
+              "requiresToHitCheck": true,
+              "mezType": "Taunt"
+            }
+          ]
+        },
+        {
+          "effectType": "FieryEmbrace",
+          "values": [
+            {
+              "mag": {
+                "pve": 45.0442619
+              },
+              "effectType": "Damage",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Brute_Melee.Psionic_Melee.Telekinetic_Blow",
+              "damageType": "Fire"
+            }
+          ]
+        }
+      ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Knockback",
+        "Recharge",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Psionic_Melee.Telekinetic_Blow",
+      "archetypeOrder": "primary",
+      "powerIndex": 2,
+      "castTimeReal": 1.47,
+      "toggleCost": 9.36,
+      "fullName": "Brute_Primary_Psionic_Melee_Telekinetic_Blow",
+      "displayName": "Telekinetic Blow",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "attackTypes": 521,
+      "target": 2048,
+      "targetLoS": true,
+      "range": 7,
+      "endCost": 9.36,
+      "rechargeTime": 9,
+      "baseRechargeTime": 9,
+      "effectArea": 1,
+      "numAllowed": 1,
+      "description": {
+        "short": "Melee, High DMG(Psionic/Smash), Foe Knock Up, Self +Insight",
+        "long": "You project telekinetic energy around your fist before delivering a shattering uppercut to your foe dealing high Psionic and Smashing damage and sending them flying into the air. Telekinetic Blow has a high chance of granting you Insight. While you have Insight, Telekinetic Blow will deal additional minor psionic damage over time. Damage: High, Recharge: Moderate"
+      },
+      "setTypes": [
+        1,
+        23,
+        24,
+        34,
+        44
+      ],
+      "level": 2,
+      "ignoreEnh": [
+        13
+      ],
+      "ignore_Buff": [],
+      "hasGrantPowerEffect": true,
+      "castTime": 1.716,
+      "slottable": true,
+      "aoeModifier": 1
+    },
+    {
+      "effects": [
+        {
+          "effectType": "Buff_ToHit",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.2
+              },
+              "probability": 1,
+              "duration": 10,
+              "variableModified": true,
+              "effectType": "ToHit",
+              "stacking": 1,
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Melee.Psionic_Melee.Concentration"
+            }
+          ]
+        },
+        {
+          "effectType": "Buff_Dmg",
+          "values": [
+            {
+              "mag": {
+                "pve": 1
+              },
+              "probability": 1,
+              "duration": 10,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "toWho": "self",
+              "powerFullName": "Brute_Melee.Psionic_Melee.Concentration",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 1
+              },
+              "probability": 1,
+              "duration": 10,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "toWho": "self",
+              "powerFullName": "Brute_Melee.Psionic_Melee.Concentration",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 1
+              },
+              "probability": 1,
+              "duration": 10,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "toWho": "self",
+              "powerFullName": "Brute_Melee.Psionic_Melee.Concentration",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 1
+              },
+              "probability": 1,
+              "duration": 10,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "toWho": "self",
+              "powerFullName": "Brute_Melee.Psionic_Melee.Concentration",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 1
+              },
+              "probability": 1,
+              "duration": 10,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "toWho": "self",
+              "powerFullName": "Brute_Melee.Psionic_Melee.Concentration",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 1
+              },
+              "probability": 1,
+              "duration": 10,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "toWho": "self",
+              "powerFullName": "Brute_Melee.Psionic_Melee.Concentration",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 1
+              },
+              "probability": 1,
+              "duration": 10,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "toWho": "self",
+              "powerFullName": "Brute_Melee.Psionic_Melee.Concentration",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pve": 1
+              },
+              "probability": 1,
+              "duration": 10,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "toWho": "self",
+              "powerFullName": "Brute_Melee.Psionic_Melee.Concentration",
+              "damageType": "Psionic"
+            }
+          ]
+        }
+      ],
+      "allowedEnhancements": [
+        "ToHit_Buff",
+        "Endurance_Discount",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Psionic_Melee.Concentration",
+      "archetypeOrder": "primary",
+      "powerIndex": 3,
+      "castTimeReal": 1.17,
+      "toggleCost": 5.2,
+      "fullName": "Brute_Primary_Psionic_Melee_Concentration",
+      "displayName": "Concentration",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "target": 1,
+      "targetLoS": true,
+      "endCost": 5.2,
+      "rechargeTime": 90,
+      "baseRechargeTime": 90,
+      "effectArea": 1,
+      "numAllowed": 1,
+      "description": {
+        "short": "Self +DMG, +To Hit",
+        "long": "Greatly boosts your attacks for a few seconds. Slightly increases chance to hit. Recharge: Long"
+      },
+      "setTypes": [
+        25
+      ],
+      "level": 6,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 1.31999993,
+      "slottable": true,
+      "aoeModifier": 1,
+      "powerType": "Toggle"
+    },
+    {
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 1
+              },
+              "probability": 0.19045,
+              "effectType": "GrantPower",
+              "toWho": "self",
+              "powerFullName": "Brute_Melee.Psionic_Melee.Psi_Blade_Sweep"
+            },
+            {
+              "mag": {
+                "pvp": 3
+              },
+              "probability": 0.33,
+              "duration": 2,
+              "effectType": "Mez",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "attribType": 1,
+              "powerFullName": "Brute_Melee.Psionic_Melee.Psi_Blade_Sweep",
+              "mezType": "Stun"
+            },
+            {
+              "mag": {
+                "pvp": 0.05
+              },
+              "probability": 1,
+              "variableModified": true,
+              "effectType": "Rage",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Melee.Psionic_Melee.Psi_Blade_Sweep"
+            }
+          ]
+        },
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 20.0196724,
+                "pvp": 29.468956
+              },
+              "probability": 1,
+              "effectType": "Damage",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Brute_Melee.Psionic_Melee.Psi_Blade_Sweep",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 13.1240072,
+                "pvp": 88.40632
+              },
+              "probability": 1,
+              "effectType": "Damage",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Brute_Melee.Psionic_Melee.Psi_Blade_Sweep",
+              "damageType": "Psionic"
+            }
+          ]
+        },
+        {
+          "effectType": "Slow",
+          "values": [
+            {
+              "etModifies": "RechargeTime",
+              "mag": {
+                "pve": -0.15
+              },
+              "probability": 1,
+              "duration": 6,
+              "effectType": "Enhancement",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Brute_Melee.Psionic_Melee.Psi_Blade_Sweep"
+            }
+          ]
+        },
+        {
+          "effectType": "Stun",
+          "values": [
+            {
+              "mag": {
+                "pve": 3
+              },
+              "probability": 0.33,
+              "duration": 5.96,
+              "effectType": "Mez",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "attribType": 1,
+              "powerFullName": "Brute_Melee.Psionic_Melee.Psi_Blade_Sweep",
+              "mezType": "Stun"
+            }
+          ]
+        },
+        {
+          "effectType": "InherentTaunt",
+          "values": [
+            {
+              "mag": {
+                "pve": 4
+              },
+              "cancelOnMiss": true,
+              "probability": 1,
+              "duration": 13.6,
+              "effectType": "Mez",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "specialCase": 14,
+              "toWho": "target",
+              "attribType": 1,
+              "powerFullName": "Brute_Melee.Psionic_Melee.Psi_Blade_Sweep",
+              "requiresToHitCheck": true,
+              "mezType": "Taunt"
+            }
+          ]
+        },
+        {
+          "effectType": "FieryEmbrace",
+          "values": [
+            {
+              "mag": {
+                "pve": 36.035408
+              },
+              "effectType": "Damage",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Brute_Melee.Psionic_Melee.Psi_Blade_Sweep",
+              "damageType": "Fire"
+            }
+          ]
+        }
+      ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Recharge",
+        "Stun",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Psionic_Melee.Psi_Blade_Sweep",
+      "archetypeOrder": "primary",
+      "powerIndex": 4,
+      "castTimeReal": 1.77,
+      "toggleCost": 8.528,
+      "fullName": "Brute_Primary_Psionic_Melee_Psi_Blade_Sweep",
+      "displayName": "Psi Blade Sweep",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "attackTypes": 529,
+      "target": 2048,
+      "targetLoS": true,
+      "range": 7,
+      "endCost": 8.528,
+      "rechargeTime": 8,
+      "baseRechargeTime": 8,
+      "effectArea": 3,
+      "radius": 7,
+      "arc": 69,
+      "maxTargets": 5,
+      "numAllowed": 1,
+      "description": {
+        "short": "Melee (Cone), High DMG(Psionic/Lethal), Foe Disorient, -Rech; Self +Insight",
+        "long": "You project a Psi Blade and swing it in a broad arc hitting all foes within a wide cone in front of you for high Psionic and Lethal damage. Foes struck by this power have their recharge reduced and have chance to become disoriented for a short time. Psi Blade Sweep has a high chance of granting you Insight. While you have Insight, Psi Blade Sweep will deal additional minor psionic damage over time and has a greater chance to disorient foes. Damage: High, Recharge: Moderate"
+      },
+      "setTypes": [
+        4,
+        11,
+        24,
+        34,
+        44
+      ],
+      "level": 8,
+      "ignoreEnh": [
+        13
+      ],
+      "ignore_Buff": [],
+      "hasGrantPowerEffect": true,
+      "castTime": 1.98,
+      "slottable": true,
+      "aoeModifier": 1.30309331
+    },
+    {
+      "effects": [
+        {
+          "effectType": "Taunt",
+          "values": [
+            {
+              "mag": {
+                "pve": 4,
+                "pvp": 4
+              },
+              "probability": 1,
+              "duration": 20.5999985,
+              "effectType": "Mez",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "attribType": 1,
+              "powerFullName": "Brute_Melee.Psionic_Melee.Taunt",
+              "mezType": "Taunt"
+            }
+          ]
+        },
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "etModifies": "Range",
+              "mag": {
+                "pve": -0.75
+              },
+              "probability": 1,
+              "duration": 12,
+              "effectType": "Enhancement",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Brute_Melee.Psionic_Melee.Taunt"
+            },
+            {
+              "mag": {
+                "pvp": 1
+              },
+              "probability": 1,
+              "effectType": "Null",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Brute_Melee.Psionic_Melee.Taunt",
+              "requiresToHitCheck": true
+            }
+          ]
+        }
+      ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Range",
+        "Recharge",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Psionic_Melee.Taunt",
+      "archetypeOrder": "primary",
+      "powerIndex": 5,
+      "castTimeReal": 1.67,
+      "fullName": "Brute_Primary_Psionic_Melee_Taunt",
+      "displayName": "Taunt",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "attackTypes": 2,
+      "target": 2048,
+      "targetLoS": true,
+      "range": 70,
+      "rechargeTime": 10,
+      "baseRechargeTime": 10,
+      "effectArea": 2,
+      "radius": 15,
+      "maxTargets": 5,
+      "numAllowed": 1,
+      "description": {
+        "short": "Ranged (Targeted AoE), Foe Taunt",
+        "long": "Taunt foes to attack you. Useful to pull enemies off allies and keep them attacking you to raise your Fury. A To Hit check is required to Taunt enemy players, but is not needed against critter targets. Recharge: Fast"
+      },
+      "setTypes": [
+        24
+      ],
+      "level": 12,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 1.848,
+      "slottable": true,
+      "aoeModifier": 3.25
+    },
+    {
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 1
+              },
+              "probability": 1,
+              "effectType": "GrantPower",
+              "toWho": "target",
+              "powerFullName": "Brute_Melee.Psionic_Melee.Boggle"
+            },
+            {
+              "mag": {
+                "pve": 3,
+                "pvp": 3
+              },
+              "probability": 1,
+              "duration": 15,
+              "effectType": "Mez",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "attribType": 1,
+              "powerFullName": "Brute_Melee.Psionic_Melee.Boggle",
+              "mezType": "Confuse"
+            }
+          ]
+        }
+      ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Confuse",
+        "Endurance_Discount",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Psionic_Melee.Boggle",
+      "archetypeOrder": "primary",
+      "powerIndex": 6,
+      "castTimeReal": 2,
+      "toggleCost": 7.8,
+      "fullName": "Brute_Primary_Psionic_Melee_Boggle",
+      "displayName": "Boggle",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "attackTypes": 512,
+      "target": 2048,
+      "targetLoS": true,
+      "range": 40,
+      "endCost": 7.8,
+      "rechargeTime": 20,
+      "baseRechargeTime": 20,
+      "effectArea": 1,
+      "aIReport": 1,
+      "numAllowed": 1,
+      "description": {
+        "short": "Short Ranged, Target Confuse, +Special",
+        "long": "You flood your foe's mind with doubt causing them to become confused for a brief time. Confused foes will attack their allies.  Boggle will also place the \"\"Boggled\"\" effect on your target for a short time.  Attacking a Boggled target will increase your chance of gaining Insight.  Recharge: Long"
+      },
+      "setTypes": [
+        16
+      ],
+      "level": 18,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "hasGrantPowerEffect": true,
+      "castTime": 2.244,
+      "slottable": true,
+      "aoeModifier": 1
+    },
+    {
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 1
+              },
+              "probability": 1,
+              "effectType": "RevokePower",
+              "toWho": "self",
+              "powerFullName": "Brute_Melee.Psionic_Melee.Greater_Psi_Blade"
+            },
+            {
+              "mag": {
+                "pvp": 3
+              },
+              "probability": 1,
+              "duration": 2,
+              "effectType": "Mez",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "attribType": 1,
+              "powerFullName": "Brute_Melee.Psionic_Melee.Greater_Psi_Blade",
+              "mezType": "Hold"
+            },
+            {
+              "mag": {
+                "pvp": 0.05
+              },
+              "probability": 1,
+              "variableModified": true,
+              "effectType": "Rage",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Melee.Psionic_Melee.Greater_Psi_Blade"
+            }
+          ]
+        },
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 38.3710365,
+                "pvp": 51.7096977
+              },
+              "probability": 1,
+              "effectType": "Damage",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Brute_Melee.Psionic_Melee.Greater_Psi_Blade",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 74.8652344,
+                "pvp": 103.419395
+              },
+              "probability": 1,
+              "effectType": "Damage",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Brute_Melee.Psionic_Melee.Greater_Psi_Blade",
+              "damageType": "Psionic"
+            }
+          ]
+        },
+        {
+          "effectType": "Slow",
+          "values": [
+            {
+              "etModifies": "RechargeTime",
+              "mag": {
+                "pve": -0.2
+              },
+              "probability": 1,
+              "duration": 6,
+              "effectType": "Enhancement",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Brute_Melee.Psionic_Melee.Greater_Psi_Blade"
+            }
+          ]
+        },
+        {
+          "effectType": "Stun",
+          "values": [
+            {
+              "mag": {
+                "pve": 3
+              },
+              "probability": 1,
+              "duration": 9.536,
+              "effectType": "Mez",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "attribType": 1,
+              "powerFullName": "Brute_Melee.Psionic_Melee.Greater_Psi_Blade",
+              "mezType": "Hold"
+            }
+          ]
+        },
+        {
+          "effectType": "InherentTaunt",
+          "values": [
+            {
+              "mag": {
+                "pve": 4
+              },
+              "cancelOnMiss": true,
+              "probability": 1,
+              "duration": 13.6,
+              "effectType": "Mez",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "specialCase": 14,
+              "toWho": "target",
+              "attribType": 1,
+              "powerFullName": "Brute_Melee.Psionic_Melee.Greater_Psi_Blade",
+              "requiresToHitCheck": true,
+              "mezType": "Taunt"
+            }
+          ]
+        },
+        {
+          "effectType": "FieryEmbrace",
+          "values": [
+            {
+              "mag": {
+                "pve": 67.3784256
+              },
+              "effectType": "Damage",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Brute_Melee.Psionic_Melee.Greater_Psi_Blade",
+              "damageType": "Fire"
+            }
+          ]
+        }
+      ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Hold",
+        "Recharge",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Psionic_Melee.Greater_Psi_Blade",
+      "archetypeOrder": "primary",
+      "powerIndex": 7,
+      "castTimeReal": 2.5,
+      "toggleCost": 14.352,
+      "fullName": "Brute_Primary_Psionic_Melee_Greater_Psi_Blade",
+      "displayName": "Greater Psi Blade",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1.2,
+      "accuracyMult": 1.2,
+      "attackTypes": 529,
+      "target": 2048,
+      "targetLoS": true,
+      "range": 7,
+      "endCost": 14.352,
+      "rechargeTime": 15,
+      "baseRechargeTime": 15,
+      "effectArea": 1,
+      "numAllowed": 1,
+      "description": {
+        "short": "Melee, Superior DMG(Psionic/Lethal), Foe -Rech, Hold; Self -Insight",
+        "long": "You focus and create a more powerful Psi Blade projection before slashing at your foe to deal superior Psionic and Lethal damage. The affected foe will have their recharge reduced moderately and be left held for a short time. Greater Psi Blade will cause additional damage and cause this power's hold to last for a longer duration if you have Insight. Using this power removes Insight. Damage: Superior, Recharge: Long"
+      },
+      "setTypes": [
+        1,
+        10,
+        24,
+        34,
+        44
+      ],
+      "level": 26,
+      "ignoreEnh": [
+        13
+      ],
+      "ignore_Buff": [],
+      "castTime": 2.63999987,
+      "slottable": true,
+      "aoeModifier": 1
+    },
+    {
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 1
+              },
+              "probability": 0.2,
+              "effectType": "GrantPower",
+              "toWho": "self",
+              "powerFullName": "Brute_Melee.Psionic_Melee.Mass_Levitate"
+            },
+            {
+              "mag": {
+                "pvp": 0.05
+              },
+              "probability": 1,
+              "variableModified": true,
+              "effectType": "Rage",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Melee.Psionic_Melee.Mass_Levitate"
+            }
+          ]
+        },
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 78.96648,
+                "pvp": 88.75221
+              },
+              "probability": 1,
+              "effectType": "Damage",
+              "delayedTime": 2,
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Brute_Melee.Psionic_Melee.Mass_Levitate",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 7.89664841
+              },
+              "cancelOnMiss": true,
+              "probability": 0.8,
+              "duration": 3.1,
+              "effectType": "Damage",
+              "ticks": 4,
+              "delayedTime": 2.25,
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Brute_Melee.Psionic_Melee.Mass_Levitate",
+              "damageType": "Psionic"
+            }
+          ]
+        },
+        {
+          "effectType": "Knockback",
+          "values": [
+            {
+              "mag": {
+                "pve": 4.1542,
+                "pvp": 4.1542
+              },
+              "probability": 1,
+              "effectType": "Mez",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Brute_Melee.Psionic_Melee.Mass_Levitate",
+              "mezType": "Knockup"
+            }
+          ]
+        },
+        {
+          "effectType": "InherentTaunt",
+          "values": [
+            {
+              "mag": {
+                "pve": 4
+              },
+              "cancelOnMiss": true,
+              "probability": 1,
+              "duration": 13.6,
+              "effectType": "Mez",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "specialCase": 14,
+              "toWho": "target",
+              "attribType": 1,
+              "powerFullName": "Brute_Melee.Psionic_Melee.Mass_Levitate",
+              "requiresToHitCheck": true,
+              "mezType": "Taunt"
+            }
+          ]
+        },
+        {
+          "effectType": "FieryEmbrace",
+          "values": [
+            {
+              "mag": {
+                "pve": 35.5349159
+              },
+              "effectType": "Damage",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Brute_Melee.Psionic_Melee.Mass_Levitate",
+              "damageType": "Fire"
+            }
+          ]
+        }
+      ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Knockback",
+        "Recharge",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Psionic_Melee.Mass_Levitate",
+      "archetypeOrder": "primary",
+      "powerIndex": 8,
+      "castTimeReal": 2.5,
+      "toggleCost": 18.512,
+      "fullName": "Brute_Primary_Psionic_Melee_Mass_Levitate",
+      "displayName": "Mass Levitate",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "attackTypes": 12,
+      "target": 1,
+      "targetLoS": true,
+      "endCost": 18.512,
+      "rechargeTime": 20,
+      "baseRechargeTime": 20,
+      "effectArea": 2,
+      "radius": 10,
+      "maxTargets": 10,
+      "numAllowed": 1,
+      "description": {
+        "short": "PBAoE, High DMG(Smash), Foe Knock Up, +Insight",
+        "long": "You build up a large amount of telekinetic energy and release it causing nearby foes to be flung into the air. Affected foes will suffer high Smashing damage. If the caster has Insight when this power is used Mass Levitate will also cause a moderate amount of Psionic damage over time. Damage: High, Recharge: Long"
+      },
+      "setTypes": [
+        4,
+        23,
+        24,
+        34,
+        44
+      ],
+      "level": 32,
+      "ignoreEnh": [
+        13
+      ],
+      "ignore_Buff": [],
+      "hasGrantPowerEffect": true,
+      "castTime": 2.63999987,
+      "slottable": true,
+      "aoeModifier": 2.5
+    }
+  ]
+}

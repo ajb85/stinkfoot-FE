@@ -1,0 +1,23 @@
+@import "styles/variables.scss";
+
+.SlideDropdown {
+  width: 95%;
+  height: 0px;
+  overflow: hidden;
+  margin: 0 auto;
+
+  position: relative;
+  top: $lh * 1;
+
+  background-color: $accent2;
+  transition: height 0.25s;
+
+  &.toggled {
+    height: $lh * 12;
+  }
+
+  .content {
+    height: fit-content;
+    padding: $lh/2 5px;
+  }
+}

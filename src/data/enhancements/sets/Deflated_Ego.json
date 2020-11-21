@@ -1,0 +1,86 @@
+{
+  "fullName": "IOSet.Deflated_Ego",
+  "enhancements": [
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Deflated_Ego_A.Attuned_Deflated_Ego_A",
+      "displayName": "To Hit Debuff",
+      "description": {
+        "short": "+To Hit Debuff",
+        "long": "Enhances the to hit debuff potential of a power by {Boost.Attrib.ToHitDebuff.Scale}%."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.255
+            }
+          },
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Deflated_Ego_B.Attuned_Deflated_Ego_B",
+      "displayName": "To Hit Debuff/Recharge",
+      "description": {
+        "short": "+To Hit Debuff, +Rech",
+        "long": "Enhances the to hit debuff potential of a power by {Boost.Attrib.ToHitDebuff.Scale}% and reduces the recharge time by {Boost.Attrib.Recharge.Scale}%."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Recharge",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.159375
+            }
+          },
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Deflated_Ego_C.Attuned_Deflated_Ego_C",
+      "displayName": "Chance for Recovery Debuff",
+      "description": {
+        "short": "Chance for -Recovery",
+        "long": "Gives a chance to reduce your foes recovery by {Boost.Attrib.Recovery.Scale}%.  This effect will trigger roughly 3.5 times per minute."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": -0.25
+            }
+          },
+          "stat": "Chance for Recovery Debuff",
+          "procsPerMinute": 3.5,
+          "cancelOnMiss": true,
+          "resistible": true,
+          "toWho": "all"
+        }
+      ]
+    }
+  ],
+  "levels": {
+    "min": 10,
+    "max": 20
+  },
+  "setType": 26,
+  "setTypeName": "To Hit Debuff",
+  "displayName": "Deflated Ego",
+  "imageName": "sDeflatedEgo.png"
+}

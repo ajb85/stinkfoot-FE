@@ -1,0 +1,1398 @@
+{
+  "fullName": "Brute_Secondary_Super_Reflexes",
+  "archetypeOrder": "secondary",
+  "description": "Your Super Reflexes and acute senses allow you to react deftly to avoid danger.  Regardless of what comes at you, Super Reflexes simply allow you to avoid the attack. The type of weapon or attack used against you is irrelevant. So swords, bullets, fire, energy, even Psionic Attacks can be avoided. Super Reflexes focuses on different techniques.  Avoiding melee attacks is different than avoiding ranged attacks or even area-of-effect attacks.  Your weakness is your opponents accuracy.",
+  "imageName": "SuperReflexes.png",
+  "displayName": "Super Reflexes",
+  "powers": [
+    {
+      "effects": [
+        {
+          "effectType": "Buff_Def",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.1295,
+                "pvp": 0.1295
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Defense",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Super_Reflexes.Focused_Fighting",
+              "damageType": "Melee"
+            }
+          ]
+        },
+        {
+          "effectType": "Res_Boolean",
+          "values": [
+            {
+              "mag": {
+                "pve": -8.304
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Mez",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Super_Reflexes.Focused_Fighting",
+              "mezType": "Confuse"
+            },
+            {
+              "mag": {
+                "pvp": 0.8304
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "MezResist",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Super_Reflexes.Focused_Fighting",
+              "mezType": "Confuse"
+            },
+            {
+              "etModifies": "Defense",
+              "mag": {
+                "pve": 0.11072
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "ResEffect",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Super_Reflexes.Focused_Fighting"
+            }
+          ]
+        },
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pvp": 0.1
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Elusivity",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Super_Reflexes.Focused_Fighting",
+              "damageType": "Melee"
+            }
+          ]
+        }
+      ],
+      "allowedEnhancements": [
+        "Defense_Buff",
+        "Endurance_Discount",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Defense.Super_Reflexes.Focused_Fighting",
+      "archetypeOrder": "secondary",
+      "powerIndex": 0,
+      "castTimeReal": 0.67,
+      "toggleCost": 0.26,
+      "fullName": "Brute_Secondary_Super_Reflexes_Focused_Fighting",
+      "displayName": "Focused Fighting",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "target": 1,
+      "targetLoS": true,
+      "endCost": 0.13,
+      "rechargeTime": 4,
+      "baseRechargeTime": 4,
+      "activatePeriod": 0.5,
+      "effectArea": 1,
+      "numAllowed": 1,
+      "description": {
+        "short": "Toggle: Self +DEF(Melee), Res(Confuse, DeBuff DEF)",
+        "long": "You become more evasive to melee attacks while you have Focused Fighting activated. This will increase your Defense versus melee as long as it is active. Your Focus also offers you resistance to Confuse effects and DeBuffs to Defense. Focused Fighting also adds an Elusivity defense bonus to Melee Attacks in PVP zones.  Recharge: Fast"
+      },
+      "setTypes": [
+        7
+      ],
+      "alwaysToggle": true,
+      "level": 1,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 0.924,
+      "slottable": true,
+      "aoeModifier": 1,
+      "powerType": "Toggle"
+    },
+    {
+      "effects": [
+        {
+          "effectType": "Buff_Def",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.1295,
+                "pvp": 0.1295
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Defense",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Super_Reflexes.Focused_Senses",
+              "damageType": "Ranged"
+            },
+            {
+              "mag": {
+                "pvp": 0.1295
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Defense",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Super_Reflexes.Focused_Senses",
+              "damageType": "Psionic"
+            }
+          ]
+        },
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "etModifies": "PerceptionRadius",
+              "mag": {
+                "pve": 0.6
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "ResEffect",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Super_Reflexes.Focused_Senses"
+            },
+            {
+              "mag": {
+                "pve": 0.6
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "PerceptionRadius",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Super_Reflexes.Focused_Senses"
+            },
+            {
+              "mag": {
+                "pvp": 0.1
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Elusivity",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Super_Reflexes.Focused_Senses",
+              "damageType": "Ranged"
+            },
+            {
+              "mag": {
+                "pvp": 0.1
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Elusivity",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Super_Reflexes.Focused_Senses",
+              "damageType": "Psionic"
+            }
+          ]
+        },
+        {
+          "effectType": "Res_Boolean",
+          "values": [
+            {
+              "etModifies": "Defense",
+              "mag": {
+                "pve": 0.11072
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "ResEffect",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Super_Reflexes.Focused_Senses"
+            }
+          ]
+        }
+      ],
+      "allowedEnhancements": [
+        "Defense_Buff",
+        "Endurance_Discount",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Defense.Super_Reflexes.Focused_Senses",
+      "archetypeOrder": "secondary",
+      "powerIndex": 1,
+      "castTimeReal": 2.03,
+      "toggleCost": 0.26,
+      "fullName": "Brute_Secondary_Super_Reflexes_Focused_Senses",
+      "displayName": "Focused Senses",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "target": 1,
+      "targetLoS": true,
+      "endCost": 0.13,
+      "rechargeTime": 4,
+      "baseRechargeTime": 4,
+      "activatePeriod": 0.5,
+      "effectArea": 1,
+      "numAllowed": 1,
+      "description": {
+        "short": "Toggle: Self +DEF(Ranged), +Perception,  Res(DeBuff DEF)",
+        "long": "You become more evasive against ranged attacks while you have Focused Senses activated. This will increase your Defense versus ranged attacks as long as it is active. Your Improved Senses also allow you to perceive stealthy foes as well as resist Defense DeBuffs. Focused Senses also adds Psionic Defense and an Elusivity defense bonus to Psionic and Ranged Attacks in PVP zones.  Recharge: Fast"
+      },
+      "setTypes": [
+        7
+      ],
+      "alwaysToggle": true,
+      "level": 2,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 2.244,
+      "slottable": true,
+      "aoeModifier": 1,
+      "powerType": "Toggle"
+    },
+    {
+      "effects": [
+        {
+          "effectType": "Buff_Def",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.0525000021
+              },
+              "probability": 1,
+              "duration": 2.5,
+              "effectType": "Defense",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Super_Reflexes.Agile",
+              "damageType": "Ranged"
+            }
+          ]
+        },
+        {
+          "effectType": "Res_Boolean",
+          "values": [
+            {
+              "etModifies": "Defense",
+              "mag": {
+                "pve": 0.05536
+              },
+              "probability": 1,
+              "duration": 2.5,
+              "effectType": "ResEffect",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Super_Reflexes.Agile"
+            }
+          ]
+        },
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {},
+              "probability": 1,
+              "effectType": "Resistance",
+              "toWho": "self",
+              "attribType": 2,
+              "powerFullName": "Brute_Defense.Super_Reflexes.Agile",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {},
+              "probability": 1,
+              "effectType": "Resistance",
+              "toWho": "self",
+              "attribType": 2,
+              "powerFullName": "Brute_Defense.Super_Reflexes.Agile",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {},
+              "probability": 1,
+              "effectType": "Resistance",
+              "toWho": "self",
+              "attribType": 2,
+              "powerFullName": "Brute_Defense.Super_Reflexes.Agile",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {},
+              "probability": 1,
+              "effectType": "Resistance",
+              "toWho": "self",
+              "attribType": 2,
+              "powerFullName": "Brute_Defense.Super_Reflexes.Agile",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {},
+              "probability": 1,
+              "effectType": "Resistance",
+              "toWho": "self",
+              "attribType": 2,
+              "powerFullName": "Brute_Defense.Super_Reflexes.Agile",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {},
+              "probability": 1,
+              "effectType": "Resistance",
+              "toWho": "self",
+              "attribType": 2,
+              "powerFullName": "Brute_Defense.Super_Reflexes.Agile",
+              "damageType": "Negative"
+            }
+          ]
+        }
+      ],
+      "allowedEnhancements": [
+        "Defense_Buff"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Defense.Super_Reflexes.Agile",
+      "archetypeOrder": "secondary",
+      "powerIndex": 2,
+      "fullName": "Brute_Secondary_Super_Reflexes_Agile",
+      "displayName": "Agile",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "target": 1,
+      "targetLoS": true,
+      "activatePeriod": 2,
+      "effectArea": 1,
+      "numAllowed": 1,
+      "description": {
+        "short": "Auto: Self +DEF(Ranged), Res(DeBuff DEF), Res(All DMG, Special)",
+        "long": "You become innately more Agile, and are able to naturally avoid some ranged attacks and resist Defense DeBuffs. Your Agility also grants you minor Damage Resistance to all damage except Toxic and Psionic.  This Damage Resistance is only available as you lose Health but it improves as your HP declines. This power is always on, and will permanently increase your Defense versus ranged attacks."
+      },
+      "setTypes": [
+        7
+      ],
+      "level": 4,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 0.132,
+      "slottable": true,
+      "aoeModifier": 1,
+      "powerType": "Auto"
+    },
+    {
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 100
+              },
+              "probability": 1,
+              "duration": 120,
+              "variableModified": true,
+              "effectType": "MezResist",
+              "stacking": 1,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Super_Reflexes.Practiced_Brawler",
+              "mezType": "Knockback"
+            },
+            {
+              "mag": {
+                "pve": 100
+              },
+              "probability": 1,
+              "duration": 120,
+              "variableModified": true,
+              "effectType": "MezResist",
+              "stacking": 1,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Super_Reflexes.Practiced_Brawler",
+              "mezType": "Knockup"
+            },
+            {
+              "mag": {
+                "pve": -10
+              },
+              "probability": 1,
+              "duration": 120,
+              "variableModified": true,
+              "effectType": "Mez",
+              "stacking": 1,
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Super_Reflexes.Practiced_Brawler",
+              "mezType": "Knockback"
+            },
+            {
+              "mag": {
+                "pve": -10
+              },
+              "probability": 1,
+              "duration": 120,
+              "variableModified": true,
+              "effectType": "Mez",
+              "stacking": 1,
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Super_Reflexes.Practiced_Brawler",
+              "mezType": "Knockup"
+            },
+            {
+              "etModifies": "Defense",
+              "mag": {
+                "pvp": 0.3
+              },
+              "probability": 1,
+              "duration": 120,
+              "effectType": "ResEffect",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Super_Reflexes.Practiced_Brawler"
+            },
+            {
+              "etModifies": "ToHit",
+              "mag": {
+                "pvp": 0.3
+              },
+              "probability": 1,
+              "duration": 120,
+              "effectType": "ResEffect",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Super_Reflexes.Practiced_Brawler"
+            },
+            {
+              "etModifies": "RechargeTime",
+              "mag": {
+                "pvp": 0.3
+              },
+              "probability": 1,
+              "duration": 120,
+              "effectType": "ResEffect",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Super_Reflexes.Practiced_Brawler"
+            },
+            {
+              "etModifies": "SpeedRunning",
+              "mag": {
+                "pvp": 0.5
+              },
+              "probability": 1,
+              "duration": 120,
+              "effectType": "ResEffect",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Super_Reflexes.Practiced_Brawler"
+            },
+            {
+              "etModifies": "SpeedFlying",
+              "mag": {
+                "pvp": 0.5
+              },
+              "probability": 1,
+              "duration": 120,
+              "effectType": "ResEffect",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Super_Reflexes.Practiced_Brawler"
+            },
+            {
+              "etModifies": "JumpHeight",
+              "mag": {
+                "pvp": 0.5
+              },
+              "probability": 1,
+              "duration": 120,
+              "effectType": "ResEffect",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Super_Reflexes.Practiced_Brawler"
+            },
+            {
+              "etModifies": "SpeedJumping",
+              "mag": {
+                "pvp": 0.5
+              },
+              "probability": 1,
+              "duration": 120,
+              "effectType": "ResEffect",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Super_Reflexes.Practiced_Brawler"
+            }
+          ]
+        },
+        {
+          "effectType": "Res_Boolean",
+          "values": [
+            {
+              "mag": {
+                "pve": -8.304
+              },
+              "probability": 1,
+              "duration": 120,
+              "variableModified": true,
+              "effectType": "Mez",
+              "stacking": 1,
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Super_Reflexes.Practiced_Brawler",
+              "mezType": "Stun"
+            },
+            {
+              "mag": {
+                "pve": -8.304
+              },
+              "probability": 1,
+              "duration": 120,
+              "variableModified": true,
+              "effectType": "Mez",
+              "stacking": 1,
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Super_Reflexes.Practiced_Brawler",
+              "mezType": "Hold"
+            },
+            {
+              "mag": {
+                "pve": -8.304
+              },
+              "probability": 1,
+              "duration": 120,
+              "variableModified": true,
+              "effectType": "Mez",
+              "stacking": 1,
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Super_Reflexes.Practiced_Brawler",
+              "mezType": "Sleep"
+            },
+            {
+              "mag": {
+                "pve": -8.304
+              },
+              "probability": 1,
+              "duration": 120,
+              "variableModified": true,
+              "effectType": "Mez",
+              "stacking": 1,
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Super_Reflexes.Practiced_Brawler",
+              "mezType": "Immob"
+            },
+            {
+              "mag": {
+                "pvp": 0.8304
+              },
+              "probability": 1,
+              "duration": 120,
+              "variableModified": true,
+              "effectType": "MezResist",
+              "stacking": 1,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Super_Reflexes.Practiced_Brawler",
+              "mezType": "Stun"
+            },
+            {
+              "mag": {
+                "pvp": 0.8304
+              },
+              "probability": 1,
+              "duration": 120,
+              "variableModified": true,
+              "effectType": "MezResist",
+              "stacking": 1,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Super_Reflexes.Practiced_Brawler",
+              "mezType": "Hold"
+            },
+            {
+              "mag": {
+                "pvp": 0.8304
+              },
+              "probability": 1,
+              "duration": 120,
+              "variableModified": true,
+              "effectType": "MezResist",
+              "stacking": 1,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Super_Reflexes.Practiced_Brawler",
+              "mezType": "Sleep"
+            },
+            {
+              "mag": {
+                "pvp": 0.8304
+              },
+              "probability": 1,
+              "duration": 120,
+              "variableModified": true,
+              "effectType": "MezResist",
+              "stacking": 1,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Super_Reflexes.Practiced_Brawler",
+              "mezType": "Immob"
+            }
+          ]
+        }
+      ],
+      "allowedEnhancements": [
+        "Endurance_Discount",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Defense.Super_Reflexes.Practiced_Brawler",
+      "archetypeOrder": "secondary",
+      "powerIndex": 3,
+      "castTimeReal": 1.53,
+      "toggleCost": 10.4,
+      "fullName": "Brute_Secondary_Super_Reflexes_Practiced_Brawler",
+      "displayName": "Practiced Brawler",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "target": 1,
+      "targetLoS": true,
+      "endCost": 10.4,
+      "rechargeTime": 200,
+      "baseRechargeTime": 200,
+      "effectArea": 1,
+      "numAllowed": 1,
+      "description": {
+        "short": "Self +Res(Knockback, Disorient, Hold, Sleep, Immobilize)",
+        "long": "Your training has allowed you to become a Practiced Brawler, tuning you into a perfect fighting machine. You gain a resistance to Knockback, Disorient, Hold, Sleep, and Immobilization powers for a short duration. Recharge: Very Long"
+      },
+      "setTypes": [],
+      "clickBuff": true,
+      "level": 10,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 1.716,
+      "slottable": true,
+      "aoeModifier": 1
+    },
+    {
+      "effects": [
+        {
+          "effectType": "Buff_Def",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.0525000021
+              },
+              "probability": 1,
+              "duration": 2.5,
+              "effectType": "Defense",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Super_Reflexes.Dodge",
+              "damageType": "Melee"
+            }
+          ]
+        },
+        {
+          "effectType": "Res_Boolean",
+          "values": [
+            {
+              "etModifies": "Defense",
+              "mag": {
+                "pve": 0.05536
+              },
+              "probability": 1,
+              "duration": 2.5,
+              "effectType": "ResEffect",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Super_Reflexes.Dodge"
+            }
+          ]
+        },
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {},
+              "probability": 1,
+              "effectType": "Resistance",
+              "toWho": "self",
+              "attribType": 2,
+              "powerFullName": "Brute_Defense.Super_Reflexes.Dodge",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {},
+              "probability": 1,
+              "effectType": "Resistance",
+              "toWho": "self",
+              "attribType": 2,
+              "powerFullName": "Brute_Defense.Super_Reflexes.Dodge",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {},
+              "probability": 1,
+              "effectType": "Resistance",
+              "toWho": "self",
+              "attribType": 2,
+              "powerFullName": "Brute_Defense.Super_Reflexes.Dodge",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {},
+              "probability": 1,
+              "effectType": "Resistance",
+              "toWho": "self",
+              "attribType": 2,
+              "powerFullName": "Brute_Defense.Super_Reflexes.Dodge",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {},
+              "probability": 1,
+              "effectType": "Resistance",
+              "toWho": "self",
+              "attribType": 2,
+              "powerFullName": "Brute_Defense.Super_Reflexes.Dodge",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {},
+              "probability": 1,
+              "effectType": "Resistance",
+              "toWho": "self",
+              "attribType": 2,
+              "powerFullName": "Brute_Defense.Super_Reflexes.Dodge",
+              "damageType": "Negative"
+            }
+          ]
+        }
+      ],
+      "allowedEnhancements": [
+        "Defense_Buff"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Defense.Super_Reflexes.Dodge",
+      "archetypeOrder": "secondary",
+      "powerIndex": 4,
+      "fullName": "Brute_Secondary_Super_Reflexes_Dodge",
+      "displayName": "Dodge",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "target": 1,
+      "targetLoS": true,
+      "activatePeriod": 2,
+      "effectArea": 1,
+      "numAllowed": 1,
+      "description": {
+        "short": "Auto: Self +DEF(Melee), Res(DeBuff DEF), Res(DMG, Special)",
+        "long": "You have the ability to innately Dodge some melee attacks and you resist Defense DeBuffs. Dodge also grants you minor Damage Resistance to all damage except Toxic and Psionic.  This Damage Resistance is only available as you lose Health but it improves as your HP declines. This power is always on, and will permanently increase your Defense versus melee attacks."
+      },
+      "setTypes": [
+        7
+      ],
+      "level": 16,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 0.132,
+      "slottable": true,
+      "aoeModifier": 1,
+      "powerType": "Auto"
+    },
+    {
+      "effects": [
+        {
+          "effectType": "Buff_Def",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.1295,
+                "pvp": 0.1295
+              },
+              "probability": 1,
+              "duration": 2.25,
+              "effectType": "Defense",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Super_Reflexes.Evasion",
+              "damageType": "AoE"
+            }
+          ]
+        },
+        {
+          "effectType": "Res_Boolean",
+          "values": [
+            {
+              "etModifies": "Defense",
+              "mag": {
+                "pve": 0.11072
+              },
+              "probability": 1,
+              "duration": 2.25,
+              "effectType": "ResEffect",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Super_Reflexes.Evasion"
+            }
+          ]
+        },
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pvp": 0.1
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Elusivity",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Super_Reflexes.Evasion",
+              "damageType": "AoE"
+            }
+          ]
+        },
+        {
+          "effectType": "InherentTaunt",
+          "values": [
+            {
+              "mag": {
+                "pve": 4
+              },
+              "cancelOnMiss": true,
+              "probability": 1,
+              "duration": 13.6,
+              "effectType": "Mez",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "specialCase": 14,
+              "toWho": "all",
+              "attribType": 1,
+              "powerFullName": "Brute_Defense.Super_Reflexes.Evasion",
+              "requiresToHitCheck": true,
+              "mezType": "Taunt"
+            }
+          ]
+        }
+      ],
+      "allowedEnhancements": [
+        "Defense_Buff",
+        "Endurance_Discount",
+        "Recharge",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Defense.Super_Reflexes.Evasion",
+      "archetypeOrder": "secondary",
+      "powerIndex": 5,
+      "castTimeReal": 3,
+      "toggleCost": 0.26,
+      "fullName": "Brute_Secondary_Super_Reflexes_Evasion",
+      "displayName": "Evasion",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "target": 1,
+      "targetLoS": true,
+      "endCost": 0.52,
+      "rechargeTime": 4,
+      "baseRechargeTime": 4,
+      "activatePeriod": 2,
+      "effectArea": 2,
+      "radius": 8,
+      "maxTargets": 10,
+      "numAllowed": 1,
+      "description": {
+        "short": "Toggle: Self +DEF(vs. AoE), Res(DeBuff DEF)",
+        "long": "You are Evasive against area effect and cone shaped attacks. This power increases your Defense versus such attacks as long as it is active. Evasion also helps you resist Defense DeBuffs. Evasion also adds an Elusivity defense bonus to AOE Attacks in PVP zones.  Recharge: Fast"
+      },
+      "setTypes": [
+        7
+      ],
+      "alwaysToggle": true,
+      "level": 20,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 3.168,
+      "slottable": true,
+      "aoeModifier": 2.2,
+      "powerType": "Toggle"
+    },
+    {
+      "effects": [
+        {
+          "effectType": "Buff_Def",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.0525000021
+              },
+              "probability": 1,
+              "duration": 2.5,
+              "effectType": "Defense",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Super_Reflexes.Lucky",
+              "damageType": "AoE"
+            }
+          ]
+        },
+        {
+          "effectType": "Res_Boolean",
+          "values": [
+            {
+              "etModifies": "Defense",
+              "mag": {
+                "pve": 0.05536
+              },
+              "probability": 1,
+              "duration": 2.5,
+              "effectType": "ResEffect",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Super_Reflexes.Lucky"
+            }
+          ]
+        },
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {},
+              "probability": 1,
+              "effectType": "Resistance",
+              "toWho": "self",
+              "attribType": 2,
+              "powerFullName": "Brute_Defense.Super_Reflexes.Lucky",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {},
+              "probability": 1,
+              "effectType": "Resistance",
+              "toWho": "self",
+              "attribType": 2,
+              "powerFullName": "Brute_Defense.Super_Reflexes.Lucky",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {},
+              "probability": 1,
+              "effectType": "Resistance",
+              "toWho": "self",
+              "attribType": 2,
+              "powerFullName": "Brute_Defense.Super_Reflexes.Lucky",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {},
+              "probability": 1,
+              "effectType": "Resistance",
+              "toWho": "self",
+              "attribType": 2,
+              "powerFullName": "Brute_Defense.Super_Reflexes.Lucky",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {},
+              "probability": 1,
+              "effectType": "Resistance",
+              "toWho": "self",
+              "attribType": 2,
+              "powerFullName": "Brute_Defense.Super_Reflexes.Lucky",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {},
+              "probability": 1,
+              "effectType": "Resistance",
+              "toWho": "self",
+              "attribType": 2,
+              "powerFullName": "Brute_Defense.Super_Reflexes.Lucky",
+              "damageType": "Negative"
+            }
+          ]
+        }
+      ],
+      "allowedEnhancements": [
+        "Defense_Buff"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Defense.Super_Reflexes.Lucky",
+      "archetypeOrder": "secondary",
+      "powerIndex": 6,
+      "fullName": "Brute_Secondary_Super_Reflexes_Lucky",
+      "displayName": "Lucky",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "target": 1,
+      "targetLoS": true,
+      "activatePeriod": 2,
+      "effectArea": 1,
+      "numAllowed": 1,
+      "description": {
+        "short": "Auto: Self +DEF(vs. AoE), Res(DeBuff DEF), Res(All DMG, Special)",
+        "long": "Your superior reflexes make you seem incredibly Lucky. Lucky improves your Defense to Area of Effect attacks and grants you resistance to Defense DeBuffs. Lucky also grants you minor Damage Resistance to all damage except Toxic and Psionic.  This Damage Resistance is only available as you lose Health but it improves as your HP declines. This power is always on, and permanently increases your chance to evade area effects and cone shaped attacks."
+      },
+      "setTypes": [
+        7
+      ],
+      "level": 28,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 0.132,
+      "slottable": true,
+      "aoeModifier": 1,
+      "powerType": "Auto"
+    },
+    {
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "etModifies": "RechargeTime",
+              "mag": {
+                "pve": 0.2
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Enhancement",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Super_Reflexes.Quickness"
+            },
+            {
+              "etModifies": "SpeedRunning",
+              "mag": {
+                "pve": 0.4
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "ResEffect",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Super_Reflexes.Quickness"
+            },
+            {
+              "etModifies": "RechargeTime",
+              "mag": {
+                "pve": 0.4
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "ResEffect",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Super_Reflexes.Quickness"
+            },
+            {
+              "etModifies": "SpeedFlying",
+              "mag": {
+                "pve": 0.4
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "ResEffect",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Super_Reflexes.Quickness"
+            }
+          ]
+        },
+        {
+          "effectType": "SpeedRunning",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.35
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "SpeedRunning",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Super_Reflexes.Quickness"
+            }
+          ]
+        },
+        {
+          "effectType": "SpeedFlying",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.1365
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "SpeedFlying",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Super_Reflexes.Quickness"
+            }
+          ]
+        }
+      ],
+      "allowedEnhancements": [
+        "Fly",
+        "Run"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Defense.Super_Reflexes.Quickness",
+      "archetypeOrder": "secondary",
+      "powerIndex": 7,
+      "fullName": "Brute_Secondary_Super_Reflexes_Quickness",
+      "displayName": "Quickness",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "target": 1,
+      "targetLoS": true,
+      "activatePeriod": 10,
+      "effectArea": 1,
+      "numAllowed": 1,
+      "description": {
+        "short": "Auto: Self +Recharge, +SPD, Res (Slow)",
+        "long": "Your Quick reflexes allow you to move faster than normal, as well as resist slow effects. This power is always on and permanently increases your attack rate and movement speed."
+      },
+      "setTypes": [],
+      "level": 35,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 0.132,
+      "slottable": true,
+      "aoeModifier": 1,
+      "powerType": "Auto"
+    },
+    {
+      "effects": [
+        {
+          "effectType": "Buff_Def",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.420000017
+              },
+              "probability": 1,
+              "duration": 180,
+              "effectType": "Defense",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Super_Reflexes.Elude",
+              "damageType": "Melee"
+            },
+            {
+              "mag": {
+                "pve": 0.420000017
+              },
+              "probability": 1,
+              "duration": 180,
+              "effectType": "Defense",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Super_Reflexes.Elude",
+              "damageType": "Ranged"
+            },
+            {
+              "mag": {
+                "pve": 0.420000017
+              },
+              "probability": 1,
+              "duration": 180,
+              "effectType": "Defense",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Super_Reflexes.Elude",
+              "damageType": "AoE"
+            }
+          ]
+        },
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 1
+              },
+              "probability": 1,
+              "duration": 180,
+              "effectType": "Recovery",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Super_Reflexes.Elude"
+            },
+            {
+              "mag": {
+                "pve": 2
+              },
+              "probability": 1,
+              "duration": 180,
+              "effectType": "JumpHeight",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Super_Reflexes.Elude"
+            },
+            {
+              "mag": {
+                "pve": 1,
+                "pvp": 1
+              },
+              "probability": 1,
+              "duration": 180,
+              "effectType": "Null",
+              "stacking": 1,
+              "toWho": "all",
+              "powerFullName": "Brute_Defense.Super_Reflexes.Elude"
+            },
+            {
+              "mag": {
+                "pve": 1
+              },
+              "probability": 1,
+              "duration": 30,
+              "effectType": "GlobalChanceMod",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Super_Reflexes.Elude"
+            }
+          ]
+        },
+        {
+          "effectType": "SpeedRunning",
+          "values": [
+            {
+              "mag": {
+                "pve": 1.75
+              },
+              "probability": 1,
+              "duration": 180,
+              "effectType": "SpeedRunning",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Super_Reflexes.Elude"
+            }
+          ]
+        },
+        {
+          "effectType": "Res_Boolean",
+          "values": [
+            {
+              "etModifies": "Defense",
+              "mag": {
+                "pve": 0.2768
+              },
+              "probability": 1,
+              "duration": 180,
+              "effectType": "ResEffect",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Super_Reflexes.Elude"
+            }
+          ]
+        },
+        {
+          "effectType": "GlobalCrash",
+          "values": [
+            {
+              "mag": {
+                "pve": -100
+              },
+              "probability": 1,
+              "duration": 20,
+              "effectType": "Recovery",
+              "delayedTime": 180,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Super_Reflexes.Elude"
+            },
+            {
+              "mag": {
+                "pve": -1
+              },
+              "probability": 1,
+              "variableModified": true,
+              "effectType": "Endurance",
+              "delayedTime": 180,
+              "stacking": 1,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Super_Reflexes.Elude"
+            }
+          ]
+        }
+      ],
+      "allowedEnhancements": [
+        "Defense_Buff",
+        "Endurance_Discount",
+        "Recharge",
+        "Endurance_Modification",
+        "Run"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Defense.Super_Reflexes.Elude",
+      "archetypeOrder": "secondary",
+      "powerIndex": 8,
+      "castTimeReal": 2,
+      "toggleCost": 2.6,
+      "fullName": "Brute_Secondary_Super_Reflexes_Elude",
+      "displayName": "Elude",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "target": 1,
+      "targetLoS": true,
+      "endCost": 2.6,
+      "rechargeTime": 1000,
+      "baseRechargeTime": 1000,
+      "activatePeriod": 0.5,
+      "effectArea": 1,
+      "numAllowed": 1,
+      "castThroughHold": true,
+      "description": {
+        "short": "Self +DEF, + SPD, +Recovery, Res(DeBuff DEF), +Special",
+        "long": "You can improve your reflexes, making yourself so quick you can Elude almost any attack, be it ranged, melee, or area effect. Your running speed, jumping height, and Endurance Recovery are also increased. Elude also grants you high resistance to Defense DeBuffs. When Elude wears off, you are left drained of all Endurance and unable to recover Endurance for a while. Recharge: Very Long"
+      },
+      "setTypes": [
+        7,
+        19,
+        22,
+        28
+      ],
+      "clickBuff": true,
+      "level": 38,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 2.244,
+      "slottable": true,
+      "aoeModifier": 1
+    }
+  ]
+}

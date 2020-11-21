@@ -1,0 +1,172 @@
+{
+  "fullName": "IOSet.Air_Burst",
+  "enhancements": [
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Air_Burst_A.Attuned_Air_Burst_A",
+      "displayName": "Accuracy/Damage",
+      "description": {
+        "short": "Enhances Accuracy and Damage",
+        "long": "Enhances the damage of a power by {Boost.Attrib.Damage.Scale}% and accuracy by {Boost.Attrib.Accuracy.Scale}%."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Accuracy",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Damage",
+          "damageType": [
+            "Smashing",
+            "Lethal",
+            "Fire",
+            "Cold",
+            "Energy",
+            "Negative",
+            "Toxic",
+            "Psionic"
+          ],
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Air_Burst_B.Attuned_Air_Burst_B",
+      "displayName": "Damage/Endurance",
+      "description": {
+        "short": "Enhances Damage and Reduces Endurance Cost",
+        "long": "Enhances the damage of a power by {Boost.Attrib.Damage.Scale}% and reduces endurance cost by {Boost.Attrib.Endurance.Scale}%"
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Damage",
+          "damageType": [
+            "Smashing",
+            "Lethal",
+            "Fire",
+            "Cold",
+            "Energy",
+            "Negative",
+            "Toxic",
+            "Psionic"
+          ],
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Air_Burst_C.Attuned_Air_Burst_C",
+      "displayName": "Damage/Recharge",
+      "description": {
+        "short": "Enhances Damage and Recharge",
+        "long": "Enhances the damage of a power by {Boost.Attrib.Damage.Scale}% and reduces recharge time by {Boost.Attrib.Recharge.Scale}%"
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Damage",
+          "damageType": [
+            "Smashing",
+            "Lethal",
+            "Fire",
+            "Cold",
+            "Energy",
+            "Negative",
+            "Toxic",
+            "Psionic"
+          ],
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Recharge",
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Air_Burst_D.Attuned_Air_Burst_D",
+      "displayName": "Damage/Range",
+      "description": {
+        "short": "Enhances Damage and Range",
+        "long": "Enhances the damage of a power by {Boost.Attrib.Damage.Scale}% and range by {Boost.Attrib.Range.Scale}%."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Damage",
+          "damageType": [
+            "Smashing",
+            "Lethal",
+            "Fire",
+            "Cold",
+            "Energy",
+            "Negative",
+            "Toxic",
+            "Psionic"
+          ],
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.159375
+            }
+          },
+          "toWho": "self"
+        }
+      ]
+    }
+  ],
+  "levels": {
+    "min": 10,
+    "max": 50
+  },
+  "setType": 3,
+  "setTypeName": "Targeted AoE Damage",
+  "displayName": "Air Burst",
+  "imageName": "sAirBurst.png"
+}

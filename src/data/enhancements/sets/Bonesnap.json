@@ -1,0 +1,123 @@
+{
+  "fullName": "IOSet.Bonesnap",
+  "enhancements": [
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Bonesnap_A.Attuned_Bonesnap_A",
+      "displayName": "Accuracy/Damage",
+      "description": {
+        "short": "Enhances Accuracy and Damage",
+        "long": "Enhances the damage of a power by {Boost.Attrib.Damage.Scale}% and accuracy by {Boost.Attrib.Accuracy.Scale}%."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Accuracy",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Damage",
+          "damageType": [
+            "Smashing",
+            "Lethal",
+            "Fire",
+            "Cold",
+            "Energy",
+            "Negative",
+            "Toxic",
+            "Psionic"
+          ],
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Bonesnap_B.Attuned_Bonesnap_B",
+      "displayName": "Damage/Endurance",
+      "description": {
+        "short": "Enhances Damage and Reduces Endurance Cost",
+        "long": "Enhances the damage of a power by {Boost.Attrib.Damage.Scale}% and reduces endurance cost by {Boost.Attrib.Endurance.Scale}%."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Damage",
+          "damageType": [
+            "Smashing",
+            "Lethal",
+            "Fire",
+            "Cold",
+            "Energy",
+            "Negative",
+            "Toxic",
+            "Psionic"
+          ],
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Bonesnap_C.Attuned_Bonesnap_C",
+      "displayName": "Accuracy/Recharge",
+      "description": {
+        "short": "Enhances Accuracy and Attack Rate",
+        "long": "Enhances the recharge time of a power by {Boost.Attrib.Recharge.Scale}% and accuracy by {Boost.Attrib.Accuracy.Scale}%."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Accuracy",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Recharge",
+          "toWho": "self"
+        }
+      ]
+    }
+  ],
+  "levels": {
+    "min": 10,
+    "max": 25
+  },
+  "setType": 1,
+  "setTypeName": "Melee Damage",
+  "displayName": "Bonesnap",
+  "imageName": "sBoneSnap.png"
+}

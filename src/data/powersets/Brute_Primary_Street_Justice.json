@@ -1,0 +1,1783 @@
+{
+  "fullName": "Brute_Primary_Street_Justice",
+  "archetypeOrder": "primary",
+  "description": "Street Justice delivers punishing bone crushing attacks that weaken, disable or otherwise hinder their foes. This melee power set has no singular form of secondary effect. Instead, it has many ways to cripple enemies. Street Justice's attack powers come in two categories: Combo Builders and Finishers. Combo Builders add to your Combo Level and thus empower any Finishers you use. See individual powers for how they're improved by Combo Level.  Combo Building powers can provide up to 3 levels of benefits. Build up to the third level before executing a Finisher for maximum effectiveness.",
+  "imageName": "StreetJustice.png",
+  "displayName": "Street Justice",
+  "powers": [
+    {
+      "effects": [
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 23.3562832,
+                "pvp": 40.6154633
+              },
+              "probability": 1,
+              "effectType": "Damage",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Brute_Melee.Brawling.Initial_Strike",
+              "damageType": "Smashing"
+            }
+          ]
+        },
+        {
+          "effectType": "Stun",
+          "values": [
+            {
+              "mag": {
+                "pve": 2,
+                "pvp": 2
+              },
+              "probability": 0.1,
+              "duration": 7.15200043,
+              "effectType": "Mez",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "attribType": 1,
+              "powerFullName": "Brute_Melee.Brawling.Initial_Strike",
+              "mezType": "Stun"
+            }
+          ]
+        },
+        {
+          "effectType": "FieryEmbrace",
+          "values": [
+            {
+              "mag": {
+                "pve": 21.0206547
+              },
+              "effectType": "Damage",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Brute_Melee.Brawling.Initial_Strike",
+              "damageType": "Fire"
+            }
+          ]
+        },
+        {
+          "effectType": "InherentTaunt",
+          "values": [
+            {
+              "mag": {
+                "pve": 4
+              },
+              "cancelOnMiss": true,
+              "probability": 1,
+              "duration": 13.6,
+              "effectType": "Mez",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "specialCase": 14,
+              "toWho": "target",
+              "attribType": 1,
+              "powerFullName": "Brute_Melee.Brawling.Initial_Strike",
+              "requiresToHitCheck": true,
+              "mezType": "Taunt"
+            }
+          ]
+        },
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pvp": 0.05
+              },
+              "probability": 1,
+              "variableModified": true,
+              "effectType": "Rage",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Melee.Brawling.Initial_Strike"
+            },
+            {
+              "mag": {
+                "pve": 1
+              },
+              "probability": 1,
+              "effectType": "GrantPower",
+              "specialCase": 21,
+              "toWho": "self",
+              "powerFullName": "Brute_Melee.Brawling.Initial_Strike"
+            },
+            {
+              "mag": {
+                "pve": 1
+              },
+              "probability": 1,
+              "effectType": "RevokePower",
+              "specialCase": 22,
+              "toWho": "self",
+              "powerFullName": "Brute_Melee.Brawling.Initial_Strike"
+            }
+          ]
+        }
+      ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Recharge",
+        "Stun",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Brawling.Initial_Strike",
+      "archetypeOrder": "primary",
+      "powerIndex": 0,
+      "castTimeReal": 0.8,
+      "toggleCost": 4.368,
+      "fullName": "Brute_Primary_Street_Justice_Initial_Strike",
+      "displayName": "Initial Strike",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "attackTypes": 9,
+      "target": 2048,
+      "targetLoS": true,
+      "range": 7,
+      "endCost": 4.368,
+      "rechargeTime": 3,
+      "baseRechargeTime": 3,
+      "effectArea": 1,
+      "numAllowed": 1,
+      "description": {
+        "short": "Melee, Light DMG (Smash), Foe Disorient, Combo Builder",
+        "long": "You deliver a pair of lightning fast blows to your opponent in an effort to throw them off balance. Initial Strike deals Light Smashing damage and has a small chance to disorient your target. Initial Strike is a Combo Builder and adds 1 Combo Level.. Damage: Light, Recharge: Very Fast"
+      },
+      "setTypes": [
+        1,
+        11,
+        24,
+        34,
+        44
+      ],
+      "level": 1,
+      "ignoreEnh": [
+        13
+      ],
+      "ignore_Buff": [],
+      "hasGrantPowerEffect": true,
+      "castTime": 1.056,
+      "slottable": true,
+      "aoeModifier": 1
+    },
+    {
+      "effects": [
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 64.50783,
+                "pvp": 101.463593
+              },
+              "probability": 1,
+              "effectType": "Damage",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Brute_Melee.Brawling.Heavy_Blow",
+              "damageType": "Smashing"
+            }
+          ]
+        },
+        {
+          "effectType": "FieryEmbrace",
+          "values": [
+            {
+              "mag": {
+                "pve": 29.0285244
+              },
+              "effectType": "Damage",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Brute_Melee.Brawling.Heavy_Blow",
+              "damageType": "Fire"
+            }
+          ]
+        },
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.67,
+                "pvp": 0.67
+              },
+              "probability": 0.3,
+              "effectType": "Mez",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Brute_Melee.Brawling.Heavy_Blow",
+              "mezType": "Knockback"
+            },
+            {
+              "mag": {
+                "pvp": 0.05
+              },
+              "probability": 1,
+              "variableModified": true,
+              "effectType": "Rage",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Melee.Brawling.Heavy_Blow"
+            },
+            {
+              "mag": {
+                "pve": 1
+              },
+              "probability": 1,
+              "effectType": "GrantPower",
+              "specialCase": 21,
+              "toWho": "self",
+              "powerFullName": "Brute_Melee.Brawling.Heavy_Blow"
+            },
+            {
+              "mag": {
+                "pve": 1
+              },
+              "probability": 1,
+              "effectType": "RevokePower",
+              "specialCase": 22,
+              "toWho": "self",
+              "powerFullName": "Brute_Melee.Brawling.Heavy_Blow"
+            }
+          ]
+        },
+        {
+          "effectType": "InherentTaunt",
+          "values": [
+            {
+              "mag": {
+                "pve": 4
+              },
+              "cancelOnMiss": true,
+              "probability": 1,
+              "duration": 13.6,
+              "effectType": "Mez",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "specialCase": 14,
+              "toWho": "target",
+              "attribType": 1,
+              "powerFullName": "Brute_Melee.Brawling.Heavy_Blow",
+              "requiresToHitCheck": true,
+              "mezType": "Taunt"
+            }
+          ]
+        }
+      ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Knockback",
+        "Recharge",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Brawling.Heavy_Blow",
+      "archetypeOrder": "primary",
+      "powerIndex": 1,
+      "castTimeReal": 1.07,
+      "toggleCost": 6.032,
+      "fullName": "Brute_Primary_Street_Justice_Heavy_Blow",
+      "displayName": "Heavy Blow",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "attackTypes": 9,
+      "target": 2048,
+      "targetLoS": true,
+      "range": 7,
+      "endCost": 6.032,
+      "rechargeTime": 5,
+      "baseRechargeTime": 5,
+      "effectArea": 1,
+      "numAllowed": 1,
+      "description": {
+        "short": "Melee, Moderate DMG (Smash), Foe Knockdown, Combo Builder",
+        "long": "You strike your foe with a powerful punch dealing Moderate Smashing damage. Heavy Blow has a fair chance to knock the target off its feet.  Heavy Blow is a Combo Builder and adds 1 Combo Level.  Damage: Moderate, Recharge: Fast"
+      },
+      "setTypes": [
+        1,
+        23,
+        24,
+        34,
+        44
+      ],
+      "level": 1,
+      "ignoreEnh": [
+        13
+      ],
+      "ignore_Buff": [],
+      "hasGrantPowerEffect": true,
+      "castTime": 1.31999993,
+      "slottable": true,
+      "aoeModifier": 1
+    },
+    {
+      "effects": [
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 104.269119,
+                "pvp": 177.598953
+              },
+              "probability": 1,
+              "effectType": "Damage",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "specialCase": 21,
+              "toWho": "target",
+              "powerFullName": "Brute_Melee.Brawling.Sweeping_Cross",
+              "damageType": "Smashing"
+            }
+          ]
+        },
+        {
+          "effectType": "Stun",
+          "values": [
+            {
+              "mag": {
+                "pve": 3,
+                "pvp": 3
+              },
+              "probability": 0.2,
+              "duration": 7.15200043,
+              "effectType": "Mez",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "specialCase": 22,
+              "toWho": "target",
+              "attribType": 1,
+              "powerFullName": "Brute_Melee.Brawling.Sweeping_Cross",
+              "mezType": "Stun"
+            }
+          ]
+        },
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.67,
+                "pvp": 0.67
+              },
+              "probability": 0.4,
+              "effectType": "Mez",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "specialCase": 24,
+              "toWho": "target",
+              "powerFullName": "Brute_Melee.Brawling.Sweeping_Cross",
+              "nearGround": true,
+              "mezType": "Knockback"
+            },
+            {
+              "mag": {
+                "pvp": 0.05
+              },
+              "probability": 1,
+              "variableModified": true,
+              "effectType": "Rage",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Melee.Brawling.Sweeping_Cross"
+            },
+            {
+              "mag": {
+                "pve": 1
+              },
+              "probability": 1,
+              "effectType": "RevokePower",
+              "toWho": "self",
+              "powerFullName": "Brute_Melee.Brawling.Sweeping_Cross"
+            }
+          ]
+        },
+        {
+          "effectType": "FieryEmbrace",
+          "values": [
+            {
+              "mag": {
+                "pve": 37.5368843
+              },
+              "effectType": "Damage",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Brute_Melee.Brawling.Sweeping_Cross",
+              "damageType": "Fire"
+            }
+          ]
+        },
+        {
+          "effectType": "InherentTaunt",
+          "values": [
+            {
+              "mag": {
+                "pve": 4
+              },
+              "cancelOnMiss": true,
+              "probability": 1,
+              "duration": 13.6,
+              "effectType": "Mez",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "specialCase": 14,
+              "toWho": "target",
+              "attribType": 1,
+              "powerFullName": "Brute_Melee.Brawling.Sweeping_Cross",
+              "requiresToHitCheck": true,
+              "mezType": "Taunt"
+            }
+          ]
+        }
+      ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Recharge",
+        "Stun",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Brawling.Sweeping_Cross",
+      "archetypeOrder": "primary",
+      "powerIndex": 2,
+      "castTimeReal": 1.67,
+      "toggleCost": 8.528,
+      "fullName": "Brute_Primary_Street_Justice_Sweeping_Cross",
+      "displayName": "Sweeping Cross",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "attackTypes": 9,
+      "target": 2048,
+      "targetLoS": true,
+      "range": 7,
+      "endCost": 8.528,
+      "rechargeTime": 8,
+      "baseRechargeTime": 8,
+      "effectArea": 3,
+      "radius": 7,
+      "arc": 50,
+      "maxTargets": 5,
+      "numAllowed": 1,
+      "description": {
+        "short": "Melee (Cone), High DMG (Smash), Foe Disorient, Finisher",
+        "long": "You execute a sweeping right hook that can strike multiple targets in your frontal arc. Sweeping Cross deals High Smashing damage and can disorient foes. Sweeping Cross is a Finisher and resets your current Combo Level to 0. It will deal additional damage and will have a greater chance to disorient dependent upon the current Combo Level.  At Combo Level 3, Sweeping Cross will also have a chance to knock down the affected targets.  Damage: High, Recharge: Moderate"
+      },
+      "setTypes": [
+        4,
+        11,
+        24,
+        34,
+        44
+      ],
+      "level": 2,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "neverAutoUpdate": true,
+      "castTime": 1.848,
+      "slottable": true,
+      "aoeModifier": 1.25432611
+    },
+    {
+      "effects": [
+        {
+          "effectType": "Buff_ToHit",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.2
+              },
+              "probability": 1,
+              "duration": 10,
+              "variableModified": true,
+              "effectType": "ToHit",
+              "stacking": 1,
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Melee.Brawling.Combat_Readiness"
+            }
+          ]
+        },
+        {
+          "effectType": "Buff_Dmg",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.625
+              },
+              "probability": 1,
+              "duration": 10,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "toWho": "self",
+              "powerFullName": "Brute_Melee.Brawling.Combat_Readiness",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 0.625
+              },
+              "probability": 1,
+              "duration": 10,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "toWho": "self",
+              "powerFullName": "Brute_Melee.Brawling.Combat_Readiness",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.625
+              },
+              "probability": 1,
+              "duration": 10,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "toWho": "self",
+              "powerFullName": "Brute_Melee.Brawling.Combat_Readiness",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.625
+              },
+              "probability": 1,
+              "duration": 10,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "toWho": "self",
+              "powerFullName": "Brute_Melee.Brawling.Combat_Readiness",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 0.625
+              },
+              "probability": 1,
+              "duration": 10,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "toWho": "self",
+              "powerFullName": "Brute_Melee.Brawling.Combat_Readiness",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.625
+              },
+              "probability": 1,
+              "duration": 10,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "toWho": "self",
+              "powerFullName": "Brute_Melee.Brawling.Combat_Readiness",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.625
+              },
+              "probability": 1,
+              "duration": 10,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "toWho": "self",
+              "powerFullName": "Brute_Melee.Brawling.Combat_Readiness",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pve": 0.625
+              },
+              "probability": 1,
+              "duration": 10,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "toWho": "self",
+              "powerFullName": "Brute_Melee.Brawling.Combat_Readiness",
+              "damageType": "Psionic"
+            }
+          ]
+        },
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 1
+              },
+              "probability": 1,
+              "effectType": "RevokePower",
+              "toWho": "self",
+              "powerFullName": "Brute_Melee.Brawling.Combat_Readiness"
+            },
+            {
+              "mag": {
+                "pve": 1
+              },
+              "probability": 1,
+              "effectType": "GrantPower",
+              "toWho": "self",
+              "powerFullName": "Brute_Melee.Brawling.Combat_Readiness"
+            }
+          ]
+        }
+      ],
+      "allowedEnhancements": [
+        "ToHit_Buff",
+        "Endurance_Discount",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Brawling.Combat_Readiness",
+      "archetypeOrder": "primary",
+      "powerIndex": 3,
+      "castTimeReal": 1.17,
+      "toggleCost": 5.2,
+      "fullName": "Brute_Primary_Street_Justice_Combat_Readiness",
+      "displayName": "Combat Readiness",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "target": 1,
+      "targetLoS": true,
+      "endCost": 5.2,
+      "rechargeTime": 90,
+      "baseRechargeTime": 90,
+      "effectArea": 1,
+      "numAllowed": 1,
+      "description": {
+        "short": "Self, +DMG, +To Hit, Special",
+        "long": "Activating this power will increase your chance to hit and the amount of damage you deal for a short amount of time as well as setting your current Combo Level to 3. Recharge: Long"
+      },
+      "setTypes": [
+        25
+      ],
+      "clickBuff": true,
+      "level": 6,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "hasGrantPowerEffect": true,
+      "castTime": 1.31999993,
+      "slottable": true,
+      "aoeModifier": 1
+    },
+    {
+      "effects": [
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 73.4054642,
+                "pvp": 118.1611
+              },
+              "probability": 1,
+              "effectType": "Damage",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Brute_Melee.Brawling.Throat_Strike",
+              "damageType": "Smashing"
+            }
+          ]
+        },
+        {
+          "effectType": "FieryEmbrace",
+          "values": [
+            {
+              "mag": {
+                "pve": 33.0324554
+              },
+              "effectType": "Damage",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Brute_Melee.Brawling.Throat_Strike",
+              "damageType": "Fire"
+            }
+          ]
+        },
+        {
+          "effectType": "Debuff_Dam",
+          "values": [
+            {
+              "mag": {
+                "pve": -0.105000004,
+                "pvp": -0.14
+              },
+              "probability": 1,
+              "duration": 5,
+              "effectType": "DamageBuff",
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Brute_Melee.Brawling.Throat_Strike",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": -0.105000004,
+                "pvp": -0.14
+              },
+              "probability": 1,
+              "duration": 5,
+              "effectType": "DamageBuff",
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Brute_Melee.Brawling.Throat_Strike",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": -0.105000004,
+                "pvp": -0.14
+              },
+              "probability": 1,
+              "duration": 5,
+              "effectType": "DamageBuff",
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Brute_Melee.Brawling.Throat_Strike",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": -0.105000004,
+                "pvp": -0.14
+              },
+              "probability": 1,
+              "duration": 5,
+              "effectType": "DamageBuff",
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Brute_Melee.Brawling.Throat_Strike",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": -0.105000004,
+                "pvp": -0.14
+              },
+              "probability": 1,
+              "duration": 5,
+              "effectType": "DamageBuff",
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Brute_Melee.Brawling.Throat_Strike",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": -0.105000004,
+                "pvp": -0.14
+              },
+              "probability": 1,
+              "duration": 5,
+              "effectType": "DamageBuff",
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Brute_Melee.Brawling.Throat_Strike",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": -0.105000004,
+                "pvp": -0.14
+              },
+              "probability": 1,
+              "duration": 5,
+              "effectType": "DamageBuff",
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Brute_Melee.Brawling.Throat_Strike",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pve": -0.105000004,
+                "pvp": -0.14
+              },
+              "probability": 1,
+              "duration": 5,
+              "effectType": "DamageBuff",
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Brute_Melee.Brawling.Throat_Strike",
+              "damageType": "Psionic"
+            }
+          ]
+        },
+        {
+          "effectType": "Res_Dmg",
+          "values": [
+            {
+              "mag": {
+                "pve": -0.07,
+                "pvp": -0.07
+              },
+              "probability": 1,
+              "duration": 5,
+              "effectType": "Resistance",
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Brute_Melee.Brawling.Throat_Strike",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": -0.07,
+                "pvp": -0.07
+              },
+              "probability": 1,
+              "duration": 5,
+              "effectType": "Resistance",
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Brute_Melee.Brawling.Throat_Strike",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": -0.07,
+                "pvp": -0.07
+              },
+              "probability": 1,
+              "duration": 5,
+              "effectType": "Resistance",
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Brute_Melee.Brawling.Throat_Strike",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": -0.07,
+                "pvp": -0.07
+              },
+              "probability": 1,
+              "duration": 5,
+              "effectType": "Resistance",
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Brute_Melee.Brawling.Throat_Strike",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": -0.07,
+                "pvp": -0.07
+              },
+              "probability": 1,
+              "duration": 5,
+              "effectType": "Resistance",
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Brute_Melee.Brawling.Throat_Strike",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": -0.07,
+                "pvp": -0.07
+              },
+              "probability": 1,
+              "duration": 5,
+              "effectType": "Resistance",
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Brute_Melee.Brawling.Throat_Strike",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": -0.07,
+                "pvp": -0.07
+              },
+              "probability": 1,
+              "duration": 5,
+              "effectType": "Resistance",
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Brute_Melee.Brawling.Throat_Strike",
+              "damageType": "Psionic"
+            },
+            {
+              "mag": {
+                "pve": -0.07,
+                "pvp": -0.07
+              },
+              "probability": 1,
+              "duration": 5,
+              "effectType": "Resistance",
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Brute_Melee.Brawling.Throat_Strike",
+              "damageType": "Toxic"
+            }
+          ]
+        },
+        {
+          "effectType": "InherentTaunt",
+          "values": [
+            {
+              "mag": {
+                "pve": 4
+              },
+              "cancelOnMiss": true,
+              "probability": 1,
+              "duration": 13.6,
+              "effectType": "Mez",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "specialCase": 14,
+              "toWho": "target",
+              "attribType": 1,
+              "powerFullName": "Brute_Melee.Brawling.Throat_Strike",
+              "requiresToHitCheck": true,
+              "mezType": "Taunt"
+            }
+          ]
+        },
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pvp": 0.05
+              },
+              "probability": 1,
+              "variableModified": true,
+              "effectType": "Rage",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Melee.Brawling.Throat_Strike"
+            },
+            {
+              "mag": {
+                "pve": 1
+              },
+              "probability": 1,
+              "effectType": "GrantPower",
+              "specialCase": 21,
+              "toWho": "self",
+              "powerFullName": "Brute_Melee.Brawling.Throat_Strike"
+            },
+            {
+              "mag": {
+                "pve": 1
+              },
+              "probability": 1,
+              "effectType": "RevokePower",
+              "specialCase": 22,
+              "toWho": "self",
+              "powerFullName": "Brute_Melee.Brawling.Throat_Strike"
+            }
+          ]
+        }
+      ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Recharge",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Brawling.Throat_Strike",
+      "archetypeOrder": "primary",
+      "powerIndex": 4,
+      "castTimeReal": 1.33,
+      "toggleCost": 6.864,
+      "fullName": "Brute_Primary_Street_Justice_Rib_Cracker",
+      "displayName": "Rib Cracker",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "attackTypes": 9,
+      "target": 2048,
+      "targetLoS": true,
+      "range": 7,
+      "endCost": 6.864,
+      "rechargeTime": 6,
+      "baseRechargeTime": 6,
+      "effectArea": 1,
+      "numAllowed": 1,
+      "description": {
+        "short": "Melee, Moderate DMG (Smash), Foe -Res (All), -Dmg, Combo Builder",
+        "long": "You deftly strike your foe in a very vulnerable location. Rib Cracker deals Moderate Damage but reduces your foe's Damage and Resistance moderately for a short time. Rib Cracker is a Combo Builder and adds 1 Combo Level. Damage: Moderate, Recharge: Fast."
+      },
+      "setTypes": [
+        1,
+        24,
+        34,
+        44
+      ],
+      "level": 8,
+      "ignoreEnh": [
+        13
+      ],
+      "ignore_Buff": [],
+      "hasGrantPowerEffect": true,
+      "castTime": 1.584,
+      "slottable": true,
+      "aoeModifier": 1
+    },
+    {
+      "effects": [
+        {
+          "effectType": "Taunt",
+          "values": [
+            {
+              "mag": {
+                "pve": 4,
+                "pvp": 4
+              },
+              "probability": 1,
+              "duration": 20.5999985,
+              "effectType": "Mez",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "attribType": 1,
+              "powerFullName": "Brute_Melee.Brawling.Taunt",
+              "mezType": "Taunt"
+            }
+          ]
+        },
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "etModifies": "Range",
+              "mag": {
+                "pve": -0.75
+              },
+              "probability": 1,
+              "duration": 12,
+              "effectType": "Enhancement",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Brute_Melee.Brawling.Taunt"
+            }
+          ]
+        }
+      ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Range",
+        "Recharge",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Brawling.Taunt",
+      "archetypeOrder": "primary",
+      "powerIndex": 5,
+      "castTimeReal": 1.67,
+      "fullName": "Brute_Primary_Street_Justice_Taunt",
+      "displayName": "Taunt",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "attackTypes": 4,
+      "target": 2048,
+      "targetLoS": true,
+      "range": 70,
+      "rechargeTime": 10,
+      "baseRechargeTime": 10,
+      "effectArea": 2,
+      "radius": 15,
+      "maxTargets": 5,
+      "numAllowed": 1,
+      "description": {
+        "short": "Ranged (Targeted AoE), Foe Taunt",
+        "long": "Taunt foes to attack you. Useful to pull enemies off allies and keep them attacking you to raise your Fury. A To-Hit check is required to Taunt enemy players, but is not needed against critter targets. Recharge: Fast"
+      },
+      "setTypes": [
+        24
+      ],
+      "level": 12,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 1.848,
+      "slottable": true,
+      "aoeModifier": 3.25
+    },
+    {
+      "effects": [
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 53.5248146,
+                "pvp": 56.90536
+              },
+              "probability": 1,
+              "effectType": "Damage",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "specialCase": 21,
+              "toWho": "target",
+              "powerFullName": "Brute_Melee.Brawling.Spinning_Strike",
+              "damageType": "Smashing"
+            }
+          ]
+        },
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.67,
+                "pvp": 0.67
+              },
+              "probability": 0.5,
+              "effectType": "Mez",
+              "delayedTime": 0.4,
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "specialCase": 22,
+              "toWho": "target",
+              "powerFullName": "Brute_Melee.Brawling.Spinning_Strike",
+              "nearGround": true,
+              "mezType": "Knockback"
+            },
+            {
+              "mag": {
+                "pvp": 0.05
+              },
+              "probability": 1,
+              "variableModified": true,
+              "effectType": "Rage",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Melee.Brawling.Spinning_Strike"
+            },
+            {
+              "mag": {
+                "pve": 1
+              },
+              "probability": 1,
+              "effectType": "RevokePower",
+              "toWho": "self",
+              "powerFullName": "Brute_Melee.Brawling.Spinning_Strike"
+            }
+          ]
+        },
+        {
+          "effectType": "Fear",
+          "values": [
+            {
+              "mag": {
+                "pve": 3,
+                "pvp": 3
+              },
+              "probability": 0.3,
+              "duration": 7.15200043,
+              "effectType": "Mez",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "specialCase": 24,
+              "toWho": "target",
+              "attribType": 1,
+              "powerFullName": "Brute_Melee.Brawling.Spinning_Strike",
+              "mezType": "Terror"
+            }
+          ]
+        },
+        {
+          "effectType": "FieryEmbrace",
+          "values": [
+            {
+              "mag": {
+                "pve": 19.2689342
+              },
+              "effectType": "Damage",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Brute_Melee.Brawling.Spinning_Strike",
+              "damageType": "Fire"
+            }
+          ]
+        },
+        {
+          "effectType": "InherentTaunt",
+          "values": [
+            {
+              "mag": {
+                "pve": 4
+              },
+              "cancelOnMiss": true,
+              "probability": 1,
+              "duration": 13.6,
+              "effectType": "Mez",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "specialCase": 14,
+              "toWho": "target",
+              "attribType": 1,
+              "powerFullName": "Brute_Melee.Brawling.Spinning_Strike",
+              "requiresToHitCheck": true,
+              "mezType": "Taunt"
+            }
+          ]
+        }
+      ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Knockback",
+        "Recharge",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Brawling.Spinning_Strike",
+      "archetypeOrder": "primary",
+      "powerIndex": 6,
+      "castTimeReal": 1.8,
+      "toggleCost": 15.184,
+      "fullName": "Brute_Primary_Street_Justice_Spinning_Strike",
+      "displayName": "Spinning Strike",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "attackTypes": 9,
+      "target": 2048,
+      "targetLoS": true,
+      "range": 7,
+      "endCost": 15.184,
+      "rechargeTime": 16,
+      "baseRechargeTime": 16,
+      "effectArea": 2,
+      "radius": 6,
+      "maxTargets": 10,
+      "numAllowed": 1,
+      "description": {
+        "short": "Melee (Targeted AoE), Heavy DMG (Smash), Foe Knockdown, Finisher",
+        "long": "You execute a spinning attack that first strikes with your fist and finally your heel hitting your foe and all enemies immediately nearby.  Spinning Strike deals Heavy Smashing damage and has a high chance to knockdown foes. Spinning Strike is a Finisher and sets your Combo Level to 0.  It will deal additional damage and will have a greater chance to knockdown dependent upon the current Combo Level.  At Combo Level 3, Spinning Strike also has a moderate chance to briefly inflict Terrorize in nearby foes.  Damage: High, Recharge: Slow"
+      },
+      "setTypes": [
+        3,
+        23,
+        24,
+        34,
+        44
+      ],
+      "level": 18,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "neverAutoUpdate": true,
+      "castTime": 1.98,
+      "slottable": true,
+      "aoeModifier": 1.9
+    },
+    {
+      "effects": [
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 91.20072,
+                "pvp": 124.178131
+              },
+              "probability": 1,
+              "effectType": "Damage",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Brute_Melee.Brawling.Low_Kick",
+              "damageType": "Smashing"
+            }
+          ]
+        },
+        {
+          "effectType": "Slow",
+          "values": [
+            {
+              "mag": {
+                "pve": -0.5
+              },
+              "probability": 1,
+              "duration": 8,
+              "effectType": "SpeedRunning",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Brute_Melee.Brawling.Low_Kick"
+            },
+            {
+              "etModifies": "JumpHeight",
+              "mag": {
+                "pve": -0.5
+              },
+              "probability": 1,
+              "duration": 8,
+              "effectType": "Enhancement",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Brute_Melee.Brawling.Low_Kick"
+            },
+            {
+              "mag": {
+                "pve": -0.5
+              },
+              "probability": 1,
+              "duration": 8,
+              "effectType": "SpeedJumping",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Brute_Melee.Brawling.Low_Kick"
+            }
+          ]
+        },
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": -1.6
+              },
+              "probability": 1,
+              "duration": 8,
+              "effectType": "Fly",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Brute_Melee.Brawling.Low_Kick"
+            },
+            {
+              "mag": {
+                "pvp": 0.05
+              },
+              "probability": 1,
+              "variableModified": true,
+              "effectType": "Rage",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Melee.Brawling.Low_Kick"
+            },
+            {
+              "mag": {
+                "pve": 1
+              },
+              "probability": 1,
+              "effectType": "GrantPower",
+              "specialCase": 21,
+              "toWho": "self",
+              "powerFullName": "Brute_Melee.Brawling.Low_Kick"
+            },
+            {
+              "mag": {
+                "pve": 1
+              },
+              "probability": 1,
+              "effectType": "RevokePower",
+              "specialCase": 22,
+              "toWho": "self",
+              "powerFullName": "Brute_Melee.Brawling.Low_Kick"
+            }
+          ]
+        },
+        {
+          "effectType": "Debuff_Def",
+          "values": [
+            {
+              "mag": {
+                "pve": -0.07
+              },
+              "cancelOnMiss": true,
+              "probability": 1,
+              "duration": 10,
+              "effectType": "Defense",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Brute_Melee.Brawling.Low_Kick"
+            }
+          ]
+        },
+        {
+          "effectType": "FieryEmbrace",
+          "values": [
+            {
+              "mag": {
+                "pve": 41.0403252
+              },
+              "effectType": "Damage",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Brute_Melee.Brawling.Low_Kick",
+              "damageType": "Fire"
+            }
+          ]
+        },
+        {
+          "effectType": "InherentTaunt",
+          "values": [
+            {
+              "mag": {
+                "pve": 4
+              },
+              "cancelOnMiss": true,
+              "probability": 1,
+              "duration": 13.6,
+              "effectType": "Mez",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "specialCase": 14,
+              "toWho": "target",
+              "attribType": 1,
+              "powerFullName": "Brute_Melee.Brawling.Low_Kick",
+              "requiresToHitCheck": true,
+              "mezType": "Taunt"
+            }
+          ]
+        }
+      ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Defense_Debuff",
+        "Endurance_Discount",
+        "Recharge",
+        "Slow",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Brawling.Low_Kick",
+      "archetypeOrder": "primary",
+      "powerIndex": 7,
+      "castTimeReal": 1.33,
+      "toggleCost": 8.528,
+      "fullName": "Brute_Primary_Street_Justice_Shin_Breaker",
+      "displayName": "Shin Breaker",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "attackTypes": 9,
+      "target": 2048,
+      "targetLoS": true,
+      "range": 7,
+      "endCost": 8.528,
+      "rechargeTime": 8,
+      "baseRechargeTime": 8,
+      "effectArea": 1,
+      "numAllowed": 1,
+      "description": {
+        "short": "Melee, Superior DMG (Smashing), Foe -Speed, -Defense, Combo Builder",
+        "long": "You execute a quick but powerful kick targeting your foe's leg in an attempt to cripple their movement. Shin Breaker deals Superior Smashing damage and moderately reduces your target's movement speed and defense for a short time. Shin Breaker is a Combo Builder and adds 1 Combo Level.  Damage: Superior, Recharge: Slow"
+      },
+      "setTypes": [
+        1,
+        13,
+        21,
+        24,
+        34,
+        44
+      ],
+      "level": 26,
+      "ignoreEnh": [
+        13
+      ],
+      "ignore_Buff": [],
+      "hasGrantPowerEffect": true,
+      "castTime": 1.584,
+      "slottable": true,
+      "aoeModifier": 1
+    },
+    {
+      "effects": [
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 221.050537,
+                "pvp": 274.4369
+              },
+              "probability": 1,
+              "effectType": "Damage",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "specialCase": 21,
+              "toWho": "target",
+              "powerFullName": "Brute_Melee.Brawling.Crushing_Uppercut",
+              "damageType": "Smashing"
+            }
+          ]
+        },
+        {
+          "effectType": "Stun",
+          "values": [
+            {
+              "mag": {
+                "pve": 3,
+                "pvp": 3
+              },
+              "probability": 1,
+              "duration": 8.940001,
+              "effectType": "Mez",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "specialCase": 22,
+              "toWho": "target",
+              "attribType": 1,
+              "powerFullName": "Brute_Melee.Brawling.Crushing_Uppercut",
+              "mezType": "Stun"
+            },
+            {
+              "mag": {
+                "pve": 3,
+                "pvp": 3
+              },
+              "probability": 1,
+              "duration": 12.5160007,
+              "effectType": "Mez",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "specialCase": 24,
+              "toWho": "target",
+              "attribType": 1,
+              "powerFullName": "Brute_Melee.Brawling.Crushing_Uppercut",
+              "mezType": "Hold"
+            }
+          ]
+        },
+        {
+          "effectType": "Knockback",
+          "values": [
+            {
+              "mag": {
+                "pve": 6.23130035,
+                "pvp": 6.23130035
+              },
+              "probability": 1,
+              "effectType": "Mez",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Brute_Melee.Brawling.Crushing_Uppercut",
+              "mezType": "Knockup"
+            }
+          ]
+        },
+        {
+          "effectType": "FieryEmbrace",
+          "values": [
+            {
+              "mag": {
+                "pve": 79.57819
+              },
+              "effectType": "Damage",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Brute_Melee.Brawling.Crushing_Uppercut",
+              "damageType": "Fire"
+            }
+          ]
+        },
+        {
+          "effectType": "InherentTaunt",
+          "values": [
+            {
+              "mag": {
+                "pve": 4
+              },
+              "cancelOnMiss": true,
+              "probability": 1,
+              "duration": 13.6,
+              "effectType": "Mez",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "specialCase": 14,
+              "toWho": "target",
+              "attribType": 1,
+              "powerFullName": "Brute_Melee.Brawling.Crushing_Uppercut",
+              "requiresToHitCheck": true,
+              "mezType": "Taunt"
+            }
+          ]
+        },
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pvp": 0.05
+              },
+              "probability": 1,
+              "variableModified": true,
+              "effectType": "Rage",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Melee.Brawling.Crushing_Uppercut"
+            },
+            {
+              "mag": {
+                "pve": 1
+              },
+              "probability": 1,
+              "effectType": "RevokePower",
+              "toWho": "self",
+              "powerFullName": "Brute_Melee.Brawling.Crushing_Uppercut"
+            }
+          ]
+        }
+      ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Hold",
+        "Knockback",
+        "Recharge",
+        "Stun",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Melee.Brawling.Crushing_Uppercut",
+      "archetypeOrder": "primary",
+      "powerIndex": 8,
+      "castTimeReal": 2.17,
+      "toggleCost": 14.352,
+      "fullName": "Brute_Primary_Street_Justice_Crushing_Uppercut",
+      "displayName": "Crushing Uppercut",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1.2,
+      "accuracyMult": 1.2,
+      "attackTypes": 9,
+      "target": 2048,
+      "targetLoS": true,
+      "range": 13,
+      "endCost": 14.352,
+      "rechargeTime": 25,
+      "baseRechargeTime": 25,
+      "effectArea": 1,
+      "numAllowed": 1,
+      "description": {
+        "short": "Melee, Extreme DMG (Smash), Foe Knock Up, Disorient, Finisher",
+        "long": "You perform a jaw breaking Crushing Uppercut on your target inflicting Extreme Smashing damage and knocking them into the air.  Crushing Uppercut will leave the target disoriented for a short time. Crushing Uppercut is a Finisher and will set your Combo Level to 0. It will deal additional damage and have a longer disorient duration dependent upon the current Combo Level. At Combo Level 3, Crushing Uppercut will have its disorient effect upgraded to a Hold effect. Damage: Extreme, Recharge: Slow"
+      },
+      "setTypes": [
+        1,
+        10,
+        11,
+        23,
+        24,
+        34,
+        44
+      ],
+      "level": 32,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "neverAutoUpdate": true,
+      "castTime": 2.376,
+      "slottable": true,
+      "aoeModifier": 1
+    }
+  ]
+}

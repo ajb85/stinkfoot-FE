@@ -1,0 +1,92 @@
+{
+  "fullName": "IOSet.Triumphant_Insult",
+  "enhancements": [
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Triumphant_Insult_A.Attuned_Triumphant_Insult_A",
+      "displayName": "Taunt",
+      "description": {
+        "short": "+Taunt",
+        "long": "Enhances the taunt duration of a power by {Boost.Attrib.Taunt.Scale}%."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.424
+            }
+          },
+          "mezType": 11,
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Triumphant_Insult_B.Attuned_Triumphant_Insult_B",
+      "displayName": "Taunt/Recharge",
+      "description": {
+        "short": "+Taunt, +Rech",
+        "long": "Enhances the taunt duration of a power by {Boost.Attrib.Taunt.Scale}% and reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}%."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Recharge",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "mezType": 11,
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Triumphant_Insult_C.Attuned_Triumphant_Insult_C",
+      "displayName": "Chance to Disorient",
+      "description": {
+        "short": "Adds Disorient Chance",
+        "long": "Adds a chance to Disorient your foe.  This effect will trigger roughly 2 times per minute."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 1
+            }
+          },
+          "stat": "Chance to Disorient",
+          "procsPerMinute": 2,
+          "cancelOnMiss": true,
+          "mezType": 10,
+          "stacking": 1,
+          "resistible": true,
+          "pvMode": 1,
+          "toWho": "all",
+          "attribType": 1
+        }
+      ]
+    }
+  ],
+  "levels": {
+    "min": 10,
+    "max": 20
+  },
+  "setType": 24,
+  "setTypeName": "Taunt",
+  "displayName": "Triumphant Insult",
+  "imageName": "sTriumphantInsult.png"
+}

@@ -1,0 +1,159 @@
+{
+  "fullName": "IOSet.Tempest",
+  "enhancements": [
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Tempest_A.Attuned_Tempest_A",
+      "displayName": "Accuracy/Damage",
+      "description": {
+        "short": "Enhances Accuracy and Damage",
+        "long": "Enhances the damage of a power by {Boost.Attrib.Damage.Scale}% and accuracy by {Boost.Attrib.Accuracy.Scale}%."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Accuracy",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Damage",
+          "damageType": [
+            "Smashing",
+            "Lethal",
+            "Fire",
+            "Cold",
+            "Energy",
+            "Negative",
+            "Toxic",
+            "Psionic"
+          ],
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Tempest_B.Attuned_Tempest_B",
+      "displayName": "Damage/Endurance",
+      "description": {
+        "short": "Enhances Damage and Reduces Endurance Cost",
+        "long": "Enhances the damage of a power by {Boost.Attrib.Damage.Scale}% and reduces endurance cost by {Boost.Attrib.Endurance.Scale}%"
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Damage",
+          "damageType": [
+            "Smashing",
+            "Lethal",
+            "Fire",
+            "Cold",
+            "Energy",
+            "Negative",
+            "Toxic",
+            "Psionic"
+          ],
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Tempest_C.Attuned_Tempest_C",
+      "displayName": "Damage/Recharge",
+      "description": {
+        "short": "Enhances Damage and Recharge",
+        "long": "Enhances the damage of a power by {Boost.Attrib.Damage.Scale}% and reduces recharge time by {Boost.Attrib.Recharge.Scale}%"
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Damage",
+          "damageType": [
+            "Smashing",
+            "Lethal",
+            "Fire",
+            "Cold",
+            "Energy",
+            "Negative",
+            "Toxic",
+            "Psionic"
+          ],
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Recharge",
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Tempest_D.Attuned_Tempest_D",
+      "displayName": "Chance for Endurance Drain",
+      "description": {
+        "short": "Chance for Endurance Drain",
+        "long": "Gives a chance to drain some of your opponents endurance.  This effect will trigger roughly 3.5 times per minute."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": -0.13
+            }
+          },
+          "stat": "Chance for Endurance Drain",
+          "procsPerMinute": 3.5,
+          "cancelOnMiss": true,
+          "stacking": 1,
+          "resistible": true,
+          "pvMode": 1,
+          "toWho": "all"
+        }
+      ]
+    }
+  ],
+  "levels": {
+    "min": 15,
+    "max": 30
+  },
+  "setType": 2,
+  "setTypeName": "Ranged Damage",
+  "displayName": "Tempest",
+  "imageName": "sTempest.png"
+}

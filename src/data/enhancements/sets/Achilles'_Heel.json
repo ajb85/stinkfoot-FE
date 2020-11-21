@@ -1,0 +1,97 @@
+{
+  "fullName": "IOSet.Achilles'_Heel",
+  "enhancements": [
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Achilles_Heel_A.Attuned_Achilles_Heel_A",
+      "displayName": "Defense Debuff",
+      "description": {
+        "short": "+Defense Debuff",
+        "long": "Enhances the defense debuff potential of a power by {Boost.Attrib.DefenseDebuff.Scale}%."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.424
+            }
+          },
+          "stat": "Defense_Debuff",
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Achilles_Heel_B.Attuned_Achilles_Heel_B",
+      "displayName": "Defense Debuff/Recharge",
+      "description": {
+        "short": "+Defense Debuff, +Rech",
+        "long": "Enhances the defense debuff potential of a power by {Boost.Attrib.DefenseDebuff.Scale}% and reduces the recharge time by {Boost.Attrib.Recharge.Scale}%."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Defense_Debuff",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Recharge",
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Achilles_Heel_C.Attuned_Achilles_Heel_C",
+      "displayName": "Chance for Resistance Debuff",
+      "description": {
+        "short": "-RES (All)",
+        "long": "Gives a chance to reduce your foes damage resistance by 20%.  This effect will trigger roughly 3.5 times per minute."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": -0.2
+            }
+          },
+          "stat": "Chance for Resistance Debuff",
+          "procsPerMinute": 3.5,
+          "damageType": [
+            "Smashing",
+            "Lethal",
+            "Fire",
+            "Cold",
+            "Energy",
+            "Negative",
+            "Toxic",
+            "Psionic"
+          ],
+          "resistible": true,
+          "toWho": "all"
+        }
+      ]
+    }
+  ],
+  "levels": {
+    "min": 10,
+    "max": 20
+  },
+  "setType": 21,
+  "setTypeName": "Defense Debuff",
+  "displayName": "Achilles' Heel",
+  "imageName": "sAchillesHeel.png"
+}

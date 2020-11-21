@@ -1,0 +1,113 @@
+{
+  "fullName": "IOSet.Volley_of_Velocity",
+  "enhancements": [
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Volley_of_Velocity_A.Attuned_Volley_of_Velocity_A",
+      "displayName": "Knockback/Damage",
+      "description": {
+        "short": "+Knockback, +DMG",
+        "long": "Enhances the Knockback potential of a power by {Boost.Attrib.Knockback.Scale}% and the damage by {Boost.Attrib.Damage.Scale}%."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Damage",
+          "damageType": [
+            "Smashing",
+            "Lethal",
+            "Fire",
+            "Cold",
+            "Energy",
+            "Negative",
+            "Toxic",
+            "Psionic"
+          ],
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.4775
+            }
+          },
+          "mezType": 4,
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Volley_of_Velocity_B.Attuned_Volley_of_Velocity_B",
+      "displayName": "Knockback/Accuracy",
+      "description": {
+        "short": "+Knockback, +ACC",
+        "long": "Enhances the Knockback potential of a power by {Boost.Attrib.Knockback.Scale}% and the accuracy by {Boost.Attrib.Accuracy.Scale}%."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Accuracy",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.4775
+            }
+          },
+          "mezType": 4,
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Volley_of_Velocity_C.Attuned_Volley_of_Velocity_C",
+      "displayName": "Knockback/Recharge",
+      "description": {
+        "short": "+Knockback, +Rech",
+        "long": "Enhances the Knockback potential of a power by {Boost.Attrib.Knockback.Scale}% and reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}%."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Recharge",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.4775
+            }
+          },
+          "mezType": 4,
+          "toWho": "self"
+        }
+      ]
+    }
+  ],
+  "levels": {
+    "min": 10,
+    "max": 20
+  },
+  "setType": 23,
+  "setTypeName": "Knockback",
+  "displayName": "Volley of Velocity",
+  "imageName": "sVolleyOfVelocity.png"
+}

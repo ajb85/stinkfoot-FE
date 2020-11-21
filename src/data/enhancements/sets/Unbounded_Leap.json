@@ -1,0 +1,77 @@
+{
+  "fullName": "IOSet.Unbounded_Leap",
+  "enhancements": [
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Unbounded_Leap_A.Attuned_Unbounded_Leap_A",
+      "displayName": "Endurance",
+      "description": {
+        "short": "-End Cost",
+        "long": "Reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.424
+            }
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Unbounded_Leap_B.Attuned_Unbounded_Leap_B",
+      "displayName": "Jump",
+      "description": {
+        "short": "+Jump",
+        "long": "Enhances the jumping ability of a power by {Boost.Attrib.Jump.Scale}%."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.424
+            }
+          },
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Unbounded_Leap_C.Attuned_Unbounded_Leap_C",
+      "displayName": "Stealth",
+      "description": {
+        "short": "Grants Stealth",
+        "long": "UNIQUE -- No more than 1 enhancement of this type may be slotted by a character.  May not be slotted if you have any other enhancements which grant stealth.  Grants Stealth for 120 seconds when used in an instant effect power."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 30
+            }
+          },
+          "stat": "Stealth",
+          "cancelOnMiss": true,
+          "suppression": 448,
+          "toWho": "self"
+        }
+      ]
+    }
+  ],
+  "levels": {
+    "min": 15,
+    "max": 50
+  },
+  "setType": 18,
+  "setTypeName": "Leaping",
+  "displayName": "Unbounded Leap",
+  "imageName": "sUnboundedLeap.png"
+}

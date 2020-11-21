@@ -1,0 +1,83 @@
+{
+  "fullName": "IOSet.Springfoot",
+  "enhancements": [
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Springfoot_A.Attuned_Springfoot_A",
+      "displayName": "Jump",
+      "description": {
+        "short": "+Jump",
+        "long": "Enhances the jumping ability of a power by {Boost.Attrib.Jump.Scale}%."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.424
+            }
+          },
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Springfoot_B.Attuned_Springfoot_B",
+      "displayName": "Endurance",
+      "description": {
+        "short": "-End Cost",
+        "long": "Reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.424
+            }
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Springfoot_C.Attuned_Springfoot_C",
+      "displayName": "Endurance/Jump",
+      "description": {
+        "short": "+Jump, -End Cost",
+        "long": "Enhances the jumping ability of a power by {Boost.Attrib.Jump.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "toWho": "self"
+        }
+      ]
+    }
+  ],
+  "levels": {
+    "min": 15,
+    "max": 50
+  },
+  "setType": 18,
+  "setTypeName": "Leaping",
+  "displayName": "Springfoot",
+  "imageName": "sSpringfoot.png"
+}

@@ -1,0 +1,572 @@
+{
+  "fullName": "Epic_Primal_Forces_Mastery",
+  "archetypeOrder": "epicPool",
+  "description": "You have Mastery over Primal Forces and energy to blast your foes, increase your power, and to add some much needed armor and defense.",
+  "imageName": "PrimalForcesMastery.png",
+  "displayName": "Primal Forces Mastery",
+  "powers": [
+    {
+      "effects": [
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 86.75191,
+                "pvp": 39.0316849
+              },
+              "probability": 1,
+              "effectType": "Damage",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Epic.Primal_Forces_Mastery_Dominator.Energy_Transfer",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 166.8306,
+                "pvp": 105.2868
+              },
+              "probability": 1,
+              "effectType": "Damage",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Epic.Primal_Forces_Mastery_Dominator.Energy_Transfer",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 166.8306
+              },
+              "probability": 1,
+              "variableModified": true,
+              "effectType": "Damage",
+              "delayedTime": 0.1,
+              "stacking": 1,
+              "toWho": "self",
+              "powerFullName": "Epic.Primal_Forces_Mastery_Dominator.Energy_Transfer",
+              "damageType": "Special"
+            }
+          ]
+        },
+        {
+          "effectType": "Stun",
+          "values": [
+            {
+              "mag": {
+                "pve": 3
+              },
+              "probability": 0.6,
+              "duration": 9.536,
+              "effectType": "Mez",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "attribType": 1,
+              "powerFullName": "Epic.Primal_Forces_Mastery_Dominator.Energy_Transfer",
+              "mezType": "Stun"
+            }
+          ]
+        },
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pvp": 3
+              },
+              "probability": 0.6,
+              "duration": 2,
+              "effectType": "Mez",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "attribType": 1,
+              "powerFullName": "Epic.Primal_Forces_Mastery_Dominator.Energy_Transfer",
+              "mezType": "Stun"
+            }
+          ]
+        }
+      ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Recharge",
+        "Stun",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Primal_Forces_Mastery_Dominator.Energy_Transfer",
+      "archetypeOrder": "epicPool",
+      "powerIndex": 0,
+      "castTimeReal": 2.67,
+      "toggleCost": 19.11,
+      "fullName": "Epic_Primal_Forces_Mastery_Energy_Transfer",
+      "displayName": "Energy Transfer",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1.2,
+      "accuracyMult": 1.2,
+      "attackTypes": 137,
+      "target": 2048,
+      "targetLoS": true,
+      "range": 7,
+      "endCost": 19.11,
+      "rechargeTime": 20,
+      "baseRechargeTime": 20,
+      "effectArea": 1,
+      "numAllowed": 1,
+      "description": {
+        "short": "Melee, Extreme DMG(Energy/Smash), Foe Disorient, Self -HP",
+        "long": "Mastery of Energy Melee begins with the ability to transfer your own Hit Points into a punch that deals extreme damage. Energy Transfer has a good chance of Disorienting the target. Damage: Extreme, Recharge: Slow"
+      },
+      "setTypes": [
+        1,
+        11,
+        44
+      ],
+      "level": 35,
+      "ignoreEnh": [
+        13
+      ],
+      "ignore_Buff": [],
+      "castTime": 2.904,
+      "slottable": true,
+      "aoeModifier": 1
+    },
+    {
+      "effects": [
+        {
+          "effectType": "Stun",
+          "values": [
+            {
+              "etModifies": "EnduranceDiscount",
+              "mag": {
+                "pve": 1.192
+              },
+              "probability": 1,
+              "duration": 90,
+              "variableModified": true,
+              "effectType": "Enhancement",
+              "stacking": 1,
+              "toWho": "self",
+              "powerFullName": "Epic.Primal_Forces_Mastery_Dominator.Conserve_Power"
+            }
+          ]
+        }
+      ],
+      "allowedEnhancements": [
+        "Endurance_Discount",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Primal_Forces_Mastery_Dominator.Conserve_Power",
+      "archetypeOrder": "epicPool",
+      "powerIndex": 1,
+      "castTimeReal": 1.17,
+      "toggleCost": 9.75,
+      "fullName": "Epic_Primal_Forces_Mastery_Conserve_Power",
+      "displayName": "Conserve Power",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "target": 1,
+      "targetLoS": true,
+      "endCost": 9.75,
+      "rechargeTime": 600,
+      "baseRechargeTime": 600,
+      "effectArea": 1,
+      "numAllowed": 1,
+      "description": {
+        "short": "Self Endurance Discount",
+        "long": "You can focus for a moment to conserve your Endurance. After activating this power, you expend less Endurance on all other powers for a while. Recharge: Very Long"
+      },
+      "setTypes": [],
+      "clickBuff": true,
+      "level": 35,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 1.31999993,
+      "slottable": true,
+      "aoeModifier": 1
+    },
+    {
+      "effects": [
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 18.7684517,
+                "pvp": 28.8152027
+              },
+              "probability": 1,
+              "effectType": "Damage",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Epic.Primal_Forces_Mastery_Dominator.Energy_Torrent",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 60.05904,
+                "pvp": 46.4756851
+              },
+              "probability": 1,
+              "effectType": "Damage",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Epic.Primal_Forces_Mastery_Dominator.Energy_Torrent",
+              "damageType": "Energy"
+            }
+          ]
+        },
+        {
+          "effectType": "Knockback",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.498510033,
+                "pvp": 0.498510033
+              },
+              "probability": 0.6,
+              "effectType": "Mez",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Epic.Primal_Forces_Mastery_Dominator.Energy_Torrent",
+              "mezType": "Knockback"
+            }
+          ]
+        }
+      ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Knockback",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Primal_Forces_Mastery_Dominator.Energy_Torrent",
+      "archetypeOrder": "epicPool",
+      "powerIndex": 2,
+      "castTimeReal": 1.07,
+      "toggleCost": 14.82,
+      "isEpic": true,
+      "fullName": "Epic_Primal_Forces_Mastery_Energy_Torrent",
+      "displayName": "Energy Torrent",
+      "requires": {
+        "powers": {
+          "Epic.Primal_Forces_Mastery_Dominator.Energy_Torrent": true
+        },
+        "count": 1
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "attackTypes": 140,
+      "target": 2048,
+      "targetLoS": true,
+      "range": 40,
+      "endCost": 14.82,
+      "rechargeTime": 24,
+      "baseRechargeTime": 24,
+      "effectArea": 3,
+      "radius": 40,
+      "arc": 45,
+      "maxTargets": 10,
+      "numAllowed": 1,
+      "description": {
+        "short": "Ranged (Cone), Moderate DMG(Energy/Smash), Foe Knockback",
+        "long": "Energy Torrent unleashes a cone of powerful energy that can smash foes and possibly send them flying. You must be level 41 and have Energy Transfer or Conserve Power before selecting this power.  Damage: Moderate, Recharge: Slow"
+      },
+      "setTypes": [
+        3,
+        23,
+        44
+      ],
+      "level": 41,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 1.31999993,
+      "slottable": true,
+      "aoeModifier": 2.37995839
+    },
+    {
+      "effects": [
+        {
+          "effectType": "Res_Dmg",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.210000008,
+                "pvp": 0.210000008
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Resistance",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Epic.Primal_Forces_Mastery_Dominator.Temp_Invulnerability",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 0.210000008,
+                "pvp": 0.210000008
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Resistance",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Epic.Primal_Forces_Mastery_Dominator.Temp_Invulnerability",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pvp": 0.210000008
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Resistance",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Epic.Primal_Forces_Mastery_Dominator.Temp_Invulnerability",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pvp": 0.210000008
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Resistance",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Epic.Primal_Forces_Mastery_Dominator.Temp_Invulnerability",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pvp": 0.210000008
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Resistance",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Epic.Primal_Forces_Mastery_Dominator.Temp_Invulnerability",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pvp": 0.210000008
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Resistance",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Epic.Primal_Forces_Mastery_Dominator.Temp_Invulnerability",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pvp": 0.210000008
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Resistance",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Epic.Primal_Forces_Mastery_Dominator.Temp_Invulnerability",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pvp": 0.210000008
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Resistance",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Epic.Primal_Forces_Mastery_Dominator.Temp_Invulnerability",
+              "damageType": "Psionic"
+            }
+          ]
+        }
+      ],
+      "allowedEnhancements": [
+        "Endurance_Discount",
+        "Recharge",
+        "Res_Damage"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Primal_Forces_Mastery_Dominator.Temp_Invulnerability",
+      "archetypeOrder": "epicPool",
+      "powerIndex": 3,
+      "castTimeReal": 0.67,
+      "toggleCost": 0.325,
+      "isEpic": true,
+      "fullName": "Epic_Primal_Forces_Mastery_Temp_Invulnerability",
+      "displayName": "Temp Invulnerability",
+      "requires": {
+        "powers": {
+          "Epic.Primal_Forces_Mastery_Dominator.Temp_Invulnerability": true
+        },
+        "count": 1
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "target": 1,
+      "targetLoS": true,
+      "endCost": 0.1625,
+      "rechargeTime": 2,
+      "baseRechargeTime": 2,
+      "activatePeriod": 0.5,
+      "effectArea": 1,
+      "numAllowed": 1,
+      "ignoreStrength": true,
+      "description": {
+        "short": "Toggle: Self +Res(Smash, Lethal)",
+        "long": "When you toggle on this power, you become highly resistant to Smashing and Lethal damage. You must be level 41 and have Energy Transfer or Conserve Power before selecting this power. Recharge: Fast"
+      },
+      "setTypes": [
+        8
+      ],
+      "level": 41,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 0.924,
+      "slottable": true,
+      "aoeModifier": 1,
+      "powerType": "Toggle"
+    },
+    {
+      "effects": [
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 31.28075
+              },
+              "probability": 1,
+              "effectType": "Damage",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Epic.Primal_Forces_Mastery_Dominator.Explosive_Blast",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 25.024601,
+                "pvp": 48.67973
+              },
+              "probability": 1,
+              "effectType": "Damage",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Epic.Primal_Forces_Mastery_Dominator.Explosive_Blast",
+              "damageType": "Energy"
+            }
+          ]
+        },
+        {
+          "effectType": "Knockback",
+          "values": [
+            {
+              "mag": {
+                "pve": 3.3234,
+                "pvp": 3.3234
+              },
+              "probability": 0.5,
+              "effectType": "Mez",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Epic.Primal_Forces_Mastery_Dominator.Explosive_Blast",
+              "mezType": "Knockback"
+            }
+          ]
+        }
+      ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Knockback",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Primal_Forces_Mastery_Dominator.Explosive_Blast",
+      "archetypeOrder": "epicPool",
+      "powerIndex": 4,
+      "castTimeReal": 1.67,
+      "toggleCost": 28.47,
+      "isEpic": true,
+      "fullName": "Epic_Primal_Forces_Mastery_Explosive_Blast",
+      "displayName": "Explosive Blast",
+      "requires": {
+        "powers": {
+          "Epic.Primal_Forces_Mastery_Dominator.Explosive_Blast": true
+        },
+        "count": 2
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "attackTypes": 140,
+      "target": 2048,
+      "targetLoS": true,
+      "range": 80,
+      "endCost": 28.47,
+      "rechargeTime": 16,
+      "baseRechargeTime": 16,
+      "effectArea": 2,
+      "radius": 15,
+      "maxTargets": 16,
+      "numAllowed": 1,
+      "description": {
+        "short": "Ranged (Targeted AoE), Moderate DMG(Smash/Energy), Foe Knockback",
+        "long": "You hurl a blast of charged energy that violently explodes on impact, damaging all foes near the target. Explosive Blast may knock targets backwards. You must be level 44 and have two other Primal Forces Mastery Powers before selecting this power. Damage: Moderate, Recharge: Slow"
+      },
+      "setTypes": [
+        3,
+        23,
+        44
+      ],
+      "level": 44,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 1.848,
+      "slottable": true,
+      "aoeModifier": 3.25
+    }
+  ]
+}

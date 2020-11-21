@@ -1,0 +1,2006 @@
+{
+  "fullName": "Blaster_Primary_Electrical_Blast",
+  "archetypeOrder": "primary",
+  "description": "Electrical Blast endows you with ranged electrical attack powers. Electrical powers can drain foes' Endurance and can often temporarily halt their Endurance recovery. This can be quite effective against higher level foes and Bosses. Some Electrical Blast powers can even sometimes transfer this Endurance back to you.",
+  "imageName": "ElecBlast.png",
+  "displayName": "Electrical Blast",
+  "powers": [
+    {
+      "effects": [
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 62.5615,
+                "pvp": 96.92341
+              },
+              "probability": 1,
+              "effectType": "Damage",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Charged_Bolts",
+              "damageType": "Energy"
+            }
+          ]
+        },
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": -0.07
+              },
+              "probability": 1,
+              "effectType": "Endurance",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Charged_Bolts"
+            },
+            {
+              "mag": {
+                "pve": -1
+              },
+              "probability": 0.2,
+              "duration": 2,
+              "effectType": "Recovery",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Charged_Bolts"
+            },
+            {
+              "mag": {
+                "pve": 2.6
+              },
+              "probability": 0.3,
+              "variableModified": true,
+              "effectType": "Endurance",
+              "stacking": 1,
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Charged_Bolts"
+            },
+            {
+              "mag": {
+                "pve": 0.066
+              },
+              "probability": 1,
+              "duration": 8.5,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Charged_Bolts",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 0.066
+              },
+              "probability": 1,
+              "duration": 8.5,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Charged_Bolts",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.066
+              },
+              "probability": 1,
+              "duration": 8.5,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Charged_Bolts",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.066
+              },
+              "probability": 1,
+              "duration": 8.5,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Charged_Bolts",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 0.066
+              },
+              "probability": 1,
+              "duration": 8.5,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Charged_Bolts",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.066
+              },
+              "probability": 1,
+              "duration": 8.5,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Charged_Bolts",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.066
+              },
+              "probability": 1,
+              "duration": 8.5,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Charged_Bolts",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pve": 0.066
+              },
+              "probability": 1,
+              "duration": 8.5,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Charged_Bolts",
+              "damageType": "Psionic"
+            }
+          ]
+        },
+        {
+          "effectType": "EndDrain",
+          "values": [
+            {
+              "mag": {
+                "pvp": -1.25
+              },
+              "probability": 1,
+              "effectType": "Endurance",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Charged_Bolts"
+            }
+          ]
+        }
+      ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Range",
+        "Recharge",
+        "Endurance_Modification"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Ranged.Electrical_Blast.Charged_Bolts",
+      "archetypeOrder": "primary",
+      "powerIndex": 0,
+      "castTimeReal": 1,
+      "toggleCost": 5.2,
+      "fullName": "Blaster_Primary_Electrical_Blast_Charged_Bolts",
+      "displayName": "Charged Bolts",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "attackTypes": 130,
+      "target": 2048,
+      "targetLoS": true,
+      "range": 80,
+      "endCost": 5.2,
+      "rechargeTime": 4,
+      "baseRechargeTime": 4,
+      "effectArea": 1,
+      "numAllowed": 1,
+      "castThroughHold": true,
+      "description": {
+        "short": "Ranged, Moderate DMG(Energy), Foe -End",
+        "long": "You can quickly hurl small bolts of electricity at foes, dealing some damage and draining some Endurance. Some of this Endurance may transfer back to you. Charged Bolts deals light damage but recharges quickly. Damage: Moderate, Recharge: Fast"
+      },
+      "setTypes": [
+        2,
+        22,
+        33,
+        44
+      ],
+      "level": 1,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 1.188,
+      "slottable": true,
+      "aoeModifier": 1
+    },
+    {
+      "effects": [
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 102.600861,
+                "pvp": 145.308472
+              },
+              "probability": 1,
+              "effectType": "Damage",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Lightning_Bolt",
+              "damageType": "Energy"
+            }
+          ]
+        },
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": -0.1
+              },
+              "probability": 1,
+              "effectType": "Endurance",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Lightning_Bolt"
+            },
+            {
+              "mag": {
+                "pve": -1
+              },
+              "probability": 0.3,
+              "duration": 4,
+              "effectType": "Recovery",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Lightning_Bolt"
+            },
+            {
+              "mag": {
+                "pve": 4.265
+              },
+              "probability": 0.3,
+              "variableModified": true,
+              "effectType": "Endurance",
+              "stacking": 1,
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Lightning_Bolt"
+            },
+            {
+              "mag": {
+                "pve": 0.11
+              },
+              "probability": 1,
+              "duration": 9.17,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Lightning_Bolt",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 0.11
+              },
+              "probability": 1,
+              "duration": 9.17,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Lightning_Bolt",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.11
+              },
+              "probability": 1,
+              "duration": 9.17,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Lightning_Bolt",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.11
+              },
+              "probability": 1,
+              "duration": 9.17,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Lightning_Bolt",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 0.11
+              },
+              "probability": 1,
+              "duration": 9.17,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Lightning_Bolt",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.11
+              },
+              "probability": 1,
+              "duration": 9.17,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Lightning_Bolt",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.11
+              },
+              "probability": 1,
+              "duration": 9.17,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Lightning_Bolt",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pve": 0.11
+              },
+              "probability": 1,
+              "duration": 9.17,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Lightning_Bolt",
+              "damageType": "Psionic"
+            }
+          ]
+        },
+        {
+          "effectType": "EndDrain",
+          "values": [
+            {
+              "mag": {
+                "pvp": -2
+              },
+              "probability": 1,
+              "effectType": "Endurance",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Lightning_Bolt"
+            }
+          ]
+        }
+      ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Range",
+        "Recharge",
+        "Endurance_Modification"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Ranged.Electrical_Blast.Lightning_Bolt",
+      "archetypeOrder": "primary",
+      "powerIndex": 1,
+      "castTimeReal": 1.67,
+      "toggleCost": 8.528,
+      "fullName": "Blaster_Primary_Electrical_Blast_Lightning_Bolt",
+      "displayName": "Lightning Bolt",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "attackTypes": 130,
+      "target": 2048,
+      "targetLoS": true,
+      "range": 80,
+      "endCost": 8.528,
+      "rechargeTime": 8,
+      "baseRechargeTime": 8,
+      "effectArea": 1,
+      "numAllowed": 1,
+      "castThroughHold": true,
+      "description": {
+        "short": "Ranged, High DMG(Energy), Foe -End",
+        "long": "You can send a large blast of electrical energy at a foe, dealing heavy damage and draining some Endurance. Some of this Endurance may transfer back to you. Lightning Bolt deals more damage than Charged Bolts, but recharges more slowly. Damage: High, Recharge: Moderate"
+      },
+      "setTypes": [
+        2,
+        22,
+        33,
+        44
+      ],
+      "level": 1,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 1.848,
+      "slottable": true,
+      "aoeModifier": 1
+    },
+    {
+      "effects": [
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 11.26107,
+                "pvp": 6.443835
+              },
+              "probability": 1,
+              "effectType": "Damage",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Ball_Lightning",
+              "damageType": "Energy"
+            }
+          ]
+        },
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": -0.07
+              },
+              "probability": 1,
+              "effectType": "Endurance",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Ball_Lightning"
+            },
+            {
+              "mag": {
+                "pve": -1
+              },
+              "probability": 0.3,
+              "duration": 4,
+              "effectType": "Recovery",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Ball_Lightning"
+            },
+            {
+              "mag": {
+                "pve": 0.022
+              },
+              "probability": 1,
+              "duration": 8.57,
+              "effectType": "DamageBuff",
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Ball_Lightning",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 0.022
+              },
+              "probability": 1,
+              "duration": 8.57,
+              "effectType": "DamageBuff",
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Ball_Lightning",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.022
+              },
+              "probability": 1,
+              "duration": 8.57,
+              "effectType": "DamageBuff",
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Ball_Lightning",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.022
+              },
+              "probability": 1,
+              "duration": 8.57,
+              "effectType": "DamageBuff",
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Ball_Lightning",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 0.022
+              },
+              "probability": 1,
+              "duration": 8.57,
+              "effectType": "DamageBuff",
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Ball_Lightning",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.022
+              },
+              "probability": 1,
+              "duration": 8.57,
+              "effectType": "DamageBuff",
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Ball_Lightning",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.022
+              },
+              "probability": 1,
+              "duration": 8.57,
+              "effectType": "DamageBuff",
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Ball_Lightning",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pve": 0.022
+              },
+              "probability": 1,
+              "duration": 8.57,
+              "effectType": "DamageBuff",
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Ball_Lightning",
+              "damageType": "Psionic"
+            }
+          ]
+        },
+        {
+          "effectType": "EndDrain",
+          "values": [
+            {
+              "mag": {
+                "pvp": -1.25
+              },
+              "probability": 1,
+              "effectType": "Endurance",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Ball_Lightning"
+            }
+          ]
+        }
+      ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Range",
+        "Recharge",
+        "Endurance_Modification"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Ranged.Electrical_Blast.Ball_Lightning",
+      "archetypeOrder": "primary",
+      "powerIndex": 2,
+      "castTimeReal": 1.07,
+      "toggleCost": 15.184,
+      "fullName": "Blaster_Primary_Electrical_Blast_Ball_Lightning",
+      "displayName": "Ball Lightning",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "attackTypes": 132,
+      "target": 2048,
+      "targetLoS": true,
+      "range": 80,
+      "endCost": 15.184,
+      "rechargeTime": 16,
+      "baseRechargeTime": 16,
+      "effectArea": 2,
+      "radius": 15,
+      "maxTargets": 16,
+      "numAllowed": 1,
+      "description": {
+        "short": "Ranged (Targeted AoE), Moderate DoT(Energy), Foe -End",
+        "long": "Hurls a highly charged ball of lightning that explodes on contact. Ball Lightning deals good damage in an area of effect, and drains some Endurance from each target it hits. Damage: Moderate(DoT), Recharge: Slow"
+      },
+      "setTypes": [
+        3,
+        22,
+        33,
+        44
+      ],
+      "level": 2,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 1.31999993,
+      "slottable": true,
+      "aoeModifier": 3.25
+    },
+    {
+      "effects": [
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 31.28075,
+                "pvp": 13.5383081
+              },
+              "probability": 1,
+              "duration": 4.1,
+              "effectType": "Damage",
+              "ticks": 5,
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Short_Circuit",
+              "damageType": "Energy"
+            }
+          ]
+        },
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": -0.35
+              },
+              "probability": 1,
+              "effectType": "Endurance",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Short_Circuit"
+            },
+            {
+              "mag": {
+                "pve": -1
+              },
+              "probability": 1,
+              "duration": 10,
+              "effectType": "Recovery",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Short_Circuit"
+            },
+            {
+              "mag": {
+                "pve": 0.05
+              },
+              "probability": 1,
+              "duration": 10.5,
+              "effectType": "DamageBuff",
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Short_Circuit",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 0.05
+              },
+              "probability": 1,
+              "duration": 10.5,
+              "effectType": "DamageBuff",
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Short_Circuit",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.05
+              },
+              "probability": 1,
+              "duration": 10.5,
+              "effectType": "DamageBuff",
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Short_Circuit",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.05
+              },
+              "probability": 1,
+              "duration": 10.5,
+              "effectType": "DamageBuff",
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Short_Circuit",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 0.05
+              },
+              "probability": 1,
+              "duration": 10.5,
+              "effectType": "DamageBuff",
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Short_Circuit",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.05
+              },
+              "probability": 1,
+              "duration": 10.5,
+              "effectType": "DamageBuff",
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Short_Circuit",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.05
+              },
+              "probability": 1,
+              "duration": 10.5,
+              "effectType": "DamageBuff",
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Short_Circuit",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pve": 0.05
+              },
+              "probability": 1,
+              "duration": 10.5,
+              "effectType": "DamageBuff",
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Short_Circuit",
+              "damageType": "Psionic"
+            }
+          ]
+        },
+        {
+          "effectType": "EndDrain",
+          "values": [
+            {
+              "mag": {
+                "pvp": -10
+              },
+              "probability": 1,
+              "effectType": "Endurance",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Short_Circuit"
+            }
+          ]
+        }
+      ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Recharge",
+        "Endurance_Modification"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Ranged.Electrical_Blast.Short_Circuit",
+      "archetypeOrder": "primary",
+      "powerIndex": 3,
+      "castTimeReal": 3,
+      "toggleCost": 15.6,
+      "fullName": "Blaster_Primary_Electrical_Blast_Short_Circuit",
+      "displayName": "Short Circuit",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1.3,
+      "accuracyMult": 1.3,
+      "attackTypes": 132,
+      "target": 1,
+      "targetLoS": true,
+      "endCost": 15.6,
+      "rechargeTime": 20,
+      "baseRechargeTime": 20,
+      "effectArea": 2,
+      "radius": 20,
+      "maxTargets": 16,
+      "numAllowed": 1,
+      "description": {
+        "short": "PBAoE, Moderate DoT(Energy), Foe -End, -Recovery",
+        "long": "Releases a burst of electrical energy around you, shocking all nearby foes. This highly accurate discharge deals Moderate damage over time, drains a lot of Endurance from the targets and renders them unable to recover Endurance for quite a while. Additionally, Short Circuit deals extra damage to most robots and mechanical foes. Short Circuit is very effective when used with your other Endurance draining powers. Damage: Moderate, Recharge: Slow"
+      },
+      "setTypes": [
+        4,
+        22,
+        33,
+        44
+      ],
+      "level": 6,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 3.168,
+      "slottable": true,
+      "aoeModifier": 4
+    },
+    {
+      "effects": [
+        {
+          "effectType": "Buff_ToHit",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.5
+              },
+              "probability": 1,
+              "duration": 10,
+              "variableModified": true,
+              "effectType": "ToHit",
+              "stacking": 1,
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Aim"
+            }
+          ]
+        },
+        {
+          "effectType": "Buff_Dmg",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.625
+              },
+              "probability": 1,
+              "duration": 10,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Aim",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 0.625
+              },
+              "probability": 1,
+              "duration": 10,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Aim",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.625
+              },
+              "probability": 1,
+              "duration": 10,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Aim",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.625
+              },
+              "probability": 1,
+              "duration": 10,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Aim",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 0.625
+              },
+              "probability": 1,
+              "duration": 10,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Aim",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.625
+              },
+              "probability": 1,
+              "duration": 10,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Aim",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.625
+              },
+              "probability": 1,
+              "duration": 10,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Aim",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pve": 0.625
+              },
+              "probability": 1,
+              "duration": 10,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Aim",
+              "damageType": "Psionic"
+            }
+          ]
+        }
+      ],
+      "allowedEnhancements": [
+        "ToHit_Buff",
+        "Endurance_Discount",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Ranged.Electrical_Blast.Aim",
+      "archetypeOrder": "primary",
+      "powerIndex": 4,
+      "castTimeReal": 1.17,
+      "toggleCost": 5.2,
+      "fullName": "Blaster_Primary_Electrical_Blast_Aim",
+      "displayName": "Aim",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "target": 1,
+      "targetLoS": true,
+      "endCost": 5.2,
+      "rechargeTime": 90,
+      "baseRechargeTime": 90,
+      "effectArea": 1,
+      "numAllowed": 1,
+      "description": {
+        "short": "Self +To Hit, +DMG",
+        "long": "Greatly increases the chance to hit of your attacks for a few seconds. Slightly increases damage. Recharge: Long"
+      },
+      "setTypes": [
+        25
+      ],
+      "clickBuff": true,
+      "level": 8,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 1.31999993,
+      "slottable": true,
+      "aoeModifier": 1
+    },
+    {
+      "effects": [
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 172.669739,
+                "pvp": 266.1548
+              },
+              "probability": 1,
+              "effectType": "Damage",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Zapp",
+              "damageType": "Energy"
+            }
+          ]
+        },
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": -0.15
+              },
+              "probability": 1,
+              "effectType": "Endurance",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Zapp"
+            },
+            {
+              "mag": {
+                "pve": 1
+              },
+              "probability": 1,
+              "variableModified": true,
+              "effectType": "PowerRedirect",
+              "stacking": 1,
+              "specialCase": 43,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Zapp"
+            },
+            {
+              "mag": {
+                "pve": -1
+              },
+              "probability": 0.5,
+              "duration": 4,
+              "effectType": "Recovery",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Zapp"
+            },
+            {
+              "mag": {
+                "pve": 7.2
+              },
+              "probability": 0.3,
+              "variableModified": true,
+              "effectType": "Endurance",
+              "stacking": 1,
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Zapp"
+            },
+            {
+              "mag": {
+                "pve": 0.088
+              },
+              "probability": 1,
+              "duration": 8.83,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Zapp",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 0.088
+              },
+              "probability": 1,
+              "duration": 8.83,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Zapp",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.088
+              },
+              "probability": 1,
+              "duration": 8.83,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Zapp",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.088
+              },
+              "probability": 1,
+              "duration": 8.83,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Zapp",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 0.088
+              },
+              "probability": 1,
+              "duration": 8.83,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Zapp",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.088
+              },
+              "probability": 1,
+              "duration": 8.83,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Zapp",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.088
+              },
+              "probability": 1,
+              "duration": 8.83,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Zapp",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pve": 0.088
+              },
+              "probability": 1,
+              "duration": 8.83,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Zapp",
+              "damageType": "Psionic"
+            },
+            {
+              "etModifies": "Range",
+              "mag": {
+                "pve": 0.5
+              },
+              "probability": 1,
+              "duration": 10,
+              "effectType": "Enhancement",
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Zapp"
+            }
+          ]
+        },
+        {
+          "effectType": "EndDrain",
+          "values": [
+            {
+              "mag": {
+                "pvp": -3
+              },
+              "probability": 1,
+              "effectType": "Endurance",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Zapp"
+            }
+          ]
+        }
+      ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Interrupt",
+        "Range",
+        "Recharge",
+        "Endurance_Modification"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Ranged.Electrical_Blast.Zapp",
+      "archetypeOrder": "primary",
+      "powerIndex": 5,
+      "castTimeReal": 4.33,
+      "toggleCost": 14.352,
+      "fullName": "Blaster_Primary_Electrical_Blast_Zapp",
+      "displayName": "Zapp",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1.2,
+      "accuracyMult": 1.2,
+      "attackTypes": 130,
+      "target": 2048,
+      "targetLoS": true,
+      "range": 150,
+      "endCost": 14.352,
+      "interruptTime": 3,
+      "rechargeTime": 12,
+      "baseRechargeTime": 12,
+      "effectArea": 1,
+      "numAllowed": 1,
+      "description": {
+        "short": "Sniper, Extreme DMG(Energy), Foe -End, Self +Range",
+        "long": "A focused electrical blast that can travel great distances with high Accuracy. Zapp drains Endurance, and is best fired from a distance, as it can be interrupted. Some of the Endurance you drain may transfer back to you. If you have more than 97% To-Hit, this attack becomes instant-cast.  Damage: Extreme, Recharge: Slow"
+      },
+      "setTypes": [
+        2,
+        5,
+        22,
+        33,
+        44
+      ],
+      "level": 12,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "hasPowerOverrideEffect": true,
+      "castTime": 4.488,
+      "slottable": true,
+      "aoeModifier": 1
+    },
+    {
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 3,
+                "pvp": 3
+              },
+              "probability": 1,
+              "duration": 8,
+              "effectType": "Mez",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "attribType": 1,
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Tesla_Cage",
+              "mezType": "Hold"
+            },
+            {
+              "mag": {
+                "pve": -0.07
+              },
+              "probability": 1,
+              "effectType": "Endurance",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Tesla_Cage"
+            },
+            {
+              "mag": {
+                "pve": -1
+              },
+              "probability": 1,
+              "duration": 8,
+              "effectType": "Recovery",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Tesla_Cage"
+            },
+            {
+              "mag": {
+                "pve": 3.43
+              },
+              "probability": 0.3,
+              "variableModified": true,
+              "effectType": "Endurance",
+              "stacking": 1,
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Tesla_Cage"
+            },
+            {
+              "mag": {
+                "pve": 0.143
+              },
+              "probability": 1,
+              "duration": 9.67,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Tesla_Cage",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 0.143
+              },
+              "probability": 1,
+              "duration": 9.67,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Tesla_Cage",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.143
+              },
+              "probability": 1,
+              "duration": 9.67,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Tesla_Cage",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.143
+              },
+              "probability": 1,
+              "duration": 9.67,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Tesla_Cage",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 0.143
+              },
+              "probability": 1,
+              "duration": 9.67,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Tesla_Cage",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.143
+              },
+              "probability": 1,
+              "duration": 9.67,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Tesla_Cage",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.143
+              },
+              "probability": 1,
+              "duration": 9.67,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Tesla_Cage",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pve": 0.143
+              },
+              "probability": 1,
+              "duration": 9.67,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Tesla_Cage",
+              "damageType": "Psionic"
+            }
+          ]
+        },
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 9.384226,
+                "pvp": 9.384226
+              },
+              "probability": 1,
+              "effectType": "Damage",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Tesla_Cage",
+              "damageType": "Energy"
+            }
+          ]
+        },
+        {
+          "effectType": "EndDrain",
+          "values": [
+            {
+              "mag": {
+                "pvp": -1.25
+              },
+              "probability": 1,
+              "effectType": "Endurance",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Tesla_Cage"
+            }
+          ]
+        }
+      ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Hold",
+        "Range",
+        "Recharge",
+        "Endurance_Modification"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Ranged.Electrical_Blast.Tesla_Cage",
+      "archetypeOrder": "primary",
+      "powerIndex": 6,
+      "castTimeReal": 2.17,
+      "toggleCost": 6.864,
+      "fullName": "Blaster_Primary_Electrical_Blast_Tesla_Cage",
+      "displayName": "Tesla Cage",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "attackTypes": 130,
+      "target": 2048,
+      "targetLoS": true,
+      "range": 60,
+      "endCost": 6.864,
+      "rechargeTime": 10,
+      "baseRechargeTime": 10,
+      "effectArea": 1,
+      "numAllowed": 1,
+      "description": {
+        "short": "Ranged, Minor DMG(Energy), Foe Hold, -End",
+        "long": "Tesla Cage confines the target in an electrical prison. The target is overwhelmed by the electrical charge and is left helpless and can be attacked. The target is drained of some Endurance and some of that Endurance may be transferred back to you. Damage: Minor, Recharge: Moderate"
+      },
+      "setTypes": [
+        2,
+        10,
+        22,
+        33,
+        44
+      ],
+      "level": 18,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 2.376,
+      "slottable": true,
+      "aoeModifier": 1
+    },
+    {
+      "effects": [
+        {
+          "effectType": "Level",
+          "values": [
+            {
+              "mag": {
+                "pve": 50
+              },
+              "probability": 1,
+              "duration": 60,
+              "effectType": "EntCreate",
+              "buffable": true,
+              "resistible": true,
+              "toWho": "all",
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Voltaic_Sentinel"
+            }
+          ]
+        },
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.205
+              },
+              "probability": 1,
+              "duration": 10.6,
+              "effectType": "DamageBuff",
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Voltaic_Sentinel",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 0.205
+              },
+              "probability": 1,
+              "duration": 10.6,
+              "effectType": "DamageBuff",
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Voltaic_Sentinel",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.205
+              },
+              "probability": 1,
+              "duration": 10.6,
+              "effectType": "DamageBuff",
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Voltaic_Sentinel",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.205
+              },
+              "probability": 1,
+              "duration": 10.6,
+              "effectType": "DamageBuff",
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Voltaic_Sentinel",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 0.205
+              },
+              "probability": 1,
+              "duration": 10.6,
+              "effectType": "DamageBuff",
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Voltaic_Sentinel",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.205
+              },
+              "probability": 1,
+              "duration": 10.6,
+              "effectType": "DamageBuff",
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Voltaic_Sentinel",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.205
+              },
+              "probability": 1,
+              "duration": 10.6,
+              "effectType": "DamageBuff",
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Voltaic_Sentinel",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pve": 0.205
+              },
+              "probability": 1,
+              "duration": 10.6,
+              "effectType": "DamageBuff",
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Voltaic_Sentinel",
+              "damageType": "Psionic"
+            }
+          ]
+        }
+      ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Range",
+        "Recharge",
+        "Endurance_Modification"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Ranged.Electrical_Blast.Voltaic_Sentinel",
+      "archetypeOrder": "primary",
+      "powerIndex": 7,
+      "castTimeReal": 3.1,
+      "toggleCost": 26,
+      "fullName": "Blaster_Primary_Electrical_Blast_Voltaic_Sentinel",
+      "displayName": "Voltaic Sentinel",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 2,
+      "accuracyMult": 2,
+      "target": 8192,
+      "targetLoS": true,
+      "range": 60,
+      "endCost": 26,
+      "rechargeTime": 60,
+      "baseRechargeTime": 60,
+      "effectArea": 4,
+      "numAllowed": 1,
+      "description": {
+        "short": "Summon Sentinel: Ranged, Moderate DMG(Energy), Foe -End",
+        "long": "You can manifest a polarized electricity field that hovers above the ground and hurls bolts of electricity at nearby foes. Any enemy that passes near this Sentinel risks serious injury. The Sentinel is not alive and cannot be targeted or attacked by enemies. The Sentinel can fly and will follow you. Damage: Moderate, Recharge: Very Long"
+      },
+      "setTypes": [
+        6,
+        22,
+        27,
+        33,
+        44
+      ],
+      "level": 26,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "absorbSummonEffects": true,
+      "absorbSummonAttributes": true,
+      "castTime": 3.3,
+      "slottable": true,
+      "aoeModifier": 1
+    },
+    {
+      "effects": [
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 62.5615
+              },
+              "probability": 1,
+              "effectType": "Damage",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Thunderous_Blast",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 187.684509,
+                "pvp": 83.33004
+              },
+              "probability": 1,
+              "effectType": "Damage",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Thunderous_Blast",
+              "damageType": "Energy"
+            }
+          ]
+        },
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": -0.25
+              },
+              "probability": 1,
+              "effectType": "Endurance",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Thunderous_Blast"
+            },
+            {
+              "mag": {
+                "pve": 0.051
+              },
+              "probability": 1,
+              "duration": 11.2,
+              "effectType": "DamageBuff",
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Thunderous_Blast",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 0.051
+              },
+              "probability": 1,
+              "duration": 11.2,
+              "effectType": "DamageBuff",
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Thunderous_Blast",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.051
+              },
+              "probability": 1,
+              "duration": 11.2,
+              "effectType": "DamageBuff",
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Thunderous_Blast",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.051
+              },
+              "probability": 1,
+              "duration": 11.2,
+              "effectType": "DamageBuff",
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Thunderous_Blast",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 0.051
+              },
+              "probability": 1,
+              "duration": 11.2,
+              "effectType": "DamageBuff",
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Thunderous_Blast",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.051
+              },
+              "probability": 1,
+              "duration": 11.2,
+              "effectType": "DamageBuff",
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Thunderous_Blast",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.051
+              },
+              "probability": 1,
+              "duration": 11.2,
+              "effectType": "DamageBuff",
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Thunderous_Blast",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pve": 0.051
+              },
+              "probability": 1,
+              "duration": 11.2,
+              "effectType": "DamageBuff",
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Thunderous_Blast",
+              "damageType": "Psionic"
+            }
+          ]
+        },
+        {
+          "effectType": "EndDrain",
+          "values": [
+            {
+              "mag": {
+                "pvp": -6.25
+              },
+              "probability": 1,
+              "effectType": "Endurance",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Electrical_Blast.Thunderous_Blast"
+            }
+          ]
+        }
+      ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Recharge",
+        "Endurance_Modification"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Ranged.Electrical_Blast.Thunderous_Blast",
+      "archetypeOrder": "primary",
+      "powerIndex": 8,
+      "castTimeReal": 3.7,
+      "toggleCost": 27.7316,
+      "fullName": "Blaster_Primary_Electrical_Blast_Thunderous_Blast",
+      "displayName": "Thunderous Blast",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1.4,
+      "accuracyMult": 1.4,
+      "attackTypes": 132,
+      "target": 2048,
+      "targetLoS": true,
+      "range": 60,
+      "endCost": 27.7316,
+      "rechargeTime": 170,
+      "baseRechargeTime": 170,
+      "effectArea": 2,
+      "radius": 25,
+      "maxTargets": 16,
+      "numAllowed": 1,
+      "description": {
+        "short": "Ranged (Targeted AoE), Extreme DMG(Energy), Foe -End, -Recovery",
+        "long": "You hurl a tremendously powerful bolt of lightning at a target, devastating all nearby foes. Thunderous Blast deals extreme Energy and Smashing damage and drains a lot of Endurance from nearby foes. Damage: Extreme, Recharge: Very Long"
+      },
+      "setTypes": [
+        3,
+        22,
+        33,
+        44
+      ],
+      "level": 32,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 3.96,
+      "slottable": true,
+      "aoeModifier": 4.75
+    }
+  ]
+}

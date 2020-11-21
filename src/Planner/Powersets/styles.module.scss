@@ -1,0 +1,70 @@
+@import 'styles/variables.scss';
+
+section.Powersets {
+  min-width: 170px + $lh;
+  max-width: 3 * (170 + $lh);
+  width: 56%;
+
+  @media #{$desktop} {
+    width: 100%;
+  }
+
+  div.powersetContainer {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: $lh;
+
+    h2 {
+      text-align: center;
+      line-height: $lh;
+      width: 100%;
+      // margin-bottom: $lh/2;
+    }
+
+    & > div {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+  .Powerset {
+    margin: $lh/2 $lh/2;
+
+    h3 {
+      text-align: center;
+      line-height: $lh;
+      min-height: $lh;
+      margin-bottom: $lh/2;
+    }
+  }
+
+  .powersList {
+    margin-top: $lh/2;
+    p {
+      line-height: $lh;
+      min-height: $lh;
+      cursor: pointer;
+      font-size: 12px;
+    }
+  }
+}
+
+.PoolPowers {
+  // min-height: 31 * $lh;
+  width: 100%;
+
+  & > h2 {
+    margin-top: $lh/2;
+  }
+
+  & > div {
+    display: flex;
+  }
+
+  .emptyBox {
+    min-width: 123px;
+    margin: $lh / 2;
+    border: 1px solid white;
+    border-radius: 20px;
+  }
+}

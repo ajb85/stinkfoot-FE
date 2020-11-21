@@ -1,0 +1,653 @@
+{
+  "fullName": "Epic_Psionic_Mastery",
+  "archetypeOrder": "epicPool",
+  "description": "You have Mastery over Psionics and the mind to blast your foes, increase your power, and to add some much needed armor and defense.",
+  "imageName": "PsionicMastery.png",
+  "displayName": "Psionic Mastery",
+  "powers": [
+    {
+      "effects": [
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 62.5615,
+                "pvp": 99.07364
+              },
+              "probability": 1,
+              "effectType": "Damage",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Epic.Psionic_Mastery.Mental_Blast",
+              "damageType": "Psionic"
+            }
+          ]
+        },
+        {
+          "effectType": "Slow",
+          "values": [
+            {
+              "etModifies": "RechargeTime",
+              "mag": {
+                "pve": -0.3
+              },
+              "probability": 1,
+              "duration": 6,
+              "effectType": "Enhancement",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Epic.Psionic_Mastery.Mental_Blast"
+            }
+          ]
+        }
+      ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Psionic_Mastery.Mental_Blast",
+      "archetypeOrder": "epicPool",
+      "powerIndex": 0,
+      "castTimeReal": 1.67,
+      "toggleCost": 6.5,
+      "fullName": "Epic_Psionic_Mastery_Mental_Blast",
+      "displayName": "Mental Blast",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "attackTypes": 514,
+      "target": 2048,
+      "targetLoS": true,
+      "range": 100,
+      "endCost": 6.5,
+      "rechargeTime": 8,
+      "baseRechargeTime": 8,
+      "effectArea": 1,
+      "numAllowed": 1,
+      "description": {
+        "short": "Ranged, Moderate DMG(Psionic), Target -Recharge",
+        "long": "This basic attack does moderate Psionic damage, and can slightly reduce a target's attack speed. Damage: Moderate, Recharge: Fast"
+      },
+      "setTypes": [
+        2,
+        44
+      ],
+      "level": 35,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 1.848,
+      "slottable": true,
+      "aoeModifier": 1
+    },
+    {
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": -10
+              },
+              "probability": 1,
+              "duration": 90,
+              "variableModified": true,
+              "effectType": "Mez",
+              "stacking": 1,
+              "toWho": "self",
+              "powerFullName": "Epic.Psionic_Mastery.Indomitable_Will",
+              "mezType": "Stun"
+            },
+            {
+              "mag": {
+                "pve": -10
+              },
+              "probability": 1,
+              "duration": 90,
+              "variableModified": true,
+              "effectType": "Mez",
+              "stacking": 1,
+              "toWho": "self",
+              "powerFullName": "Epic.Psionic_Mastery.Indomitable_Will",
+              "mezType": "Sleep"
+            },
+            {
+              "mag": {
+                "pve": -10
+              },
+              "probability": 1,
+              "duration": 90,
+              "variableModified": true,
+              "effectType": "Mez",
+              "stacking": 1,
+              "toWho": "self",
+              "powerFullName": "Epic.Psionic_Mastery.Indomitable_Will",
+              "mezType": "Hold"
+            },
+            {
+              "mag": {
+                "pve": -10
+              },
+              "probability": 1,
+              "duration": 90,
+              "variableModified": true,
+              "effectType": "Mez",
+              "stacking": 1,
+              "toWho": "self",
+              "powerFullName": "Epic.Psionic_Mastery.Indomitable_Will",
+              "mezType": "Confuse"
+            },
+            {
+              "mag": {
+                "pve": -10
+              },
+              "probability": 1,
+              "duration": 90,
+              "variableModified": true,
+              "effectType": "Mez",
+              "stacking": 1,
+              "toWho": "self",
+              "powerFullName": "Epic.Psionic_Mastery.Indomitable_Will",
+              "mezType": "Terror"
+            },
+            {
+              "mag": {
+                "pvp": 1
+              },
+              "probability": 1,
+              "duration": 90,
+              "variableModified": true,
+              "effectType": "MezResist",
+              "stacking": 1,
+              "toWho": "self",
+              "powerFullName": "Epic.Psionic_Mastery.Indomitable_Will",
+              "mezType": "Stun"
+            },
+            {
+              "mag": {
+                "pvp": 1
+              },
+              "probability": 1,
+              "duration": 90,
+              "variableModified": true,
+              "effectType": "MezResist",
+              "stacking": 1,
+              "toWho": "self",
+              "powerFullName": "Epic.Psionic_Mastery.Indomitable_Will",
+              "mezType": "Sleep"
+            },
+            {
+              "mag": {
+                "pvp": 1
+              },
+              "probability": 1,
+              "duration": 90,
+              "variableModified": true,
+              "effectType": "MezResist",
+              "stacking": 1,
+              "toWho": "self",
+              "powerFullName": "Epic.Psionic_Mastery.Indomitable_Will",
+              "mezType": "Hold"
+            },
+            {
+              "mag": {
+                "pvp": 1
+              },
+              "probability": 1,
+              "duration": 90,
+              "variableModified": true,
+              "effectType": "MezResist",
+              "stacking": 1,
+              "toWho": "self",
+              "powerFullName": "Epic.Psionic_Mastery.Indomitable_Will",
+              "mezType": "Confuse"
+            },
+            {
+              "mag": {
+                "pvp": 1
+              },
+              "probability": 1,
+              "duration": 90,
+              "variableModified": true,
+              "effectType": "MezResist",
+              "stacking": 1,
+              "toWho": "self",
+              "powerFullName": "Epic.Psionic_Mastery.Indomitable_Will",
+              "mezType": "Terror"
+            }
+          ]
+        },
+        {
+          "effectType": "Buff_Def",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.175
+              },
+              "probability": 1,
+              "duration": 90,
+              "variableModified": true,
+              "effectType": "Defense",
+              "stacking": 1,
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Epic.Psionic_Mastery.Indomitable_Will",
+              "damageType": "Psionic"
+            }
+          ]
+        }
+      ],
+      "allowedEnhancements": [
+        "Defense_Buff",
+        "Endurance_Discount",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Psionic_Mastery.Indomitable_Will",
+      "archetypeOrder": "epicPool",
+      "powerIndex": 1,
+      "castTimeReal": 0.73,
+      "toggleCost": 19.5,
+      "fullName": "Epic_Psionic_Mastery_Indomitable_Will",
+      "displayName": "Indomitable Will",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "target": 1,
+      "targetLoS": true,
+      "endCost": 19.5,
+      "rechargeTime": 360,
+      "baseRechargeTime": 360,
+      "effectArea": 1,
+      "numAllowed": 1,
+      "description": {
+        "short": "Self Res( Disorient, Hold, Sleep, Fear). DEF(Psionics)",
+        "long": "Activating this power greatly boosts your resistance to Sleep, Disorient, Fear and Hold effects for 90 seconds. Indomitable Will also grants a high defense to Psionic based attacks. Recharge: Very Long"
+      },
+      "setTypes": [
+        7
+      ],
+      "clickBuff": true,
+      "level": 35,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 0.924,
+      "slottable": true,
+      "aoeModifier": 1
+    },
+    {
+      "effects": [
+        {
+          "effectType": "Res_Dmg",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.1925,
+                "pvp": 0.1925
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Resistance",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Epic.Psionic_Mastery.Mind_Over_Body",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 0.1925,
+                "pvp": 0.1925
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Resistance",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Epic.Psionic_Mastery.Mind_Over_Body",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.14,
+                "pvp": 0.1925
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Resistance",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Epic.Psionic_Mastery.Mind_Over_Body",
+              "damageType": "Psionic"
+            },
+            {
+              "mag": {
+                "pvp": 0.1925
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Resistance",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Epic.Psionic_Mastery.Mind_Over_Body",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pvp": 0.1925
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Resistance",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Epic.Psionic_Mastery.Mind_Over_Body",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pvp": 0.1925
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Resistance",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Epic.Psionic_Mastery.Mind_Over_Body",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pvp": 0.1925
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Resistance",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Epic.Psionic_Mastery.Mind_Over_Body",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pvp": 0.1925
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Resistance",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Epic.Psionic_Mastery.Mind_Over_Body",
+              "damageType": "Toxic"
+            }
+          ]
+        }
+      ],
+      "allowedEnhancements": [
+        "Endurance_Discount",
+        "Recharge",
+        "Res_Damage"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Psionic_Mastery.Mind_Over_Body",
+      "archetypeOrder": "epicPool",
+      "powerIndex": 2,
+      "castTimeReal": 0.67,
+      "toggleCost": 0.325,
+      "isEpic": true,
+      "fullName": "Epic_Psionic_Mastery_Mind_Over_Body",
+      "displayName": "Mind Over Body",
+      "requires": {
+        "powers": {
+          "Epic.Psionic_Mastery.Mind_Over_Body": true
+        },
+        "count": 1
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "target": 1,
+      "targetLoS": true,
+      "endCost": 0.1625,
+      "rechargeTime": 2,
+      "baseRechargeTime": 2,
+      "activatePeriod": 0.5,
+      "effectArea": 1,
+      "numAllowed": 1,
+      "ignoreStrength": true,
+      "description": {
+        "short": "Toggle: Self +Res(Smash, Lethal, Psionics)",
+        "long": "When you toggle on this power, you empower your Mind Over Body to become highly resistant to Smashing, Lethal and Psionic damage. You must be level 41 and have Mental Blast or Indomitable Will before selecting this power. Recharge: Fast"
+      },
+      "setTypes": [
+        8
+      ],
+      "alwaysToggle": true,
+      "level": 41,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 0.924,
+      "slottable": true,
+      "aoeModifier": 1,
+      "powerType": "Toggle"
+    },
+    {
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 1
+              },
+              "probability": 1,
+              "duration": 1.5,
+              "effectType": "Mez",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "attribType": 1,
+              "powerFullName": "Epic.Psionic_Mastery.World_of_Confusion",
+              "requiresToHitCheck": true,
+              "mezType": "Confuse"
+            }
+          ]
+        },
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 7.50738
+              },
+              "probability": 1,
+              "effectType": "Damage",
+              "ticks": 1,
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Epic.Psionic_Mastery.World_of_Confusion",
+              "damageType": "Psionic"
+            }
+          ]
+        }
+      ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Confuse",
+        "Damage",
+        "Endurance_Discount",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Psionic_Mastery.World_of_Confusion",
+      "archetypeOrder": "epicPool",
+      "powerIndex": 3,
+      "castTimeReal": 1.67,
+      "toggleCost": 0.1625,
+      "isEpic": true,
+      "fullName": "Epic_Psionic_Mastery_World_of_Confusion",
+      "displayName": "World of Confusion",
+      "requires": {
+        "powers": {
+          "Epic.Psionic_Mastery.World_of_Confusion": true
+        },
+        "count": 1
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "attackTypes": 512,
+      "target": 1,
+      "targetLoS": true,
+      "endCost": 0.65,
+      "rechargeTime": 15,
+      "baseRechargeTime": 15,
+      "activatePeriod": 4,
+      "effectArea": 2,
+      "radius": 8,
+      "maxTargets": 10,
+      "numAllowed": 1,
+      "description": {
+        "short": "Toggle: PBAoE, Minor DoT(Psionic), Foe Confuse",
+        "long": "This toggle power allows you to cause psionic damage and cause confusion within a group of foes, creating chaos. The chance of confusing an enemy is lower than then chance of damaging them, and it may take multiple hits to affect stronger opponents. All affected foes within the area will turn and attack each other, ignoring all heroes. You will not receive any Experience Points for foes defeated by Confused enemies. You must be level 41 and have Mental Blast or Indomitable Will before selecting this power. Recharge: Moderate"
+      },
+      "setTypes": [
+        4,
+        16,
+        44
+      ],
+      "level": 41,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 1.848,
+      "slottable": true,
+      "aoeModifier": 2.2,
+      "powerType": "Toggle"
+    },
+    {
+      "effects": [
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 10.9482622,
+                "pvp": 7.49737024
+              },
+              "probability": 1,
+              "duration": 4.1,
+              "effectType": "Damage",
+              "ticks": 5,
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Epic.Psionic_Mastery.Psionic_Tornado",
+              "damageType": "Psionic"
+            }
+          ]
+        },
+        {
+          "effectType": "Slow",
+          "values": [
+            {
+              "etModifies": "RechargeTime",
+              "mag": {
+                "pve": -0.3
+              },
+              "probability": 1,
+              "duration": 10,
+              "effectType": "Enhancement",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Epic.Psionic_Mastery.Psionic_Tornado"
+            }
+          ]
+        },
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 1.4
+              },
+              "probability": 0.5,
+              "effectType": "Mez",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Epic.Psionic_Mastery.Psionic_Tornado",
+              "mezType": "Knockup"
+            }
+          ]
+        }
+      ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Knockback",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Epic.Psionic_Mastery.Psionic_Tornado",
+      "archetypeOrder": "epicPool",
+      "powerIndex": 4,
+      "castTimeReal": 2.37,
+      "toggleCost": 23.14,
+      "isEpic": true,
+      "fullName": "Epic_Psionic_Mastery_Psionic_Tornado",
+      "displayName": "Psionic Tornado",
+      "requires": {
+        "powers": {
+          "Epic.Psionic_Mastery.Psionic_Tornado": true
+        },
+        "count": 2
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "attackTypes": 516,
+      "target": 2048,
+      "targetLoS": true,
+      "range": 100,
+      "endCost": 23.14,
+      "rechargeTime": 20,
+      "baseRechargeTime": 20,
+      "effectArea": 2,
+      "radius": 20,
+      "maxTargets": 16,
+      "numAllowed": 1,
+      "description": {
+        "short": "Ranged (Targeted AoE), Moderate DoT(Psionic), Foe Knockback",
+        "long": "Unleashes a whirlwind of Psionic energy on a target, tossing nearby foes into the air. The Psionic Tornado damages foes and Slows their attack speed. You must be level 44 and have two other Psionic Mastery Powers before selecting this power. Damage: Moderate(DoT), Recharge: Slow"
+      },
+      "setTypes": [
+        3,
+        23,
+        44
+      ],
+      "level": 44,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 2.508,
+      "slottable": true,
+      "aoeModifier": 4
+    }
+  ]
+}

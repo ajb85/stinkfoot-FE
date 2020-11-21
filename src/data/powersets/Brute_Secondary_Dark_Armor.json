@@ -1,0 +1,1294 @@
+{
+  "fullName": "Brute_Secondary_Dark_Armor",
+  "archetypeOrder": "secondary",
+  "description": "Dark Armor allows you to tap into the powers of the Netherworld for protection.  Many Dark Armor powers drain your foes to strengthen you.  Dark Armor offers very good resistance to Negative Energy damage, and is one of the only defensive sets that offer some resistance to Psionic damage.  However. its resistance to Energy is weak and it offers no protection to Knockback.",
+  "imageName": "DarkArmor.png",
+  "displayName": "Dark Armor",
+  "powers": [
+    {
+      "effects": [
+        {
+          "effectType": "Res_DMG",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.210000008,
+                "pvp": 0.210000008
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Resistance",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Dark_Armor.Dark_Embrace",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 0.210000008,
+                "pvp": 0.210000008
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Resistance",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Dark_Armor.Dark_Embrace",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.14,
+                "pvp": 0.14
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Resistance",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Dark_Armor.Dark_Embrace",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pve": 0.14,
+                "pvp": 0.14
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Resistance",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Dark_Armor.Dark_Embrace",
+              "damageType": "Negative"
+            }
+          ]
+        }
+      ],
+      "allowedEnhancements": [
+        "Endurance_Discount",
+        "Recharge",
+        "Res_Damage"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Defense.Dark_Armor.Dark_Embrace",
+      "archetypeOrder": "secondary",
+      "powerIndex": 0,
+      "castTimeReal": 0.67,
+      "toggleCost": 0.208,
+      "fullName": "Brute_Secondary_Dark_Armor_Dark_Embrace",
+      "displayName": "Dark Embrace",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "target": 1,
+      "targetLoS": true,
+      "endCost": 0.104,
+      "rechargeTime": 4,
+      "baseRechargeTime": 4,
+      "activatePeriod": 0.5,
+      "effectArea": 1,
+      "numAllowed": 1,
+      "ignoreStrength": true,
+      "description": {
+        "short": "Toggle: Self +Res(Smash, Lethal, Negative, Toxic)",
+        "long": "You tap into the energy of the Netherworld to protect yourself from damage. This Dark Embrace shrouds you and grants resistance to Lethal, Smashing, Negative Energy and Toxic damage. Recharge: Fast"
+      },
+      "setTypes": [
+        8
+      ],
+      "alwaysToggle": true,
+      "level": 1,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 0.924,
+      "slottable": true,
+      "aoeModifier": 1,
+      "powerType": "Toggle"
+    },
+    {
+      "effects": [
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 11.12204
+              },
+              "probability": 1,
+              "effectType": "Damage",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Brute_Defense.Dark_Armor.Death_Shroud",
+              "damageType": "Negative"
+            }
+          ]
+        },
+        {
+          "effectType": "InherentTaunt",
+          "values": [
+            {
+              "mag": {
+                "pve": 4
+              },
+              "cancelOnMiss": true,
+              "probability": 1,
+              "duration": 13.6,
+              "effectType": "Mez",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "specialCase": 14,
+              "toWho": "target",
+              "attribType": 1,
+              "powerFullName": "Brute_Defense.Dark_Armor.Death_Shroud",
+              "requiresToHitCheck": true,
+              "mezType": "Taunt"
+            }
+          ]
+        }
+      ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Recharge",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Defense.Dark_Armor.Death_Shroud",
+      "archetypeOrder": "secondary",
+      "powerIndex": 1,
+      "castTimeReal": 3.47,
+      "toggleCost": 0.52,
+      "fullName": "Brute_Secondary_Dark_Armor_Death_Shroud",
+      "displayName": "Death Shroud",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "attackTypes": 260,
+      "target": 1,
+      "targetLoS": true,
+      "endCost": 1.04,
+      "rechargeTime": 4,
+      "baseRechargeTime": 4,
+      "activatePeriod": 2,
+      "effectArea": 2,
+      "radius": 8,
+      "maxTargets": 10,
+      "numAllowed": 1,
+      "description": {
+        "short": "Toggle: PBAoE Minor DoT(Negative)",
+        "long": "You become a focus point for the Netherworld, allowing its Negative Energy to seep from your body. This will continuously damage all foes in melee range. Damage: Minor(DoT), Recharge: Fast"
+      },
+      "setTypes": [
+        4,
+        34,
+        44
+      ],
+      "level": 2,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 3.696,
+      "slottable": true,
+      "aoeModifier": 2.2,
+      "powerType": "Toggle"
+    },
+    {
+      "effects": [
+        {
+          "effectType": "Res_DMG",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.210000008,
+                "pvp": 0.210000008
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Resistance",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Dark_Armor.Murky_Cloud",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.210000008,
+                "pvp": 0.210000008
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Resistance",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Dark_Armor.Murky_Cloud",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 0.14,
+                "pvp": 0.14
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Resistance",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Dark_Armor.Murky_Cloud",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.14,
+                "pvp": 0.14
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Resistance",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Dark_Armor.Murky_Cloud",
+              "damageType": "Negative"
+            }
+          ]
+        },
+        {
+          "effectType": "Res_Boolean",
+          "values": [
+            {
+              "etModifies": "Recovery",
+              "mag": {
+                "pve": 0.5536
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "ResEffect",
+              "toWho": "all",
+              "powerFullName": "Brute_Defense.Dark_Armor.Murky_Cloud"
+            },
+            {
+              "etModifies": "Endurance",
+              "mag": {
+                "pve": 0.5536
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "ResEffect",
+              "toWho": "all",
+              "powerFullName": "Brute_Defense.Dark_Armor.Murky_Cloud"
+            }
+          ]
+        }
+      ],
+      "allowedEnhancements": [
+        "Endurance_Discount",
+        "Recharge",
+        "Res_Damage"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Defense.Dark_Armor.Murky_Cloud",
+      "archetypeOrder": "secondary",
+      "powerIndex": 2,
+      "castTimeReal": 1.17,
+      "toggleCost": 0.208,
+      "fullName": "Brute_Secondary_Dark_Armor_Murky_Cloud",
+      "displayName": "Murky Cloud",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "target": 1,
+      "targetLoS": true,
+      "endCost": 0.104,
+      "rechargeTime": 4,
+      "baseRechargeTime": 4,
+      "activatePeriod": 0.5,
+      "effectArea": 1,
+      "numAllowed": 1,
+      "ignoreStrength": true,
+      "description": {
+        "short": "Toggle: Self +Res(Fire, Cold, Energy, Negative, End Drain)",
+        "long": "You create a Murky Cloud enshrouding you. This cloud can absorb all forms of energy, making you more resistant to Fire, Cold, Energy, and Negative Energy attacks, as well as Endurance Drain effects. Recharge: Fast"
+      },
+      "setTypes": [
+        8
+      ],
+      "alwaysToggle": true,
+      "level": 4,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 1.31999993,
+      "slottable": true,
+      "aoeModifier": 1,
+      "powerType": "Toggle"
+    },
+    {
+      "effects": [
+        {
+          "effectType": "Res_DMG",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.35,
+                "pvp": 0.35
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Resistance",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Dark_Armor.Obsidian_Shield",
+              "damageType": "Psionic"
+            }
+          ]
+        },
+        {
+          "effectType": "Res_Boolean",
+          "values": [
+            {
+              "mag": {
+                "pve": -8.304
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Mez",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Dark_Armor.Obsidian_Shield",
+              "mezType": "Stun"
+            },
+            {
+              "mag": {
+                "pve": -8.304
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Mez",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Dark_Armor.Obsidian_Shield",
+              "mezType": "Hold"
+            },
+            {
+              "mag": {
+                "pve": -8.304
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Mez",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Dark_Armor.Obsidian_Shield",
+              "mezType": "Sleep"
+            },
+            {
+              "mag": {
+                "pve": -8.304
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Mez",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Dark_Armor.Obsidian_Shield",
+              "mezType": "Terror"
+            },
+            {
+              "mag": {
+                "pvp": 0.8304
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "MezResist",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Dark_Armor.Obsidian_Shield",
+              "mezType": "Stun"
+            },
+            {
+              "mag": {
+                "pvp": 0.8304
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "MezResist",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Dark_Armor.Obsidian_Shield",
+              "mezType": "Hold"
+            },
+            {
+              "mag": {
+                "pvp": 0.8304
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "MezResist",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Dark_Armor.Obsidian_Shield",
+              "mezType": "Sleep"
+            },
+            {
+              "mag": {
+                "pvp": 0.8304
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "MezResist",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Dark_Armor.Obsidian_Shield",
+              "mezType": "Terror"
+            }
+          ]
+        },
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "etModifies": "Defense",
+              "mag": {
+                "pvp": 0.3
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "ResEffect",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Dark_Armor.Obsidian_Shield"
+            },
+            {
+              "etModifies": "ToHit",
+              "mag": {
+                "pvp": 0.3
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "ResEffect",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Dark_Armor.Obsidian_Shield"
+            },
+            {
+              "etModifies": "RechargeTime",
+              "mag": {
+                "pvp": 0.3
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "ResEffect",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Dark_Armor.Obsidian_Shield"
+            },
+            {
+              "etModifies": "SpeedRunning",
+              "mag": {
+                "pvp": 0.5
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "ResEffect",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Dark_Armor.Obsidian_Shield"
+            },
+            {
+              "etModifies": "SpeedFlying",
+              "mag": {
+                "pvp": 0.5
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "ResEffect",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Dark_Armor.Obsidian_Shield"
+            },
+            {
+              "etModifies": "JumpHeight",
+              "mag": {
+                "pvp": 0.5
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "ResEffect",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Dark_Armor.Obsidian_Shield"
+            },
+            {
+              "etModifies": "SpeedJumping",
+              "mag": {
+                "pvp": 0.5
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "ResEffect",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Dark_Armor.Obsidian_Shield"
+            }
+          ]
+        }
+      ],
+      "allowedEnhancements": [
+        "Endurance_Discount",
+        "Recharge",
+        "Res_Damage"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Defense.Dark_Armor.Obsidian_Shield",
+      "archetypeOrder": "secondary",
+      "powerIndex": 3,
+      "castTimeReal": 1.17,
+      "toggleCost": 0.208,
+      "fullName": "Brute_Secondary_Dark_Armor_Obsidian_Shield",
+      "displayName": "Obsidian Shield",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "target": 1,
+      "targetLoS": true,
+      "endCost": 0.104,
+      "rechargeTime": 4,
+      "baseRechargeTime": 4,
+      "activatePeriod": 0.5,
+      "effectArea": 1,
+      "numAllowed": 1,
+      "ignoreStrength": true,
+      "description": {
+        "short": "Toggle: Self +Res(Psionic, Sleep, Hold, Disorient, Fear)",
+        "long": "You can create a special Obsidian Shield that grants good resistance to Psionic damage. With your mind enshrouded in darkness you are protected from Sleep, Fear, Hold and Disorient attacks. Recharge: Fast"
+      },
+      "setTypes": [
+        8
+      ],
+      "alwaysToggle": true,
+      "level": 10,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 1.31999993,
+      "slottable": true,
+      "aoeModifier": 1,
+      "powerType": "Toggle"
+    },
+    {
+      "effects": [
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 11.12204
+              },
+              "probability": 1,
+              "effectType": "Damage",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Brute_Defense.Dark_Armor.Dark_Regeneration",
+              "damageType": "Negative"
+            }
+          ]
+        },
+        {
+          "effectType": "HealSelf",
+          "values": [
+            {
+              "mag": {
+                "pve": 361.4277
+              },
+              "probability": 1,
+              "variableModified": true,
+              "effectType": "Heal",
+              "delayedTime": 0.25,
+              "stacking": 1,
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Dark_Armor.Dark_Regeneration"
+            }
+          ]
+        }
+      ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Heal",
+        "Recharge",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Defense.Dark_Armor.Dark_Regeneration",
+      "archetypeOrder": "secondary",
+      "powerIndex": 4,
+      "castTimeReal": 1.17,
+      "toggleCost": 33.8,
+      "fullName": "Brute_Secondary_Dark_Armor_Dark_Regeneration",
+      "displayName": "Dark Regeneration",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "attackTypes": 260,
+      "target": 1,
+      "targetLoS": true,
+      "endCost": 33.8,
+      "rechargeTime": 30,
+      "baseRechargeTime": 30,
+      "effectArea": 2,
+      "radius": 20,
+      "maxTargets": 10,
+      "numAllowed": 1,
+      "description": {
+        "short": "PBAoE Minor DMG(Negative), Self +HP",
+        "long": "You can tap the dark essence of the Netherworld to drain a small amount of life from all enemies nearby, thus healing yourself. The more foes affected, the more you will be healed. Damage: Minor, Recharge: Slow"
+      },
+      "setTypes": [
+        4,
+        9,
+        24,
+        29,
+        34,
+        44
+      ],
+      "level": 16,
+      "variableEnabled": true,
+      "variableMin": 1,
+      "variableMax": 10,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 1.31999993,
+      "slottable": true,
+      "aoeModifier": 4
+    },
+    {
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 35
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "StealthRadius",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Dark_Armor.Cloak_of_Darkness"
+            },
+            {
+              "mag": {
+                "pve": 389
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "StealthRadiusPlayer",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Dark_Armor.Cloak_of_Darkness"
+            },
+            {
+              "etModifies": "PerceptionRadius",
+              "mag": {
+                "pve": 0.6
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "ResEffect",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Dark_Armor.Cloak_of_Darkness"
+            },
+            {
+              "mag": {
+                "pve": 0.6
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "PerceptionRadius",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Dark_Armor.Cloak_of_Darkness"
+            }
+          ]
+        },
+        {
+          "effectType": "Buff_Def",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.035,
+                "pvp": 0.035
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Defense",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Dark_Armor.Cloak_of_Darkness",
+              "damageType": "Melee"
+            },
+            {
+              "mag": {
+                "pve": 0.035,
+                "pvp": 0.035
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Defense",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Dark_Armor.Cloak_of_Darkness",
+              "damageType": "Ranged"
+            },
+            {
+              "mag": {
+                "pve": 0.035,
+                "pvp": 0.035
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Defense",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Dark_Armor.Cloak_of_Darkness",
+              "damageType": "AoE"
+            },
+            {
+              "mag": {
+                "pve": 0.035,
+                "pvp": 0.035
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Defense",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Dark_Armor.Cloak_of_Darkness",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 0.035,
+                "pvp": 0.035
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Defense",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Dark_Armor.Cloak_of_Darkness",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.035,
+                "pvp": 0.035
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Defense",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Dark_Armor.Cloak_of_Darkness",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.035,
+                "pvp": 0.035
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Defense",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Dark_Armor.Cloak_of_Darkness",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 0.035,
+                "pvp": 0.035
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Defense",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Dark_Armor.Cloak_of_Darkness",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.035,
+                "pvp": 0.035
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Defense",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Dark_Armor.Cloak_of_Darkness",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.035,
+                "pvp": 0.035
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Defense",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Dark_Armor.Cloak_of_Darkness",
+              "damageType": "Psionic"
+            }
+          ]
+        },
+        {
+          "effectType": "Res_Boolean",
+          "values": [
+            {
+              "mag": {
+                "pve": -8.304
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Mez",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Dark_Armor.Cloak_of_Darkness",
+              "mezType": "Immob"
+            },
+            {
+              "mag": {
+                "pvp": 0.8304
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "MezResist",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Dark_Armor.Cloak_of_Darkness",
+              "mezType": "Immob"
+            }
+          ]
+        }
+      ],
+      "allowedEnhancements": [
+        "Defense_Buff",
+        "Endurance_Discount",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Defense.Dark_Armor.Cloak_of_Darkness",
+      "archetypeOrder": "secondary",
+      "powerIndex": 5,
+      "castTimeReal": 1.17,
+      "toggleCost": 0.26,
+      "fullName": "Brute_Secondary_Dark_Armor_Cloak_of_Darkness",
+      "displayName": "Cloak of Darkness",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "target": 1,
+      "targetLoS": true,
+      "endCost": 0.13,
+      "rechargeTime": 20,
+      "baseRechargeTime": 20,
+      "activatePeriod": 0.5,
+      "effectArea": 1,
+      "numAllowed": 1,
+      "description": {
+        "short": "Toggle: Self Stealth, +DEF, +Perception, Res (Immobilize)",
+        "long": "A shroud of Netherworld darkness envelops you, making you difficult to spot at a distance. You can be seen only at close range, or if you attack a target. Even if seen, the Cloak of Darkness grants you a bonus to Defense to all attacks and some protection from Immobilization. This Netherworld Cloak also allows you to see things in a new light, allowing you to better see stealthy foes. Unlike some stealth powers, Cloak of Darkness has no movement penalty.  Cloak of Darkness will not work with any other form of Concealment power such as Shadow Fall or Steamy Mist.  Recharge: Slow"
+      },
+      "setTypes": [
+        7
+      ],
+      "alwaysToggle": true,
+      "level": 20,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 1.31999993,
+      "slottable": true,
+      "aoeModifier": 1,
+      "powerType": "Toggle"
+    },
+    {
+      "effects": [
+        {
+          "effectType": "Fear",
+          "values": [
+            {
+              "mag": {
+                "pve": 2,
+                "pvp": 3
+              },
+              "probability": 1,
+              "duration": 5.96,
+              "effectType": "Mez",
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "attribType": 1,
+              "powerFullName": "Brute_Defense.Dark_Armor.Cloak_of_Fear",
+              "mezType": "Terror"
+            }
+          ]
+        },
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": -0.05
+              },
+              "probability": 1,
+              "duration": 5,
+              "effectType": "ToHit",
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Brute_Defense.Dark_Armor.Cloak_of_Fear"
+            }
+          ]
+        }
+      ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "ToHit_Debuff",
+        "Endurance_Discount",
+        "Fear",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Defense.Dark_Armor.Cloak_of_Fear",
+      "archetypeOrder": "secondary",
+      "powerIndex": 6,
+      "castTimeReal": 1.17,
+      "toggleCost": 0.52,
+      "fullName": "Brute_Secondary_Dark_Armor_Cloak_of_Fear",
+      "displayName": "Cloak of Fear",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 0.67,
+      "accuracyMult": 0.67,
+      "attackTypes": 260,
+      "target": 1,
+      "targetLoS": true,
+      "endCost": 2.6,
+      "rechargeTime": 4,
+      "baseRechargeTime": 4,
+      "activatePeriod": 5,
+      "effectArea": 2,
+      "radius": 8,
+      "maxTargets": 10,
+      "numAllowed": 1,
+      "description": {
+        "short": "Toggle: PBAoE Foe Fear, -To Hit",
+        "long": "You can wrap yourself in a nightmarish Cloak of Fear. Foes close to you are treated to visions most horrific, forcing them to tremble in terror, only attacking if attacked, and even then, with a reduced chance to hit. Recharge: Fast"
+      },
+      "setTypes": [
+        15,
+        26,
+        31
+      ],
+      "level": 28,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 1.31999993,
+      "slottable": true,
+      "aoeModifier": 2.2,
+      "powerType": "Toggle"
+    },
+    {
+      "effects": [
+        {
+          "effectType": "Stun",
+          "values": [
+            {
+              "mag": {
+                "pve": 2
+              },
+              "cancelOnMiss": true,
+              "probability": 1,
+              "duration": 7.15200043,
+              "effectType": "Mez",
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "attribType": 1,
+              "powerFullName": "Brute_Defense.Dark_Armor.Oppressive_Gloom",
+              "mezType": "Stun"
+            }
+          ]
+        },
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 5.56102
+              },
+              "probability": 1,
+              "variableModified": true,
+              "effectType": "Damage",
+              "stacking": 1,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Dark_Armor.Oppressive_Gloom",
+              "damageType": "Special"
+            }
+          ]
+        },
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pvp": 2
+              },
+              "cancelOnMiss": true,
+              "probability": 1,
+              "duration": 2,
+              "effectType": "Mez",
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "attribType": 1,
+              "powerFullName": "Brute_Defense.Dark_Armor.Oppressive_Gloom",
+              "mezType": "Stun"
+            }
+          ]
+        }
+      ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Endurance_Discount",
+        "Recharge",
+        "Stun"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Defense.Dark_Armor.Oppressive_Gloom",
+      "archetypeOrder": "secondary",
+      "powerIndex": 7,
+      "castTimeReal": 1.17,
+      "toggleCost": 0.078,
+      "fullName": "Brute_Secondary_Dark_Armor_Oppressive_Gloom",
+      "displayName": "Oppressive Gloom",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "attackTypes": 260,
+      "target": 1,
+      "targetLoS": true,
+      "endCost": 0.156,
+      "rechargeTime": 8,
+      "baseRechargeTime": 8,
+      "activatePeriod": 2,
+      "effectArea": 2,
+      "radius": 8,
+      "maxTargets": 10,
+      "numAllowed": 1,
+      "description": {
+        "short": "Toggle: PBAoE, Foe Disorient, Self -HP",
+        "long": "The Netherworld has many mutable properties, such as the Oppressive Gloom. This power allows you to use your own Hit Points to keep enemies near you Disoriented and unable to use any powers. Endurance cost for this is minimal, but the power can be dangerous to use. Recharge: Moderate"
+      },
+      "setTypes": [
+        11
+      ],
+      "level": 35,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 1.31999993,
+      "slottable": true,
+      "aoeModifier": 2.2,
+      "powerType": "Toggle"
+    },
+    {
+      "effects": [
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 55.6102
+              },
+              "probability": 1,
+              "effectType": "Damage",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Brute_Defense.Dark_Armor.Soul_Transfer",
+              "damageType": "Negative"
+            }
+          ]
+        },
+        {
+          "effectType": "Stun",
+          "values": [
+            {
+              "mag": {
+                "pve": 30,
+                "pvp": 30
+              },
+              "probability": 1,
+              "duration": 11.92,
+              "effectType": "Mez",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "attribType": 1,
+              "powerFullName": "Brute_Defense.Dark_Armor.Soul_Transfer",
+              "mezType": "Stun"
+            }
+          ]
+        },
+        {
+          "effectType": "Heal",
+          "values": [
+            {
+              "mag": {
+                "pve": 289.1421
+              },
+              "probability": 1,
+              "duration": 0.5,
+              "variableModified": true,
+              "effectType": "Heal",
+              "ticks": 1,
+              "stacking": 1,
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Dark_Armor.Soul_Transfer"
+            }
+          ]
+        },
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 10
+              },
+              "probability": 1,
+              "duration": 15,
+              "effectType": "Mez",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Dark_Armor.Soul_Transfer",
+              "mezType": "Untouchable"
+            },
+            {
+              "mag": {
+                "pve": 30
+              },
+              "probability": 1,
+              "variableModified": true,
+              "effectType": "Endurance",
+              "delayedTime": 0.25,
+              "stacking": 1,
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Dark_Armor.Soul_Transfer"
+            },
+            {
+              "mag": {
+                "pve": 50
+              },
+              "probability": 1,
+              "duration": 4,
+              "variableModified": true,
+              "effectType": "Mez",
+              "stacking": 1,
+              "toWho": "self",
+              "attribType": 1,
+              "powerFullName": "Brute_Defense.Dark_Armor.Soul_Transfer",
+              "mezType": "Immob"
+            },
+            {
+              "mag": {
+                "pve": 1
+              },
+              "probability": 1,
+              "duration": 60,
+              "effectType": "XPDebtProtection",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Dark_Armor.Soul_Transfer"
+            }
+          ]
+        }
+      ],
+      "allowedEnhancements": [
+        "Damage",
+        "Heal",
+        "Recharge",
+        "Endurance_Modification",
+        "Stun"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Defense.Dark_Armor.Soul_Transfer",
+      "archetypeOrder": "secondary",
+      "powerIndex": 8,
+      "castTimeReal": 1.17,
+      "fullName": "Brute_Secondary_Dark_Armor_Soul_Transfer",
+      "displayName": "Soul Transfer",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "attackTypes": 260,
+      "target": 1,
+      "targetLoS": true,
+      "rechargeTime": 300,
+      "baseRechargeTime": 300,
+      "effectArea": 2,
+      "radius": 25,
+      "maxTargets": 10,
+      "castFlags": 4,
+      "numAllowed": 1,
+      "description": {
+        "short": "Self Rez, Special",
+        "long": "Should you fall in battle, you can perform a Soul Transfer, sucking the life force of all foes around you to bring yourself back from the brink of death. The more foes nearby, the more life is restored to you. Drained foes are left Disoriented. The dark effects of this Soul Transfer will actually leave you invulnerable for a brief time, and protected from XP Debt for 60 seconds. There must be at least one foe nearby to fuel the Transfer and revive yourself. Damage: Moderate, Recharge: Very Long"
+      },
+      "setTypes": [
+        4,
+        9,
+        11,
+        22,
+        34,
+        44
+      ],
+      "level": 38,
+      "variableEnabled": true,
+      "variableMin": 1,
+      "variableMax": 10,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 1.31999993,
+      "slottable": true,
+      "aoeModifier": 4.75
+    }
+  ]
+}

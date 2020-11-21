@@ -1,0 +1,189 @@
+{
+  "fullName": "IOSet.Touch_of_Lady_Grey",
+  "enhancements": [
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Touch_of_Lady_Grey_A.Attuned_Touch_of_Lady_Grey_A",
+      "displayName": "Defense Debuff",
+      "description": {
+        "short": "+Defense Debuff",
+        "long": "Enhances the defense debuff potential of a power by {Boost.Attrib.DefenseDebuff.Scale}%."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.424
+            }
+          },
+          "stat": "Defense_Debuff",
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Touch_of_Lady_Grey_B.Attuned_Touch_of_Lady_Grey_B",
+      "displayName": "Defense Debuff/Recharge",
+      "description": {
+        "short": "+Defense Debuff, +Rech",
+        "long": "Enhances the defense debuff potential of a power by {Boost.Attrib.DefenseDebuff.Scale}% and reduces the recharge time by {Boost.Attrib.Recharge.Scale}%."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Defense_Debuff",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Recharge",
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Touch_of_Lady_Grey_C.Attuned_Touch_of_Lady_Grey_C",
+      "displayName": "Defense Debuff/Recharge/Endurance Reduction",
+      "description": {
+        "short": "+Defense Debuff, +Rech, +End",
+        "long": "Enhances the defense debuff potential of a power by {Boost.Attrib.DefenseDebuff.Scale}%, reduces the endurance cost by {Boost.Attrib.Endurance.Scale}% and the recharge time of a power by {Boost.Attrib.Recharge.Scale}%."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.212
+            }
+          },
+          "stat": "Defense_Debuff",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.212
+            }
+          },
+          "stat": "Recharge",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.212
+            }
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Touch_of_Lady_Grey_D.Attuned_Touch_of_Lady_Grey_D",
+      "displayName": "Recharge/Endurance Reduction",
+      "description": {
+        "short": "+Rech, +End",
+        "long": "Reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}% and the endurance cost by {Boost.Attrib.Endurance.Scale}%."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Recharge",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Touch_of_Lady_Grey_E.Attuned_Touch_of_Lady_Grey_E",
+      "displayName": "Defense Debuff/Endurance Reduction",
+      "description": {
+        "short": "+Defense Debuff, +End",
+        "long": "Enhances the defense debuff potential of a power by {Boost.Attrib.DefenseDebuff.Scale}% and reduces the endurance cost by {Boost.Attrib.Endurance.Scale}%."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Defense_Debuff",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Touch_of_Lady_Grey_F.Attuned_Touch_of_Lady_Grey_F",
+      "displayName": "Chance for Negative Energy Damage",
+      "description": {
+        "short": "Chance for Negative Energy DMG",
+        "long": "Provides a chance to cause minor negative energy damage to your targets.  This effect will trigger roughly 3.5 times per minute."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 71.7501
+            }
+          },
+          "stat": "Chance for Negative Energy Damage",
+          "procsPerMinute": 3.5,
+          "cancelOnMiss": true,
+          "damageType": "Negative",
+          "stacking": 1,
+          "resistible": true,
+          "toWho": "all"
+        }
+      ]
+    }
+  ],
+  "levels": {
+    "min": 21,
+    "max": 50
+  },
+  "setType": 21,
+  "setTypeName": "Defense Debuff",
+  "displayName": "Touch of Lady Grey",
+  "imageName": "sTouchofLadyGray.png"
+}

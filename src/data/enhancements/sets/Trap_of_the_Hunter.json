@@ -1,0 +1,199 @@
+{
+  "fullName": "IOSet.Trap_of_the_Hunter",
+  "enhancements": [
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Trap_of_the_Hunter_A.Attuned_Trap_of_the_Hunter_A",
+      "displayName": "Accuracy/Recharge",
+      "description": {
+        "short": "+ACC, +Rech",
+        "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}%."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Accuracy",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Recharge",
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Trap_of_the_Hunter_B.Attuned_Trap_of_the_Hunter_B",
+      "displayName": "Endurance/Immobilize",
+      "description": {
+        "short": "-End Cost, +Immobilize",
+        "long": "Enhances the Immobilize duration of a power by {Boost.Attrib.Immobilize.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "mezType": 3,
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Trap_of_the_Hunter_C.Attuned_Trap_of_the_Hunter_C",
+      "displayName": "Accuracy/Endurance",
+      "description": {
+        "short": "+ACC, -End Cost",
+        "long": "Enhances the accuracy by {Boost.Attrib.Accuracy.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Accuracy",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Trap_of_the_Hunter_D.Attuned_Trap_of_the_Hunter_D",
+      "displayName": "Immobilize/Accuracy",
+      "description": {
+        "short": "+ACC, +Immobilize",
+        "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and immobilize duration by {Boost.Attrib.immobilize.Scale}%."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Accuracy",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "mezType": 3,
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Trap_of_the_Hunter_E.Attuned_Trap_of_the_Hunter_E",
+      "displayName": "Accuracy/Immob/Recharge",
+      "description": {
+        "short": "+ACC, +Rech, +Immob",
+        "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}%, immobilize duration by {Boost.Attrib.Immobilize.Scale}% and reduces the attack rate by {Boost.Attrib.Recharge.Scale}%."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.212
+            }
+          },
+          "stat": "Accuracy",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.212
+            }
+          },
+          "stat": "Recharge",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.212
+            }
+          },
+          "mezType": 3,
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Trap_of_the_Hunter_F.Attuned_Trap_of_the_Hunter_F",
+      "displayName": "Chance for Lethal Damage",
+      "description": {
+        "short": "Chance for Lethal DMG",
+        "long": "Provides a chance to cause minor lethal damage to your targets.  This effect will trigger roughly 3.5 times per minute."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 71.7501
+            }
+          },
+          "stat": "Chance for Lethal Damage",
+          "procsPerMinute": 3.5,
+          "cancelOnMiss": true,
+          "damageType": "Lethal",
+          "stacking": 1,
+          "resistible": true,
+          "pvMode": 1,
+          "toWho": "all"
+        }
+      ]
+    }
+  ],
+  "levels": {
+    "min": 20,
+    "max": 50
+  },
+  "setType": 12,
+  "setTypeName": "Immobilize",
+  "displayName": "Trap of the Hunter",
+  "imageName": "sTrapOfTheHunter.png"
+}

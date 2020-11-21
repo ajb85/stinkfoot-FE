@@ -1,0 +1,184 @@
+{
+  "fullName": "IOSet.Adjusted_Targeting",
+  "enhancements": [
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Adjusted_Targeting_A.Attuned_Adjusted_Targeting_A",
+      "displayName": "To Hit Buff",
+      "description": {
+        "short": "+To Hit Buff",
+        "long": "Enhances the to hit buff potential of a power by {Boost.Attrib.ToHitBuff.Scale}%."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.255
+            }
+          },
+          "stat": "ToHit_Buff",
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Adjusted_Targeting_B.Attuned_Adjusted_Targeting_B",
+      "displayName": "To Hit Buff/Recharge",
+      "description": {
+        "short": "+To Hit Buff, +Rech",
+        "long": "Enhances the to hit buff potential of a power by {Boost.Attrib.ToHitBuff.Scale}% and reduces the recharge time by {Boost.Attrib.Recharge.Scale}%."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.159375
+            }
+          },
+          "stat": "ToHit_Buff",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Recharge",
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Adjusted_Targeting_C.Attuned_Adjusted_Targeting_C",
+      "displayName": "To Hit Buff/Recharge/Endurance Reduction",
+      "description": {
+        "short": "+To Hit Buff, +Rech, +End",
+        "long": "Enhances the to hit buff potential of a power by {Boost.Attrib.ToHitBuff.Scale}%, reduces the endurance cost by {Boost.Attrib.Endurance.Scale}% and the recharge time of a power by {Boost.Attrib.Recharge.Scale}%."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.1275
+            }
+          },
+          "stat": "ToHit_Buff",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.212
+            }
+          },
+          "stat": "Recharge",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.212
+            }
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Adjusted_Targeting_D.Attuned_Adjusted_Targeting_D",
+      "displayName": "Recharge/Endurance Reduction",
+      "description": {
+        "short": "+Rech, +End",
+        "long": "Reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}% and the endurance cost by {Boost.Attrib.Endurance.Scale}%."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Recharge",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Adjusted_Targeting_E.Attuned_Adjusted_Targeting_E",
+      "displayName": "To Hit Buff/Endurance Reduction",
+      "description": {
+        "short": "+To Hit Buff, +End",
+        "long": "Enhances the to hit buff potential of a power by {Boost.Attrib.ToHitBuff.Scale}% and reduces the endurance cost by {Boost.Attrib.Endurance.Scale}%."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.159375
+            }
+          },
+          "stat": "ToHit_Buff",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Adjusted_Targeting_F.Attuned_Adjusted_Targeting_F",
+      "displayName": "Recharge",
+      "description": {
+        "short": "+Rech",
+        "long": "Reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}%."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.424
+            }
+          },
+          "stat": "Recharge",
+          "toWho": "self"
+        }
+      ]
+    }
+  ],
+  "levels": {
+    "min": 21,
+    "max": 50
+  },
+  "setType": 25,
+  "setTypeName": "To Hit Buff",
+  "displayName": "Adjusted Targeting",
+  "imageName": "sAdjustedTargetting.png"
+}

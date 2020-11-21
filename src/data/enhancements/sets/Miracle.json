@@ -1,0 +1,181 @@
+{
+  "fullName": "IOSet.Miracle",
+  "enhancements": [
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Miracle_A.Attuned_Miracle_A",
+      "displayName": "Healing/Absorb/Endurance",
+      "description": {
+        "short": "+Heal, -End Cost, +Absorb",
+        "long": "Enhances the healing potential and damage absorption of a power by {Boost.Attrib.Heal.Scale}% and reduces endurance cost by {Boost.Attrib.Endurance.Scale}%"
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Miracle_B.Attuned_Miracle_B",
+      "displayName": "Endurance/Recharge",
+      "description": {
+        "short": "-End Cost, +Rech",
+        "long": "Reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}% and recharge time by {Boost.Attrib.Recharge.Scale}%"
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Recharge",
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Miracle_C.Attuned_Miracle_C",
+      "displayName": "Healing/Absorb/Recharge",
+      "description": {
+        "short": "+Heal, +Rech, +Absorb",
+        "long": "Enhances the healing potential and damage absorption of a power by {Boost.Attrib.Heal.Scale}% and reduces recharge time by  {Boost.Attrib.Recharge.Scale}%"
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Recharge",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Miracle_D.Attuned_Miracle_D",
+      "displayName": "Healing/Absorb/Endurance/Recharge",
+      "description": {
+        "short": "+Heal, -End Cost, +Rech, +Absorb",
+        "long": "Enhances the healing potential and damage absorption of a power by {Boost.Attrib.Heal.Scale}%, reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}% and recharge time by  {Boost.Attrib.Recharge.Scale}%"
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.212
+            }
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.212
+            }
+          },
+          "stat": "Recharge",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.212
+            }
+          },
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Miracle_E.Attuned_Miracle_E",
+      "displayName": "Healing/Absorb",
+      "description": {
+        "short": "+Heal, +Absorb",
+        "long": "Enhances the healing potential and damage absorption of a power by {Boost.Attrib.Heal.Scale}%."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.424
+            }
+          },
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Miracle_F.Attuned_Miracle_F",
+      "displayName": "+Recovery",
+      "description": {
+        "short": "+Recovery",
+        "long": "UNIQUE -- No more than 1 enhancement of this type may be slotted by a character.  Adds a {Boost.Attrib.Recovery.Scale}% bonus to endurance recovery rate for 120 seconds."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.15
+            }
+          },
+          "stat": "+Recovery",
+          "cancelOnMiss": true,
+          "toWho": "self"
+        }
+      ]
+    }
+  ],
+  "levels": {
+    "min": 20,
+    "max": 40
+  },
+  "setType": 9,
+  "setTypeName": "Healing",
+  "displayName": "Miracle",
+  "imageName": "sMiracle.png"
+}

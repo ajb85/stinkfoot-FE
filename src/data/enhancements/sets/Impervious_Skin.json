@@ -1,0 +1,194 @@
+{
+  "fullName": "IOSet.Impervious_Skin",
+  "enhancements": [
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Impervious_Skin_A.Attuned_Impervious_Skin_A",
+      "displayName": "Resistance/Endurance",
+      "description": {
+        "short": "+RES (all), Reduces End cost",
+        "long": "Enhances the damage resistance of a power by {Boost.Attrib.Resist.Scale}% and reduces endurance cost by {Boost.Attrib.Endurance.Scale}%"
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.159375
+            }
+          },
+          "stat": "Res_Damage",
+          "damageType": [
+            "Smashing",
+            "Lethal",
+            "Fire",
+            "Cold",
+            "Energy",
+            "Negative",
+            "Toxic",
+            "Psionic"
+          ],
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Impervious_Skin_B.Attuned_Impervious_Skin_B",
+      "displayName": "Resistance/Recharge",
+      "description": {
+        "short": "+RES (all), +Rech",
+        "long": "Enhances the damage resistance of a power by {Boost.Attrib.Resist.Scale}% and reduces recharge time by {Boost.Attrib.Recharge.Scale}%"
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.159375
+            }
+          },
+          "stat": "Res_Damage",
+          "damageType": [
+            "Smashing",
+            "Lethal",
+            "Fire",
+            "Cold",
+            "Energy",
+            "Negative",
+            "Toxic",
+            "Psionic"
+          ],
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Recharge",
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Impervious_Skin_C.Attuned_Impervious_Skin_C",
+      "displayName": "Endurance/Recharge",
+      "description": {
+        "short": "Reduces Endurance Cost and Increases Attack Rate",
+        "long": "Reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}% and recharge time by {Boost.Attrib.Recharge.Scale}%"
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Recharge",
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Impervious_Skin_D.Attuned_Impervious_Skin_D",
+      "displayName": "Resistance/Endurance/Recharge",
+      "description": {
+        "short": "Enhances Resistance, Reduces Endurance Cost and Increases Attack Rate",
+        "long": "Enhances the damage resistance of a power by {Boost.Attrib.Resist.Scale}%, reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%and recharge time by {Boost.Attrib.Recharge.Scale}%"
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.1275
+            }
+          },
+          "stat": "Res_Damage",
+          "damageType": [
+            "Smashing",
+            "Lethal",
+            "Fire",
+            "Cold",
+            "Energy",
+            "Negative",
+            "Toxic",
+            "Psionic"
+          ],
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.212
+            }
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.212
+            }
+          },
+          "stat": "Recharge",
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Impervious_Skin_E.Attuned_Impervious_Skin_E",
+      "displayName": "Status Resistance, +Regeneration",
+      "description": {
+        "short": "+RES Status Effects, +Regeneration",
+        "long": "Reduces the duration of status effects on you by 7.5% and increases your regeneration rate moderately."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 1
+            }
+          },
+          "stat": "Status Resistance, +Regeneration",
+          "cancelOnMiss": true,
+          "toWho": "self"
+        }
+      ]
+    }
+  ],
+  "levels": {
+    "min": 10,
+    "max": 30
+  },
+  "setType": 8,
+  "setTypeName": "Resist Damage",
+  "displayName": "Impervious Skin",
+  "imageName": "sImperviousSkin.png"
+}

@@ -1,25 +1,27 @@
-import React, { useState, useEffect, useContext } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import React, { useState, useEffect } from "react";
 
-import { BuildContext } from 'Providers/Builds.js';
-import FilterOptions from './FilterOptions.js';
+import useCharacters from "providers/useCharacters.js";
+import FilterOptions from "./FilterOptions.js";
 
-import categoryName from 'js/categories.js';
-import doesSetMatchKeyword from 'js/doesSetMatchKeyword.js';
+import categoryName from "js/categories.js";
+import doesSetMatchKeyword from "js/doesSetMatchKeyword.js";
 
-import styles from './styles.module.scss';
+import styles from "./styles.module.scss";
 
 function ListBuild(props) {
   const [filters, setFilters] = useState({
-    order: 'asc',
+    order: "asc",
     tags: { length: 0 },
     options: [],
-    search: '',
+    search: "",
   });
 
-  const { build, toggleEnhancement, toggleSet, decrementCount } = useContext(
-    BuildContext
-  );
+  const {
+    build,
+    toggleEnhancement,
+    toggleSet,
+    decrementCount,
+  } = useCharacters();
 
   const toggleTag = (tag) => {
     if (filters.tags[tag]) {
@@ -45,7 +47,7 @@ function ListBuild(props) {
         return doesSetMatchKeyword(filters.search, setName, enhancements);
       }
       for (let e in enhancements) {
-        const stats = e.split('/');
+        const stats = e.split("/");
         for (let i = 0; i < stats.length; i++) {
           const s = stats[i];
           const category = categoryName[s.toLowerCase()];
@@ -82,13 +84,13 @@ function ListBuild(props) {
       const zIndex = -2 * i;
       return (
         <div
-          style={{ position: 'relative', zIndex }}
+          style={{ position: "relative", zIndex }}
           key={setName}
           className={styles.set}
         >
           <div className={styles.setContainer}>
             <h2 onClick={() => toggleSet(setName)}>{setName}</h2>
-            <div style={{ position: 'relative' }}>
+            <div style={{ position: "relative" }}>
               {allEnhancements.map(({ name, have, need, powers }) => {
                 const count = need - have;
                 const completed = count === 0;
@@ -99,20 +101,16 @@ function ListBuild(props) {
                       <p
                         style={{
                           visibility:
-                            !completed && need === 1 ? 'hidden' : 'visible',
-                          backgroundColor: completed ? '#279f8f' : '#0a1b3b',
+                            !completed && need === 1 ? "hidden" : "visible",
+                          backgroundColor: completed ? "#279f8f" : "#0a1b3b",
                         }}
                         onClick={() => decrementCount(setName, name)}
                       >
-                        {completed ? (
-                          <FontAwesomeIcon icon={['fal', 'check']} />
-                        ) : (
-                          count
-                        )}
+                        {completed ? <p>ICON</p> : count}
                       </p>
                       <p
                         style={{
-                          textDecoration: completed ? 'line-through' : null,
+                          textDecoration: completed ? "line-through" : null,
                         }}
                         onClick={() => toggleEnhancement(setName, name)}
                       >
@@ -131,9 +129,9 @@ function ListBuild(props) {
                         {Object.entries(powers)
                           .map(
                             ([powerName, { count }]) =>
-                              `${powerName}${count > 1 ? ` (${count})` : ''}`
+                              `${powerName}${count > 1 ? ` (${count})` : ""}`
                           )
-                          .join(', ')}
+                          .join(", ")}
                       </span>
                     </div>
                   </div>
@@ -149,7 +147,7 @@ function ListBuild(props) {
     const categoryList = new Set();
     for (let setName in build.enhancements) {
       for (let eName in build.enhancements[setName].enhancements) {
-        eName.split('/').forEach((n) => {
+        eName.split("/").forEach((n) => {
           const category = categoryName[n.toLowerCase()];
           if (category) {
             categoryList.add(category);
@@ -169,7 +167,7 @@ function ListBuild(props) {
   return (
     <div
       className={styles.BuildList}
-      style={{ position: 'relative', zIndex: enhancementList.length * -2 }}
+      style={{ position: "relative", zIndex: enhancementList.length * -2 }}
     >
       <FilterOptions
         filters={filters}
@@ -178,12 +176,12 @@ function ListBuild(props) {
       />
       <div
         className={styles.list}
-        style={{ position: 'relative', zIndex: enhancementList.length * -2 }}
+        style={{ position: "relative", zIndex: enhancementList.length * -2 }}
       >
         {enhancementList.length ? (
           enhancementList
         ) : (
-          <p style={{ marginTop: '18px' }}>
+          <p style={{ marginTop: "18px" }}>
             Whoops, you don't have any enhancements that match that criteria!
           </p>
         )}

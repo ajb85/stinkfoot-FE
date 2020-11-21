@@ -1,0 +1,239 @@
+{
+  "fullName": "IOSet.Executioners_Contract",
+  "enhancements": [
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Executioners_Contract_A.Attuned_Executioners_Contract_A",
+      "displayName": "Accuracy/Damage",
+      "description": {
+        "short": "Enhances Accuracy and Damage",
+        "long": "Enhances the damage of a power by {Boost.Attrib.Damage.Scale}% and accuracy by {Boost.Attrib.Accuracy.Scale}%."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Accuracy",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Damage",
+          "damageType": [
+            "Smashing",
+            "Lethal",
+            "Fire",
+            "Cold",
+            "Energy",
+            "Negative",
+            "Toxic",
+            "Psionic"
+          ],
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Executioners_Contract_B.Attuned_Executioners_Contract_B",
+      "displayName": "Damage/Endurance",
+      "description": {
+        "short": "Enhances Damage and Reduces Endurance Cost",
+        "long": "Enhances the damage of a power by {Boost.Attrib.Damage.Scale}% and reduces endurance cost by {Boost.Attrib.Endurance.Scale}%"
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Damage",
+          "damageType": [
+            "Smashing",
+            "Lethal",
+            "Fire",
+            "Cold",
+            "Energy",
+            "Negative",
+            "Toxic",
+            "Psionic"
+          ],
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Executioners_Contract_C.Attuned_Executioners_Contract_C",
+      "displayName": "Damage/Interrupt",
+      "description": {
+        "short": "Enhances Damage and Reduces Interrupt Time",
+        "long": "Enhances the damage of a power by {Boost.Attrib.Damage.Scale}% and reduces interrupt time by {Boost.Attrib.Interrupt.Scale}%"
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Damage",
+          "damageType": [
+            "Smashing",
+            "Lethal",
+            "Fire",
+            "Cold",
+            "Energy",
+            "Negative",
+            "Toxic",
+            "Psionic"
+          ],
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.318125
+            }
+          },
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Executioners_Contract_D.Attuned_Executioners_Contract_D",
+      "displayName": "Damage/Range",
+      "description": {
+        "short": "Enhances Damage and Range",
+        "long": "Enhances the damage of a power by {Boost.Attrib.Damage.Scale}% and range by {Boost.Attrib.Range.Scale}%"
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Damage",
+          "damageType": [
+            "Smashing",
+            "Lethal",
+            "Fire",
+            "Cold",
+            "Energy",
+            "Negative",
+            "Toxic",
+            "Psionic"
+          ],
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.159375
+            }
+          },
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Executioners_Contract_E.Attuned_Executioners_Contract_E",
+      "displayName": "Damage/Recharge",
+      "description": {
+        "short": "Enhances Damage and Recharge",
+        "long": "Enhances the damage of a power by {Boost.Attrib.Damage.Scale}% and reduces recharge time by {Boost.Attrib.Recharge.Scale}%"
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Damage",
+          "damageType": [
+            "Smashing",
+            "Lethal",
+            "Fire",
+            "Cold",
+            "Energy",
+            "Negative",
+            "Toxic",
+            "Psionic"
+          ],
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Recharge",
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Executioners_Contract_F.Attuned_Executioners_Contract_F",
+      "displayName": "Disorient Bonus",
+      "description": {
+        "short": "Adds Disorient Chance",
+        "long": "Adds a chance to Disorient your foe.  This effect will trigger roughly 3.5 times per minute."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 2
+            }
+          },
+          "stat": "Disorient Bonus",
+          "procsPerMinute": 3.5,
+          "cancelOnMiss": true,
+          "mezType": 10,
+          "stacking": 1,
+          "resistible": true,
+          "pvMode": 1,
+          "toWho": "all",
+          "attribType": 1
+        }
+      ]
+    }
+  ],
+  "levels": {
+    "min": 20,
+    "max": 50
+  },
+  "setType": 5,
+  "setTypeName": "Sniper Attacks",
+  "displayName": "Executioner's Contract",
+  "imageName": "sExecutionersContract.png"
+}

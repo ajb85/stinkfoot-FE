@@ -1,0 +1,163 @@
+{
+  "fullName": "IOSet.Hibernation",
+  "enhancements": [
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Hibernation_A.Attuned_Hibernation_A",
+      "displayName": "Accuracy/Recharge",
+      "description": {
+        "short": "+ACC, +Rech",
+        "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}%."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Accuracy",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Recharge",
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Hibernation_B.Attuned_Hibernation_B",
+      "displayName": "Endurance/Sleep",
+      "description": {
+        "short": "-End Cost, +Sleep",
+        "long": "Enhances the sleep duration of a power by {Boost.Attrib.Sleep.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "mezType": 9,
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Hibernation_C.Attuned_Hibernation_C",
+      "displayName": "Accuracy/Endurance",
+      "description": {
+        "short": "+ACC, -End Cost",
+        "long": "Enhances the accuracy by {Boost.Attrib.Accuracy.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Accuracy",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Hibernation_D.Attuned_Hibernation_D",
+      "displayName": "Sleep/Range",
+      "description": {
+        "short": "+Range, +Sleep",
+        "long": "Enhances the range of a power by {Boost.Attrib.Range.Scale}% and sleep duration by {Boost.Attrib.sleep.Scale}%."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "mezType": 9,
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Hibernation_E.Attuned_Hibernation_E",
+      "displayName": "Accuracy/Sleep/Recharge",
+      "description": {
+        "short": "+ACC, +Rech, +Sleep",
+        "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}%, sleep duration by {Boost.Attrib.Sleep.Scale}% and reduces the attack rate by {Boost.Attrib.Recharge.Scale}%."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.212
+            }
+          },
+          "stat": "Accuracy",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.212
+            }
+          },
+          "stat": "Recharge",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.212
+            }
+          },
+          "mezType": 9,
+          "toWho": "self"
+        }
+      ]
+    }
+  ],
+  "levels": {
+    "min": 10,
+    "max": 30
+  },
+  "setType": 14,
+  "setTypeName": "Sleep",
+  "displayName": "Hibernation",
+  "imageName": "sHibernation.png"
+}

@@ -1,0 +1,513 @@
+{
+  "fullName": "Pool_Presence",
+  "archetypeOrder": "poolPower",
+  "description": "You have an impressive presence that manifests in a variety of ways. Whether through charm, persuasion or outright intimidation, you can manipulate your foes' desire to fight you. Though this is a challenging set to master, and can get you into trouble if used injudiciously, the potential benefits are great.",
+  "imageName": "Presence.png",
+  "displayName": "Presence",
+  "powers": [
+    {
+      "allowedEnhancements": [
+        "Accuracy",
+        "Endurance_Discount",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "archetypeOrder": "poolPower",
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 3,
+                "pvp": 3
+              },
+              "probability": 1,
+              "duration": 8,
+              "effectType": "Mez",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "attribType": 1,
+              "powerFullName": "Pool.Manipulation.Challenge",
+              "mezType": "Placate"
+            }
+          ]
+        }
+      ],
+      "powerIndex": 0,
+      "castTimeReal": 1.67,
+      "toggleCost": 6.5,
+      "fullName": "Pool_Presence_Pacify",
+      "displayName": "Pacify",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1.2,
+      "accuracyMult": 1.2,
+      "attackTypes": 2,
+      "target": 2048,
+      "targetLoS": true,
+      "range": 60,
+      "endCost": 6.5,
+      "rechargeTime": 60,
+      "baseRechargeTime": 60,
+      "effectArea": 1,
+      "numAllowed": 1,
+      "description": {
+        "short": "Ranged, Placate (Foe)",
+        "long": "Through persuasion or subtle intimidation, you attempt to placate a single target for a short time. If successful, the affected target will no longer attack you. This persists until the effect expires or you attack the target. Unlike other placation effects, this power will not hide you or give any concealment bonuses."
+      },
+      "setTypes": [],
+      "level": 4,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 1.848,
+      "slottable": true,
+      "aoeModifier": 1
+    },
+    {
+      "allowedEnhancements": [
+        "Accuracy",
+        "Range",
+        "Recharge",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "archetypeOrder": "poolPower",
+      "effects": [
+        {
+          "effectType": "Taunt",
+          "values": [
+            {
+              "mag": {
+                "pve": 4,
+                "pvp": 4
+              },
+              "probability": 1,
+              "duration": 8.24,
+              "effectType": "Mez",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "attribType": 1,
+              "powerFullName": "Pool.Manipulation.Provoke",
+              "mezType": "Taunt"
+            }
+          ]
+        }
+      ],
+      "powerIndex": 1,
+      "castTimeReal": 1.67,
+      "fullName": "Pool_Presence_Provoke",
+      "displayName": "Provoke",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "attackTypes": 4,
+      "target": 2048,
+      "targetLoS": true,
+      "range": 60,
+      "rechargeTime": 10,
+      "baseRechargeTime": 10,
+      "effectArea": 2,
+      "radius": 15,
+      "maxTargets": 5,
+      "numAllowed": 1,
+      "description": {
+        "short": "Targeted AoE, Taunt (Foe)",
+        "long": "When you have established that a fight is absolutely necessary, you step up to take the lead, provoking the attention of several targets at a targeted location. Use this to pull the attention of your foes off of an ally in trouble. This provocation effect is not as powerful as similar powers used by Tankers, and also has a chance to miss."
+      },
+      "setTypes": [
+        24
+      ],
+      "level": 4,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 1.848,
+      "slottable": true,
+      "aoeModifier": 3.25
+    },
+    {
+      "allowedEnhancements": [
+        "Accuracy",
+        "Endurance_Discount",
+        "Fear",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "archetypeOrder": "poolPower",
+      "effects": [
+        {
+          "effectType": "Fear",
+          "values": [
+            {
+              "mag": {
+                "pve": 3,
+                "pvp": 2
+              },
+              "probability": 1,
+              "duration": 8.344,
+              "effectType": "Mez",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "attribType": 1,
+              "powerFullName": "Pool.Manipulation.Intimidate",
+              "mezType": "Terrorize"
+            }
+          ]
+        },
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pvp": 2
+              },
+              "probability": 1,
+              "duration": 2,
+              "effectType": "Mez",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "attribType": 1,
+              "powerFullName": "Pool.Manipulation.Intimidate",
+              "mezType": "Terrorize"
+            }
+          ]
+        }
+      ],
+      "powerIndex": 2,
+      "castTimeReal": 1.67,
+      "toggleCost": 10,
+      "fullName": "Pool_Presence_Intimidate",
+      "displayName": "Intimidate",
+      "requires": {
+        "powers": {
+          "Pool_Presence_Pacify": true,
+          "Pool_Presence_Provoke": true
+        },
+        "count": 1
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "attackTypes": 514,
+      "target": 2048,
+      "targetLoS": true,
+      "range": 60,
+      "endCost": 10,
+      "rechargeTime": 30,
+      "baseRechargeTime": 30,
+      "effectArea": 1,
+      "numAllowed": 1,
+      "description": {
+        "short": "Ranged, Fear (Foe)",
+        "long": "When fully engaged in battle, you are a frightening presence and can use this to your advantage. You threaten a single foe and cause that foe to tremble helplessly in fear for a short time. In order to acquire this ability, you must be level 14 and possess either Pacify or Provoke."
+      },
+      "setTypes": [
+        15
+      ],
+      "level": 14,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 1.848,
+      "slottable": true,
+      "aoeModifier": 1
+    },
+    {
+      "allowedEnhancements": [
+        "Accuracy",
+        "Endurance_Discount",
+        "Fear",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "archetypeOrder": "poolPower",
+      "effects": [
+        {
+          "effectType": "Fear",
+          "values": [
+            {
+              "mag": {
+                "pve": 3,
+                "pvp": 2
+              },
+              "probability": 1,
+              "duration": 8.344,
+              "effectType": "Mez",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "attribType": 1,
+              "powerFullName": "Pool.Manipulation.Invoke_Panic",
+              "mezType": "Terrorize"
+            }
+          ]
+        },
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pvp": 2
+              },
+              "probability": 1,
+              "duration": 2,
+              "effectType": "Mez",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "attribType": 1,
+              "powerFullName": "Pool.Manipulation.Invoke_Panic",
+              "mezType": "Terrorize"
+            }
+          ]
+        }
+      ],
+      "powerIndex": 3,
+      "castTimeReal": 1.97,
+      "toggleCost": 18,
+      "fullName": "Pool_Presence_Invoke_Panic",
+      "displayName": "Invoke Panic",
+      "requires": {
+        "powers": {
+          "Pool_Presence_Pacify": true,
+          "Pool_Presence_Provoke": true,
+          "Pool_Presence_Intimidate": true
+        },
+        "count": 2
+      },
+      "accuracy": 0.9,
+      "accuracyMult": 0.9,
+      "attackTypes": 513,
+      "target": 1,
+      "targetLoS": true,
+      "endCost": 18,
+      "rechargeTime": 60,
+      "baseRechargeTime": 60,
+      "effectArea": 2,
+      "radius": 20,
+      "maxTargets": 10,
+      "numAllowed": 1,
+      "description": {
+        "short": "PBAoE, Fear (Foe)",
+        "long": "When fully engaged in battle, you are a frightening presence and can use this to your advantage. This power causes sheer terror in all foes around you, causing them to tremble uncontrollably in fear. In order to acquire this ability, you must be level 14 and possess any two other powers from the Presence pool."
+      },
+      "setTypes": [
+        15
+      ],
+      "level": 14,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 2.112,
+      "slottable": true,
+      "aoeModifier": 4
+    },
+    {
+      "allowedEnhancements": [
+        "Heal",
+        "Recharge",
+        "Endurance_Modification"
+      ],
+      "enhancementCount": 6,
+      "archetypeOrder": "poolPower",
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.5
+              },
+              "probability": 1,
+              "duration": 30,
+              "variableModified": true,
+              "effectType": "Heal",
+              "ticks": 31,
+              "stacking": 1,
+              "toWho": "Self",
+              "powerFullName": "Pool.Manipulation.Unrelenting"
+            },
+            {
+              "mag": {
+                "pve": 0.2
+              },
+              "probability": 1,
+              "duration": 30,
+              "variableModified": true,
+              "effectType": "Enhancement",
+              "eTModifies": 25,
+              "stacking": 1,
+              "toWho": "Self",
+              "powerFullName": "Pool.Manipulation.Unrelenting"
+            },
+            {
+              "mag": {
+                "pve": 0.2
+              },
+              "probability": 1,
+              "duration": 30,
+              "variableModified": true,
+              "effectType": "Recovery",
+              "stacking": 1,
+              "toWho": "Self",
+              "powerFullName": "Pool.Manipulation.Unrelenting"
+            }
+          ]
+        },
+        {
+          "effectType": "Buff_Dmg",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.25
+              },
+              "probability": 1,
+              "duration": 30,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "toWho": "Self",
+              "powerFullName": "Pool.Manipulation.Unrelenting",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 0.25
+              },
+              "probability": 1,
+              "duration": 30,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "toWho": "Self",
+              "powerFullName": "Pool.Manipulation.Unrelenting",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.25
+              },
+              "probability": 1,
+              "duration": 30,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "toWho": "Self",
+              "powerFullName": "Pool.Manipulation.Unrelenting",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.25
+              },
+              "probability": 1,
+              "duration": 30,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "toWho": "Self",
+              "powerFullName": "Pool.Manipulation.Unrelenting",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 0.25
+              },
+              "probability": 1,
+              "duration": 30,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "toWho": "Self",
+              "powerFullName": "Pool.Manipulation.Unrelenting",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.25
+              },
+              "probability": 1,
+              "duration": 30,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "toWho": "Self",
+              "powerFullName": "Pool.Manipulation.Unrelenting",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.25
+              },
+              "probability": 1,
+              "duration": 30,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "toWho": "Self",
+              "powerFullName": "Pool.Manipulation.Unrelenting",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pve": 0.25
+              },
+              "probability": 1,
+              "duration": 30,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "toWho": "Self",
+              "powerFullName": "Pool.Manipulation.Unrelenting",
+              "damageType": "Psionic"
+            }
+          ]
+        }
+      ],
+      "powerIndex": 4,
+      "castTimeReal": 1.97,
+      "fullName": "Pool_Presence_Unrelenting",
+      "displayName": "Unrelenting",
+      "requires": {
+        "powers": {
+          "Pool_Presence_Pacify": true,
+          "Pool_Presence_Provoke": true,
+          "Pool_Presence_Intimidate": true,
+          "Pool_Presence_Invoke_Panic": true
+        },
+        "count": 2
+      },
+      "accuracy": 2,
+      "accuracyMult": 2,
+      "target": 1,
+      "targetLoS": true,
+      "rechargeTime": 600,
+      "baseRechargeTime": 600,
+      "effectArea": 1,
+      "castFlags": 4,
+      "numAllowed": 1,
+      "description": {
+        "short": "Self, Heal over Time, +DMG(All), +Rech, +Rec, Self Resurrect (Special)",
+        "long": "You channel your inner confidence to become a relentless opponent, gaining significant boosts to your damage, recovery and attack speed for a short while. Additionally, you will be able to fight though the pain caused by opponents, healing continuously over time.  You can also use this power to fight your way back to the living after defeat - if you are defeated when you use this power, you will be revived with 50% health.  You must be level 14 and have trained any two other Presence pool powers before you can train Unrelenting."
+      },
+      "setTypes": [
+        9,
+        22
+      ],
+      "level": 14,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 2.112,
+      "slottable": true,
+      "aoeModifier": 1
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "fullName": "IOSet.Celerity",
+  "enhancements": [
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Celerity_A.Attuned_Celerity_A",
+      "displayName": "Endurance",
+      "description": {
+        "short": "-End Cost",
+        "long": "Reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.424
+            }
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Celerity_B.Attuned_Celerity_B",
+      "displayName": "Run",
+      "description": {
+        "short": "+Run",
+        "long": "Enhances the run speed of a power by {Boost.Attrib.Run.Scale}%."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.424
+            }
+          },
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Celerity_C.Attuned_Celerity_C",
+      "displayName": "Stealth",
+      "description": {
+        "short": "Grants Stealth",
+        "long": "UNIQUE -- No more than 1 enhancement of this type may be slotted by a character.  May not be slotted if you have any other enhancements which grant stealth.  Grants Stealth for 120 seconds when used in an instant effect power."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 30
+            }
+          },
+          "stat": "Stealth",
+          "cancelOnMiss": true,
+          "suppression": 448,
+          "toWho": "self"
+        }
+      ]
+    }
+  ],
+  "levels": {
+    "min": 15,
+    "max": 50
+  },
+  "setType": 19,
+  "setTypeName": "Running",
+  "displayName": "Celerity",
+  "imageName": "sCelerity.png"
+}

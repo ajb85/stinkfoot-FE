@@ -1,0 +1,847 @@
+{
+  "fullName": "Pool_Flight",
+  "archetypeOrder": "poolPower",
+  "description": "Grants you various travel and flying combat abilities.",
+  "imageName": "Flight.png",
+  "displayName": "Flight",
+  "powers": [
+    {
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "archetypeOrder": "poolPower",
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": -1.6
+              },
+              "probability": 1,
+              "duration": 30,
+              "effectType": "Fly",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Pool.Flight.Air_Superiority"
+            },
+            {
+              "mag": {
+                "pve": 0.75,
+                "pvp": 0.75
+              },
+              "probability": 1,
+              "effectType": "Mez",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Pool.Flight.Air_Superiority",
+              "mezType": "Knockup"
+            }
+          ]
+        },
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 55.6102,
+                "pvp": 121.094551
+              },
+              "probability": 1,
+              "effectType": "Damage",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Pool.Flight.Air_Superiority",
+              "damageType": "Smashing"
+            }
+          ]
+        },
+        {
+          "effectType": "InherentTaunt",
+          "values": [
+            {
+              "mag": {
+                "pve": 4
+              },
+              "probability": 1,
+              "duration": 13.6,
+              "effectType": "Mez",
+              "stacking": 1,
+              "resistible": true,
+              "specialCase": 14,
+              "toWho": "Target",
+              "attribType": 1,
+              "powerFullName": "Pool.Flight.Air_Superiority",
+              "requiresToHitCheck": true,
+              "mezType": "Taunt"
+            }
+          ]
+        }
+      ],
+      "powerIndex": 0,
+      "castTimeReal": 1.5,
+      "toggleCost": 6.5,
+      "fullName": "Pool_Flight_Air_Superiority",
+      "displayName": "Air Superiority",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "attackTypes": 9,
+      "target": 2048,
+      "targetLoS": true,
+      "range": 7,
+      "endCost": 6.5,
+      "rechargeTime": 4,
+      "baseRechargeTime": 4,
+      "effectArea": 1,
+      "numAllowed": 1,
+      "description": {
+        "short": "Melee, Moderate DMG(Smash), Foe -Fly",
+        "long": "This two-handed overhead melee attack can knock a flying target to the ground."
+      },
+      "setTypes": [
+        1,
+        44
+      ],
+      "level": 4,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "neverAutoUpdate": true,
+      "castTime": 1.716,
+      "slottable": true,
+      "aoeModifier": 1
+    },
+    {
+      "allowedEnhancements": [
+        "Endurance_Discount",
+        "Fly"
+      ],
+      "enhancementCount": 6,
+      "archetypeOrder": "poolPower",
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 1
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Fly",
+              "toWho": "Self",
+              "powerFullName": "Pool.Flight.Fly"
+            },
+            {
+              "mag": {
+                "pve": -1.01,
+                "pvp": 0.8
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "SpeedFlying",
+              "toWho": "Self",
+              "powerFullName": "Pool.Flight.Fly"
+            },
+            {
+              "mag": {
+                "pve": 1
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "GlobalChanceMod",
+              "toWho": "Self",
+              "powerFullName": "Pool.Flight.Fly"
+            }
+          ]
+        },
+        {
+          "effectType": "SpeedFlying",
+          "values": [
+            {
+              "mag": {
+                "pve": 1.365,
+                "pvp": 1.365
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "SpeedFlying",
+              "toWho": "Self",
+              "powerFullName": "Pool.Flight.Fly"
+            }
+          ]
+        },
+        {
+          "effectType": "Control",
+          "values": [
+            {
+              "mag": {
+                "pve": 8
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "MovementControl",
+              "toWho": "Self",
+              "powerFullName": "Pool.Flight.Fly"
+            }
+          ]
+        },
+        {
+          "effectType": "Friction",
+          "values": [
+            {
+              "mag": {
+                "pve": 8
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "MovementFriction",
+              "toWho": "Self",
+              "powerFullName": "Pool.Flight.Fly"
+            }
+          ]
+        }
+      ],
+      "powerIndex": 1,
+      "castTimeReal": 1.716,
+      "toggleCost": 1,
+      "fullName": "Pool_Flight_Fly",
+      "displayName": "Fly",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "target": 1,
+      "targetLoS": true,
+      "endCost": 0.5,
+      "activatePeriod": 0.5,
+      "effectArea": 1,
+      "numAllowed": 1,
+      "description": {
+        "short": "Toggle: Self Fly",
+        "long": "Fly allows you to travel large distances quickly. If you attack a target while this power is on, your flight speed will be temporarily reduced to Hover speed.  Your top Flight speed increases with your Level."
+      },
+      "setTypes": [
+        17,
+        28
+      ],
+      "level": 4,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "neverAutoUpdate": true,
+      "neverAutoUpdateRequirements": true,
+      "castTime": 1.848,
+      "slottable": true,
+      "aoeModifier": 1,
+      "powerType": "Toggle"
+    },
+    {
+      "allowedEnhancements": [
+        "Defense_Buff",
+        "Endurance_Discount",
+        "Fly"
+      ],
+      "enhancementCount": 6,
+      "archetypeOrder": "poolPower",
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 4
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Fly",
+              "toWho": "Self",
+              "powerFullName": "Pool.Flight.Combat_Flight"
+            },
+            {
+              "mag": {
+                "pve": -1.01
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "SpeedFlying",
+              "toWho": "Self",
+              "powerFullName": "Pool.Flight.Combat_Flight"
+            },
+            {
+              "mag": {
+                "pve": 1
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "GlobalChanceMod",
+              "toWho": "Self",
+              "powerFullName": "Pool.Flight.Combat_Flight"
+            }
+          ]
+        },
+        {
+          "effectType": "Buff_Def",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.0175,
+                "pvp": 0.0175
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Pool.Flight.Combat_Flight",
+              "damageType": "Melee"
+            },
+            {
+              "mag": {
+                "pve": 0.0175,
+                "pvp": 0.0175
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Pool.Flight.Combat_Flight",
+              "damageType": "Ranged"
+            },
+            {
+              "mag": {
+                "pve": 0.0175,
+                "pvp": 0.0175
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Pool.Flight.Combat_Flight",
+              "damageType": "AoE"
+            },
+            {
+              "mag": {
+                "pve": 0.0175,
+                "pvp": 0.0175
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Pool.Flight.Combat_Flight",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 0.0175,
+                "pvp": 0.0175
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Pool.Flight.Combat_Flight",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.0175,
+                "pvp": 0.0175
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Pool.Flight.Combat_Flight",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.0175,
+                "pvp": 0.0175
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Pool.Flight.Combat_Flight",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 0.0175,
+                "pvp": 0.0175
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Pool.Flight.Combat_Flight",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.0175,
+                "pvp": 0.0175
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Pool.Flight.Combat_Flight",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.0175,
+                "pvp": 0.0175
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Pool.Flight.Combat_Flight",
+              "damageType": "Psionic"
+            }
+          ]
+        },
+        {
+          "effectType": "Control",
+          "values": [
+            {
+              "mag": {
+                "pve": 100
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "MovementControl",
+              "toWho": "Self",
+              "powerFullName": "Pool.Flight.Combat_Flight"
+            }
+          ]
+        },
+        {
+          "effectType": "Friction",
+          "values": [
+            {
+              "mag": {
+                "pve": 100
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "MovementFriction",
+              "toWho": "Self",
+              "powerFullName": "Pool.Flight.Combat_Flight"
+            }
+          ]
+        }
+      ],
+      "powerIndex": 2,
+      "toggleCost": 0.195,
+      "fullName": "Pool_Flight_Hover",
+      "displayName": "Hover",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "target": 1,
+      "targetLoS": true,
+      "endCost": 0.0975,
+      "activatePeriod": 0.5,
+      "effectArea": 1,
+      "numAllowed": 1,
+      "description": {
+        "short": "Toggle: Self Fly, +DEF(All)",
+        "long": "For hovering and aerial combat. This power is much slower than Fly, but provides some Defense to all attacks, offers good air control, costs little Endurance, and has none of the penalties associated with Fly. Switch to this mode when fighting other flying foes."
+      },
+      "setTypes": [
+        7,
+        17,
+        28
+      ],
+      "level": 4,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 0.132,
+      "slottable": true,
+      "aoeModifier": 1,
+      "powerType": "Toggle"
+    },
+    {
+      "allowedEnhancements": [
+        "Defense_Buff",
+        "Endurance_Discount",
+        "Fly"
+      ],
+      "enhancementCount": 6,
+      "archetypeOrder": "poolPower",
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 1
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "SpeedFlying",
+              "toWho": "Self",
+              "powerFullName": "Pool.Flight.Afterburner"
+            },
+            {
+              "mag": {
+                "pve": 4
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Mez",
+              "toWho": "Self",
+              "powerFullName": "Pool.Flight.Afterburner",
+              "mezType": "OnlyAffectsSelf"
+            }
+          ]
+        },
+        {
+          "effectType": "FlightActive",
+          "values": [
+            {
+              "mag": {
+                "pve": 4
+              },
+              "duration": 0.75,
+              "effectType": "Fly",
+              "toWho": "Self",
+              "powerFullName": "Pool.Flight.Afterburner"
+            }
+          ]
+        },
+        {
+          "effectType": "Buff_Def",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.105000004,
+                "pvp": 0.105000004
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Pool.Flight.Afterburner",
+              "damageType": "Melee"
+            },
+            {
+              "mag": {
+                "pve": 0.105000004,
+                "pvp": 0.105000004
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Pool.Flight.Afterburner",
+              "damageType": "Ranged"
+            },
+            {
+              "mag": {
+                "pve": 0.105000004,
+                "pvp": 0.105000004
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Pool.Flight.Afterburner",
+              "damageType": "AoE"
+            },
+            {
+              "mag": {
+                "pve": 0.105000004,
+                "pvp": 0.105000004
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Pool.Flight.Afterburner",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 0.105000004,
+                "pvp": 0.105000004
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Pool.Flight.Afterburner",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.105000004,
+                "pvp": 0.105000004
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Pool.Flight.Afterburner",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.105000004,
+                "pvp": 0.105000004
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Pool.Flight.Afterburner",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 0.105000004,
+                "pvp": 0.105000004
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Pool.Flight.Afterburner",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.105000004,
+                "pvp": 0.105000004
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Pool.Flight.Afterburner",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.105000004,
+                "pvp": 0.105000004
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "Pool.Flight.Afterburner",
+              "damageType": "Psionic"
+            }
+          ]
+        },
+        {
+          "effectType": "Control",
+          "values": [
+            {
+              "mag": {
+                "pve": 60
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "MovementControl",
+              "toWho": "Self",
+              "powerFullName": "Pool.Flight.Afterburner"
+            }
+          ]
+        },
+        {
+          "effectType": "Friction",
+          "values": [
+            {
+              "mag": {
+                "pve": 60
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "MovementFriction",
+              "toWho": "Self",
+              "powerFullName": "Pool.Flight.Afterburner"
+            }
+          ]
+        }
+      ],
+      "powerIndex": 3,
+      "toggleCost": 0.65,
+      "fullName": "Pool_Flight_Afterburner",
+      "displayName": "Afterburner",
+      "requires": {
+        "powers": {
+          "Pool_Flight_Hover": true,
+          "Pool_Flight_Air_Superiority": true,
+          "Pool_Flight_Fly": true
+        },
+        "count": 2
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "target": 1,
+      "targetLoS": true,
+      "endCost": 0.325,
+      "rechargeTime": 30,
+      "baseRechargeTime": 30,
+      "activatePeriod": 0.5,
+      "effectArea": 1,
+      "numAllowed": 1,
+      "description": {
+        "short": "Toggle: Self +FlySpeed, Res(-Fly), +Def(All), +Flight Control",
+        "long": "Afterburner greatly increases your maximum fly speed, provides a high amount of defense, flight protection and additional flight control, however while active you can only use powers that target yourself.    You must be at least level 14 and have two other Flight Powers before selecting Afterburner.  This power only grants flight protection while Hover, Flight or Group Fly is active.  Recharge: Long"
+      },
+      "setTypes": [
+        7,
+        17,
+        28
+      ],
+      "level": 14,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 0.132,
+      "slottable": true,
+      "aoeModifier": 1,
+      "powerType": "Toggle"
+    },
+    {
+      "allowedEnhancements": [
+        "Endurance_Discount",
+        "Fly"
+      ],
+      "enhancementCount": 6,
+      "archetypeOrder": "poolPower",
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 1
+              },
+              "probability": 1,
+              "duration": 10,
+              "effectType": "Fly",
+              "toWho": "All",
+              "powerFullName": "Pool.Flight.Group_Fly"
+            },
+            {
+              "mag": {
+                "pve": 1
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "GlobalChanceMod",
+              "toWho": "Self",
+              "powerFullName": "Pool.Flight.Group_Fly"
+            }
+          ]
+        },
+        {
+          "effectType": "Control",
+          "values": [
+            {
+              "mag": {
+                "pve": 40
+              },
+              "probability": 1,
+              "duration": 10,
+              "effectType": "MovementControl",
+              "toWho": "All",
+              "powerFullName": "Pool.Flight.Group_Fly"
+            }
+          ]
+        },
+        {
+          "effectType": "SpeedFlying",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.6825
+              },
+              "probability": 1,
+              "duration": 10,
+              "effectType": "SpeedFlying",
+              "toWho": "All",
+              "powerFullName": "Pool.Flight.Group_Fly"
+            }
+          ]
+        },
+        {
+          "effectType": "Friction",
+          "values": [
+            {
+              "mag": {
+                "pve": 40
+              },
+              "probability": 1,
+              "duration": 10,
+              "effectType": "MovementFriction",
+              "toWho": "All",
+              "powerFullName": "Pool.Flight.Group_Fly"
+            }
+          ]
+        }
+      ],
+      "powerIndex": 4,
+      "castTimeReal": 2.03,
+      "toggleCost": 0.65,
+      "fullName": "Pool_Flight_Group_Fly",
+      "displayName": "Group Fly",
+      "requires": {
+        "powers": {
+          "Pool_Flight_Hover": true,
+          "Pool_Flight_Air_Superiority": true,
+          "Pool_Flight_Fly": true
+        },
+        "count": 2
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "target": 1,
+      "targetLoS": true,
+      "endCost": 1.3,
+      "activatePeriod": 2,
+      "effectArea": 2,
+      "radius": 60,
+      "maxTargets": 255,
+      "aIReport": 1,
+      "numAllowed": 1,
+      "description": {
+        "short": "Toggle: Team Fly, -ACC",
+        "long": "You can endow your nearby teammates with Flight. Be mindful! Your friends will fall if you run out of Endurance or if they travel too far away from you. Group Fly travel speed is slower than Fly. Flying allies suffer from a reduced chance to hit. You must be at least level 14 and have two other Flight Powers before selecting Group Fly."
+      },
+      "setTypes": [
+        17,
+        28
+      ],
+      "level": 14,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 2.244,
+      "slottable": true,
+      "aoeModifier": 10,
+      "powerType": "Toggle"
+    }
+  ]
+}

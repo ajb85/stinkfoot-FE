@@ -1,12 +1,12 @@
-import React from 'react';
+import React from "react";
 
-import { useBadges } from 'Providers/Badges.js';
+import useBadges from "providers/useBadges.js";
 
-import styles from './styles.module.scss';
+import styles from "./styles.module.scss";
 
 export default function ManageCharacter(props) {
   const { badges, character } = useBadges();
-  const [name, setName] = React.useState('');
+  const [name, setName] = React.useState("");
 
   const characterCount = Object.keys(badges.characters).length;
 
@@ -25,7 +25,7 @@ export default function ManageCharacter(props) {
               ))}
           </select>
           <p
-            style={{ color: 'red', cursor: 'pointer' }}
+            style={{ color: "red", cursor: "pointer" }}
             onClick={character.delete.bind(this, badges.active)}
           >
             X
@@ -48,7 +48,7 @@ const submitForm = (name, setName, badges, character) => (e) => {
   e.preventDefault();
   if (name.length && !badges.characters[name]) {
     character.add(name);
-    setName('');
+    setName("");
   }
 };
 

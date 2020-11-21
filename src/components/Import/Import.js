@@ -1,13 +1,13 @@
-import React, { useState, useEffect, useRef, useContext } from 'react';
+import React, { useState, useEffect, useRef } from "react";
 
-import { BuildContext } from 'Providers/Builds.js';
+import useCharacters from "providers/useCharacters.js";
 
-import styles from './styles.module.scss';
+import styles from "./styles.module.scss";
 
 function Import(props) {
   const inputREF = useRef(null);
   const [wasSubmitted, setWasSubmitted] = useState(false);
-  const { saveBuild, isValidBuild } = useContext(BuildContext);
+  const { saveBuild, isValidBuild } = useCharacters();
 
   useEffect(() => {
     if (inputREF.current) {

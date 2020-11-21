@@ -1,0 +1,28 @@
+@import "styles/variables.scss";
+
+.Punnett {
+  display: flex;
+  flex-direction: column;
+}
+
+.topLabels {
+  display: flex;
+  justify-content: center;
+  margin: $lh/2 0;
+  width: 100%;
+
+  & > p {
+    cursor: pointer;
+    margin: 0 $lh/2;
+    padding: 2px;
+  }
+}
+
+.sideLabels {
+  display: flex;
+  flex-direction: column;
+
+  p {
+    padding: $lh / 2;
+  }
+}

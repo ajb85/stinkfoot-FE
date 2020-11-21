@@ -1,0 +1,570 @@
+{
+  "fullName": "Pool_Teleportation",
+  "archetypeOrder": "poolPower",
+  "description": "Grants you various teleportation abilities.",
+  "imageName": "Teleportation.png",
+  "displayName": "Teleportation",
+  "powers": [
+    {
+      "allowedEnhancements": [
+        "Endurance_Discount",
+        "Interrupt",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "archetypeOrder": "poolPower",
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {},
+              "probability": 1,
+              "duration": 1.5,
+              "effectType": "Translucency",
+              "stacking": 1,
+              "toWho": "Target",
+              "powerFullName": "Pool.Teleportation.Recall_Friend"
+            },
+            {
+              "mag": {
+                "pve": 1
+              },
+              "probability": 1,
+              "effectType": "Mez",
+              "delayedTime": 1.17,
+              "stacking": 1,
+              "toWho": "Target",
+              "powerFullName": "Pool.Teleportation.Recall_Friend",
+              "mezType": "Teleport"
+            }
+          ]
+        }
+      ],
+      "powerIndex": 0,
+      "castTimeReal": 5.93,
+      "toggleCost": 15,
+      "fullName": "Pool_Teleportation_Recall_Friend",
+      "displayName": "Recall Friend",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "target": 33554432,
+      "range": 10000,
+      "targetSecondary": 16384,
+      "rangeSecondary": 25,
+      "endCost": 15,
+      "interruptTime": 4,
+      "rechargeTime": 6,
+      "baseRechargeTime": 6,
+      "effectArea": 1,
+      "numAllowed": 1,
+      "description": {
+        "short": "Zone-Range: Teleport Teammate",
+        "long": "You can Teleport one of your teammates to yourself. The target must be a teammate or leaguemate and can be selected from the Team Window. You can also rescue a fallen teammate who may be in a hostile location, as long as he is on the same map. Range is not infinite, but extremely long and can be enhanced. This power can be interrupted."
+      },
+      "setTypes": [
+        20,
+        28
+      ],
+      "level": 4,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 6.072,
+      "slottable": true,
+      "aoeModifier": 1
+    },
+    {
+      "allowedEnhancements": [
+        "Endurance_Discount",
+        "Range"
+      ],
+      "enhancementCount": 6,
+      "archetypeOrder": "poolPower",
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {},
+              "probability": 1,
+              "duration": 1.5,
+              "variableModified": true,
+              "effectType": "Translucency",
+              "stacking": 1,
+              "toWho": "Self",
+              "powerFullName": "Pool.Teleportation.Teleport"
+            },
+            {
+              "mag": {
+                "pve": 1
+              },
+              "probability": 1,
+              "variableModified": true,
+              "effectType": "Mez",
+              "delayedTime": 1.17,
+              "stacking": 1,
+              "toWho": "Self",
+              "powerFullName": "Pool.Teleportation.Teleport",
+              "mezType": "Teleport"
+            },
+            {
+              "mag": {
+                "pve": 1
+              },
+              "probability": 1,
+              "duration": 4,
+              "variableModified": true,
+              "effectType": "Fly",
+              "stacking": 1,
+              "toWho": "Self",
+              "powerFullName": "Pool.Teleportation.Teleport"
+            },
+            {
+              "mag": {
+                "pve": -1
+              },
+              "probability": 1,
+              "duration": 4,
+              "variableModified": true,
+              "effectType": "SpeedFlying",
+              "stacking": 1,
+              "toWho": "Self",
+              "powerFullName": "Pool.Teleportation.Teleport"
+            },
+            {
+              "mag": {
+                "pve": -1
+              },
+              "probability": 1,
+              "duration": 4,
+              "variableModified": true,
+              "effectType": "MovementControl",
+              "stacking": 1,
+              "toWho": "Self",
+              "powerFullName": "Pool.Teleportation.Teleport"
+            },
+            {
+              "mag": {
+                "pve": -1
+              },
+              "probability": 1,
+              "duration": 4,
+              "variableModified": true,
+              "effectType": "MovementFriction",
+              "stacking": 1,
+              "toWho": "Self",
+              "powerFullName": "Pool.Teleportation.Teleport"
+            }
+          ]
+        }
+      ],
+      "powerIndex": 1,
+      "castTimeReal": 2,
+      "toggleCost": 13,
+      "fullName": "Pool_Teleportation_Teleport",
+      "displayName": "Teleport",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "target": 16384,
+      "targetLoS": true,
+      "range": 300,
+      "endCost": 13,
+      "effectArea": 4,
+      "numAllowed": 1,
+      "description": {
+        "short": "Ranged (Location), Self Teleport",
+        "long": "You can Teleport long distances. Teleport has no recharge time, and can be reactivated without pause, as long as you have Endurance."
+      },
+      "setTypes": [
+        20,
+        28
+      ],
+      "level": 4,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 2.244,
+      "slottable": true,
+      "aoeModifier": 1
+    },
+    {
+      "allowedEnhancements": [
+        "Accuracy",
+        "Endurance_Discount",
+        "Interrupt",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "archetypeOrder": "poolPower",
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pvp": 0.3
+              },
+              "probability": 1,
+              "duration": 1.5,
+              "effectType": "Translucency",
+              "stacking": 1,
+              "toWho": "Target",
+              "powerFullName": "Pool.Teleportation.Teleport_Foe"
+            },
+            {
+              "mag": {
+                "pve": 2.1
+              },
+              "probability": 1,
+              "effectType": "Mez",
+              "delayedTime": 1.17,
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "Pool.Teleportation.Teleport_Foe",
+              "mezType": "Teleport"
+            },
+            {
+              "mag": {
+                "pve": 100
+              },
+              "probability": 1,
+              "duration": 15,
+              "effectType": "MezResist",
+              "delayedTime": 1.3,
+              "stacking": 1,
+              "toWho": "Target",
+              "powerFullName": "Pool.Teleportation.Teleport_Foe",
+              "mezType": "Teleport"
+            },
+            {
+              "mag": {
+                "pvp": 20
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "StealthRadius",
+              "delayedTime": 1.17,
+              "toWho": "Target",
+              "powerFullName": "Pool.Teleportation.Teleport_Foe"
+            },
+            {
+              "mag": {
+                "pvp": 3
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Mez",
+              "delayedTime": 1.17,
+              "toWho": "Target",
+              "attribType": 1,
+              "powerFullName": "Pool.Teleportation.Teleport_Foe",
+              "mezType": "Intangible"
+            },
+            {
+              "mag": {
+                "pvp": 3
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Mez",
+              "delayedTime": 1.17,
+              "toWho": "Target",
+              "attribType": 1,
+              "powerFullName": "Pool.Teleportation.Teleport_Foe",
+              "mezType": "Untouchable"
+            },
+            {
+              "mag": {
+                "pvp": -1
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "ThreatLevel",
+              "delayedTime": 1.17,
+              "toWho": "Target",
+              "powerFullName": "Pool.Teleportation.Teleport_Foe"
+            },
+            {
+              "mag": {
+                "pvp": 3
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Mez",
+              "delayedTime": 1.17,
+              "toWho": "Target",
+              "attribType": 1,
+              "powerFullName": "Pool.Teleportation.Teleport_Foe",
+              "mezType": "OnlyAffectsSelf"
+            },
+            {
+              "mag": {
+                "pve": -10
+              },
+              "probability": 1,
+              "duration": 4,
+              "effectType": "Meter",
+              "delayedTime": 1.17,
+              "toWho": "Self",
+              "powerFullName": "Pool.Teleportation.Teleport_Foe"
+            },
+            {
+              "mag": {
+                "pve": -1
+              },
+              "probability": 1,
+              "duration": 1,
+              "variableModified": true,
+              "effectType": "EntCreate",
+              "stacking": 1,
+              "toWho": "Target",
+              "powerFullName": "Pool.Teleportation.Teleport_Foe"
+            }
+          ]
+        }
+      ],
+      "powerIndex": 2,
+      "castTimeReal": 5.676,
+      "toggleCost": 15,
+      "fullName": "Pool_Teleportation_Teleport_Foe",
+      "displayName": "Teleport Foe",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "attackTypes": 130,
+      "target": 2048,
+      "range": 200,
+      "targetSecondary": 16384,
+      "rangeSecondary": 25,
+      "endCost": 15,
+      "interruptTime": 2,
+      "rechargeTime": 20,
+      "baseRechargeTime": 20,
+      "effectArea": 1,
+      "aIReport": 1,
+      "numAllowed": 1,
+      "description": {
+        "short": "Ranged, Teleport Foe",
+        "long": "You can Teleport a single foe directly next to yourself. A successful hit must be made in order to Teleport the target, and some powerful foes cannot be Teleported. Enemy players that are teleported will be temporarily out of phase, and cannot be targeted or damaged. This power can be interrupted."
+      },
+      "setTypes": [
+        20,
+        28
+      ],
+      "level": 4,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "neverAutoUpdate": true,
+      "castTime": 5.808,
+      "slottable": true,
+      "aoeModifier": 1
+    },
+    {
+      "allowedEnhancements": [
+        "Endurance_Discount",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "archetypeOrder": "poolPower",
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {},
+              "probability": 1,
+              "duration": 5,
+              "variableModified": true,
+              "effectType": "Translucency",
+              "stacking": 1,
+              "toWho": "Self",
+              "powerFullName": "Pool.Teleportation.Long_Range_Teleport"
+            },
+            {
+              "mag": {
+                "pve": 1
+              },
+              "probability": 1,
+              "variableModified": true,
+              "effectType": "Mez",
+              "delayedTime": 1.17,
+              "stacking": 1,
+              "toWho": "Self",
+              "powerFullName": "Pool.Teleportation.Long_Range_Teleport",
+              "mezType": "Teleport"
+            }
+          ]
+        }
+      ],
+      "powerIndex": 3,
+      "castTimeReal": 12,
+      "toggleCost": 26,
+      "fullName": "Pool_Teleportation_Long_Range_Teleport",
+      "displayName": "Long Range Teleport",
+      "requires": {
+        "powers": {
+          "Pool_Teleportation_Recall_Friend": true,
+          "Pool_Teleportation_Teleport_Foe": true,
+          "Pool_Teleportation_Teleport": true
+        },
+        "count": 2
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "target": 1,
+      "targetLoS": true,
+      "endCost": 26,
+      "interruptTime": 10,
+      "rechargeTime": 300,
+      "baseRechargeTime": 300,
+      "effectArea": 1,
+      "numAllowed": 1,
+      "description": {
+        "short": "Long Range Teleport",
+        "long": "Long Range Teleport allows you to teleport very long distances, even across city zones.  You must be at least level 14 and have two other Teleportation Powers before selecting Long Range Teleport.  Recharge: Very Long"
+      },
+      "setTypes": [],
+      "level": 14,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 12.144,
+      "slottable": true,
+      "aoeModifier": 1
+    },
+    {
+      "allowedEnhancements": [
+        "Endurance_Discount",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "archetypeOrder": "poolPower",
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {},
+              "probability": 1,
+              "duration": 1.5,
+              "effectType": "Translucency",
+              "stacking": 1,
+              "toWho": "All",
+              "powerFullName": "Pool.Teleportation.Team_Teleport"
+            },
+            {
+              "mag": {
+                "pve": 3.1
+              },
+              "probability": 1,
+              "effectType": "Mez",
+              "delayedTime": 1.17,
+              "stacking": 1,
+              "toWho": "All",
+              "powerFullName": "Pool.Teleportation.Team_Teleport",
+              "mezType": "Teleport"
+            },
+            {
+              "mag": {
+                "pve": 1
+              },
+              "probability": 1,
+              "duration": 4,
+              "effectType": "Fly",
+              "stacking": 1,
+              "toWho": "All",
+              "powerFullName": "Pool.Teleportation.Team_Teleport"
+            },
+            {
+              "mag": {
+                "pve": -1
+              },
+              "probability": 1,
+              "duration": 4,
+              "effectType": "SpeedFlying",
+              "stacking": 1,
+              "toWho": "All",
+              "powerFullName": "Pool.Teleportation.Team_Teleport"
+            },
+            {
+              "mag": {
+                "pve": -1
+              },
+              "probability": 1,
+              "duration": 4,
+              "effectType": "MovementControl",
+              "stacking": 1,
+              "toWho": "All",
+              "powerFullName": "Pool.Teleportation.Team_Teleport"
+            },
+            {
+              "mag": {
+                "pve": -1
+              },
+              "probability": 1,
+              "duration": 4,
+              "effectType": "MovementFriction",
+              "stacking": 1,
+              "toWho": "All",
+              "powerFullName": "Pool.Teleportation.Team_Teleport"
+            }
+          ]
+        }
+      ],
+      "powerIndex": 4,
+      "castTimeReal": 1.67,
+      "toggleCost": 20,
+      "fullName": "Pool_Teleportation_Team_Teleport",
+      "displayName": "Team Teleport",
+      "requires": {
+        "powers": {
+          "Pool_Teleportation_Recall_Friend": true,
+          "Pool_Teleportation_Teleport_Foe": true,
+          "Pool_Teleportation_Teleport": true
+        },
+        "count": 2
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "target": 1,
+      "range": 25,
+      "targetSecondary": 16384,
+      "rangeSecondary": 225,
+      "endCost": 20,
+      "rechargeTime": 1.5,
+      "baseRechargeTime": 1.5,
+      "effectArea": 2,
+      "radius": 30,
+      "maxTargets": 255,
+      "aIReport": 1,
+      "numAllowed": 1,
+      "description": {
+        "short": "Ranged (Location), Team Teleport",
+        "long": "You can Teleport yourself and your nearby teammates to a targeted location. Teammates must be in close proximity to you. Team Teleport costs slightly more Endurance than Teleport, but you can Teleport your entire team for no additional cost. You must be at least level 14 and have two other Teleportation Powers before selecting Team Teleport."
+      },
+      "setTypes": [
+        20,
+        28
+      ],
+      "level": 14,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 1.848,
+      "slottable": true,
+      "aoeModifier": 5.5
+    }
+  ]
+}

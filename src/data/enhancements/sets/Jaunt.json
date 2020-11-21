@@ -1,0 +1,147 @@
+{
+  "fullName": "IOSet.Jaunt",
+  "enhancements": [
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Jaunt_A.Attuned_Jaunt_A",
+      "displayName": "Range",
+      "description": {
+        "short": "+Range",
+        "long": "Enhances the range of a teleport power by {Boost.Attrib.Range.Scale}%."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.255
+            }
+          },
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Jaunt_B.Attuned_Jaunt_B",
+      "displayName": "Endurance",
+      "description": {
+        "short": "-End Cost",
+        "long": "Reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.424
+            }
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Jaunt_C.Attuned_Jaunt_C",
+      "displayName": "Endurance/Range",
+      "description": {
+        "short": "+Range, -End Cost",
+        "long": "Enhances the range of a teleport power by {Boost.Attrib.Range.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.159375
+            }
+          },
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_TimeSpace_Manipulation_A.Attuned_TimeSpace_Manipulation_A",
+      "displayName": "Endurance",
+      "description": {
+        "short": "-End Cost",
+        "long": "Reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.424
+            }
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_TimeSpace_Manipulation_B.Attuned_TimeSpace_Manipulation_B",
+      "displayName": "Range",
+      "description": {
+        "short": "+Range",
+        "long": "Enhances the range of a teleport power by {Boost.Attrib.Range.Scale}%."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.255
+            }
+          },
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_TimeSpace_Manipulation_C.Attuned_TimeSpace_Manipulation_C",
+      "displayName": "Stealth",
+      "description": {
+        "short": "Grants Stealth",
+        "long": "UNIQUE -- No more than 1 enhancement of this type may be slotted by a character.  May not be slotted if you have any other enhancements which grant stealth.  Grants Stealth for 120 seconds after teleporting."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 30
+            }
+          },
+          "stat": "Stealth",
+          "cancelOnMiss": true,
+          "suppression": 448,
+          "toWho": "self"
+        }
+      ]
+    }
+  ],
+  "levels": {
+    "min": 15,
+    "max": 50
+  },
+  "setType": 20,
+  "setTypeName": "Teleport",
+  "displayName": "Jaunt",
+  "imageName": "sJaunt.png"
+}

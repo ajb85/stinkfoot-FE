@@ -1,0 +1,163 @@
+{
+  "fullName": "IOSet.Paralytic",
+  "enhancements": [
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Paralytic_A.Attuned_Paralytic_A",
+      "displayName": "Accuracy/Recharge",
+      "description": {
+        "short": "+ACC, +Rech",
+        "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}%."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Accuracy",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Recharge",
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Paralytic_B.Attuned_Paralytic_B",
+      "displayName": "Endurance/Hold",
+      "description": {
+        "short": "+End, +Hold",
+        "long": "Enhances the hold duration of a power by {Boost.Attrib.Hold.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "mezType": 2,
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Paralytic_C.Attuned_Paralytic_C",
+      "displayName": "Accuracy/Endurance",
+      "description": {
+        "short": "+ACC, -End Cost",
+        "long": "Enhances the accuracy by {Boost.Attrib.Accuracy.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Accuracy",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Paralytic_D.Attuned_Paralytic_D",
+      "displayName": "Hold/Range",
+      "description": {
+        "short": "+Range, +Hold",
+        "long": "Enhances the range of a power by {Boost.Attrib.Range.Scale}% and hold duration by {Boost.Attrib.Hold.Scale}%."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "mezType": 2,
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Paralytic_E.Attuned_Paralytic_E",
+      "displayName": "Accuracy/Hold/Recharge",
+      "description": {
+        "short": "+ACC, +Rech, +Hold",
+        "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}%, the hold duration of a power by {Boost.Attrib.Hold.Scale}% and reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}%."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.212
+            }
+          },
+          "stat": "Accuracy",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.212
+            }
+          },
+          "stat": "Recharge",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.212
+            }
+          },
+          "mezType": 2,
+          "toWho": "self"
+        }
+      ]
+    }
+  ],
+  "levels": {
+    "min": 10,
+    "max": 30
+  },
+  "setType": 10,
+  "setTypeName": "Holds",
+  "displayName": "Paralytic",
+  "imageName": "sParalytic.png"
+}

@@ -1,0 +1,181 @@
+{
+  "fullName": "IOSet.Reactive_Defenses",
+  "enhancements": [
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Reactive_Defenses_A.Attuned_Reactive_Defenses_A",
+      "displayName": "Defense",
+      "description": {
+        "short": "Enhances Defense",
+        "long": "Enhances the defense of a power by {Boost.Attrib.Defense.Scale}%."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.255
+            }
+          },
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Reactive_Defenses_B.Attuned_Reactive_Defenses_B",
+      "displayName": "Defense/Endurance",
+      "description": {
+        "short": "Enhances Defense and reduces Endurance Cost",
+        "long": "Enhances the defense of a power by {Boost.Attrib.Defense.Scale}% and reduces endurance cost by {Boost.Attrib.Endurance.Scale}%"
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.159375
+            }
+          },
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Reactive_Defenses_C.Attuned_Reactive_Defenses_C",
+      "displayName": "Endurance/Recharge",
+      "description": {
+        "short": "Reduces Endurance Cost and Recharge Time",
+        "long": "Reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}% and reduces endurance cost by {Boost.Attrib.Endurance.Scale}%"
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Recharge",
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Reactive_Defenses_D.Attuned_Reactive_Defenses_D",
+      "displayName": "Defense/Recharge",
+      "description": {
+        "short": "Enhances Defense and reduces Recharge Time",
+        "long": "Enhances the defense of a power by {Boost.Attrib.Defense.Scale}% and reduces recharge time by {Boost.Attrib.Recharge.Scale}%"
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Recharge",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.159375
+            }
+          },
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Reactive_Defenses_E.Attuned_Reactive_Defenses_E",
+      "displayName": "Defense/Endurance/Recharge",
+      "description": {
+        "short": "Enhances Defense and reduces Endurance Cost and Recharge Time",
+        "long": "Enhances the defense of a power by {Boost.Attrib.Defense.Scale}%, reduces endurance costs by {Boost.Attrib.Endurance.Scale}% and reduces recharge time by {Boost.Attrib.Recharge.Scale}%"
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.212
+            }
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.212
+            }
+          },
+          "stat": "Recharge",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.1275
+            }
+          },
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Reactive_Defenses_F.Attuned_Reactive_Defenses_F",
+      "displayName": "Scaling Damage Resistance",
+      "description": {
+        "short": "Scaling Damage Resistance",
+        "long": "UNIQUE -- No more than 1 enhancement of this type may be slotted by a character.  While slotted, this enhancement grants you damage resistance to all types of damage.  This bonus starts off a +0% at full health and slowly increases to around 10% at very low health."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.03
+            }
+          },
+          "stat": "Scaling Damage Resistance",
+          "cancelOnMiss": true,
+          "toWho": "self"
+        }
+      ]
+    }
+  ],
+  "levels": {
+    "min": 20,
+    "max": 50
+  },
+  "setType": 7,
+  "setTypeName": "Defense Sets",
+  "displayName": "Reactive Defenses",
+  "imageName": "ReactiveDefenses.png"
+}

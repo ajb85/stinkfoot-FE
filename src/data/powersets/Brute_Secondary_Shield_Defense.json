@@ -1,0 +1,1775 @@
+{
+  "fullName": "Brute_Secondary_Shield_Defense",
+  "archetypeOrder": "secondary",
+  "description": "Your mastery over the shield protects you from all forms of attacks in the form of defense as well as some moderate damage resistance to most types of damage.  Your training with the shield enables you to protect your nearby allies boosting their defenses.",
+  "imageName": "ShieldDef.png",
+  "displayName": "Shield Defense",
+  "powers": [
+    {
+      "effects": [
+        {
+          "effectType": "Buff_Def",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.105000004,
+                "pvp": 0.105000004
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Defense",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Shield_Defense.Active_Defense",
+              "damageType": "Melee"
+            },
+            {
+              "mag": {
+                "pvp": 0.105000004
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Defense",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Shield_Defense.Active_Defense",
+              "damageType": "Psionic"
+            }
+          ]
+        },
+        {
+          "effectType": "Res_DMG",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.105000004,
+                "pvp": 0.105000004
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Resistance",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Shield_Defense.Active_Defense",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 0.105000004,
+                "pvp": 0.105000004
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Resistance",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Shield_Defense.Active_Defense",
+              "damageType": "Lethal"
+            }
+          ]
+        },
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pvp": 0.1
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Elusivity",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Shield_Defense.Active_Defense",
+              "damageType": "Melee"
+            },
+            {
+              "mag": {
+                "pvp": 0.1
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Elusivity",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Shield_Defense.Active_Defense",
+              "damageType": "Psionic"
+            }
+          ]
+        }
+      ],
+      "allowedEnhancements": [
+        "Defense_Buff",
+        "Endurance_Discount",
+        "Recharge",
+        "Res_Damage"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Defense.Shield_Defense.Active_Defense",
+      "archetypeOrder": "secondary",
+      "powerIndex": 0,
+      "castTimeReal": 1.5,
+      "toggleCost": 0.208,
+      "fullName": "Brute_Secondary_Shield_Defense_Deflection",
+      "displayName": "Deflection",
+      "requires": {
+        "powers": {
+          "Brute_Defense.Shield_Defense.Active_Defense": true
+        },
+        "count": 1
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "target": 1,
+      "targetLoS": true,
+      "endCost": 0.104,
+      "rechargeTime": 4,
+      "baseRechargeTime": 4,
+      "activatePeriod": 0.5,
+      "effectArea": 1,
+      "numAllowed": 1,
+      "ignoreStrength": true,
+      "description": {
+        "short": "Toggle: Self +DEF(Melee), +Res(Lethal, Smashing)",
+        "long": "Your mastery of the shield allows you to easily deflect melee attacks, and attacks that do get through your ironclad defenses tend to do less damage.  While Deflection is active the user will gain defense to melee attacks and some minor resistance to lethal and smashing damage. Deflection also adds Psionic Defense and an Elusivity defense bonus to Psionic and Melee Attacks in PVP zones.  Recharge: Fast"
+      },
+      "setTypes": [
+        7,
+        8
+      ],
+      "alwaysToggle": true,
+      "level": 1,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 1.716,
+      "slottable": true,
+      "aoeModifier": 1,
+      "powerType": "Toggle"
+    },
+    {
+      "effects": [
+        {
+          "effectType": "Buff_Def",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.105000004,
+                "pvp": 0.105000004
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Defense",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Shield_Defense.Deflection",
+              "damageType": "Ranged"
+            },
+            {
+              "mag": {
+                "pve": 0.105000004,
+                "pvp": 0.105000004
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Defense",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Shield_Defense.Deflection",
+              "damageType": "AoE"
+            }
+          ]
+        },
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pvp": 0.1
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Elusivity",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Shield_Defense.Deflection",
+              "damageType": "Ranged"
+            },
+            {
+              "mag": {
+                "pvp": 0.1
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "Elusivity",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Shield_Defense.Deflection",
+              "damageType": "AoE"
+            }
+          ]
+        },
+        {
+          "effectType": "Res_Boolean",
+          "values": [
+            {
+              "etModifies": "Defense",
+              "mag": {
+                "pve": 0.11072
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "ResEffect",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Shield_Defense.Deflection"
+            }
+          ]
+        }
+      ],
+      "allowedEnhancements": [
+        "Defense_Buff",
+        "Endurance_Discount",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Defense.Shield_Defense.Deflection",
+      "archetypeOrder": "secondary",
+      "powerIndex": 1,
+      "castTimeReal": 1.5,
+      "toggleCost": 0.208,
+      "fullName": "Brute_Secondary_Shield_Defense_Battle_Agility",
+      "displayName": "Battle Agility",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "target": 1,
+      "targetLoS": true,
+      "endCost": 0.104,
+      "rechargeTime": 4,
+      "baseRechargeTime": 4,
+      "activatePeriod": 0.5,
+      "effectArea": 1,
+      "numAllowed": 1,
+      "description": {
+        "short": "Toggle: Self +DEF(Ranged, AoE), +Res(Defense Debuff)",
+        "long": "Your incredible agility allows you to position your shield to protect yourself from incoming ranged damage.  While Battle Agility is active you will benefit from increased Ranged and AoE defense as well as some moderate protection from Defense Debuffs. Battle Agility also adds an Elusivity defense bonus to Ranged and AOE Attacks in PVP zones.   Recharge: Fast"
+      },
+      "setTypes": [
+        7
+      ],
+      "alwaysToggle": true,
+      "level": 2,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 1.716,
+      "slottable": true,
+      "aoeModifier": 1,
+      "powerType": "Toggle"
+    },
+    {
+      "effects": [
+        {
+          "effectType": "HealSelf",
+          "values": [
+            {
+              "mag": {
+                "pve": 120.4759
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "HitPoints",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Shield_Defense.True_Grit"
+            }
+          ]
+        },
+        {
+          "effectType": "Res_DMG",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.105000004
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Resistance",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Shield_Defense.True_Grit",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.105000004
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Resistance",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Shield_Defense.True_Grit",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 0.105000004
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Resistance",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Shield_Defense.True_Grit",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.105000004
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Resistance",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Shield_Defense.True_Grit",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.105000004
+              },
+              "probability": 1,
+              "duration": 10.25,
+              "effectType": "Resistance",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Shield_Defense.True_Grit",
+              "damageType": "Toxic"
+            }
+          ]
+        }
+      ],
+      "allowedEnhancements": [
+        "Heal",
+        "Res_Damage"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Defense.Shield_Defense.True_Grit",
+      "archetypeOrder": "secondary",
+      "powerIndex": 2,
+      "fullName": "Brute_Secondary_Shield_Defense_True_Grit",
+      "displayName": "True Grit",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "target": 1,
+      "targetLoS": true,
+      "activatePeriod": 10,
+      "effectArea": 1,
+      "numAllowed": 1,
+      "ignoreStrength": true,
+      "description": {
+        "short": "Auto: Self +Res (Cold, Energy, Fire, Negative Energy, Toxic), +MaxHealth",
+        "long": "Your intense training has left you tougher than even the hardiest of heroes.  You gain additional hit points and resistance to fire, cold, energy, negative energy and toxic damage sources.  This power is always on and costs no Endurance."
+      },
+      "setTypes": [
+        8,
+        9
+      ],
+      "level": 4,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 0.132,
+      "slottable": true,
+      "aoeModifier": 1,
+      "powerType": "Auto"
+    },
+    {
+      "effects": [
+        {
+          "effectType": "Res_Boolean",
+          "values": [
+            {
+              "mag": {
+                "pve": -8.304
+              },
+              "probability": 1,
+              "duration": 120,
+              "variableModified": true,
+              "effectType": "Mez",
+              "stacking": 1,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Shield_Defense.Battle_Agility",
+              "mezType": "Stun"
+            },
+            {
+              "mag": {
+                "pve": -8.304
+              },
+              "probability": 1,
+              "duration": 120,
+              "variableModified": true,
+              "effectType": "Mez",
+              "stacking": 1,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Shield_Defense.Battle_Agility",
+              "mezType": "Sleep"
+            },
+            {
+              "mag": {
+                "pve": -8.304
+              },
+              "probability": 1,
+              "duration": 120,
+              "variableModified": true,
+              "effectType": "Mez",
+              "stacking": 1,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Shield_Defense.Battle_Agility",
+              "mezType": "Hold"
+            },
+            {
+              "mag": {
+                "pve": -8.304
+              },
+              "probability": 1,
+              "duration": 120,
+              "variableModified": true,
+              "effectType": "Mez",
+              "stacking": 1,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Shield_Defense.Battle_Agility",
+              "mezType": "Confuse"
+            },
+            {
+              "mag": {
+                "pve": -8.304
+              },
+              "probability": 1,
+              "duration": 120,
+              "variableModified": true,
+              "effectType": "Mez",
+              "stacking": 1,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Shield_Defense.Battle_Agility",
+              "mezType": "Terror"
+            },
+            {
+              "mag": {
+                "pve": -8.304
+              },
+              "probability": 1,
+              "duration": 120,
+              "variableModified": true,
+              "effectType": "Mez",
+              "stacking": 1,
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Shield_Defense.Battle_Agility",
+              "mezType": "Immob"
+            },
+            {
+              "mag": {
+                "pvp": 0.8304
+              },
+              "probability": 1,
+              "duration": 120,
+              "variableModified": true,
+              "effectType": "MezResist",
+              "stacking": 1,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Shield_Defense.Battle_Agility",
+              "mezType": "Stun"
+            },
+            {
+              "mag": {
+                "pvp": 0.8304
+              },
+              "probability": 1,
+              "duration": 120,
+              "variableModified": true,
+              "effectType": "MezResist",
+              "stacking": 1,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Shield_Defense.Battle_Agility",
+              "mezType": "Sleep"
+            },
+            {
+              "mag": {
+                "pvp": 0.8304
+              },
+              "probability": 1,
+              "duration": 120,
+              "variableModified": true,
+              "effectType": "MezResist",
+              "stacking": 1,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Shield_Defense.Battle_Agility",
+              "mezType": "Hold"
+            },
+            {
+              "mag": {
+                "pvp": 0.8304
+              },
+              "probability": 1,
+              "duration": 120,
+              "variableModified": true,
+              "effectType": "MezResist",
+              "stacking": 1,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Shield_Defense.Battle_Agility",
+              "mezType": "Confuse"
+            },
+            {
+              "mag": {
+                "pvp": 0.8304
+              },
+              "probability": 1,
+              "duration": 120,
+              "variableModified": true,
+              "effectType": "MezResist",
+              "stacking": 1,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Shield_Defense.Battle_Agility",
+              "mezType": "Terror"
+            },
+            {
+              "mag": {
+                "pvp": 0.8304
+              },
+              "probability": 1,
+              "duration": 120,
+              "variableModified": true,
+              "effectType": "MezResist",
+              "stacking": 1,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Shield_Defense.Battle_Agility",
+              "mezType": "Immob"
+            },
+            {
+              "etModifies": "Defense",
+              "mag": {
+                "pve": 0.1384
+              },
+              "probability": 1,
+              "duration": 120,
+              "variableModified": true,
+              "effectType": "ResEffect",
+              "stacking": 1,
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Shield_Defense.Battle_Agility"
+            }
+          ]
+        },
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 100,
+                "pvp": 100
+              },
+              "probability": 1,
+              "duration": 120,
+              "variableModified": true,
+              "effectType": "MezResist",
+              "stacking": 1,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Shield_Defense.Battle_Agility",
+              "mezType": "Knockback"
+            },
+            {
+              "mag": {
+                "pve": 100,
+                "pvp": 100
+              },
+              "probability": 1,
+              "duration": 120,
+              "variableModified": true,
+              "effectType": "MezResist",
+              "stacking": 1,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Shield_Defense.Battle_Agility",
+              "mezType": "Knockup"
+            },
+            {
+              "mag": {
+                "pve": -10,
+                "pvp": -10
+              },
+              "probability": 1,
+              "duration": 120,
+              "variableModified": true,
+              "effectType": "Mez",
+              "stacking": 1,
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Shield_Defense.Battle_Agility",
+              "mezType": "Knockback"
+            },
+            {
+              "mag": {
+                "pve": -10,
+                "pvp": -10
+              },
+              "probability": 1,
+              "duration": 120,
+              "variableModified": true,
+              "effectType": "Mez",
+              "stacking": 1,
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Shield_Defense.Battle_Agility",
+              "mezType": "Knockup"
+            },
+            {
+              "mag": {
+                "pve": 100,
+                "pvp": 100
+              },
+              "probability": 1,
+              "duration": 120,
+              "variableModified": true,
+              "effectType": "MezResist",
+              "stacking": 1,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Shield_Defense.Battle_Agility",
+              "mezType": "Repel"
+            },
+            {
+              "mag": {
+                "pve": -10,
+                "pvp": -10
+              },
+              "probability": 1,
+              "duration": 120,
+              "variableModified": true,
+              "effectType": "Mez",
+              "stacking": 1,
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Shield_Defense.Battle_Agility",
+              "mezType": "Repel"
+            },
+            {
+              "etModifies": "Defense",
+              "mag": {
+                "pvp": 0.3
+              },
+              "probability": 1,
+              "duration": 120,
+              "effectType": "ResEffect",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Shield_Defense.Battle_Agility"
+            },
+            {
+              "etModifies": "ToHit",
+              "mag": {
+                "pvp": 0.3
+              },
+              "probability": 1,
+              "duration": 120,
+              "effectType": "ResEffect",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Shield_Defense.Battle_Agility"
+            },
+            {
+              "etModifies": "RechargeTime",
+              "mag": {
+                "pvp": 0.3
+              },
+              "probability": 1,
+              "duration": 120,
+              "effectType": "ResEffect",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Shield_Defense.Battle_Agility"
+            },
+            {
+              "etModifies": "SpeedRunning",
+              "mag": {
+                "pvp": 0.5
+              },
+              "probability": 1,
+              "duration": 120,
+              "effectType": "ResEffect",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Shield_Defense.Battle_Agility"
+            },
+            {
+              "etModifies": "SpeedFlying",
+              "mag": {
+                "pvp": 0.5
+              },
+              "probability": 1,
+              "duration": 120,
+              "effectType": "ResEffect",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Shield_Defense.Battle_Agility"
+            },
+            {
+              "etModifies": "JumpHeight",
+              "mag": {
+                "pvp": 0.5
+              },
+              "probability": 1,
+              "duration": 120,
+              "effectType": "ResEffect",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Shield_Defense.Battle_Agility"
+            },
+            {
+              "etModifies": "SpeedJumping",
+              "mag": {
+                "pvp": 0.5
+              },
+              "probability": 1,
+              "duration": 120,
+              "effectType": "ResEffect",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Shield_Defense.Battle_Agility"
+            }
+          ]
+        }
+      ],
+      "allowedEnhancements": [
+        "Endurance_Discount",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Defense.Shield_Defense.Battle_Agility",
+      "archetypeOrder": "secondary",
+      "powerIndex": 3,
+      "castTimeReal": 1.5,
+      "toggleCost": 10.4,
+      "fullName": "Brute_Secondary_Shield_Defense_Active_Defense",
+      "displayName": "Active Defense",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "target": 1,
+      "targetLoS": true,
+      "endCost": 10.4,
+      "rechargeTime": 200,
+      "baseRechargeTime": 200,
+      "effectArea": 1,
+      "numAllowed": 1,
+      "description": {
+        "short": "Self Res (Disorient, Hold, Immobilize, Sleep, Fear, Confuse, Repel, Knockback, Defense Debuff)",
+        "long": "When you activate this power, it grants protection from Sleep, Disorient, Fear, Immobilize, Confusion, Repel, Knockback, Hold and Defense Debuff effects for a short duration.  Recharge: Very Long"
+      },
+      "setTypes": [],
+      "clickBuff": true,
+      "level": 10,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 1.716,
+      "slottable": true,
+      "aoeModifier": 1
+    },
+    {
+      "effects": [
+        {
+          "effectType": "InherentTaunt",
+          "values": [
+            {
+              "mag": {
+                "pve": 4
+              },
+              "cancelOnMiss": true,
+              "probability": 1,
+              "duration": 17,
+              "effectType": "Mez",
+              "buffable": true,
+              "resistible": true,
+              "specialCase": 14,
+              "toWho": "target",
+              "attribType": 1,
+              "powerFullName": "Brute_Defense.Shield_Defense.Against_all_Odds",
+              "requiresToHitCheck": true,
+              "mezType": "Taunt"
+            }
+          ]
+        },
+        {
+          "effectType": "Buff_DMG",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.06875
+              },
+              "probability": 1,
+              "duration": 1.25,
+              "effectType": "DamageBuff",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Shield_Defense.Against_all_Odds",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 0.06875
+              },
+              "probability": 1,
+              "duration": 1.25,
+              "effectType": "DamageBuff",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Shield_Defense.Against_all_Odds",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.06875
+              },
+              "probability": 1,
+              "duration": 1.25,
+              "effectType": "DamageBuff",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Shield_Defense.Against_all_Odds",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.06875
+              },
+              "probability": 1,
+              "duration": 1.25,
+              "effectType": "DamageBuff",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Shield_Defense.Against_all_Odds",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 0.06875
+              },
+              "probability": 1,
+              "duration": 1.25,
+              "effectType": "DamageBuff",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Shield_Defense.Against_all_Odds",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.06875
+              },
+              "probability": 1,
+              "duration": 1.25,
+              "effectType": "DamageBuff",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Shield_Defense.Against_all_Odds",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.06875
+              },
+              "probability": 1,
+              "duration": 1.25,
+              "effectType": "DamageBuff",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Shield_Defense.Against_all_Odds",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pve": 0.06875
+              },
+              "probability": 1,
+              "duration": 1.25,
+              "effectType": "DamageBuff",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Shield_Defense.Against_all_Odds",
+              "damageType": "Psionic"
+            }
+          ]
+        },
+        {
+          "effectType": "Debuff_Dam",
+          "values": [
+            {
+              "mag": {
+                "pve": -0.07
+              },
+              "probability": 1,
+              "duration": 1,
+              "effectType": "DamageBuff",
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Brute_Defense.Shield_Defense.Against_all_Odds",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": -0.07
+              },
+              "probability": 1,
+              "duration": 1,
+              "effectType": "DamageBuff",
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Brute_Defense.Shield_Defense.Against_all_Odds",
+              "damageType": "Psionic"
+            },
+            {
+              "mag": {
+                "pve": -0.07
+              },
+              "probability": 1,
+              "duration": 1,
+              "effectType": "DamageBuff",
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Brute_Defense.Shield_Defense.Against_all_Odds",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pve": -0.07
+              },
+              "probability": 1,
+              "duration": 1,
+              "effectType": "DamageBuff",
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Brute_Defense.Shield_Defense.Against_all_Odds",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": -0.07
+              },
+              "probability": 1,
+              "duration": 1,
+              "effectType": "DamageBuff",
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Brute_Defense.Shield_Defense.Against_all_Odds",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": -0.07
+              },
+              "probability": 1,
+              "duration": 1,
+              "effectType": "DamageBuff",
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Brute_Defense.Shield_Defense.Against_all_Odds",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": -0.07
+              },
+              "probability": 1,
+              "duration": 1,
+              "effectType": "DamageBuff",
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Brute_Defense.Shield_Defense.Against_all_Odds",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": -0.07
+              },
+              "probability": 1,
+              "duration": 1,
+              "effectType": "DamageBuff",
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Brute_Defense.Shield_Defense.Against_all_Odds",
+              "damageType": "Negative"
+            }
+          ]
+        }
+      ],
+      "allowedEnhancements": [
+        "Endurance_Discount",
+        "Recharge",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Defense.Shield_Defense.Against_all_Odds",
+      "archetypeOrder": "secondary",
+      "powerIndex": 4,
+      "castTimeReal": 2.5,
+      "toggleCost": 0.208,
+      "fullName": "Brute_Secondary_Shield_Defense_Against_All_Odds",
+      "displayName": "Against All Odds",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "target": 1,
+      "targetLoS": true,
+      "endCost": 0.208,
+      "rechargeTime": 10,
+      "baseRechargeTime": 10,
+      "activatePeriod": 1,
+      "effectArea": 2,
+      "radius": 8,
+      "maxTargets": 10,
+      "numAllowed": 1,
+      "ignoreStrength": true,
+      "description": {
+        "short": "Toggle: Self +DMG, Foe -DMG",
+        "long": "The harder pressed you are in combat the greater your offensive abilities become.  Each enemy that stands toe-to-toe with you in combat will grant you a damage bonus.  The first foe you engage in melee grants the highest damage bonus, and up to 10 foes can contribute to this effect. Each foe in melee range also suffers from reduced damage as your shield deflects a portion of their damage. Recharge: Slow"
+      },
+      "setTypes": [],
+      "alwaysToggle": true,
+      "level": 16,
+      "variableEnabled": true,
+      "variableMin": 1,
+      "variableMax": 10,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 2.63999987,
+      "slottable": true,
+      "aoeModifier": 2.2,
+      "powerType": "Toggle"
+    },
+    {
+      "effects": [
+        {
+          "effectType": "Buff_Def",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.035
+              },
+              "probability": 1,
+              "duration": 0.81,
+              "variableModified": true,
+              "effectType": "Defense",
+              "stacking": 1,
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Shield_Defense.Phalanx_Fighting",
+              "damageType": "Melee"
+            },
+            {
+              "mag": {
+                "pve": 0.035
+              },
+              "probability": 1,
+              "duration": 0.81,
+              "variableModified": true,
+              "effectType": "Defense",
+              "stacking": 1,
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Shield_Defense.Phalanx_Fighting",
+              "damageType": "Ranged"
+            },
+            {
+              "mag": {
+                "pve": 0.035
+              },
+              "probability": 1,
+              "duration": 0.81,
+              "variableModified": true,
+              "effectType": "Defense",
+              "stacking": 1,
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Shield_Defense.Phalanx_Fighting",
+              "damageType": "AoE"
+            }
+          ]
+        }
+      ],
+      "allowedEnhancements": [
+        "Defense_Buff"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Defense.Shield_Defense.Phalanx_Fighting",
+      "archetypeOrder": "secondary",
+      "powerIndex": 5,
+      "castTimeReal": 1.716,
+      "fullName": "Brute_Secondary_Shield_Defense_Phalanx_Fighting",
+      "displayName": "Phalanx Fighting",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "target": 1,
+      "targetLoS": true,
+      "activatePeriod": 1,
+      "effectArea": 2,
+      "radius": 8,
+      "maxTargets": 3,
+      "numAllowed": 1,
+      "ignoreStrength": true,
+      "description": {
+        "short": "Auto: Self Special +DEF(Melee, Ranged, AoE)",
+        "long": "Fighting very near your allies allows you to deflect attacks much easier.  You will gain a small bonus to your melee, ranged and area of effect defense.  This bonus grows for each ally near you.  This power is always on and costs no endurance."
+      },
+      "setTypes": [
+        7
+      ],
+      "level": 20,
+      "variableEnabled": true,
+      "variableMax": 3,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "neverAutoUpdate": true,
+      "castTime": 1.848,
+      "slottable": true,
+      "aoeModifier": 2.2,
+      "powerType": "Auto"
+    },
+    {
+      "effects": [
+        {
+          "effectType": "Buff_Def",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.07875
+              },
+              "probability": 1,
+              "duration": 2.25,
+              "effectType": "Defense",
+              "buffable": true,
+              "toWho": "target",
+              "powerFullName": "Brute_Defense.Shield_Defense.Grant_Cover",
+              "damageType": "Melee"
+            },
+            {
+              "mag": {
+                "pve": 0.07875
+              },
+              "probability": 1,
+              "duration": 2.25,
+              "effectType": "Defense",
+              "buffable": true,
+              "toWho": "target",
+              "powerFullName": "Brute_Defense.Shield_Defense.Grant_Cover",
+              "damageType": "Ranged"
+            },
+            {
+              "mag": {
+                "pve": 0.07875
+              },
+              "probability": 1,
+              "duration": 2.25,
+              "effectType": "Defense",
+              "buffable": true,
+              "toWho": "target",
+              "powerFullName": "Brute_Defense.Shield_Defense.Grant_Cover",
+              "damageType": "AoE"
+            },
+            {
+              "mag": {
+                "pve": 0.07875
+              },
+              "probability": 1,
+              "duration": 2.25,
+              "effectType": "Defense",
+              "buffable": true,
+              "toWho": "target",
+              "powerFullName": "Brute_Defense.Shield_Defense.Grant_Cover",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 0.07875
+              },
+              "probability": 1,
+              "duration": 2.25,
+              "effectType": "Defense",
+              "buffable": true,
+              "toWho": "target",
+              "powerFullName": "Brute_Defense.Shield_Defense.Grant_Cover",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.07875
+              },
+              "probability": 1,
+              "duration": 2.25,
+              "effectType": "Defense",
+              "buffable": true,
+              "toWho": "target",
+              "powerFullName": "Brute_Defense.Shield_Defense.Grant_Cover",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.07875
+              },
+              "probability": 1,
+              "duration": 2.25,
+              "effectType": "Defense",
+              "buffable": true,
+              "toWho": "target",
+              "powerFullName": "Brute_Defense.Shield_Defense.Grant_Cover",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 0.07875
+              },
+              "probability": 1,
+              "duration": 2.25,
+              "effectType": "Defense",
+              "buffable": true,
+              "toWho": "target",
+              "powerFullName": "Brute_Defense.Shield_Defense.Grant_Cover",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.07875
+              },
+              "probability": 1,
+              "duration": 2.25,
+              "effectType": "Defense",
+              "buffable": true,
+              "toWho": "target",
+              "powerFullName": "Brute_Defense.Shield_Defense.Grant_Cover",
+              "damageType": "Negative"
+            }
+          ]
+        },
+        {
+          "effectType": "Res_Boolean",
+          "values": [
+            {
+              "etModifies": "Defense",
+              "mag": {
+                "pve": 0.11072
+              },
+              "probability": 1,
+              "duration": 2.25,
+              "effectType": "ResEffect",
+              "toWho": "all",
+              "powerFullName": "Brute_Defense.Shield_Defense.Grant_Cover"
+            }
+          ]
+        },
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "etModifies": "RechargeTime",
+              "mag": {
+                "pve": 0.3
+              },
+              "probability": 1,
+              "duration": 2.25,
+              "effectType": "ResEffect",
+              "toWho": "all",
+              "powerFullName": "Brute_Defense.Shield_Defense.Grant_Cover"
+            }
+          ]
+        }
+      ],
+      "allowedEnhancements": [
+        "Defense_Buff",
+        "Endurance_Discount",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Defense.Shield_Defense.Grant_Cover",
+      "archetypeOrder": "secondary",
+      "powerIndex": 6,
+      "castTimeReal": 2.5,
+      "toggleCost": 0.156,
+      "fullName": "Brute_Secondary_Shield_Defense_Grant_Cover",
+      "displayName": "Grant Cover",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "target": 1,
+      "targetLoS": true,
+      "endCost": 0.312,
+      "rechargeTime": 10,
+      "baseRechargeTime": 10,
+      "activatePeriod": 2,
+      "effectArea": 2,
+      "radius": 15,
+      "maxTargets": 255,
+      "aIReport": 1,
+      "numAllowed": 1,
+      "description": {
+        "short": "PBAoE, Team (but not self) +DEF(All but Psionic), Self +RES(Defense Debuff)",
+        "long": "You are able to use your shield to defend nearby allies.  Any teammates who remain nearby gain a bonus to their defense.  (NOTE: The defense bonus from this power is only applied to nearby team mates, but not yourself.)  Additionally, while this power is active, the user will gain some resistance to defense debuffs. Recharge: Slow"
+      },
+      "setTypes": [
+        7
+      ],
+      "alwaysToggle": true,
+      "level": 28,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 2.63999987,
+      "slottable": true,
+      "aoeModifier": 3.25,
+      "powerType": "Toggle"
+    },
+    {
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 1
+              },
+              "probability": 1,
+              "variableModified": true,
+              "effectType": "Mez",
+              "delayedTime": 0.7,
+              "stacking": 1,
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Shield_Defense.Shield_Charge",
+              "mezType": "Teleport"
+            },
+            {
+              "mag": {
+                "pve": -1
+              },
+              "probability": 1,
+              "duration": 4,
+              "effectType": "EntCreate",
+              "delayedTime": 0.625,
+              "toWho": "all",
+              "powerFullName": "Brute_Defense.Shield_Defense.Shield_Charge"
+            }
+          ]
+        }
+      ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Knockback",
+        "Range",
+        "Recharge",
+        "Taunt"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Defense.Shield_Defense.Shield_Charge",
+      "archetypeOrder": "secondary",
+      "powerIndex": 7,
+      "castTimeReal": 1.5,
+      "toggleCost": 13.52,
+      "fullName": "Brute_Secondary_Shield_Defense_Shield_Charge",
+      "displayName": "Shield Charge",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "target": 16384,
+      "targetLoS": true,
+      "range": 60,
+      "endCost": 13.52,
+      "rechargeTime": 90,
+      "baseRechargeTime": 90,
+      "effectArea": 4,
+      "numAllowed": 1,
+      "description": {
+        "short": "PBAoE Superior DMG(Smashing), Foe Knockdown; Self Teleport",
+        "long": "You can throw all of your might behind your shield and charge through ranks of foes in the blink of an eye.  Using this power allows you to teleport to a selected area to deal significant smashing damage to all foes near the location you teleport to, most foes that are struck by your Shield Charge will be knocked down.  Damage: Superior, Recharge: Very Long."
+      },
+      "setTypes": [
+        4,
+        23,
+        24,
+        34,
+        44
+      ],
+      "level": 35,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "absorbSummonEffects": true,
+      "absorbSummonAttributes": true,
+      "castTime": 1.716,
+      "slottable": true,
+      "aoeModifier": 1
+    },
+    {
+      "effects": [
+        {
+          "effectType": "Res_DMG",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.210000008
+              },
+              "probability": 1,
+              "duration": 120,
+              "effectType": "Resistance",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Shield_Defense.One_with_the_Shield",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 0.210000008
+              },
+              "probability": 1,
+              "duration": 120,
+              "effectType": "Resistance",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Shield_Defense.One_with_the_Shield",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.105000004
+              },
+              "probability": 1,
+              "duration": 120,
+              "effectType": "Resistance",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Shield_Defense.One_with_the_Shield",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.105000004
+              },
+              "probability": 1,
+              "duration": 120,
+              "effectType": "Resistance",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Shield_Defense.One_with_the_Shield",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 0.105000004
+              },
+              "probability": 1,
+              "duration": 120,
+              "effectType": "Resistance",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Shield_Defense.One_with_the_Shield",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.105000004
+              },
+              "probability": 1,
+              "duration": 120,
+              "effectType": "Resistance",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Shield_Defense.One_with_the_Shield",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.105000004
+              },
+              "probability": 1,
+              "duration": 120,
+              "effectType": "Resistance",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Shield_Defense.One_with_the_Shield",
+              "damageType": "Toxic"
+            }
+          ]
+        },
+        {
+          "effectType": "HealSelf",
+          "values": [
+            {
+              "mag": {
+                "pve": 240.9518
+              },
+              "probability": 1,
+              "duration": 120,
+              "effectType": "HitPoints",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Shield_Defense.One_with_the_Shield"
+            }
+          ]
+        },
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": -100
+              },
+              "probability": 1,
+              "duration": 120,
+              "effectType": "Mez",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Shield_Defense.One_with_the_Shield",
+              "mezType": "Knockup"
+            },
+            {
+              "mag": {
+                "pve": 10
+              },
+              "probability": 1,
+              "duration": 120,
+              "effectType": "MezResist",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Shield_Defense.One_with_the_Shield",
+              "mezType": "Knockup"
+            },
+            {
+              "mag": {
+                "pve": -100
+              },
+              "probability": 1,
+              "duration": 120,
+              "effectType": "Mez",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Shield_Defense.One_with_the_Shield",
+              "mezType": "Knockback"
+            },
+            {
+              "mag": {
+                "pve": 10
+              },
+              "probability": 1,
+              "duration": 120,
+              "effectType": "MezResist",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Shield_Defense.One_with_the_Shield",
+              "mezType": "Knockback"
+            },
+            {
+              "mag": {
+                "pve": -10
+              },
+              "probability": 1,
+              "duration": 120,
+              "effectType": "Mez",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Shield_Defense.One_with_the_Shield",
+              "mezType": "Repel"
+            },
+            {
+              "mag": {
+                "pve": 10
+              },
+              "probability": 1,
+              "duration": 120,
+              "effectType": "MezResist",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Shield_Defense.One_with_the_Shield",
+              "mezType": "Repel"
+            },
+            {
+              "mag": {
+                "pve": 0.3
+              },
+              "probability": 1,
+              "duration": 120,
+              "effectType": "Recovery",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Shield_Defense.One_with_the_Shield"
+            },
+            {
+              "mag": {
+                "pve": 1
+              },
+              "probability": 1,
+              "duration": 30,
+              "effectType": "GlobalChanceMod",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Shield_Defense.One_with_the_Shield"
+            }
+          ]
+        },
+        {
+          "effectType": "Res_Boolean",
+          "values": [
+            {
+              "mag": {
+                "pve": -13.84
+              },
+              "probability": 1,
+              "duration": 120,
+              "effectType": "Mez",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Shield_Defense.One_with_the_Shield",
+              "mezType": "Stun"
+            },
+            {
+              "mag": {
+                "pve": -13.84
+              },
+              "probability": 1,
+              "duration": 120,
+              "effectType": "Mez",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Shield_Defense.One_with_the_Shield",
+              "mezType": "Hold"
+            },
+            {
+              "mag": {
+                "pve": -13.84
+              },
+              "probability": 1,
+              "duration": 120,
+              "effectType": "Mez",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Shield_Defense.One_with_the_Shield",
+              "mezType": "Sleep"
+            },
+            {
+              "mag": {
+                "pve": -13.84
+              },
+              "probability": 1,
+              "duration": 120,
+              "effectType": "Mez",
+              "buffable": true,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Shield_Defense.One_with_the_Shield",
+              "mezType": "Immob"
+            },
+            {
+              "mag": {
+                "pvp": 1.38400006
+              },
+              "probability": 1,
+              "duration": 120,
+              "effectType": "MezResist",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Shield_Defense.One_with_the_Shield",
+              "mezType": "Stun"
+            },
+            {
+              "mag": {
+                "pvp": 1.38400006
+              },
+              "probability": 1,
+              "duration": 120,
+              "effectType": "MezResist",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Shield_Defense.One_with_the_Shield",
+              "mezType": "Hold"
+            },
+            {
+              "mag": {
+                "pvp": 1.38400006
+              },
+              "probability": 1,
+              "duration": 120,
+              "effectType": "MezResist",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Shield_Defense.One_with_the_Shield",
+              "mezType": "Sleep"
+            },
+            {
+              "mag": {
+                "pvp": 1.38400006
+              },
+              "probability": 1,
+              "duration": 120,
+              "effectType": "MezResist",
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Shield_Defense.One_with_the_Shield",
+              "mezType": "Immob"
+            }
+          ]
+        },
+        {
+          "effectType": "GlobalCrash",
+          "values": [
+            {
+              "mag": {
+                "pve": -0.6
+              },
+              "probability": 1,
+              "effectType": "Endurance",
+              "delayedTime": 120,
+              "toWho": "self",
+              "powerFullName": "Brute_Defense.Shield_Defense.One_with_the_Shield"
+            }
+          ]
+        }
+      ],
+      "allowedEnhancements": [
+        "Endurance_Discount",
+        "Heal",
+        "Endurance_Modification",
+        "Res_Damage"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Brute_Defense.Shield_Defense.One_with_the_Shield",
+      "archetypeOrder": "secondary",
+      "powerIndex": 8,
+      "castTimeReal": 2.5,
+      "toggleCost": 2.6,
+      "fullName": "Brute_Secondary_Shield_Defense_One_with_the_Shield",
+      "displayName": "One with the Shield",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "target": 1,
+      "targetLoS": true,
+      "endCost": 2.6,
+      "rechargeTime": 360,
+      "baseRechargeTime": 360,
+      "effectArea": 1,
+      "numAllowed": 1,
+      "castThroughHold": true,
+      "ignoreStrength": true,
+      "description": {
+        "short": "Self, +Res(Disorient, Sleep, Hold, Immobilize, Repel, Knockback, All DMG but Psi), +Recovery, +Max HP",
+        "long": "When you activate this power, you gain strong resistance against most types of damage and also to Disorient, Immobilization, Hold, Knockback, Repel and Sleep effects. One with the Shield costs little Endurance to activate and increases your recovery and maximum hit points for its duration, but when it wears off you are left exhausted, and substantially drained of Endurance.  Note that One with the Shield is unaffected by Attack Rate changes. Recharge: Very Long"
+      },
+      "setTypes": [
+        8,
+        9,
+        22
+      ],
+      "clickBuff": true,
+      "level": 38,
+      "ignoreEnh": [
+        14
+      ],
+      "ignore_Buff": [
+        14
+      ],
+      "castTime": 2.63999987,
+      "slottable": true,
+      "aoeModifier": 1
+    }
+  ]
+}

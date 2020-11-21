@@ -1,0 +1,804 @@
+{
+  "prevents": [
+    "Pool_Sorcery"
+  ],
+  "fullName": "Pool_Force_of_Will",
+  "archetypeOrder": "poolPower",
+  "description": "Force of Will grants you access to various powers that allow you to manifest your own willpower and use it to harm your foes. This power pool gives you access to Mighty Leap as your travel power, which allows you to leap great distances. Additionally, while Mighty Leap is active you gain access to Stomp. Use the Stomp power to knockdown nearby foes.",
+  "imageName": "ForceofWill.png",
+  "displayName": "Force of Will",
+  "powers": [
+    {
+      "allowedEnhancements": [],
+      "enhancementCount": 6,
+      "archetypeOrder": "poolPower",
+      "effects": [
+        {
+          "effectType": "Res_Dmg",
+          "values": [
+            {
+              "mag": {
+                "pve": -0.0975
+              },
+              "probability": 1,
+              "duration": 15,
+              "effectType": "Resistance",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": -0.0975
+              },
+              "probability": 1,
+              "duration": 15,
+              "effectType": "Resistance",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": -0.0975
+              },
+              "probability": 1,
+              "duration": 15,
+              "effectType": "Resistance",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": -0.0975
+              },
+              "probability": 1,
+              "duration": 15,
+              "effectType": "Resistance",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": -0.0975
+              },
+              "probability": 1,
+              "duration": 15,
+              "effectType": "Resistance",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": -0.0975
+              },
+              "probability": 1,
+              "duration": 15,
+              "effectType": "Resistance",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": -0.0975
+              },
+              "probability": 1,
+              "duration": 15,
+              "effectType": "Resistance",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pve": -0.0975
+              },
+              "probability": 1,
+              "duration": 15,
+              "effectType": "Resistance",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "",
+              "damageType": "Psionic"
+            }
+          ]
+        },
+        {
+          "effectType": "Debuff_Def",
+          "values": [
+            {
+              "mag": {
+                "pve": -0.07
+              },
+              "probability": 1,
+              "duration": 15,
+              "effectType": "Defense",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": ""
+            }
+          ]
+        },
+        {
+          "effectType": "Buff_ToHit",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.05
+              },
+              "probability": 1,
+              "duration": 15,
+              "effectType": "ToHit",
+              "toWho": "Self",
+              "powerFullName": ""
+            }
+          ]
+        }
+      ],
+      "powerIndex": 0,
+      "castTimeReal": 2,
+      "toggleCost": 7.8,
+      "fullName": "Pool_Force_of_Will_Weaken_Resolve",
+      "displayName": "Weaken Resolve",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "target": 2048,
+      "targetLoS": true,
+      "range": 80,
+      "endCost": 7.8,
+      "rechargeTime": 30,
+      "baseRechargeTime": 30,
+      "effectArea": 1,
+      "description": {
+        "short": "Ranged, Foe -Resist, -Defense, Self +To Hit",
+        "long": "You overwhelm your foe with sheer strength of will, reducing their defense and damage resistance, while boosting your own chance to hit! Recharge: Long"
+      },
+      "setTypes": [
+        21,
+        30
+      ],
+      "clickBuff": true,
+      "level": 4,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 2.244,
+      "aoeModifier": 1
+    },
+    {
+      "allowedEnhancements": [],
+      "enhancementCount": 6,
+      "archetypeOrder": "poolPower",
+      "effects": [
+        {
+          "effectType": "Leap",
+          "values": [
+            {
+              "mag": {
+                "pve": 27.8
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "JumpHeight",
+              "toWho": "Self",
+              "powerFullName": ""
+            }
+          ]
+        },
+        {
+          "effectType": "SpeedJumping",
+          "values": [
+            {
+              "mag": {
+                "pve": 2.49
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "SpeedJumping",
+              "toWho": "Self",
+              "powerFullName": ""
+            }
+          ]
+        },
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 10
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "MovementControl",
+              "toWho": "Self",
+              "powerFullName": ""
+            },
+            {
+              "mag": {
+                "pve": 2
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "MovementFriction",
+              "toWho": "Self",
+              "powerFullName": ""
+            },
+            {
+              "mag": {
+                "pve": 126
+              },
+              "probability": 1,
+              "duration": 0.75,
+              "effectType": "SetMode",
+              "toWho": "Self",
+              "powerFullName": ""
+            }
+          ]
+        }
+      ],
+      "subPowers": [
+        {
+          "allowedEnhancements": [],
+          "enhancementCount": 6,
+          "archetypeOrder": "poolPower",
+          "effects": [
+            {
+              "effectType": "Ones",
+              "values": [
+                {
+                  "mag": {
+                    "pve": 0.67
+                  },
+                  "probability": 1,
+                  "effectType": "Mez",
+                  "stacking": 1,
+                  "resistible": true,
+                  "toWho": "Target",
+                  "powerFullName": "",
+                  "nearGround": true,
+                  "mezType": "Knockback"
+                }
+              ]
+            }
+          ],
+          "powerIndex": 0,
+          "parent": "Pool_Force_of_Will_Mighty_Leap",
+          "castTimeReal": 2.1,
+          "toggleCost": 11.7,
+          "fullName": "Pool_Force_of_Will_Stomp",
+          "displayName": "Stomp",
+          "accuracy": 1,
+          "accuracyMult": 1,
+          "target": 1,
+          "targetLoS": true,
+          "endCost": 11.7,
+          "rechargeTime": 60,
+          "baseRechargeTime": 60,
+          "effectArea": 2,
+          "radius": 10,
+          "maxTargets": 10,
+          "description": {
+            "short": "PBAoE Melee, Foe Knockdown",
+            "long": "You stomp your foot on the ground with tremendous force, shattering the earth beneath and knocking nearby foes off of their feet. Recharge: Long"
+          },
+          "setTypes": [],
+          "ignoreEnh": [],
+          "ignore_Buff": [],
+          "castTime": 2.244,
+          "aoeModifier": 2.5
+        }
+      ],
+      "powerIndex": 1,
+      "toggleCost": 0.364,
+      "fullName": "Pool_Force_of_Will_Mighty_Leap",
+      "displayName": "Mighty Leap",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "target": 1,
+      "targetLoS": true,
+      "endCost": 0.182,
+      "activatePeriod": 0.5,
+      "effectArea": 1,
+      "description": {
+        "short": "Toggle: Self Long Jump, (Special)",
+        "long": "While this power is active you're able to leap great distances and jump incredibly high. In addition, while this power is active you're able to use Stomp, which will knockdown nearby foes. Recharge: Moderate"
+      },
+      "setTypes": [
+        18,
+        28
+      ],
+      "level": 4,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 0.132,
+      "aoeModifier": 1,
+      "powerType": "Toggle"
+    },
+    {
+      "allowedEnhancements": [],
+      "enhancementCount": 6,
+      "archetypeOrder": "poolPower",
+      "effects": [
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 36.2856674,
+                "pvp": 65.0014
+              },
+              "probability": 1,
+              "effectType": "Damage",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 72.5713348,
+                "pvp": 173.35791
+              },
+              "probability": 1,
+              "effectType": "Damage",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "",
+              "damageType": "Psionic"
+            }
+          ]
+        },
+        {
+          "effectType": "InherentTaunt",
+          "values": [
+            {
+              "mag": {
+                "pve": 4
+              },
+              "probability": 1,
+              "duration": 13.33,
+              "effectType": "Mez",
+              "stacking": 1,
+              "resistible": true,
+              "specialCase": 14,
+              "toWho": "Target",
+              "attribType": 1,
+              "powerFullName": "",
+              "requiresToHitCheck": true,
+              "mezType": "Taunt"
+            }
+          ]
+        },
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.67,
+                "pvp": 0.67
+              },
+              "probability": 0.25,
+              "effectType": "Mez",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "",
+              "mezType": "Knockback"
+            }
+          ]
+        }
+      ],
+      "powerIndex": 2,
+      "castTimeReal": 2.07,
+      "toggleCost": 6.032,
+      "fullName": "Pool_Force_of_Will_Project_Will",
+      "displayName": "Project Will",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "target": 2048,
+      "targetLoS": true,
+      "range": 80,
+      "endCost": 6.032,
+      "rechargeTime": 5,
+      "baseRechargeTime": 5,
+      "effectArea": 1,
+      "description": {
+        "short": "Ranged, Moderate DMG(Psionic/Smash), Foe Knockdown",
+        "long": "You manifest your willpower into a blast and project it toward a distant foe, causing moderate psionic and smashing damage. Project Will has a fair chance to knock the target down. Damage: Moderate, Recharge: Fast"
+      },
+      "setTypes": [
+        2,
+        23,
+        44
+      ],
+      "level": 4,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 2.244,
+      "aoeModifier": 1
+    },
+    {
+      "allowedEnhancements": [],
+      "enhancementCount": 6,
+      "archetypeOrder": "poolPower",
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.5
+              },
+              "probability": 1,
+              "duration": 60,
+              "effectType": "Enhancement",
+              "eTModifies": 25,
+              "toWho": "Self",
+              "powerFullName": ""
+            },
+            {
+              "mag": {
+                "pve": 1.5
+              },
+              "probability": 1,
+              "duration": 60,
+              "effectType": "Regeneration",
+              "toWho": "Self",
+              "powerFullName": ""
+            },
+            {
+              "mag": {
+                "pve": 0.75
+              },
+              "probability": 1,
+              "duration": 60,
+              "effectType": "Recovery",
+              "toWho": "Self",
+              "powerFullName": ""
+            },
+            {
+              "mag": {
+                "pve": 1
+              },
+              "probability": 1,
+              "duration": 60,
+              "effectType": "GlobalChanceMod",
+              "toWho": "Self",
+              "powerFullName": ""
+            }
+          ]
+        },
+        {
+          "effectType": "Buff_Def",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.105000004
+              },
+              "probability": 1,
+              "duration": 60,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "",
+              "damageType": "Melee"
+            },
+            {
+              "mag": {
+                "pve": 0.105000004
+              },
+              "probability": 1,
+              "duration": 60,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "",
+              "damageType": "Ranged"
+            },
+            {
+              "mag": {
+                "pve": 0.105000004
+              },
+              "probability": 1,
+              "duration": 60,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "",
+              "damageType": "AoE"
+            },
+            {
+              "mag": {
+                "pve": 0.105000004
+              },
+              "probability": 1,
+              "duration": 60,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 0.105000004
+              },
+              "probability": 1,
+              "duration": 60,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.105000004
+              },
+              "probability": 1,
+              "duration": 60,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.105000004
+              },
+              "probability": 1,
+              "duration": 60,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 0.105000004
+              },
+              "probability": 1,
+              "duration": 60,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.105000004
+              },
+              "probability": 1,
+              "duration": 60,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.105000004
+              },
+              "probability": 1,
+              "duration": 60,
+              "effectType": "Defense",
+              "toWho": "Self",
+              "powerFullName": "",
+              "damageType": "Psionic"
+            }
+          ]
+        },
+        {
+          "effectType": "GlobalCrash",
+          "values": [
+            {
+              "mag": {
+                "pve": -1
+              },
+              "probability": 1,
+              "duration": 15,
+              "variableModified": true,
+              "effectType": "Recovery",
+              "delayedTime": 60,
+              "stacking": 1,
+              "toWho": "Self",
+              "powerFullName": ""
+            },
+            {
+              "mag": {
+                "pve": -0.25
+              },
+              "probability": 1,
+              "variableModified": true,
+              "effectType": "Endurance",
+              "delayedTime": 60,
+              "stacking": 1,
+              "toWho": "Self",
+              "powerFullName": ""
+            }
+          ]
+        }
+      ],
+      "powerIndex": 3,
+      "castTimeReal": 0.73,
+      "toggleCost": 2.6,
+      "fullName": "Pool_Force_of_Will_Unleash_Potential",
+      "displayName": "Unleash Potential",
+      "requires": {
+        "powers": {
+          "Pool_Force_of_Will_Weaken_Resolve": true,
+          "Pool_Force_of_Will_Project_Will": true,
+          "Pool_Force_of_Will_Mighty_Leap": true
+        },
+        "count": 2
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "target": 1,
+      "targetLoS": true,
+      "endCost": 2.6,
+      "rechargeTime": 600,
+      "baseRechargeTime": 600,
+      "effectArea": 1,
+      "description": {
+        "short": "Self, +Regen, +Recovery, +Recharge, +Defense",
+        "long": "Unleashing your potential, you grant yourself a moderate boost to defense, regeneration rate, recovery and recharge for a short time. Unleash Potential requires you to have two other powers in the Force of Will power pool. Unleash Potential will drain a portion of your endurance and prevent you from recovering endurance after its benefits expire. This crash can be mitigated by using the Presence power Unrelenting before using Unleash Potential. Recharge: Very Long"
+      },
+      "setTypes": [
+        7,
+        9,
+        22
+      ],
+      "clickBuff": true,
+      "level": 14,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 0.924,
+      "aoeModifier": 1
+    },
+    {
+      "allowedEnhancements": [],
+      "enhancementCount": 6,
+      "archetypeOrder": "poolPower",
+      "effects": [
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 34.4088249,
+                "pvp": 34.6590729
+              },
+              "probability": 1,
+              "effectType": "Damage",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 68.81765,
+                "pvp": 92.4033356
+              },
+              "probability": 1,
+              "effectType": "Damage",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "",
+              "damageType": "Psionic"
+            }
+          ]
+        },
+        {
+          "effectType": "InherentTaunt",
+          "values": [
+            {
+              "mag": {
+                "pve": 4
+              },
+              "probability": 1,
+              "duration": 13.33,
+              "effectType": "Mez",
+              "stacking": 1,
+              "resistible": true,
+              "specialCase": 14,
+              "toWho": "Target",
+              "attribType": 1,
+              "powerFullName": "",
+              "requiresToHitCheck": true,
+              "mezType": "Taunt"
+            }
+          ]
+        },
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.67,
+                "pvp": 0.67
+              },
+              "probability": 0.33,
+              "effectType": "Mez",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "Target",
+              "powerFullName": "",
+              "mezType": "Knockback"
+            }
+          ]
+        }
+      ],
+      "powerIndex": 4,
+      "castTimeReal": 2.5,
+      "toggleCost": 14.352,
+      "fullName": "Pool_Force_of_Will_Wall_of_Force",
+      "displayName": "Wall of Force",
+      "requires": {
+        "powers": {
+          "Pool_Force_of_Will_Weaken_Resolve": true,
+          "Pool_Force_of_Will_Project_Will": true,
+          "Pool_Force_of_Will_Mighty_Leap": true
+        },
+        "count": 2
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "target": 2048,
+      "targetLoS": true,
+      "range": 40,
+      "endCost": 14.352,
+      "rechargeTime": 15,
+      "baseRechargeTime": 15,
+      "effectArea": 3,
+      "radius": 40,
+      "arc": 79,
+      "maxTargets": 10,
+      "description": {
+        "short": "Ranged Cone, Moderate DMG(Psionic/Smash), Foe Knockdown",
+        "long": "You project an unfocused blast of sheer force at foes in a short wide cone in front of you, dealing moderate psionic and smashing damage and potentially knocking targets down. Wall of Force requires you to have two other powers from the Force of Will power pool. Damage: Moderate, Recharge: Slow"
+      },
+      "setTypes": [
+        3,
+        23,
+        44
+      ],
+      "level": 14,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 2.63999987,
+      "aoeModifier": 2.87862945
+    }
+  ]
+}

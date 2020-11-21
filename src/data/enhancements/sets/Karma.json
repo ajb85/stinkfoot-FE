@@ -1,0 +1,95 @@
+{
+  "fullName": "IOSet.Karma",
+  "enhancements": [
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Karma_A.Attuned_Karma_A",
+      "displayName": "Defense/Endurance",
+      "description": {
+        "short": "+DEF (all), Reduces End cost",
+        "long": "Enhances the defense of a power by {Boost.Attrib.Defense.Scale}% and reduces endurance cost by {Boost.Attrib.Endurance.Scale}%"
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.159375
+            }
+          },
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Karma_B.Attuned_Karma_B",
+      "displayName": "Defense/Recharge",
+      "description": {
+        "short": "+DEF (all), +Rech",
+        "long": "Enhances the defense of a power by {Boost.Attrib.Defense.Scale}% and reduces recharge time by {Boost.Attrib.Recharge.Scale}%"
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Recharge",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.159375
+            }
+          },
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Karma_C.Attuned_Karma_C",
+      "displayName": "Knockback Protection",
+      "description": {
+        "short": "-KB",
+        "long": "Provides 4 points of Knockback protection."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": -4
+            }
+          },
+          "stat": "Knockback Protection",
+          "cancelOnMiss": true,
+          "variableModified": true,
+          "stacking": 1,
+          "toWho": "self"
+        }
+      ]
+    }
+  ],
+  "levels": {
+    "min": 10,
+    "max": 30
+  },
+  "setType": 7,
+  "setTypeName": "Defense Sets",
+  "displayName": "Karma",
+  "imageName": "sKarma.png"
+}

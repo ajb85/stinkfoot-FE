@@ -1,0 +1,196 @@
+{
+  "fullName": "IOSet.Impeded_Swiftness",
+  "enhancements": [
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Impeded_Swiftness_A.Attuned_Impeded_Swiftness_A",
+      "displayName": "Accuracy/Slow",
+      "description": {
+        "short": "+ACC, +Slow",
+        "long": "Enhances the accuracy by {Boost.Attrib.Accuracy.Scale}% and slowing ability of a power by {Boost.Attrib.Slow.Scale}%."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Accuracy",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Impeded_Swiftness_B.Attuned_Impeded_Swiftness_B",
+      "displayName": "Damage/Slow",
+      "description": {
+        "short": "+DMG, +Slow",
+        "long": "Enhances the damage by {Boost.Attrib.Damage.Scale}% and slowing ability of a power by {Boost.Attrib.Slow.Scale}%."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Damage",
+          "damageType": [
+            "Smashing",
+            "Lethal",
+            "Fire",
+            "Cold",
+            "Energy",
+            "Negative",
+            "Toxic",
+            "Psionic"
+          ],
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Impeded_Swiftness_C.Attuned_Impeded_Swiftness_C",
+      "displayName": "Accuracy/Endurance",
+      "description": {
+        "short": "+ACC, -End Cost",
+        "long": "Enhances the accuracy by {Boost.Attrib.Accuracy.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Accuracy",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Impeded_Swiftness_D.Attuned_Impeded_Swiftness_D",
+      "displayName": "Range/Slow",
+      "description": {
+        "short": "+Range, +Slow",
+        "long": "Enhances the range by {Boost.Attrib.Range.Scale}% and slowing ability of a power by {Boost.Attrib.Slow.Scale}%."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.159375
+            }
+          },
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Impeded_Swiftness_E.Attuned_Impeded_Swiftness_E",
+      "displayName": "Endurance/Recharge/Slow",
+      "description": {
+        "short": "+Slow, +Rech, -End Cost",
+        "long": "Enhances the slowing ability of a power by {Boost.Attrib.Slow.Scale}%, reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}% and reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}%."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.212
+            }
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.212
+            }
+          },
+          "stat": "Recharge",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.212
+            }
+          },
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Impeded_Swiftness_F.Attuned_Impeded_Swiftness_F",
+      "displayName": "Chance for Smashing Damage",
+      "description": {
+        "short": "Chance for Smashing DMG",
+        "long": "Provides a chance to cause minor smashing damage to your targets.  This effect will trigger roughly 3.5 times per minute."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 71.7501
+            }
+          },
+          "stat": "Chance for Smashing Damage",
+          "procsPerMinute": 3.5,
+          "cancelOnMiss": true,
+          "damageType": "Smashing",
+          "stacking": 1,
+          "resistible": true,
+          "pvMode": 1,
+          "toWho": "all"
+        }
+      ]
+    }
+  ],
+  "levels": {
+    "min": 10,
+    "max": 30
+  },
+  "setType": 13,
+  "setTypeName": "Slow Movement",
+  "displayName": "Impeded Swiftness",
+  "imageName": "sImpededSwiftness.png"
+}

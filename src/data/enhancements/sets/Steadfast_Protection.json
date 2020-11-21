@@ -1,0 +1,114 @@
+{
+  "fullName": "IOSet.Steadfast_Protection",
+  "enhancements": [
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Steadfast_Protection_A.Attuned_Steadfast_Protection_A",
+      "displayName": "Resistance/Endurance",
+      "description": {
+        "short": "+RES (all), Reduces End cost",
+        "long": "Enhances the damage resistance of a power by {Boost.Attrib.Resist.Scale}% and reduces endurance cost by {Boost.Attrib.Endurance.Scale}%"
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.159375
+            }
+          },
+          "stat": "Res_Damage",
+          "damageType": [
+            "Smashing",
+            "Lethal",
+            "Fire",
+            "Cold",
+            "Energy",
+            "Negative",
+            "Toxic",
+            "Psionic"
+          ],
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Steadfast_Protection_B.Attuned_Steadfast_Protection_B",
+      "displayName": "Resistance/Defense",
+      "description": {
+        "short": "+Res (all) +Def (All)",
+        "long": "UNIQUE -- No more than 1 enhancement of this type may be slotted by a character.  Enhances the damage resistance of a power by {Boost.Attrib.Resist.Scale}% and increases overall defense by {Boost.Attrib.Defense.Scale}%."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.159375
+            }
+          },
+          "stat": "Res_Damage",
+          "damageType": [
+            "Smashing",
+            "Lethal",
+            "Fire",
+            "Cold",
+            "Energy",
+            "Negative",
+            "Toxic",
+            "Psionic"
+          ],
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.03
+            }
+          },
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Steadfast_Protection_C.Attuned_Steadfast_Protection_C",
+      "displayName": "Knockback Protection",
+      "description": {
+        "short": "-KB",
+        "long": "Reduces Knockback effects by -4."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": -4
+            }
+          },
+          "stat": "Knockback Protection",
+          "cancelOnMiss": true,
+          "toWho": "self"
+        }
+      ]
+    }
+  ],
+  "levels": {
+    "min": 10,
+    "max": 30
+  },
+  "setType": 8,
+  "setTypeName": "Resist Damage",
+  "displayName": "Steadfast Protection",
+  "imageName": "sSteadfastProtection.png"
+}

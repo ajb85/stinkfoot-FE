@@ -1,0 +1,103 @@
+{
+  "fullName": "IOSet.Encouraged_Accuracy",
+  "enhancements": [
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Encouraged_Accuracy_A.Attuned_Encouraged_Accuracy_A",
+      "displayName": "To Hit Buff",
+      "description": {
+        "short": "+To Hit Buff",
+        "long": "Enhances the to hit buff potential of a power by {Boost.Attrib.ToHitBuff.Scale}%."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.255
+            }
+          },
+          "stat": "ToHit_Buff",
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Encouraged_Accuracy_B.Attuned_Encouraged_Accuracy_B",
+      "displayName": "To Hit Buff/Recharge",
+      "description": {
+        "short": "+To Hit Buff, +Rech",
+        "long": "Enhances the to hit buff potential of a power by {Boost.Attrib.ToHitBuff.Scale}% and reduces the recharge time by {Boost.Attrib.Recharge.Scale}%."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.159375
+            }
+          },
+          "stat": "ToHit_Buff",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Recharge",
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Encouraged_Accuracy_C.Attuned_Encouraged_Accuracy_C",
+      "displayName": "To Hit Buff/Recharge/Endurance Reduction",
+      "description": {
+        "short": "+To Hit Buff, +Rech, +End",
+        "long": "Enhances the to hit buff potential of a power by {Boost.Attrib.ToHitBuff.Scale}%, reduces the endurance cost by {Boost.Attrib.Endurance.Scale}% and the recharge time of a power by {Boost.Attrib.Recharge.Scale}%."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.1275
+            }
+          },
+          "stat": "ToHit_Buff",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.212
+            }
+          },
+          "stat": "Recharge",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.212
+            }
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self"
+        }
+      ]
+    }
+  ],
+  "levels": {
+    "min": 10,
+    "max": 20
+  },
+  "setType": 25,
+  "setTypeName": "To Hit Buff",
+  "displayName": "Encouraged Accuracy",
+  "imageName": "sEncouragedAcc.png"
+}

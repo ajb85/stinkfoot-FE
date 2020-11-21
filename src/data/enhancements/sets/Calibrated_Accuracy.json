@@ -1,0 +1,220 @@
+{
+  "fullName": "IOSet.Calibrated_Accuracy",
+  "enhancements": [
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Calibrated_Accuracy_A.Attuned_Calibrated_Accuracy_A",
+      "displayName": "Accuracy/Damage",
+      "description": {
+        "short": "Enhances Accuracy and Damage",
+        "long": "Enhances the damage of a power by {Boost.Attrib.Damage.Scale}% and accuracy by {Boost.Attrib.Accuracy.Scale}%."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Accuracy",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Damage",
+          "damageType": [
+            "Smashing",
+            "Lethal",
+            "Fire",
+            "Cold",
+            "Energy",
+            "Negative",
+            "Toxic",
+            "Psionic"
+          ],
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Calibrated_Accuracy_B.Attuned_Calibrated_Accuracy_B",
+      "displayName": "Accuracy/Endurance",
+      "description": {
+        "short": "Enhances Accuracy and Reduces Endurance Cost",
+        "long": "Enhances the accuracy by {Boost.Attrib.Accuracy.Scale}% and reduces endurance costs by {Boost.Attrib.Endurance.Scale}%."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Accuracy",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Calibrated_Accuracy_C.Attuned_Calibrated_Accuracy_C",
+      "displayName": "Accuracy/Interrupt",
+      "description": {
+        "short": "Enhances Accuracy and Decreases Interrupt Time",
+        "long": "Enhances the accuracy by {Boost.Attrib.Accuracy.Scale}% and reduces interrupt time by {Boost.Attrib.Interrupt.Scale}%."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Accuracy",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.318125
+            }
+          },
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Calibrated_Accuracy_D.Attuned_Calibrated_Accuracy_D",
+      "displayName": "Accuracy/Range",
+      "description": {
+        "short": "Enhances Accuracy and Range",
+        "long": "Enhances the accuracy by {Boost.Attrib.Accuracy.Scale}% and range by {Boost.Attrib.Range.Scale}%."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Accuracy",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.159375
+            }
+          },
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Calibrated_Accuracy_E.Attuned_Calibrated_Accuracy_E",
+      "displayName": "Accuracy/Recharge",
+      "description": {
+        "short": "Enhances Accuracy and Recharge",
+        "long": "Enhances the accuracy by {Boost.Attrib.Accuracy.Scale}% and reduces recharge time by {Boost.Attrib.Recharge.Scale}%."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Accuracy",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Recharge",
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Calibrated_Accuracy_F.Attuned_Calibrated_Accuracy_F",
+      "displayName": "Accuracy/Damage/Recharge",
+      "description": {
+        "short": "Enhances Damage, Reduces Endurance Cost and Increases Attack Rate",
+        "long": "Enhances the accuracy of a power by {Boost.Attrib.Accuracy.Scale}% and damage by {Boost.Attrib.Damage.Scale}% and reduces recharge time by {Boost.Attrib.Recharge.Scale}%."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.212
+            }
+          },
+          "stat": "Accuracy",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.212
+            }
+          },
+          "stat": "Damage",
+          "damageType": [
+            "Smashing",
+            "Lethal",
+            "Fire",
+            "Cold",
+            "Energy",
+            "Negative",
+            "Toxic",
+            "Psionic"
+          ],
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.212
+            }
+          },
+          "stat": "Recharge",
+          "toWho": "self"
+        }
+      ]
+    }
+  ],
+  "levels": {
+    "min": 20,
+    "max": 50
+  },
+  "setType": 5,
+  "setTypeName": "Sniper Attacks",
+  "displayName": "Calibrated Accuracy",
+  "imageName": "sCalibratedAcc.png"
+}

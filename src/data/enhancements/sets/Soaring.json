@@ -1,0 +1,83 @@
+{
+  "fullName": "IOSet.Soaring",
+  "enhancements": [
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Soaring_A.Attuned_Soaring_A",
+      "displayName": "Fly",
+      "description": {
+        "short": "+Fly",
+        "long": "Enhances the flight speed of a power by {Boost.Attrib.Fly.Scale}%."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.424
+            }
+          },
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Soaring_B.Attuned_Soaring_B",
+      "displayName": "Endurance",
+      "description": {
+        "short": "-End Cost",
+        "long": "Reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.424
+            }
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Soaring_C.Attuned_Soaring_C",
+      "displayName": "Endurance/Fly",
+      "description": {
+        "short": "+Fly, -End Cost",
+        "long": "Enhances the flight speed of a power by {Boost.Attrib.Fly.Scale}% and reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}%."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "toWho": "self"
+        }
+      ]
+    }
+  ],
+  "levels": {
+    "min": 15,
+    "max": 50
+  },
+  "setType": 17,
+  "setTypeName": "Flight",
+  "displayName": "Soaring",
+  "imageName": "sSoaring.png"
+}

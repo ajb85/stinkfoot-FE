@@ -1,0 +1,3964 @@
+{
+  "fullName": "Blaster_Primary_Dual_Pistols",
+  "archetypeOrder": "primary",
+  "description": "You're a master of akimbo pistols, wielding a high caliber firearm in each hand.  Your attacks primarily deal lethal damage and you have a wide variety of attacks, however your strength lies within your ability to use your \"\"Swap Ammo\"\" power to change out your ammo mid-battle.  Doing so can change your secondary damage type and effects making you an incredibly versatile ranged combatant.",
+  "imageName": "DualPistols.png",
+  "displayName": "Dual Pistols",
+  "powers": [
+    {
+      "effects": [
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 43.79305,
+                "pvp": 67.8467
+              },
+              "probability": 1,
+              "effectType": "Damage",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Pistols",
+              "damageType": "Lethal"
+            }
+          ]
+        },
+        {
+          "effectType": "Lethal",
+          "values": [
+            {
+              "mag": {
+                "pve": 18.7684517,
+                "pvp": 29.0773335
+              },
+              "probability": 1,
+              "effectType": "Damage",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Pistols",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": -0.07
+              },
+              "probability": 1,
+              "duration": 8,
+              "effectType": "Defense",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Pistols"
+            }
+          ]
+        },
+        {
+          "effectType": "FireDamage",
+          "values": [
+            {
+              "mag": {
+                "pve": 18.7684517,
+                "pvp": 29.0773335
+              },
+              "effectType": "Damage",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Pistols",
+              "damageType": "Fire"
+            }
+          ]
+        },
+        {
+          "effectType": "FireDamageDoT",
+          "values": [
+            {
+              "mag": {
+                "pve": 7.06944942
+              },
+              "cancelOnMiss": true,
+              "duration": 2.1,
+              "effectType": "Damage",
+              "ticks": 3,
+              "delayedTime": 0.5,
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Pistols",
+              "damageType": "Fire"
+            }
+          ]
+        },
+        {
+          "effectType": "ColdDamage",
+          "values": [
+            {
+              "mag": {
+                "pve": 18.7684517,
+                "pvp": 29.0773335
+              },
+              "effectType": "Damage",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Pistols",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": -0.12
+              },
+              "duration": 8,
+              "effectType": "SpeedRunning",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Pistols"
+            },
+            {
+              "mag": {
+                "pve": -0.12
+              },
+              "duration": 8,
+              "effectType": "SpeedFlying",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Pistols"
+            },
+            {
+              "etModifies": "JumpHeight",
+              "mag": {
+                "pve": -0.12
+              },
+              "duration": 8,
+              "effectType": "Enhancement",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Pistols"
+            },
+            {
+              "mag": {
+                "pve": -0.12
+              },
+              "duration": 8,
+              "effectType": "SpeedJumping",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Pistols"
+            },
+            {
+              "etModifies": "RechargeTime",
+              "mag": {
+                "pve": -0.12
+              },
+              "duration": 8,
+              "effectType": "Enhancement",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Pistols"
+            }
+          ]
+        },
+        {
+          "effectType": "ToxicDamage",
+          "values": [
+            {
+              "mag": {
+                "pve": 18.7684517,
+                "pvp": 29.0773335
+              },
+              "effectType": "Damage",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Pistols",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pve": -0.056
+              },
+              "duration": 5,
+              "effectType": "DamageBuff",
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Pistols",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": -0.056
+              },
+              "duration": 5,
+              "effectType": "DamageBuff",
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Pistols",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": -0.056
+              },
+              "duration": 5,
+              "effectType": "DamageBuff",
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Pistols",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": -0.056
+              },
+              "duration": 5,
+              "effectType": "DamageBuff",
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Pistols",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": -0.056
+              },
+              "duration": 5,
+              "effectType": "DamageBuff",
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Pistols",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": -0.056
+              },
+              "duration": 5,
+              "effectType": "DamageBuff",
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Pistols",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": -0.056
+              },
+              "duration": 5,
+              "effectType": "DamageBuff",
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Pistols",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pve": -0.056
+              },
+              "duration": 5,
+              "effectType": "DamageBuff",
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Pistols",
+              "damageType": "Psionic"
+            }
+          ]
+        },
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.066
+              },
+              "probability": 1,
+              "duration": 8.5,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Pistols",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 0.066
+              },
+              "probability": 1,
+              "duration": 8.5,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Pistols",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.066
+              },
+              "probability": 1,
+              "duration": 8.5,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Pistols",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.066
+              },
+              "probability": 1,
+              "duration": 8.5,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Pistols",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 0.066
+              },
+              "probability": 1,
+              "duration": 8.5,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Pistols",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.066
+              },
+              "probability": 1,
+              "duration": 8.5,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Pistols",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.066
+              },
+              "probability": 1,
+              "duration": 8.5,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Pistols",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pve": 0.066
+              },
+              "probability": 1,
+              "duration": 8.5,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Pistols",
+              "damageType": "Psionic"
+            }
+          ]
+        }
+      ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Defense_Debuff",
+        "Endurance_Discount",
+        "Range",
+        "Recharge"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Ranged.Dual_Pistols.Pistols",
+      "archetypeOrder": "primary",
+      "powerIndex": 0,
+      "castTimeReal": 1,
+      "toggleCost": 4.16,
+      "fullName": "Blaster_Primary_Dual_Pistols_Pistols",
+      "displayName": "Pistols",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1.1,
+      "accuracyMult": 1.1,
+      "attackTypes": 18,
+      "target": 2048,
+      "targetLoS": true,
+      "range": 80,
+      "endCost": 4.16,
+      "rechargeTime": 4,
+      "baseRechargeTime": 4,
+      "effectArea": 1,
+      "numAllowed": 1,
+      "castThroughHold": true,
+      "description": {
+        "short": "Ranged, Minor DMG(Lethal/Special), Foe -Defense",
+        "long": "Quickly fires a round from one of your heavy automatic pistols. Damage is average, but the fire rate is very fast.  If standard ammo is used, Pistols will also reduce the target's Defense.  Damage: Minor, Recharge: Very Fast  NOTE: Changing your ammo type with the 'Swap Ammo' power will change your secondary damage from lethal to cold, fire or toxic.  Additionally, changing your ammunition type will also change the secondary effect of this attack from -Defense to a minor attack speed and movement speed debuff if 'Cryo Ammo' is loaded, a minor damage over time effect if 'Incendiary Ammo' is loaded, or a -damage effect if 'Chemical Ammo' is loaded."
+      },
+      "setTypes": [
+        2,
+        21,
+        30,
+        33,
+        44
+      ],
+      "level": 1,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 1.188,
+      "slottable": true,
+      "aoeModifier": 1
+    },
+    {
+      "effects": [
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 57.8068275,
+                "pvp": 97.40826
+              },
+              "probability": 1,
+              "effectType": "Damage",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Dual_Wield",
+              "damageType": "Lethal"
+            }
+          ]
+        },
+        {
+          "effectType": "Lethal",
+          "values": [
+            {
+              "mag": {
+                "pve": 24.7743549,
+                "pvp": 41.74604
+              },
+              "probability": 1,
+              "effectType": "Damage",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Dual_Wield",
+              "damageType": "Lethal"
+            }
+          ]
+        },
+        {
+          "effectType": "LethalKB25",
+          "values": [
+            {
+              "mag": {
+                "pve": 1.246275,
+                "pvp": 1.246275
+              },
+              "probability": 0.25,
+              "effectType": "Mez",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Dual_Wield",
+              "mezType": "Knockback"
+            }
+          ]
+        },
+        {
+          "effectType": "FireDamage",
+          "values": [
+            {
+              "mag": {
+                "pve": 24.7743549,
+                "pvp": 41.74604
+              },
+              "effectType": "Damage",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Dual_Wield",
+              "damageType": "Fire"
+            }
+          ]
+        },
+        {
+          "effectType": "FireDamageDoT",
+          "values": [
+            {
+              "mag": {
+                "pve": 7.06944942
+              },
+              "cancelOnMiss": true,
+              "duration": 3.1,
+              "effectType": "Damage",
+              "ticks": 4,
+              "delayedTime": 0.5,
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Dual_Wield",
+              "damageType": "Fire"
+            }
+          ]
+        },
+        {
+          "effectType": "ColdDamage",
+          "values": [
+            {
+              "mag": {
+                "pve": 24.7743549,
+                "pvp": 41.74604
+              },
+              "effectType": "Damage",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Dual_Wield",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": -0.15
+              },
+              "duration": 8,
+              "effectType": "SpeedRunning",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Dual_Wield"
+            },
+            {
+              "mag": {
+                "pve": -0.15
+              },
+              "duration": 8,
+              "effectType": "SpeedFlying",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Dual_Wield"
+            },
+            {
+              "etModifies": "JumpHeight",
+              "mag": {
+                "pve": -0.15
+              },
+              "duration": 8,
+              "effectType": "Enhancement",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Dual_Wield"
+            },
+            {
+              "mag": {
+                "pve": -0.15
+              },
+              "duration": 8,
+              "effectType": "SpeedJumping",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Dual_Wield"
+            },
+            {
+              "etModifies": "RechargeTime",
+              "mag": {
+                "pve": -0.15
+              },
+              "duration": 8,
+              "effectType": "Enhancement",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Dual_Wield"
+            }
+          ]
+        },
+        {
+          "effectType": "ToxicDamage",
+          "values": [
+            {
+              "mag": {
+                "pve": 24.7743549,
+                "pvp": 41.74604
+              },
+              "effectType": "Damage",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Dual_Wield",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pve": -0.07
+              },
+              "duration": 6,
+              "effectType": "DamageBuff",
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Dual_Wield",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": -0.07
+              },
+              "duration": 6,
+              "effectType": "DamageBuff",
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Dual_Wield",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": -0.07
+              },
+              "duration": 6,
+              "effectType": "DamageBuff",
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Dual_Wield",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": -0.07
+              },
+              "duration": 6,
+              "effectType": "DamageBuff",
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Dual_Wield",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": -0.07
+              },
+              "duration": 6,
+              "effectType": "DamageBuff",
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Dual_Wield",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": -0.07
+              },
+              "duration": 6,
+              "effectType": "DamageBuff",
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Dual_Wield",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": -0.07
+              },
+              "duration": 6,
+              "effectType": "DamageBuff",
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Dual_Wield",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pve": -0.07
+              },
+              "duration": 6,
+              "effectType": "DamageBuff",
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Dual_Wield",
+              "damageType": "Psionic"
+            }
+          ]
+        },
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.11
+              },
+              "probability": 1,
+              "duration": 9.17,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Dual_Wield",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 0.11
+              },
+              "probability": 1,
+              "duration": 9.17,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Dual_Wield",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.11
+              },
+              "probability": 1,
+              "duration": 9.17,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Dual_Wield",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.11
+              },
+              "probability": 1,
+              "duration": 9.17,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Dual_Wield",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 0.11
+              },
+              "probability": 1,
+              "duration": 9.17,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Dual_Wield",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.11
+              },
+              "probability": 1,
+              "duration": 9.17,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Dual_Wield",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.11
+              },
+              "probability": 1,
+              "duration": 9.17,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Dual_Wield",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pve": 0.11
+              },
+              "probability": 1,
+              "duration": 9.17,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Dual_Wield",
+              "damageType": "Psionic"
+            }
+          ]
+        }
+      ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Knockback",
+        "Range",
+        "Recharge",
+        "Slow"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Ranged.Dual_Pistols.Dual_Wield",
+      "archetypeOrder": "primary",
+      "powerIndex": 1,
+      "castTimeReal": 1.67,
+      "toggleCost": 6.864,
+      "fullName": "Blaster_Primary_Dual_Pistols_Dual_Wield",
+      "displayName": "Dual Wield",
+      "requires": {
+        "powers": {},
+        "count": 1
+      },
+      "accuracy": 1.1,
+      "accuracyMult": 1.1,
+      "attackTypes": 18,
+      "target": 2048,
+      "targetLoS": true,
+      "range": 80,
+      "endCost": 6.864,
+      "rechargeTime": 6,
+      "baseRechargeTime": 6,
+      "effectArea": 1,
+      "numAllowed": 1,
+      "castThroughHold": true,
+      "description": {
+        "short": "Ranged, Moderate DMG(Lethal/Special), Foe Knockback/Special",
+        "long": "Dual Wield fires both pistols in rapid succession at its desired target.  This power is slower than Pistols, but deals more damage, and the target may get knocked back by the force of the impact. Damage: Moderate, Recharge: Fast  NOTE: Changing your ammo type with the 'Swap Ammo' power will change your secondary damage from lethal to cold, fire or toxic.  Additionally, changing your ammunition type will also change the secondary effect of this attack from Knockback to a minor attack speed and movement speed debuff if 'Cryo Ammo' is loaded, a minor damage over time effect if 'Incendiary Ammo' is loaded, or a -damage effect if 'Chemical Ammo' is loaded."
+      },
+      "setTypes": [
+        2,
+        13,
+        23,
+        33,
+        44
+      ],
+      "level": 1,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 1.848,
+      "slottable": true,
+      "aoeModifier": 1
+    },
+    {
+      "effects": [
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 11.3861933,
+                "pvp": 12.2714386
+              },
+              "probability": 1,
+              "duration": 1.6,
+              "effectType": "Damage",
+              "ticks": 4,
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Empty_Clips",
+              "damageType": "Lethal"
+            }
+          ]
+        },
+        {
+          "effectType": "Lethal",
+          "values": [
+            {
+              "mag": {
+                "pve": 4.879797,
+                "pvp": 5.25891972
+              },
+              "probability": 1,
+              "duration": 1.6,
+              "effectType": "Damage",
+              "ticks": 4,
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Empty_Clips",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": -0.07
+              },
+              "probability": 1,
+              "duration": 8,
+              "effectType": "Defense",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Empty_Clips"
+            }
+          ]
+        },
+        {
+          "effectType": "LethalKB10",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.66468,
+                "pvp": 0.66468
+              },
+              "probability": 0.1,
+              "effectType": "Mez",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Empty_Clips",
+              "mezType": "Knockback"
+            }
+          ]
+        },
+        {
+          "effectType": "FireDamage",
+          "values": [
+            {
+              "mag": {
+                "pve": 4.879797,
+                "pvp": 5.25891972
+              },
+              "duration": 1.6,
+              "effectType": "Damage",
+              "ticks": 4,
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Empty_Clips",
+              "damageType": "Fire"
+            }
+          ]
+        },
+        {
+          "effectType": "FireDamageDoT",
+          "values": [
+            {
+              "mag": {
+                "pve": 7.06944942
+              },
+              "cancelOnMiss": true,
+              "duration": 2.1,
+              "effectType": "Damage",
+              "ticks": 3,
+              "delayedTime": 0.5,
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Empty_Clips",
+              "damageType": "Fire"
+            }
+          ]
+        },
+        {
+          "effectType": "ColdDamage",
+          "values": [
+            {
+              "mag": {
+                "pve": 4.879797,
+                "pvp": 5.25891972
+              },
+              "duration": 1.6,
+              "effectType": "Damage",
+              "ticks": 4,
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Empty_Clips",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": -0.15
+              },
+              "duration": 8,
+              "effectType": "SpeedRunning",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Empty_Clips"
+            },
+            {
+              "mag": {
+                "pve": -0.15
+              },
+              "duration": 8,
+              "effectType": "SpeedFlying",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Empty_Clips"
+            },
+            {
+              "etModifies": "JumpHeight",
+              "mag": {
+                "pve": -0.15
+              },
+              "duration": 8,
+              "effectType": "Enhancement",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Empty_Clips"
+            },
+            {
+              "mag": {
+                "pve": -0.15
+              },
+              "duration": 8,
+              "effectType": "SpeedJumping",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Empty_Clips"
+            },
+            {
+              "etModifies": "RechargeTime",
+              "mag": {
+                "pve": -0.15
+              },
+              "duration": 8,
+              "effectType": "Enhancement",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Empty_Clips"
+            }
+          ]
+        },
+        {
+          "effectType": "ToxicDamage",
+          "values": [
+            {
+              "mag": {
+                "pve": 4.879797,
+                "pvp": 5.25891972
+              },
+              "duration": 1.6,
+              "effectType": "Damage",
+              "ticks": 4,
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Empty_Clips",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pve": -0.07
+              },
+              "duration": 6,
+              "effectType": "DamageBuff",
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Empty_Clips",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": -0.07
+              },
+              "duration": 6,
+              "effectType": "DamageBuff",
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Empty_Clips",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": -0.07
+              },
+              "duration": 6,
+              "effectType": "DamageBuff",
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Empty_Clips",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": -0.07
+              },
+              "duration": 6,
+              "effectType": "DamageBuff",
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Empty_Clips",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": -0.07
+              },
+              "duration": 6,
+              "effectType": "DamageBuff",
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Empty_Clips",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": -0.07
+              },
+              "duration": 6,
+              "effectType": "DamageBuff",
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Empty_Clips",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": -0.07
+              },
+              "duration": 6,
+              "effectType": "DamageBuff",
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Empty_Clips",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pve": -0.07
+              },
+              "duration": 6,
+              "effectType": "DamageBuff",
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Empty_Clips",
+              "damageType": "Psionic"
+            }
+          ]
+        },
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.051
+              },
+              "probability": 1,
+              "duration": 9.17,
+              "effectType": "DamageBuff",
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Empty_Clips",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 0.051
+              },
+              "probability": 1,
+              "duration": 9.17,
+              "effectType": "DamageBuff",
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Empty_Clips",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.051
+              },
+              "probability": 1,
+              "duration": 9.17,
+              "effectType": "DamageBuff",
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Empty_Clips",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.051
+              },
+              "probability": 1,
+              "duration": 9.17,
+              "effectType": "DamageBuff",
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Empty_Clips",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 0.051
+              },
+              "probability": 1,
+              "duration": 9.17,
+              "effectType": "DamageBuff",
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Empty_Clips",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.051
+              },
+              "probability": 1,
+              "duration": 9.17,
+              "effectType": "DamageBuff",
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Empty_Clips",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.051
+              },
+              "probability": 1,
+              "duration": 9.17,
+              "effectType": "DamageBuff",
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Empty_Clips",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pve": 0.051
+              },
+              "probability": 1,
+              "duration": 9.17,
+              "effectType": "DamageBuff",
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Empty_Clips",
+              "damageType": "Psionic"
+            }
+          ]
+        }
+      ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Defense_Debuff",
+        "Endurance_Discount",
+        "Knockback",
+        "Range",
+        "Recharge",
+        "Slow"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Ranged.Dual_Pistols.Empty_Clips",
+      "archetypeOrder": "primary",
+      "powerIndex": 2,
+      "castTimeReal": 1.67,
+      "toggleCost": 10.192,
+      "fullName": "Blaster_Primary_Dual_Pistols_Empty_Clips",
+      "displayName": "Empty Clips",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1.1,
+      "accuracyMult": 1.1,
+      "attackTypes": 20,
+      "target": 2048,
+      "targetLoS": true,
+      "range": 40,
+      "endCost": 10.192,
+      "rechargeTime": 10,
+      "baseRechargeTime": 10,
+      "effectArea": 3,
+      "radius": 40,
+      "arc": 30,
+      "maxTargets": 10,
+      "numAllowed": 1,
+      "description": {
+        "short": "Ranged (Cone), Moderate DMG(Lethal/Special), Foe -Defense, Knockdown/Special",
+        "long": "You empty the clips of both your pistols in an arc of suppression fire. This attack can blast multiple foes in the affected cone area, and has a small chance of knocking some foes down.  Affected targets will have their defense reduced slightly as well if Standard Ammo is equipped. Damage: Moderate, Recharge: Moderate  NOTE: Changing your ammo type with the 'Swap Ammo' power will change your secondary damage from lethal to cold, fire or toxic.  Additionally, changing your ammunition type will also change the secondary effect of this attack from Knockdown to a minor attack speed and movement speed debuff if 'Cryo Ammo' is loaded, a minor damage over time effect if 'Incendiary Ammo' is loaded, or a -damage effect if 'Chemical Ammo' is loaded."
+      },
+      "setTypes": [
+        3,
+        13,
+        21,
+        23,
+        30,
+        33,
+        44
+      ],
+      "level": 2,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 1.848,
+      "slottable": true,
+      "aoeModifier": 2.15995646
+    },
+    {
+      "effects": [
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 68
+              },
+              "probability": 1,
+              "duration": 2.25,
+              "effectType": "SetMode",
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Swap_Ammo"
+            }
+          ]
+        }
+      ],
+      "allowedEnhancements": [],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Ranged.Dual_Pistols.Swap_Ammo",
+      "archetypeOrder": "primary",
+      "subPowers": [
+        {
+          "effects": [
+            {
+              "effectType": "Ones",
+              "values": [
+                {
+                  "mag": {
+                    "pve": -0.05
+                  },
+                  "probability": 1,
+                  "duration": 0.75,
+                  "effectType": "GlobalChanceMod",
+                  "toWho": "self",
+                  "powerFullName": "Blaster_Ranged.Dual_Pistols.Chemical_Ammunition"
+                }
+              ]
+            }
+          ],
+          "allowedEnhancements": [],
+          "enhancementCount": 6,
+          "ogFullName": "Blaster_Ranged.Dual_Pistols.Chemical_Ammunition",
+          "archetypeOrder": "primary",
+          "powerIndex": 0,
+          "parent": "Blaster_Primary_Dual_Pistols_Swap_Ammo",
+          "castTimeReal": 0.63,
+          "isEpic": true,
+          "locationIndex": 6,
+          "fullName": "Blaster_Primary_Dual_Pistols_Chemical_Ammunition",
+          "displayName": "Chemical Ammunition",
+          "accuracy": 1,
+          "accuracyMult": 1,
+          "target": 1,
+          "targetLoS": true,
+          "rechargeTime": 4,
+          "baseRechargeTime": 4,
+          "activatePeriod": 0.5,
+          "effectArea": 1,
+          "numAllowed": 1,
+          "description": {
+            "short": "Toggle: Ammo Change (Toxic), Special",
+            "long": "While this toggle is active you will be equipped with 'Chemical Rounds.'  Most of your Dual Pistol attacks will have their secondary damage converted to toxic damage and inflict a minor damage debuff effect on the target.  In order to earn this power, you must purchase the Swap Ammo power."
+          },
+          "setTypes": [],
+          "ignoreEnh": [],
+          "ignore_Buff": [],
+          "includeFlag": true,
+          "castTime": 0.792,
+          "aoeModifier": 1,
+          "displayLocation": 6,
+          "powerType": "Toggle"
+        },
+        {
+          "effects": [
+            {
+              "effectType": "Ones",
+              "values": [
+                {
+                  "mag": {
+                    "pve": -0.05
+                  },
+                  "probability": 1,
+                  "duration": 0.75,
+                  "effectType": "GlobalChanceMod",
+                  "toWho": "self",
+                  "powerFullName": "Blaster_Ranged.Dual_Pistols.Cryo_Ammunition"
+                }
+              ]
+            }
+          ],
+          "allowedEnhancements": [],
+          "enhancementCount": 6,
+          "ogFullName": "Blaster_Ranged.Dual_Pistols.Cryo_Ammunition",
+          "archetypeOrder": "primary",
+          "powerIndex": 1,
+          "parent": "Blaster_Primary_Dual_Pistols_Swap_Ammo",
+          "castTimeReal": 0.63,
+          "isEpic": true,
+          "locationIndex": 7,
+          "fullName": "Blaster_Primary_Dual_Pistols_Cryo_Ammunition",
+          "displayName": "Cryo Ammunition",
+          "accuracy": 1,
+          "accuracyMult": 1,
+          "target": 1,
+          "targetLoS": true,
+          "rechargeTime": 4,
+          "baseRechargeTime": 4,
+          "activatePeriod": 0.5,
+          "effectArea": 1,
+          "numAllowed": 1,
+          "description": {
+            "short": "Toggle: Ammo Change (Cold), Special",
+            "long": "While this toggle is active you will be equipped with 'Cryo Rounds'.  Most of your Dual Pistol attacks will have their secondary damage converted to cold damage and inflict a minor slow effect on the target.  In order to earn this power, you must purchase the Swap Ammo power."
+          },
+          "setTypes": [],
+          "ignoreEnh": [],
+          "ignore_Buff": [],
+          "includeFlag": true,
+          "castTime": 0.792,
+          "aoeModifier": 1,
+          "displayLocation": 7,
+          "powerType": "Toggle"
+        },
+        {
+          "effects": [
+            {
+              "effectType": "Ones",
+              "values": [
+                {
+                  "mag": {
+                    "pve": -0.05
+                  },
+                  "probability": 1,
+                  "duration": 0.75,
+                  "effectType": "GlobalChanceMod",
+                  "toWho": "self",
+                  "powerFullName": "Blaster_Ranged.Dual_Pistols.Incendiary_Ammunition"
+                }
+              ]
+            }
+          ],
+          "allowedEnhancements": [],
+          "enhancementCount": 6,
+          "ogFullName": "Blaster_Ranged.Dual_Pistols.Incendiary_Ammunition",
+          "archetypeOrder": "primary",
+          "powerIndex": 2,
+          "parent": "Blaster_Primary_Dual_Pistols_Swap_Ammo",
+          "castTimeReal": 0.63,
+          "isEpic": true,
+          "locationIndex": 8,
+          "fullName": "Blaster_Primary_Dual_Pistols_Incendiary_Ammunition",
+          "displayName": "Incendiary Ammunition",
+          "accuracy": 1,
+          "accuracyMult": 1,
+          "target": 1,
+          "targetLoS": true,
+          "rechargeTime": 4,
+          "baseRechargeTime": 4,
+          "activatePeriod": 0.5,
+          "effectArea": 1,
+          "numAllowed": 1,
+          "description": {
+            "short": "Toggle: Ammo Change (Fire), Special",
+            "long": "While this toggle is active you will be equipped with 'Incendiary Rounds.'  Most of your Dual Pistol attacks will have their secondary damage converted to fire damage and inflict a minor damage over time effect.  In order to earn this power, you must purchase the Swap Ammo power."
+          },
+          "setTypes": [],
+          "ignoreEnh": [],
+          "ignore_Buff": [],
+          "includeFlag": true,
+          "castTime": 0.792,
+          "aoeModifier": 1,
+          "displayLocation": 8,
+          "powerType": "Toggle"
+        }
+      ],
+      "powerIndex": 3,
+      "fullName": "Blaster_Primary_Dual_Pistols_Swap_Ammo",
+      "displayName": "Swap Ammo",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1,
+      "accuracyMult": 1,
+      "target": 1,
+      "targetLoS": true,
+      "activatePeriod": 2,
+      "effectArea": 1,
+      "numAllowed": 1,
+      "description": {
+        "short": "Change Secondary Damage/Effects",
+        "long": "By purchasing this power, you will be granted the Cryo Ammunition, Incendiary Ammunition and Chemical Ammunition toggles.   Activating these toggles will change your secondary damage type on most Dual Pistols attacks from lethal (Standard Rounds) to cold (Cryo Rounds), fire (Incendiary Rounds) or toxic (Chemical Rounds).  These toggles are mutually exclusive and only one can be active at a time.  If no Swap Ammo toggles are active, the player will revert to Standard Ammunition.  Different ammo types also have different secondary effects.  Examine your Dual Pistols powers for more information."
+      },
+      "setTypes": [],
+      "level": 6,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 0.132,
+      "aoeModifier": 1,
+      "powerType": "Auto"
+    },
+    {
+      "effects": [
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 14.576829,
+                "pvp": 12.6411772
+              },
+              "probability": 1,
+              "duration": 1.1,
+              "effectType": "Damage",
+              "ticks": 3,
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Bullet_Rain",
+              "damageType": "Lethal"
+            }
+          ]
+        },
+        {
+          "effectType": "Lethal",
+          "values": [
+            {
+              "mag": {
+                "pve": 6.25615025,
+                "pvp": 5.4178257
+              },
+              "probability": 1,
+              "duration": 1.1,
+              "effectType": "Damage",
+              "ticks": 3,
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Bullet_Rain",
+              "damageType": "Lethal"
+            }
+          ]
+        },
+        {
+          "effectType": "LethalKB50",
+          "values": [
+            {
+              "mag": {
+                "pve": 3.3234,
+                "pvp": 3.3234
+              },
+              "probability": 0.5,
+              "effectType": "Mez",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Bullet_Rain",
+              "mezType": "Knockback"
+            }
+          ]
+        },
+        {
+          "effectType": "FireDamage",
+          "values": [
+            {
+              "mag": {
+                "pve": 6.25615025,
+                "pvp": 5.4178257
+              },
+              "duration": 1.1,
+              "effectType": "Damage",
+              "ticks": 3,
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Bullet_Rain",
+              "damageType": "Fire"
+            }
+          ]
+        },
+        {
+          "effectType": "FireDamageDoT",
+          "values": [
+            {
+              "mag": {
+                "pve": 7.06944942
+              },
+              "cancelOnMiss": true,
+              "duration": 2.1,
+              "effectType": "Damage",
+              "ticks": 3,
+              "delayedTime": 0.5,
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Bullet_Rain",
+              "damageType": "Fire"
+            }
+          ]
+        },
+        {
+          "effectType": "ColdDamage",
+          "values": [
+            {
+              "mag": {
+                "pve": 6.25615025,
+                "pvp": 5.4178257
+              },
+              "duration": 1.1,
+              "effectType": "Damage",
+              "ticks": 3,
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Bullet_Rain",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": -0.15
+              },
+              "duration": 10,
+              "effectType": "SpeedRunning",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Bullet_Rain"
+            },
+            {
+              "mag": {
+                "pve": -0.15
+              },
+              "duration": 10,
+              "effectType": "SpeedFlying",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Bullet_Rain"
+            },
+            {
+              "etModifies": "JumpHeight",
+              "mag": {
+                "pve": -0.15
+              },
+              "duration": 10,
+              "effectType": "Enhancement",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Bullet_Rain"
+            },
+            {
+              "mag": {
+                "pve": -0.15
+              },
+              "duration": 10,
+              "effectType": "SpeedJumping",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Bullet_Rain"
+            },
+            {
+              "etModifies": "RechargeTime",
+              "mag": {
+                "pve": -0.15
+              },
+              "duration": 10,
+              "effectType": "Enhancement",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Bullet_Rain"
+            }
+          ]
+        },
+        {
+          "effectType": "ToxicDamage",
+          "values": [
+            {
+              "mag": {
+                "pve": 6.25615025,
+                "pvp": 5.4178257
+              },
+              "duration": 1.1,
+              "effectType": "Damage",
+              "ticks": 3,
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Bullet_Rain",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pve": -0.07
+              },
+              "duration": 8,
+              "effectType": "DamageBuff",
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Bullet_Rain",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": -0.07
+              },
+              "duration": 8,
+              "effectType": "DamageBuff",
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Bullet_Rain",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": -0.07
+              },
+              "duration": 8,
+              "effectType": "DamageBuff",
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Bullet_Rain",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": -0.07
+              },
+              "duration": 8,
+              "effectType": "DamageBuff",
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Bullet_Rain",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": -0.07
+              },
+              "duration": 8,
+              "effectType": "DamageBuff",
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Bullet_Rain",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": -0.07
+              },
+              "duration": 8,
+              "effectType": "DamageBuff",
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Bullet_Rain",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": -0.07
+              },
+              "duration": 8,
+              "effectType": "DamageBuff",
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Bullet_Rain",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pve": -0.07
+              },
+              "duration": 8,
+              "effectType": "DamageBuff",
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Bullet_Rain",
+              "damageType": "Psionic"
+            }
+          ]
+        },
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.034
+              },
+              "probability": 1,
+              "duration": 9.17,
+              "effectType": "DamageBuff",
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Bullet_Rain",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 0.034
+              },
+              "probability": 1,
+              "duration": 9.17,
+              "effectType": "DamageBuff",
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Bullet_Rain",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.034
+              },
+              "probability": 1,
+              "duration": 9.17,
+              "effectType": "DamageBuff",
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Bullet_Rain",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.034
+              },
+              "probability": 1,
+              "duration": 9.17,
+              "effectType": "DamageBuff",
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Bullet_Rain",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 0.034
+              },
+              "probability": 1,
+              "duration": 9.17,
+              "effectType": "DamageBuff",
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Bullet_Rain",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.034
+              },
+              "probability": 1,
+              "duration": 9.17,
+              "effectType": "DamageBuff",
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Bullet_Rain",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.034
+              },
+              "probability": 1,
+              "duration": 9.17,
+              "effectType": "DamageBuff",
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Bullet_Rain",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pve": 0.034
+              },
+              "probability": 1,
+              "duration": 9.17,
+              "effectType": "DamageBuff",
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Bullet_Rain",
+              "damageType": "Psionic"
+            }
+          ]
+        }
+      ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Knockback",
+        "Range",
+        "Recharge",
+        "Slow"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Ranged.Dual_Pistols.Bullet_Rain",
+      "archetypeOrder": "primary",
+      "powerIndex": 4,
+      "castTimeReal": 1.67,
+      "toggleCost": 16.848,
+      "fullName": "Blaster_Primary_Dual_Pistols_Bullet_Rain",
+      "displayName": "Bullet Rain",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1.1,
+      "accuracyMult": 1.1,
+      "attackTypes": 20,
+      "target": 2048,
+      "targetLoS": true,
+      "range": 80,
+      "endCost": 16.848,
+      "rechargeTime": 18,
+      "baseRechargeTime": 18,
+      "effectArea": 2,
+      "radius": 15,
+      "maxTargets": 16,
+      "numAllowed": 1,
+      "description": {
+        "short": "Ranged (Targeted AoE), Moderate DMG(Lethal/Special), Knockback/Special",
+        "long": "You fire your pistols faster than the human eye can follow, causing your bullet trajectory to arc, dealing moderate Lethal damage and possibly knocking your foes back.  Damage: Moderate, Recharge: Slow  NOTE: Changing your ammo type with the 'Swap Ammo' power will change your secondary damage from lethal to cold, fire or toxic.  Additionally, changing your ammunition type will also change the secondary effect of this attack from Knockback to a minor attack speed and movement speed debuff if 'Cryo Ammo' is loaded, a minor damage over time effect if 'Incendiary Ammo' is loaded, or a -damage effect if 'Chemical Ammo' is loaded."
+      },
+      "setTypes": [
+        3,
+        13,
+        23,
+        33,
+        44
+      ],
+      "level": 8,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 1.848,
+      "slottable": true,
+      "aoeModifier": 3.25
+    },
+    {
+      "effects": [
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 3.12807512,
+                "pvp": 3.12807512
+              },
+              "probability": 1,
+              "effectType": "Damage",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Suppressive_Fire",
+              "damageType": "Lethal"
+            }
+          ]
+        },
+        {
+          "effectType": "Lethal",
+          "values": [
+            {
+              "mag": {
+                "pve": 3.12807512,
+                "pvp": 3.12807512
+              },
+              "probability": 1,
+              "effectType": "Damage",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Suppressive_Fire",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 3,
+                "pvp": 3
+              },
+              "probability": 1,
+              "duration": 9.536,
+              "effectType": "Mez",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "attribType": 1,
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Suppressive_Fire",
+              "mezType": "Stun"
+            }
+          ]
+        },
+        {
+          "effectType": "ColdDamage",
+          "values": [
+            {
+              "mag": {
+                "pve": 3.12807512,
+                "pvp": 3.12807512
+              },
+              "effectType": "Damage",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Suppressive_Fire",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 3,
+                "pvp": 3
+              },
+              "duration": 9.536,
+              "effectType": "Mez",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "attribType": 1,
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Suppressive_Fire",
+              "mezType": "Hold"
+            },
+            {
+              "mag": {
+                "pve": 100
+              },
+              "duration": 10,
+              "effectType": "MezResist",
+              "stacking": 1,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Suppressive_Fire",
+              "mezType": "Knockback"
+            },
+            {
+              "mag": {
+                "pve": 100
+              },
+              "duration": 10,
+              "effectType": "MezResist",
+              "stacking": 1,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Suppressive_Fire",
+              "mezType": "Knockup"
+            },
+            {
+              "mag": {
+                "pve": -100
+              },
+              "duration": 10,
+              "effectType": "Mez",
+              "stacking": 1,
+              "buffable": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Suppressive_Fire",
+              "mezType": "Knockback"
+            },
+            {
+              "mag": {
+                "pve": -100
+              },
+              "duration": 10,
+              "effectType": "Mez",
+              "stacking": 1,
+              "buffable": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Suppressive_Fire",
+              "mezType": "Knockup"
+            }
+          ]
+        },
+        {
+          "effectType": "FireDamage",
+          "values": [
+            {
+              "mag": {
+                "pve": 3.12807512,
+                "pvp": 3.12807512
+              },
+              "effectType": "Damage",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Suppressive_Fire",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 3,
+                "pvp": 3
+              },
+              "duration": 9.536,
+              "effectType": "Mez",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "attribType": 1,
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Suppressive_Fire",
+              "mezType": "Hold"
+            },
+            {
+              "mag": {
+                "pve": 100
+              },
+              "duration": 10,
+              "effectType": "MezResist",
+              "stacking": 1,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Suppressive_Fire",
+              "mezType": "Knockback"
+            },
+            {
+              "mag": {
+                "pve": 100
+              },
+              "duration": 10,
+              "effectType": "MezResist",
+              "stacking": 1,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Suppressive_Fire",
+              "mezType": "Knockup"
+            },
+            {
+              "mag": {
+                "pve": -100
+              },
+              "duration": 10,
+              "effectType": "Mez",
+              "stacking": 1,
+              "buffable": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Suppressive_Fire",
+              "mezType": "Knockback"
+            },
+            {
+              "mag": {
+                "pve": -100
+              },
+              "duration": 10,
+              "effectType": "Mez",
+              "stacking": 1,
+              "buffable": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Suppressive_Fire",
+              "mezType": "Knockup"
+            }
+          ]
+        },
+        {
+          "effectType": "ToxicDamage",
+          "values": [
+            {
+              "mag": {
+                "pve": 3.12807512,
+                "pvp": 3.12807512
+              },
+              "effectType": "Damage",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Suppressive_Fire",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pve": 3,
+                "pvp": 3
+              },
+              "duration": 9.536,
+              "effectType": "Mez",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "attribType": 1,
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Suppressive_Fire",
+              "mezType": "Hold"
+            },
+            {
+              "mag": {
+                "pve": 100
+              },
+              "duration": 10,
+              "effectType": "MezResist",
+              "stacking": 1,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Suppressive_Fire",
+              "mezType": "Knockback"
+            },
+            {
+              "mag": {
+                "pve": 100
+              },
+              "duration": 10,
+              "effectType": "MezResist",
+              "stacking": 1,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Suppressive_Fire",
+              "mezType": "Knockup"
+            },
+            {
+              "mag": {
+                "pve": -100
+              },
+              "duration": 10,
+              "effectType": "Mez",
+              "stacking": 1,
+              "buffable": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Suppressive_Fire",
+              "mezType": "Knockback"
+            },
+            {
+              "mag": {
+                "pve": -100
+              },
+              "duration": 10,
+              "effectType": "Mez",
+              "stacking": 1,
+              "buffable": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Suppressive_Fire",
+              "mezType": "Knockup"
+            }
+          ]
+        },
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.11
+              },
+              "probability": 1,
+              "duration": 9.17,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Suppressive_Fire",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 0.11
+              },
+              "probability": 1,
+              "duration": 9.17,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Suppressive_Fire",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.11
+              },
+              "probability": 1,
+              "duration": 9.17,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Suppressive_Fire",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.11
+              },
+              "probability": 1,
+              "duration": 9.17,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Suppressive_Fire",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 0.11
+              },
+              "probability": 1,
+              "duration": 9.17,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Suppressive_Fire",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.11
+              },
+              "probability": 1,
+              "duration": 9.17,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Suppressive_Fire",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.11
+              },
+              "probability": 1,
+              "duration": 9.17,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Suppressive_Fire",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pve": 0.11
+              },
+              "probability": 1,
+              "duration": 9.17,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Suppressive_Fire",
+              "damageType": "Psionic"
+            }
+          ]
+        }
+      ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Hold",
+        "Range",
+        "Recharge",
+        "Stun"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Ranged.Dual_Pistols.Suppressive_Fire",
+      "archetypeOrder": "primary",
+      "powerIndex": 5,
+      "castTimeReal": 1.67,
+      "toggleCost": 10.192,
+      "fullName": "Blaster_Primary_Dual_Pistols_Suppressive_Fire",
+      "displayName": "Suppressive Fire",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1.1,
+      "accuracyMult": 1.1,
+      "attackTypes": 18,
+      "target": 2048,
+      "targetLoS": true,
+      "range": 60,
+      "endCost": 10.192,
+      "rechargeTime": 20,
+      "baseRechargeTime": 20,
+      "effectArea": 1,
+      "numAllowed": 1,
+      "description": {
+        "short": "Ranged, Minor DMG(Lethal/Special), Foe Disorient/Special",
+        "long": "Suppressive Fire allows the user to quickly stun their target for a short time and deal a very minor amount of Lethal damage. Damage: Minor, Recharge: Moderate  NOTE: Changing your ammo type with the 'Swap Ammo' power will change your secondary damage from lethal to cold, fire or toxic.  Additionally, changing your ammunition type will also change the secondary effect of this attack from Disorient effect to a Hold effect if 'Cryo Ammo', 'Incendiary Ammo' or 'Chemical Ammo' are loaded."
+      },
+      "setTypes": [
+        2,
+        10,
+        11,
+        33,
+        44
+      ],
+      "level": 12,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 1.848,
+      "slottable": true,
+      "aoeModifier": 1
+    },
+    {
+      "effects": [
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 92.84126,
+                "pvp": 106.023605
+              },
+              "probability": 1,
+              "effectType": "Damage",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Executioners_Shot",
+              "damageType": "Lethal"
+            }
+          ]
+        },
+        {
+          "effectType": "Lethal",
+          "values": [
+            {
+              "mag": {
+                "pve": 39.7891121,
+                "pvp": 45.43842
+              },
+              "probability": 1,
+              "effectType": "Damage",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Executioners_Shot",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": -0.0875
+              },
+              "probability": 1,
+              "duration": 8,
+              "effectType": "Defense",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Executioners_Shot"
+            }
+          ]
+        },
+        {
+          "effectType": "LethalKB70",
+          "values": [
+            {
+              "mag": {
+                "pve": 1.6617,
+                "pvp": 1.6617
+              },
+              "probability": 0.7,
+              "effectType": "Mez",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Executioners_Shot",
+              "mezType": "Knockback"
+            }
+          ]
+        },
+        {
+          "effectType": "FireDamage",
+          "values": [
+            {
+              "mag": {
+                "pve": 39.7891121,
+                "pvp": 45.43842
+              },
+              "effectType": "Damage",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Executioners_Shot",
+              "damageType": "Fire"
+            }
+          ]
+        },
+        {
+          "effectType": "FireDamageDoT",
+          "values": [
+            {
+              "mag": {
+                "pve": 10.5728931
+              },
+              "cancelOnMiss": true,
+              "duration": 3.1,
+              "effectType": "Damage",
+              "ticks": 4,
+              "delayedTime": 0.5,
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Executioners_Shot",
+              "damageType": "Fire"
+            }
+          ]
+        },
+        {
+          "effectType": "ColdDamage",
+          "values": [
+            {
+              "mag": {
+                "pve": 39.7891121,
+                "pvp": 45.43842
+              },
+              "effectType": "Damage",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Executioners_Shot",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": -0.15
+              },
+              "duration": 10,
+              "effectType": "SpeedRunning",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Executioners_Shot"
+            },
+            {
+              "mag": {
+                "pve": -0.15
+              },
+              "duration": 10,
+              "effectType": "SpeedFlying",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Executioners_Shot"
+            },
+            {
+              "etModifies": "JumpHeight",
+              "mag": {
+                "pve": -0.15
+              },
+              "duration": 10,
+              "effectType": "Enhancement",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Executioners_Shot"
+            },
+            {
+              "mag": {
+                "pve": -0.15
+              },
+              "duration": 10,
+              "effectType": "SpeedJumping",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Executioners_Shot"
+            },
+            {
+              "etModifies": "RechargeTime",
+              "mag": {
+                "pve": -0.15
+              },
+              "duration": 10,
+              "effectType": "Enhancement",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Executioners_Shot"
+            }
+          ]
+        },
+        {
+          "effectType": "ToxicDamage",
+          "values": [
+            {
+              "mag": {
+                "pve": 39.7891121,
+                "pvp": 45.43842
+              },
+              "effectType": "Damage",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Executioners_Shot",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pve": -0.07
+              },
+              "duration": 8,
+              "effectType": "DamageBuff",
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Executioners_Shot",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": -0.07
+              },
+              "duration": 8,
+              "effectType": "DamageBuff",
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Executioners_Shot",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": -0.07
+              },
+              "duration": 8,
+              "effectType": "DamageBuff",
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Executioners_Shot",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": -0.07
+              },
+              "duration": 8,
+              "effectType": "DamageBuff",
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Executioners_Shot",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": -0.07
+              },
+              "duration": 8,
+              "effectType": "DamageBuff",
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Executioners_Shot",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": -0.07
+              },
+              "duration": 8,
+              "effectType": "DamageBuff",
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Executioners_Shot",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": -0.07
+              },
+              "duration": 8,
+              "effectType": "DamageBuff",
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Executioners_Shot",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pve": -0.07
+              },
+              "duration": 8,
+              "effectType": "DamageBuff",
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Executioners_Shot",
+              "damageType": "Psionic"
+            }
+          ]
+        },
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.11
+              },
+              "probability": 1,
+              "duration": 9.17,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Executioners_Shot",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 0.11
+              },
+              "probability": 1,
+              "duration": 9.17,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Executioners_Shot",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.11
+              },
+              "probability": 1,
+              "duration": 9.17,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Executioners_Shot",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.11
+              },
+              "probability": 1,
+              "duration": 9.17,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Executioners_Shot",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 0.11
+              },
+              "probability": 1,
+              "duration": 9.17,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Executioners_Shot",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.11
+              },
+              "probability": 1,
+              "duration": 9.17,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Executioners_Shot",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.11
+              },
+              "probability": 1,
+              "duration": 9.17,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Executioners_Shot",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pve": 0.11
+              },
+              "probability": 1,
+              "duration": 9.17,
+              "variableModified": true,
+              "effectType": "DamageBuff",
+              "stacking": 1,
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Executioners_Shot",
+              "damageType": "Psionic"
+            }
+          ]
+        }
+      ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Defense_Debuff",
+        "Endurance_Discount",
+        "Knockback",
+        "Range",
+        "Recharge",
+        "Slow"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Ranged.Dual_Pistols.Executioners_Shot",
+      "archetypeOrder": "primary",
+      "powerIndex": 6,
+      "castTimeReal": 1.67,
+      "toggleCost": 10.4,
+      "fullName": "Blaster_Primary_Dual_Pistols_Executioner's_Shot",
+      "displayName": "Executioner's Shot",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1.25,
+      "accuracyMult": 1.25,
+      "attackTypes": 18,
+      "target": 2048,
+      "targetLoS": true,
+      "range": 80,
+      "endCost": 10.4,
+      "rechargeTime": 10,
+      "baseRechargeTime": 10,
+      "effectArea": 1,
+      "numAllowed": 1,
+      "description": {
+        "short": "High DMG(Lethal/Special), Foe -Defense, Knockback/Special",
+        "long": "Executioner's Shot is a deadly ranged attack.  Foes struck by this attack will suffer lethal damage and will likely be knocked back by the impact of this attack.  Targets struck by Executioner's Shot while no special ammunition is equipped will have their defenses reduced for a short time.  Damage: High, Recharge: Slow  NOTE: Changing your ammo type with the 'Swap Ammo' power will change your secondary damage from lethal to cold, fire or toxic.  Additionally, changing your ammunition type will also change the secondary effect of this attack from Knockback to a minor attack speed and movement speed debuff if 'Cryo Ammo' is loaded, a minor damage over time effect if 'Incendiary Ammo' is loaded, or a -damage effect if 'Chemical Ammo' is loaded."
+      },
+      "setTypes": [
+        2,
+        13,
+        21,
+        23,
+        30,
+        33,
+        44
+      ],
+      "level": 18,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 1.848,
+      "slottable": true,
+      "aoeModifier": 1
+    },
+    {
+      "effects": [
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 100.724014,
+                "pvp": 123.398178
+              },
+              "probability": 1,
+              "effectType": "Damage",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Piercing_Rounds",
+              "damageType": "Lethal"
+            }
+          ]
+        },
+        {
+          "effectType": "Lethal",
+          "values": [
+            {
+              "mag": {
+                "pve": -0.13
+              },
+              "probability": 1,
+              "duration": 10,
+              "effectType": "Resistance",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Piercing_Rounds",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": -0.13
+              },
+              "probability": 1,
+              "duration": 10,
+              "effectType": "Resistance",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Piercing_Rounds",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": -0.13
+              },
+              "probability": 1,
+              "duration": 10,
+              "effectType": "Resistance",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Piercing_Rounds",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": -0.13
+              },
+              "probability": 1,
+              "duration": 10,
+              "effectType": "Resistance",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Piercing_Rounds",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": -0.13
+              },
+              "probability": 1,
+              "duration": 10,
+              "effectType": "Resistance",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Piercing_Rounds",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": -0.13
+              },
+              "probability": 1,
+              "duration": 10,
+              "effectType": "Resistance",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Piercing_Rounds",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": -0.13
+              },
+              "probability": 1,
+              "duration": 10,
+              "effectType": "Resistance",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Piercing_Rounds",
+              "damageType": "Psionic"
+            },
+            {
+              "mag": {
+                "pve": 43.1674347,
+                "pvp": 52.8851128
+              },
+              "probability": 1,
+              "effectType": "Damage",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Piercing_Rounds",
+              "damageType": "Lethal"
+            }
+          ]
+        },
+        {
+          "effectType": "FireDamage",
+          "values": [
+            {
+              "mag": {
+                "pve": 43.1674347,
+                "pvp": 52.8851128
+              },
+              "effectType": "Damage",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Piercing_Rounds",
+              "damageType": "Fire"
+            }
+          ]
+        },
+        {
+          "effectType": "FireDamageDoT",
+          "values": [
+            {
+              "mag": {
+                "pve": 10.5728931
+              },
+              "cancelOnMiss": true,
+              "duration": 2.1,
+              "effectType": "Damage",
+              "ticks": 3,
+              "delayedTime": 0.5,
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Piercing_Rounds",
+              "damageType": "Fire"
+            }
+          ]
+        },
+        {
+          "effectType": "ColdDamage",
+          "values": [
+            {
+              "mag": {
+                "pve": 43.1674347,
+                "pvp": 52.8851128
+              },
+              "effectType": "Damage",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Piercing_Rounds",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": -0.15
+              },
+              "duration": 8,
+              "effectType": "SpeedRunning",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Piercing_Rounds"
+            },
+            {
+              "mag": {
+                "pve": -0.15
+              },
+              "duration": 8,
+              "effectType": "SpeedFlying",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Piercing_Rounds"
+            },
+            {
+              "etModifies": "JumpHeight",
+              "mag": {
+                "pve": -0.15
+              },
+              "duration": 8,
+              "effectType": "Enhancement",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Piercing_Rounds"
+            },
+            {
+              "mag": {
+                "pve": -0.15
+              },
+              "duration": 8,
+              "effectType": "SpeedJumping",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Piercing_Rounds"
+            },
+            {
+              "etModifies": "RechargeTime",
+              "mag": {
+                "pve": -0.15
+              },
+              "duration": 8,
+              "effectType": "Enhancement",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Piercing_Rounds"
+            }
+          ]
+        },
+        {
+          "effectType": "ToxicDamage",
+          "values": [
+            {
+              "mag": {
+                "pve": 38.4753227,
+                "pvp": 52.8851128
+              },
+              "effectType": "Damage",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Piercing_Rounds",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pve": -0.07
+              },
+              "duration": 6,
+              "effectType": "DamageBuff",
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Piercing_Rounds",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": -0.07
+              },
+              "duration": 6,
+              "effectType": "DamageBuff",
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Piercing_Rounds",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": -0.07
+              },
+              "duration": 6,
+              "effectType": "DamageBuff",
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Piercing_Rounds",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": -0.07
+              },
+              "duration": 6,
+              "effectType": "DamageBuff",
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Piercing_Rounds",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": -0.07
+              },
+              "duration": 6,
+              "effectType": "DamageBuff",
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Piercing_Rounds",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": -0.07
+              },
+              "duration": 6,
+              "effectType": "DamageBuff",
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Piercing_Rounds",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": -0.07
+              },
+              "duration": 6,
+              "effectType": "DamageBuff",
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Piercing_Rounds",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pve": -0.07
+              },
+              "duration": 6,
+              "effectType": "DamageBuff",
+              "resistible": true,
+              "toWho": "target",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Piercing_Rounds",
+              "damageType": "Psionic"
+            }
+          ]
+        },
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.138
+              },
+              "probability": 1,
+              "duration": 10,
+              "effectType": "DamageBuff",
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Piercing_Rounds",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 0.138
+              },
+              "probability": 1,
+              "duration": 10,
+              "effectType": "DamageBuff",
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Piercing_Rounds",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.138
+              },
+              "probability": 1,
+              "duration": 10,
+              "effectType": "DamageBuff",
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Piercing_Rounds",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.138
+              },
+              "probability": 1,
+              "duration": 10,
+              "effectType": "DamageBuff",
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Piercing_Rounds",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 0.138
+              },
+              "probability": 1,
+              "duration": 10,
+              "effectType": "DamageBuff",
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Piercing_Rounds",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.138
+              },
+              "probability": 1,
+              "duration": 10,
+              "effectType": "DamageBuff",
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Piercing_Rounds",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.138
+              },
+              "probability": 1,
+              "duration": 10,
+              "effectType": "DamageBuff",
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Piercing_Rounds",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pve": 0.138
+              },
+              "probability": 1,
+              "duration": 10,
+              "effectType": "DamageBuff",
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Piercing_Rounds",
+              "damageType": "Psionic"
+            }
+          ]
+        }
+      ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Range",
+        "Recharge",
+        "Slow"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Ranged.Dual_Pistols.Piercing_Rounds",
+      "archetypeOrder": "primary",
+      "powerIndex": 7,
+      "castTimeReal": 2.5,
+      "toggleCost": 14.352,
+      "fullName": "Blaster_Primary_Dual_Pistols_Piercing_Rounds",
+      "displayName": "Piercing Rounds",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1.1,
+      "accuracyMult": 1.1,
+      "attackTypes": 20,
+      "target": 2048,
+      "targetLoS": true,
+      "range": 80,
+      "endCost": 14.352,
+      "rechargeTime": 15,
+      "baseRechargeTime": 15,
+      "effectArea": 3,
+      "radius": 80,
+      "arc": 4,
+      "maxTargets": 3,
+      "numAllowed": 1,
+      "description": {
+        "short": "Narrow Ranged (Cone), Superior DMG(Lethal/Special), Foes -Res(All)/Special",
+        "long": "You fire your pistols with deadly precision in a very narrow cone, piercing up to three enemies.  Piercing Rounds deals Superior lethal damage and reduces targets' Damage Resistance for a short time. Damage: High Recharge: Long  NOTE: Changing your ammo type with the 'Swap Ammo' power will change your secondary damage from lethal to cold, fire or toxic.  Additionally, changing your ammunition type will also change the secondary effect of this attack from a resistance debuff to a minor attack speed and movement speed debuff if 'Cryo Ammo' is loaded, a minor damage over time effect if 'Incendiary Ammo' is loaded, or a -damage effect if 'Chemical Ammo' is loaded."
+      },
+      "setTypes": [
+        3,
+        13,
+        33,
+        44
+      ],
+      "level": 26,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 2.63999987,
+      "slottable": true,
+      "aoeModifier": 2.557239
+    },
+    {
+      "effects": [
+        {
+          "effectType": "Damage",
+          "values": [
+            {
+              "mag": {
+                "pve": 19.8820438,
+                "pvp": 12.1994925
+              },
+              "probability": 0.6,
+              "duration": 3.5,
+              "effectType": "Damage",
+              "ticks": 12,
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "all",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Hail_of_Bullets",
+              "damageType": "Lethal"
+            }
+          ]
+        },
+        {
+          "effectType": "HailofBulletsLethal",
+          "values": [
+            {
+              "mag": {
+                "pve": 8.520876,
+                "pvp": 5.19260454
+              },
+              "probability": 0.6,
+              "duration": 3.5,
+              "effectType": "Damage",
+              "ticks": 12,
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "all",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Hail_of_Bullets",
+              "damageType": "Lethal"
+            }
+          ]
+        },
+        {
+          "effectType": "HailofBulletsKnockdown",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.4,
+                "pvp": 0.4
+              },
+              "probability": 0.1,
+              "duration": 3.5,
+              "effectType": "Mez",
+              "ticks": 12,
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "all",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Hail_of_Bullets",
+              "mezType": "Knockback"
+            }
+          ]
+        },
+        {
+          "effectType": "HailofBulletsEndKnockback",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.4,
+                "pvp": 0.4
+              },
+              "probability": 1,
+              "effectType": "Mez",
+              "delayedTime": 3.5,
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "all",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Hail_of_Bullets",
+              "mezType": "Knockback"
+            }
+          ]
+        },
+        {
+          "effectType": "HailofBulletsFire",
+          "values": [
+            {
+              "mag": {
+                "pve": 8.520876,
+                "pvp": 5.19260454
+              },
+              "duration": 3.5,
+              "effectType": "Damage",
+              "ticks": 12,
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "all",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Hail_of_Bullets",
+              "damageType": "Fire"
+            }
+          ]
+        },
+        {
+          "effectType": "FireDamageDoT",
+          "values": [
+            {
+              "mag": {
+                "pve": 12.5123005
+              },
+              "cancelOnMiss": true,
+              "duration": 4.1,
+              "effectType": "Damage",
+              "ticks": 5,
+              "delayedTime": 0.5,
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "all",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Hail_of_Bullets",
+              "damageType": "Fire"
+            }
+          ]
+        },
+        {
+          "effectType": "HailofBulletsCold",
+          "values": [
+            {
+              "mag": {
+                "pve": 8.520876,
+                "pvp": 5.19260454
+              },
+              "duration": 3.5,
+              "effectType": "Damage",
+              "ticks": 12,
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "all",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Hail_of_Bullets",
+              "damageType": "Cold"
+            }
+          ]
+        },
+        {
+          "effectType": "ColdDamage",
+          "values": [
+            {
+              "mag": {
+                "pve": -0.2
+              },
+              "duration": 10,
+              "effectType": "SpeedRunning",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "all",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Hail_of_Bullets"
+            },
+            {
+              "mag": {
+                "pve": -0.2
+              },
+              "duration": 10,
+              "effectType": "SpeedFlying",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "all",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Hail_of_Bullets"
+            },
+            {
+              "etModifies": "JumpHeight",
+              "mag": {
+                "pve": -0.2
+              },
+              "duration": 10,
+              "effectType": "Enhancement",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "all",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Hail_of_Bullets"
+            },
+            {
+              "mag": {
+                "pve": -0.2
+              },
+              "duration": 10,
+              "effectType": "SpeedJumping",
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "all",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Hail_of_Bullets"
+            },
+            {
+              "etModifies": "RechargeTime",
+              "mag": {
+                "pve": -0.2
+              },
+              "duration": 10,
+              "effectType": "Enhancement",
+              "stacking": 1,
+              "resistible": true,
+              "toWho": "all",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Hail_of_Bullets"
+            }
+          ]
+        },
+        {
+          "effectType": "HailofBulletsToxic",
+          "values": [
+            {
+              "mag": {
+                "pve": 8.520876,
+                "pvp": 5.19260454
+              },
+              "duration": 3.5,
+              "effectType": "Damage",
+              "ticks": 12,
+              "stacking": 1,
+              "buffable": true,
+              "resistible": true,
+              "toWho": "all",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Hail_of_Bullets",
+              "damageType": "Toxic"
+            }
+          ]
+        },
+        {
+          "effectType": "ToxicDamage",
+          "values": [
+            {
+              "mag": {
+                "pve": -0.14
+              },
+              "duration": 8,
+              "effectType": "DamageBuff",
+              "resistible": true,
+              "toWho": "all",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Hail_of_Bullets",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": -0.14
+              },
+              "duration": 8,
+              "effectType": "DamageBuff",
+              "resistible": true,
+              "toWho": "all",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Hail_of_Bullets",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": -0.14
+              },
+              "duration": 8,
+              "effectType": "DamageBuff",
+              "resistible": true,
+              "toWho": "all",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Hail_of_Bullets",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": -0.14
+              },
+              "duration": 8,
+              "effectType": "DamageBuff",
+              "resistible": true,
+              "toWho": "all",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Hail_of_Bullets",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": -0.14
+              },
+              "duration": 8,
+              "effectType": "DamageBuff",
+              "resistible": true,
+              "toWho": "all",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Hail_of_Bullets",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": -0.14
+              },
+              "duration": 8,
+              "effectType": "DamageBuff",
+              "resistible": true,
+              "toWho": "all",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Hail_of_Bullets",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": -0.14
+              },
+              "duration": 8,
+              "effectType": "DamageBuff",
+              "resistible": true,
+              "toWho": "all",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Hail_of_Bullets",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pve": -0.14
+              },
+              "duration": 8,
+              "effectType": "DamageBuff",
+              "resistible": true,
+              "toWho": "all",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Hail_of_Bullets",
+              "damageType": "Psionic"
+            }
+          ]
+        },
+        {
+          "effectType": "Buff_Def",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.0975
+              },
+              "probability": 1,
+              "duration": 5,
+              "effectType": "Defense",
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Hail_of_Bullets",
+              "damageType": "Melee"
+            },
+            {
+              "mag": {
+                "pve": 0.0975
+              },
+              "probability": 1,
+              "duration": 5,
+              "effectType": "Defense",
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Hail_of_Bullets",
+              "damageType": "Ranged"
+            },
+            {
+              "mag": {
+                "pve": 0.0975
+              },
+              "probability": 1,
+              "duration": 5,
+              "effectType": "Defense",
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Hail_of_Bullets",
+              "damageType": "AoE"
+            }
+          ]
+        },
+        {
+          "effectType": "Ones",
+          "values": [
+            {
+              "mag": {
+                "pve": 0.058
+              },
+              "probability": 1,
+              "duration": 7.5,
+              "effectType": "DamageBuff",
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Hail_of_Bullets",
+              "damageType": "Smashing"
+            },
+            {
+              "mag": {
+                "pve": 0.058
+              },
+              "probability": 1,
+              "duration": 7.5,
+              "effectType": "DamageBuff",
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Hail_of_Bullets",
+              "damageType": "Lethal"
+            },
+            {
+              "mag": {
+                "pve": 0.058
+              },
+              "probability": 1,
+              "duration": 7.5,
+              "effectType": "DamageBuff",
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Hail_of_Bullets",
+              "damageType": "Fire"
+            },
+            {
+              "mag": {
+                "pve": 0.058
+              },
+              "probability": 1,
+              "duration": 7.5,
+              "effectType": "DamageBuff",
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Hail_of_Bullets",
+              "damageType": "Cold"
+            },
+            {
+              "mag": {
+                "pve": 0.058
+              },
+              "probability": 1,
+              "duration": 7.5,
+              "effectType": "DamageBuff",
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Hail_of_Bullets",
+              "damageType": "Energy"
+            },
+            {
+              "mag": {
+                "pve": 0.058
+              },
+              "probability": 1,
+              "duration": 7.5,
+              "effectType": "DamageBuff",
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Hail_of_Bullets",
+              "damageType": "Negative"
+            },
+            {
+              "mag": {
+                "pve": 0.058
+              },
+              "probability": 1,
+              "duration": 7.5,
+              "effectType": "DamageBuff",
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Hail_of_Bullets",
+              "damageType": "Toxic"
+            },
+            {
+              "mag": {
+                "pve": 0.058
+              },
+              "probability": 1,
+              "duration": 7.5,
+              "effectType": "DamageBuff",
+              "specialCase": 11,
+              "toWho": "self",
+              "powerFullName": "Blaster_Ranged.Dual_Pistols.Hail_of_Bullets",
+              "damageType": "Psionic"
+            }
+          ]
+        }
+      ],
+      "allowedEnhancements": [
+        "Accuracy",
+        "Damage",
+        "Endurance_Discount",
+        "Knockback",
+        "Recharge",
+        "Slow"
+      ],
+      "enhancementCount": 6,
+      "ogFullName": "Blaster_Ranged.Dual_Pistols.Hail_of_Bullets",
+      "archetypeOrder": "primary",
+      "powerIndex": 8,
+      "toggleCost": 20.8,
+      "fullName": "Blaster_Primary_Dual_Pistols_Hail_of_Bullets",
+      "displayName": "Hail of Bullets",
+      "requires": {
+        "powers": {},
+        "count": 0
+      },
+      "accuracy": 1.4,
+      "accuracyMult": 1.4,
+      "attackTypes": 20,
+      "target": 1,
+      "targetLoS": true,
+      "endCost": 20.8,
+      "rechargeTime": 105,
+      "baseRechargeTime": 105,
+      "effectArea": 2,
+      "radius": 25,
+      "maxTargets": 16,
+      "numAllowed": 1,
+      "description": {
+        "short": "PBAoE, Superior DMG(Lethal/Special), Self +Def(Melee, Ranged, AoE), Foe Knockdown/Special",
+        "long": "You fire a hail of bullets at all enemies around you dealing Extreme lethal damage.  Enemies that are struck have a chance to be knocked down.  Having Standard Rounds will dramatically increase this chance to knockdown your foes.  If you hit at least one target you will gain a moderate melee, ranged and AoE Defense bonus for a brief period.  Damage: Extreme, Recharge: Very Long  NOTE: Changing your ammo type with the 'Swap Ammo' power will change your secondary damage from lethal to cold, fire or toxic.  Additionally, changing your ammunition type will also change the secondary effect of this attack from a guaranteed knockdown effect to a minor attack speed and movement speed debuff if 'Cryo Ammo' is loaded, a minor damage over time effect if 'Incendiary Ammo' is loaded, or a -damage effect if 'Chemical Ammo' is loaded."
+      },
+      "setTypes": [
+        4,
+        13,
+        23,
+        33,
+        44
+      ],
+      "clickBuff": true,
+      "level": 32,
+      "ignoreEnh": [],
+      "ignore_Buff": [],
+      "castTime": 0.132,
+      "slottable": true,
+      "aoeModifier": 4.75
+    }
+  ]
+}

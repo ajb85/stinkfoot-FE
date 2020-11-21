@@ -1,0 +1,86 @@
+{
+  "fullName": "IOSet.Rectified_Reticle",
+  "enhancements": [
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Rectified_Reticle_A.Attuned_Rectified_Reticle_A",
+      "displayName": "To Hit Buff",
+      "description": {
+        "short": "+To Hit Buff",
+        "long": "Enhances the to hit buff potential of a power by {Boost.Attrib.ToHitBuff.Scale}%."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.255
+            }
+          },
+          "stat": "ToHit_Buff",
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Rectified_Reticle_B.Attuned_Rectified_Reticle_B",
+      "displayName": "To Hit Buff/Recharge",
+      "description": {
+        "short": "+To Hit Buff, +Rech",
+        "long": "Enhances the to hit buff potential of a power by {Boost.Attrib.ToHitBuff.Scale}% and reduces the recharge time by {Boost.Attrib.Recharge.Scale}%."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.159375
+            }
+          },
+          "stat": "ToHit_Buff",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Recharge",
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Rectified_Reticle_C.Attuned_Rectified_Reticle_C",
+      "displayName": "Increased Perception",
+      "description": {
+        "short": "+Perception",
+        "long": "UNIQUE -- No more than 1 enhancement of this type may be slotted by a character.  Adds {Boost.Attrib.Perception.Scale}%  to your perception radius."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.2
+            }
+          },
+          "stat": "Increased Perception",
+          "cancelOnMiss": true,
+          "toWho": "self"
+        }
+      ]
+    }
+  ],
+  "levels": {
+    "min": 10,
+    "max": 20
+  },
+  "setType": 25,
+  "setTypeName": "To Hit Buff",
+  "displayName": "Rectified Reticle",
+  "imageName": "sRectifiedReticle.png"
+}

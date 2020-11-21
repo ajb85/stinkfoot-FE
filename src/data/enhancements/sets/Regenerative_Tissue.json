@@ -1,0 +1,161 @@
+{
+  "fullName": "IOSet.Regenerative_Tissue",
+  "enhancements": [
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Regenerative_Tissue_A.Attuned_Regenerative_Tissue_A",
+      "displayName": "Healing/Absorb/Endurance",
+      "description": {
+        "short": "+Heal, -End Cost, +Absorb",
+        "long": "Enhances the healing potential and damage absorption of a power by {Boost.Attrib.Heal.Scale}% and reduces endurance cost by {Boost.Attrib.Endurance.Scale}%"
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Regenerative_Tissue_B.Attuned_Regenerative_Tissue_B",
+      "displayName": "Endurance/Recharge",
+      "description": {
+        "short": "-End Cost, +Rech",
+        "long": "Reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}% and recharge time by {Boost.Attrib.Recharge.Scale}%"
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Recharge",
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Regenerative_Tissue_C.Attuned_Regenerative_Tissue_C",
+      "displayName": "Healing/Absorb/Recharge",
+      "description": {
+        "short": "+Heal, +Rech, +Absorb",
+        "long": "Enhances the healing potential and damage absorption of a power by {Boost.Attrib.Heal.Scale}% and reduces recharge time by  {Boost.Attrib.Recharge.Scale}%"
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Recharge",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Regenerative_Tissue_D.Attuned_Regenerative_Tissue_D",
+      "displayName": "Healing/Absorb/Endurance/Recharge",
+      "description": {
+        "short": "+Heal, -End Cost, +Rech, +Absorb",
+        "long": "Enhances the healing potential and damage absorption of a power by {Boost.Attrib.Heal.Scale}%, reduces the endurance cost of a power by {Boost.Attrib.Endurance.Scale}% and recharge time by  {Boost.Attrib.Recharge.Scale}%"
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.212
+            }
+          },
+          "stat": "Endurance_Discount",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.212
+            }
+          },
+          "stat": "Recharge",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.212
+            }
+          },
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Regenerative_Tissue_E.Attuned_Regenerative_Tissue_E",
+      "displayName": "Regeneration",
+      "description": {
+        "short": "+Regeneration",
+        "long": "UNIQUE -- No more than 1 enhancement of this type may be slotted by a character.  Adds a {Boost.Attrib.Heal.Scale}% bonus to regeneration rate for 120 seconds."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.25
+            }
+          },
+          "stat": "Regeneration",
+          "cancelOnMiss": true,
+          "toWho": "self"
+        }
+      ]
+    }
+  ],
+  "levels": {
+    "min": 10,
+    "max": 30
+  },
+  "setType": 9,
+  "setTypeName": "Healing",
+  "displayName": "Regenerative Tissue",
+  "imageName": "sRegenerativeTissue.png"
+}

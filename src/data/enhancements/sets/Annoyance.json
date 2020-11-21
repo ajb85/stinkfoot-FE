@@ -1,0 +1,94 @@
+{
+  "fullName": "IOSet.Annoyance",
+  "enhancements": [
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Annoyance_A.Attuned_Annoyance_A",
+      "displayName": "Taunt",
+      "description": {
+        "short": "+Taunt",
+        "long": "Enhances the taunt duration of a power by {Boost.Attrib.Taunt.Scale}%."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.424
+            }
+          },
+          "mezType": 11,
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Annoyance_B.Attuned_Annoyance_B",
+      "displayName": "Taunt/Recharge",
+      "description": {
+        "short": "+Taunt, +Rech",
+        "long": "Enhances the taunt duration of a power by {Boost.Attrib.Taunt.Scale}% and reduces the recharge time of a power by {Boost.Attrib.Recharge.Scale}%."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "stat": "Recharge",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.265
+            }
+          },
+          "mezType": 11,
+          "toWho": "self"
+        }
+      ]
+    },
+    {
+      "type": "set",
+      "fullName": "Boosts.Attuned_Annoyance_C.Attuned_Annoyance_C",
+      "displayName": "Taunt/Recharge/Range",
+      "description": {
+        "short": "+Taunt, +Rech, +Range",
+        "long": "Enhances the taunt duration of a power by {Boost.Attrib.Taunt.Scale}%, the range by {Boost.Attrib.Range.Scale}% and reduces the recharge time by {Boost.Attrib.Recharge.Scale}%."
+      },
+      "boostUsePlayerLevel": true,
+      "effects": [
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.212
+            }
+          },
+          "stat": "Recharge",
+          "toWho": "self"
+        },
+        {
+          "mag": {
+            "IO": {
+              "cap": 0.212
+            }
+          },
+          "mezType": 11,
+          "toWho": "self"
+        }
+      ]
+    }
+  ],
+  "levels": {
+    "min": 10,
+    "max": 20
+  },
+  "setType": 24,
+  "setTypeName": "Taunt",
+  "displayName": "Annoyance",
+  "imageName": "sAnnoyance.png"
+}
