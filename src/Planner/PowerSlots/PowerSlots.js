@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-import { usePlannerState } from "Providers/PlannerStateManagement.js";
+import usePlannerState from "Providers/PlannerStateManagement.js";
 import useEnhNavigation from "Providers/EnhancementNavigation.js";
 
 import { reducer, mapSelected, getInitialAcc } from "./logic.js";

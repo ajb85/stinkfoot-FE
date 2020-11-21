@@ -1,23 +1,23 @@
-import React from 'react';
+import React from "react";
 
-import Powerset from './Powerset.js';
-import PoolPowers from './PoolPowers.js';
+import Powerset from "./Powerset.js";
+import PoolPowers from "./PoolPowers.js";
 
-import { usePlannerState } from 'Providers/PlannerStateManagement.js';
+import usePlannerState from "Providers/PlannerStateManagement.js";
 
-import styles from './styles.module.scss';
+import styles from "./styles.module.scss";
 
 function Powersets(props) {
   const stateManager = usePlannerState();
   return (
     <section className={styles.Powersets}>
       <div className={styles.powersetContainer}>
-        <h2>{stateManager.getFromState('archetype')} Powersets</h2>
+        <h2>{stateManager.getFromState("archetype")} Powersets</h2>
         <div>
           <Powerset
             header="Primary"
             dropdown={{
-              name: 'primaryIndex',
+              name: "primaryIndex",
               list: stateManager.primaries,
             }}
             powerList={stateManager.activePrimary.powers}
@@ -26,7 +26,7 @@ function Powersets(props) {
           <Powerset
             header="Secondary"
             dropdown={{
-              name: 'secondaryIndex',
+              name: "secondaryIndex",
               list: stateManager.secondaries,
             }}
             powerList={stateManager.activeSecondary.powers}
@@ -35,7 +35,7 @@ function Powersets(props) {
           <Powerset
             header="Epic Pool"
             dropdown={{
-              name: 'epicPoolIndex',
+              name: "epicPoolIndex",
               list: stateManager.epicPools,
             }}
             powerList={stateManager.activeEpicPool.powers}

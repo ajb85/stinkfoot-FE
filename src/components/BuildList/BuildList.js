@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect } from "react";
 
-import { BuildContext } from "Providers/Builds.js";
+import useBuild from "Providers/Builds.js";
 import FilterOptions from "./FilterOptions.js";
 
 import categoryName from "js/categories.js";
@@ -16,9 +16,7 @@ function ListBuild(props) {
     search: "",
   });
 
-  const { build, toggleEnhancement, toggleSet, decrementCount } = useContext(
-    BuildContext
-  );
+  const { build, toggleEnhancement, toggleSet, decrementCount } = useBuild();
 
   const toggleTag = (tag) => {
     if (filters.tags[tag]) {

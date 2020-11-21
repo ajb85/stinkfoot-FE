@@ -1,12 +1,12 @@
-import React, { useState, createContext, useEffect, useContext } from 'react';
-import stateMgmt from 'js/plannerStateManager.js';
+import React, { useState, createContext, useEffect, useContext } from "react";
+import stateMgmt from "js/plannerStateManager.js";
 
-import styles from 'Planner/PowerSlots/styles.module.scss';
+import styles from "Planner/PowerSlots/styles.module.scss";
 
 const plannerContext = createContext();
 
 let prevInstanceFunction;
-function PlannerProvider(props) {
+export function PlannerProvider(props) {
   const [state, setState] = useState(stateMgmt.initialState());
   const stateManager = new stateMgmt(state, setState);
 
@@ -25,23 +25,21 @@ function PlannerProvider(props) {
     };
 
     if (prevInstanceFunction) {
-      window.removeEventListener('click', prevInstanceFunction);
+      window.removeEventListener("click", prevInstanceFunction);
     }
 
     prevInstanceFunction = clearActivePills;
-    window.addEventListener('click', clearActivePills);
-    return window.removeEventListener.bind(this, 'click', clearActivePills);
+    window.addEventListener("click", clearActivePills);
+    return window.removeEventListener.bind(this, "click", clearActivePills);
   }, [state]);
 
   const { Provider } = plannerContext;
   return <Provider value={stateManager}>{props.children}</Provider>;
 }
 
-export function usePlannerState() {
+export default function usePlannerState() {
   return useContext(plannerContext);
 }
-
-export default PlannerProvider;
 
 function findPowerContainerNode(node) {
   const classNamesWhiteList = {

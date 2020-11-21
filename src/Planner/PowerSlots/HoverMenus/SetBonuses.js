@@ -1,6 +1,6 @@
 import React from "react";
 
-import { usePlannerState } from "Providers/PlannerStateManagement.js";
+import usePlannerState from "Providers/PlannerStateManagement.js";
 import useEnhNavigation from "Providers/EnhancementNavigation.js";
 
 import styles from "../styles.module.scss";

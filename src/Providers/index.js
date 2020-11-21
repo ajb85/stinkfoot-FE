@@ -1,11 +1,11 @@
-import React from 'react';
-import Builds from './Builds.js';
-import DB from './Database.js';
+import React from "react";
+import { BuildProvider } from "./Builds.js";
+import { DatabaseProvider } from "./Database.js";
 
 export default function Providers(props) {
   return (
-    <Builds>
-      <DB>{props.children}</DB>
-    </Builds>
+    <BuildProvider>
+      <DatabaseProvider>{props.children}</DatabaseProvider>
+    </BuildProvider>
   );
 }
