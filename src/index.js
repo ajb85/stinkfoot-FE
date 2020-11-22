@@ -13,6 +13,7 @@ import history from "history.js";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "shards-ui/dist/css/shards.min.css";
 import "./styles/index.scss";
+import styles from "styles.module.scss";
 
 import NavBar from "Home/NavBar/";
 import AddCharacter from "Home/AddCharacter/";
@@ -26,13 +27,15 @@ function App() {
     <React.StrictMode>
       <Router history={history}>
         <UniversalProviders>
-          <div onClick={closeMenu}>
+          <div onClick={closeMenu} className={styles.appContainer}>
             <AddCharacter
               open={modalOpen}
               toggle={setModalOpen.bind(this, !modalOpen)}
             />
             <NavBar openNewCharacterModal={setModalOpen.bind(this, true)} />
-            <Routes />
+            <div className={styles.routeContainer}>
+              <Routes />
+            </div>
           </div>
         </UniversalProviders>
       </Router>

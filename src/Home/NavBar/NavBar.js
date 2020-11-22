@@ -4,9 +4,6 @@ import {
   Navbar,
   Button,
   Tooltip,
-  Nav,
-  NavItem,
-  NavLink,
   Dropdown,
   DropdownToggle,
   DropdownMenu,
@@ -24,9 +21,8 @@ import logo from "assets/stinkfoot_logo.png";
 import styles from "./styles.module.scss";
 
 export default function NavBar(props) {
-  // const history = useHistory();
   const [dropdown, setDropdown] = useState(false);
-  const { activeCharacter } = useCharacters();
+  const { activeCharacter, characterList, updateActive } = useCharacters();
 
   return (
     <section className={styles.NavBar}>
@@ -34,19 +30,29 @@ export default function NavBar(props) {
         <Logo />
         <div>
           <Dropdown
-            direction="bottom"
+            direction="left"
             open={dropdown}
             toggle={setDropdown.bind(this, !dropdown)}
           >
             <DropdownToggle theme="success">
-              {activeCharacter && activeCharacter.name
-                ? activeCharacter.name
-                : "+New Character"}
+              {activeCharacter && activeCharacter.name ? (
+                activeCharacter.name
+              ) : (
+                <MdSupervisorAccount />
+              )}
             </DropdownToggle>
             <DropdownMenu>
               <DropdownItem onClick={props.openNewCharacterModal}>
                 +New Character
               </DropdownItem>
+              {characterList.map((name) => (
+                <DropdownItem
+                  key={name}
+                  onClick={updateActive.bind(this, name)}
+                >
+                  {name}
+                </DropdownItem>
+              ))}
             </DropdownMenu>
           </Dropdown>
           <NavButton
@@ -76,13 +82,13 @@ export default function NavBar(props) {
   );
 }
 
-function returnHome() {
-  history.push("/");
+function navTo(route = "/") {
+  history.push(route);
 }
 
 function Logo() {
   return (
-    <div className={styles.logo} onClick={returnHome}>
+    <div className={styles.logo} onClick={navTo}>
       <img src={logo} alt="Stinkfoot Logo" />
       <h1>Stinkfoot</h1>
     </div>
@@ -97,7 +103,7 @@ function NavButton(props) {
   return (
     <>
       <Button
-        // onClick={props.updateHistory.bind(this, "/" + props.id)}
+        onClick={navTo.bind(this, "/" + props.id)}
         id={props.id}
         pill
         outline={activeRoute !== props.id}

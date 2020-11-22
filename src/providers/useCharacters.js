@@ -62,12 +62,14 @@ export function BuildProvider(props) {
   }, [characters, active]);
 
   const { Provider } = BuildContext;
-  const charCount = Object.keys(characters).length;
+  const characterList = Object.keys(characters);
   return (
     <Provider
       value={{
         characters,
-        activeCharacter: charCount > 0 && active ? characters[active] : null,
+        activeCharacter:
+          characterList.length > 0 && active ? characters[active] : null,
+        characterList,
         updateCharacters,
         updateActive,
         updateActiveCharacter,
