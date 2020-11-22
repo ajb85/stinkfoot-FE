@@ -102,7 +102,7 @@ export default function ShoppingList({ list, lookup }) {
       a.name === b.name ? 0 : a.name > b.name ? 1 : -1
     );
 
-    setFilters({ ...filters, options });
+    setFilters({ ...filters, tags: { length: 0 }, options });
     // eslint-disable-next-line
   }, [list]);
 
