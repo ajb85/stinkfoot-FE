@@ -26,7 +26,7 @@ function App() {
     <React.StrictMode>
       <Router history={history}>
         <UniversalProviders>
-          <div onClick={closeMenu} style={{ display: "flex" }}>
+          <div onClick={closeMenu}>
             <AddCharacter
               open={modalOpen}
               toggle={setModalOpen.bind(this, !modalOpen)}

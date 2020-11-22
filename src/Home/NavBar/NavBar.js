@@ -1,8 +1,12 @@
 import React, { useState } from "react";
-import { useHistory } from "react-router-dom";
+import history from "history.js";
 import {
+  Navbar,
   Button,
   Tooltip,
+  Nav,
+  NavItem,
+  NavLink,
   Dropdown,
   DropdownToggle,
   DropdownMenu,
@@ -16,66 +20,72 @@ import { MdSupervisorAccount } from "react-icons/md";
 
 import useCharacters from "providers/useCharacters.js";
 
-import logo from "assets/logo.svg";
+import logo from "assets/stinkfoot_logo.png";
 import styles from "./styles.module.scss";
 
 export default function NavBar(props) {
-  const [refreshToggle, setRefreshToggle] = useState(false);
-  const [hidden, setHidden] = useState(false);
+  // const history = useHistory();
   const [dropdown, setDropdown] = useState(false);
-  const history = useHistory();
   const { activeCharacter } = useCharacters();
 
-  const toggleHidden = () => setHidden(!hidden);
-  const updateHistory = (route) => {
-    history.push(route);
-    setRefreshToggle(!refreshToggle);
-  };
-
-  const hiddenClass = hidden ? " " + styles.hidden : "";
-
   return (
-    <section className={styles.NavBar + hiddenClass}>
-      <img src={logo} alt="Stinkfoot Logo" onClick={toggleHidden} />
-      <Dropdown
-        direction="left"
-        open={dropdown}
-        toggle={setDropdown.bind(this, !dropdown)}
-      >
-        <DropdownToggle theme="success">
-          <MdSupervisorAccount />
-        </DropdownToggle>
-        <DropdownMenu>
-          <DropdownItem onClick={props.openNewCharacterModal}>
-            +New Character
-          </DropdownItem>
-        </DropdownMenu>
-      </Dropdown>
-      <NavButton
-        id="planner"
-        title="Character Planner"
-        updateHistory={updateHistory}
-        disabled={!activeCharacter}
-      >
-        <IoMdConstruct />
-      </NavButton>
-      <NavButton
-        id="badger"
-        title="Badge Tracker"
-        updateHistory={updateHistory}
-        disabled={!activeCharacter}
-      >
-        <GiPoliceBadge />
-      </NavButton>
-      <NavButton
-        id="shopper"
-        title="Shopping Cart"
-        updateHistory={updateHistory}
-        disabled={!activeCharacter}
-      >
-        <FaShoppingCart />
-      </NavButton>
+    <section className={styles.NavBar}>
+      <Navbar>
+        <Logo />
+        <div>
+          <Dropdown
+            direction="bottom"
+            open={dropdown}
+            toggle={setDropdown.bind(this, !dropdown)}
+          >
+            <DropdownToggle theme="success">
+              {activeCharacter && activeCharacter.name
+                ? activeCharacter.name
+                : "+New Character"}
+            </DropdownToggle>
+            <DropdownMenu>
+              <DropdownItem onClick={props.openNewCharacterModal}>
+                +New Character
+              </DropdownItem>
+            </DropdownMenu>
+          </Dropdown>
+          <NavButton
+            id="planner"
+            title="Character Planner"
+            disabled={!activeCharacter}
+          >
+            <IoMdConstruct />
+          </NavButton>
+          <NavButton
+            id="badger"
+            title="Badge Tracker"
+            disabled={!activeCharacter}
+          >
+            <GiPoliceBadge />
+          </NavButton>
+          <NavButton
+            id="shopper"
+            title="Shopping Cart"
+            disabled={!activeCharacter}
+          >
+            <FaShoppingCart />
+          </NavButton>
+        </div>
+      </Navbar>
     </section>
+  );
+}
+
+function returnHome() {
+  history.push("/");
+}
+
+function Logo() {
+  return (
+    <div className={styles.logo} onClick={returnHome}>
+      <img src={logo} alt="Stinkfoot Logo" />
+      <h1>Stinkfoot</h1>
+    </div>
   );
 }
 
@@ -87,7 +97,7 @@ function NavButton(props) {
   return (
     <>
       <Button
-        onClick={props.updateHistory.bind(this, "/" + props.id)}
+        // onClick={props.updateHistory.bind(this, "/" + props.id)}
         id={props.id}
         pill
         outline={activeRoute !== props.id}

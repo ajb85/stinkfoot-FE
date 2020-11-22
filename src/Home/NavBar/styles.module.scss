@@ -1,38 +1,54 @@
 @import "styles/variables.scss";
 
 .NavBar {
-  position: fixed;
-  top: $lh/2;
-  right: 0;
+  background-color: $secondary;
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    padding: 0 5px;
+    max-width: $maxWidth;
+
+    & > div {
+      // Button group
+
+      display: flex;
+      & > button,
+      & > div > button {
+        transition: width 0.25s, height 0.25s;
+        padding: $lh/2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 5px;
+      }
+
+      & > button {
+        width: 35px;
+        height: 35px;
+      }
+    }
+  }
+}
+
+.logo {
   display: flex;
   align-items: center;
-
-  height: 50px;
-  padding: $lh/2 5px;
-
-  background-color: $secondary;
-  border-radius: 10px 0 0 10px;
-  transition: right 0.25s;
-
-  &.hidden {
-    right: -180px;
-  }
+  cursor: pointer;
 
   img {
-    // logo
-    cursor: pointer;
     width: 40px;
     height: 40px;
     margin: 0 auto;
+    color: $main;
+    margin-right: 5px;
   }
 
-  & > button,
-  & > div > button {
-    transition: width 0.25s, height 0.25s;
-    padding: $lh/2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 5px;
+  h1 {
+    font-family: $logoFont;
+    font-size: 2rem;
+    color: $main;
   }
 }
