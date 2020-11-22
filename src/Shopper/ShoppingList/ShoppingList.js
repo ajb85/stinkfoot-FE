@@ -62,24 +62,26 @@ export default function ShoppingList({ list, lookup }) {
 
   const enhancementList = list.reduce((acc, setData) => {
     const { categoryName, enhancements } = setData;
-    if (!filters.tags.length) {
-      // If there are no tags, then just check my search term
-      doesSetMatchKeyword(filters.search, categoryName, enhancements) &&
-        acc.push(mapper(setData));
-      return acc;
-    }
+    let matches = !filters.tags.length;
 
-    for (let e in enhancements) {
-      const stats = e.split("/");
-      for (let i = 0; i < stats.length; i++) {
-        const s = stats[i];
-        const tagCategory = tagCategories[s.toLowerCase()];
-        if (tagCategory && filters.tags[tagCategory.name]) {
-          doesSetMatchKeyword(filters.search, categoryName, enhancements) &&
-            acc.push(mapper(setData));
-          return acc;
+    if (!matches) {
+      // Only check for tags if there are tags selected
+      for (let i = 0; i < enhancements.length; i++) {
+        const stats = enhancements[i].name.split("/");
+        for (let i = 0; i < stats.length; i++) {
+          const s = stats[i];
+          const tagCategory = tagCategories[s.toLowerCase()];
+          if (tagCategory && filters.tags[tagCategory.name]) {
+            matches = true;
+            break;
+          }
         }
       }
+    }
+
+    if (matches) {
+      doesSetMatchKeyword(filters.search, categoryName, enhancements) &&
+        acc.push(mapper(setData));
     }
 
     return acc;
