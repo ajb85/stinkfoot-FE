@@ -5,18 +5,15 @@ import useBadges from "providers/useBadges.js";
 import styles from "./styles.module.scss";
 
 function BadgeList({ section, filters }) {
-  const { badges, character } = useBadges();
+  const { badges, toggleComplete } = useBadges();
 
-  if (!Object.keys(badges.characters).length || !badges.active) {
+  if (!Object.keys(badges).length) {
     return <div />;
   }
 
-  const badgeList = badges.characters[badges.active][section].filter(
-    filterSearch(filters)
-  );
-
+  console.log("BADGES: ", badges, section);
+  const badgeList = badges[section].filter(filterSearch(filters));
   const { bonusNotes, location, zone } = badgeList[0] || {};
-
   return (
     <div className={styles.BadgeList}>
       <div className={styles.table}>
@@ -53,7 +50,7 @@ function BadgeList({ section, filters }) {
               : "Oh dang, you completed this section.  May I suggest conquering going outside next?"}
           </p>
         )}
-        {badgeList.map(mapBadges(character.toggleBadge))}
+        {badgeList.map(mapBadges(toggleComplete))}
       </div>
     </div>
   );

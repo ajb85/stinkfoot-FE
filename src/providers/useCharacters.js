@@ -3,6 +3,7 @@ import React, { useState, createContext, useContext, useEffect } from "react";
 import origins from "data/origins.js";
 import archetypes from "data/archetypes.js";
 import powerSlotsTemplate from "data/powerSlotsTemplate.js";
+import badgeData from "Badger/data/";
 
 const BuildContext = createContext();
 
@@ -22,7 +23,6 @@ export function BuildProvider(props) {
   const [characters, setCharacters] = useState(parsed || {});
   const [active, setActive] = useState(activeCharName || "");
 
-  console.log("ACTIVE: ", active, characters, characters[active]);
   const updateCharacters = (updated) => {
     localStorage.setItem("characters", JSON.stringify(updated));
     setCharacters(updated);
@@ -53,7 +53,6 @@ export function BuildProvider(props) {
 
   useEffect(() => {
     if (!active) {
-      console.log("SETTING ACTIVE CHAR NAME");
       const charNames = Object.keys(characters);
       if (charNames.length) {
         updateActive(charNames[0]);
@@ -62,12 +61,14 @@ export function BuildProvider(props) {
   }, [characters, active]);
 
   const { Provider } = BuildContext;
-  const charCount = Object.keys(characters).length;
+  const characterList = Object.keys(characters);
   return (
     <Provider
       value={{
         characters,
-        activeCharacter: charCount > 0 && active ? characters[active] : null,
+        activeCharacter:
+          characterList.length > 0 && active ? characters[active] : null,
+        characterList,
         updateCharacters,
         updateActive,
         updateActiveCharacter,
@@ -90,6 +91,6 @@ function getNewCharacter(name) {
     origin: origins[0].name,
     powerSlots: powerSlotsTemplate,
     poolPowers: [],
-    badges: {},
+    badges: badgeData,
   };
 }

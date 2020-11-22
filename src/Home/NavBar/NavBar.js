@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import { useHistory } from "react-router-dom";
+import history from "history.js";
 import {
+  Navbar,
   Button,
   Tooltip,
   Dropdown,
@@ -16,66 +17,93 @@ import { MdSupervisorAccount } from "react-icons/md";
 
 import useCharacters from "providers/useCharacters.js";
 
-import logo from "assets/logo.svg";
+import logo from "assets/stinkfoot_logo.png";
 import styles from "./styles.module.scss";
 
 export default function NavBar(props) {
-  const [refreshToggle, setRefreshToggle] = useState(false);
-  const [hidden, setHidden] = useState(false);
+  const [triggerRefresh, setTriggerRefresh] = useState(false);
   const [dropdown, setDropdown] = useState(false);
-  const history = useHistory();
-  const { activeCharacter } = useCharacters();
+  const { activeCharacter, characterList, updateActive } = useCharacters();
 
-  const toggleHidden = () => setHidden(!hidden);
-  const updateHistory = (route) => {
-    history.push(route);
-    setRefreshToggle(!refreshToggle);
-  };
-
-  const hiddenClass = hidden ? " " + styles.hidden : "";
+  const updateHistory = React.useCallback(
+    (route) => {
+      history.push(route);
+      setTriggerRefresh(!triggerRefresh);
+    },
+    [triggerRefresh]
+  );
 
   return (
-    <section className={styles.NavBar + hiddenClass}>
-      <img src={logo} alt="Stinkfoot Logo" onClick={toggleHidden} />
-      <Dropdown
-        direction="left"
-        open={dropdown}
-        toggle={setDropdown.bind(this, !dropdown)}
-      >
-        <DropdownToggle theme="success">
-          <MdSupervisorAccount />
-        </DropdownToggle>
-        <DropdownMenu>
-          <DropdownItem onClick={props.openNewCharacterModal}>
-            +New Character
-          </DropdownItem>
-        </DropdownMenu>
-      </Dropdown>
-      <NavButton
-        id="planner"
-        title="Character Planner"
-        updateHistory={updateHistory}
-        disabled={!activeCharacter}
-      >
-        <IoMdConstruct />
-      </NavButton>
-      <NavButton
-        id="badger"
-        title="Badge Tracker"
-        updateHistory={updateHistory}
-        disabled={!activeCharacter}
-      >
-        <GiPoliceBadge />
-      </NavButton>
-      <NavButton
-        id="shopper"
-        title="Shopping Cart"
-        updateHistory={updateHistory}
-        disabled={!activeCharacter}
-      >
-        <FaShoppingCart />
-      </NavButton>
+    <section className={styles.NavBar}>
+      <Navbar>
+        <Logo />
+        <div>
+          <Dropdown
+            direction="left"
+            open={dropdown}
+            toggle={setDropdown.bind(this, !dropdown)}
+          >
+            <DropdownToggle theme="success">
+              {activeCharacter && activeCharacter.name ? (
+                activeCharacter.name
+              ) : (
+                <MdSupervisorAccount />
+              )}
+            </DropdownToggle>
+            <DropdownMenu>
+              <DropdownItem onClick={props.openNewCharacterModal}>
+                +New Character
+              </DropdownItem>
+              {characterList.map((name) => (
+                <DropdownItem
+                  key={name}
+                  onClick={updateActive.bind(this, name)}
+                >
+                  {name}
+                </DropdownItem>
+              ))}
+            </DropdownMenu>
+          </Dropdown>
+          <NavButton
+            id="planner"
+            title="Character Planner"
+            disabled={!activeCharacter}
+            updateHistory={updateHistory}
+          >
+            <IoMdConstruct />
+          </NavButton>
+          <NavButton
+            id="badger"
+            title="Badge Tracker"
+            disabled={!activeCharacter}
+            updateHistory={updateHistory}
+          >
+            <GiPoliceBadge />
+          </NavButton>
+          <NavButton
+            id="shopper"
+            title="Shopping Cart"
+            disabled={!activeCharacter}
+            updateHistory={updateHistory}
+          >
+            <FaShoppingCart />
+          </NavButton>
+        </div>
+      </Navbar>
     </section>
+  );
+}
+
+function navTo(route = "/") {
+  history.push(route);
+}
+
+function Logo() {
+  return (
+    <div className={styles.logo} onClick={navTo}>
+      <img src={logo} alt="Stinkfoot Logo" />
+      <h1>Stinkfoot</h1>
+    </div>
   );
 }
 

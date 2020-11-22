@@ -51,7 +51,7 @@ function CharacterInfo(props) {
           />
         </div>
       </div>
-      <div>
+      {/* <div>
         <label>Name</label>
         <input
           type="text"
@@ -59,7 +59,7 @@ function CharacterInfo(props) {
           name="name"
           onChange={setCharacterDetail}
         />
-      </div>
+      </div> */}
     </section>
   );
 }
