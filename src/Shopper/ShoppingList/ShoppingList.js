@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { AiOutlineCheck } from "react-icons/ai";
 
 import useShoppingTotals from "providers/useShoppingTotals.js";
 import FilterOptions from "./FilterOptions.js";
@@ -38,16 +39,13 @@ export default function ShoppingList({ list, lookup }) {
 
   const toggleSet = (categoryName) => {
     const category = lookup[categoryName];
-
-    for (let eName in category) {
-      const { name, need, have } = category[eName];
-      const enhComplete = have < need;
+    Object.values(category).forEach(({ name, need, have }) => {
+      const enhComplete = have >= need;
 
       // If category is complete, everything has to be reset
       // If category is incomplete, only update enhancements that
       // are also incomplete
       const shouldUpdate = category.isComplete || !enhComplete;
-
       shouldUpdate &&
         updateCount(
           categoryName,
@@ -55,7 +53,7 @@ export default function ShoppingList({ list, lookup }) {
           category.isComplete ? "reset" : "setTo",
           category.isComplete ? undefined : need
         );
-    }
+    });
   };
 
   const mapper = mapEnhancement(toggleSet, updateCount);
@@ -164,7 +162,7 @@ function mapEnhancement(toggleSet, updateCount) {
                         "decrement"
                       )}
                     >
-                      {completed ? <p>ICON</p> : count}
+                      {completed ? <AiOutlineCheck /> : count}
                     </p>
                     <p
                       style={{

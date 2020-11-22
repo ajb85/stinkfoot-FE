@@ -16,14 +16,6 @@ export default function Shopper() {
     reduceList.bind({ getCountsForEnhancement }),
     {}
   );
-  const isCategoryComplete = (categoryName) => {
-    const have = getCategoryCount(categoryName);
-    const need = Object.values(shoppingListLookup[categoryName]).reduce(
-      (acc, { need }) => acc + need,
-      0
-    );
-    return have >= need;
-  };
 
   const shoppingList = Object.entries(shoppingListLookup)
     .reduce((acc, [categoryName, enhancements]) => {
@@ -32,7 +24,8 @@ export default function Shopper() {
       acc.push(setData);
       return acc;
     }, [])
-    .sort(sortShoppingList.bind({ isCategoryComplete }));
+    .map(markComplete.bind({ shoppingListLookup }))
+    .sort(sortShoppingList);
 
   return <ShoppingList list={shoppingList} lookup={shoppingListLookup} />;
 }
@@ -77,15 +70,29 @@ function reduceList(acc, { enhSlots, power }) {
   return acc;
 }
 
+function markComplete(category) {
+  let isComplete = true;
+  const { enhancements } = category;
+  for (let i = 0; i < enhancements.length; i++) {
+    const { have, need } = enhancements[i];
+    if (have < need) {
+      isComplete = false;
+      break;
+    }
+  }
+
+  category.isComplete = isComplete;
+  this.shoppingListLookup[category.categoryName].isComplete = isComplete;
+  return category;
+}
+
 function sortShoppingList(a, b) {
   // [{ categoryName, enhancements: [{ name, powerList, need, have }] }]
   const firstCount = a.enhancements.reduce(countNeed, 0);
   const secondCount = b.enhancements.reduce(countNeed, 0);
 
-  const isFirstComplete = this.isCategoryComplete(a.categoryName);
-  a.isComplete = isFirstComplete;
-  const isSecondComplete = this.isCategoryComplete(b.categoryName);
-  b.isComplete = isSecondComplete;
+  const isFirstComplete = a.isComplete;
+  const isSecondComplete = b.isComplete;
   const bothComplete = isFirstComplete && isSecondComplete;
   const bothIncomplete = !isFirstComplete && !isSecondComplete;
 
