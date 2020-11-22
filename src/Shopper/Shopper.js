@@ -9,13 +9,24 @@ export default function Shopper() {
   window.title = "Shopping List";
   const { activeCharacter } = useCharacters();
 
-  const shoppingList = activeCharacter.powerSlots.reduce(getShoppingList, {});
-  return (
-    <ShoppingList list={Object.entries(shoppingList).sort(sortShoppingList)} />
-  );
+  const shoppingListLookup = activeCharacter.powerSlots.reduce(reduceList, {});
+  const shoppingList = Object.entries(shoppingListLookup)
+    .reduce((acc, [setName, enhancements]) => {
+      const setData = { setName };
+      setData.enhancements = Object.entries(enhancements).reduce(
+        (accumulator, [name, data]) => {
+          accumulator.push({ name, ...data });
+          return accumulator;
+        }
+      );
+      return acc;
+    }, [])
+    .sort(sortShoppingList);
+
+  return <ShoppingList list={shoppingList} />;
 }
 
-function getShoppingList(acc, { enhSlots, power }) {
+function reduceList(acc, { enhSlots, power }) {
   if (enhSlots) {
     enhSlots.forEach(({ enhancement: e }) => {
       if (!e) {
@@ -50,9 +61,9 @@ function getShoppingList(acc, { enhSlots, power }) {
 }
 
 function sortShoppingList(a, b) {
-  // [setName, {enhancement: { powerList, count }}]
-  const firstCount = Object.values(a[1]).reduce(countEnhancements, 0);
-  const secondCount = Object.values(b[1]).reduce(countEnhancements, 0);
+  // [{ setName, enhancements: [{ name, powerList, count }] }]
+  const firstCount = a.enhancements.reduce(countEnhancements, 0);
+  const secondCount = b.enhancements.reduce(countEnhancements, 0);
   return firstCount > secondCount ? -1 : 1;
 }
 
