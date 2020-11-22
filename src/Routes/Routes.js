@@ -1,9 +1,8 @@
 import React from "react";
 
-// import Import from "components/Import/";
-// import BuildList from "components/BuildList/";
 import Badger from "Badger/";
 import Planner from "Planner/";
+import Shopper from "Shopper/";
 import Home from "Home/";
 
 // import useCharacters from "providers/useBuilds.js";
@@ -32,9 +31,9 @@ function Routes() {
               <Badger />
             </BadgesProvider>
           </Route>
-          {/* <Route path="/shopper">
-        <Shopper />
-      </Route> */}
+          <Route path="/shopper">
+            <Shopper />
+          </Route>
         </>
       )}
       <Route>
@@ -45,9 +44,3 @@ function Routes() {
 }
 
 export default Routes;
-
-// function Shopper() {
-//   const { build } = useCharacters();
-//   window.title = "Shopping List";
-//   return Object.keys(build).length ? <BuildList /> : <Import />;
-// }

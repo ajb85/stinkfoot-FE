@@ -8,7 +8,7 @@ import doesSetMatchKeyword from "js/doesSetMatchKeyword.js";
 
 import styles from "./styles.module.scss";
 
-function ListBuild(props) {
+export default function ShoppingList(props) {
   const [filters, setFilters] = useState({
     order: "asc",
     tags: { length: 0 },
@@ -189,5 +189,3 @@ function ListBuild(props) {
     </div>
   );
 }
-
-export default ListBuild;
