@@ -21,8 +21,17 @@ import logo from "assets/stinkfoot_logo.png";
 import styles from "./styles.module.scss";
 
 export default function NavBar(props) {
+  const [triggerRefresh, setTriggerRefresh] = useState(false);
   const [dropdown, setDropdown] = useState(false);
   const { activeCharacter, characterList, updateActive } = useCharacters();
+
+  const updateHistory = React.useCallback(
+    (route) => {
+      history.push(route);
+      setTriggerRefresh(!triggerRefresh);
+    },
+    [triggerRefresh]
+  );
 
   return (
     <section className={styles.NavBar}>
@@ -59,6 +68,7 @@ export default function NavBar(props) {
             id="planner"
             title="Character Planner"
             disabled={!activeCharacter}
+            updateHistory={updateHistory}
           >
             <IoMdConstruct />
           </NavButton>
@@ -66,6 +76,7 @@ export default function NavBar(props) {
             id="badger"
             title="Badge Tracker"
             disabled={!activeCharacter}
+            updateHistory={updateHistory}
           >
             <GiPoliceBadge />
           </NavButton>
@@ -73,6 +84,7 @@ export default function NavBar(props) {
             id="shopper"
             title="Shopping Cart"
             disabled={!activeCharacter}
+            updateHistory={updateHistory}
           >
             <FaShoppingCart />
           </NavButton>
@@ -103,7 +115,7 @@ function NavButton(props) {
   return (
     <>
       <Button
-        onClick={navTo.bind(this, "/" + props.id)}
+        onClick={props.updateHistory.bind(this, "/" + props.id)}
         id={props.id}
         pill
         outline={activeRoute !== props.id}
