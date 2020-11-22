@@ -36,7 +36,7 @@ export default function NavBar(props) {
   return (
     <section className={styles.NavBar}>
       <Navbar>
-        <Logo />
+        <Logo updateHistory={updateHistory} />
         <div>
           <Dropdown
             direction="left"
@@ -94,13 +94,9 @@ export default function NavBar(props) {
   );
 }
 
-function navTo(route = "/") {
-  history.push(route);
-}
-
-function Logo() {
+function Logo({ updateHistory }) {
   return (
-    <div className={styles.logo} onClick={navTo}>
+    <div className={styles.logo} onClick={updateHistory.bind(this, "/")}>
       <img src={logo} alt="Stinkfoot Logo" />
       <h1>Stinkfoot</h1>
     </div>
