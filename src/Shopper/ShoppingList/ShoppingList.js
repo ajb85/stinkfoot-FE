@@ -106,20 +106,21 @@ export default function ShoppingList({ list, lookup }) {
     // eslint-disable-next-line
   }, [list]);
 
+  const zIndex = 200 - enhancementList.length * -2;
   return (
     <div
       className={styles.BuildList}
-      style={{ position: "relative", zIndex: enhancementList.length * -2 }}
+      style={{
+        position: "relative",
+        zIndex,
+      }}
     >
       <FilterOptions
         filters={filters}
         toggleTag={toggleTag}
         setSearch={setSearch}
       />
-      <div
-        className={styles.list}
-        style={{ position: "relative", zIndex: enhancementList.length * -2 }}
-      >
+      <div className={styles.list} style={{ position: "relative", zIndex }}>
         {enhancementList.length ? (
           enhancementList
         ) : (
@@ -136,12 +137,6 @@ export default function ShoppingList({ list, lookup }) {
 
 function mapEnhancement(toggleSet, updateCount) {
   return ({ categoryName, enhancements }, i) => {
-    const allEnhancements = [];
-    for (let eName in enhancements) {
-      const { need, have, powerList } = enhancements[eName];
-      allEnhancements.push({ name: eName, need, have, powerList });
-    }
-
     const zIndex = 200 - 2 * i;
 
     return (
@@ -153,7 +148,7 @@ function mapEnhancement(toggleSet, updateCount) {
         <div className={styles.setContainer}>
           <h2 onClick={toggleSet.bind(this, categoryName)}>{categoryName}</h2>
           <div style={{ position: "relative" }}>
-            {allEnhancements.map(({ name, have, need, powerList }) => {
+            {enhancements.map(({ name, have, need, powerList }) => {
               const count = need - have;
               const completed = count <= 0;
               const toggleEnhancement = updateCount.bind(

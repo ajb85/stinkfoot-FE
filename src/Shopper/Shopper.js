@@ -16,7 +16,6 @@ export default function Shopper() {
     reduceList.bind({ getCountsForEnhancement }),
     {}
   );
-
   const isCategoryComplete = (categoryName) => {
     const have = getCategoryCount(categoryName);
     const need = Object.values(shoppingListLookup[categoryName]).reduce(
@@ -29,12 +28,8 @@ export default function Shopper() {
   const shoppingList = Object.entries(shoppingListLookup)
     .reduce((acc, [categoryName, enhancements]) => {
       const setData = { categoryName };
-      setData.enhancements = Object.entries(enhancements).reduce(
-        (accumulator, [name, data]) => {
-          accumulator.push({ name, ...data });
-          return accumulator;
-        }
-      );
+      setData.enhancements = Object.values(enhancements);
+      acc.push(setData);
       return acc;
     }, [])
     .sort(sortShoppingList.bind({ isCategoryComplete }));
@@ -61,6 +56,7 @@ function reduceList(acc, { enhSlots, power }) {
         if (!setLookup[e.display]) {
           // Ensure the enhancement is listed in the set category
           setLookup[e.displayName] = {
+            name: e.displayName,
             powerList: {},
             need: 0,
             have: this.getCountsForEnhancement(categoryName, e.displayName),
