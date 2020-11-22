@@ -22,7 +22,6 @@ export function BuildProvider(props) {
   const [characters, setCharacters] = useState(parsed || {});
   const [active, setActive] = useState(activeCharName || "");
 
-  console.log("ACTIVE: ", active, characters, characters[active]);
   const updateCharacters = (updated) => {
     localStorage.setItem("characters", JSON.stringify(updated));
     setCharacters(updated);
@@ -53,7 +52,6 @@ export function BuildProvider(props) {
 
   useEffect(() => {
     if (!active) {
-      console.log("SETTING ACTIVE CHAR NAME");
       const charNames = Object.keys(characters);
       if (charNames.length) {
         updateActive(charNames[0]);
