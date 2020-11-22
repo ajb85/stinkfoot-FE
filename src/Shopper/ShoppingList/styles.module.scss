@@ -1,19 +1,18 @@
-@import 'styles/variables.scss';
+@import "styles/variables.scss";
 
 $br: 20px;
 
 .BuildList {
-  display: flex;
-
   div.list {
-    width: 100%;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: $lh * 5;
+    margin-top: $lh/2;
 
     div.set {
       margin: $lh;
+      position: relative;
+      height: fit-content;
 
       div.setContainer {
         box-shadow: 3px 3px 20px 0 rgba(0, 0, 0, 0.7);
@@ -78,12 +77,14 @@ $br: 20px;
           cursor: default;
           display: flex;
           justify-content: center;
-
           background-color: $dark;
+
           position: absolute;
           right: 0;
           left: 0;
           bottom: 0px;
+          z-index: -1;
+
           width: 100%;
           padding: $lh / 4 $lh / 2;
 
@@ -100,14 +101,15 @@ $br: 20px;
         }
 
         .powerListBG {
-          cursor: default;
-
-          background-color: $dark;
           position: absolute;
           right: 0;
           left: 0;
           bottom: $lh;
+          z-index: -2;
+
           width: 100%;
+          cursor: default;
+          background-color: $dark;
           padding: $lh;
 
           transition: transform 0.5s;
@@ -125,13 +127,7 @@ $br: 20px;
 }
 
 .FilterButtons {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
   height: $lh * 5;
-  background-color: rgba(0, 0, 0, 0.5);
-  background-color: $dark;
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
 
   .filterContainer {

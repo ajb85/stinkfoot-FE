@@ -11,7 +11,6 @@ function BadgeList({ section, filters }) {
     return <div />;
   }
 
-  console.log("BADGES: ", badges, section);
   const badgeList = badges[section].filter(filterSearch(filters));
   const { bonusNotes, location, zone } = badgeList[0] || {};
   return (

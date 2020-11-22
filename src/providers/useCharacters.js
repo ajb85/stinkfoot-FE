@@ -33,11 +33,23 @@ export function BuildProvider(props) {
     setActive(name);
   };
 
-  const updateActiveCharacter = (key, value) => {
-    const updatedActive = { ...characters[active] };
+  const updateActiveCharacter = ((updatedActive, timeout) => (key, value) => {
+    if (timeout) {
+      clearTimeout(timeout);
+    }
+
+    if (!updatedActive) {
+      updatedActive = { ...characters[active] };
+    }
+
     updatedActive[key] = value;
-    updateCharacters({ ...characters, [active]: updatedActive });
-  };
+
+    timeout = setTimeout(() => {
+      updateCharacters({ ...characters, [active]: { ...updatedActive } });
+      updatedActive = null;
+      timeout = null;
+    }, 20);
+  })();
 
   const createNewCharacter = (name, makeActive = true) => {
     const updatedChars = { ...characters };
