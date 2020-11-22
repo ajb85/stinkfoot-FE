@@ -13,9 +13,21 @@ export default (keyword, setName, enhancements) => {
     return true;
   }
 
-  for (let e in enhancements) {
-    if (isKeywordInString(e)) {
+  for (let i = 0; i < enhancements.length; i++) {
+    const { name, powerList } = enhancements[i];
+
+    if (isKeywordInString(name)) {
       return true;
     }
+
+    const powerNames = Object.keys(powerList);
+    for (let j = 0; j < powerNames.length; j++) {
+      const p = powerNames[j];
+      if (isKeywordInString(p)) {
+        return true;
+      }
+    }
   }
+
+  return false;
 };
