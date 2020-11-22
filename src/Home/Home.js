@@ -9,7 +9,8 @@ export default function Home() {
       break, your data will be removed at some points, and you'll generally just
       encounter frustrations. It's a work in progress but it will get better.
       Even this awful-looking landing page is meant to clearly state right away
-      that this webapp is in an early state!
+      that this webapp is in an early state! Feel free to offer feedback on
+      <a href="https://discord.gg/XdXK7Vwnvz">Discord</a>
     </div>
   );
 }
