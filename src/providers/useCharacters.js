@@ -44,7 +44,6 @@ export function BuildProvider(props) {
 
     updatedActive[key] = value;
 
-    console.log("UPDATED: ", updatedActive);
     timeout = setTimeout(() => {
       updateCharacters({ ...characters, [active]: { ...updatedActive } });
       updatedActive = null;
