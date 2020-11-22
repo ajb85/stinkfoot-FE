@@ -60,7 +60,7 @@ export default function ShoppingList({ list, lookup }) {
 
   const mapper = mapEnhancement(toggleSet, updateCount);
 
-  const enhancementList = list.reduce((acc, setData) => {
+  const enhancementList = list.reduce((acc, setData, i) => {
     const { categoryName, enhancements } = setData;
     let matches = !filters.tags.length;
 
@@ -81,7 +81,7 @@ export default function ShoppingList({ list, lookup }) {
 
     if (matches) {
       doesSetMatchKeyword(filters.search, categoryName, enhancements) &&
-        acc.push(mapper(setData));
+        acc.push(mapper(setData, i));
     }
 
     return acc;
@@ -108,21 +108,14 @@ export default function ShoppingList({ list, lookup }) {
     // eslint-disable-next-line
   }, [list]);
 
-  const zIndex = 200 - enhancementList.length * -2;
   return (
-    <div
-      className={styles.BuildList}
-      style={{
-        position: "relative",
-        zIndex,
-      }}
-    >
+    <div className={styles.BuildList}>
       <FilterOptions
         filters={filters}
         toggleTag={toggleTag}
         setSearch={setSearch}
       />
-      <div className={styles.list} style={{ position: "relative", zIndex }}>
+      <div className={styles.list}>
         {enhancementList.length ? (
           enhancementList
         ) : (
@@ -139,17 +132,12 @@ export default function ShoppingList({ list, lookup }) {
 
 function mapEnhancement(toggleSet, updateCount) {
   return ({ categoryName, enhancements }, i) => {
-    const zIndex = 200 - 2 * i;
-
+    // const zIndex = 200 - 2 * i;
     return (
-      <div
-        style={{ position: "relative", zIndex }}
-        key={categoryName}
-        className={styles.set}
-      >
+      <div key={categoryName} className={styles.set}>
         <div className={styles.setContainer}>
           <h2 onClick={toggleSet.bind(this, categoryName)}>{categoryName}</h2>
-          <div style={{ position: "relative" }}>
+          <div>
             {enhancements.map(({ name, have, need, powerList }) => {
               const count = need - have;
               const completed = count <= 0;
@@ -187,14 +175,8 @@ function mapEnhancement(toggleSet, updateCount) {
                       {name}
                     </p>
                   </div>
-                  <div
-                    style={{ zIndex: zIndex - 2 }}
-                    className={styles.powerListBG}
-                  />
-                  <div
-                    style={{ zIndex: zIndex - 1 }}
-                    className={styles.powerList}
-                  >
+                  <div className={styles.powerListBG} />
+                  <div className={styles.powerList}>
                     <span>
                       {Object.entries(powerList)
                         .map(

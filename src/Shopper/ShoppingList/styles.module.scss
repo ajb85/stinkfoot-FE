@@ -4,14 +4,14 @@ $br: 20px;
 
 .BuildList {
   div.list {
-    width: 100%;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: $lh * 5;
+    margin-top: $lh/2;
 
     div.set {
       margin: $lh;
+      position: relative;
 
       div.setContainer {
         box-shadow: 3px 3px 20px 0 rgba(0, 0, 0, 0.7);
@@ -76,12 +76,14 @@ $br: 20px;
           cursor: default;
           display: flex;
           justify-content: center;
-
           background-color: $dark;
+
           position: absolute;
           right: 0;
           left: 0;
           bottom: 0px;
+          z-index: -1;
+
           width: 100%;
           padding: $lh / 4 $lh / 2;
 
@@ -98,14 +100,15 @@ $br: 20px;
         }
 
         .powerListBG {
-          cursor: default;
-
-          background-color: $dark;
           position: absolute;
           right: 0;
           left: 0;
           bottom: $lh;
+          z-index: -2;
+
           width: 100%;
+          cursor: default;
+          background-color: $dark;
           padding: $lh;
 
           transition: transform 0.5s;
