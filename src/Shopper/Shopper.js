@@ -38,33 +38,32 @@ function reduceList(acc, { enhSlots, power }) {
       }
 
       const { setIndex, setType } = e;
-      if (setIndex !== undefined) {
-        const set = ioSets[setType][setIndex];
-        const categoryName = set.displayName;
-        if (!acc[categoryName]) {
-          // Ensure the set category exists
-          acc[categoryName] = {};
-        }
-        const setLookup = acc[categoryName];
-        if (!setLookup[e.displayName]) {
-          // Ensure the enhancement is listed in the set category
-          setLookup[e.displayName] = {
-            name: e.displayName,
-            powerList: {},
-            need: 0,
-            have: this.getCountsForEnhancement(categoryName, e.displayName),
-          };
-        }
-
-        const eLookup = setLookup[e.displayName];
-        if (!eLookup.powerList[power.displayName]) {
-          eLookup.powerList[power.displayName] = { count: 0 };
-        }
-
-        // Increment the counts
-        eLookup.powerList[power.displayName].count++;
-        eLookup.need++;
+      const isSet = setIndex !== undefined;
+      const set = isSet && ioSets[setType][setIndex];
+      const categoryName = isSet ? set.displayName : "Standard";
+      if (!acc[categoryName]) {
+        // Ensure the set category exists
+        acc[categoryName] = {};
       }
+      const setLookup = acc[categoryName];
+      if (!setLookup[e.displayName]) {
+        // Ensure the enhancement is listed in the set category
+        setLookup[e.displayName] = {
+          name: e.displayName,
+          powerList: {},
+          need: 0,
+          have: this.getCountsForEnhancement(categoryName, e.displayName),
+        };
+      }
+
+      const eLookup = setLookup[e.displayName];
+      if (!eLookup.powerList[power.displayName]) {
+        eLookup.powerList[power.displayName] = { count: 0 };
+      }
+
+      // Increment the counts
+      eLookup.powerList[power.displayName].count++;
+      eLookup.need++;
     });
   }
   return acc;

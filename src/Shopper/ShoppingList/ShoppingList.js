@@ -159,7 +159,7 @@ function mapEnhancement(toggleSet, updateCount) {
                         this,
                         categoryName,
                         name,
-                        "decrement"
+                        "increment"
                       )}
                     >
                       {completed ? <AiOutlineCheck /> : count}
