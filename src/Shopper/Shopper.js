@@ -9,7 +9,7 @@ import ioSets from "data/ioSets.js";
 
 export default function Shopper() {
   window.title = "Shopping List";
-  const { getCountsForEnhancement, getCategoryCount } = useShoppingTotals();
+  const { getCountsForEnhancement } = useShoppingTotals();
   const { activeCharacter } = useCharacters();
 
   const shoppingListLookup = activeCharacter.powerSlots.reduce(
@@ -31,7 +31,7 @@ export default function Shopper() {
 }
 
 function reduceList(acc, { enhSlots, power }) {
-  if (enhSlots) {
+  if (power && enhSlots) {
     enhSlots.forEach(({ enhancement: e }) => {
       if (!e) {
         return;
@@ -46,7 +46,7 @@ function reduceList(acc, { enhSlots, power }) {
           acc[categoryName] = {};
         }
         const setLookup = acc[categoryName];
-        if (!setLookup[e.display]) {
+        if (!setLookup[e.displayName]) {
           // Ensure the enhancement is listed in the set category
           setLookup[e.displayName] = {
             name: e.displayName,
