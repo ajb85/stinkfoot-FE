@@ -2,17 +2,33 @@ import React from "react";
 
 import ShoppingList from "./ShoppingList/";
 
+import useShoppingTotals from "providers/useShoppingTotals.js";
 import useCharacters from "providers/useCharacters.js";
+
 import ioSets from "data/ioSets.js";
 
 export default function Shopper() {
   window.title = "Shopping List";
+  const { getCountsForEnhancement, getCategoryCount } = useShoppingTotals();
   const { activeCharacter } = useCharacters();
 
-  const shoppingListLookup = activeCharacter.powerSlots.reduce(reduceList, {});
+  const shoppingListLookup = activeCharacter.powerSlots.reduce(
+    reduceList.bind({ getCountsForEnhancement }),
+    {}
+  );
+
+  const isCategoryComplete = (categoryName) => {
+    const have = getCategoryCount(categoryName);
+    const need = Object.values(shoppingListLookup[categoryName]).reduce(
+      (acc, { need }) => acc + need,
+      0
+    );
+    return have >= need;
+  };
+
   const shoppingList = Object.entries(shoppingListLookup)
-    .reduce((acc, [setName, enhancements]) => {
-      const setData = { setName };
+    .reduce((acc, [categoryName, enhancements]) => {
+      const setData = { categoryName };
       setData.enhancements = Object.entries(enhancements).reduce(
         (accumulator, [name, data]) => {
           accumulator.push({ name, ...data });
@@ -21,9 +37,9 @@ export default function Shopper() {
       );
       return acc;
     }, [])
-    .sort(sortShoppingList);
+    .sort(sortShoppingList.bind({ isCategoryComplete }));
 
-  return <ShoppingList list={shoppingList} />;
+  return <ShoppingList list={shoppingList} lookup={shoppingListLookup} />;
 }
 
 function reduceList(acc, { enhSlots, power }) {
@@ -33,27 +49,32 @@ function reduceList(acc, { enhSlots, power }) {
         return;
       }
 
-      const { setIndex, setType } = enhancement;
+      const { setIndex, setType } = e;
       if (setIndex !== undefined) {
         const set = ioSets[setType][setIndex];
-        if (!acc[set.displayName]) {
+        const categoryName = set.displayName;
+        if (!acc[categoryName]) {
           // Ensure the set category exists
-          acc[set.displayName] = {};
+          acc[categoryName] = {};
         }
-        const setLookup = acc[set.displayName];
+        const setLookup = acc[categoryName];
         if (!setLookup[e.display]) {
           // Ensure the enhancement is listed in the set category
-          setLookup[e.displayName] = { powerList: [], count: 0 };
+          setLookup[e.displayName] = {
+            powerList: {},
+            need: 0,
+            have: this.getCountsForEnhancement(categoryName, e.displayName),
+          };
         }
 
         const eLookup = setLookup[e.displayName];
-        if (!eLookup.powerList.find((name) => name !== power.displayName)) {
-          // Add the power to the list of powers this enhancement appears in
-          eLookup.powerList.push(power.displayName);
+        if (!eLookup.powerList[power.displayName]) {
+          eLookup.powerList[power.displayName] = { count: 0 };
         }
 
-        // Increment the count
-        eLookup.count++;
+        // Increment the counts
+        eLookup.powerList[power.displayName].count++;
+        eLookup.need++;
       }
     });
   }
@@ -61,12 +82,24 @@ function reduceList(acc, { enhSlots, power }) {
 }
 
 function sortShoppingList(a, b) {
-  // [{ setName, enhancements: [{ name, powerList, count }] }]
-  const firstCount = a.enhancements.reduce(countEnhancements, 0);
-  const secondCount = b.enhancements.reduce(countEnhancements, 0);
-  return firstCount > secondCount ? -1 : 1;
+  // [{ categoryName, enhancements: [{ name, powerList, need, have }] }]
+  const firstCount = a.enhancements.reduce(countNeed, 0);
+  const secondCount = b.enhancements.reduce(countNeed, 0);
+
+  const isFirstComplete = this.isCategoryComplete(a.categoryName);
+  a.isComplete = isFirstComplete;
+  const isSecondComplete = this.isCategoryComplete(b.categoryName);
+  b.isComplete = isSecondComplete;
+  const bothComplete = isFirstComplete && isSecondComplete;
+  const bothIncomplete = !isFirstComplete && !isSecondComplete;
+
+  if (bothComplete || bothIncomplete) {
+    return firstCount > secondCount ? -1 : 1;
+  }
+
+  return isFirstComplete ? 1 : -1;
 }
 
-function countEnhancements(acc, { count }) {
-  return acc + count;
+function countNeed(acc, { need }) {
+  return acc + need;
 }

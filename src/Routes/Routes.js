@@ -7,6 +7,7 @@ import Home from "Home/";
 
 // import useCharacters from "providers/useBuilds.js";
 import { BadgesProvider } from "providers/useBadges.js";
+import { ShoppingProvider } from "providers/useShoppingTotals.js";
 import PlannerProviders from "providers/builder/";
 import useCharacters from "providers/useCharacters.js";
 
@@ -32,7 +33,9 @@ function Routes() {
             </BadgesProvider>
           </Route>
           <Route path="/shopper">
-            <Shopper />
+            <ShoppingProvider>
+              <Shopper />
+            </ShoppingProvider>
           </Route>
         </>
       )}
