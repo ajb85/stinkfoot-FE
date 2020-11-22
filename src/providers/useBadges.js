@@ -1,111 +1,53 @@
-import React, { useState, createContext, useContext } from "react";
-import badgeData from "Badger/data/";
+import React, { createContext, useContext } from "react";
+
+import useCharacters from "./useCharacters.js";
+
 const BadgesContext = createContext();
 
 export function BadgesProvider(props) {
-  const storage = localStorage.getItem("badges");
-  const storedBadges = storage ? JSON.parse(storage) : { characters: {} };
-  const badgeState = useState(storedBadges);
-  const [badges] = badgeState;
+  const { activeCharacter, updateActiveCharacter } = useCharacters();
+  const { badges } = activeCharacter;
+  const setBadges = (value) => updateActiveCharacter("badges", value);
+
+  const updateCharacter = (name, data) => {
+    const newState = {
+      ...badges,
+      [name]: data,
+    };
+
+    setBadges(newState);
+  };
+
+  const toggleComplete = ({ badgeSection, badgeIndex }) => {
+    console.log(`TOGGLING ${badgeIndex} in ${badgeSection}`);
+    const newFlag = !badges[badgeSection][badgeIndex].completed;
+
+    const newState = {
+      ...badges,
+      [badgeSection]: badges[badgeSection].map((b, i) => {
+        if (i === badgeIndex) {
+          return { ...b, completed: newFlag };
+        }
+
+        return b;
+      }),
+    };
+
+    setBadges(newState);
+  };
 
   const { Provider } = BadgesContext;
   return (
     <Provider
       value={{
         badges,
-        character: {
-          add: addCharacter(badgeState),
-          delete: deleteCharacter(badgeState),
-          update: updateCharacter(badgeState),
-          active: setActiveCharacter(badgeState),
-          toggleBadge: toggleComplete(badgeState),
-        },
+        updateCharacter,
+        toggleComplete,
       }}
     >
       {props.children}
     </Provider>
   );
-}
-
-const addCharacter = ([badges, setBadges]) => (name) => {
-  if (!badges.characters[name]) {
-    const newState = { ...badges };
-    newState.characters[name] = badgeData;
-    newState.active = name;
-    saveLocal(newState);
-    setBadges(newState);
-  }
-};
-
-const deleteCharacter = ([badges, setBadges]) => (name) => {
-  const newState = { ...badges };
-  delete newState.characters[name];
-
-  const chars = Object.keys(newState.characters);
-
-  if (newState.active === name && chars.length > 1) {
-    newState.active = chars[0];
-  } else if (chars.length === 1) {
-    delete newState.active;
-    newState.characters = {};
-  }
-
-  saveLocal(newState);
-  setBadges(newState);
-};
-
-const updateCharacter = ([badges, setBadges]) => (name, data) => {
-  const newState = {
-    ...badges,
-    characters: { ...badges.characters, [name]: data },
-  };
-
-  saveLocal(newState);
-  setBadges(newState);
-};
-
-const setActiveCharacter = ([badges, setBadges]) => (e) => {
-  const name = e.target.value;
-
-  if (badges.characters[name]) {
-    const newState = { ...badges };
-    newState.active = name;
-    saveLocal(newState);
-    setBadges(newState);
-  }
-};
-
-const toggleComplete = ([badges, setBadges]) => ({
-  badgeSection,
-  badgeIndex,
-}) => {
-  const char = badges.active;
-  console.log(`TOGGLING ${badgeIndex} in ${badgeSection}`);
-  const newFlag = !badges.characters[char][badgeSection][badgeIndex].completed;
-
-  const newState = {
-    ...badges,
-    characters: {
-      ...badges.characters,
-      [char]: {
-        ...badges.characters[char],
-        [badgeSection]: badges.characters[char][badgeSection].map((b, i) => {
-          if (i === badgeIndex) {
-            return { ...b, completed: newFlag };
-          }
-
-          return b;
-        }),
-      },
-    },
-  };
-
-  saveLocal(newState);
-  setBadges(newState);
-};
-
-function saveLocal(data) {
-  localStorage.setItem("badges", JSON.stringify(data));
 }
 
 export default function useBadges(props) {
