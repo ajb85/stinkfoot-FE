@@ -155,6 +155,10 @@ function getStandardEnhancementsForPower(power) {
 }
 
 function getIOSetEnhancementsForPower(setType, showSuperior) {
+  if (!ioSets[setType]) {
+    return [];
+  }
+
   return ioSets[setType].map((set) => {
     let { imageName } = set;
     if (!imageName) {
