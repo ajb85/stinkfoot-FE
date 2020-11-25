@@ -169,7 +169,7 @@ import Will_of_the_Controller from "data/enhancements/sets/Will_of_the_Controlle
 import Winters_Bite from "data/enhancements/sets/Winter's_Bite.json";
 import Winters_Gift from "data/enhancements/sets/Winter's_Gift.json";
 
-export default [
+const ioSets = [
   Achilles_Heel,
   Adjusted_Targeting,
   Adrenal_Adjustment,
@@ -353,6 +353,8 @@ export default [
   acc[setType] = acc[setType] ? [...acc[setType], set] : [set];
   return acc;
 }, {});
+
+export default ioSets;
 
 export const setTypeConversion = {
   0: "Untyped",
