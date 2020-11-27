@@ -108,7 +108,12 @@ function getStandardEnhancementsForPower(power) {
     return [];
   }
 
-  return power.allowedEnhancements.reduce((acc, enhName) => {
+  /* TEMPORARY TO SOLVE BUG, WILL REMOVE WHEN DATA IS FIXED */
+  const allowed = new Set();
+  power.allowedEnhancements.forEach((x) => allowed.add(x));
+  /* TEMPORARY TO SOLVE BUG, WILL REMOVE WHEN DATA IS FIXED */
+
+  return [...allowed].reduce((acc, enhName) => {
     const enh = { ...enhancements.standard[enhName] };
     const { imageName } = enh;
     if (!imageName) {
