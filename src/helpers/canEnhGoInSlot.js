@@ -1,4 +1,11 @@
-export default (enhancement, powerSlot, archetype) => {
+// @flow
+import { Enhancement, PowerSlot } from "flow/types.js";
+
+export default (
+  enhancement: Enhancement,
+  powerSlot: PowerSlot,
+  archetype: string
+): boolean => {
   // With isUnique, type, and fullName, this will return if the
   // enhancement can be added to a slot
   //   const powerSlot = this.nextState.build.powerSlots[powerSlotIndex];

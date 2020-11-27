@@ -1,6 +1,18 @@
-import ioSets from "data/ioSets.js";
+// @flow
 
-export default ((cache) => (powerSlots, activeSets, getBonusesForSet) => {
+import ioSets from "data/ioSets.js";
+import { PowerSlot, BuildAnalysis, ActiveSets } from "flow/types.js";
+
+type CacheType = {|
+  build: Array<PowerSlot>,
+  results: BuildAnalysis,
+|};
+
+export default ((cache: CacheType) => (
+  powerSlots: Array<PowerSlot>,
+  activeSets: ActiveSets,
+  getBonusesForSet: Function
+): BuildAnalysis => {
   if (cache.build === powerSlots) {
     return cache.results;
   }
@@ -14,10 +26,15 @@ export default ((cache) => (powerSlots, activeSets, getBonusesForSet) => {
   return results;
 })({});
 
-function getSlotReducer(getBonusesForSet) {
+function getSlotReducer(getBonusesForSet: Function): Function {
   const setBonusesCache = {};
 
-  return function reduceSlot(acc, { enhSlots, power }, i) {
+  return function reduceSlot(
+    acc: BuildAnalysis,
+    powerSlot: PowerSlot,
+    i
+  ): BuildAnalysis {
+    const { enhSlots, power } = powerSlot;
     const isEmpty = !power || !enhSlots;
     if (isEmpty) {
       return acc;
@@ -103,7 +120,7 @@ function getSlotReducer(getBonusesForSet) {
   };
 }
 
-function getInitialAcc() {
+function getInitialAcc(): BuildAnalysis {
   return {
     lookup: {
       powers: {},
@@ -116,7 +133,8 @@ function getInitialAcc() {
   };
 }
 
-function evaluatePowersets({ primary, secondary, pools }, results) {
+function evaluatePowersets(activeSets: ActiveSets, results): BuildAnalysis {
+  const { primary, secondary, pools } = activeSets;
   // Record active sets
   results.lookup.powersets = {
     [primary.fullName]: true,

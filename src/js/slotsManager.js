@@ -1,15 +1,18 @@
+// @flow
+
 import { enhancementSlots } from "data/levels.js";
 
 class SlotsManager {
+  slots: Array<number>;
   constructor() {
     this.reset();
   }
 
-  get length() {
+  get length(): number {
     return this.slots.length;
   }
 
-  _binarySearch(target) {
+  _binarySearch(target: number): void | number {
     let cursor;
     let bottom = 0;
     let top = this.slots.length - 1;
@@ -42,7 +45,7 @@ class SlotsManager {
     return this.slots[top] === target ? top : bottom;
   }
 
-  _findNextLargest(target, returnIndex) {
+  _findNextLargest(target: number, returnIndex: number): number {
     let index = this._binarySearch(target);
     while (this.slots[index] && this.slots[index] < target) {
       index++;
@@ -50,7 +53,7 @@ class SlotsManager {
     return returnIndex ? index : this.slots[index];
   }
 
-  _removeOnce(num) {
+  _removeOnce(num: number): void {
     const index = this._binarySearch(num);
     if (this.slots[index] === num) {
       this.slots.splice(index, 1);
@@ -59,13 +62,13 @@ class SlotsManager {
     }
   }
 
-  getSlot(powerLevel) {
+  getSlot(powerLevel: number): number {
     const slotLevel = this._findNextLargest(powerLevel);
     this._removeOnce(slotLevel);
     return slotLevel;
   }
 
-  previewSlots(powerLevel, count = 1) {
+  previewSlots(powerLevel: number, count: number = 1): number | boolean {
     const firstIndex = this._findNextLargest(powerLevel, true);
 
     const slots = [];
@@ -82,11 +85,11 @@ class SlotsManager {
     return count === 1 ? slots[0] : slots;
   }
 
-  returnSlots(slots) {
+  returnSlots(slots: Array<number>): void {
     slots.forEach(this.returnSlot);
   }
 
-  returnSlot(slotLevel) {
+  returnSlot(slotLevel: number): void | Array<number> {
     if (!slotLevel) {
       return;
     }
@@ -108,7 +111,7 @@ class SlotsManager {
     }
   }
 
-  reset() {
+  reset(): void {
     this.slots = [...enhancementSlots];
   }
 }

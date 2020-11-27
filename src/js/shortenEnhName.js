@@ -1,3 +1,5 @@
+// @flow
+
 const shortened = {
   Accuracy: "Acc",
   Damage: "Dmg",
@@ -11,7 +13,7 @@ const shortened = {
   "Run Speed": "RunSpd",
 };
 
-export default (name) => {
+export default (name: string): string => {
   // shortenEnhName
   return name
     .split("/")

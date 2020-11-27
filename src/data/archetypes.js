@@ -1,4 +1,4 @@
-export default [
+const archetypes = [
   "Blaster",
   // 'Controller',
   // 'Defender',
@@ -15,3 +15,5 @@ export default [
   // 'Arachnos Widow',
   // 'Arachnos Soldier',
 ];
+
+export default archetypes;

@@ -5,7 +5,10 @@ import SlideDropdown from "components/SlideDropdown/";
 import EnhancementSelection from "../EnhancementSelection.js";
 
 import useEnhNavigation from "providers/builder/useEnhancementNavigation.js";
-import { useGetEnhancementSubSections } from "hooks/enhancements.js";
+import {
+  useGetEnhancementSubSections,
+  useGetEnhancementsForPower,
+} from "hooks/enhancements.js";
 import useActiveSets from "providers/builder/useActiveSets.js";
 import {
   useTogglePowerSlot,
@@ -23,12 +26,13 @@ function PowerSlot(props) {
   const togglePowerSlot = useTogglePowerSlot(powerSlotIndex);
   const { tracking } = useActiveSets();
   const getEnhancementSubSections = useGetEnhancementSubSections();
+  const isSlottable = !!useGetEnhancementsForPower()(power).length;
   const handlePillClick = React.useCallback(
     (e) => {
       e.stopPropagation();
-      togglePowerSlot(e);
+      isSlottable && togglePowerSlot(e);
     },
-    [togglePowerSlot]
+    [togglePowerSlot, isSlottable]
   );
 
   if (!power) {
@@ -40,7 +44,6 @@ function PowerSlot(props) {
   const subsections = getEnhancementSubSections(power.setTypes);
 
   const zIndex = isToggled ? props.zIndex + 100 : props.zIndex;
-
   return (
     <div
       className={styles.powerContainer}
@@ -53,7 +56,9 @@ function PowerSlot(props) {
           ({level}) {power.displayName}
         </p>
       </div>
-      <EnhancementBar powerSlotIndex={powerSlotIndex} zIndex={zIndex + 2} />
+      {isSlottable && (
+        <EnhancementBar powerSlotIndex={powerSlotIndex} zIndex={zIndex + 2} />
+      )}
       <SlideDropdown
         powerSlotIndex={powerSlotIndex}
         isToggled={isToggled}

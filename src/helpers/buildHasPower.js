@@ -1,1 +1,2 @@
-export default (fullPowerName) => {};
+// @flow
+export default (fullPowerName: string): void => {};

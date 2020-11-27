@@ -10,7 +10,7 @@ import Sorcery from "data/pools/Sorcery.json";
 import Speed from "data/pools/Speed.json";
 import Teleportation from "data/pools/Teleportation.json";
 
-export default [
+const poolPowers = [
   Concealment,
   Fighting,
   Flight,
@@ -27,3 +27,5 @@ export default [
 
   return { ...pool, powers, poolIndex: i };
 });
+
+export default poolPowers;

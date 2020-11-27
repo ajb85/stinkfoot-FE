@@ -1,9 +1,13 @@
+// @flow
+import { Enhancement, IOSet } from "flow/types.js";
 import enhancements from "data/enhancements.js";
 import ioSets from "data/ioSets.js";
 
+type Accumulator = { [key: string]: Enhancement };
+
 const allSets = Object.values(ioSets).reduce((acc, s) => [...acc, ...s], []);
 const enhLookup = [...Object.values(enhancements.standard), ...allSets].reduce(
-  (acc, e) => {
+  (acc: Accumulator, e: Enhancement | IOSet): Accumulator => {
     const isStandard = e.type === "standard";
     const isSet = e.setType !== undefined;
     if (isStandard) {
@@ -26,7 +30,7 @@ const enhLookup = [...Object.values(enhancements.standard), ...allSets].reduce(
 
 console.log("LOOKUP: ", enhLookup);
 
-export default function (name, type) {
+export default function (name: string, type: string): Enhancement | void {
   if (type === "ioSet") {
     const [set, enhName] = name.split(" // ");
     const enhancement = enhLookup[set] && enhLookup[set][enhName];

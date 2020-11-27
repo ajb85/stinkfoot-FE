@@ -204,7 +204,6 @@ export function useAddPowerFromNewPool() {
   const pool = useActivePowerset("poolPower");
   const canBeAdded = useCanPoolBeAdded()(pool);
   const togglePower = useTogglePower();
-  const setNewActivePool = useFirstUnusedPool();
   const { addPool } = usePoolPowers();
 
   return (power) => {
@@ -212,26 +211,8 @@ export function useAddPowerFromNewPool() {
       const { poolIndex } = pool;
       addPool(poolIndex);
       togglePower(power);
-      setNewActivePool();
     }
   };
-}
-
-export function useFirstUnusedPool() {
-  const { setTrackingManually } = useActiveSets();
-  const activePool = useActivePowerset("poolPower");
-  const canPoolBeAdded = useCanPoolBeAdded();
-  const firstPool =
-    poolPowers.find((pool) => {
-      const isNotActivePool = pool.poolIndex !== activePool.poolIndex;
-      const isExcludedByActivePool =
-        activePool.prevents &&
-        activePool.prevents.find((p) => p === pool.fullName);
-
-      return canPoolBeAdded(pool) && isNotActivePool && !isExcludedByActivePool; // n^2, but tiny n
-    }) || {};
-
-  return setTrackingManually.bind(this, "poolPower", firstPool.poolIndex);
 }
 
 export function useRemovePool() {

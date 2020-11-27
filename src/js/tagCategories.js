@@ -5,7 +5,7 @@ const control = {
   activeColor: "rgb(123,70,2)",
 };
 
-export default {
+const tagCategories = {
   defense: {
     name: "Def",
     color:
@@ -43,3 +43,5 @@ export default {
   immobilize: control,
   terrorized: control,
 };
+
+export default tagCategories;
