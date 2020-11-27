@@ -1,6 +1,7 @@
 // @flow
 
-import * as React, { useEffect } from "react";
+import * as React from "react";
+import { useEffect } from "react";
 import useEnhancementNavigation from "./useEnhancementNavigation";
 import usePoolPowers from "./usePoolPowers.js";
 import usePowerSlots from "./usePowerSlots.js";
@@ -46,7 +47,14 @@ export default function StateManager(props: {|
       const validPoolIndex = allPools.findIndex((p) => canPoolBeAdded(p));
       validPoolIndex >= 0 && setTrackingManually("poolPower", validPoolIndex);
     }
-  }, [activePool, pools, details, canPoolBeAdded]);
+  }, [
+    activePool,
+    pools,
+    details,
+    canPoolBeAdded,
+    allPools,
+    setTrackingManually,
+  ]);
 
   return props.children;
 }
