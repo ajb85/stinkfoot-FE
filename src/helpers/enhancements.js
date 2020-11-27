@@ -104,7 +104,7 @@ export function getSetBonusDataForPowerSlot(
 }
 
 function getStandardEnhancementsForPower(power) {
-  if (!power.slottable) {
+  if (!power || !power.slottable) {
     return [];
   }
 
@@ -123,7 +123,7 @@ function getStandardEnhancementsForPower(power) {
 }
 
 function getIOSetEnhancementsForPower(setType, showSuperior) {
-  if (!ioSets[setType]) {
+  if (setType === undefined || !ioSets[setType]) {
     return [];
   }
 
