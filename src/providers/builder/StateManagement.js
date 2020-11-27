@@ -1,6 +1,6 @@
 // @flow
 
-import React, { useEffect } from "react";
+import * as React, { useEffect } from "react";
 import useEnhancementNavigation from "./useEnhancementNavigation";
 import usePoolPowers from "./usePoolPowers.js";
 import usePowerSlots from "./usePowerSlots.js";
