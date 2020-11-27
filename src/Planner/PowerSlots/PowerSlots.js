@@ -3,7 +3,6 @@ import React, { useState, useEffect, useCallback } from "react";
 import PowerSlot from "./PowerSlot/";
 
 import usePowerSlots from "providers/builder/usePowerSlots.js";
-import { useNextActiveLevel } from "hooks/powersets.js";
 
 import { reducer, getInitialAcc, elementsPerIndex } from "./logic.js";
 
@@ -17,11 +16,6 @@ function PowerSlots(props) {
     () => setView(view === "level" ? "respec" : "level"),
     [view]
   );
-  const updateActiveLevel = useNextActiveLevel();
-
-  useEffect(() => {
-    updateActiveLevel();
-  }, [powerSlots]); // eslint-disable-line
 
   const { selected /*, defaults*/ } = powerSlots.reduce(
     reducer(view),

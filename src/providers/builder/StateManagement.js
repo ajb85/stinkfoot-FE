@@ -14,6 +14,8 @@ import {
   usePowersets,
 } from "hooks/powersets.js";
 
+import { useNextActiveLevel } from "hooks/powersets.js";
+
 export default function StateManager(props: {|
   children: React.Node,
 |}): React.Node {
@@ -29,6 +31,8 @@ export default function StateManager(props: {|
   const canPoolBeAdded = useCanPoolBeAdded();
   const activePool = useActivePowerset("poolPower");
   const allPools = usePowersets("poolPowers");
+
+  const updateActiveLevel = useNextActiveLevel();
 
   useEffect(() => {
     if (tracking.toggledSlot !== null) {
@@ -56,5 +60,9 @@ export default function StateManager(props: {|
     setTrackingManually,
   ]);
 
+  useEffect(() => {
+    // Keep active level up to date
+    updateActiveLevel();
+  }, [powerSlots]); // eslint-disable-line
   return props.children;
 }
