@@ -3,7 +3,9 @@
 // Effects
 type EnhancementEffect = Array<any>;
 type PowerEffect = Array<any>;
+type BonusEffect = {};
 
+// Data
 export type Enhancement = {|
   boostUsePlayerLevel: boolean,
   description:
@@ -144,11 +146,41 @@ export type BuildAnalysis = {|
     powersets: { [key: string]: boolean },
     setBonuses: { [key: string]: number },
     setsInPower: {
-      [key: string]: { [key: string]: {| count: number, set: IOSet |} },
+      [key: string]: {
+        [key: string]: {|
+          count: number,
+          set: IOSet,
+        |},
+      },
     },
   |},
 |};
 
+export type SetBonus = {
+  [key: string]: {
+    effects: BonusEffect,
+    description: {
+      short: string,
+      long: string,
+    },
+    isUnique: boolean,
+    bonusName: string,
+    powerSetIndex: number,
+    fullName: string,
+    setName: string,
+    displayName: string,
+    ignoreStrength: boolean,
+    displays: Array<string>,
+  },
+};
+
+export type BonusLookup = {|
+  unlocked: number,
+  isPvP: boolean,
+  bonus: SetBonus,
+|};
+
+// State
 export type ActiveSets = {|
   primary: number,
   secondary: number,
@@ -158,3 +190,13 @@ export type ActiveSets = {|
   toggledSlot: null | number,
   toggledSet: null | number,
 |};
+
+export type EnhNav = {|
+  section: string,
+  tier: string,
+  setType: null | number,
+  setIndex: null | number,
+  showSuperior: boolean,
+|};
+
+export type Settings = {};

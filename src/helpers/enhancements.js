@@ -1,43 +1,18 @@
+// @flow
+import { Settings, EnhNav, IOSet, BonusLookup } from "flow/types.js";
+
 import enhancements from "data/enhancements.js";
 import ioSets, { setTypeConversion } from "data/ioSets.js";
 import setBonuses from "data/enhancements/setBonuses.json";
 import bonusLibrary from "data/enhancements/bonusesLibrary.json";
 import { getEnhancementImage } from "helpers/getImages.js";
 
-const getEnhancementFromType = {
-  standard: ({ fullName, tier, level }) => {
-    const enhStat = fullName.split("_").slice(1).join("_");
-    const enh = { ...enhancements.standard[enhStat] };
-    const stats = tier === "IO" ? enh.effects[tier][level] : enh.effects[tier];
-    enh.effects = stats;
-    return enh;
-  },
-  ioSet: ({ tier, setIndex, fullName }) => {
-    const { enhancements, ...setInfo } = { ...ioSets[tier][setIndex] };
-    const enhancement = enhancements.find((e) => e.fullName === fullName);
-    enhancement.set = setInfo;
-    return enhancement;
-  },
-};
-
-export const getEnhancement = (enhDetails) => {
-  if (enhDetails.type) {
-    // Is enhancement
-    const enhType =
-      enhDetails.type === "set" || enhDetails.type === "attuned"
-        ? "ioSet"
-        : enhDetails.type;
-    return getEnhancementFromType[enhType](enhDetails);
-  } else {
-    return null;
-  }
-};
-
-export const getSetDisplayName = (tier, setIndex) => {
-  return ioSets[tier][setIndex].displayName;
-};
-
-export const getBonusesForSet = (settings, { showSuperior }, set) => {
+export const getBonusesForSet = (
+  settings: Settings,
+  enhNav: EnhNav,
+  set: IOSet
+): BonusLookup => {
+  const { showSuperior } = enhNav;
   const baseName = set.displayName.split(" ").join("_");
   const isAttuned = setBonuses[baseName] && setBonuses["Superior_" + baseName];
   const correctedSetName =
@@ -61,11 +36,6 @@ export const getBonusesForSet = (settings, { showSuperior }, set) => {
     },
     []
   );
-};
-
-export const getBonusesForCount = (set, count) => {
-  const setName = set.displayName.split(" ").join("_");
-  return setBonuses[setName].slice(0, count - 1);
 };
 
 export const getEnhancementSubSections = ({ section }, types) => {
@@ -94,8 +64,6 @@ export const getEnhancementsForPower = ({ section, setType, showSuperior }) => {
     return getIOSetEnhancementsForPower.bind(this, setType, showSuperior);
   } else return () => [];
 };
-
-export const getIOSet = (setIndex) => ioSets[setIndex];
 
 export const canEnhancementGoInPowerSlot = ({ lookup }, power, enhancement) => {
   // With isUnique, type, and fullName, this will return if the
