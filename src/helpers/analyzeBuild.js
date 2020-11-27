@@ -1,3 +1,5 @@
+// @flow
+
 import ioSets from "data/ioSets.js";
 import { PowerSlot, BuildAnalysis, ActiveSets } from "flow/types.js";
 
