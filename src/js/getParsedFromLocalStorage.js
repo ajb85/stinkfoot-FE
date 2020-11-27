@@ -1,4 +1,10 @@
-export default (key, defaultValue = {}) => {
+// @flow
+
+export default (key: string, defaultValue: void | {}): {} => {
+  if (defaultValue === undefined) {
+    defaultValue = {};
+  }
+
   const data = localStorage.getItem(key);
   let parsed;
   try {

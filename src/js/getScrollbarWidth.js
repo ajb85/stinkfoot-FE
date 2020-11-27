@@ -1,5 +1,7 @@
-export default (function (cache) {
-  return function getScrollbarWidth() {
+// @flow
+
+export default (function (cache: void | string) {
+  return function getScrollbarWidth(): string {
     // Creating invisible container
     if (cache) {
       return cache;

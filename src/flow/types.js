@@ -97,3 +97,31 @@ export type PowerSlot = {|
   enhSlots: Array<EnhancementSlot>,
   type: string,
 |};
+
+export type Badge = {|
+  badgeIndex: number,
+  badgeSection: string,
+  completed: boolean,
+  hero: boolean,
+  name: string,
+  notes: string,
+  praetorian: boolean,
+  villain: boolean,
+|};
+
+export type CharacterBuild = {|
+  archetype: string,
+  badges: {
+    accolade: Array<Badge>,
+    accomplishment: Array<Badge>,
+    achievement: Array<Badge>,
+    dayJob: Array<Badge>,
+    defeat: Array<Badge>,
+    exploration: Array<Badge>,
+    history: Array<Badge>,
+  },
+  name: string,
+  origin: string,
+  poolPowers: Array<number>,
+  powerSlots: Array<PowerSlot>,
+|};

@@ -1,15 +1,18 @@
+// @flow
+
 import poolPowers from "data/poolPowers.js";
 import powersets from "data/powersets.js";
 import epicPools from "data/epicPools.js";
 import origins from "data/origins.js";
 import getEnhancementFromName from "js/getEnhancementFromName.js";
+import type { CharacterBuild } from "flow/types.js";
 
 const atOrderToPlural = {
   primary: "primaries",
   secondary: "secondaries",
 };
 
-export default function (str) {
+export default function (str: string): CharacterBuild {
   try {
     if (str.length < 100) {
       return {
