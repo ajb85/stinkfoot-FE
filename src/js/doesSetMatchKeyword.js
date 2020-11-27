@@ -1,8 +1,16 @@
-const stringIncludes = (includes) => (str) => {
+// @flow
+
+import type { ShopperEnhancement } from "flow/types.js";
+
+const stringIncludes = (includes: string) => (str: string): boolean => {
   return str.toLowerCase().includes(includes.toLowerCase());
 };
 
-export default (keyword, setName, enhancements) => {
+export default (
+  keyword: string,
+  setName: string,
+  enhancements: Array<ShopperEnhancement>
+): boolean => {
   if (!keyword || keyword.split(" ").filter((x) => x).length === 0) {
     return true;
   }

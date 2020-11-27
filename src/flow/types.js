@@ -1,8 +1,10 @@
-// Effects
-type EnhancementEffect = Array<Any>;
-type PowerEffect = Array<Any>;
+// @flow
 
-export type Enhancement = {
+// Effects
+type EnhancementEffect = Array<any>;
+type PowerEffect = Array<any>;
+
+export type Enhancement = {|
   boostUsePlayerLevel: boolean,
   description:
     | string
@@ -11,7 +13,7 @@ export type Enhancement = {
         short: string,
       },
   displayName: string,
-  effects: EnhancementEffect,
+  //   effects: EnhancementEffect,
   fullName: "Boosts.Attuned_Unbreakable_Guard_A.Attuned_Unbreakable_Guard_A",
   image: string,
   imageName?: string,
@@ -20,9 +22,33 @@ export type Enhancement = {
   setType?: number,
   tier: string,
   type: string,
-};
+  aliases?: Array<string>,
+|};
 
-export type Power = {
+export type IOSet = {|
+  displayName: string,
+  enhancements: Array<Enhancement>,
+  fullName: string,
+  imageName: string,
+  imageNameSuperior: string,
+  isAttuned: true,
+  levels: { min: number, max: number },
+  setIndex: number,
+  setType: number,
+  setTypeName: string,
+|};
+
+export type ShopperEnhancement = {|
+  name: string,
+  powerList: { [key: string]: { count: number } },
+|};
+
+export type EnhancementSlot = {|
+  slotLevel: null | number,
+  enhancement: Enhancement,
+|};
+
+export type Power = {|
   accuracy: number,
   accuracyMult: number,
   allowedEnhancements: Array<string>,
@@ -63,4 +89,11 @@ export type Power = {
   target: number,
   targetLoS: boolean,
   toggleCost: number,
-};
+|};
+
+export type PowerSlot = {|
+  level: number,
+  power: Power,
+  enhSlots: Array<EnhancementSlot>,
+  type: string,
+|};

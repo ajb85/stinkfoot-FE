@@ -354,6 +354,9 @@ const ioSets = [
   return acc;
 }, {});
 
+const firstName = Object.keys(ioSets)[0];
+console.log("IO SET: ", ioSets[firstName]);
+
 export default ioSets;
 
 export const setTypeConversion = {
