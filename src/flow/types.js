@@ -13,7 +13,7 @@ export type Enhancement = {|
         short: string,
       },
   displayName: string,
-  //   effects: EnhancementEffect,
+  effects: EnhancementEffect,
   fullName: "Boosts.Attuned_Unbreakable_Guard_A.Attuned_Unbreakable_Guard_A",
   image: string,
   imageName?: string,
@@ -124,4 +124,37 @@ export type CharacterBuild = {|
   origin: string,
   poolPowers: Array<number>,
   powerSlots: Array<PowerSlot>,
+|};
+
+export type BuildAnalysis = {|
+  excluded: {|
+    enhancements: { [key: string]: boolean },
+    powers: { [key: string]: boolean },
+    powersets: { [key: string]: boolean },
+  |},
+  lookup: {|
+    enhancements: {
+      [key: string]: {|
+        count: number,
+        powerDisplayName: string,
+        powerSlotIndices: Array<number>,
+      |},
+    },
+    powers: { [key: string]: number },
+    powersets: { [key: string]: boolean },
+    setBonuses: { [key: string]: number },
+    setsInPower: {
+      [key: string]: { [key: string]: {| count: number, set: IOSet |} },
+    },
+  |},
+|};
+
+export type ActiveSets = {|
+  primary: number,
+  secondary: number,
+  poolPower: number,
+  epicPool: number,
+  activeLevel: number,
+  toggledSlot: null | number,
+  toggledSet: null | number,
 |};
