@@ -1,5 +1,7 @@
 import React, { useState, createContext, useContext } from "react";
 
+import useCharacters from "../useCharacters.js";
+
 const initialState = {
   primary: 0,
   secondary: 0,
@@ -13,6 +15,37 @@ const initialState = {
 const context = createContext();
 
 export const IndexTrackingProvider = (props) => {
+  const { activeCharacter } = useCharacters();
+  const { powerSlots } = activeCharacter || {};
+  const primaryPower =
+    powerSlots &&
+    powerSlots.find(
+      ({ power }) =>
+        power &&
+        power.powerSetIndex !== undefined &&
+        power.archetypeOrder === "primary"
+    );
+  const secondaryPower =
+    powerSlots &&
+    powerSlots.find(
+      ({ power }) =>
+        power &&
+        power.powerSetIndex !== undefined &&
+        power.archetypeOrder === "secondary"
+    );
+
+  if (primaryPower) {
+    console.log("PRIMARY POWER: ", primaryPower);
+    initialState.primary = primaryPower.powersetIndex;
+  }
+
+  if (secondaryPower) {
+    console.log("SECONDARY POWER: ", secondaryPower);
+    initialState.secondary = secondaryPower.powersetIndex;
+  }
+
+  console.log("INIT: ", initialState);
+
   const [tracking, setTracking] = useState(initialState);
 
   const setActiveTracking = (e) => {

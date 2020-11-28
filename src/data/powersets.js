@@ -367,7 +367,7 @@ const powersets = {
       Blaster_Primary_Water_Blast,
       Blaster_Primary_Psychic_Blast,
       Blaster_Primary_Radiation_Blast,
-    ],
+    ].map(markSet("Blaster")),
     secondaries: [
       Blaster_Secondary_Devices,
       Blaster_Secondary_Tactical_Arrow,
@@ -382,7 +382,7 @@ const powersets = {
       Blaster_Secondary_Energy_Manipulation,
       Blaster_Secondary_Fire_Manipulation,
       Blaster_Secondary_Temporal_Manipulation,
-    ],
+    ].map(markSet("Blaster")),
   },
   // Controller: { primaries: [], secondaries: [] },
   // Defender: { primaries: [], secondaries: [] },
@@ -415,7 +415,7 @@ const powersets = {
       Brute_Primary_Street_Justice,
       Brute_Primary_Titan_Weapons,
       Brute_Primary_War_Mace,
-    ],
+    ].map(markSet("Brute")),
     secondaries: [
       Brute_Secondary_Bio_Organic_Armor,
       Brute_Secondary_Dark_Armor,
@@ -430,7 +430,7 @@ const powersets = {
       Brute_Secondary_Stone_Armor,
       Brute_Secondary_Super_Reflexes,
       Brute_Secondary_Willpower,
-    ],
+    ].map(markSet("Brute")),
   },
   // Stalker: { primaries: [], secondaries: [] },
   // Mastermind: { primaries: [], secondaries: [] },
@@ -439,5 +439,12 @@ const powersets = {
   // 'Arachnos Widow': { primaries: [], secondaries: [] },
   // 'Arachnos Soldier': { primaries: [], secondaries: [] },
 };
+
+function markSet(archetype) {
+  return (set, i) => ({
+    ...set,
+    powers: [...set.powers.map((p) => ({ ...p, powersetIndex: i, archetype }))],
+  });
+}
 
 export default powersets;
