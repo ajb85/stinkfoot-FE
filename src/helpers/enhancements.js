@@ -110,9 +110,11 @@ function getStandardEnhancementsForPower(power) {
 
   /* TEMPORARY TO SOLVE BUG, WILL REMOVE WHEN DATA IS FIXED */
   const allowed = new Set();
-  power.allowedEnhancements.forEach((enhName) =>
-    allowed.add(enhancements.standard[enhName])
-  );
+  power.allowedEnhancements.forEach((enhName) => {
+    if (enhancements.standard[enhName]) {
+      allowed.add(enhancements.standard[enhName]);
+    }
+  });
   /* TEMPORARY TO SOLVE BUG, WILL REMOVE WHEN DATA IS FIXED */
 
   return Array.from(allowed);
