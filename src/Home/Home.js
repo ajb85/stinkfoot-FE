@@ -1,9 +1,11 @@
 import React from "react";
 
+import styles from "./styles.module.scss";
+
 export default function Home() {
   document.title = "Stinkfoot CoH Companion";
   return (
-    <div>
+    <div className={styles.Home}>
       This is currently just a barebones version of the app that is meant to act
       as a proof-of-concept. If you're using this, please understand things will
       break, your data will be removed at some points, and you'll generally just
