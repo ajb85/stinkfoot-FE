@@ -1,11 +1,11 @@
 // @flow
 import { Settings, EnhNav, IOSet, BonusLookup } from "flow/types.js";
 
-import enhancements from "data/enhancements.js";
-import ioSets, { setTypeConversion } from "data/ioSets.js";
+import enhancements, { mapSetTypeToName } from "data/enhancements.js";
 import setBonuses from "data/enhancements/setBonuses.json";
 import bonusLibrary from "data/enhancements/bonusesLibrary.json";
-import { getEnhancementImage } from "helpers/getImages.js";
+
+const { ioSets } = enhancements;
 
 export const getBonusesForSet = (
   settings: Settings,
@@ -44,7 +44,7 @@ export const getEnhancementSubSections = ({ section }, types) => {
   if (isSet) {
     // If IOs, map over the setNums
     return types.map((setType) => ({
-      name: setTypeConversion[setType]
+      name: mapSetTypeToName[setType]
         .split(" ")
         .map((n) => n[0])
         .slice(0, 2)
@@ -110,21 +110,12 @@ function getStandardEnhancementsForPower(power) {
 
   /* TEMPORARY TO SOLVE BUG, WILL REMOVE WHEN DATA IS FIXED */
   const allowed = new Set();
-  power.allowedEnhancements.forEach((x) => allowed.add(x));
+  power.allowedEnhancements.forEach((enhName) =>
+    allowed.add(enhancements.standard[enhName])
+  );
   /* TEMPORARY TO SOLVE BUG, WILL REMOVE WHEN DATA IS FIXED */
 
-  return [...allowed].reduce((acc, enhName) => {
-    const enh = { ...enhancements.standard[enhName] };
-    const { imageName } = enh;
-    if (!imageName) {
-      console.log("MISSING DATA: ", enhName);
-      return acc;
-    } else {
-      enh.image = getEnhancementImage(imageName);
-      acc.push(enh);
-      return acc;
-    }
-  }, []);
+  return Array.from(allowed);
 }
 
 function getIOSetEnhancementsForPower(showSuperior, power) {
@@ -133,19 +124,7 @@ function getIOSetEnhancementsForPower(showSuperior, power) {
   }
 
   return power.setTypes.reduce((acc, setType) => {
-    acc[setType] = ioSets[setType].map((set) => {
-      const { imageName, superiorImageName } = set;
-      if (!imageName) {
-        throw new Error("No image found for: ", set.displayName);
-      }
-      // Superior enhancements have an "s" in front of the name
-
-      const correctedImgName =
-        showSuperior && superiorImageName ? superiorImageName : imageName;
-      set.image = getEnhancementImage(correctedImgName);
-      set.enhancements.forEach((e) => (e.image = set.image));
-      return set;
-    });
+    acc[setType] = ioSets[setType];
     return acc;
   }, {});
 }

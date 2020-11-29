@@ -5,7 +5,8 @@ import ShoppingList from "./ShoppingList/";
 import useShoppingTotals from "providers/useShoppingTotals.js";
 import useCharacters from "providers/useCharacters.js";
 
-import ioSets from "data/ioSets.js";
+import enhancements from "data/enhancements.js";
+const { ioSets } = enhancements;
 
 export default function Shopper() {
   window.title = "Shopping List";
