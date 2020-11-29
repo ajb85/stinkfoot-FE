@@ -17,6 +17,7 @@ import styles from "styles.module.scss";
 
 import NavBar from "Home/NavBar/";
 import AddCharacter from "Home/AddCharacter/";
+import Notifications from "Home/Notifications/";
 
 import { closeMenu } from "js/closeTracker.js";
 
@@ -28,6 +29,7 @@ function App() {
       <Router history={history}>
         <UniversalProviders>
           <div onClick={closeMenu} className={styles.appContainer}>
+            <Notifications />
             <AddCharacter
               open={modalOpen}
               toggle={setModalOpen.bind(this, !modalOpen)}

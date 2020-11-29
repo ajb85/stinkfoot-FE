@@ -35,16 +35,12 @@ export const IndexTrackingProvider = (props) => {
     );
 
   if (primaryPower) {
-    console.log("PRIMARY POWER: ", primaryPower);
     initialState.primary = primaryPower.powersetIndex;
   }
 
   if (secondaryPower) {
-    console.log("SECONDARY POWER: ", secondaryPower);
     initialState.secondary = secondaryPower.powersetIndex;
   }
-
-  console.log("INIT: ", initialState);
 
   const [tracking, setTracking] = useState(initialState);
 
