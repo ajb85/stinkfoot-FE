@@ -57,11 +57,11 @@ export const getEnhancementSubSections = ({ section }, types) => {
   return ["IO", "SO", "DO", "TO"];
 };
 
-export const getEnhancementsForPower = ({ section, setType, showSuperior }) => {
+export const getEnhancementsForPower = ({ section, showSuperior }) => {
   if (section === "standard") {
     return getStandardEnhancementsForPower;
   } else if (section === "sets") {
-    return getIOSetEnhancementsForPower.bind(this, setType, showSuperior);
+    return getIOSetEnhancementsForPower.bind(this, showSuperior);
   } else return () => [];
 };
 
@@ -127,24 +127,25 @@ function getStandardEnhancementsForPower(power) {
   }, []);
 }
 
-function getIOSetEnhancementsForPower(setType, showSuperior) {
-  if (setType === undefined || !ioSets[setType]) {
+function getIOSetEnhancementsForPower(showSuperior, power) {
+  if (!power || !power.setTypes) {
     return [];
   }
 
-  return ioSets[setType].map((set) => {
-    let { imageName } = set;
-    if (!imageName) {
-      throw new Error("No image found for: ", set.displayName);
-    }
-    // Superior enhancements have an "s" in front of the name
+  return power.setTypes.reduce((acc, setType) => {
+    acc[setType] = ioSets[setType].map((set) => {
+      const { imageName, superiorImageName } = set;
+      if (!imageName) {
+        throw new Error("No image found for: ", set.displayName);
+      }
+      // Superior enhancements have an "s" in front of the name
 
-    const correctedImgName =
-      !set.isAttuned || !showSuperior || set.noSuperior
-        ? imageName
-        : "S" + imageName;
-    set.image = getEnhancementImage(correctedImgName);
-    set.enhancements.forEach((e) => (e.image = set.image));
-    return set;
-  });
+      const correctedImgName =
+        showSuperior && superiorImageName ? superiorImageName : imageName;
+      set.image = getEnhancementImage(correctedImgName);
+      set.enhancements.forEach((e) => (e.image = set.image));
+      return set;
+    });
+    return acc;
+  }, {});
 }

@@ -34,7 +34,7 @@ function EnhancementSelection(props) {
   const addEnhancement = useAddEnhancement(props.powerSlotIndex);
   const removeEnhancement = useRemoveEnhancement(props.powerSlotIndex);
   const { enhNavigation } = useEnhNavigation();
-  const { section, tier } = enhNavigation;
+  const { section, tier, setType } = enhNavigation;
   const enhLookup = powerSlot.enhSlots.reduce((acc, { enhancement }, i) => {
     if (enhancement) {
       acc[enhancement.fullName] = i;
@@ -52,9 +52,11 @@ function EnhancementSelection(props) {
     }
   };
 
+  const currentCategory = isSet ? enhCategories[setType] || [] : enhCategories;
+
   return (
     <div className={styles.enhancementPreview}>
-      {enhCategories.map((c, i) => {
+      {currentCategory.map((c, i) => {
         const isLocked = isSet && toggledEnhancementSet === i;
         const noActive = !isSet || toggledEnhancementSet === null;
         const className = noActive

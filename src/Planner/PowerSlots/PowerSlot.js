@@ -26,7 +26,7 @@ function PowerSlot(props) {
   const togglePowerSlot = useTogglePowerSlot(powerSlotIndex);
   const { tracking } = useActiveSets();
   const getEnhancementSubSections = useGetEnhancementSubSections();
-  const isSlottable = !!useGetEnhancementsForPower()(power).length;
+  const isSlottable = !!Object.keys(useGetEnhancementsForPower()(power)).length;
   const handlePillClick = React.useCallback(
     (e) => {
       e.stopPropagation();
