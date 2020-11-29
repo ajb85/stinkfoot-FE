@@ -22,7 +22,7 @@ export const IndexTrackingProvider = (props) => {
     powerSlots.find(
       ({ power }) =>
         power &&
-        power.powerSetIndex !== undefined &&
+        power.powersetIndex !== undefined &&
         power.archetypeOrder === "primary"
     );
   const secondaryPower =
@@ -30,16 +30,16 @@ export const IndexTrackingProvider = (props) => {
     powerSlots.find(
       ({ power }) =>
         power &&
-        power.powerSetIndex !== undefined &&
+        power.powersetIndex !== undefined &&
         power.archetypeOrder === "secondary"
     );
 
   if (primaryPower) {
-    initialState.primary = primaryPower.powersetIndex;
+    initialState.primary = primaryPower.power.powersetIndex;
   }
 
   if (secondaryPower) {
-    initialState.secondary = secondaryPower.powersetIndex;
+    initialState.secondary = secondaryPower.power.powersetIndex;
   }
 
   const [tracking, setTracking] = useState(initialState);
