@@ -94,11 +94,13 @@ export const useResetBuild = () => {
 };
 
 export const useSwitchArchetype = () => {
-  const { setCharacterDetail } = useCharacterDetails();
+  const { setCharacterDetail, character } = useCharacterDetails();
   const resetBuild = useResetBuild();
   return (e) => {
-    setCharacterDetail(e);
-    resetBuild();
+    if (e.target.value !== character.archetype) {
+      setCharacterDetail(e);
+      resetBuild();
+    }
   };
 };
 
