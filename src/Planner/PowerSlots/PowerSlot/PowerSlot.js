@@ -1,198 +1,135 @@
 import React from "react";
 
-import StandardEnhancements from "../Enhancements/Standards.js";
-import IOSetEnhancements from "../Enhancements/IOSets.js";
-// import { getPowerStats } from "../../../js/powerCalculations.js";
-// import TableList from "components/TableList/";
 import PunnettSquare from "components/PunnettSquare/";
+import SlideDropdown from "components/SlideDropdown/";
+import EnhancementSelection from "../EnhancementSelection.js";
 
 import useEnhNavigation from "providers/builder/useEnhancementNavigation.js";
-import useCharacterDetails from "providers/builder/useCharacterDetails.js";
-import { useGetEnhancementSubSections } from "hooks/enhancements.js";
+import {
+  useGetEnhancementSubSections,
+  useGetEnhancementsForPower,
+} from "hooks/enhancements.js";
 import useActiveSets from "providers/builder/useActiveSets.js";
-import usePowerSlots from "providers/builder/usePowerSlots.js";
-import { useTogglePowerSlot } from "hooks/powersets.js";
+import {
+  useTogglePowerSlot,
+  useClearActiveEnhancementSet,
+} from "hooks/powersets.js";
+import EnhancementBar from "components/EnhancementBar/";
 
-import { getEnhancementImageWithOverlay } from "helpers/getImages.js";
 import styles from "../styles.module.scss";
-let timeout;
-function PowerSlot({ slot }) {
+
+function PowerSlot(props) {
+  const { slot } = props;
   const { level, power, powerSlotIndex } = slot;
-  const { enhNavigation, updateEnhNavigation } = useEnhNavigation();
+  const enhNav = useEnhNavigation();
+  const clearActiveEnhancementSet = useClearActiveEnhancementSet();
   const togglePowerSlot = useTogglePowerSlot(powerSlotIndex);
-  const { tracking, setTrackingManually } = useActiveSets();
-  const { powerSlots } = usePowerSlots();
+  const { tracking } = useActiveSets();
   const getEnhancementSubSections = useGetEnhancementSubSections();
-  const isToggled = tracking.toggledSlot === powerSlotIndex;
-  const zIndex = powerSlots.length * 2 - powerSlotIndex * 2;
-
-  const pill = React.useRef();
-
-  React.useEffect(() => {
-    // Delay changing overflow on open so you slowly see the pill open up to show its contents
-    // Then when closing, immediately hide anything out of range.  This is hack-y as all hell but
-    // it does work :)
-    clearTimeout(timeout);
-    if (isToggled) {
-      timeout = setTimeout(() => {
-        pill.current && (pill.current.style.overflow = "visible");
-      }, 250);
-    } else {
-      pill.current && (pill.current.style.overflow = "hidden");
-    }
-  }, [isToggled]);
+  const isSlottable = !!useGetEnhancementsForPower()(power).length;
+  const handlePillClick = React.useCallback(
+    (e) => {
+      e.stopPropagation();
+      isSlottable && togglePowerSlot(e);
+    },
+    [togglePowerSlot, isSlottable]
+  );
 
   if (!power) {
-    // Empty PowerSlot
     const isActive = tracking.activeLevel === level;
-    return (
-      <div className={styles.powerContainer}>
-        <div
-          className={styles.power}
-          onClick={setTrackingManually.bind(this, "activeLevel", level)}
-          style={{ backgroundColor: isActive ? "green" : "grey" }}
-        >
-          <p>({level})</p>
-        </div>
-      </div>
-    );
+    return <EmptyPowerSlot level={level} isActive={isActive} />;
   }
 
-  const topOptions = [
+  const isToggled = tracking.toggledSlot === powerSlotIndex;
+  const subsections = getEnhancementSubSections(power.setTypes);
+
+  const zIndex = isToggled ? props.zIndex + 100 : props.zIndex;
+  return (
+    <div
+      className={styles.powerContainer}
+      key={powerSlotIndex}
+      onClick={handlePillClick}
+      style={{ zIndex: zIndex + 1 }}
+    >
+      <div className={styles.pill} style={{ zIndex: zIndex + 1 }}>
+        <p className="pillText">
+          ({level}) {power.displayName}
+        </p>
+      </div>
+      {isSlottable && (
+        <EnhancementBar powerSlotIndex={powerSlotIndex} zIndex={zIndex + 2} />
+      )}
+      <SlideDropdown
+        powerSlotIndex={powerSlotIndex}
+        isToggled={isToggled}
+        zIndex={zIndex}
+        onClick={clearActiveEnhancementSet}
+      >
+        <div className={styles.divider} />
+        <PunnettSquare
+          topOptions={getTopOptions(enhNav, power)}
+          sideOptions={getSideOptions(enhNav, subsections)}
+        >
+          <EnhancementSelection powerSlotIndex={powerSlotIndex} />
+        </PunnettSquare>
+      </SlideDropdown>
+    </div>
+  );
+}
+
+function getTopOptions(enhNav, power) {
+  const { enhNavigation, viewStandardEnhancements, viewIOSets } = enhNav;
+  return [
     {
       content: "Standard",
       styles: {
         color: enhNavigation.section === "standard" ? "red" : null,
       },
-      onClick: updateEnhNavigation.bind(this, {
-        section: "standard",
-        tier: "IO",
-        ioSetIndex: null,
-      }),
+      onClick: viewStandardEnhancements.bind(this, "IO"),
     },
     {
       content: "Sets",
       styles: { color: enhNavigation.section === "sets" ? "red" : null },
-      onClick: updateEnhNavigation.bind(this, {
-        section: "sets",
-        tier: power.setTypes[0],
-        ioSetIndex: null,
-      }),
+      onClick: viewIOSets.bind(this, power.setTypes[0]),
     },
   ];
+}
 
-  const sideOptions = getEnhancementSubSections(power.setTypes).map(
-    ({ tier, name }) => ({
-      content: name
-        .split(" ")
-        .map((n) => n[0])
-        .slice(0, 2)
-        .join(""),
-      onClick: updateEnhNavigation.bind(this, {
-        tier,
-        ioSetIndex: null,
-      }),
+function getSideOptions(enhNav, subsections) {
+  const { enhNavigation, viewEnhancementSubSection } = enhNav;
+  const { section } = enhNavigation;
+  const isSet = section === "sets";
+
+  return subsections.map((category) => {
+    const name = isSet ? category.name : category;
+    const setType = isSet ? category.setType : name;
+    const isActive = isSet
+      ? setType === enhNavigation.setType
+      : name === enhNavigation.tier;
+    return {
+      content: name,
+      onClick: viewEnhancementSubSection.bind(this, setType),
       style: {
-        color: enhNavigation.tier === tier ? "red" : null,
+        color: isActive ? "red" : "white",
         cursor: "pointer",
       },
-    })
-  );
+    };
+  });
+}
 
+function EmptyPowerSlot({ isActive, level }) {
+  const { setTrackingManually } = useActiveSets();
   return (
-    <div
-      className={styles.powerContainer}
-      onClick={!isToggled ? togglePowerSlot : noFunc}
-      key={powerSlotIndex}
-    >
+    <div className={styles.powerContainer}>
       <div
-        className={`${styles.power} ${isToggled && styles.toggled}`}
-        style={{
-          backgroundColor: "#1b4ea8",
-          zIndex,
-        }}
-        ref={pill}
+        className={styles.power}
+        onClick={setTrackingManually.bind(this, "activeLevel", level)}
+        style={{ backgroundColor: isActive ? "green" : "grey" }}
       >
-        {/* Pill Title */}
-        <p className="pillText" onClick={togglePowerSlot}>
-          ({level}) {power.displayName}
-        </p>
-
-        <PunnettSquare topOptions={topOptions} sideOptions={sideOptions}>
-          {enhNavigation.section === "standard" ? (
-            <StandardEnhancements
-              powerSlotIndex={powerSlotIndex}
-              power={power}
-            />
-          ) : (
-            <IOSetEnhancements powerSlotIndex={powerSlotIndex} power={power} />
-          )}
-        </PunnettSquare>
-        {/* Power stats - temporarily disabled, not ready for this feature */}
-        {/* {false && <TableList list={powerStats} />} */}
+        <p>({level})</p>
       </div>
-
-      <FloatingSelectedEnhancements slot={slot} />
     </div>
   );
 }
 
 export default PowerSlot;
-
-function noFunc() {}
-function FloatingSelectedEnhancements({ slot }) {
-  const {
-    powerSlots,
-    removePowerFromSlot,
-    removeEnhancement,
-  } = usePowerSlots();
-  const { level, enhSlots, powerSlotIndex } = slot;
-  const { character } = useCharacterDetails();
-  const zIndex = powerSlots.length * 2 - powerSlotIndex * 2;
-
-  return (
-    <div
-      style={{ zIndex: zIndex + 1 }}
-      className={styles.enhancementsContainer}
-    >
-      {enhSlots.map(({ slotLevel, enhancement }, j) => {
-        const displayLevel = slotLevel === null ? level : slotLevel;
-        const images = enhancement
-          ? getEnhancementImageWithOverlay(character.origin, enhancement)
-          : null;
-
-        return (
-          <React.Fragment key={`${slotLevel} @ ${j}`}>
-            {images ? (
-              <div
-                className={styles.enhancementSlot}
-                onClick={removePowerFromSlot.bind(this, powerSlotIndex, j)}
-              >
-                <div
-                  className={styles.enhancementImage}
-                  style={{ left: 8, top: 0 }}
-                >
-                  {!!images.overlay && (
-                    <img src={images.overlay} alt={enhancement.displayName} />
-                  )}
-                  <img src={images.enhancement} alt={enhancement.displayName} />
-                  <p>{displayLevel}</p>
-                </div>
-              </div>
-            ) : (
-              <div className={styles.enhancementSlot}>
-                <div
-                  key={`${powerSlotIndex} ${j}`}
-                  onClick={removeEnhancement.bind(this, powerSlotIndex, j)}
-                  className={styles.enhancementBubble}
-                >
-                  <p>{displayLevel}</p>
-                </div>
-              </div>
-            )}
-          </React.Fragment>
-        );
-      })}
-    </div>
-  );
-}
