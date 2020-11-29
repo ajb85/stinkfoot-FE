@@ -233,7 +233,7 @@ const standard = [
   const name = enh.fullName.substring(nameStart.length);
   acc[name] = enh;
   return acc;
-});
+}, {});
 
 const ioSets = [
   Achilles_Heel,
