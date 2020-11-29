@@ -10,7 +10,7 @@ import {
 import styles from "./styles.module.scss";
 
 import notifications from "js/inspectVersions.js";
-console.log("N: ", notifications);
+
 export default function Notifications() {
   const [modal, setModal] = useState({
     isOpen: !!notifications.length,
@@ -60,9 +60,11 @@ export default function Notifications() {
         </ul>
       </ModalBody>
       <ButtonGroup className={styles.buttons}>
-        <Button theme="light" onClick={goBack} disabled={!modal.nIndex}>
-          Go Back
-        </Button>
+        {notifications.length > 1 && (
+          <Button theme="light" onClick={goBack} disabled={!modal.nIndex}>
+            Go Back
+          </Button>
+        )}
         <Button theme="primary" onClick={nextButton}>
           {modal.nIndex !== notifications.length - 1 ? "Next" : "Finish"}
         </Button>
