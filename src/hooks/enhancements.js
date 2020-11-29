@@ -23,7 +23,7 @@ export const useGetEnhancementsForPowerSlot = (powerSlotIndex) => {
 export const useGetEnhancementSubSections = (powerSlotIndex) => {
   const { powerSlots } = usePowerSlots();
   const powerSlot = powerSlots[powerSlotIndex];
-  const settings = {};
+  // const settings = {};
   return getEnhancementSubSections.bind(this, powerSlot);
 };
 

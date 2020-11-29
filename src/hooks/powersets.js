@@ -106,9 +106,16 @@ export const useSwitchArchetype = () => {
 
 export const useChangePowerset = () => {
   const { powerSlots, removePowerFromSlot, addPowerToSlot } = usePowerSlots();
-  const { setActiveTracking } = useActiveSets();
+  const { tracking, setActiveTracking } = useActiveSets();
   const secondaries = usePowersets("secondaries");
+
   return (e) => {
+    const { name, value } = e.target;
+    // console.log("CHANGING: ", name, value, s)
+    if (value === tracking[name]) {
+      return;
+    }
+
     powerSlots.forEach(
       ({ power }, i) =>
         power &&

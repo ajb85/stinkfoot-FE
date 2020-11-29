@@ -7,7 +7,6 @@ import powerSlotsTemplate from "data/powerSlotsTemplate.js";
 
 const context = createContext();
 
-let timeout;
 export const PowerSlotsProvider = (props) => {
   const { activeCharacter, updateActiveCharacter } = useCharacters();
   const setPowerSlots = (value) => updateActiveCharacter("powerSlots", value);
@@ -15,33 +14,32 @@ export const PowerSlotsProvider = (props) => {
   const { Provider } = context;
   console.log("POWERSLOTS: ", powerSlots);
 
-  const removePowerFromSlot = ((cache) => (index) => {
-    // Experimenting with this pattern, allows multiple calls to the same
-    // state updater to pool up the instructions then loop over them and make a single
-    // state update
+  const removePowerFromSlot = ((cache, timeout) => (index) => {
+    if (timeout) {
+      clearTimeout(timeout);
+    }
     cache.push(index);
-    timeout && clearTimeout(timeout);
     timeout = setTimeout(() => {
       const newSlots = [...powerSlots];
-      cache.forEach((index) => {
-        if (newSlots[index].enhSlots.length > 1) {
-          newSlots[index].enhSlots.forEach(
+      cache.forEach((i) => {
+        if (newSlots[i].enhSlots && newSlots[i].enhSlots.length > 1) {
+          newSlots[i].enhSlots.forEach(
             ({ slotLevel }) => slotLevel && slotsManager.returnSlot(slotLevel)
           );
         }
-        newSlots[index] = powerSlotsTemplate[index];
+        newSlots[i] = powerSlotsTemplate[i];
       });
       setPowerSlots(newSlots);
       cache = [];
       timeout = null;
-    });
+    }, 25);
   })([]);
 
-  const addPowerToSlot = ((cache) => (power, index) => {
-    // Experimenting with this pattern, allows multiple calls to the same
-    // state updater to pool up the instructions then loop over them and make a single
-    // state update
-    timeout && clearTimeout(timeout);
+  const addPowerToSlot = ((cache, timeout) => (power, index) => {
+    if (timeout) {
+      clearTimeout(timeout);
+    }
+
     cache.push({ power, index });
     timeout = setTimeout(() => {
       const newSlots = [...powerSlots];
