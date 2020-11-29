@@ -2,47 +2,15 @@ import React, { useState, createContext, useContext } from "react";
 
 import useCharacters from "../useCharacters.js";
 
-const initialState = {
-  primary: 0,
-  secondary: 0,
-  poolPower: 0,
-  epicPool: 0,
-  activeLevel: 1,
-  toggledSlot: null,
-  toggledSet: null,
-};
+import type { PowerSlot, ActiveSets, Power } from "flow/types.js";
 
 const context = createContext();
 
 export const IndexTrackingProvider = (props) => {
   const { activeCharacter } = useCharacters();
   const { powerSlots } = activeCharacter || {};
-  const primaryPower =
-    powerSlots &&
-    powerSlots.find(
-      ({ power }) =>
-        power &&
-        power.powersetIndex !== undefined &&
-        power.archetypeOrder === "primary"
-    );
-  const secondaryPower =
-    powerSlots &&
-    powerSlots.find(
-      ({ power }) =>
-        power &&
-        power.powersetIndex !== undefined &&
-        power.archetypeOrder === "secondary"
-    );
 
-  if (primaryPower) {
-    initialState.primary = primaryPower.power.powersetIndex;
-  }
-
-  if (secondaryPower) {
-    initialState.secondary = secondaryPower.power.powersetIndex;
-  }
-
-  const [tracking, setTracking] = useState(initialState);
+  const [tracking, setTracking] = useState(getInitialState());
 
   const setActiveTracking = (e) => {
     const { name, value } = e.target;
@@ -68,3 +36,49 @@ export const IndexTrackingProvider = (props) => {
 };
 
 export default () => useContext(context);
+
+function getInitialState(powerSlots: Array<PowerSlot>): ActiveSets {
+  const initialState = {
+    primary: 0,
+    secondary: 0,
+    poolPower: 0,
+    epicPool: 0,
+    activeLevel: 1,
+    toggledSlot: null,
+    toggledSet: null,
+  };
+
+  const primaryPower = searchForPower(powerSlots, "primary");
+  const secondaryPower = searchForPower(powerSlots, "secondary");
+  const epicPower = searchForPower(powerSlots, "epicPool");
+
+  if (primaryPower) {
+    initialState.primary = primaryPower.power.powersetIndex;
+  }
+
+  if (secondaryPower) {
+    initialState.secondary = secondaryPower.power.powersetIndex;
+  }
+
+  if (epicPower) {
+    initialState.epicPool = epicPower.power.powersetIndex;
+  }
+
+  return initialState;
+}
+
+function searchForPower(
+  powerSlots: Array<PowerSlot>,
+  archetypeOrder: string
+): Power | void {
+  if (!powerSlots) {
+    return;
+  }
+
+  return powerSlots.find(
+    ({ power }) =>
+      power &&
+      power.powersetIndex !== undefined &&
+      power.archetypeOrder === archetypeOrder
+  );
+}
