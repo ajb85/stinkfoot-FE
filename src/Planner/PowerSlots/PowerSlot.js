@@ -2,7 +2,7 @@ import React from "react";
 
 import PunnettSquare from "components/PunnettSquare/";
 import SlideDropdown from "components/SlideDropdown/";
-import EnhancementSelection from "../EnhancementSelection.js";
+import EnhancementSelection from "./EnhancementSelection.js";
 
 import useEnhNavigation from "providers/builder/useEnhancementNavigation.js";
 import {
@@ -16,7 +16,7 @@ import {
 } from "hooks/powersets.js";
 import EnhancementBar from "components/EnhancementBar/";
 
-import styles from "../styles.module.scss";
+import styles from "./styles.module.scss";
 
 function PowerSlot(props) {
   const { slot } = props;

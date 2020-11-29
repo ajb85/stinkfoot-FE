@@ -1,6 +1,6 @@
 import React, { useState, useCallback } from "react";
 
-import PowerSlot from "./PowerSlot/";
+import PowerSlot from "./PowerSlot.js";
 
 import usePowerSlots from "providers/builder/usePowerSlots.js";
 
