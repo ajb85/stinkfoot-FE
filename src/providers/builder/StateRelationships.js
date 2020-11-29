@@ -19,7 +19,7 @@ export default function StateManager(props: {|
   children: React.Node,
 |}): React.Node {
   const { powerSlots } = usePowerSlots();
-  const { tracking, setTrackingManually } = useActiveSets();
+  const { setTrackingManually } = useActiveSets();
   const { pools } = usePoolPowers();
 
   const details = useBuildAnalysis();
