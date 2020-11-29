@@ -10,7 +10,7 @@ export const IndexTrackingProvider = (props) => {
   const { activeCharacter } = useCharacters();
   const { powerSlots } = activeCharacter || {};
 
-  const [tracking, setTracking] = useState(getInitialState());
+  const [tracking, setTracking] = useState(getInitialState(powerSlots));
 
   const setActiveTracking = (e) => {
     const { name, value } = e.target;
