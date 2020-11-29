@@ -440,7 +440,7 @@ const powersets = {
   // 'Arachnos Soldier': { primaries: [], secondaries: [] },
 };
 
-function markSet(archetype) {
+export function markSet(archetype) {
   return (set, i) => ({
     ...set,
     powers: [...set.powers.map((p) => ({ ...p, powersetIndex: i, archetype }))],

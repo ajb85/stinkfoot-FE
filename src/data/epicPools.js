@@ -1,3 +1,5 @@
+import { markSet } from "./powersets.js";
+
 import Blaster_Cold_Mastery from "./epics/Blaster_Cold_Mastery.json";
 import Blaster_Electrical_Mastery from "./epics/Blaster_Electrical_Mastery.json";
 import Blaster_Flame_Mastery from "./epics/Blaster_Flame_Mastery.json";
@@ -29,7 +31,7 @@ const epicPools = {
     Blaster_Mace_Mastery,
     Blaster_Mu_Mastery,
     Blaster_Mastermind_Soul_Mastery,
-  ],
+  ].map(markSet("Blaster")),
   Brute: [
     Tanker_Brute_Arctic_Mastery,
     Tanker_Brute_Earth_Mastery,
@@ -39,7 +41,7 @@ const epicPools = {
     Tanker_Brute_Mace_Mastery,
     Tanker_Brute_Mu_Mastery,
     Tanker_Brute_Soul_Mastery,
-  ],
+  ].map(markSet("Brute")),
   Tanker: [
     Tanker_Brute_Arctic_Mastery,
     Tanker_Brute_Earth_Mastery,
@@ -49,7 +51,7 @@ const epicPools = {
     Tanker_Brute_Mace_Mastery,
     Tanker_Brute_Mu_Mastery,
     Tanker_Brute_Soul_Mastery,
-  ],
+  ].map(markSet("Tanker")),
 };
 
 export default epicPools;
