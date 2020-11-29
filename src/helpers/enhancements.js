@@ -1,24 +1,22 @@
 // @flow
-import { Settings, EnhNav, IOSet, BonusLookup } from "flow/types.js";
+import { Settings, IOSet, BonusLookup } from "flow/types.js";
 
-import enhancements from "data/enhancements.js";
-import ioSets, { setTypeConversion } from "data/ioSets.js";
+import enhancements, { mapSetTypeToName } from "data/enhancements.js";
 import setBonuses from "data/enhancements/setBonuses.json";
 import bonusLibrary from "data/enhancements/bonusesLibrary.json";
-import { getEnhancementImage } from "helpers/getImages.js";
+import { noFunc } from "js/utility.js";
+
+const { ioSets } = enhancements;
 
 export const getBonusesForSet = (
   settings: Settings,
-  enhNav: EnhNav,
   set: IOSet
 ): BonusLookup => {
-  const { showSuperior } = enhNav;
+  const { showSuperior } = settings;
   const baseName = set.displayName.split(" ").join("_");
-  const isAttuned = setBonuses[baseName] && setBonuses["Superior_" + baseName];
+  const hasSuperior = !!set.superiorImageName;
   const correctedSetName =
-    showSuperior && isAttuned && !set.noSuperior
-      ? "Superior_" + baseName
-      : baseName;
+    showSuperior && hasSuperior ? "Superior_" + baseName : baseName;
 
   if (!setBonuses[correctedSetName]) {
     return [];
@@ -38,30 +36,48 @@ export const getBonusesForSet = (
   );
 };
 
-export const getEnhancementSubSections = ({ section }, types) => {
-  const isSet = section === "sets";
+export const getEnhancementSubSections = ((cache) => ({
+  navigation,
+  power,
+}) => {
+  const isSet = navigation && navigation.section === "sets";
+  const { setTypes } = power;
+  if (isSet && setTypes) {
+    if (!cache.has(setTypes)) {
+      // If IOs, map over the setNums
+      cache.set(
+        setTypes,
+        setTypes.map((setType) => ({
+          name: mapSetTypeToName[setType]
+            .split(" ")
+            .map((n) => n[0])
+            .slice(0, 2)
+            .join(""),
+          setType,
+        }))
+      );
+    }
 
-  if (isSet) {
-    // If IOs, map over the setNums
-    return types.map((setType) => ({
-      name: setTypeConversion[setType]
-        .split(" ")
-        .map((n) => n[0])
-        .slice(0, 2)
-        .join(""),
-      setType,
-    }));
+    return cache.get(setTypes);
   }
 
   // Else, send back standard IOs
   return ["IO", "SO", "DO", "TO"];
-};
+})(new Map());
 
-export const getEnhancementsForPower = ({ section, setType, showSuperior }) => {
+export const getEnhancementsForPowerSlot = (
+  { power, navigation },
+  { showSuperior }
+) => {
+  const section = navigation ? navigation.section : "standard";
+  if (!power) {
+    return noFunc.bind(this, section === "standard" ? [] : {});
+  }
+
   if (section === "standard") {
-    return getStandardEnhancementsForPower;
+    return getStandardEnhancementsForPower.bind(this, power);
   } else if (section === "sets") {
-    return getIOSetEnhancementsForPower.bind(this, setType, showSuperior);
+    return getIOSetEnhancementsForPower.bind(this, showSuperior, power);
   } else return () => [];
 };
 
@@ -110,41 +126,23 @@ function getStandardEnhancementsForPower(power) {
 
   /* TEMPORARY TO SOLVE BUG, WILL REMOVE WHEN DATA IS FIXED */
   const allowed = new Set();
-  power.allowedEnhancements.forEach((x) => allowed.add(x));
+  power.allowedEnhancements.forEach((enhName) => {
+    if (enhancements.standard[enhName]) {
+      allowed.add(enhancements.standard[enhName]);
+    }
+  });
   /* TEMPORARY TO SOLVE BUG, WILL REMOVE WHEN DATA IS FIXED */
 
-  return [...allowed].reduce((acc, enhName) => {
-    const enh = { ...enhancements.standard[enhName] };
-    const { imageName } = enh;
-    if (!imageName) {
-      console.log("MISSING DATA: ", enhName);
-      return acc;
-    } else {
-      enh.image = getEnhancementImage(imageName);
-      acc.push(enh);
-      return acc;
-    }
-  }, []);
+  return Array.from(allowed);
 }
 
-function getIOSetEnhancementsForPower(setType, showSuperior) {
-  if (setType === undefined || !ioSets[setType]) {
+function getIOSetEnhancementsForPower(showSuperior, power) {
+  if (!power || !power.setTypes) {
     return [];
   }
 
-  return ioSets[setType].map((set) => {
-    let { imageName } = set;
-    if (!imageName) {
-      throw new Error("No image found for: ", set.displayName);
-    }
-    // Superior enhancements have an "s" in front of the name
-
-    const correctedImgName =
-      !set.isAttuned || !showSuperior || set.noSuperior
-        ? imageName
-        : "S" + imageName;
-    set.image = getEnhancementImage(correctedImgName);
-    set.enhancements.forEach((e) => (e.image = set.image));
-    return set;
-  });
+  return power.setTypes.reduce((acc, setType) => {
+    acc[setType] = ioSets[setType];
+    return acc;
+  }, {});
 }

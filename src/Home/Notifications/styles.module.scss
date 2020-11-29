@@ -1,0 +1,27 @@
+@import "styles/variables.scss";
+
+.Notifications {
+  h5,
+  ul,
+  li {
+    color: black;
+  }
+
+  li {
+    margin: $lh/2;
+    list-style-type: disc;
+
+    &.deletedData {
+      color: red;
+    }
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: flex-end;
+    button {
+      margin: $lh/2 5px;
+      max-width: 100px;
+    }
+  }
+}

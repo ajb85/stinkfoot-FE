@@ -1,10 +1,9 @@
-import useEnhancementNavigation from "providers/builder/useEnhancementNavigation.js";
 import usePowerSlots from "providers/builder/usePowerSlots.js";
 import useActiveSets from "providers/builder/useActiveSets.js";
 import useCharacterDetails from "providers/builder/useCharacterDetails.js";
 import {
   getEnhancementSubSections,
-  getEnhancementsForPower,
+  getEnhancementsForPowerSlot,
   canEnhancementGoInPowerSlot,
   getBonusesForSet,
   getSetBonusDataForPowerSlot,
@@ -14,15 +13,18 @@ import { getEnhancementOverlay } from "helpers/getImages.js";
 
 import { useBuildAnalysis } from "./powersets.js";
 
-export const useGetEnhancementsForPower = () => {
-  // getEnhancementSectionForPower
-  const { enhNavigation } = useEnhancementNavigation();
-  return getEnhancementsForPower(enhNavigation);
+export const useGetEnhancementsForPowerSlot = (powerSlotIndex) => {
+  const { powerSlots } = usePowerSlots();
+  const powerSlot = powerSlots[powerSlotIndex];
+  const settings = {};
+  return getEnhancementsForPowerSlot(powerSlot, settings);
 };
 
-export const useGetEnhancementSubSections = () => {
-  const { enhNavigation } = useEnhancementNavigation();
-  return getEnhancementSubSections.bind(this, enhNavigation);
+export const useGetEnhancementSubSections = (powerSlotIndex) => {
+  const { powerSlots } = usePowerSlots();
+  const powerSlot = powerSlots[powerSlotIndex];
+  // const settings = {};
+  return getEnhancementSubSections.bind(this, powerSlot);
 };
 
 export const useCanEnhancementGoInPowerSlot = (powerSlotIndex) => {
@@ -36,16 +38,15 @@ export const useCanEnhancementGoInPowerSlot = (powerSlotIndex) => {
 };
 
 export const useGetBonusesForSet = () => {
-  const { enhNavigation } = useEnhancementNavigation();
   const settings = {};
 
-  return getBonusesForSet.bind(this, settings, enhNavigation);
+  return getBonusesForSet.bind(this, settings);
 };
 
 export const useAddEnhancement = (powerSlotIndex) => {
-  const {
-    enhNavigation: { tier },
-  } = useEnhancementNavigation();
+  const { powerSlots } = usePowerSlots();
+  const { navigation } = powerSlots[powerSlotIndex].navigation;
+  const tier = navigation ? navigation.tier : "IO";
   const { addEnhancement } = usePowerSlots();
   return (enh) =>
     addEnhancement(powerSlotIndex, {

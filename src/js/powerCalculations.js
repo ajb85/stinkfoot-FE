@@ -1,9 +1,6 @@
 import powersets from "data/powersets.js";
 import poolPowers from "data/poolPowers.js";
 import epicPools from "data/epicPools.js";
-// import enhancements from "data/enhancements.js";
-// import ioSets from "data/ioSets.js";
-// import schedules from "data/enhancements/schedules.json";
 
 export const getPowerStats = (state) => (psIndex) => {
   const { build, tracking, settings } = state;

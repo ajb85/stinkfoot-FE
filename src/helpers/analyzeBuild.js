@@ -1,7 +1,9 @@
 // @flow
 
-import ioSets from "data/ioSets.js";
+import enhancements from "data/enhancements.js";
 import { PowerSlot, BuildAnalysis, ActiveSets } from "flow/types.js";
+
+const { ioSets } = enhancements;
 
 type CacheType = {|
   build: Array<PowerSlot>,

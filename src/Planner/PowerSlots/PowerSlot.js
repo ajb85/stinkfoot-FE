@@ -2,31 +2,32 @@ import React from "react";
 
 import PunnettSquare from "components/PunnettSquare/";
 import SlideDropdown from "components/SlideDropdown/";
-import EnhancementSelection from "../EnhancementSelection.js";
+import EnhancementBar from "components/EnhancementBar/";
+import EnhancementSelection from "./EnhancementSelection.js";
 
-import useEnhNavigation from "providers/builder/useEnhancementNavigation.js";
-import {
-  useGetEnhancementSubSections,
-  useGetEnhancementsForPower,
-} from "hooks/enhancements.js";
-import useActiveSets from "providers/builder/useActiveSets.js";
+import { useGetEnhancementSubSections } from "hooks/enhancements.js";
+import { useSetNavSection } from "hooks/powerSlots.js";
 import {
   useTogglePowerSlot,
   useClearActiveEnhancementSet,
 } from "hooks/powersets.js";
-import EnhancementBar from "components/EnhancementBar/";
+import useActiveSets from "providers/builder/useActiveSets.js";
 
-import styles from "../styles.module.scss";
+import styles from "./styles.module.scss";
 
 function PowerSlot(props) {
   const { slot } = props;
-  const { level, power, powerSlotIndex } = slot;
-  const enhNav = useEnhNavigation();
+  const { level, power, powerSlotIndex, navigation } = slot;
   const clearActiveEnhancementSet = useClearActiveEnhancementSet();
   const togglePowerSlot = useTogglePowerSlot(powerSlotIndex);
   const { tracking } = useActiveSets();
-  const getEnhancementSubSections = useGetEnhancementSubSections();
-  const isSlottable = !!useGetEnhancementsForPower()(power).length;
+  const getEnhancementSubSections = useGetEnhancementSubSections(
+    powerSlotIndex
+  );
+
+  const isSlottable =
+    power && (!!power.allowedEnhancements.length || !!power.setTypes.length);
+
   const handlePillClick = React.useCallback(
     (e) => {
       e.stopPropagation();
@@ -34,6 +35,8 @@ function PowerSlot(props) {
     },
     [togglePowerSlot, isSlottable]
   );
+
+  const updateNav = useSetNavSection(powerSlotIndex);
 
   if (!power) {
     const isActive = tracking.activeLevel === level;
@@ -67,8 +70,8 @@ function PowerSlot(props) {
       >
         <div className={styles.divider} />
         <PunnettSquare
-          topOptions={getTopOptions(enhNav, power)}
-          sideOptions={getSideOptions(enhNav, subsections)}
+          topOptions={getTopOptions(navigation, updateNav, power)}
+          sideOptions={getSideOptions(navigation, updateNav, subsections)}
         >
           <EnhancementSelection powerSlotIndex={powerSlotIndex} />
         </PunnettSquare>
@@ -77,26 +80,28 @@ function PowerSlot(props) {
   );
 }
 
-function getTopOptions(enhNav, power) {
-  const { enhNavigation, viewStandardEnhancements, viewIOSets } = enhNav;
+function getTopOptions(enhNavigation, updateNav, power) {
   return [
     {
       content: "Standard",
       styles: {
         color: enhNavigation.section === "standard" ? "red" : null,
       },
-      onClick: viewStandardEnhancements.bind(this, "IO"),
+      onClick: updateNav.bind(this, { section: "standard", tier: "IO" }),
     },
     {
       content: "Sets",
       styles: { color: enhNavigation.section === "sets" ? "red" : null },
-      onClick: viewIOSets.bind(this, power.setTypes[0]),
+      onClick: updateNav.bind(this, {
+        section: "sets",
+        tier: "IO",
+        setType: power.setTypes[0],
+      }),
     },
   ];
 }
 
-function getSideOptions(enhNav, subsections) {
-  const { enhNavigation, viewEnhancementSubSection } = enhNav;
+function getSideOptions(enhNavigation, updateNav, subsections) {
   const { section } = enhNavigation;
   const isSet = section === "sets";
 
@@ -108,7 +113,7 @@ function getSideOptions(enhNav, subsections) {
       : name === enhNavigation.tier;
     return {
       content: name,
-      onClick: viewEnhancementSubSection.bind(this, setType),
+      onClick: updateNav.bind(this, { setType }),
       style: {
         color: isActive ? "red" : "white",
         cursor: "pointer",

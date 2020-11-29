@@ -17,6 +17,7 @@ import styles from "styles.module.scss";
 
 import NavBar from "Home/NavBar/";
 import AddCharacter from "Home/AddCharacter/";
+import Notifications from "Home/Notifications/";
 
 import { closeMenu } from "js/closeTracker.js";
 
@@ -24,22 +25,23 @@ function App() {
   const [modalOpen, setModalOpen] = React.useState(false);
 
   return (
-    <React.StrictMode>
-      <Router history={history}>
-        <UniversalProviders>
-          <div onClick={closeMenu} className={styles.appContainer}>
-            <AddCharacter
-              open={modalOpen}
-              toggle={setModalOpen.bind(this, !modalOpen)}
-            />
-            <NavBar openNewCharacterModal={setModalOpen.bind(this, true)} />
-            <div className={styles.routeContainer}>
-              <Routes />
-            </div>
+    // <React.StrictMode>
+    <Router history={history}>
+      <UniversalProviders>
+        <div onClick={closeMenu} className={styles.appContainer}>
+          <Notifications />
+          <AddCharacter
+            open={modalOpen}
+            toggle={setModalOpen.bind(this, !modalOpen)}
+          />
+          <NavBar openNewCharacterModal={setModalOpen.bind(this, true)} />
+          <div className={styles.routeContainer}>
+            <Routes />
           </div>
-        </UniversalProviders>
-      </Router>
-    </React.StrictMode>
+        </div>
+      </UniversalProviders>
+    </Router>
+    // </React.StrictMode>
   );
 }
 

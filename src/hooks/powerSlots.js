@@ -1,9 +1,6 @@
-import usePowerSlots from "providers/builders/usePowerSlots.js";
+import usePowerSlots from "providers/builder/usePowerSlots.js";
 
-export const usePowerSlotIndexByPowerName = (powerFullName) => {
-  const { powerSlots } = usePowerSlots();
-  const index = powerSlots.findIndex(({ power }) => {
-    return power && power.fullName === powerFullName;
-  });
-  return index > -1 ? index : null;
+export const useSetNavSection = (powerSlotIndex) => {
+  const { updatePowerSlotNav } = usePowerSlots();
+  return (navProps) => updatePowerSlotNav(powerSlotIndex, navProps);
 };

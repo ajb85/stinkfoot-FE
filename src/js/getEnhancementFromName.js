@@ -1,7 +1,8 @@
 // @flow
 import { Enhancement, IOSet } from "flow/types.js";
 import enhancements from "data/enhancements.js";
-import ioSets from "data/ioSets.js";
+
+const { ioSets } = enhancements;
 
 type Accumulator = { [key: string]: Enhancement };
 

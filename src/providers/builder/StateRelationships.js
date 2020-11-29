@@ -2,7 +2,6 @@
 
 import * as React from "react";
 import { useEffect } from "react";
-import useEnhancementNavigation from "./useEnhancementNavigation";
 import usePoolPowers from "./usePoolPowers.js";
 import usePowerSlots from "./usePowerSlots.js";
 import useActiveSets from "./useActiveSets.js";
@@ -19,12 +18,8 @@ import { useNextActiveLevel } from "hooks/powersets.js";
 export default function StateManager(props: {|
   children: React.Node,
 |}): React.Node {
-  const {
-    enhNavigation,
-    viewEnhancementSubSection,
-  } = useEnhancementNavigation();
   const { powerSlots } = usePowerSlots();
-  const { tracking, setTrackingManually } = useActiveSets();
+  const { setTrackingManually } = useActiveSets();
   const { pools } = usePoolPowers();
 
   const details = useBuildAnalysis();
@@ -33,17 +28,6 @@ export default function StateManager(props: {|
   const allPools = usePowersets("poolPowers");
 
   const updateActiveLevel = useNextActiveLevel();
-
-  useEffect(() => {
-    if (tracking.toggledSlot !== null) {
-      // Update subsections of toggled enhancement to ensure it's always accurate
-      const { setTypes } = powerSlots[tracking.toggledSlot].power;
-      const isBrowsingIOSets = enhNavigation.section === "sets";
-      viewEnhancementSubSection(isBrowsingIOSets ? setTypes[0] : "IO");
-    }
-
-    // eslint-disable-next-line
-  }, [tracking.toggledSlot]);
 
   useEffect(() => {
     // Update the active pool power based on changes in the build
