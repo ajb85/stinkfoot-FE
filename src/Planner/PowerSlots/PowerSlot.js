@@ -5,10 +5,7 @@ import SlideDropdown from "components/SlideDropdown/";
 import EnhancementBar from "components/EnhancementBar/";
 import EnhancementSelection from "./EnhancementSelection.js";
 
-import {
-  useGetEnhancementSubSections,
-  useGetEnhancementsForPowerSlot,
-} from "hooks/enhancements.js";
+import { useGetEnhancementSubSections } from "hooks/enhancements.js";
 import { useSetNavSection } from "hooks/powerSlots.js";
 import {
   useTogglePowerSlot,
@@ -21,7 +18,6 @@ import styles from "./styles.module.scss";
 function PowerSlot(props) {
   const { slot } = props;
   const { level, power, powerSlotIndex, navigation } = slot;
-  const isSet = navigation && navigation.section === "set";
   const clearActiveEnhancementSet = useClearActiveEnhancementSet();
   const togglePowerSlot = useTogglePowerSlot(powerSlotIndex);
   const { tracking } = useActiveSets();
@@ -29,13 +25,8 @@ function PowerSlot(props) {
     powerSlotIndex
   );
 
-  const enhancementCategories = useGetEnhancementsForPowerSlot(
-    powerSlotIndex
-  )();
-
-  const isSlottable = !isSet
-    ? enhancementCategories.length
-    : !!Object.keys(enhancementCategories).length;
+  const isSlottable =
+    power && (!!power.allowedEnhancements.length || !!power.setTypes.length);
 
   const handlePillClick = React.useCallback(
     (e) => {
@@ -102,7 +93,7 @@ function getTopOptions(enhNavigation, updateNav, power) {
       content: "Sets",
       styles: { color: enhNavigation.section === "sets" ? "red" : null },
       onClick: updateNav.bind(this, {
-        section: "set",
+        section: "sets",
         tier: "IO",
         setType: power.setTypes[0],
       }),
