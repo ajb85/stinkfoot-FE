@@ -49,6 +49,12 @@ export const PowerSlotsProvider = (props) => {
           ...newSlots[index],
           power,
           enhSlots: emptyDefaultSlot(),
+          navigation: {
+            section: "standard",
+            tier: "IO",
+            setType: null,
+            setIndex: null,
+          },
         };
       });
       setPowerSlots(newSlots);
@@ -146,6 +152,12 @@ export const PowerSlotsProvider = (props) => {
 
   const resetPowerSlots = () => setPowerSlots(powerSlotsTemplate);
 
+  const updatePowerSlotNav = (navProps, i) => {
+    const updated = [...powerSlots];
+    updated[i].navigation = { ...updated[i].navigation, ...navProps };
+    setPowerSlots(updated);
+  };
+
   const state = {
     powerSlots,
     removePowerFromSlot,
@@ -154,6 +166,7 @@ export const PowerSlotsProvider = (props) => {
     AddMultiEnhancements,
     removeEnhancement,
     resetPowerSlots,
+    updatePowerSlotNav,
   };
   return <Provider value={state}>{props.children}</Provider>;
 };

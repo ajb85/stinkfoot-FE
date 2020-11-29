@@ -198,7 +198,7 @@ import Will_of_the_Controller from "data/enhancements/sets/Will_of_the_Controlle
 import Winters_Bite from "data/enhancements/sets/Winter's_Bite.json";
 import Winters_Gift from "data/enhancements/sets/Winter's_Gift.json";
 
-const enhImages = require.context("./images/enhancements/", true);
+const enhImages = require.context("./enhancements/images", true);
 
 const standard = [
   Accuracy,
@@ -408,7 +408,7 @@ const ioSets = [
   Winters_Gift,
 ].reduce((acc, set) => {
   const { setType } = set;
-  set.image = enhImages(set.imageName).default;
+  set.image = enhImages("./" + set.imageName).default;
 
   try {
     set.superiorImage = enhImages("./s" + set.imageName).default;
