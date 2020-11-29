@@ -1,24 +1,22 @@
 // @flow
-import { Settings, EnhNav, IOSet, BonusLookup } from "flow/types.js";
+import { Settings, IOSet, BonusLookup } from "flow/types.js";
 
 import enhancements, { mapSetTypeToName } from "data/enhancements.js";
 import setBonuses from "data/enhancements/setBonuses.json";
 import bonusLibrary from "data/enhancements/bonusesLibrary.json";
+import { noFunc } from "js/utility.js";
 
 const { ioSets } = enhancements;
 
 export const getBonusesForSet = (
   settings: Settings,
-  enhNav: EnhNav,
   set: IOSet
 ): BonusLookup => {
-  const { showSuperior } = enhNav;
+  const { showSuperior } = settings;
   const baseName = set.displayName.split(" ").join("_");
-  const isAttuned = setBonuses[baseName] && setBonuses["Superior_" + baseName];
+  const hasSuperior = !!set.superiorImageName;
   const correctedSetName =
-    showSuperior && isAttuned && !set.noSuperior
-      ? "Superior_" + baseName
-      : baseName;
+    showSuperior && hasSuperior ? "Superior_" + baseName : baseName;
 
   if (!setBonuses[correctedSetName]) {
     return [];
@@ -38,30 +36,48 @@ export const getBonusesForSet = (
   );
 };
 
-export const getEnhancementSubSections = ({ section }, types) => {
-  const isSet = section === "sets";
+export const getEnhancementSubSections = ((cache) => ({
+  navigation,
+  setTypes,
+}) => {
+  const isSet = navigation && navigation.section === "sets";
 
   if (isSet) {
-    // If IOs, map over the setNums
-    return types.map((setType) => ({
-      name: mapSetTypeToName[setType]
-        .split(" ")
-        .map((n) => n[0])
-        .slice(0, 2)
-        .join(""),
-      setType,
-    }));
+    if (!cache.has(setTypes)) {
+      // If IOs, map over the setNums
+      cache.set(
+        setTypes,
+        setTypes.map((setType) => ({
+          name: mapSetTypeToName[setType]
+            .split(" ")
+            .map((n) => n[0])
+            .slice(0, 2)
+            .join(""),
+          setType,
+        }))
+      );
+    }
+
+    return cache.get(setTypes);
   }
 
   // Else, send back standard IOs
   return ["IO", "SO", "DO", "TO"];
-};
+})(new Map());
 
-export const getEnhancementsForPower = ({ section, showSuperior }) => {
+export const getEnhancementsForPowerSlot = (
+  { power, navigation },
+  { showSuperior }
+) => {
+  const section = navigation ? navigation.section : "standard";
+  if (!power) {
+    return noFunc.bind(this, section === "standard" ? [] : {});
+  }
+
   if (section === "standard") {
-    return getStandardEnhancementsForPower;
+    return getStandardEnhancementsForPower.bind(this, power);
   } else if (section === "sets") {
-    return getIOSetEnhancementsForPower.bind(this, showSuperior);
+    return getIOSetEnhancementsForPower.bind(this, showSuperior, power);
   } else return () => [];
 };
 

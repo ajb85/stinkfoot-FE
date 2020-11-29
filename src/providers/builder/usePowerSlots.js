@@ -14,6 +14,7 @@ export const PowerSlotsProvider = (props) => {
   const { powerSlots } = activeCharacter;
   const { Provider } = context;
   console.log("POWERSLOTS: ", powerSlots);
+
   const removePowerFromSlot = ((cache) => (index) => {
     // Experimenting with this pattern, allows multiple calls to the same
     // state updater to pool up the instructions then loop over them and make a single
@@ -152,9 +153,12 @@ export const PowerSlotsProvider = (props) => {
 
   const resetPowerSlots = () => setPowerSlots(powerSlotsTemplate);
 
-  const updatePowerSlotNav = (navProps, i) => {
+  const updatePowerSlotNav = (powerSlotIndex, navProps) => {
     const updated = [...powerSlots];
-    updated[i].navigation = { ...updated[i].navigation, ...navProps };
+    updated[powerSlotIndex].navigation = {
+      ...updated[powerSlotIndex].navigation,
+      ...navProps,
+    };
     setPowerSlots(updated);
   };
 

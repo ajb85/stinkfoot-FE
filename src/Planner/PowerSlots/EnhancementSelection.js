@@ -5,14 +5,13 @@ import InPlaceAbsolute from "components/InPlaceAbsolute/";
 
 import usePowerSlots from "providers/builder/usePowerSlots";
 import {
-  useGetEnhancementsForPower,
+  useGetEnhancementsForPowerSlot,
   useGetEnhancementOverlay,
   useGetSetBonusDataForPowerSlot,
   useAddEnhancement,
   useRemoveEnhancement,
   useAddFullSet,
 } from "hooks/enhancements";
-import useEnhNavigation from "providers/builder/useEnhancementNavigation.js";
 
 import { useActiveEnhancementSet } from "hooks/powersets.js";
 
@@ -28,13 +27,12 @@ function EnhancementSelection(props) {
     toggleActiveEnhancementSet,
   } = useActiveEnhancementSet();
   const powerSlot = powerSlots[props.powerSlotIndex];
-  const enhCategories = useGetEnhancementsForPower()(powerSlot.power);
+  const enhCategories = useGetEnhancementsForPowerSlot(props.powerSlotIndex)();
   const getOverlay = useGetEnhancementOverlay();
   const getSetBonusesForPowerSlot = useGetSetBonusDataForPowerSlot(powerSlot);
   const addEnhancement = useAddEnhancement(props.powerSlotIndex);
   const removeEnhancement = useRemoveEnhancement(props.powerSlotIndex);
-  const { enhNavigation } = useEnhNavigation();
-  const { section, tier, setType } = enhNavigation;
+  const { section, tier, setType } = powerSlot.navigation;
   const enhLookup = powerSlot.enhSlots.reduce((acc, { enhancement }, i) => {
     if (enhancement) {
       acc[enhancement.fullName] = i;
@@ -53,7 +51,6 @@ function EnhancementSelection(props) {
   };
 
   const currentCategory = isSet ? enhCategories[setType] || [] : enhCategories;
-
   return (
     <div className={styles.enhancementPreview}>
       {currentCategory.map((c, i) => {
