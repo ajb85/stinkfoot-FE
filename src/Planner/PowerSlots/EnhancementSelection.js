@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import InPlaceAbsolute from "components/InPlaceAbsolute/";
+import MaskOverEnhancement from "components/MaskOverEnhancement/";
 import OnScreenHover from "components/OnScreenHover/";
 
 import usePowerSlots from "providers/builder/usePowerSlots";
@@ -32,6 +32,7 @@ function EnhancementSelection(props) {
   const getSetBonusesForPowerSlot = useGetSetBonusDataForPowerSlot(powerSlot);
   const addEnhancement = useAddEnhancement(props.powerSlotIndex);
   const removeEnhancement = useRemoveEnhancement(props.powerSlotIndex);
+  const addFullSet = useAddFullSet(props.powerSlotIndex);
   const { section, tier, setType } = powerSlot.navigation;
   const enhLookup = powerSlot.enhSlots.reduce((acc, { enhancement }, i) => {
     if (enhancement) {
@@ -51,6 +52,7 @@ function EnhancementSelection(props) {
   };
 
   const currentCategory = isSet ? enhCategories[setType] || [] : enhCategories;
+
   return (
     <div className={styles.enhancementPreview}>
       {currentCategory.map((c, i) => {
@@ -68,13 +70,14 @@ function EnhancementSelection(props) {
           e.stopPropagation();
           clickFunc();
         };
+
+        const handleMaskClick = addFullSet.bind(this, c.enhancements);
         return (
           <div key={c.fullName} className={className} onClick={handleClick}>
             {isLocked && (
-              <AddFullSet
-                powerSlotIndex={props.powerSlotIndex}
-                enhancements={c.enhancements}
-              />
+              <MaskOverEnhancement onClick={handleMaskClick} stopProp>
+                +
+              </MaskOverEnhancement>
             )}
             <img src={getOverlay(tier)} alt="enhancement overlay" />
             <img src={c.image} alt="enhancement" />
@@ -159,23 +162,6 @@ function ShowBonusesHoverMenu({ bonusData }) {
         })}
       </div>
     </OnScreenHover>
-  );
-}
-
-function AddFullSet({ powerSlotIndex, enhancements }) {
-  const addFullSet = useAddFullSet(powerSlotIndex);
-
-  const handleClick = React.useCallback(
-    (e) => {
-      e.stopPropagation();
-      addFullSet(enhancements);
-    },
-    [addFullSet, enhancements]
-  );
-  return (
-    <InPlaceAbsolute zIndex={200} onClick={handleClick}>
-      <div className={styles.AddFullSet}>+</div>
-    </InPlaceAbsolute>
   );
 }
 

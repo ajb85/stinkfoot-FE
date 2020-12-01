@@ -415,9 +415,14 @@ const ioSets = [
     set.enhancements.forEach((e) => {
       e.image = set.image;
       e.superiorImage = set.superiorImage;
+      e.setDisplayName = set.displayName;
+      console.log("E: ", e.setDisplayName);
     });
   } catch (err) {
-    set.enhancements.forEach((e) => (e.image = set.image));
+    set.enhancements.forEach((e) => {
+      e.image = set.image;
+      e.setDisplayName = set.displayName;
+    });
   }
 
   if (!acc[setType]) {

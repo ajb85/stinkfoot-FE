@@ -3,8 +3,6 @@ import InPlaceAbsolute from "../InPlaceAbsolute/";
 
 import getScrollbarWidth from "js/getScrollbarWidth.js";
 
-// import styles from "./styles.module.scss";
-
 export default function OnScreenHover(props) {
   const [hoverPosition, setHoverPosition] = useState({});
   const hoverMenu = useRef();
