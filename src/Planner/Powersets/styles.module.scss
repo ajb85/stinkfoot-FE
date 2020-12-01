@@ -1,4 +1,4 @@
-@import 'styles/variables.scss';
+@import "styles/variables.scss";
 
 section.Powersets {
   min-width: 170px + $lh;
@@ -66,5 +66,35 @@ section.Powersets {
     margin: $lh / 2;
     border: 1px solid white;
     border-radius: 20px;
+  }
+}
+
+// Hover Menu that appears when mousing over power
+.power {
+  .powerPreviewMenu {
+    left: 75%;
+    top: -($lh);
+    visibility: hidden;
+
+    p {
+      line-height: $lh;
+    }
+    & > div {
+      & > div {
+        padding: $lh/2 5px;
+        background-color: $accent1;
+        min-width: 300px;
+
+        & > div:first-of-type {
+          margin-bottom: $lh/2;
+        }
+      }
+    }
+  }
+
+  &:hover {
+    .powerPreviewMenu {
+      visibility: visible;
+    }
   }
 }

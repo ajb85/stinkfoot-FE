@@ -1,7 +1,8 @@
-import React, { useRef } from "react";
+import React from "react";
 import styled from "styled-components";
 
-import InPlaceAbsolute from "components/InPlaceAbsolute/";
+import MaskOverEnhancement from "components/MaskOverEnhancement/";
+import OnScreenHover from "components/OnScreenHover/";
 
 import usePowerSlots from "providers/builder/usePowerSlots";
 import {
@@ -16,7 +17,6 @@ import {
 import { useActiveEnhancementSet } from "hooks/powersets.js";
 
 import shortenEnhName from "js/shortenEnhName.js";
-import getScrollbarWidth from "js/getScrollbarWidth.js";
 
 import styles from "./styles.module.scss";
 
@@ -32,6 +32,7 @@ function EnhancementSelection(props) {
   const getSetBonusesForPowerSlot = useGetSetBonusDataForPowerSlot(powerSlot);
   const addEnhancement = useAddEnhancement(props.powerSlotIndex);
   const removeEnhancement = useRemoveEnhancement(props.powerSlotIndex);
+  const addFullSet = useAddFullSet(props.powerSlotIndex);
   const { section, tier, setType } = powerSlot.navigation;
   const enhLookup = powerSlot.enhSlots.reduce((acc, { enhancement }, i) => {
     if (enhancement) {
@@ -51,6 +52,7 @@ function EnhancementSelection(props) {
   };
 
   const currentCategory = isSet ? enhCategories[setType] || [] : enhCategories;
+
   return (
     <div className={styles.enhancementPreview}>
       {currentCategory.map((c, i) => {
@@ -68,13 +70,14 @@ function EnhancementSelection(props) {
           e.stopPropagation();
           clickFunc();
         };
+
+        const handleMaskClick = addFullSet.bind(this, c.enhancements);
         return (
           <div key={c.fullName} className={className} onClick={handleClick}>
             {isLocked && (
-              <AddFullSet
-                powerSlotIndex={props.powerSlotIndex}
-                enhancements={c.enhancements}
-              />
+              <MaskOverEnhancement onClick={handleMaskClick} stopProp>
+                +
+              </MaskOverEnhancement>
             )}
             <img src={getOverlay(tier)} alt="enhancement overlay" />
             <img src={c.image} alt="enhancement" />
@@ -100,29 +103,13 @@ function EnhancementSelectionHoverMenu({
   toggleEnhancement,
   enhLookup,
 }) {
-  const [hoverPosition, setHoverPosition] = React.useState({});
-  const hoverMenu = useRef();
   const isSet = category.enhancements;
   const levelText = category.levels
     ? `, Level ${category.levels.min} - ${category.levels.max}`
     : "";
-
-  React.useEffect(() => {
-    // Should eventually update on window changing size
-    if (hoverMenu.current) {
-      setHoverPosition(getHoverMenuPosition(hoverMenu.current));
-    } else {
-      setHoverPosition({});
-    }
-  }, []);
-
   return (
-    <InPlaceAbsolute zIndex={200} parentClassName={styles.floatingMenu}>
-      <div
-        className={styles.enhancementHoverMenu}
-        ref={hoverMenu}
-        style={hoverPosition}
-      >
+    <OnScreenHover className={styles.floatingMenu}>
+      <div className={styles.enhancementHoverMenu}>
         <h3>
           {category.displayName}
           {levelText}
@@ -147,26 +134,14 @@ function EnhancementSelectionHoverMenu({
             })}
         </div>
       </div>
-    </InPlaceAbsolute>
+    </OnScreenHover>
   );
 }
 
 function ShowBonusesHoverMenu({ bonusData }) {
-  const [hoverPosition, setHoverPosition] = React.useState({});
-  const hoverMenu = useRef();
-
-  React.useEffect(() => {
-    // Should eventually update on window changing size
-    if (hoverMenu.current) {
-      setHoverPosition(getHoverMenuPosition(hoverMenu.current));
-    } else {
-      setHoverPosition({});
-    }
-  }, []);
-
   return (
-    <InPlaceAbsolute parentClassName={styles.bonusMenu} zIndex={200}>
-      <div className={styles.setBonuses} style={hoverPosition} ref={hoverMenu}>
+    <OnScreenHover className={styles.bonusMenu} zIndex={200}>
+      <div className={styles.setBonuses}>
         {bonusData.map(({ displays, isActive, bonusCount }, i) => {
           // const atMax = bonusCount >= 5;
           return (
@@ -186,63 +161,8 @@ function ShowBonusesHoverMenu({ bonusData }) {
           );
         })}
       </div>
-    </InPlaceAbsolute>
+    </OnScreenHover>
   );
-}
-
-function AddFullSet({ powerSlotIndex, enhancements }) {
-  const addFullSet = useAddFullSet(powerSlotIndex);
-
-  const handleClick = React.useCallback(
-    (e) => {
-      e.stopPropagation();
-      addFullSet(enhancements);
-    },
-    [addFullSet, enhancements]
-  );
-  return (
-    <InPlaceAbsolute zIndex={200} onClick={handleClick}>
-      <div className={styles.AddFullSet}>+</div>
-    </InPlaceAbsolute>
-  );
-}
-
-function getHoverMenuPosition(element) {
-  if (element) {
-    const { x, width } = element.getBoundingClientRect();
-    const windowSize = getWindowSize();
-    const padding = 5;
-
-    if (width < windowSize.width) {
-      if (x < padding || element.style.left) {
-        const left = element.style.left || Math.abs(x) + padding;
-        return { left };
-      } else if (
-        x + width + padding > windowSize.width ||
-        element.style.right
-      ) {
-        const right =
-          element.style.right || x + width + padding - windowSize.width;
-        return { right };
-      }
-    }
-  }
-  return {};
-}
-
-function getWindowSize() {
-  const scrollBarWidth = getScrollbarWidth();
-  const width =
-    window.innerWidth ||
-    document.documentElement.clientWidth ||
-    document.body.clientWidth;
-
-  const height =
-    window.innerHeight ||
-    document.documentElement.clientHeight ||
-    document.body.clientHeight;
-
-  return { width: width - scrollBarWidth, height };
 }
 
 const BonusStyle = styled.div`

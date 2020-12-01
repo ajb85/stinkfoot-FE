@@ -1,13 +1,16 @@
 import React from "react";
 
 import Dropdown from "components/Dropdown";
+import OnScreenHover from "components/OnScreenHover/";
+
 import useActiveSets from "providers/builder/useActiveSets.js";
-import { getPowersetImage } from "helpers/getImages.js";
 import {
   useTogglePower,
   usePowerSelectionColor,
   useRemovePool,
 } from "hooks/powersets.js";
+
+import { getPowersetImage } from "helpers/getImages.js";
 
 import styles from "./styles.module.scss";
 
@@ -56,13 +59,21 @@ function Powerset(props) {
       >
         {powerList.map((p) => {
           return (
-            <p
-              key={p.fullName}
-              style={{ color: powerSelectionColor(p) }}
-              onClick={togglePower.bind(this, p)}
-            >
-              {p.displayName}
-            </p>
+            <div key={p.fullName} className={styles.power}>
+              <p
+                style={{ color: powerSelectionColor(p) }}
+                onClick={togglePower.bind(this, p)}
+              >
+                {p.displayName}
+              </p>
+              <OnScreenHover className={styles.powerPreviewMenu}>
+                <div>
+                  <p>{p.displayName}</p>
+                  <p>{p.description.short}</p>
+                </div>
+                <p>{p.description.long}</p>
+              </OnScreenHover>
+            </div>
           );
         })}
       </div>

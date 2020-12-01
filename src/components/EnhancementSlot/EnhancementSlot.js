@@ -1,5 +1,8 @@
 import React from "react";
 
+import MaskOverEnhancement from "../MaskOverEnhancement/";
+import OnScreenHover from "../OnScreenHover/";
+
 import useCharacterDetails from "providers/builder/useCharacterDetails.js";
 import { getEnhancementOverlay } from "helpers/getImages.js";
 
@@ -17,13 +20,18 @@ function EnhancementSlot({ slot, powerSlotLevel, onClick }) {
   return (
     <div className={styles.slot}>
       {slot.enhancement ? (
-        <div className={styles.enhancement}>
+        <div className={styles.enhancement} onClick={onClick || noFunc}>
+          <OnScreenHover className={styles.hoverInfo}>
+            <>
+              <h4>{slot.enhancement.setDisplayName}</h4>
+              <p>{slot.enhancement.displayName}</p>
+            </>
+          </OnScreenHover>
+          <MaskOverEnhancement className={styles.removeEnh}>
+            X
+          </MaskOverEnhancement>
           {overlay && <img src={overlay} alt="enhancement overlay" />}
-          <img
-            src={slot.enhancement.image}
-            alt="enhancement"
-            onClick={onClick || noFunc}
-          />
+          <img src={slot.enhancement.image} alt="enhancement" />
         </div>
       ) : (
         <div className={styles.empty} />
