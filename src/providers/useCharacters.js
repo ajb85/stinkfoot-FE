@@ -45,10 +45,10 @@ export function BuildProvider(props) {
     updatedActive[key] = value;
 
     timeout = setTimeout(() => {
-      updateCharacters({ ...characters, [active]: { ...updatedActive } });
+      updateCharacters({ ...characters, [active]: updatedActive });
       updatedActive = null;
       timeout = null;
-    }, 20);
+    }, 50);
   })();
 
   const createNewCharacter = (name, makeActive = true) => {
@@ -74,6 +74,7 @@ export function BuildProvider(props) {
 
   const { Provider } = BuildContext;
   const characterList = Object.keys(characters);
+
   return (
     <Provider
       value={{
