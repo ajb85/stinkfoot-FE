@@ -4,13 +4,17 @@ import CloseOnOutsideClick from "../../wrappers/CloseOnOutsideClick.js";
 
 import styles from "./styles.module.scss";
 
+/*
+  options: [{key, value, image, alt, display}]
+  selected: key
+  onChange: () => {}
+  name: ""
+*/
 function Dropdown(props) {
   const [isOpen, setIsOpen] = useState(false);
   const selected =
     props.options.find(({ value }) => value === props.selected) || {};
-  // if (props.name === "poolPower") {
-  //   console.log("OPTIONS: ", props);
-  // }
+
   const renderItem = (item = selected) => {
     return (
       <>
@@ -28,6 +32,7 @@ function Dropdown(props) {
       <div
         className={styles.Dropdown}
         data-name={props.name}
+        data-testid="dropdownToggle"
         onClick={toggleDD}
       >
         <div className={styles.select}>{renderItem()}</div>
@@ -36,6 +41,7 @@ function Dropdown(props) {
             <div className={styles.options}>
               {props.options.map((item) => (
                 <div
+                  data-testid="ddOption"
                   onClick={(e) => {
                     e.target.name = props.name;
                     e.target.value = item.value;
