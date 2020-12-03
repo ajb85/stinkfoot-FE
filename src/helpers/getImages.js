@@ -1,6 +1,8 @@
 import allOrigins from "data/origins.js";
-
+import mockRequireContext from "testTools/mockRequireContext.js";
+require = mockRequireContext(require);
 const overlayImages = require.context("./images/overlays/", true);
+
 const atImages = require.context("./images/archetypes/", true);
 const psImages = require.context("./images/powersets/", true);
 
