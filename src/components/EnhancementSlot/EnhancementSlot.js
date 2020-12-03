@@ -18,7 +18,7 @@ function EnhancementSlot({ slot, powerSlotLevel, onClick }) {
   );
 
   return (
-    <div className={styles.slot}>
+    <div className={styles.slot} data-testid="enhancementSlot">
       {slot.enhancement ? (
         <div className={styles.enhancement} onClick={onClick || noFunc}>
           <OnScreenHover className={styles.hoverInfo}>
