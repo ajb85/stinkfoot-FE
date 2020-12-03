@@ -198,6 +198,8 @@ import Will_of_the_Controller from "data/enhancements/sets/Will_of_the_Controlle
 import Winters_Bite from "data/enhancements/sets/Winter's_Bite.json";
 import Winters_Gift from "data/enhancements/sets/Winter's_Gift.json";
 
+import mockRequireContext from "testTools/mockRequireContext.js";
+require = mockRequireContext(require);
 const enhImages = require.context("./enhancements/images", true);
 
 const standard = [
@@ -416,7 +418,6 @@ const ioSets = [
       e.image = set.image;
       e.superiorImage = set.superiorImage;
       e.setDisplayName = set.displayName;
-      console.log("E: ", e.setDisplayName);
     });
   } catch (err) {
     set.enhancements.forEach((e) => {
