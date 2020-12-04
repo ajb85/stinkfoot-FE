@@ -1,7 +1,10 @@
 // @flow
 
 import allOrigins from "data/origins.js";
-const images: { [key: string]: { [key: string]: Module } } = {};
+const images: {
+  [key: string]: { [key: string]: Module },
+  "Unknown.png": Module,
+} = {};
 
 function importAll(r: Function): void {
   r.keys().forEach((key) => {
