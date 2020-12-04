@@ -9,7 +9,7 @@ import {
   getSetBonusDataForPowerSlot,
 } from "helpers/enhancements.js";
 
-import { getEnhancementOverlay } from "helpers/getImages.js";
+import { getEnhancementOverlay } from "js/getImage.js";
 
 import { useBuildAnalysis } from "./powersets.js";
 

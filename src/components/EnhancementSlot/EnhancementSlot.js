@@ -4,7 +4,7 @@ import MaskOverEnhancement from "../MaskOverEnhancement/";
 import OnScreenHover from "../OnScreenHover/";
 
 import useCharacterDetails from "providers/builder/useCharacterDetails.js";
-import { getEnhancementOverlay } from "helpers/getImages.js";
+import { getEnhancementOverlay } from "js/getImage.js";
 
 import styles from "./styles.module.scss";
 

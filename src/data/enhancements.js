@@ -198,9 +198,7 @@ import Will_of_the_Controller from "data/enhancements/sets/Will_of_the_Controlle
 import Winters_Bite from "data/enhancements/sets/Winter's_Bite.json";
 import Winters_Gift from "data/enhancements/sets/Winter's_Gift.json";
 
-import mockRequireContext from "testTools/mockRequireContext.js";
-require = mockRequireContext(require);
-const enhImages = require.context("./enhancements/images", true);
+import getImage from "js/getImage.js";
 
 const standard = [
   Accuracy,
@@ -230,7 +228,7 @@ const standard = [
   ToHit_Buff,
   ToHit_Debuff,
 ].reduce((acc, enh) => {
-  enh.image = enhImages("./" + enh.imageName).default;
+  enh.image = getImage("enhancements/" + enh.imageName);
   const nameStart = "Enhancement_";
   const name = enh.fullName.substring(nameStart.length);
   acc[name] = enh;
@@ -410,10 +408,10 @@ const ioSets = [
   Winters_Gift,
 ].reduce((acc, set) => {
   const { setType } = set;
-  set.image = enhImages("./" + set.imageName).default;
+  set.image = getImage("sets/" + set.imageName);
 
   try {
-    set.superiorImage = enhImages("./s" + set.imageName).default;
+    set.superiorImage = getImage("sets/" + set.imageNameSuperior);
     set.enhancements.forEach((e) => {
       e.image = set.image;
       e.superiorImage = set.superiorImage;

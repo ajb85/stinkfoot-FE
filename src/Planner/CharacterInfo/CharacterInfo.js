@@ -4,7 +4,7 @@ import Dropdown from "components/Dropdown";
 
 import { useSwitchArchetype } from "hooks/powersets.js";
 import useCharacterDetails from "providers/builder/useCharacterDetails.js";
-import { getArchetypeImage, getOriginImage } from "helpers/getImages.js";
+import getImage from "js/getImage.js";
 
 import allOrigins from "data/origins.js";
 import allArchetypes from "data/archetypes.js";
@@ -14,13 +14,13 @@ import styles from "./styles.module.scss";
 const atOptions = allArchetypes.map((a) => ({
   value: a,
   display: a,
-  image: getArchetypeImage(a),
+  image: getImage("archetypes/" + a),
 }));
 
 const originOptions = allOrigins.map(({ name }) => ({
   value: name,
   display: name,
-  image: getOriginImage(name),
+  image: getImage("origins/" + name),
 }));
 
 function CharacterInfo(props) {

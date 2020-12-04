@@ -10,7 +10,7 @@ import {
   useRemovePool,
 } from "hooks/powersets.js";
 
-import { getPowersetImage } from "helpers/getImages.js";
+import getImage from "js/getImage.js";
 
 import styles from "./styles.module.scss";
 
@@ -83,12 +83,14 @@ function Powerset(props) {
 
 export function createFilteredOptionsList(filterFunction, list) {
   return list
-    .map((ps, i) => ({
-      ...ps,
-      value: i,
-      display: ps.displayName,
-      image: getPowersetImage(ps.imageName),
-    }))
+    .map((ps, i) => {
+      return {
+        ...ps,
+        value: i,
+        display: ps.displayName,
+        image: getImage("powersets/" + ps.imageName),
+      };
+    })
     .filter((powerset) => filterFunction(powerset)); // could be single .reduce
 }
 
