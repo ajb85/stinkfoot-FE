@@ -7,7 +7,7 @@ import badgeData from "Badger/data/";
 
 const BuildContext = createContext();
 
-export function BuildProvider(props) {
+export function CharactersProvider(props) {
   const storage = localStorage.getItem("characters");
   let parsed;
   let activeCharName;
