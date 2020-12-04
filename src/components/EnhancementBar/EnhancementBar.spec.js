@@ -1,7 +1,7 @@
 import React from "react";
 import { render, fireEvent } from "@testing-library/react";
 
-// import EnhancementBar from "./";
+import EnhancementBar from "./";
 
 const noFunc = () => {};
 
@@ -20,8 +20,10 @@ beforeEach(() => {
   };
 });
 
-xit("Doesn't allow clicks to propagate", () => {
+it("Doesn't allow clicks to propagate", () => {
   const mockFunc = jest.fn();
-  //   const util = renderEB(mockFunc);
-  expect(true).toBe(true);
+  const util = renderEB(mockFunc);
+  fireEvent.click(util.getByAllByTestId("enhancementSlot")[0]);
+
+  expect(mockFunc).not.toHaveBeenCalled();
 });
