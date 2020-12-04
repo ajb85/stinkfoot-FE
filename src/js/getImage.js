@@ -1,7 +1,9 @@
-import allOrigins from "data/origins.js";
-const images = {};
+// @flow
 
-function importAll(r) {
+import allOrigins from "data/origins.js";
+const images: { [key: string]: { [key: string]: Module } } = {};
+
+function importAll(r: Function): void {
   r.keys().forEach((key) => {
     const split = key.substring(2).split("/");
     const hasDir = split.length > 1;
@@ -23,7 +25,7 @@ function importAll(r) {
 
 importAll(require.context("../assets/cohImages", true, /\.png$/));
 
-export default function getImage(filePathInCoHAssets) {
+export default function getImage(filePathInCoHAssets: string): string {
   const [dir, fileName] = filePathInCoHAssets.split("/");
 
   const folder = dir ? images[dir] : images;
@@ -32,18 +34,17 @@ export default function getImage(filePathInCoHAssets) {
     : images["Unknown.png"].default;
 }
 
-export const getEnhancementOverlay = (origin, tier) => {
-  // getEnhancementOverlay
+export const getEnhancementOverlay = (origin: string, tier: string): string => {
   const oData = allOrigins.find((o) => o.name === origin);
   switch (tier) {
     case "IO":
-      return images.overlays["IO.png"].default;
+      return getImage("overlays/IO.png");
     case "TO":
-      return images.overlays["TO.png"].default;
+      return getImage("overlays/TO.png");
     case "SO":
     case "DO":
-      return images.overlays[`${oData[tier]}.png`].default;
+      return getImage(`overlays/${oData[tier]}.png`);
     default:
-      return null;
+      return images["Unknown.png"].default;
   }
 };
