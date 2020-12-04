@@ -1,5 +1,5 @@
 // @flow
-import { Enhancement, PowerSlot } from "flow/types.js";
+import type { Enhancement, PowerSlot } from "flow/types.js";
 
 export default (
   enhancement: Enhancement,

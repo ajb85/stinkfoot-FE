@@ -1,7 +1,7 @@
 // @flow
 
 import enhancements from "data/enhancements.js";
-import { PowerSlot, BuildAnalysis, ActiveSets } from "flow/types.js";
+import type { PowerSlot, BuildAnalysis, ActiveSets } from "flow/types.js";
 
 const { ioSets } = enhancements;
 

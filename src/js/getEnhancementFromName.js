@@ -1,5 +1,5 @@
 // @flow
-import { Enhancement, IOSet } from "flow/types.js";
+import type { Enhancement, IOSet } from "flow/types.js";
 import enhancements from "data/enhancements.js";
 
 const { ioSets } = enhancements;

@@ -1,5 +1,5 @@
 // @flow
-import { Settings, IOSet, BonusLookup } from "flow/types.js";
+import type { Settings, IOSet, BonusLookup } from "flow/types.js";
 
 import enhancements, { mapSetTypeToName } from "data/enhancements.js";
 import setBonuses from "data/enhancements/setBonuses.json";
