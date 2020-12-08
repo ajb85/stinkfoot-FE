@@ -1,5 +1,14 @@
 // @flow
-import type { Settings, IOSet, BonusLookup } from "flow/types.js";
+import type {
+  Settings,
+  IOSet,
+  Bonus,
+  BonusStatsForPower,
+  BuildAnalysis,
+  Power,
+  PowerSlot,
+  IOSetLookup,
+} from "flow/types.js";
 
 import enhancements, { mapSetTypeToName } from "data/enhancements.js";
 import setBonuses from "data/enhancements/setBonuses.json";
@@ -8,13 +17,13 @@ import { noFunc } from "js/utility.js";
 
 const { ioSets } = enhancements;
 
-export const getBonusesForSet = (
+export const getBonusesForSet: Function = (
   settings: Settings,
   set: IOSet
-): BonusLookup => {
+): Array<Bonus> => {
   const { showSuperior } = settings;
   const baseName = set.displayName.split(" ").join("_");
-  const hasSuperior = !!set.superiorImageName;
+  const hasSuperior = !!set.imageNameSuperior;
   const correctedSetName =
     showSuperior && hasSuperior ? "Superior_" + baseName : baseName;
 
@@ -36,7 +45,7 @@ export const getBonusesForSet = (
   );
 };
 
-export const getEnhancementSubSections = ((cache) => ({
+export const getEnhancementSubSections: Function = ((cache) => ({
   navigation,
   power,
 }) => {
@@ -65,7 +74,7 @@ export const getEnhancementSubSections = ((cache) => ({
   return ["IO", "SO", "DO", "TO"];
 })(new Map());
 
-export const getEnhancementsForPowerSlot = (
+export const getEnhancementsForPowerSlot: Function = (
   { power, navigation },
   { showSuperior }
 ) => {
@@ -81,7 +90,11 @@ export const getEnhancementsForPowerSlot = (
   } else return () => [];
 };
 
-export const canEnhancementGoInPowerSlot = ({ lookup }, power, enhancement) => {
+export const canEnhancementGoInPowerSlot: Function = (
+  { lookup },
+  power,
+  enhancement
+) => {
   // With isUnique, type, and fullName, this will return if the
   // enhancement can be added to a slot
   if (!power) {
@@ -101,15 +114,20 @@ export const canEnhancementGoInPowerSlot = ({ lookup }, power, enhancement) => {
 };
 
 export function getSetBonusDataForPowerSlot(
-  bonuses,
-  { lookup, excluded },
-  settings,
-  powerSlot,
-  set
-) {
+  bonuses: Array<Bonus>,
+  buildAnalysis: BuildAnalysis,
+  settings: Settings,
+  powerSlot: PowerSlot,
+  ioSet: IOSet
+): Array<BonusStatsForPower> {
+  if (!powerSlot.power) {
+    return [];
+  }
+
+  const { lookup } = buildAnalysis;
   const setsInCurrentPower = lookup.setsInPower[powerSlot.power.fullName];
   const setInPower = (setsInCurrentPower &&
-    setsInCurrentPower[set.fullName]) || { count: 0 };
+    setsInCurrentPower[ioSet.fullName]) || { count: 0 };
 
   const { count } = setInPower;
   return bonuses.map(({ bonus, unlocked }) => ({
@@ -136,9 +154,12 @@ function getStandardEnhancementsForPower(power) {
   return Array.from(allowed);
 }
 
-function getIOSetEnhancementsForPower(showSuperior, power) {
+function getIOSetEnhancementsForPower(
+  showSuperior: boolean,
+  power: Power
+): IOSetLookup {
   if (!power || !power.setTypes) {
-    return [];
+    return {};
   }
 
   return power.setTypes.reduce((acc, setType) => {

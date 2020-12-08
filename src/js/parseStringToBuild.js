@@ -5,14 +5,21 @@ import powersets from "data/powersets.js";
 import epicPools from "data/epicPools.js";
 import origins from "data/origins.js";
 import getEnhancementFromName from "js/getEnhancementFromName.js";
-import type { CharacterBuild } from "flow/types.js";
+import type { CharacterBuild, EnhancementSlot } from "flow/types.js";
+
+type ParsingPowerSlot = {
+  level: number,
+  type?: string,
+  power?: string,
+  enhSlots?: Array<EnhancementSlot>,
+};
 
 const atOrderToPlural = {
   primary: "primaries",
   secondary: "secondaries",
 };
 
-export default function (str: string): CharacterBuild {
+export default function (str: string): CharacterBuild | { error: string } {
   try {
     if (str.length < 100) {
       return {
@@ -93,10 +100,13 @@ export default function (str: string): CharacterBuild {
       tagArray.shift(); // Alignment, which is shifted off if !hasEpic
     }
     // Begin power slots
-    let enhSlot;
-    let powerSlot;
-    let nextSlotLevel;
-    let slotType = "selected";
+    let enhSlot: EnhancementSlot;
+
+    let powerSlot: ParsingPowerSlot;
+    let nextSlotLevel: string | null;
+    let slotType: string = "selected";
+    let halfName: boolean = false;
+    const newSlot: EnhancementSlot = { slotLevel: null, type: "selected" };
     return tagArray.reduce((acc, str) => {
       const contents = getTagContent(str);
       if (contents === " IO") {
@@ -109,10 +119,10 @@ export default function (str: string): CharacterBuild {
       const standardColor = ' color="#5EAEFF"';
       if (contents.substring(0, 5) === "Level") {
         // is a new power slot
-        if (powerSlot) {
+        if (powerSlot && powerSlot.enhSlots) {
           if (enhSlot) {
             powerSlot.enhSlots.push(enhSlot);
-            enhSlot = null;
+            enhSlot = { ...newSlot };
           }
 
           if (slotType === "selected") {
@@ -124,13 +134,13 @@ export default function (str: string): CharacterBuild {
           }
           acc.powerSlots.push(powerSlot);
         }
-        powerSlot = { enhSlots: [] };
-        const number = contents.substring(
-          contents.indexOf(" ") + 1,
-          contents.indexOf(":")
-        );
-        powerSlot.level = parseInt(number);
 
+        powerSlot = {
+          enhSlots: [],
+          level: parseInt(
+            contents.substring(contents.indexOf(" ") + 1, contents.indexOf(":"))
+          ),
+        };
         return acc;
       }
 
@@ -145,13 +155,15 @@ export default function (str: string): CharacterBuild {
         // is IO Set
         saveEnhancement(correctSetName(contents.split(" - ").shift()));
         enhSlot.type = "ioSet";
-        enhSlot.halfName = true;
+        halfName = true;
         return acc;
       }
 
-      if (enhSlot && enhSlot.halfName) {
-        delete enhSlot.halfName;
-        enhSlot.name += " // " + correctStatNames(contents);
+      if (enhSlot && halfName) {
+        halfName = false;
+        if (enhSlot.name) {
+          enhSlot.name += " // " + correctStatNames(contents);
+        }
         nextSlotLevel = getNextEnhancementSlotLevelFromStr(str);
         return acc;
       }
@@ -174,19 +186,23 @@ export default function (str: string): CharacterBuild {
 
     function saveEnhancement(contents) {
       if (enhSlot) {
-        const { name, type, ...slot } = enhSlot;
+        const { name, ...slot } = enhSlot;
         const sup = "Superior ";
         let correctedName = name;
-        if (contents.substring(0, sup.length) === sup) {
+        if (correctedName && contents.substring(0, sup.length) === sup) {
           correctedName = correctedName.substring(sup.length);
           slot.modification = "superior";
         }
-        const enhancement = getEnhancementFromName(correctedName, type);
-        slot.enhancement = enhancement;
-        powerSlot.enhSlots.push(slot);
+        if (correctedName) {
+          const enhancement = getEnhancementFromName(correctedName, slot.type);
+          slot.enhancement = enhancement;
+        }
+        if (powerSlot.enhSlots) {
+          powerSlot.enhSlots.push(slot);
+        }
       }
 
-      enhSlot = {};
+      enhSlot = { ...newSlot };
       enhSlot.slotLevel =
         nextSlotLevel === "A" ? null : parseInt(nextSlotLevel);
       nextSlotLevel = null;
@@ -202,7 +218,7 @@ export default function (str: string): CharacterBuild {
   }
 }
 
-function getNextEnhancementSlotLevelFromStr(str) {
+function getNextEnhancementSlotLevelFromStr(str: string): string {
   const substring = str.substring(str.indexOf("<li>"));
   const startLevel = substring.indexOf("(") + 1;
   const endLevel = startLevel > 0 && substring.indexOf(")");
@@ -210,9 +226,11 @@ function getNextEnhancementSlotLevelFromStr(str) {
     // Can only be false or -1 for falsey
     return substring.substring(startLevel, endLevel);
   }
+
+  return "";
 }
 
-function getTagContent(str) {
+function getTagContent(str: string): string {
   if (!str) {
     return "";
   }
@@ -233,11 +251,11 @@ function getTagContent(str) {
   return str.substring(endOfOpenTag + 1, startOfEndTag);
 }
 
-function stripNonAlphanumeric(str) {
+function stripNonAlphanumeric(str: string): string {
   return str.replace(/[^\w\s]/gi, "");
 }
 
-function putPowersetInBuild(character, atOrder, powersetName) {
+function putPowersetInBuild(character, atOrder: string, powersetName: string) {
   if (!powersetName) {
     return;
   }
@@ -267,7 +285,7 @@ function putPowersetInBuild(character, atOrder, powersetName) {
   }
 }
 
-function findDisplayName(powersetName) {
+function findDisplayName(powersetName: string): { [key: string]: any } {
   return ({ displayName }) => displayName === powersetName;
 }
 
@@ -285,7 +303,7 @@ const mapToCorrectName = {
   "Damage/Endurance/Accuracy/Recharge": "Accuracy/Damage/Endurance/Recharge",
   Healing: "Healing/Absorb",
 };
-function correctStatNames(stats) {
+function correctStatNames(stats: string): string {
   const correctedStats = stats
     .split("/")
     .map((n) => mapToCorrectStats[n] || n)
@@ -298,6 +316,6 @@ const mapToCorrectSetName = {
   "Numina's Convalesence": "Numina's Convalescence",
 };
 
-function correctSetName(setName) {
+function correctSetName(setName: string): string {
   return mapToCorrectSetName[setName] || setName;
 }

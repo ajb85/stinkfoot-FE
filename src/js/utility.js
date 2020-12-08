@@ -1,6 +1,7 @@
 // @flow
+import * as React from "react";
 
-export function stopProp(e): void {
+export function stopProp(e: SyntheticEvent<HTMLButtonElement>): void {
   e.stopPropagation();
 }
 

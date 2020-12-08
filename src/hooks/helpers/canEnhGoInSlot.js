@@ -1,15 +1,19 @@
 // @flow
 import type { Enhancement, PowerSlot } from "flow/types.js";
 
-export default (
+export default function canEnhGoInSlot(
   enhancement: Enhancement,
   powerSlot: PowerSlot,
   archetype: string
-): boolean => {
+): boolean {
   // With isUnique, type, and fullName, this will return if the
   // enhancement can be added to a slot
   //   const powerSlot = this.nextState.build.powerSlots[powerSlotIndex];
-  const { power } = powerSlot.power;
+  const { power } = powerSlot;
+
+  if (!power) {
+    return false;
+  }
 
   const { isUnique, type, fullName } = enhancement;
   const enhLookup = this.nextState.lookup.enhancements;
@@ -27,4 +31,4 @@ export default (
     (!isUnique && isUniqueInPower && !isInPower) ||
     (!isUnique && !isUniqueInPower)
   );
-};
+}

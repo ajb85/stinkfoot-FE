@@ -12,11 +12,11 @@ import {
   powerSelectionColor,
   getNextActiveLevel,
   getSlotIndexFromActiveLevel,
-} from "helpers/powersets.js";
+} from "hooks/helpers/powersets.js";
 
 import { useGetBonusesForSet } from "hooks/enhancements.js";
 
-import analyzeBuild from "helpers/analyzeBuild.js";
+import analyzeBuild from "hooks/helpers/analyzeBuild.js";
 
 /******************************************
  ******************************************

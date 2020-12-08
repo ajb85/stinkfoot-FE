@@ -14,13 +14,6 @@ const standardizeOrder = {
   epicPools: "epicPools",
 };
 
-// const pluralToSingleOrder = {
-//   primaries: "primary",
-//   secondaries: "secondary",
-//   poolPowers: "poolPower",
-//   epicPools: "epicPool",
-// };
-
 export const allPowersets = {
   primaries: powersets,
   secondaries: powersets,

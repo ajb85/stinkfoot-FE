@@ -7,7 +7,7 @@ import {
   canEnhancementGoInPowerSlot,
   getBonusesForSet,
   getSetBonusDataForPowerSlot,
-} from "helpers/enhancements.js";
+} from "hooks/helpers/enhancements.js";
 
 import { getEnhancementOverlay } from "js/getImage.js";
 
@@ -82,12 +82,12 @@ export const useGetSetBonusDataForPowerSlot = (powerSlot) => {
   const details = useBuildAnalysis();
   const settings = {};
 
-  return (set) =>
+  return (ioSet) =>
     getSetBonusDataForPowerSlot(
-      bonuses(set),
+      bonuses(ioSet),
       details,
       settings,
       powerSlot,
-      set
+      ioSet
     );
 };
