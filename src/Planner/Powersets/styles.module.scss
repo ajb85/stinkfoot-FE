@@ -69,6 +69,42 @@ section.Powersets {
   }
 }
 
+.poolHeader {
+  display: flex;
+  justify-content: center;
+
+  h3 {
+    width: fit-content;
+  }
+
+  cursor: pointer;
+
+  .removePoolWrapper {
+    position: relative;
+    left: -3%;
+    transition: left 0.25s;
+
+    .removePool {
+      color: red;
+      transition: transform 0.25s;
+      transform: rotate(45deg);
+      visibility: hidden;
+      margin-left: 5px;
+    }
+  }
+
+  &:hover {
+    .removePoolWrapper {
+      left: 3%;
+
+      .removePool {
+        transform: rotate(180deg);
+        visibility: visible;
+      }
+    }
+  }
+}
+
 // Hover Menu that appears when mousing over power
 .power {
   .powerPreviewMenu {

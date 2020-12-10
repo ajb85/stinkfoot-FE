@@ -1,7 +1,9 @@
 import React from "react";
+import { ImCancelCircle } from "react-icons/im";
 
 import Dropdown from "components/Dropdown";
 import OnScreenHover from "components/OnScreenHover/";
+import InPlaceAbsolute from "components/InPlaceAbsolute/";
 
 import useActiveSets from "providers/builder/useActiveSets.js";
 import {
@@ -35,9 +37,18 @@ function Powerset(props) {
     <div className={styles.Powerset}>
       {header ? (
         isPoolPower ? (
-          <h3 style={{ width }} onClick={removePool.bind(this, poolIndex)}>
-            {header}
-          </h3>
+          <div
+            style={{ width }}
+            className={styles.poolHeader}
+            onClick={removePool.bind(this, poolIndex)}
+          >
+            <h3>{header}</h3>
+            {isPoolPower && (
+              <InPlaceAbsolute parentClassName={styles.removePoolWrapper}>
+                <ImCancelCircle className={styles.removePool} />
+              </InPlaceAbsolute>
+            )}
+          </div>
         ) : (
           <h3 style={{ width }}>{header}</h3>
         )
