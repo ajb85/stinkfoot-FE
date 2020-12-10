@@ -1,4 +1,5 @@
 import React from "react";
+import withProviders from "testTools/providers.js";
 import { render, fireEvent } from "@testing-library/react";
 
 import EnhancementBar from "./";
@@ -6,12 +7,14 @@ import EnhancementBar from "./";
 const noFunc = () => {};
 
 let props;
-const renderEB = (onClick = noFunc) =>
+const renderEB = (onClick = noFunc, characterData) =>
   render(
     <div data-testid="test-container">
-      <EnhancementBar {...props} />
+      {withProviders(<EnhancementBar {...props} />)(characterData)}
     </div>
   );
+
+const withCharacter = withProviders(<EnhancementBar />);
 
 beforeEach(() => {
   props = {
@@ -23,7 +26,8 @@ beforeEach(() => {
 it("Doesn't allow clicks to propagate", () => {
   const mockFunc = jest.fn();
   const util = renderEB(mockFunc);
-  fireEvent.click(util.getByAllByTestId("enhancementSlot")[0]);
+  // console.log("RETURNED: ", util);
+  fireEvent.click(util.getAllByTestId("enhancementSlot")[0]);
 
   expect(mockFunc).not.toHaveBeenCalled();
 });

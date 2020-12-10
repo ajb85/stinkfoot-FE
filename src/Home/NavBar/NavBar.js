@@ -116,6 +116,7 @@ function NavButton(props) {
         pill
         outline={activeRoute !== props.id}
         disabled={props.disabled}
+        data-testid={props.id}
       >
         {props.children}
       </Button>

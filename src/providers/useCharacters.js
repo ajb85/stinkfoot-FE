@@ -12,6 +12,9 @@ export function CharactersProvider(props) {
   let parsed;
   let activeCharName;
   try {
+    if (!storage) {
+      throw new Error();
+    }
     parsed = storage && JSON.parse(storage);
     activeCharName =
       parsed && JSON.parse(localStorage.getItem("activeCharacterName"));
@@ -75,12 +78,18 @@ export function CharactersProvider(props) {
   const { Provider } = BuildContext;
   const characterList = Object.keys(characters);
 
+  const activeCharacter =
+    characterList.length > 0
+      ? active
+        ? characters[active]
+        : characters[characterList[0]]
+      : null;
+
   return (
     <Provider
       value={{
         characters,
-        activeCharacter:
-          characterList.length > 0 && active ? characters[active] : null,
+        activeCharacter,
         characterList,
         updateCharacters,
         updateActive,

@@ -1,31 +1,6 @@
 // @flow
-import allOrigins from "data/origins.js";
-
-const images: {
-  [key: string]: { [key: string]: { default: string } },
-} = { root: {} };
-
-function importAll(r: function): void {
-  r.keys().forEach((key) => {
-    const split = key.substring(2).split("/");
-    const hasDir = split.length > 1;
-
-    if (hasDir) {
-      const [dir, fileName] = split;
-
-      if (!images[dir]) {
-        images[dir] = {};
-      }
-
-      images[dir][fileName] = r(key);
-    } else {
-      const [fileName] = split;
-      images.root[fileName] = r(key);
-    }
-  });
-}
-
-importAll(require.context("../assets/cohImages", true, /\.png$/));
+import allOrigins from "../data/origins.js";
+import images from "./images.js";
 
 export default function getImage(filePathInCoHAssets: string): string {
   const [dir, fileName] = filePathInCoHAssets.split("/");
