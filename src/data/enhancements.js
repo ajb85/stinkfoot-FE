@@ -198,9 +198,9 @@ import Will_of_the_Controller from "data/enhancements/sets/Will_of_the_Controlle
 import Winters_Bite from "data/enhancements/sets/Winter's_Bite.json";
 import Winters_Gift from "data/enhancements/sets/Winter's_Gift.json";
 
-const enhImages = require.context("./enhancements/images", true);
+import getImage from "js/getImage.js";
 
-const standard = [
+const standardList = [
   Accuracy,
   Range,
   Confuse,
@@ -227,15 +227,9 @@ const standard = [
   Taunt,
   ToHit_Buff,
   ToHit_Debuff,
-].reduce((acc, enh) => {
-  enh.image = enhImages("./" + enh.imageName).default;
-  const nameStart = "Enhancement_";
-  const name = enh.fullName.substring(nameStart.length);
-  acc[name] = enh;
-  return acc;
-}, {});
+];
 
-const ioSets = [
+const setList = [
   Achilles_Heel,
   Adjusted_Targeting,
   Adrenal_Adjustment,
@@ -406,41 +400,62 @@ const ioSets = [
   Will_of_the_Controller,
   Winters_Bite,
   Winters_Gift,
-].reduce((acc, set) => {
-  const { setType } = set;
-  set.image = enhImages("./" + set.imageName).default;
+];
 
-  try {
-    set.superiorImage = enhImages("./s" + set.imageName).default;
+const { standard, standardLookup } = standardList.reduce(
+  (acc, enh) => {
+    enh.image = getImage("enhancements/" + enh.imageName);
+    const nameStart = "Enhancement_";
+    const name = enh.fullName.substring(nameStart.length);
+    acc.standard[name] = enh;
+    acc.standardLookup[enh.displayName] = enh;
+    return acc;
+  },
+  { standard: {}, standardLookup: {} }
+);
+
+const { ioSets, setLookup } = setList.reduce(
+  (acc, set) => {
+    const { setType } = set;
+    set.image = getImage("sets/" + set.imageName);
+
+    if (!acc.ioSets[setType]) {
+      acc.ioSets[setType] = [];
+    }
+
+    const index = acc.ioSets[setType].length;
+    set.setIndex = index;
+    set.type = "ioSet";
+    try {
+      set.imageSuperior = getImage("sets/" + set.imageNameSuperior);
+    } catch (err) {}
+
     set.enhancements.forEach((e) => {
       e.image = set.image;
-      e.superiorImage = set.superiorImage;
+      set.imageSuperior && (e.imageSuperior = set.imageSuperior);
       e.setDisplayName = set.displayName;
-      console.log("E: ", e.setDisplayName);
+      e.setIndex = index;
+      e.setType = setType;
+      e.type = "ioSet";
     });
-  } catch (err) {
-    set.enhancements.forEach((e) => {
-      e.image = set.image;
-      e.setDisplayName = set.displayName;
-    });
-  }
 
-  if (!acc[setType]) {
-    acc[setType] = [];
-  }
+    acc.ioSets[setType].push(set);
+    acc.setLookup[set.displayName] = {
+      ...set,
+      enhancements: set.enhancements.reduce((eAcc, e) => {
+        eAcc[e.displayName] = e;
+        return eAcc;
+      }),
+    };
 
-  const index = acc[setType].length;
-  set.setIndex = index;
-  set.enhancements.forEach((e) => {
-    e.setIndex = index;
-    e.setType = setType;
-  });
-
-  acc[setType].push(set);
-  return acc;
-}, {});
+    return acc;
+  },
+  { ioSets: {}, setLookup: {} }
+);
 
 export default { standard, ioSets };
+export const standardLookupByDisplayName = standardLookup;
+export const setLookupByDisplayName = setLookup;
 
 export const mapSetTypeToName = {
   0: "Untyped",

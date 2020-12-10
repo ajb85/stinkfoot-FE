@@ -1,11 +1,14 @@
 // @flow
 import versions from "data/versions.json";
+import type { Version } from "flow/types.js";
 
 const lastVersion = localStorage.getItem("lastVersion") || null;
 
-export default !lastVersion
+const toExport: Array<Version> = !lastVersion
   ? versions
   : versions.filter(({ version }) => version > lastVersion);
+
+export default toExport;
 
 let foundVersion: boolean = !lastVersion;
 for (let i = 0; i < versions.length; i++) {

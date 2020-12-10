@@ -4,7 +4,7 @@ import MaskOverEnhancement from "../MaskOverEnhancement/";
 import OnScreenHover from "../OnScreenHover/";
 
 import useCharacterDetails from "providers/builder/useCharacterDetails.js";
-import { getEnhancementOverlay } from "helpers/getImages.js";
+import { getEnhancementOverlay } from "js/getImage.js";
 
 import styles from "./styles.module.scss";
 
@@ -18,7 +18,7 @@ function EnhancementSlot({ slot, powerSlotLevel, onClick }) {
   );
 
   return (
-    <div className={styles.slot}>
+    <div className={styles.slot} data-testid="enhancementSlot">
       {slot.enhancement ? (
         <div className={styles.enhancement} onClick={onClick || noFunc}>
           <OnScreenHover className={styles.hoverInfo}>

@@ -1,6 +1,6 @@
 import React from "react";
-import { BuildProvider } from "./useCharacters.js";
+import { CharactersProvider } from "./useCharacters.js";
 
 export default function Providers(props) {
-  return <BuildProvider>{props.children}</BuildProvider>;
+  return <CharactersProvider>{props.children}</CharactersProvider>;
 }

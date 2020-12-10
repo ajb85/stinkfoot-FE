@@ -45,8 +45,13 @@ class SlotsManager {
     return this.slots[top] === target ? top : bottom;
   }
 
-  _findNextLargest(target: number, returnIndex: number): number {
+  _findNextLargest(target: number, returnIndex: boolean | void): number | void {
     let index = this._binarySearch(target);
+
+    if (index === undefined) {
+      return;
+    }
+
     while (this.slots[index] && this.slots[index] < target) {
       index++;
     }
@@ -55,21 +60,32 @@ class SlotsManager {
 
   _removeOnce(num: number): void {
     const index = this._binarySearch(num);
-    if (this.slots[index] === num) {
+    if (index !== undefined && this.slots[index] === num) {
       this.slots.splice(index, 1);
     } else {
       console.log("COULD NOT REMOVE", num, "FROM ", this.slots);
     }
   }
 
-  getSlot(powerLevel: number): number {
+  getSlot(powerLevel: number): number | void {
     const slotLevel = this._findNextLargest(powerLevel);
-    this._removeOnce(slotLevel);
+
+    if (slotLevel !== undefined) {
+      this._removeOnce(slotLevel);
+    }
+
     return slotLevel;
   }
 
-  previewSlots(powerLevel: number, count: number = 1): number | boolean {
+  previewSlots(
+    powerLevel: number,
+    count: number = 1
+  ): Array<number> | number | boolean {
     const firstIndex = this._findNextLargest(powerLevel, true);
+
+    if (firstIndex === undefined) {
+      return false;
+    }
 
     const slots = [];
     for (let i = 0; i < count; i++) {
@@ -96,6 +112,10 @@ class SlotsManager {
 
     let index = this._binarySearch(slotLevel);
 
+    if (index === undefined) {
+      return;
+    }
+
     if (this.slots[index] >= slotLevel) {
       return this.slots.splice(index, 0, slotLevel);
     }
@@ -116,4 +136,5 @@ class SlotsManager {
   }
 }
 
-export default new SlotsManager();
+const instance: SlotsManager = new SlotsManager();
+export default instance;

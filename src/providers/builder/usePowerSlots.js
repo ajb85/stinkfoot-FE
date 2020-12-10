@@ -12,7 +12,7 @@ export const PowerSlotsProvider = (props) => {
   const setPowerSlots = (value) => updateActiveCharacter("powerSlots", value);
   const { powerSlots } = activeCharacter;
   const { Provider } = context;
-  console.log("POWERSLOTS: ", powerSlots);
+  process.env.NODE_ENV !== "test" && console.log("POWERSLOTS: ", powerSlots);
 
   const removePowerFromSlot = ((cache, timeout) => (index) => {
     if (timeout) {
@@ -170,6 +170,7 @@ export const PowerSlotsProvider = (props) => {
     resetPowerSlots,
     updatePowerSlotNav,
   };
+
   return <Provider value={state}>{props.children}</Provider>;
 };
 

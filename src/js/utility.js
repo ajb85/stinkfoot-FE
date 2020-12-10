@@ -1,6 +1,5 @@
 // @flow
-
-export function stopProp(e): void {
+export function stopProp(e: SyntheticEvent<HTMLButtonElement>): void {
   e.stopPropagation();
 }
 

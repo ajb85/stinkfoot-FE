@@ -1,42 +1,24 @@
 // @flow
-import { Enhancement, IOSet } from "flow/types.js";
-import enhancements from "data/enhancements.js";
+import type { Enhancement, IOSet } from "flow/types.js";
+import {
+  standardLookupByDisplayName as standardLookup,
+  setLookupByDisplayName as setLookup,
+} from "data/enhancements.js";
 
-const { ioSets } = enhancements;
+type ArrayOfSets = Array<IOSet>;
 
-type Accumulator = { [key: string]: Enhancement };
+type StandardAccumulator = { [key: string]: Enhancement };
+type SetAccumulator = { [key: string]: IOSet };
 
-const allSets = Object.values(ioSets).reduce((acc, s) => [...acc, ...s], []);
-const enhLookup = [...Object.values(enhancements.standard), ...allSets].reduce(
-  (acc: Accumulator, e: Enhancement | IOSet): Accumulator => {
-    const isStandard = e.type === "standard";
-    const isSet = e.setType !== undefined;
-    if (isStandard) {
-      acc[e.displayName] = e;
-      if (e.aliases) {
-        e.aliases.forEach((a) => (acc[a] = e));
-      }
-    } else if (isSet) {
-      const setLookup = {};
-      e.enhancements.forEach((enh) => (setLookup[enh.displayName] = enh));
-
-      acc[e.displayName] = setLookup;
-    } else {
-      console.log("UNKNOWN ENHANCEMENT TYPE", e);
-    }
-    return acc;
-  },
-  {}
-);
-
-console.log("LOOKUP: ", enhLookup);
-
-export default function (name: string, type: string): Enhancement | void {
+export default function getEnhancementFromName(
+  name: string,
+  type: string
+): Enhancement | void {
   if (type === "ioSet") {
     const [set, enhName] = name.split(" // ");
-    const enhancement = enhLookup[set] && enhLookup[set][enhName];
+    const enhancement = setLookup[set] && setLookup[set][enhName];
     if (!enhancement) {
-      const noSet = !enhLookup[set];
+      const noSet = !setLookup[set];
       console.log(
         noSet ? "COULD NOT FIND SET " : "COULD NOT FIND ENHANCEMENT",
         name,
@@ -46,7 +28,7 @@ export default function (name: string, type: string): Enhancement | void {
 
     return enhancement;
   } else if (type === "SO" || type === "IO") {
-    const enhancement = enhLookup[name];
+    const enhancement = standardLookup[name];
     if (!enhancement) {
       console.log("COULD NOT FIND STANDARD ENHANCEMENT: ", name, type);
     }

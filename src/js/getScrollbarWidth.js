@@ -1,7 +1,7 @@
 // @flow
 
-export default (function (cache: void | string) {
-  return function getScrollbarWidth(): string {
+export default (function (cache: void | number): Function {
+  return function getScrollbarWidth(): number {
     // Creating invisible container
     if (cache) {
       return cache;
@@ -11,7 +11,9 @@ export default (function (cache: void | string) {
     outer.style.visibility = "hidden";
     outer.style.overflow = "scroll"; // forcing scrollbar to appear
     outer.style.msOverflowStyle = "scrollbar"; // needed for WinJS apps
-    document.body.appendChild(outer);
+    if (document.body) {
+      document.body.appendChild(outer);
+    }
 
     // Creating inner element and placing it in the container
     const inner = document.createElement("div");
@@ -21,7 +23,9 @@ export default (function (cache: void | string) {
     const scrollbarWidth = outer.offsetWidth - inner.offsetWidth;
 
     // Removing temporary elements from the DOM
-    outer.parentNode.removeChild(outer);
+    if (outer.parentNode) {
+      outer.parentNode.removeChild(outer);
+    }
     cache = scrollbarWidth;
     return scrollbarWidth;
   };
