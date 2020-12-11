@@ -13,9 +13,7 @@ function Planner(props) {
   const removeSlotToggles = useRemoveSlotToggles();
   return (
     <div className={styles.Planner} onClick={removeSlotToggles}>
-      <header>
-        <CharacterInfo />
-      </header>
+      <CharacterInfo />
       <main>
         <Powersets />
         <PowerSlots />
