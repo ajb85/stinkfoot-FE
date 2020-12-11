@@ -86,10 +86,11 @@ section.Powersets {
 
     .removePool {
       color: red;
-      transition: transform 0.25s;
+      transition: opacity 0.25s, transform 0.25s;
       transform: rotate(45deg);
       visibility: hidden;
       margin-left: 5px;
+      opacity: 0;
     }
   }
 
@@ -100,6 +101,7 @@ section.Powersets {
       .removePool {
         transform: rotate(180deg);
         visibility: visible;
+        opacity: 1;
       }
     }
   }

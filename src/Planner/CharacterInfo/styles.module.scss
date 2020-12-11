@@ -3,32 +3,51 @@
 section.CharacterInfo {
   display: flex;
   flex-wrap: wrap;
-  // justify-content: space-between;
 
   min-width: 150px;
   width: 100%;
   max-width: 1265px;
-  margin: 0 auto;
-  height: 2 * $lh;
-
-  div {
-    margin: $lh / 2;
-
-    label {
-      margin-right: 5px;
-    }
-
-    button {
-      min-width: 55px;
-    }
-  }
+  margin: 0 auto $lh/2;
+  height: 2.5 * $lh;
 
   & > div {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
+    margin: 0 5px;
 
-    div {
-      margin: 0;
+    & > label {
+      margin-right: 5px;
+    }
+
+    & > button {
+      min-width: 55px;
+    }
+
+    &.slotsLeft {
+      // Wrapper for slots left
+      border: 1px solid $secondary;
+      border-radius: 5px;
+      background-color: $main;
+
+      & > div {
+        // Wrapper div around slot & count
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 5px;
+
+        & > p {
+          // Count
+          position: absolute;
+          font-size: 12px;
+        }
+      }
+
+      & > p {
+        // "Slots Left"
+        margin: 0 5px;
+      }
     }
   }
 }

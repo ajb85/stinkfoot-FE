@@ -1,6 +1,12 @@
 @import "styles/variables.scss";
 
 .slot {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+
+  position: relative;
+
   & > div.empty {
     width: 30px;
     height: 30px;
@@ -57,16 +63,20 @@
     }
   }
 
-  .level {
+  .level,
+  .emptyLevel {
     width: fit-content;
     font-size: 9px;
 
-    position: relative;
-    left: 11px;
-    top: -10px;
+    position: absolute;
+    bottom: 0px;
 
     background-color: $dark;
     border-radius: 50%;
     padding: 1px;
+  }
+
+  .emptyLevel {
+    bottom: -3px;
   }
 }
