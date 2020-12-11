@@ -10,16 +10,20 @@ import styles from "./styles.module.scss";
 
 function EnhancementSlot({ slot, powerSlotLevel, onClick }) {
   const { character } = useCharacterDetails();
-  const hasLevel = slot.slotLevel !== undefined;
+  const hasLevel = slot && slot.slotLevel !== undefined;
 
-  const overlay = getEnhancementOverlay(
-    character.origin,
-    slot.enhancement && slot.enhancement.tier
-  );
+  const overlay =
+    slot &&
+    getEnhancementOverlay(
+      character.origin,
+      slot.enhancement && slot.enhancement.tier
+    );
+
+  const isEmpty = !slot || !slot.enhancement;
 
   return (
     <div className={styles.slot} data-testid="enhancementSlot">
-      {slot.enhancement ? (
+      {!isEmpty ? (
         <div className={styles.enhancement} onClick={onClick || noFunc}>
           <OnScreenHover className={styles.hoverInfo}>
             <>
@@ -37,7 +41,9 @@ function EnhancementSlot({ slot, powerSlotLevel, onClick }) {
         <div className={styles.empty} />
       )}
       {hasLevel && (
-        <div className={styles.level}>{slot.slotLevel || powerSlotLevel}</div>
+        <div className={!isEmpty ? styles.level : styles.emptyLevel}>
+          {slot.slotLevel || powerSlotLevel}
+        </div>
       )}
     </div>
   );
