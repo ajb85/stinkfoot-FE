@@ -1,10 +1,12 @@
 import React from "react";
 
-import Dropdown from "components/Dropdown";
+import Dropdown from "components/Dropdown/";
+import EnhancementSlot from "components/EnhancementSlot/";
 
 import { useSwitchArchetype } from "hooks/powersets.js";
 import useCharacterDetails from "providers/builder/useCharacterDetails.js";
 import getImage from "js/getImage.js";
+import slotsManager from "js/slotsManager.js";
 
 import allOrigins from "data/origins.js";
 import allArchetypes from "data/archetypes.js";
@@ -51,15 +53,13 @@ function CharacterInfo(props) {
           />
         </div>
       </div>
-      {/* <div>
-        <label>Name</label>
-        <input
-          type="text"
-          value={character.name}
-          name="name"
-          onChange={setCharacterDetail}
-        />
-      </div> */}
+      <div className={styles.slotsLeft}>
+        {/* <p>Slots Left</p> */}
+        <div>
+          <EnhancementSlot slot={{ slotLevel: slotsManager.previewSlots(1) }} />
+          <p>{slotsManager.remaining}</p>
+        </div>
+      </div>
     </section>
   );
 }
