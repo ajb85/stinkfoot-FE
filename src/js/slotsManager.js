@@ -12,6 +12,10 @@ class SlotsManager {
     return this.slots.length;
   }
 
+  get remaining(): number {
+    return this.length;
+  }
+
   _binarySearch(target: number): void | number {
     let cursor;
     let bottom = 0;
