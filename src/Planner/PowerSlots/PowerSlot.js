@@ -22,12 +22,11 @@ function PowerSlot(props) {
   const clearActiveEnhancementSet = useClearActiveEnhancementSet();
   const togglePowerSlot = useTogglePowerSlot(powerSlotIndex);
   const { tracking } = useActiveSets();
-  const power = usePowerFromRef(powerRef);
   const getEnhancementSubSections = useGetEnhancementSubSections(
-    powerSlotIndex,
-    power
+    powerSlotIndex
   );
 
+  const power = usePowerFromRef(powerRef);
   console.log("SDLFKJ: ", powerRef, power);
 
   const isSlottable =
