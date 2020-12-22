@@ -403,8 +403,9 @@ const setList = [
 ];
 
 const { standard, standardLookup } = standardList.reduce(
-  (acc, enh) => {
+  (acc, enh, i) => {
     enh.image = getImage("enhancements/" + enh.imageName);
+    enh.standardIndex = i;
     const nameStart = "Enhancement_";
     const name = enh.fullName.substring(nameStart.length);
     acc.standard[name] = enh;
@@ -430,11 +431,12 @@ const { ioSets, setLookup } = setList.reduce(
       set.imageSuperior = getImage("sets/" + set.imageNameSuperior);
     } catch (err) {}
 
-    set.enhancements.forEach((e) => {
+    set.enhancements.forEach((e, i) => {
       e.image = set.image;
       set.imageSuperior && (e.imageSuperior = set.imageSuperior);
       e.setDisplayName = set.displayName;
       e.setIndex = index;
+      e.setEnhancementIndex = i;
       e.setType = setType;
       e.type = "ioSet";
     });
