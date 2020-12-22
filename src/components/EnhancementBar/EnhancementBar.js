@@ -28,7 +28,7 @@ function EnhancementBar(props) {
       {powerSlot.enhSlots.map((s, i) => {
         return (
           <EnhancementSlot
-            onClick={s.enhancement ? removeEnhancement.bind(this, i) : null}
+            onClick={s.enhancementRef ? removeEnhancement.bind(this, i) : null}
             key={i}
             slot={s}
             powerSlotLevel={powerSlot.level}

@@ -5,6 +5,8 @@ import archetypes from "data/archetypes.js";
 import powerSlotsTemplate from "data/powerSlotsTemplate.js";
 import badgeData from "Badger/data/";
 
+import { prepareCharacterForStorage } from "js/characterStorageConversion.js";
+
 const BuildContext = createContext();
 
 export function CharactersProvider(props) {
@@ -20,11 +22,17 @@ export function CharactersProvider(props) {
       parsed && JSON.parse(localStorage.getItem("activeCharacterName"));
   } catch {
     parsed = {};
-    localStorage.setItem("character", JSON.stringify(parsed));
+    localStorage.setItem("characters", JSON.stringify(parsed));
   }
 
   const [characters, setCharacters] = useState(parsed || {});
   const [active, setActive] = useState(activeCharName || "");
+
+  const updateCharacterInStorage = (charName, updated) => {
+    const storage = JSON.parse(localStorage.getItem("characters"));
+    storage[charName] = prepareCharacterForStorage(updated);
+    localStorage.setItem("characters", JSON.stringify(storage));
+  };
 
   const updateCharacters = (updated) => {
     localStorage.setItem("characters", JSON.stringify(updated));
@@ -48,7 +56,8 @@ export function CharactersProvider(props) {
     updatedActive[key] = value;
 
     timeout = setTimeout(() => {
-      updateCharacters({ ...characters, [active]: updatedActive });
+      updateCharacterInStorage(active, updatedActive);
+      setCharacters({ ...characters, [active]: updatedActive });
       updatedActive = null;
       timeout = null;
     }, 50);

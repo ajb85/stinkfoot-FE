@@ -10,6 +10,7 @@ import { useSetNavSection } from "hooks/powerSlots.js";
 import {
   useTogglePowerSlot,
   useClearActiveEnhancementSet,
+  usePowerFromRef,
 } from "hooks/powersets.js";
 import useActiveSets from "providers/builder/useActiveSets.js";
 
@@ -17,13 +18,17 @@ import styles from "./styles.module.scss";
 
 function PowerSlot(props) {
   const { slot } = props;
-  const { level, power, powerSlotIndex, navigation } = slot;
+  const { level, powerRef, powerSlotIndex, navigation } = slot;
   const clearActiveEnhancementSet = useClearActiveEnhancementSet();
   const togglePowerSlot = useTogglePowerSlot(powerSlotIndex);
   const { tracking } = useActiveSets();
+  const power = usePowerFromRef(powerRef);
   const getEnhancementSubSections = useGetEnhancementSubSections(
-    powerSlotIndex
+    powerSlotIndex,
+    power
   );
+
+  console.log("SDLFKJ: ", powerRef, power);
 
   const isSlottable =
     power && (!!power.allowedEnhancements.length || !!power.setTypes.length);
@@ -38,7 +43,7 @@ function PowerSlot(props) {
 
   const updateNav = useSetNavSection(powerSlotIndex);
 
-  if (!power) {
+  if (!powerRef || !power) {
     const isActive = tracking.activeLevel === level;
     return <EmptyPowerSlot level={level} isActive={isActive} />;
   }

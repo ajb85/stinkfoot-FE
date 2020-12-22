@@ -10,6 +10,7 @@ import {
 } from "hooks/helpers/enhancements.js";
 
 import { getEnhancementOverlay } from "js/getImage.js";
+import { getEnhancementFromRef } from "js/getFromRef.js";
 
 import { useBuildAnalysis } from "./powersets.js";
 
@@ -90,4 +91,18 @@ export const useGetSetBonusDataForPowerSlot = (powerSlot) => {
       powerSlot,
       ioSet
     );
+};
+
+export const useEnhancementFromRef = (ref) => {
+  if (!ref) {
+    return null;
+  }
+
+  const { enhancement, newIndex } = getEnhancementFromRef(ref);
+
+  if (!enhancement || newIndex !== null) {
+    // update build, something changed
+  }
+
+  return enhancement;
 };

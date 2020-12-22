@@ -47,10 +47,9 @@ export const getBonusesForSet: Function = (
 
 export const getEnhancementSubSections: Function = ((cache) => ({
   navigation,
-  power,
+  setTypes,
 }) => {
   const isSet = navigation && navigation.section === "sets";
-  const { setTypes } = power;
   if (isSet && setTypes) {
     if (!cache.has(setTypes)) {
       // If IOs, map over the setNums

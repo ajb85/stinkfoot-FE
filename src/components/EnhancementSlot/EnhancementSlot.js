@@ -5,6 +5,7 @@ import OnScreenHover from "../OnScreenHover/";
 
 import useCharacterDetails from "providers/builder/useCharacterDetails.js";
 import { getEnhancementOverlay } from "js/getImage.js";
+import { useEnhancementFromRef } from "hooks/enhancements.js";
 
 import styles from "./styles.module.scss";
 
@@ -14,12 +15,14 @@ function EnhancementSlot({ slot, powerSlotLevel, onClick }) {
 
   const overlay =
     slot &&
+    slot.enhancementRef &&
     getEnhancementOverlay(
       character.origin,
-      slot.enhancement && slot.enhancement.tier
+      slot.enhancementRef && slot.enhancementRef.tier
     );
 
-  const isEmpty = !slot || !slot.enhancement;
+  const enhancement = useEnhancementFromRef(slot && slot.enhancementRef);
+  const isEmpty = !enhancement;
 
   return (
     <div className={styles.slot} data-testid="enhancementSlot">
@@ -27,15 +30,15 @@ function EnhancementSlot({ slot, powerSlotLevel, onClick }) {
         <div className={styles.enhancement} onClick={onClick || noFunc}>
           <OnScreenHover className={styles.hoverInfo}>
             <>
-              <h4>{slot.enhancement.setDisplayName}</h4>
-              <p>{slot.enhancement.displayName}</p>
+              <h4>{enhancement.setDisplayName}</h4>
+              <p>{enhancement.displayName}</p>
             </>
           </OnScreenHover>
           <MaskOverEnhancement className={styles.removeEnh}>
             X
           </MaskOverEnhancement>
           {overlay && <img src={overlay} alt="enhancement overlay" />}
-          <img src={slot.enhancement.image} alt="enhancement" />
+          <img src={enhancement.image} alt="enhancement" />
         </div>
       ) : (
         <div className={styles.empty} />
