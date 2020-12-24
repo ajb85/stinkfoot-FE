@@ -27,7 +27,6 @@ function PowerSlot(props) {
   );
 
   const power = usePowerFromRef(powerRef);
-  console.log("SDLFKJ: ", powerRef, power);
 
   const isSlottable =
     power && (!!power.allowedEnhancements.length || !!power.setTypes.length);

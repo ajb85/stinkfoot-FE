@@ -1,8 +1,8 @@
 // @flow
 
 import enhancements from "data/enhancements.js";
+import { getPowerFromRef } from "js/getFromRef.js";
 import type { PowerSlot, BuildAnalysis, ActivePowersets } from "flow/types.js";
-
 const { ioSets } = enhancements;
 
 type CacheType = {
@@ -14,25 +14,35 @@ function analyzerWrapper(cache: CacheType) {
   return function analyzer(
     powerSlots: Array<PowerSlot>,
     activeSets: ActivePowersets,
-    getBonusesForSet: Function
+    getBonusesForSet: Function,
+    archetype: string
   ): BuildAnalysis {
     if (cache.build === powerSlots) {
       return cache.results;
     }
 
-    const reduceSlot = getSlotReducer(getBonusesForSet);
-    const results = powerSlots.reduce(reduceSlot, getInitialAcc());
+    const results = powerSlots.reduce(
+      getSlotReducer(getBonusesForSet, archetype),
+      getInitialAcc()
+    );
+
     evaluatePowersets(activeSets, results);
 
     cache.build = powerSlots;
     cache.results = results;
+
+    console.log("ANALYSIS: ", results);
     return results;
   };
 }
 
 const analyzer: Function = analyzerWrapper({});
 export default analyzer;
-function getSlotReducer(getBonusesForSet: Function): Function {
+
+function getSlotReducer(
+  getBonusesForSet: Function,
+  archetype: string
+): Function {
   const setBonusesCache = {};
 
   return function reduceSlot(
@@ -40,10 +50,10 @@ function getSlotReducer(getBonusesForSet: Function): Function {
     powerSlot: PowerSlot,
     i
   ): BuildAnalysis {
-    const { enhSlots, power } = powerSlot;
-
+    const { enhSlots, powerRef } = powerSlot;
     // Save power in look up
-    if (power && enhSlots) {
+    if (powerRef && enhSlots) {
+      const { power } = getPowerFromRef(archetype, powerRef);
       acc.lookup.powers[power.fullName] = i;
 
       enhSlots.forEach(({ enhancement }) => {

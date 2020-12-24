@@ -37,7 +37,6 @@ export function getEnhancementFromRef(ref) {
       enhancements.ioSets[setType][setIndex].enhancements[setEnhancementIndex];
 
     if (!enhancement || enhancement.fullName !== fullName) {
-      console.log("NEED ENHANCEMENT IO SET NAME");
       // fullName: Boosts.Attuned_Adjusted_Targeting_A.Attuned_Adjusted_Targeting_A
       const set_name = fullName.split(".")[1]; // set name with underscores
       const setFullName =
@@ -88,7 +87,6 @@ export function getPowerFromRef(archetype, ref) {
   let power;
   let mustUpdate = false;
   if (isPoolPower) {
-    console.log("is pool power");
     power = poolPowers[poolIndex][powerIndex];
 
     if (!power || power.fullName !== fullName) {
@@ -101,21 +99,16 @@ export function getPowerFromRef(archetype, ref) {
     }
   } else {
     const atOrder = standardizeNameToPlural(archetypeOrder);
-    console.log("IS NOT POOL POWER");
     const pExists =
       powersets[archetype] &&
       powersets[archetype][atOrder] &&
       powersets[archetype][atOrder][powersetIndex] &&
       powersets[archetype][atOrder][powersetIndex].powers[powerIndex];
-    console.log(archetype, atOrder, powersetIndex, powerIndex);
-    console.log(powersets);
 
     if (pExists) {
-      console.log("POWER EXISTS");
       power = powersets[archetype][atOrder][powersetIndex].powers[powerIndex];
 
       if (power.fullName !== fullName) {
-        console.log("NAMES DO NOT MATCH", power.fullName, fullName);
         mustUpdate = true;
 
         // Did power move to a different index?
@@ -124,14 +117,12 @@ export function getPowerFromRef(archetype, ref) {
         );
 
         if (!power) {
-          console.log("NO POWER IN SET");
           // Power is no longer in the set
           power = null;
         }
       }
     } else {
       // No power was found, something went wrong
-      console.log("NO POWER BY REF");
       power = null;
     }
   }
