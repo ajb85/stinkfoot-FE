@@ -22,10 +22,7 @@ function PowerSlot(props) {
   const clearActiveEnhancementSet = useClearActiveEnhancementSet();
   const togglePowerSlot = useTogglePowerSlot(powerSlotIndex);
   const { tracking } = useActiveSets();
-  const getEnhancementSubSections = useGetEnhancementSubSections(
-    powerSlotIndex
-  );
-
+  const subsections = useGetEnhancementSubSections(powerSlotIndex);
   const power = usePowerFromRef(powerRef);
 
   const isSlottable =
@@ -47,8 +44,6 @@ function PowerSlot(props) {
   }
 
   const isToggled = tracking.toggledSlot === powerSlotIndex;
-  const subsections = getEnhancementSubSections(power.setTypes);
-
   const zIndex = isToggled ? props.zIndex + 100 : props.zIndex;
   return (
     <div
@@ -107,7 +102,7 @@ function getTopOptions(enhNavigation, updateNav, power) {
 function getSideOptions(enhNavigation, updateNav, subsections) {
   const { section } = enhNavigation;
   const isSet = section === "sets";
-
+  // console.log("SIDE OPTIONS: ", isSet, enhNavigation, updateNav, subsections);
   return subsections.map((category) => {
     const name = isSet ? category.name : category;
     const setType = isSet ? category.setType : name;

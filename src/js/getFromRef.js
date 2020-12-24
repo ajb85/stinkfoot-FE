@@ -75,6 +75,10 @@ export function getEnhancementFromRef(ref) {
 }
 
 export function getPowerFromRef(archetype, ref) {
+  if (!ref) {
+    return { power: null };
+  }
+
   const {
     archetypeOrder,
     fullName,

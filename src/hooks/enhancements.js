@@ -17,15 +17,17 @@ import { useBuildAnalysis } from "./powersets.js";
 export const useGetEnhancementsForPowerSlot = (powerSlotIndex) => {
   const { powerSlots } = usePowerSlots();
   const powerSlot = powerSlots[powerSlotIndex];
+  const { character } = useCharacterDetails();
   const settings = {};
-  return getEnhancementsForPowerSlot(powerSlot, settings);
+  return getEnhancementsForPowerSlot(character.archetype, powerSlot, settings);
 };
 
 export const useGetEnhancementSubSections = (powerSlotIndex) => {
   const { powerSlots } = usePowerSlots();
   const powerSlot = powerSlots[powerSlotIndex];
+  const { character } = useCharacterDetails();
   // const settings = {};
-  return getEnhancementSubSections.bind(this, powerSlot);
+  return getEnhancementSubSections(character.archetype, powerSlot);
 };
 
 export const useCanEnhancementGoInPowerSlot = (powerSlotIndex) => {

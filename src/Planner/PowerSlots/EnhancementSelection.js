@@ -15,9 +15,7 @@ import {
 } from "hooks/enhancements";
 
 import { useActiveEnhancementSet } from "hooks/powersets.js";
-
 import shortenEnhName from "js/shortenEnhName.js";
-
 import styles from "./styles.module.scss";
 
 function EnhancementSelection(props) {

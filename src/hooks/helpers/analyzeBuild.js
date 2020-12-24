@@ -1,7 +1,7 @@
 // @flow
 
 import enhancements from "data/enhancements.js";
-import { getPowerFromRef } from "js/getFromRef.js";
+import { getPowerFromRef, getEnhancementFromRef } from "js/getFromRef.js";
 import type { PowerSlot, BuildAnalysis, ActivePowersets } from "flow/types.js";
 const { ioSets } = enhancements;
 
@@ -31,7 +31,6 @@ function analyzerWrapper(cache: CacheType) {
     cache.build = powerSlots;
     cache.results = results;
 
-    console.log("ANALYSIS: ", results);
     return results;
   };
 }
@@ -56,10 +55,16 @@ function getSlotReducer(
       const { power } = getPowerFromRef(archetype, powerRef);
       acc.lookup.powers[power.fullName] = i;
 
-      enhSlots.forEach(({ enhancement }) => {
+      enhSlots.forEach(({ enhancementRef }) => {
+        if (!enhancementRef) {
+          return;
+        }
+
+        const { enhancement } = getEnhancementFromRef(enhancementRef);
         if (!enhancement) {
           return;
         }
+
         const isSet = enhancement.setType !== undefined;
         if (isSet) {
           // Save set bonus records

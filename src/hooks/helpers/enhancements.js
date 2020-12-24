@@ -14,6 +14,7 @@ import enhancements, { mapSetTypeToName } from "data/enhancements.js";
 import setBonuses from "data/enhancements/setBonuses.json";
 import bonusLibrary from "data/enhancements/bonusesLibrary.json";
 import { noFunc } from "js/utility.js";
+import { getPowerFromRef } from "js/getFromRef.js";
 
 const { ioSets } = enhancements;
 
@@ -45,14 +46,17 @@ export const getBonusesForSet: Function = (
   );
 };
 
-export const getEnhancementSubSections: Function = ((cache) => ({
-  navigation,
-  setTypes,
-}) => {
+export const getEnhancementSubSections: Function = ((cache) => (
+  archetype,
+  { navigation, powerRef }
+) => {
+  const { power } = getPowerFromRef(archetype, powerRef);
   const isSet = navigation && navigation.section === "sets";
-  if (isSet && setTypes) {
+
+  if (isSet && power && power.setTypes) {
+    const { setTypes } = power;
     if (!cache.has(setTypes)) {
-      // If IOs, map over the setNums
+      // If IOs, map over the set types
       cache.set(
         setTypes,
         setTypes.map((setType) => ({
@@ -74,9 +78,11 @@ export const getEnhancementSubSections: Function = ((cache) => ({
 })(new Map());
 
 export const getEnhancementsForPowerSlot: Function = (
-  { power, navigation },
+  archetype,
+  { powerRef, navigation },
   { showSuperior }
 ) => {
+  const { power } = getPowerFromRef(archetype, powerRef);
   const section = navigation ? navigation.section : "standard";
   if (!power) {
     return noFunc.bind(this, section === "standard" ? [] : {});
