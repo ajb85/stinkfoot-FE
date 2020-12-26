@@ -5,8 +5,6 @@ import archetypes from "data/archetypes.js";
 import powerSlotsTemplate from "data/powerSlotsTemplate.js";
 import badgeData from "Badger/data/";
 
-import { prepareCharacterForStorage } from "js/characterStorageConversion.js";
-
 const BuildContext = createContext();
 
 export function CharactersProvider(props) {
@@ -30,7 +28,7 @@ export function CharactersProvider(props) {
 
   const updateCharacterInStorage = (charName, updated) => {
     const storage = JSON.parse(localStorage.getItem("characters"));
-    storage[charName] = prepareCharacterForStorage(updated);
+    storage[charName] = updated;
     localStorage.setItem("characters", JSON.stringify(storage));
   };
 

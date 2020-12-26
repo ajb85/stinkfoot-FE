@@ -111,7 +111,11 @@ export const PowerSlotsProvider = (props) => {
         ? null
         : slotsManager.getSlot(powerSlot.level);
 
-      const newSlot = { slotLevel, enhancement };
+      const newSlot = {
+        slotLevel,
+        enhancementRef: enhancementToRef(enhancement),
+      };
+
       if (slotExists) {
         powerSlot.enhSlots[i] = newSlot;
       } else {
