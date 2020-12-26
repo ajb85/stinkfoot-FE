@@ -123,14 +123,16 @@ export function getSetBonusDataForPowerSlot(
   buildAnalysis: BuildAnalysis,
   settings: Settings,
   powerSlot: PowerSlot,
-  ioSet: IOSet
+  ioSet: IOSet,
+  archetype: string
 ): Array<BonusStatsForPower> {
-  if (!powerSlot.power) {
+  if (!powerSlot.powerRef) {
     return [];
   }
 
   const { lookup } = buildAnalysis;
-  const setsInCurrentPower = lookup.setsInPower[powerSlot.power.fullName];
+  const power = getPowerFromRef(archetype, powerSlot.powerRef);
+  const setsInCurrentPower = lookup.setsInPower[power.fullName];
   const setInPower = (setsInCurrentPower &&
     setsInCurrentPower[ioSet.fullName]) || { count: 0 };
 

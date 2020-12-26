@@ -84,6 +84,7 @@ export const useGetSetBonusDataForPowerSlot = (powerSlot) => {
   const bonuses = useGetBonusesForSet();
   const details = useBuildAnalysis();
   const settings = {};
+  const { character } = useCharacterDetails();
 
   return (ioSet) =>
     getSetBonusDataForPowerSlot(
@@ -91,7 +92,8 @@ export const useGetSetBonusDataForPowerSlot = (powerSlot) => {
       details,
       settings,
       powerSlot,
-      ioSet
+      ioSet,
+      character.archetype
     );
 };
 
