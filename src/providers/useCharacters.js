@@ -3,7 +3,6 @@ import React, { useState, createContext, useContext, useEffect } from "react";
 import origins from "data/origins.js";
 import archetypes from "data/archetypes.js";
 import powerSlotsTemplate from "data/powerSlotsTemplate.js";
-import badgeData from "Badger/data/";
 
 const BuildContext = createContext();
 
