@@ -21,7 +21,9 @@ export function getEnhancementFromRef(ref) {
     enhancement = enhancements.standard[standardIndex];
 
     if (!enhancement || enhancement.fullName !== fullName) {
-      enhancement = enhancements.standard.find(findLostEnhancement);
+      enhancement = Object.values(enhancements.standard).find(
+        findLostEnhancement
+      );
     }
   } else if (type === "ioSet") {
     // { tier, type, setIndex, setType, fullName, setEnhancementIndex }
@@ -95,7 +97,7 @@ export function getPowerFromRef(archetype, ref) {
 
     if (!power || power.fullName !== fullName) {
       mustUpdate = true;
-      power = poolPowers[poolIndex].find((p) => p.fullName === fullName);
+      power = poolPowers[poolIndex].powers.find((p) => p.fullName === fullName);
 
       if (!power) {
         console.log("NEED POOL NAME");

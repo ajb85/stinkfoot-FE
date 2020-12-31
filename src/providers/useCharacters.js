@@ -120,6 +120,14 @@ function getNewCharacter(name) {
     origin: origins[0].name,
     powerSlots: powerSlotsTemplate,
     poolPowers: [],
-    badges: badgeData,
+    badges: {
+      accolade: {},
+      accomplishment: {},
+      achievement: {},
+      dayJob: {},
+      defeat: {},
+      exploration: {},
+      history: {},
+    },
   };
 }

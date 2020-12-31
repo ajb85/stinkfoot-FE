@@ -8,7 +8,6 @@ export function BadgesProvider(props) {
   const { activeCharacter, updateActiveCharacter } = useCharacters();
   const { badges } = activeCharacter;
   const setBadges = (value) => updateActiveCharacter("badges", value);
-
   const updateCharacter = (name, data) => {
     const newState = {
       ...badges,
@@ -18,19 +17,10 @@ export function BadgesProvider(props) {
     setBadges(newState);
   };
 
-  const toggleComplete = ({ badgeSection, badgeIndex }) => {
-    console.log(`TOGGLING ${badgeIndex} in ${badgeSection}`);
-    const newFlag = !badges[badgeSection][badgeIndex].completed;
-
+  const toggleComplete = ({ badgeSection, name: badgeName }) => {
     const newState = {
       ...badges,
-      [badgeSection]: badges[badgeSection].map((b, i) => {
-        if (i === badgeIndex) {
-          return { ...b, completed: newFlag };
-        }
-
-        return b;
-      }),
+      [badgeSection]: { ...badges[badgeSection], [badgeName]: true },
     };
 
     setBadges(newState);
