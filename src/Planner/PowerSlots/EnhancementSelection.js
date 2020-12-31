@@ -15,9 +15,7 @@ import {
 } from "hooks/enhancements";
 
 import { useActiveEnhancementSet } from "hooks/powersets.js";
-
 import shortenEnhName from "js/shortenEnhName.js";
-
 import styles from "./styles.module.scss";
 
 function EnhancementSelection(props) {
@@ -42,12 +40,12 @@ function EnhancementSelection(props) {
   }, {});
 
   const isSet = section === "sets";
-  const toggleEnhancement = (enh) => {
+  const toggleEnhancement = (enh, i) => {
     const shouldRemove = isSet && enhLookup.hasOwnProperty(enh.fullName);
     if (shouldRemove) {
       removeEnhancement(enhLookup[enh.fullName]);
     } else {
-      addEnhancement(enh);
+      addEnhancement(enh, i);
     }
   };
 
@@ -65,7 +63,7 @@ function EnhancementSelection(props) {
           : null;
         const clickFunc = isSet
           ? toggleActiveEnhancementSet.bind(this, i)
-          : toggleEnhancement.bind(this, c);
+          : toggleEnhancement.bind(this, c, i);
         const handleClick = (e) => {
           e.stopPropagation();
           clickFunc();

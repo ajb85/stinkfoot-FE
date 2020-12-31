@@ -10,21 +10,24 @@ import {
 } from "hooks/helpers/enhancements.js";
 
 import { getEnhancementOverlay } from "js/getImage.js";
+import { getEnhancementFromRef } from "js/getFromRef.js";
 
 import { useBuildAnalysis } from "./powersets.js";
 
 export const useGetEnhancementsForPowerSlot = (powerSlotIndex) => {
   const { powerSlots } = usePowerSlots();
   const powerSlot = powerSlots[powerSlotIndex];
+  const { character } = useCharacterDetails();
   const settings = {};
-  return getEnhancementsForPowerSlot(powerSlot, settings);
+  return getEnhancementsForPowerSlot(character.archetype, powerSlot, settings);
 };
 
 export const useGetEnhancementSubSections = (powerSlotIndex) => {
   const { powerSlots } = usePowerSlots();
   const powerSlot = powerSlots[powerSlotIndex];
+  const { character } = useCharacterDetails();
   // const settings = {};
-  return getEnhancementSubSections.bind(this, powerSlot);
+  return getEnhancementSubSections(character.archetype, powerSlot);
 };
 
 export const useCanEnhancementGoInPowerSlot = (powerSlotIndex) => {
@@ -81,6 +84,7 @@ export const useGetSetBonusDataForPowerSlot = (powerSlot) => {
   const bonuses = useGetBonusesForSet();
   const details = useBuildAnalysis();
   const settings = {};
+  const { character } = useCharacterDetails();
 
   return (ioSet) =>
     getSetBonusDataForPowerSlot(
@@ -88,6 +92,21 @@ export const useGetSetBonusDataForPowerSlot = (powerSlot) => {
       details,
       settings,
       powerSlot,
-      ioSet
+      ioSet,
+      character.archetype
     );
+};
+
+export const useEnhancementFromRef = (ref) => {
+  if (!ref) {
+    return null;
+  }
+
+  const { enhancement, newIndex } = getEnhancementFromRef(ref);
+
+  if (!enhancement || newIndex !== null) {
+    // update build, something changed
+  }
+
+  return enhancement;
 };

@@ -15,7 +15,7 @@ import {
 
 import { useNextActiveLevel } from "hooks/powersets.js";
 
-export default function StateManager(props: {|
+export default function StateRelationships(props: {|
   children: React.Node,
 |}): React.Node {
   const { powerSlots } = usePowerSlots();

@@ -14,3 +14,16 @@ export function combineClasses(...args: Array<string>): string {
       : className
   );
 }
+
+export function isObject(o: any): boolean {
+  return typeof o === "object" && o !== null && !Array.isArray(o);
+}
+
+const standardizeNames = {
+  secondary: "secondaries",
+  primary: "primaries",
+};
+
+export function standardizeNameToPlural(name) {
+  return standardizeNames[name] || name;
+}

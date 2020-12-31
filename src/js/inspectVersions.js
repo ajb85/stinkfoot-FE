@@ -5,7 +5,7 @@ import type { Version } from "flow/types.js";
 const lastVersion = localStorage.getItem("lastVersion") || null;
 
 const toExport: Array<Version> = !lastVersion
-  ? versions
+  ? []
   : versions.filter(({ version }) => version > lastVersion);
 
 export default toExport;

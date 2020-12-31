@@ -39,14 +39,14 @@ export const PowerSlotsProvider = (props) => {
     if (timeout) {
       clearTimeout(timeout);
     }
-
-    cache.push({ power, index });
+    const powerRef = powerToRef(power);
+    cache.push({ powerRef, index });
     timeout = setTimeout(() => {
       const newSlots = [...powerSlots];
-      cache.forEach(({ power, index }) => {
+      cache.forEach(({ powerRef, index }) => {
         newSlots[index] = {
           ...newSlots[index],
-          power,
+          powerRef,
           enhSlots: emptyDefaultSlot(),
           navigation: {
             section: "standard",
@@ -73,11 +73,12 @@ export const PowerSlotsProvider = (props) => {
       const updatedPowerSlots = copyPowerSlots(powerSlots, powerSlotIndex);
       // Mutate copy
       const { enhSlots } = updatedPowerSlots[powerSlotIndex];
-      !enhSlots[0].enhancement
-        ? (enhSlots[0].enhancement = enhancement)
+      const enhancementRef = enhancementToRef(enhancement);
+      !enhSlots[0].enhancementRef
+        ? (enhSlots[0].enhancementRef = enhancementRef)
         : enhSlots.push({
             slotLevel: slotsManager.getSlot(powerSlot.level),
-            enhancement,
+            enhancementRef,
           });
       enhSlots.sort((a, b) => a.slotLevel - b.slotLevel);
       setPowerSlots(updatedPowerSlots);
@@ -110,7 +111,11 @@ export const PowerSlotsProvider = (props) => {
         ? null
         : slotsManager.getSlot(powerSlot.level);
 
-      const newSlot = { slotLevel, enhancement };
+      const newSlot = {
+        slotLevel,
+        enhancementRef: enhancementToRef(enhancement),
+      };
+
       if (slotExists) {
         powerSlot.enhSlots[i] = newSlot;
       } else {
@@ -208,4 +213,51 @@ export function copyPowerSlots(powerSlots, index) {
     newSlots[index] = pSlot;
   }
   return newSlots;
+}
+
+function enhancementToRef(enhancement) {
+  const {
+    tier,
+    type,
+    standardIndex,
+    setIndex,
+    setType,
+    setEnhancementIndex,
+    fullName,
+  } = enhancement || {};
+
+  if (type === "standard") {
+    return { tier, type, standardIndex, setEnhancementIndex, fullName };
+  }
+
+  if (type === "ioSet") {
+    return { tier, type, setIndex, setType, fullName, setEnhancementIndex };
+  }
+
+  return { tier: "unknown", type: "unknown", fullName: "unknown" };
+}
+
+function powerToRef(power) {
+  if (power) {
+    const {
+      archetypeOrder,
+      fullName,
+      powerIndex,
+      poolIndex,
+      powersetIndex,
+    } = power;
+
+    if (poolIndex !== undefined) {
+      return { archetypeOrder, fullName, powerIndex, poolIndex };
+    }
+
+    return { archetypeOrder, fullName, powerIndex, powersetIndex };
+  }
+
+  return {
+    archetypeOrder: "unknown",
+    fullName: "unknown",
+    powerIndex: "unknown",
+    poolIndex: "unknown",
+  };
 }

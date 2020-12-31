@@ -3,7 +3,6 @@ import React, { useState, createContext, useContext, useEffect } from "react";
 import origins from "data/origins.js";
 import archetypes from "data/archetypes.js";
 import powerSlotsTemplate from "data/powerSlotsTemplate.js";
-import badgeData from "Badger/data/";
 
 const BuildContext = createContext();
 
@@ -20,11 +19,17 @@ export function CharactersProvider(props) {
       parsed && JSON.parse(localStorage.getItem("activeCharacterName"));
   } catch {
     parsed = {};
-    localStorage.setItem("character", JSON.stringify(parsed));
+    localStorage.setItem("characters", JSON.stringify(parsed));
   }
 
   const [characters, setCharacters] = useState(parsed || {});
   const [active, setActive] = useState(activeCharName || "");
+
+  const updateCharacterInStorage = (charName, updated) => {
+    const storage = JSON.parse(localStorage.getItem("characters"));
+    storage[charName] = updated;
+    localStorage.setItem("characters", JSON.stringify(storage));
+  };
 
   const updateCharacters = (updated) => {
     localStorage.setItem("characters", JSON.stringify(updated));
@@ -48,7 +53,8 @@ export function CharactersProvider(props) {
     updatedActive[key] = value;
 
     timeout = setTimeout(() => {
-      updateCharacters({ ...characters, [active]: updatedActive });
+      updateCharacterInStorage(active, updatedActive);
+      setCharacters({ ...characters, [active]: updatedActive });
       updatedActive = null;
       timeout = null;
     }, 50);
@@ -113,6 +119,14 @@ function getNewCharacter(name) {
     origin: origins[0].name,
     powerSlots: powerSlotsTemplate,
     poolPowers: [],
-    badges: badgeData,
+    badges: {
+      accolade: {},
+      accomplishment: {},
+      achievement: {},
+      dayJob: {},
+      defeat: {},
+      exploration: {},
+      history: {},
+    },
   };
 }

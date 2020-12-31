@@ -10,6 +10,7 @@ import { useSetNavSection } from "hooks/powerSlots.js";
 import {
   useTogglePowerSlot,
   useClearActiveEnhancementSet,
+  usePowerFromRef,
 } from "hooks/powersets.js";
 import useActiveSets from "providers/builder/useActiveSets.js";
 
@@ -17,13 +18,12 @@ import styles from "./styles.module.scss";
 
 function PowerSlot(props) {
   const { slot } = props;
-  const { level, power, powerSlotIndex, navigation } = slot;
+  const { level, powerRef, powerSlotIndex, navigation } = slot;
   const clearActiveEnhancementSet = useClearActiveEnhancementSet();
   const togglePowerSlot = useTogglePowerSlot(powerSlotIndex);
   const { tracking } = useActiveSets();
-  const getEnhancementSubSections = useGetEnhancementSubSections(
-    powerSlotIndex
-  );
+  const subsections = useGetEnhancementSubSections(powerSlotIndex);
+  const power = usePowerFromRef(powerRef);
 
   const isSlottable =
     power && (!!power.allowedEnhancements.length || !!power.setTypes.length);
@@ -38,14 +38,12 @@ function PowerSlot(props) {
 
   const updateNav = useSetNavSection(powerSlotIndex);
 
-  if (!power) {
+  if (!powerRef || !power) {
     const isActive = tracking.activeLevel === level;
     return <EmptyPowerSlot level={level} isActive={isActive} />;
   }
 
   const isToggled = tracking.toggledSlot === powerSlotIndex;
-  const subsections = getEnhancementSubSections(power.setTypes);
-
   const zIndex = isToggled ? props.zIndex + 100 : props.zIndex;
   return (
     <div
@@ -104,7 +102,7 @@ function getTopOptions(enhNavigation, updateNav, power) {
 function getSideOptions(enhNavigation, updateNav, subsections) {
   const { section } = enhNavigation;
   const isSet = section === "sets";
-
+  // console.log("SIDE OPTIONS: ", isSet, enhNavigation, updateNav, subsections);
   return subsections.map((category) => {
     const name = isSet ? category.name : category;
     const setType = isSet ? category.setType : name;

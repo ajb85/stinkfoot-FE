@@ -14,6 +14,7 @@ import {
   getSlotIndexFromActiveLevel,
 } from "hooks/helpers/powersets.js";
 
+import { getPowerFromRef } from "js/getFromRef.js";
 import { useGetBonusesForSet } from "hooks/enhancements.js";
 
 import analyzeBuild from "hooks/helpers/analyzeBuild.js";
@@ -42,6 +43,7 @@ export function useBuildHasPower(power) {
 
 export const useBuildAnalysis = () => {
   const { powerSlots } = usePowerSlots();
+  const { character } = useCharacterDetails();
   const activePowersets = {
     primary: useActivePowerset("primary"),
     secondary: useActivePowerset("secondary"),
@@ -49,7 +51,27 @@ export const useBuildAnalysis = () => {
   };
   const getBonusesForSet = useGetBonusesForSet();
 
-  return analyzeBuild(powerSlots, activePowersets, getBonusesForSet);
+  return analyzeBuild(
+    powerSlots,
+    activePowersets,
+    getBonusesForSet,
+    character.archetype
+  );
+};
+
+export const usePowerFromRef = (ref) => {
+  const { character } = useCharacterDetails();
+  if (!ref) {
+    return null;
+  }
+
+  const { power, mustUpdate } = getPowerFromRef(character.archetype, ref);
+
+  if (!power || mustUpdate) {
+    // update build, something changed
+  }
+
+  return power;
 };
 
 /******************************************

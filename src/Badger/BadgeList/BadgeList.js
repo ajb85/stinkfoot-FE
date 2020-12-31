@@ -1,18 +1,18 @@
 import React from "react";
 
 import useBadges from "providers/useBadges.js";
+import badgeData from "../data/";
 
 import styles from "./styles.module.scss";
 
 function BadgeList({ section, filters }) {
   const { badges, toggleComplete } = useBadges();
 
-  if (!Object.keys(badges).length) {
-    return <div />;
-  }
-
-  const badgeList = badges[section].filter(filterSearch(filters));
+  const badgeList = badgeData[section].filter(
+    filterSearch(filters, badges[section])
+  );
   const { bonusNotes, location, zone } = badgeList[0] || {};
+
   return (
     <div className={styles.BadgeList}>
       <div className={styles.table}>
@@ -49,72 +49,78 @@ function BadgeList({ section, filters }) {
               : "Oh dang, you completed this section.  May I suggest conquering going outside next?"}
           </p>
         )}
-        {badgeList.map(mapBadges(toggleComplete))}
+        {badgeList.map((b, i) => {
+          const {
+            hero,
+            villain,
+            praetorian,
+            name,
+            notes,
+            bonusNotes,
+            location,
+            zone,
+          } = b;
+          const isComplete = badges[section][name];
+
+          return (
+            <div
+              key={b.badgeIndex}
+              className={styles.row}
+              style={{
+                textDecoration: isComplete ? "line-through" : null,
+                opacity: isComplete ? 0.5 : null,
+              }}
+              onClick={toggleComplete.bind(this, b)}
+            >
+              <div className={joinClass("cell", "avail")}>
+                <p>
+                  {hero && "H"}
+                  {villain && "V"}
+                  {praetorian && "P"}
+                </p>
+              </div>
+              <div className={joinClass("cell", "names")}>
+                {name.split(" / ").map((n, i) => (
+                  <p
+                    key={n}
+                    style={{ color: getNameColor(b, i) }}
+                    className={styles.name}
+                  >
+                    {n}
+                  </p>
+                ))}
+              </div>
+              {zone && (
+                <div className={joinClass("cell", "zone")}>
+                  <p>{zone}</p>
+                </div>
+              )}
+              {location && (
+                <div className={joinClass("cell", "location")}>
+                  <p>{`(${location.x}, ${location.y}, ${location.z})`}</p>
+                </div>
+              )}
+              {bonusNotes && (
+                <div className={joinClass("cell", "bonusNotes")}>
+                  <p>{bonusNotes}</p>
+                </div>
+              )}
+              <div className={joinClass("cell", "notes")}>
+                <p>{notes}</p>
+              </div>
+            </div>
+          );
+        })}
       </div>
     </div>
   );
 }
 
-const mapBadges = (complete) => (b) => {
-  const { hero, villain, praetorian } = b;
-  const { name, notes, completed } = b;
-  const { bonusNotes, location, zone } = b;
-
-  return (
-    <div
-      key={b.badgeIndex}
-      className={styles.row}
-      style={{
-        textDecoration: completed ? "line-through" : null,
-        opacity: completed ? 0.5 : null,
-      }}
-      onClick={complete.bind(this, b)}
-    >
-      <div className={joinClass("cell", "avail")}>
-        <p>
-          {hero && "H"}
-          {villain && "V"}
-          {praetorian && "P"}
-        </p>
-      </div>
-      <div className={joinClass("cell", "names")}>
-        {name.split(" / ").map((n, i) => (
-          <p
-            key={n}
-            style={{ color: getNameColor(b, i) }}
-            className={styles.name}
-          >
-            {n}
-          </p>
-        ))}
-      </div>
-      {zone && (
-        <div className={joinClass("cell", "zone")}>
-          <p>{zone}</p>
-        </div>
-      )}
-      {location && (
-        <div className={joinClass("cell", "location")}>
-          <p>{`(${location.x}, ${location.y}, ${location.z})`}</p>
-        </div>
-      )}
-      {bonusNotes && (
-        <div className={joinClass("cell", "bonusNotes")}>
-          <p>{bonusNotes}</p>
-        </div>
-      )}
-      <div className={joinClass("cell", "notes")}>
-        <p>{notes}</p>
-      </div>
-    </div>
-  );
-};
-
-const filterSearch = (filters) => (b) => {
+const filterSearch = (filters, completedList) => (b) => {
   const { showCompleted } = filters;
   const search = filters.search.toLowerCase();
-
-  if (!showCompleted && b.completed) {
+  const isComplete = completedList[b.name];
+  if (!showCompleted && isComplete) {
     return false;
   }
 

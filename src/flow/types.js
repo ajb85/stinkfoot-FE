@@ -26,8 +26,18 @@ export type Enhancement = {|
   isUnique: boolean,
   setIndex?: number,
   setType?: number,
+  standardIndex?: number,
   tier: string,
   type: string,
+|};
+
+export type EnhancementRef = {|
+  tier: string,
+  type: string,
+  fullName: string,
+  setIndex?: number,
+  setType?: number,
+  standardIndex?: number,
 |};
 
 export type IOSet = {|
@@ -65,6 +75,11 @@ export type EnhancementSlot = {|
   modification?: string,
 |};
 
+export type EnhancementSlotRef = {|
+  ...EnhancementSlot,
+  enhancement?: EnhancementRef,
+|};
+
 export type Power = {|
   accuracy: number,
   accuracyMult: number,
@@ -92,6 +107,7 @@ export type Power = {|
   neverAutoUpdate: boolean,
   numAllowed: number,
   ogFullName: string,
+  poolIndex?: number,
   powerIndex: number,
   range: number,
   rechargeTime: number,
@@ -108,12 +124,24 @@ export type Power = {|
   toggleCost: number,
 |};
 
+export type PowerRef = {|
+  archetypeOrder: string,
+  fullName: string,
+  powerIndex: number,
+  poolIndex?: number,
+|};
+
 export type PowerSlot = {
   level: number,
   type: string,
   power?: Power,
   enhSlots?: Array<EnhancementSlot>,
 };
+
+export type PowerSlotRef = {|
+  ...PowerSlot,
+  enhSlots: Array<EnhancementSlotRef>,
+|};
 
 export type Badge = {|
   badgeIndex: number,
@@ -141,6 +169,11 @@ export type CharacterBuild = {|
   origin: string,
   poolPowers: Array<number>,
   powerSlots: Array<PowerSlot>,
+|};
+
+export type CharacterBuildRef = {|
+  ...CharacterBuild,
+  powerSlots: Array<PowerSlotRef>,
 |};
 
 export type BuildAnalysis = {
