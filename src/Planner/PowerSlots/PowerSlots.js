@@ -1,6 +1,7 @@
 import React, { useState, useCallback } from "react";
 
 import PowerSlot from "./PowerSlot.js";
+import PowerSlotModal from "components/PowerSlotModal/";
 
 import usePowerSlots from "providers/builder/usePowerSlots.js";
 
@@ -33,25 +34,28 @@ function PowerSlots(props) {
   );
 
   return (
-    <section className={styles.PowerSlots}>
-      <button onClick={toggleView}>Toggle View</button>
-      <h2>Power Slots</h2>
-      <div className={styles.slotsContainer}>
-        {selected.map((column, columnIndex) => {
-          return (
-            <div key={columnIndex} className={styles.column}>
-              {column.map((ps) => (
-                <PowerSlot
-                  key={ps.powerSlotIndex}
-                  slot={ps}
-                  zIndex={getZIndex()}
-                />
-              ))}
-            </div>
-          );
-        })}
-      </div>
-    </section>
+    <>
+      <section className={styles.PowerSlots}>
+        <button onClick={toggleView}>Toggle View</button>
+        <h2>Power Slots</h2>
+        <div className={styles.slotsContainer}>
+          {selected.map((column, columnIndex) => {
+            return (
+              <div key={columnIndex} className={styles.column}>
+                {column.map((ps) => (
+                  <PowerSlot
+                    key={ps.powerSlotIndex}
+                    slot={ps}
+                    zIndex={getZIndex()}
+                  />
+                ))}
+              </div>
+            );
+          })}
+        </div>
+      </section>
+      <PowerSlotModal />
+    </>
   );
 }
 

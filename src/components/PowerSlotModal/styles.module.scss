@@ -1,0 +1,307 @@
+@import "styles/variables.scss";
+
+.header {
+  display: flex;
+  justify-content: space-between;
+
+  background-color: $secondary;
+  padding: $lh;
+  width: 100%;
+
+  margin-bottom: $lh * 2;
+
+  h3,
+  p {
+    color: black;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+    line-height: $lh;
+  }
+
+  p {
+    font-size: 0.8rem;
+    line-height: 0.5 * $lh;
+    text-align: right;
+    margin: 0.25 * $lh 0;
+  }
+
+  .slot {
+    width: 30px;
+    height: 30px;
+    background-color: $main;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 5px;
+  }
+
+  & > div:last-of-type {
+    display: flex;
+    align-items: center;
+  }
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.enhancementSelection {
+  width: 30%;
+  min-width: 300px;
+  background-color: $secondary;
+
+  h3,
+  h4 {
+    color: black;
+    line-height: $lh;
+    padding: $lh/2;
+  }
+
+  h3.activeCat {
+    color: $contrast;
+    border-left: 1px solid black;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+
+  .category {
+    display: flex;
+    h3 {
+      width: 50%;
+      text-align: center;
+      border-bottom: 1px solid black;
+    }
+  }
+
+  .subcategory {
+    display: flex;
+    justify-content: space-between;
+
+    h4 {
+      width: 100%;
+      text-align: center;
+      padding: $lh/2 0;
+      background-color: rgba(0, 0, 0, 0.2);
+
+      border-right: 1px solid black;
+      border-bottom: 1px solid black;
+
+      &.activeSub {
+        background-color: rgba(0, 0, 0, 0.4);
+        color: $contrast;
+        border-bottom: none;
+      }
+
+      &:last-of-type {
+        border-right: none;
+      }
+    }
+  }
+}
+
+.renderEnh {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  background-color: rgba(0, 0, 0, 0.4);
+
+  & > div {
+    margin: 7px;
+    padding: 16px;
+
+    &.activeSet {
+      border-radius: 50%;
+      border: 1px solid black;
+      background-color: $main;
+    }
+  }
+}
+
+.enhancementWithOverlay {
+  position: relative;
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%; // Rounds the shadow
+
+  img {
+    position: absolute;
+  }
+}
+
+.setEnhancements {
+  border-top: 1px solid black;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: $main;
+
+  .setEnhancement {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 33%;
+    margin: $lh/4 0;
+
+    & > div {
+      box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.2);
+    }
+
+    .statPill {
+      background-color: black;
+      border-radius: 10px;
+      padding: 2px;
+
+      display: flex;
+
+      margin: $lh/2 0 $lh;
+
+      $accuracy: rgba(230, 230, 117, 1);
+      $damage: rgba(237, 20, 43, 1);
+      $recharge: rgba(148, 148, 148, 1);
+      $endurance: rgba(89, 160, 224, 1);
+      $proc: rgba(225, 90, 227, 1);
+
+      & > div {
+        // Wrapper div for each pill section
+        position: relative;
+      }
+
+      p {
+        position: relative;
+        color: black;
+        font-size: 0.6rem;
+        font-weight: 800;
+        padding: 3px 5px;
+        z-index: 0;
+
+        border-radius: 0px;
+
+        &.left {
+          border-radius: 10px 0 0 10px;
+          padding-left: 4px;
+        }
+
+        &.right {
+          border-radius: 0 10px 10px 0;
+          padding-right: 4px;
+        }
+
+        &.left.right {
+          border-radius: 10px;
+        }
+
+        &.acc {
+          background-color: $accuracy;
+        }
+
+        &.dmg {
+          background-color: $damage;
+        }
+
+        &.rech {
+          background-color: $recharge;
+        }
+
+        &.end {
+          background-color: $endurance;
+        }
+
+        &.proc {
+          background-color: $proc;
+        }
+      }
+
+      div.pillDivider {
+        position: absolute;
+        content: " ";
+        display: block;
+        right: -9px;
+        bottom: 6px;
+        width: 18px;
+        height: 2px;
+        background-color: black;
+        transform: rotate(-83deg);
+        z-index: 1;
+      }
+    }
+  }
+}
+
+/*
+
+ 
+p {
+      color: $secondary;
+      font-size: 0.6rem;
+      border-radius: 10px;
+      border: 1px solid $secondary;
+      padding: 3px 5px;
+      margin    : $lh/4 0 3 * $lh/4;
+
+
+
+      &.dam {
+        background: $damage;
+      }
+
+      &.accDamRechEnd {
+        background: $accuracy;
+        background: linear-gradient(
+          90deg,
+          $accuracy 0%,
+          $accuracy 25%,
+          $damage 25%,
+          $damage 50%,
+          $recharge 50%,
+          $recharge 75%,
+          $endurance 75%,
+          $endurance 100%
+        );
+      }
+
+      &.accDamRech {
+        background: $accuracy;
+        background: linear-gradient(
+          90deg,
+          $accuracy 0%,
+          $accuracy 33%,
+          $damage 33%,
+          $damage 66%,
+          $recharge 66%,
+          $recharge 100%
+        );
+      }
+
+      &.accRech {
+        background: $accuracy;
+        background: linear-gradient(
+          90deg,
+          $accuracy 0%,
+          $accuracy 50%,
+          $recharge 50%,
+          $recharge 100%
+        );
+      }
+
+      &.damEnd {
+        background: $accuracy;
+        background: linear-gradient(
+          90deg,
+          $damage 0%,
+          $damage 50%,
+          $endurance 50%,
+          $endurance 100%
+        );
+      }
+
+      &.proc {
+        background: $proc;
+      }
+    }
+    */

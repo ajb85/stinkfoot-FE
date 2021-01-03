@@ -1,0 +1,20 @@
+@import "styles/variables.scss";
+
+.mask {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+}
+
+.content {
+  position: absolute;
+  top: $lh * 2;
+  z-index: 1001;
+  width: 100vw;
+  padding: 0 $lh * 2;
+}
