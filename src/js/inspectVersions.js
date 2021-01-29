@@ -8,8 +8,6 @@ const toExport: Array<Version> = !lastVersion
   ? []
   : versions.filter(({ version }) => version > lastVersion);
 
-console.log("LAST: ", lastVersion);
-console.log("EXPORTING: ", toExport);
 export default toExport;
 
 let foundVersion: boolean = !lastVersion;
