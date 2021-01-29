@@ -42,15 +42,15 @@
   }
 }
 
-main {
+.main {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .enhancementSelection {
   width: 30%;
   min-width: 300px;
-  background-color: $secondary;
 
   h3,
   h4 {
@@ -59,43 +59,43 @@ main {
     padding: $lh/2;
   }
 
-  h3.activeCat {
-    color: $contrast;
-    border-left: 1px solid black;
-    background-color: rgba(0, 0, 0, 0.2);
-  }
-
-  .category {
+  .tabs {
     display: flex;
+    justify-content: space-evenly;
+    // padding-top: 3 * $lh/4;
+    background-color: black;
+
     h3 {
-      width: 50%;
+      width: 45%;
       text-align: center;
-      border-bottom: 1px solid black;
+      background-color: rgba($main, 0.5);
+      opacity: 0.5;
+      color: $secondary;
+      cursor: pointer;
+      transition: background-color 0.25s, opacity 0.25s;
+
+      &:hover {
+        background-color: $main;
+        opacity: 1;
+      }
+
+      &.activeTab {
+        color: black;
+        border-left: 1px solid black;
+        background-color: $secondary;
+        opacity: 1;
+      }
     }
   }
 
-  .subcategory {
-    display: flex;
-    justify-content: space-between;
+  .tabContent {
+    padding-top: $lh;
+    width: 100%;
+    background-color: $secondary;
 
-    h4 {
-      width: 100%;
-      text-align: center;
-      padding: $lh/2 0;
-      background-color: rgba(0, 0, 0, 0.2);
-
-      border-right: 1px solid black;
-      border-bottom: 1px solid black;
-
-      &.activeSub {
-        background-color: rgba(0, 0, 0, 0.4);
-        color: $contrast;
-        border-bottom: none;
-      }
-
-      &:last-of-type {
-        border-right: none;
-      }
+    & > div:first-of-type {
+      width: 95%;
+      margin: 0 auto $lh/2;
     }
   }
 }
@@ -104,8 +104,6 @@ main {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-
-  background-color: rgba(0, 0, 0, 0.4);
 
   & > div {
     margin: 7px;
@@ -134,174 +132,173 @@ main {
   }
 }
 
-.setEnhancements {
-  border-top: 1px solid black;
-  display: flex;
-  flex-wrap: wrap;
-  background-color: $main;
+.setEnhancementsContainer {
+  margin-top: 2 * $lh;
+  background-color: $secondary;
 
-  .setEnhancement {
+  h3 {
+    text-align: center;
+  }
+
+  .setEnhancements {
+    border-top: 1px solid black;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    width: 33%;
-    margin: $lh/4 0;
+    flex-wrap: wrap;
 
-    & > div {
-      box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.2);
-    }
-
-    .statPill {
-      background-color: black;
-      border-radius: 10px;
-      padding: 2px;
-
+    .setEnhancement {
       display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+      width: 33%;
+      margin: $lh/4 0;
 
-      margin: $lh/2 0 $lh;
+      transition: opacity 0.25s;
+      opacity: 1;
 
-      $accuracy: rgba(230, 230, 117, 1);
-      $damage: rgba(237, 20, 43, 1);
-      $recharge: rgba(148, 148, 148, 1);
-      $endurance: rgba(89, 160, 224, 1);
-      $proc: rgba(225, 90, 227, 1);
+      &.unavailable {
+        opacity: 0.5;
+      }
 
       & > div {
-        // Wrapper div for each pill section
-        position: relative;
+        box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.2);
       }
 
-      p {
-        position: relative;
-        color: black;
-        font-size: 0.6rem;
-        font-weight: 800;
-        padding: 3px 5px;
-        z-index: 0;
-
-        border-radius: 0px;
-
-        &.left {
-          border-radius: 10px 0 0 10px;
-          padding-left: 4px;
-        }
-
-        &.right {
-          border-radius: 0 10px 10px 0;
-          padding-right: 4px;
-        }
-
-        &.left.right {
-          border-radius: 10px;
-        }
-
-        &.acc {
-          background-color: $accuracy;
-        }
-
-        &.dmg {
-          background-color: $damage;
-        }
-
-        &.rech {
-          background-color: $recharge;
-        }
-
-        &.end {
-          background-color: $endurance;
-        }
-
-        &.proc {
-          background-color: $proc;
-        }
-      }
-
-      div.pillDivider {
-        position: absolute;
-        content: " ";
-        display: block;
-        right: -9px;
-        bottom: 6px;
-        width: 18px;
-        height: 2px;
+      .statPill {
         background-color: black;
-        transform: rotate(-83deg);
-        z-index: 1;
+        border-radius: 10px;
+        padding: 2px;
+
+        display: flex;
+
+        margin: $lh/2 0 $lh;
+
+        $accuracy: rgba(230, 230, 117, 1);
+        $damage: rgba(237, 20, 43, 1);
+        $recharge: rgba(148, 148, 148, 1);
+        $endurance: rgba(89, 160, 224, 1);
+        $proc: rgba(225, 90, 227, 1);
+
+        & > div {
+          // Wrapper div for each pill section
+          position: relative;
+        }
+
+        p {
+          position: relative;
+          color: black;
+          font-size: 0.5rem;
+          font-weight: 800;
+          padding: 3px 4px;
+          z-index: 0;
+
+          border-radius: 0px;
+
+          &.left {
+            border-radius: 10px 0 0 10px;
+            padding-left: 4px;
+          }
+
+          &.right {
+            border-radius: 0 10px 10px 0;
+            padding-right: 4px;
+          }
+
+          &.left.right {
+            border-radius: 10px;
+          }
+
+          &.acc {
+            background-color: $accuracy;
+          }
+
+          &.dmg {
+            background-color: $damage;
+          }
+
+          &.rech {
+            background-color: $recharge;
+          }
+
+          &.end {
+            background-color: $endurance;
+          }
+
+          &.proc {
+            background-color: $proc;
+          }
+        }
+
+        div.pillDivider {
+          position: absolute;
+          content: " ";
+          display: block;
+          right: -8px;
+          bottom: 6px;
+          width: 16px;
+          height: 2px;
+          background-color: black;
+          transform: rotate(-83deg);
+          z-index: 1;
+        }
       }
     }
   }
 }
 
-/*
+.setBonuses {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
- 
-p {
-      color: $secondary;
-      font-size: 0.6rem;
-      border-radius: 10px;
-      border: 1px solid $secondary;
-      padding: 3px 5px;
-      margin    : $lh/4 0 3 * $lh/4;
+  width: 30%;
+  padding: $lh/2 10px;
 
+  background-color: $secondary;
 
+  &.disabled {
+    opacity: 0.5;
+  }
 
-      &.dam {
-        background: $damage;
-      }
+  p,
+  h3,
+  h4 {
+    color: black;
+  }
+}
 
-      &.accDamRechEnd {
-        background: $accuracy;
-        background: linear-gradient(
-          90deg,
-          $accuracy 0%,
-          $accuracy 25%,
-          $damage 25%,
-          $damage 50%,
-          $recharge 50%,
-          $recharge 75%,
-          $endurance 75%,
-          $endurance 100%
-        );
-      }
+.PowerStats {
+  width: 30%;
+  min-height: 100%;
+  padding: $lh/2;
 
-      &.accDamRech {
-        background: $accuracy;
-        background: linear-gradient(
-          90deg,
-          $accuracy 0%,
-          $accuracy 33%,
-          $damage 33%,
-          $damage 66%,
-          $recharge 66%,
-          $recharge 100%
-        );
-      }
+  background-color: $secondary;
 
-      &.accRech {
-        background: $accuracy;
-        background: linear-gradient(
-          90deg,
-          $accuracy 0%,
-          $accuracy 50%,
-          $recharge 50%,
-          $recharge 100%
-        );
-      }
+  h2 {
+    text-align: center;
+    font-size: 1rem;
+    color: black;
+    line-height: $lh;
+  }
 
-      &.damEnd {
-        background: $accuracy;
-        background: linear-gradient(
-          90deg,
-          $damage 0%,
-          $damage 50%,
-          $endurance 50%,
-          $endurance 100%
-        );
-      }
+  table {
+    margin: $lh/2 0;
+    width: 100%;
+  }
 
-      &.proc {
-        background: $proc;
-      }
-    }
-    */
+  th,
+  td {
+    color: black;
+    text-align: center;
+    height: $lh;
+  }
+
+  th {
+    height: 2 * $lh;
+    vertical-align: middle;
+  }
+
+  td {
+    width: 50px;
+  }
+}

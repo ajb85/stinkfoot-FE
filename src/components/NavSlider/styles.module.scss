@@ -1,0 +1,33 @@
+@import "styles/variables.scss";
+
+.NavSlider {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  // background-color: $accent1;
+  background-color: rgb(200, 200, 200);
+  border-radius: 10px;
+  height: 24px;
+  width: 100%;
+
+  p {
+    margin: 0;
+    position: relative;
+    z-index: 1;
+    width: fit-content;
+    text-align: center;
+    color: black;
+    font-size: 12px;
+  }
+
+  & > div:first-of-type {
+    // Padding
+    position: absolute;
+    background-color: #fff;
+    height: 18px;
+    border-radius: 20px;
+
+    transition: left 0.25s, width 0.25s;
+  }
+}

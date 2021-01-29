@@ -8,6 +8,8 @@ const toExport: Array<Version> = !lastVersion
   ? []
   : versions.filter(({ version }) => version > lastVersion);
 
+console.log("LAST: ", lastVersion);
+console.log("EXPORTING: ", toExport);
 export default toExport;
 
 let foundVersion: boolean = !lastVersion;
@@ -23,8 +25,9 @@ for (let i = 0; i < versions.length; i++) {
   }
 }
 
+localStorage.setItem("lastVersion", versions[versions.length - 1].version);
+
 function cleanLocalStorage(): void {
-  localStorage.setItem("lastVersion", versions[versions.length - 1].version);
   localStorage.removeItem("characters");
   localStorage.removeItem("activeCharacterName");
   localStorage.removeItem("shoppingTotals");

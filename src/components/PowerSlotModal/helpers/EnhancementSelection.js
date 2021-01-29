@@ -1,25 +1,44 @@
 import React from "react";
 import styles from "../styles.module.scss";
-import enhancement from "../../../assets/cohImages/enhancements/sApocalypse.png";
-import { getEnhancementOverlay } from "js/getImage.js";
 
+import NavSlider from "components/NavSlider/";
+
+import { getEnhancementOverlay } from "js/getImage.js";
 import { combineClasses } from "js/utility.js";
 
+import enhancement from "../../../assets/cohImages/enhancements/sApocalypse.png";
+
 export default function EnhancementSelection(props) {
+  const [tab, setTab] = React.useState("sets");
   return (
     <div className={styles.enhancementSelection}>
-      <div className={styles.category}>
-        <h3>Standard</h3>
-        <h3 className={styles.activeCat}>Sets</h3>
+      <div className={styles.tabs}>
+        <h3
+          className={combineClasses(tab === "standard" && styles.activeTab)}
+          onClick={setTab.bind(null, "standard")}
+        >
+          Standard
+        </h3>
+        <h3
+          className={combineClasses(tab === "sets" && styles.activeTab)}
+          onClick={setTab.bind(null, "sets")}
+        >
+          Sets
+        </h3>
       </div>
-      <div className={styles.subcategory}>
-        <h4 className={styles.activeSub}>Ranged</h4>
-        <h4>Blaster</h4>
-        <h4>Universal</h4>
+      <div className={styles.tabContent}>
+        {tab === "sets" && (
+          <NavSlider categories={["Ranged", "Blaster", "Universal"]} />
+        )}
+        {tab === "standard" && (
+          <NavSlider categories={["IO", "SO", "DO", "TO"]} />
+        )}
+        <div className={styles.renderEnh}>{renderEnhancements()}</div>
       </div>
-      <div className={styles.renderEnh}>{renderEnhancements()}</div>
-
-      <div className={styles.setEnhancements}>{renderSet()}</div>
+      <div className={styles.setEnhancementsContainer}>
+        <h3>Set Enhancements</h3>
+        <div className={styles.setEnhancements}>{renderSet()}</div>
+      </div>
     </div>
   );
 }
@@ -44,11 +63,11 @@ function renderEnhancements(num = 12, active = 5) {
 }
 
 const defaultSet = [
-  "Dmg",
-  "Acc/Dmg/Rech/End",
-  "Acc/Dmg/Rech",
   "Acc/Rech",
+  "Acc/Dmg/Rech",
   "Dmg/End",
+  "Acc/Dmg/Rech/End",
+  "Dmg",
   "Proc",
 ];
 
