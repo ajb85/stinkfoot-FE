@@ -63,7 +63,7 @@ export default function Thermometer({ steps, fillLine }) {
                 const keyword = statKeyword[splitStats[0]] || "";
                 const stats = splitStats.map((s) => getImageForStat(s) || s);
                 return (
-                  <p key={t} style={{ position: "relative" }}>
+                  <div key={t} style={{ position: "relative" }}>
                     {temperature > 5 && <div className={styles.lineThrough} />}
                     {numbers} {keyword} Res(
                     {stats.reduce((acc, cur, i) => {
@@ -78,7 +78,7 @@ export default function Thermometer({ steps, fillLine }) {
                       return acc;
                     }, [])}
                     )
-                  </p>
+                  </div>
                 );
               })}
             </div>
