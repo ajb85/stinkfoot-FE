@@ -1,7 +1,7 @@
 import React from "react";
 
 import Thermometer from "components/Thermometer/";
-import { combineClasses } from "js/utility.js";
+import { combineClasses, stopProp } from "js/utility.js";
 
 import styles from "../styles.module.scss";
 
@@ -37,7 +37,7 @@ export default function SetBonuses(props) {
     );
   }
   return (
-    <div className={styles.setBonuses}>
+    <div className={styles.setBonuses} onClick={stopProp}>
       <h3>Armageddon, level 50</h3>
       <Thermometer steps={steps} fillLine={1} />
       <div className={styles.procInfo}>

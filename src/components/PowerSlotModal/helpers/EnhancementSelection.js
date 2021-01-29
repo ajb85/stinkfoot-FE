@@ -4,23 +4,26 @@ import styles from "../styles.module.scss";
 import NavSlider from "components/NavSlider/";
 
 import { getEnhancementOverlay } from "js/getImage.js";
-import { combineClasses } from "js/utility.js";
+import { combineClasses, stopProp } from "js/utility.js";
 
 import enhancement from "../../../assets/cohImages/enhancements/sApocalypse.png";
 
-export default function EnhancementSelection(props) {
-  const [tab, setTab] = React.useState("sets");
+export default function EnhancementSelection({ tab, setTab }) {
   return (
-    <div className={styles.enhancementSelection}>
+    <div className={styles.enhancementSelection} onClick={stopProp}>
       <div className={styles.tabs}>
         <h3
-          className={combineClasses(tab === "standard" && styles.activeTab)}
+          className={combineClasses(
+            tab === "standard" ? styles.activeTab : undefined
+          )}
           onClick={setTab.bind(null, "standard")}
         >
           Standard
         </h3>
         <h3
-          className={combineClasses(tab === "sets" && styles.activeTab)}
+          className={combineClasses(
+            tab === "sets" ? styles.activeTab : undefined
+          )}
           onClick={setTab.bind(null, "sets")}
         >
           Sets
@@ -90,7 +93,7 @@ function getPillText(text) {
   return text.split("/").map((stat, j, splitArr) => {
     const isLast = j === splitArr.length - 1;
     return (
-      <div>
+      <div key={stat + j}>
         <p
           className={combineClasses(
             styles[stat.toLowerCase()],

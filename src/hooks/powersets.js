@@ -19,6 +19,8 @@ import { useGetBonusesForSet } from "hooks/enhancements.js";
 
 import analyzeBuild from "hooks/helpers/analyzeBuild.js";
 
+import { noFunc } from "js/utility.js";
+
 /******************************************
  ******************************************
  ***********  DATA RETRIEVAL  *************
@@ -81,6 +83,10 @@ export const usePowerFromRef = (ref) => {
  *****************************************/
 export const useTogglePowerSlot = (index) => {
   const { tracking, setTrackingManually } = useActiveSets();
+  if (index === undefined || index === null) {
+    return noFunc;
+  }
+
   const toggled = tracking.toggledSlot;
   const value = index === toggled ? null : index;
   return setTrackingManually.bind(this, "toggledSlot", value);

@@ -12,7 +12,7 @@ import styles from "./styles.module.scss";
 function PowerSlots(props) {
   const [view, setView] = useState("level");
   const { powerSlots } = usePowerSlots();
-  // const { tracking } = useActiveSets();
+
   const toggleView = useCallback(
     () => setView(view === "level" ? "respec" : "level"),
     [view]
@@ -32,7 +32,6 @@ function PowerSlots(props) {
     elementsPerIndex *
       selected.reduce((count, column) => count + column.length, 0) // + defaults.length + empties.length
   );
-
   return (
     <>
       <section className={styles.PowerSlots}>

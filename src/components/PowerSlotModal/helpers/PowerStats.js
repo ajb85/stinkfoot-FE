@@ -1,15 +1,17 @@
 import React from "react";
 
+import { stopProp } from "js/utility.js";
+
 import styles from "../styles.module.scss";
 
 export default function PowerStats(props) {
   return (
-    <div className={styles.PowerStats}>
+    <div className={styles.PowerStats} onClick={stopProp}>
       <h2>Power Totals</h2>
       <table>
         <thead>
           <tr>
-            <th colspan="4">Original Stats</th>
+            <th colSpan="4">Original Stats</th>
           </tr>
         </thead>
         <tbody>
@@ -31,7 +33,7 @@ export default function PowerStats(props) {
       <table>
         <thead>
           <tr>
-            <th colspan="4">Enhanced Stats</th>
+            <th colSpan="4">Enhanced Stats</th>
           </tr>
         </thead>
         <tbody>
@@ -53,7 +55,7 @@ export default function PowerStats(props) {
       <table>
         <thead>
           <tr>
-            <th colspan="4">Enhancement Totals</th>
+            <th colSpan="4">Enhancement Totals</th>
           </tr>
         </thead>
         <tbody>

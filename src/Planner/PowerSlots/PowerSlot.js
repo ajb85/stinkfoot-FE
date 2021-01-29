@@ -50,6 +50,7 @@ function PowerSlot(props) {
       className={styles.powerContainer}
       key={powerSlotIndex}
       style={{ zIndex: zIndex + 1 }}
+      onClick={handlePillClick}
     >
       <div className={styles.pill} style={{ zIndex: zIndex + 1 }}>
         <p className="pillText">
