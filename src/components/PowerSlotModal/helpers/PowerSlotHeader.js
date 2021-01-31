@@ -1,10 +1,19 @@
 import React from "react";
 import styles from "../styles.module.scss";
 
+import EnhancementSlot from "components/EnhancementSlot/";
+import { useRemoveEnhancement } from "hooks/enhancements.js";
+
 import { stopProp } from "js/utility.js";
 
-export default function PowerSlotHeader({ level, power }) {
-  console.log("PROPS: ", power);
+export default function PowerSlotHeader({ powerSlot, power, powerSlotIndex }) {
+  const { level, enhSlots } = powerSlot;
+  const removeEnhancement = useRemoveEnhancement(powerSlotIndex);
+
+  const renderNoSlots = () =>
+    Array(6 - enhSlots.length)
+      .fill(null)
+      .map((_, i) => <div key={i} className={styles.noSlot} />);
   return (
     <header className={styles.header} onClick={stopProp}>
       <div>
@@ -14,12 +23,19 @@ export default function PowerSlotHeader({ level, power }) {
         <p>{power.description.short}</p>
       </div>
       <div>
-        <div className={styles.slot} />
-        <div className={styles.slot} />
-        <div className={styles.slot} />
-        <div className={styles.slot} />
-        <div className={styles.slot} />
-        <div className={styles.slot} />
+        {enhSlots.map((s, i) => {
+          return (
+            <EnhancementSlot
+              onClick={
+                s.enhancementRef ? removeEnhancement.bind(this, i) : null
+              }
+              key={i}
+              slot={s}
+              powerSlotLevel={powerSlot.level}
+            />
+          );
+        })}
+        {renderNoSlots()}
       </div>
     </header>
   );

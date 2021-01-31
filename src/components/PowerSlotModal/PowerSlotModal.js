@@ -25,8 +25,8 @@ export default function PowerSlotModal(props) {
     [toggledSlot]
   );
 
-  const { navigation, powerRef, level } = powerSlots[toggledSlot] || {};
-  const power = usePowerFromRef(powerRef);
+  const powerSlot = powerSlots[toggledSlot] || {};
+  const power = usePowerFromRef(powerSlot.powerRef);
 
   if (!powerSlots[toggledSlot]) {
     return null;
@@ -34,10 +34,17 @@ export default function PowerSlotModal(props) {
 
   return (
     <ShadowModal>
-      <PowerSlotHeader power={power} level={level} />
+      <PowerSlotHeader
+        powerSlot={powerSlot}
+        power={power}
+        powerSlotIndex={toggledSlot}
+      />
       <section className={styles.main}>
-        <EnhancementSelection tab={navigation.section} setTab={setTab} />
-        <SetBonuses disabled={navigation.section !== "sets"} />
+        <EnhancementSelection
+          tab={powerSlot.navigation.section}
+          setTab={setTab}
+        />
+        <SetBonuses disabled={powerSlot.navigation.section !== "sets"} />
         <PowerStats />
       </section>
     </ShadowModal>

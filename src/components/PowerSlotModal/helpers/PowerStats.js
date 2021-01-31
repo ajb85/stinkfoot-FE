@@ -8,6 +8,13 @@ export default function PowerStats(props) {
   return (
     <div className={styles.PowerStats} onClick={stopProp}>
       <h2>Power Totals</h2>
+      <div className={styles.comingSoon}>
+        <h3>
+          COMING
+          <br />
+          SOON
+        </h3>
+      </div>
       <table>
         <thead>
           <tr>
