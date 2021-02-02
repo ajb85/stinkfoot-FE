@@ -60,11 +60,7 @@ export const getEnhancementSubSections: Function = ((cache) => (
       cache.set(
         setTypes,
         setTypes.map((setType) => ({
-          name: mapSetTypeToName[setType]
-            .split(" ")
-            .map((n) => n[0])
-            .slice(0, 2)
-            .join(""),
+          name: mapSetTypeToName[setType].split(" ")[0],
           setType,
         }))
       );
@@ -73,8 +69,13 @@ export const getEnhancementSubSections: Function = ((cache) => (
     return cache.get(setTypes);
   }
 
-  // Else, send back standard IOs
-  return ["IO", "SO", "DO", "TO"];
+  // Else, send back standard enhancement
+  return [
+    { name: "IO", setType: "IO" },
+    { name: "SO", setType: "SO" },
+    { name: "DO", setType: "DO" },
+    { name: "TO", setType: "TO" },
+  ];
 })(new Map());
 
 export const getEnhancementsForPowerSlot: Function = (
@@ -149,16 +150,16 @@ function getStandardEnhancementsForPower(power) {
     return [];
   }
 
-  /* TEMPORARY TO SOLVE BUG, WILL REMOVE WHEN DATA IS FIXED */
+  /* TEMPORARY TO SOLVE BUG WITH DUPLICATE DATA, WILL REMOVE WHEN DATA IS FIXED */
   const allowed = new Set();
   power.allowedEnhancements.forEach((enhName) => {
     if (enhancements.standard[enhName]) {
       allowed.add(enhancements.standard[enhName]);
     }
   });
-  /* TEMPORARY TO SOLVE BUG, WILL REMOVE WHEN DATA IS FIXED */
+  /* TEMPORARY TO SOLVE BUG WITH DUPLICATE DATA, WILL REMOVE WHEN DATA IS FIXED */
 
-  return Array.from(allowed);
+  return { standard: Array.from(allowed) };
 }
 
 function getIOSetEnhancementsForPower(

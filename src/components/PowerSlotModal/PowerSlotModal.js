@@ -20,8 +20,14 @@ export default function PowerSlotModal(props) {
   const { powerSlots, updatePowerSlotNav } = usePowerSlots();
   const togglePowerSlot = useTogglePowerSlot(toggledSlot);
 
-  const setTab = useCallback(
-    (section) => updatePowerSlotNav(toggledSlot, { section }),
+  const updateEnhancementNav = useCallback(
+    (navSection, value) => {
+      const updates = { [navSection]: value };
+      if (navSection === "setType") {
+        updates.setIndex = 0;
+      }
+      updatePowerSlotNav(toggledSlot, updates);
+    },
     [toggledSlot]
   );
 
@@ -41,8 +47,9 @@ export default function PowerSlotModal(props) {
       />
       <section className={styles.main}>
         <EnhancementSelection
-          tab={powerSlot.navigation.section}
-          setTab={setTab}
+          nav={powerSlot.navigation}
+          updateEnhancementNav={updateEnhancementNav}
+          powerSlotIndex={toggledSlot}
         />
         <SetBonuses disabled={powerSlot.navigation.section !== "sets"} />
         <PowerStats />

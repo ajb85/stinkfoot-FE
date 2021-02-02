@@ -5,7 +5,7 @@ import SlideDropdown from "components/SlideDropdown/";
 import EnhancementBar from "components/EnhancementBar/";
 import EnhancementSelection from "./EnhancementSelection.js";
 
-import { useGetEnhancementSubSections } from "hooks/enhancements.js";
+import { usePowerSubsections } from "hooks/enhancements.js";
 import { useSetNavSection } from "hooks/powerSlots.js";
 import {
   useTogglePowerSlot,
@@ -22,7 +22,7 @@ function PowerSlot(props) {
   const clearActiveEnhancementSet = useClearActiveEnhancementSet();
   const togglePowerSlot = useTogglePowerSlot(powerSlotIndex);
   const { tracking } = useActiveSets();
-  const subsections = useGetEnhancementSubSections(powerSlotIndex);
+  const subsections = usePowerSubsections(powerSlotIndex);
   const power = usePowerFromRef(powerRef);
 
   const isSlottable =

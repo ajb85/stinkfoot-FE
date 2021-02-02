@@ -14,15 +14,19 @@ import { getEnhancementFromRef } from "js/getFromRef.js";
 
 import { useBuildAnalysis } from "./powersets.js";
 
-export const useGetEnhancementsForPowerSlot = (powerSlotIndex) => {
+export const useEnhancementsForPowerSlot = (powerSlotIndex) => {
   const { powerSlots } = usePowerSlots();
   const powerSlot = powerSlots[powerSlotIndex];
   const { character } = useCharacterDetails();
   const settings = {};
-  return getEnhancementsForPowerSlot(character.archetype, powerSlot, settings);
+  return getEnhancementsForPowerSlot(
+    character.archetype,
+    powerSlot,
+    settings
+  )();
 };
 
-export const useGetEnhancementSubSections = (powerSlotIndex) => {
+export const usePowerSubsections = (powerSlotIndex) => {
   const { powerSlots } = usePowerSlots();
   const powerSlot = powerSlots[powerSlotIndex];
   const { character } = useCharacterDetails();

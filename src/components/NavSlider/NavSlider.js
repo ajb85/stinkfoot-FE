@@ -4,22 +4,25 @@ import styled from "styled-components";
 import styles from "./styles.module.scss";
 
 export default function NavSlider(props) {
-  const [activeTab, setActiveTab] = React.useState(0);
-
+  const { activeIndex, setActiveIndex } = props;
   return (
     <Container
       className={styles.NavSlider}
       length={props.categories.length}
-      active={activeTab}
+      active={activeIndex}
       textLength={
-        props.categories[activeTab] ? props.categories[activeTab].length : 0
+        props.categories[activeIndex] ? props.categories[activeIndex].length : 0
       }
     >
       <div />
       {props.categories &&
         props.categories.map((name, i) => (
-          <NavWrap key={name} length={props.categories.length}>
-            <p onClick={setActiveTab.bind(null, i)}>{name}</p>
+          <NavWrap
+            key={name}
+            onClick={setActiveIndex.bind(null, i)}
+            length={props.categories.length}
+          >
+            <p>{name}</p>
           </NavWrap>
         ))}
     </Container>

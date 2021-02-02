@@ -5,18 +5,23 @@ const shortened = {
   Damage: "Dmg",
   Defense: "Def",
   Endurance: "End",
-  "Fly Speed": "FlySpd",
+  "Endurance Reduction": "End",
+  "Fly Speed": "Fly",
   Healing: "Heal",
   "Hit Points": "HP",
-  "Jump Speed": "JumpSpd",
+  "Jump Speed": "Jump",
   Recharge: "Rech",
-  "Run Speed": "RunSpd",
+  "Run Speed": "Run",
+  Range: "Range",
+  Slow: "Slow",
+  Immobilize: "Immob",
+  Immob: "Immob",
 };
 
-export default (name: string): string => {
+export default function shortenEnhName(name: string): string {
   // shortenEnhName
   return name
     .split("/")
-    .map((n) => (shortened[n] ? shortened[n] : n))
+    .map((n) => (shortened[n] ? shortened[n] : "*" + n))
     .join("/");
-};
+}

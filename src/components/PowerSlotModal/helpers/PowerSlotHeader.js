@@ -14,6 +14,7 @@ export default function PowerSlotHeader({ powerSlot, power, powerSlotIndex }) {
     Array(6 - enhSlots.length)
       .fill(null)
       .map((_, i) => <div key={i} className={styles.noSlot} />);
+
   return (
     <header className={styles.header} onClick={stopProp}>
       <div>

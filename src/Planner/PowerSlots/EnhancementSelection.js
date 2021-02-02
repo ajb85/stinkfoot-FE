@@ -6,7 +6,7 @@ import OnScreenHover from "components/OnScreenHover/";
 
 import usePowerSlots from "providers/builder/usePowerSlots";
 import {
-  useGetEnhancementsForPowerSlot,
+  useEnhancementsForPowerSlot,
   useGetEnhancementOverlay,
   useGetSetBonusDataForPowerSlot,
   useAddEnhancement,
@@ -25,7 +25,7 @@ function EnhancementSelection(props) {
     toggleActiveEnhancementSet,
   } = useActiveEnhancementSet();
   const powerSlot = powerSlots[props.powerSlotIndex];
-  const enhCategories = useGetEnhancementsForPowerSlot(props.powerSlotIndex)();
+  const enhCategories = useEnhancementsForPowerSlot(props.powerSlotIndex)();
   const getOverlay = useGetEnhancementOverlay();
   const getSetBonusesForPowerSlot = useGetSetBonusDataForPowerSlot(powerSlot);
   const addEnhancement = useAddEnhancement(props.powerSlotIndex);

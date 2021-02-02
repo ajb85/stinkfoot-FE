@@ -129,6 +129,7 @@
   justify-content: center;
   align-items: center;
   border-radius: 50%; // Rounds the shadow
+  cursor: pointer;
 
   img {
     position: absolute;
@@ -180,6 +181,9 @@
         $damage: rgba(237, 20, 43, 1);
         $recharge: rgba(148, 148, 148, 1);
         $endurance: rgba(89, 160, 224, 1);
+        $slow: #669386;
+        $range: #bfcea8;
+        $immob: #c3a565;
         $proc: rgba(225, 90, 227, 1);
 
         & > div {
@@ -225,6 +229,18 @@
 
           &.end {
             background-color: $endurance;
+          }
+
+          &.slow {
+            background-color: $slow;
+          }
+
+          &.range {
+            background-color: $range;
+          }
+
+          &.immob {
+            background-color: $immob;
           }
 
           &.proc {
