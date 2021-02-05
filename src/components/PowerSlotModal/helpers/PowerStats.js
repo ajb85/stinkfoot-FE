@@ -14,6 +14,7 @@ export default function PowerStats(props) {
           <br />
           SOON
         </h3>
+        <span>(probably)</span>
       </div>
       <table>
         <thead>
