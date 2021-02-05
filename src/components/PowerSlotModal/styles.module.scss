@@ -106,10 +106,12 @@
 .renderEnh {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
+  min-height: 6 * $lh;
+  padding: 0px 10px;
 
   & > div {
-    margin: 7px;
+    margin: $lh / 2 5px;
     padding: 16px;
 
     &.activeSet {
@@ -148,6 +150,7 @@
     border-top: 1px solid black;
     display: flex;
     flex-wrap: wrap;
+    height: 10 * $lh;
 
     .setEnhancement {
       display: flex;
@@ -155,7 +158,8 @@
       align-items: center;
       justify-content: space-evenly;
       width: 33%;
-      margin: $lh/4 0;
+      margin: $lh 0 0;
+      max-height: 4 * $lh;
 
       transition: opacity 0.25s;
       opacity: 1;
