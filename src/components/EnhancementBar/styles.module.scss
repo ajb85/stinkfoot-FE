@@ -4,6 +4,34 @@
   display: flex;
   width: fit-content;
 
-  top: 18px;
-  left: 10px;
+  & > div {
+    margin: 0 3px;
+  }
+
+  &.centerBar {
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+
+  &.rightBar {
+    right: 0px;
+  }
+
+  &.hangingBar {
+    top: 18px;
+    left: 10px;
+
+    & > div {
+      margin: 0;
+    }
+  }
+}
+
+.noSlot {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px dashed black;
 }

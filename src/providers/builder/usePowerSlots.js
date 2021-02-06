@@ -126,9 +126,20 @@ export const PowerSlotsProvider = (props) => {
     setPowerSlots(updatedPowerSlots);
   };
 
-  const removeEnhancement = (powerSlotIndex, enhIndex) => {
+  const removeEnhancement = (powerSlotIndex, enhOrIndex) => {
     const updatedPowerSlots = copyPowerSlots(powerSlots, powerSlotIndex);
     const { enhSlots } = updatedPowerSlots[powerSlotIndex];
+    const enhIndex = enhOrIndex.fullName
+      ? enhSlots.findIndex(
+          ({ enhancementRef }) =>
+            enhancementRef.fullName === enhOrIndex.fullName
+        )
+      : enhSlots[enhOrIndex];
+
+    if (enhIndex === undefined || enhIndex === -1) {
+      // Nothing to remove
+      return;
+    }
     const { slotLevel } = enhSlots[enhIndex];
     // If slotLevel is null then remove the next slot if it exists
     const slotToReturn =

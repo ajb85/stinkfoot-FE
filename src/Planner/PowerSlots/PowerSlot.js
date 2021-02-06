@@ -58,7 +58,11 @@ function PowerSlot(props) {
         </p>
       </div>
       {isSlottable && (
-        <EnhancementBar powerSlotIndex={powerSlotIndex} zIndex={zIndex + 2} />
+        <EnhancementBar
+          powerSlotIndex={powerSlotIndex}
+          zIndex={zIndex + 2}
+          position="hang"
+        />
       )}
     </div>
   );

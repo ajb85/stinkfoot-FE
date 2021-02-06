@@ -10,7 +10,9 @@ export function noFunc(data: any): any {
 export function combineClasses(...args: Array<string>): string {
   return args.reduce(
     (className, str) =>
-      typeof str === "string" && str ? className + " " + str : className,
+      typeof str === "string" && str
+        ? `${className}${className.length ? " " : ""}${str}`
+        : className,
     ""
   );
 }

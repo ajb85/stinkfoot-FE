@@ -10,7 +10,7 @@ import {
 } from "hooks/helpers/enhancements.js";
 
 import { getEnhancementOverlay } from "js/getImage.js";
-import { getEnhancementFromRef } from "js/getFromRef.js";
+import { getEnhancementFromRef, getPowerFromRef } from "js/getFromRef.js";
 
 import { useBuildAnalysis } from "./powersets.js";
 
@@ -37,11 +37,12 @@ export const usePowerSubsections = (powerSlotIndex) => {
 export const useCanEnhancementGoInPowerSlot = (powerSlotIndex) => {
   const details = useBuildAnalysis();
   const { powerSlots } = usePowerSlots();
-  return canEnhancementGoInPowerSlot.bind(
-    this,
-    details,
-    powerSlots[powerSlotIndex].power
+  const { character } = useCharacterDetails();
+  const { power /*mustUpdate */ } = getPowerFromRef(
+    character.archetype,
+    powerSlots[powerSlotIndex].powerRef
   );
+  return canEnhancementGoInPowerSlot.bind(this, details, power);
 };
 
 export const useGetBonusesForSet = () => {

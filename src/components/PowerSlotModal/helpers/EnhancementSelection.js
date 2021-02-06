@@ -1,12 +1,16 @@
 import React, { useCallback } from "react";
 
 import NavSlider from "components/NavSlider/";
+import EnhancementBar from "components/EnhancementBar/";
 
 import { combineClasses, stopProp } from "js/utility.js";
 import {
   usePowerSubsections,
   useEnhancementsForPowerSlot,
   useGetEnhancementOverlay,
+  useAddEnhancement,
+  useCanEnhancementGoInPowerSlot,
+  useRemoveEnhancement,
 } from "hooks/enhancements.js";
 import shortenEnhName from "js/shortenEnhName.js";
 
@@ -21,6 +25,9 @@ export default function EnhancementSelection({
   const isSet = tab === "sets";
   const subsections = usePowerSubsections(powerSlotIndex);
   const enhCategoryLookup = useEnhancementsForPowerSlot(powerSlotIndex);
+  const addEnhancement = useAddEnhancement(powerSlotIndex);
+  const removeEnhancement = useRemoveEnhancement(powerSlotIndex);
+  const canEnhancementGoInSlot = useCanEnhancementGoInPowerSlot(powerSlotIndex);
 
   const setType = isSet
     ? nav.setType === null
@@ -50,7 +57,14 @@ export default function EnhancementSelection({
   const handleEnhancementClick = (enhancement) => {
     if (isSet) {
       updateEnhancementNav("setIndex", enhancement.setIndex);
-    }
+    } else addEnhancement(enhancement);
+  };
+
+  const toggleSetEnhancement = (enhancement) => {
+    const canAdd = canEnhancementGoInSlot(enhancement);
+    if (canAdd) {
+      addEnhancement(enhancement);
+    } else removeEnhancement(enhancement);
   };
 
   return (
@@ -75,6 +89,13 @@ export default function EnhancementSelection({
           setActiveIndex={setActiveIndex}
           categories={subsections.map(({ name }) => name)}
         />
+        <div className={styles.enhancementBarWrapper}>
+          <EnhancementBar
+            powerSlotIndex={powerSlotIndex}
+            position="center"
+            noSlots
+          />
+        </div>
         <div className={styles.renderEnh}>
           {renderEnhancements(
             overlay,
@@ -90,7 +111,9 @@ export default function EnhancementSelection({
           <div className={styles.setEnhancements}>
             {renderSet(
               overlay,
-              (categoryList[setIndex] || categoryList[0]).enhancements
+              (categoryList[setIndex] || categoryList[0]).enhancements,
+              toggleSetEnhancement,
+              canEnhancementGoInSlot
             )}
           </div>
         </div>
@@ -118,12 +141,19 @@ function renderEnhancements(overlay, list, active, cb) {
   });
 }
 
-function renderSet(overlay, enhancements) {
+function renderSet(overlay, enhancements, handleClick, canGoInSlot) {
   return enhancements.map((e, i) => {
-    console.log("E: ", e);
+    const canAdd = canGoInSlot(e);
     const text = shortenEnhName(e.displayName);
     return (
-      <div key={text} className={styles.setEnhancement}>
+      <div
+        key={text}
+        className={combineClasses(
+          styles.setEnhancement,
+          !canAdd && styles.unavailable
+        )}
+        onClick={handleClick.bind(this, e)}
+      >
         <div className={styles.enhancementWithOverlay}>
           <img src={overlay} alt="Enhancement overlay" />
           <img src={e.image} alt="Enhancement" />

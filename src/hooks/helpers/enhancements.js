@@ -106,9 +106,8 @@ export const canEnhancementGoInPowerSlot: Function = (
   if (!power) {
     return false;
   }
-
   const { isUnique, type, fullName } = enhancement;
-  const isUniqueInPower = type === "set" || type === "attuned";
+  const isUniqueInPower = type === "ioSet" || type === "attuned";
   const isInUse = lookup.enhancements[fullName] !== undefined;
   const isInPower = isInUse && lookup.enhancements[fullName][power.fullName];
 
